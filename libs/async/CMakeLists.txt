@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.6)
 
 project(async LANGUAGES CXX)
 
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
 add_library(${PROJECT_NAME} SHARED
     include/async.h
     src/async.cpp
