@@ -15,7 +15,7 @@ class AsyncHelper
 public:
     ///
     /// \brief AsyncHelper Коснструктор
-    /// \param bulkCommandsLimit Размер блока каоманд
+    /// \param bulkCommandsLimit Размер блока команд
     ///
     AsyncHelper(std::size_t bulkCommandsLimit): m_handler {async::connect(bulkCommandsLimit)} {}
 
