@@ -13,8 +13,6 @@ public:
     using hw_io::ConsolePrinter::ConsolePrinter;
     ~ConsoleBulkPrinter() {std::cout << std::flush;}
 
-    using hw_io::ConsolePrinter::print;
-
     /// @brief Перегрузка абстрактной функции для печати блока команд в консоль
     /// @param bulk shared_ptr на блок команд
     void printBulk(std::shared_ptr<const Bulk> bulk) override final
