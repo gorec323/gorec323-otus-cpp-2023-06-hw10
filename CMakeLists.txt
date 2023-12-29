@@ -68,6 +68,14 @@ PRIVATE
     helperslib
 )
 
+if (WIN32)
+    # для сборки asio. Совместимость с Windows 7
+    target_compile_definitions(${PROJECT_NAME}
+    PRIVATE
+        _WIN32_WINNT=0x0601
+    )
+endif()
+
 if (UNIX)
     install(TARGETS ${PROJECT_NAME}
         # for executables and dll on Win 
