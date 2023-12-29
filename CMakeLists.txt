@@ -3,29 +3,53 @@ cmake_minimum_required(VERSION 3.6)
 set(PATCH_VERSION 1 CACHE INTERNAL "Patch version. Default = 1")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION} CACHE INTERNAL "Application version" FORCE)
 
-project(myapplication VERSION ${PROJECT_VERSION} LANGUAGES CXX)
+project(bulk_server VERSION ${PROJECT_VERSION} LANGUAGES CXX)
 
 configure_file(
     version.h.in
     ${CMAKE_BINARY_DIR}/version.h
 )
 
-if (NOT CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 14)
-endif()
+set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+include(FetchContent)
+
+FetchContent_Declare(
+    asio
+    GIT_REPOSITORY https://github.com/chriskohlhoff/asio.git
+    GIT_TAG 814f67e # tag 1.29.0
+)
+
+# FetchContent_Declare(
+#     boostasio
+#     GIT_REPOSITORY https://github.com/boostorg/asio.git
+#     GIT_TAG 222ce92 # boost-1.84.0
+# )
+
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+#set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
+FetchContent_MakeAvailable(asio)
 
 if (BUILD_TESTING)
     include(CTest)
     enable_testing()
 endif()
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 add_subdirectory(libs)
 
 add_executable(${PROJECT_NAME}
     main.cpp
+    bulkserver.hpp
 )
 
 install(TARGETS ${PROJECT_NAME}
@@ -35,16 +59,42 @@ install(TARGETS ${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME}
 PRIVATE
     ${CMAKE_BINARY_DIR}
+    ${asio_SOURCE_DIR}/asio/include
 )
 
+target_link_libraries(${PROJECT_NAME}
+PRIVATE
+    async
+    helperslib
+)
+
+if (WIN32)
+    # для сборки asio. Совместимость с Windows 7
+    target_compile_definitions(${PROJECT_NAME}
+    PRIVATE
+        _WIN32_WINNT=0x0601
+    )
+endif()
+
 if (UNIX)
-    install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
+    install(TARGETS ${PROJECT_NAME}
+        # for executables and dll on Win 
+        RUNTIME DESTINATION bin
+        # shared libraries
+        LIBRARY DESTINATION lib
+        # for static libraries
+        ARCHIVE DESTINATION lib
+        # INCLUDES DESTINATION include
+    )
+    
+    install(TARGETS async LIBRARY DESTINATION lib)
 
     set(CPACK_GENERATOR DEB)
+    set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
     set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
     set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
     set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
-    set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "My application")
+    set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "bulk_server application")
     set(CPACK_DEBIAN_PACKAGE_MAINTAINER "My Corporation")
     include(CPack)
 endif()

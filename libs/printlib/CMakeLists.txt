@@ -1,15 +1,12 @@
 cmake_minimum_required(VERSION 3.6)
 
-project(mylib  LANGUAGES CXX)
+project(printlib  LANGUAGES CXX)
 
 add_library(${PROJECT_NAME}
-    include/mylib.hpp
-    src/mylib.cpp
+    include/iprinter.hpp
+    include/consoleprinter.hpp
+    src/consoleprinter.cpp
 )
-
-if (${BUILD_TESTING})
-    add_subdirectory(tests)
-endif()
 
 target_include_directories(${PROJECT_NAME}
 PUBLIC
