@@ -10,7 +10,7 @@ namespace bulk_defs {
 class ConsoleBulkPrinter: public hw_io::ConsolePrinter, public BulkPrinter
 {
 public:
-    using BulkPrinter::BulkPrinter;
+    using hw_io::ConsolePrinter::ConsolePrinter;
     ~ConsoleBulkPrinter() {std::cout << std::flush;}
 
     using hw_io::ConsolePrinter::print;
