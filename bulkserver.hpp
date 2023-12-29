@@ -8,24 +8,44 @@
 using asio::ip::tcp;
 
 ///
-/// \brief The RaiiHelper class RAII - хэлпер для упрощщения работы с функциями библиотеки async
+/// \brief The RaiiHelper class RAII - хэлпер для упрощения работы с функциями библиотеки async
 ///
 class AsyncHelper
 {
 public:
+    ///
+    /// \brief AsyncHelper Коснструктор
+    /// \param bulkCommandsLimit Размер блока каоманд
+    ///
     AsyncHelper(std::size_t bulkCommandsLimit): m_handler {async::connect(bulkCommandsLimit)} {}
+
+    ///
+    /// \brief AsyncHelper Удалённый конструктор копирования
+    ///
     AsyncHelper(const AsyncHelper &) = delete;
-    AsyncHelper(AsyncHelper &&other) noexcept = default;
+
+    ///
+    /// \brief AsyncHelper Конструктор перемещения
+    ///
+    AsyncHelper(AsyncHelper &&) noexcept = default;
+
+    ///
+    /// \brief ~AsyncHelper Деструктор. Делает disconnect
+    ///
     ~AsyncHelper() { async::disconnect(m_handler); }
 
     AsyncHelper &operator=(const AsyncHelper &) = delete;
     AsyncHelper &operator=(AsyncHelper &&) = default;
 
+    ///
+    /// \brief receive Вызывает метод async::receive для своего хэндлера
+    /// \param data указатель начало последовательного блока передаваемых данных
+    /// \param size размер блока данных
+    ///
     void receive(const char * const data, std::size_t size) const;
 
 private:
     async::print_handler_t m_handler;
-
 };
 
 ///
