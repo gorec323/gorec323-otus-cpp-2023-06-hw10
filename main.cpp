@@ -16,7 +16,7 @@ int main(int argc, const char *argv[])
     const auto bulkSize = argc;
     if (bulkSize != 3) {
         std::cout << "Usage:" << std::endl;
-        std::cout << argv[0] << "<por> <bulk size>" << std::endl;
+        std::cout << argv[0] << " <port> <bulk size>" << std::endl;
         return 1;
     }
 
