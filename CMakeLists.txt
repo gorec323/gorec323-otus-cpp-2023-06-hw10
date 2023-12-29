@@ -19,6 +19,25 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+include(FetchContent)
+
+FetchContent_Declare(
+    asio
+    GIT_REPOSITORY https://github.com/chriskohlhoff/asio.git
+    GIT_TAG 814f67e # tag 1.29.0
+)
+
+# FetchContent_Declare(
+#     boostasio
+#     GIT_REPOSITORY https://github.com/boostorg/asio.git
+#     GIT_TAG 222ce92 # boost-1.84.0
+# )
+
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+#set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
+FetchContent_MakeAvailable(asio)
+
 if (BUILD_TESTING)
     include(CTest)
     enable_testing()
@@ -42,14 +61,13 @@ install(TARGETS ${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME}
 PRIVATE
     ${CMAKE_BINARY_DIR}
+    ${asio_SOURCE_DIR}/asio/include
 )
 
 target_link_libraries(${PROJECT_NAME}
 PRIVATE
     async
     helperslib
-    boost_system
-    boost_coroutine
 )
 
 if (UNIX)
