@@ -5,10 +5,7 @@ project(async LANGUAGES CXX)
 add_library(${PROJECT_NAME} SHARED
     include/async.h
     src/async.cpp
-    # src/asyncbulkprinter.hpp
 )
-
-# set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 target_link_libraries(${PROJECT_NAME}
 PRIVATE
