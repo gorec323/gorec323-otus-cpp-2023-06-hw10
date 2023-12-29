@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::detail::promise_executor&lt; T, Blocking &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1detail_1_1promise__executor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::detail::promise_executor&lt; T, Blocking &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2use__future_8hpp_source.html">use_future.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af80fcccc773e405508b51faa3aa5a9b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#af80fcccc773e405508b51faa3aa5a9b3">promise_executor</a> (const shared_ptr&lt; std::promise&lt; T &gt;&gt; &amp;p)</td></tr>
+<tr class="separator:af80fcccc773e405508b51faa3aa5a9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69fcd2c584d88583ff39607662572f1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#a69fcd2c584d88583ff39607662572f1a">query</a> (<a class="el" href="namespaceasio_1_1execution.html#a20a31557fa7267fd779be278a94b00ce">execution::context_t</a>) const noexcept</td></tr>
+<tr class="separator:a69fcd2c584d88583ff39607662572f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bdb5dd14a587c79d62669f9eda603d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt; T, <a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#a0ee9cc739b3b11aa5a584a4310a47e22">execution::blocking_t::possibly_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#ae2bdb5dd14a587c79d62669f9eda603d">require</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#a0ee9cc739b3b11aa5a584a4310a47e22">execution::blocking_t::possibly_t</a>) const</td></tr>
+<tr class="separator:ae2bdb5dd14a587c79d62669f9eda603d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30c9dc7a68d03faff37df5aa24e0eff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt; T, <a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#ae363485c4c68b7d6dee9f9bb863e3877">execution::blocking_t::never_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#af30c9dc7a68d03faff37df5aa24e0eff">require</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#ae363485c4c68b7d6dee9f9bb863e3877">execution::blocking_t::never_t</a>) const</td></tr>
+<tr class="separator:af30c9dc7a68d03faff37df5aa24e0eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85d8bc5ccbda5b20f5a438cfb251ab0"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:ad85d8bc5ccbda5b20f5a438cfb251ab0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#ad85d8bc5ccbda5b20f5a438cfb251ab0">execute</a> (F &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>) const</td></tr>
+<tr class="separator:ad85d8bc5ccbda5b20f5a438cfb251ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1febdaa8eae10c3f430ed1a54a29a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#a0b1febdaa8eae10c3f430ed1a54a29a5">context</a> () const noexcept</td></tr>
+<tr class="separator:a0b1febdaa8eae10c3f430ed1a54a29a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728cea2fe8f22e796393e1c503e398f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#a728cea2fe8f22e796393e1c503e398f5">on_work_started</a> () const noexcept</td></tr>
+<tr class="separator:a728cea2fe8f22e796393e1c503e398f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1734b7f5ee9a009797cda44e29e8a9f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#a1734b7f5ee9a009797cda44e29e8a9f0">on_work_finished</a> () const noexcept</td></tr>
+<tr class="separator:a1734b7f5ee9a009797cda44e29e8a9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f49cfc0b9d15f2499aecc2c069f0fc"><td class="memTemplParams" colspan="2">template&lt;typename F , typename A &gt; </td></tr>
+<tr class="memitem:ad6f49cfc0b9d15f2499aecc2c069f0fc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#ad6f49cfc0b9d15f2499aecc2c069f0fc">dispatch</a> (F &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const A &amp;) const</td></tr>
+<tr class="separator:ad6f49cfc0b9d15f2499aecc2c069f0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060f24444d0f28ef2a4fe5424c31b571"><td class="memTemplParams" colspan="2">template&lt;typename F , typename A &gt; </td></tr>
+<tr class="memitem:a060f24444d0f28ef2a4fe5424c31b571"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#a060f24444d0f28ef2a4fe5424c31b571">post</a> (F &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const A &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="separator:a060f24444d0f28ef2a4fe5424c31b571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd7df6c7f35a660f1f694c5d1596001"><td class="memTemplParams" colspan="2">template&lt;typename F , typename A &gt; </td></tr>
+<tr class="memitem:a9cd7df6c7f35a660f1f694c5d1596001"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#a9cd7df6c7f35a660f1f694c5d1596001">defer</a> (F &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const A &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="separator:a9cd7df6c7f35a660f1f694c5d1596001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a2992501699c4e43a6d6539f6b1a56eb4"><td class="memItemLeft" align="right" valign="top">static constexpr Blocking&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#a2992501699c4e43a6d6539f6b1a56eb4">query</a> (<a class="el" href="namespaceasio_1_1execution.html#a06af055165374fcb9cd02bc2a42ec53b">execution::blocking_t</a>)</td></tr>
+<tr class="separator:a2992501699c4e43a6d6539f6b1a56eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:ac3294ef9ea42305aa8efe683f18695ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#ac3294ef9ea42305aa8efe683f18695ab">operator==</a> (const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a> &amp;b) noexcept</td></tr>
+<tr class="separator:ac3294ef9ea42305aa8efe683f18695ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c65bc117ae6abe77facd3d1042be4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html#ad2c65bc117ae6abe77facd3d1042be4f">operator!=</a> (const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a> &amp;b) noexcept</td></tr>
+<tr class="separator:ad2c65bc117ae6abe77facd3d1042be4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="af80fcccc773e405508b51faa3aa5a9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80fcccc773e405508b51faa3aa5a9b3">&#9670;&nbsp;</a></span>promise_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::<a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; std::promise&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a0b1febdaa8eae10c3f430ed1a54a29a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b1febdaa8eae10c3f430ed1a54a29a5">&#9670;&nbsp;</a></span>context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution__context.html">execution_context</a>&amp; <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cd7df6c7f35a660f1f694c5d1596001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd7df6c7f35a660f1f694c5d1596001">&#9670;&nbsp;</a></span>defer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename F , typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::defer </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const A &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6f49cfc0b9d15f2499aecc2c069f0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f49cfc0b9d15f2499aecc2c069f0fc">&#9670;&nbsp;</a></span>dispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename F , typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const A &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad85d8bc5ccbda5b20f5a438cfb251ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85d8bc5ccbda5b20f5a438cfb251ab0">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::execute </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1734b7f5ee9a009797cda44e29e8a9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1734b7f5ee9a009797cda44e29e8a9f0">&#9670;&nbsp;</a></span>on_work_finished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::on_work_finished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a728cea2fe8f22e796393e1c503e398f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728cea2fe8f22e796393e1c503e398f5">&#9670;&nbsp;</a></span>on_work_started()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::on_work_started </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a060f24444d0f28ef2a4fe5424c31b571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060f24444d0f28ef2a4fe5424c31b571">&#9670;&nbsp;</a></span>post()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename F , typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::post </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const A &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2992501699c4e43a6d6539f6b1a56eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2992501699c4e43a6d6539f6b1a56eb4">&#9670;&nbsp;</a></span>query() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr Blocking <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::query </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio_1_1execution.html#a06af055165374fcb9cd02bc2a42ec53b">execution::blocking_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69fcd2c584d88583ff39607662572f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69fcd2c584d88583ff39607662572f1a">&#9670;&nbsp;</a></span>query() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution__context.html">execution_context</a>&amp; <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::query </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio_1_1execution.html#a20a31557fa7267fd779be278a94b00ce">execution::context_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af30c9dc7a68d03faff37df5aa24e0eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af30c9dc7a68d03faff37df5aa24e0eff">&#9670;&nbsp;</a></span>require() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt;T, <a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#ae363485c4c68b7d6dee9f9bb863e3877">execution::blocking_t::never_t</a>&gt; <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::require </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#ae363485c4c68b7d6dee9f9bb863e3877">execution::blocking_t::never_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2bdb5dd14a587c79d62669f9eda603d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2bdb5dd14a587c79d62669f9eda603d">&#9670;&nbsp;</a></span>require() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt;T, <a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#a0ee9cc739b3b11aa5a584a4310a47e22">execution::blocking_t::possibly_t</a>&gt; <a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor</a>&lt; T, Blocking &gt;::require </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1blocking__t.html#a0ee9cc739b3b11aa5a584a4310a47e22">execution::blocking_t::possibly_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="ad2c65bc117ae6abe77facd3d1042be4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c65bc117ae6abe77facd3d1042be4f">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt; T, Blocking &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt; T, Blocking &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3294ef9ea42305aa8efe683f18695ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3294ef9ea42305aa8efe683f18695ab">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Blocking  = execution::blocking_t::possibly_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt; T, Blocking &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1detail_1_1promise__executor.html">promise_executor</a>&lt; T, Blocking &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/impl/<a class="el" href="impl_2use__future_8hpp_source.html">use_future.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

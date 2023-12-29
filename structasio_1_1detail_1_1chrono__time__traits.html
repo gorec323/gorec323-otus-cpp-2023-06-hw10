@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::detail::chrono_time_traits&lt; Clock, WaitTraits &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">chrono_time_traits</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="structasio_1_1detail_1_1chrono__time__traits-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::detail::chrono_time_traits&lt; Clock, WaitTraits &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="chrono__time__traits_8hpp_source.html">chrono_time_traits.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1chrono__time__traits_1_1posix__time__duration.html">posix_time_duration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a0043b268ffdb59f6b880a96512ab5453"><td class="memItemLeft" align="right" valign="top">typedef Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a0043b268ffdb59f6b880a96512ab5453">clock_type</a></td></tr>
+<tr class="separator:a0043b268ffdb59f6b880a96512ab5453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f122a7cb603e7516bb6595016960775"><td class="memItemLeft" align="right" valign="top">typedef clock_type::duration&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a></td></tr>
+<tr class="separator:a7f122a7cb603e7516bb6595016960775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c14f4d45a8b164d2ea4590eebc1c10"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="timeout_8cpp.html#aba435368c4c2a7360d2790ec36e70cf1">clock_type::time_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a></td></tr>
+<tr class="separator:a19c14f4d45a8b164d2ea4590eebc1c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb85fcb3beb946b4ea037a411b6d931"><td class="memItemLeft" align="right" valign="top">typedef duration_type::period&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#aebb85fcb3beb946b4ea037a411b6d931">period_type</a></td></tr>
+<tr class="separator:aebb85fcb3beb946b4ea037a411b6d931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a338cedf2fb1814b9e1fa6f841d643945"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a338cedf2fb1814b9e1fa6f841d643945">now</a> ()</td></tr>
+<tr class="separator:a338cedf2fb1814b9e1fa6f841d643945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd393376947e8f72bda0defba4e35929"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#acd393376947e8f72bda0defba4e35929">add</a> (const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;t, const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a> &amp;d)</td></tr>
+<tr class="separator:acd393376947e8f72bda0defba4e35929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdcf3583f2ab08dcfe3af9c4455f85ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#acdcf3583f2ab08dcfe3af9c4455f85ae">subtract</a> (const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;t1, const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;t2)</td></tr>
+<tr class="separator:acdcf3583f2ab08dcfe3af9c4455f85ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12702d45a542fac5c4558be6784f6de1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a12702d45a542fac5c4558be6784f6de1">less_than</a> (const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;t1, const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;t2)</td></tr>
+<tr class="separator:a12702d45a542fac5c4558be6784f6de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892a428f4ba5ee4ef390838ad440784c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1detail_1_1chrono__time__traits_1_1posix__time__duration.html">posix_time_duration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a892a428f4ba5ee4ef390838ad440784c">to_posix_duration</a> (const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a> &amp;d)</td></tr>
+<tr class="separator:a892a428f4ba5ee4ef390838ad440784c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a0043b268ffdb59f6b880a96512ab5453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0043b268ffdb59f6b880a96512ab5453">&#9670;&nbsp;</a></span>clock_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Clock <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::<a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a0043b268ffdb59f6b880a96512ab5453">clock_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f122a7cb603e7516bb6595016960775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f122a7cb603e7516bb6595016960775">&#9670;&nbsp;</a></span>duration_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef clock_type::duration <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::<a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebb85fcb3beb946b4ea037a411b6d931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb85fcb3beb946b4ea037a411b6d931">&#9670;&nbsp;</a></span>period_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef duration_type::period <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::<a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#aebb85fcb3beb946b4ea037a411b6d931">period_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19c14f4d45a8b164d2ea4590eebc1c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c14f4d45a8b164d2ea4590eebc1c10">&#9670;&nbsp;</a></span>time_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="timeout_8cpp.html#aba435368c4c2a7360d2790ec36e70cf1">clock_type::time_point</a> <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::<a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="acd393376947e8f72bda0defba4e35929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd393376947e8f72bda0defba4e35929">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12702d45a542fac5c4558be6784f6de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12702d45a542fac5c4558be6784f6de1">&#9670;&nbsp;</a></span>less_than()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::less_than </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>t2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a338cedf2fb1814b9e1fa6f841d643945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338cedf2fb1814b9e1fa6f841d643945">&#9670;&nbsp;</a></span>now()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::now </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdcf3583f2ab08dcfe3af9c4455f85ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcf3583f2ab08dcfe3af9c4455f85ae">&#9670;&nbsp;</a></span>subtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a> <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::subtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a19c14f4d45a8b164d2ea4590eebc1c10">time_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>t2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a892a428f4ba5ee4ef390838ad440784c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892a428f4ba5ee4ef390838ad440784c">&#9670;&nbsp;</a></span>to_posix_duration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Clock , typename WaitTraits &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1detail_1_1chrono__time__traits_1_1posix__time__duration.html">posix_time_duration</a> <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html">asio::detail::chrono_time_traits</a>&lt; Clock, WaitTraits &gt;::to_posix_duration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1detail_1_1chrono__time__traits.html#a7f122a7cb603e7516bb6595016960775">duration_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="chrono__time__traits_8hpp_source.html">chrono_time_traits.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

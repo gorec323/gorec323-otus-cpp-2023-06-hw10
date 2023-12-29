@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/recycling_allocator.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">recycling_allocator.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="recycling__allocator_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// recycling_allocator.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_RECYCLING_ALLOCATOR_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_RECYCLING_ALLOCATOR_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="detail_2recycling__allocator_8hpp.html">asio/detail/recycling_allocator.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html#a5fbc465fc055f242c5502b9ec0311164">   36</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a> <a class="code" href="classasio_1_1recycling__allocator.html#a5fbc465fc055f242c5502b9ec0311164">value_type</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structasio_1_1recycling__allocator_1_1rebind.html">   40</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1recycling__allocator_1_1rebind.html">rebind</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structasio_1_1recycling__allocator_1_1rebind.html#aa38dc72c103338239dd5e0b99c5b78e4">   43</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator&lt;U&gt;</a> <a class="code" href="structasio_1_1recycling__allocator_1_1rebind.html#aa38dc72c103338239dd5e0b99c5b78e4">other</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html#a9aa9e4dd694015eb4b220bbcdb35b859">   47</a></span>&#160;  constexpr <a class="code" href="classasio_1_1recycling__allocator.html#a9aa9e4dd694015eb4b220bbcdb35b859">recycling_allocator</a>() noexcept</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html#a564f3b260a8e22494089fce0a31c3e90">   53</a></span>&#160;  constexpr <a class="code" href="classasio_1_1recycling__allocator.html#a564f3b260a8e22494089fce0a31c3e90">recycling_allocator</a>(</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator&lt;U&gt;</a>&amp;) noexcept</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html#aeae80449b77e1c109bbd63bd2557d279">   59</a></span>&#160;  constexpr <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1recycling__allocator.html#aeae80449b77e1c109bbd63bd2557d279">operator==</a>(</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&amp;) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html#acb031b609c27afcea883abe622c12de9">   66</a></span>&#160;  constexpr <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1recycling__allocator.html#acb031b609c27afcea883abe622c12de9">operator!=</a>(</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&amp;) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html#a493b210fa5a2ffd4d9a5dcdcf28f4596">   73</a></span>&#160;  <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>* <a class="code" href="classasio_1_1recycling__allocator.html#a493b210fa5a2ffd4d9a5dcdcf28f4596">allocate</a>(std::size_t n)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classasio_1_1detail_1_1recycling__allocator.html">detail::recycling_allocator&lt;T&gt;</a>().<a class="code" href="classasio_1_1detail_1_1recycling__allocator.html#abd3a43f12a5246039f1b6febf29e0351">allocate</a>(n);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator.html#ade6c4be63b757e0262d27cd8fd996780">   79</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1recycling__allocator.html#ade6c4be63b757e0262d27cd8fd996780">deallocate</a>(<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>* p, std::size_t n)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classasio_1_1detail_1_1recycling__allocator.html">detail::recycling_allocator&lt;T&gt;</a>().<a class="code" href="classasio_1_1detail_1_1recycling__allocator.html#a7ac7819771ae24ef69a84fcfbce68c84">deallocate</a>(p, n);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator_3_01void_01_4.html">   93</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&lt;<a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&gt;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator_3_01void_01_4.html#a98bea53a2be679044a88c9a3b414b245">   97</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1recycling__allocator_3_01void_01_4.html#a98bea53a2be679044a88c9a3b414b245">value_type</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="structasio_1_1recycling__allocator_3_01void_01_4_1_1rebind.html">  101</a></span>&#160;  <span class="keyword">struct </span>rebind</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  {</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="structasio_1_1recycling__allocator_3_01void_01_4_1_1rebind.html#a9126906c5be154fda710c093ecfd5fa8">  104</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator&lt;U&gt;</a> <a class="code" href="structasio_1_1recycling__allocator_3_01void_01_4_1_1rebind.html#a9126906c5be154fda710c093ecfd5fa8">other</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator_3_01void_01_4.html#acf86e7c2ca7ca19aa23231a8b5c92376">  108</a></span>&#160;  constexpr <a class="code" href="classasio_1_1recycling__allocator_3_01void_01_4.html#acf86e7c2ca7ca19aa23231a8b5c92376">recycling_allocator</a>() noexcept</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator_3_01void_01_4.html#a866f233d75b3824c50ab7e269fa85605">  114</a></span>&#160;  constexpr <a class="code" href="classasio_1_1recycling__allocator_3_01void_01_4.html#a866f233d75b3824c50ab7e269fa85605">recycling_allocator</a>(</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator&lt;U&gt;</a>&amp;) noexcept</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator_3_01void_01_4.html#a0dc8bfd6876922d7a55580bbe85b697c">  120</a></span>&#160;  constexpr <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1recycling__allocator_3_01void_01_4.html#a0dc8bfd6876922d7a55580bbe85b697c">operator==</a>(</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&amp;) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classasio_1_1recycling__allocator_3_01void_01_4.html#afae92142c477f50ca91a7f78354251b1">  127</a></span>&#160;  constexpr <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1recycling__allocator_3_01void_01_4.html#afae92142c477f50ca91a7f78354251b1">operator!=</a>(</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&amp;) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_RECYCLING_ALLOCATOR_HPP</span></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1recycling__allocator_html"><div class="ttname"><a href="classasio_1_1detail_1_1recycling__allocator.html">asio::detail::recycling_allocator</a></div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:30</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1recycling__allocator_html_a7ac7819771ae24ef69a84fcfbce68c84"><div class="ttname"><a href="classasio_1_1detail_1_1recycling__allocator.html#a7ac7819771ae24ef69a84fcfbce68c84">asio::detail::recycling_allocator::deallocate</a></div><div class="ttdeci">void deallocate(T *p, std::size_t n)</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:57</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1recycling__allocator_html_abd3a43f12a5246039f1b6febf29e0351"><div class="ttname"><a href="classasio_1_1detail_1_1recycling__allocator.html#abd3a43f12a5246039f1b6febf29e0351">asio::detail::recycling_allocator::allocate</a></div><div class="ttdeci">T * allocate(std::size_t n)</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:49</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_3_01void_01_4_html_a0dc8bfd6876922d7a55580bbe85b697c"><div class="ttname"><a href="classasio_1_1recycling__allocator_3_01void_01_4.html#a0dc8bfd6876922d7a55580bbe85b697c">asio::recycling_allocator&lt; void &gt;::operator==</a></div><div class="ttdeci">constexpr bool operator==(const recycling_allocator &amp;) const noexcept</div><div class="ttdoc">Equality operator. Always returns true.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:120</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_3_01void_01_4_html_a866f233d75b3824c50ab7e269fa85605"><div class="ttname"><a href="classasio_1_1recycling__allocator_3_01void_01_4.html#a866f233d75b3824c50ab7e269fa85605">asio::recycling_allocator&lt; void &gt;::recycling_allocator</a></div><div class="ttdeci">constexpr recycling_allocator(const recycling_allocator&lt; U &gt; &amp;) noexcept</div><div class="ttdoc">Converting constructor.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:114</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_3_01void_01_4_html_a98bea53a2be679044a88c9a3b414b245"><div class="ttname"><a href="classasio_1_1recycling__allocator_3_01void_01_4.html#a98bea53a2be679044a88c9a3b414b245">asio::recycling_allocator&lt; void &gt;::value_type</a></div><div class="ttdeci">void value_type</div><div class="ttdoc">No values are allocated by a proto-allocator.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:97</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_3_01void_01_4_html_acf86e7c2ca7ca19aa23231a8b5c92376"><div class="ttname"><a href="classasio_1_1recycling__allocator_3_01void_01_4.html#acf86e7c2ca7ca19aa23231a8b5c92376">asio::recycling_allocator&lt; void &gt;::recycling_allocator</a></div><div class="ttdeci">constexpr recycling_allocator() noexcept</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:108</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_3_01void_01_4_html_afae92142c477f50ca91a7f78354251b1"><div class="ttname"><a href="classasio_1_1recycling__allocator_3_01void_01_4.html#afae92142c477f50ca91a7f78354251b1">asio::recycling_allocator&lt; void &gt;::operator!=</a></div><div class="ttdeci">constexpr bool operator!=(const recycling_allocator &amp;) const noexcept</div><div class="ttdoc">Inequality operator. Always returns false.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:127</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html"><div class="ttname"><a href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a></div><div class="ttdoc">An allocator that caches memory blocks in thread-local storage for reuse.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:33</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html_a493b210fa5a2ffd4d9a5dcdcf28f4596"><div class="ttname"><a href="classasio_1_1recycling__allocator.html#a493b210fa5a2ffd4d9a5dcdcf28f4596">asio::recycling_allocator::allocate</a></div><div class="ttdeci">T * allocate(std::size_t n)</div><div class="ttdoc">Allocate memory for the specified number of values.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:73</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html_a564f3b260a8e22494089fce0a31c3e90"><div class="ttname"><a href="classasio_1_1recycling__allocator.html#a564f3b260a8e22494089fce0a31c3e90">asio::recycling_allocator::recycling_allocator</a></div><div class="ttdeci">constexpr recycling_allocator(const recycling_allocator&lt; U &gt; &amp;) noexcept</div><div class="ttdoc">Converting constructor.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:53</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html_a5fbc465fc055f242c5502b9ec0311164"><div class="ttname"><a href="classasio_1_1recycling__allocator.html#a5fbc465fc055f242c5502b9ec0311164">asio::recycling_allocator::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdoc">The type of object allocated by the recycling allocator.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:36</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html_a9aa9e4dd694015eb4b220bbcdb35b859"><div class="ttname"><a href="classasio_1_1recycling__allocator.html#a9aa9e4dd694015eb4b220bbcdb35b859">asio::recycling_allocator::recycling_allocator</a></div><div class="ttdeci">constexpr recycling_allocator() noexcept</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:47</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html_acb031b609c27afcea883abe622c12de9"><div class="ttname"><a href="classasio_1_1recycling__allocator.html#acb031b609c27afcea883abe622c12de9">asio::recycling_allocator::operator!=</a></div><div class="ttdeci">constexpr bool operator!=(const recycling_allocator &amp;) const noexcept</div><div class="ttdoc">Inequality operator. Always returns false.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:66</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html_ade6c4be63b757e0262d27cd8fd996780"><div class="ttname"><a href="classasio_1_1recycling__allocator.html#ade6c4be63b757e0262d27cd8fd996780">asio::recycling_allocator::deallocate</a></div><div class="ttdeci">void deallocate(T *p, std::size_t n)</div><div class="ttdoc">Deallocate memory for the specified number of values.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:79</div></div>
+<div class="ttc" id="aclassasio_1_1recycling__allocator_html_aeae80449b77e1c109bbd63bd2557d279"><div class="ttname"><a href="classasio_1_1recycling__allocator.html#aeae80449b77e1c109bbd63bd2557d279">asio::recycling_allocator::operator==</a></div><div class="ttdeci">constexpr bool operator==(const recycling_allocator &amp;) const noexcept</div><div class="ttdoc">Equality operator. Always returns true.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:59</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="adetail_2recycling__allocator_8hpp_html"><div class="ttname"><a href="detail_2recycling__allocator_8hpp.html">recycling_allocator.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1recycling__allocator_1_1rebind_html"><div class="ttname"><a href="structasio_1_1recycling__allocator_1_1rebind.html">asio::recycling_allocator::rebind</a></div><div class="ttdoc">Rebind the allocator to another value_type.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:41</div></div>
+<div class="ttc" id="astructasio_1_1recycling__allocator_1_1rebind_html_aa38dc72c103338239dd5e0b99c5b78e4"><div class="ttname"><a href="structasio_1_1recycling__allocator_1_1rebind.html#aa38dc72c103338239dd5e0b99c5b78e4">asio::recycling_allocator::rebind::other</a></div><div class="ttdeci">recycling_allocator&lt; U &gt; other</div><div class="ttdoc">The rebound allocator type.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:43</div></div>
+<div class="ttc" id="astructasio_1_1recycling__allocator_3_01void_01_4_1_1rebind_html_a9126906c5be154fda710c093ecfd5fa8"><div class="ttname"><a href="structasio_1_1recycling__allocator_3_01void_01_4_1_1rebind.html#a9126906c5be154fda710c093ecfd5fa8">asio::recycling_allocator&lt; void &gt;::rebind::other</a></div><div class="ttdeci">recycling_allocator&lt; U &gt; other</div><div class="ttdoc">The rebound allocator type.</div><div class="ttdef"><b>Definition:</b> recycling_allocator.hpp:104</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/src/examples/cpp03/http/server4/reply.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_97d4d118eba55c3b8cfaf2639dfa73b6.html">http</a></li><li class="navelem"><a class="el" href="dir_38d17703d6cac2a25cf92fc2e4f918c1.html">server4</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">reply.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cpp03_2http_2server4_2reply_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// reply.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef HTTP_SERVER4_REPLY_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define HTTP_SERVER4_REPLY_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="asio_8hpp.html">asio.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cpp11_2http_2server_2header_8hpp.html">header.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacehttp.html">http</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>server4 {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structhttp_1_1server4_1_1reply.html">reply</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05">   26</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05">status_type</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a8cd355c153400c7185ddf8f1dc101704">   28</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a8cd355c153400c7185ddf8f1dc101704">ok</a> = 200,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05ab124a8e47a7b9b998e0a014c03e4bfff">   29</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05ab124a8e47a7b9b998e0a014c03e4bfff">created</a> = 201,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05abaee2bd06443f8ac74c6d89d092eb81c">   30</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05abaee2bd06443f8ac74c6d89d092eb81c">accepted</a> = 202,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a3621342769f409c8f18bfd99593cd3e1">   31</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a3621342769f409c8f18bfd99593cd3e1">no_content</a> = 204,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a4edac0716cd08f18d94f01893cfa8602">   32</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a4edac0716cd08f18d94f01893cfa8602">multiple_choices</a> = 300,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a491f051c54596def4fe29fbbd2531c03">   33</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a491f051c54596def4fe29fbbd2531c03">moved_permanently</a> = 301,</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05aadc12997bbced016f76e91f08d31fe8f">   34</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05aadc12997bbced016f76e91f08d31fe8f">moved_temporarily</a> = 302,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a9938b11cd604886cf030396bfbf3ea82">   35</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a9938b11cd604886cf030396bfbf3ea82">not_modified</a> = 304,</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a2e1e3b1c3a04fd36a5aadc282c390424">   36</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a2e1e3b1c3a04fd36a5aadc282c390424">bad_request</a> = 400,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05aed3d4ac6c2062f1d2c12b7d664b06157">   37</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05aed3d4ac6c2062f1d2c12b7d664b06157">unauthorized</a> = 401,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05ac48c0665a97ff100347891c2d9ed86d3">   38</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05ac48c0665a97ff100347891c2d9ed86d3">forbidden</a> = 403,</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a93503b49f3f4d5355389ed965f432a5e">   39</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a93503b49f3f4d5355389ed965f432a5e">not_found</a> = 404,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05adbe22fb3b3b60a388dada2fc5bcbcbc6">   40</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05adbe22fb3b3b60a388dada2fc5bcbcbc6">internal_server_error</a> = 500,</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05af9818a954b28664468a643e68ebc57d8">   41</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05af9818a954b28664468a643e68ebc57d8">not_implemented</a> = 501,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a5814bf38786d8b2e7dda8d5052bb76df">   42</a></span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a5814bf38786d8b2e7dda8d5052bb76df">bad_gateway</a> = 502,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05af675a285ba481d52ffd289a1f299f0d4">service_unavailable</a> = 503</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05af675a285ba481d52ffd289a1f299f0d4">   44</a></span>&#160;  } <a class="code" href="structhttp_1_1server4_1_1reply.html#ab0eee588aeeb98f248c811de8a27196e">status</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a8d61b7b6284486c561bf558ef662820f">   47</a></span>&#160;  std::vector&lt;header&gt; <a class="code" href="structhttp_1_1server4_1_1reply.html#a8d61b7b6284486c561bf558ef662820f">headers</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structhttp_1_1server4_1_1reply.html#a00958e5224221e54cf9c364ce4d3608a">   50</a></span>&#160;  std::string <a class="code" href="structhttp_1_1server4_1_1reply.html#a00958e5224221e54cf9c364ce4d3608a">content</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  std::vector&lt;asio::const_buffer&gt; <a class="code" href="structhttp_1_1server4_1_1reply.html#aa6e476db2661255eac048aee7e28daf3">to_buffers</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">static</span> <a class="code" href="structhttp_1_1server4_1_1reply.html">reply</a> <a class="code" href="structhttp_1_1server4_1_1reply.html#a572af5f89c67c8f5ed3a378dd7d1e6ca">stock_reply</a>(<a class="code" href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05">status_type</a> <a class="code" href="structhttp_1_1server4_1_1reply.html#ab0eee588aeeb98f248c811de8a27196e">status</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;} <span class="comment">// namespace server4</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// namespace http</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// HTTP_SERVER4_REPLY_HPP</span></div>
+<div class="ttc" id="aasio_8hpp_html"><div class="ttname"><a href="asio_8hpp.html">asio.hpp</a></div></div>
+<div class="ttc" id="acpp11_2http_2server_2header_8hpp_html"><div class="ttname"><a href="cpp11_2http_2server_2header_8hpp.html">header.hpp</a></div></div>
+<div class="ttc" id="anamespacehttp_html"><div class="ttname"><a href="namespacehttp.html">http</a></div><div class="ttdef"><b>Definition:</b> connection.cpp:17</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html">http::server4::reply</a></div><div class="ttdoc">A reply to be sent to a client.</div><div class="ttdef"><b>Definition:</b> reply.hpp:24</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a00958e5224221e54cf9c364ce4d3608a"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a00958e5224221e54cf9c364ce4d3608a">http::server4::reply::content</a></div><div class="ttdeci">std::string content</div><div class="ttdoc">The content to be sent in the reply.</div><div class="ttdef"><b>Definition:</b> reply.hpp:50</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05">http::server4::reply::status_type</a></div><div class="ttdeci">status_type</div><div class="ttdoc">The status of the reply.</div><div class="ttdef"><b>Definition:</b> reply.hpp:27</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a2e1e3b1c3a04fd36a5aadc282c390424"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a2e1e3b1c3a04fd36a5aadc282c390424">http::server4::reply::bad_request</a></div><div class="ttdeci">@ bad_request</div><div class="ttdef"><b>Definition:</b> reply.hpp:36</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a3621342769f409c8f18bfd99593cd3e1"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a3621342769f409c8f18bfd99593cd3e1">http::server4::reply::no_content</a></div><div class="ttdeci">@ no_content</div><div class="ttdef"><b>Definition:</b> reply.hpp:31</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a491f051c54596def4fe29fbbd2531c03"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a491f051c54596def4fe29fbbd2531c03">http::server4::reply::moved_permanently</a></div><div class="ttdeci">@ moved_permanently</div><div class="ttdef"><b>Definition:</b> reply.hpp:33</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a4edac0716cd08f18d94f01893cfa8602"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a4edac0716cd08f18d94f01893cfa8602">http::server4::reply::multiple_choices</a></div><div class="ttdeci">@ multiple_choices</div><div class="ttdef"><b>Definition:</b> reply.hpp:32</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a5814bf38786d8b2e7dda8d5052bb76df"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a5814bf38786d8b2e7dda8d5052bb76df">http::server4::reply::bad_gateway</a></div><div class="ttdeci">@ bad_gateway</div><div class="ttdef"><b>Definition:</b> reply.hpp:42</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a8cd355c153400c7185ddf8f1dc101704"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a8cd355c153400c7185ddf8f1dc101704">http::server4::reply::ok</a></div><div class="ttdeci">@ ok</div><div class="ttdef"><b>Definition:</b> reply.hpp:28</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a93503b49f3f4d5355389ed965f432a5e"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a93503b49f3f4d5355389ed965f432a5e">http::server4::reply::not_found</a></div><div class="ttdeci">@ not_found</div><div class="ttdef"><b>Definition:</b> reply.hpp:39</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05a9938b11cd604886cf030396bfbf3ea82"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05a9938b11cd604886cf030396bfbf3ea82">http::server4::reply::not_modified</a></div><div class="ttdeci">@ not_modified</div><div class="ttdef"><b>Definition:</b> reply.hpp:35</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05aadc12997bbced016f76e91f08d31fe8f"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05aadc12997bbced016f76e91f08d31fe8f">http::server4::reply::moved_temporarily</a></div><div class="ttdeci">@ moved_temporarily</div><div class="ttdef"><b>Definition:</b> reply.hpp:34</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05ab124a8e47a7b9b998e0a014c03e4bfff"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05ab124a8e47a7b9b998e0a014c03e4bfff">http::server4::reply::created</a></div><div class="ttdeci">@ created</div><div class="ttdef"><b>Definition:</b> reply.hpp:29</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05abaee2bd06443f8ac74c6d89d092eb81c"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05abaee2bd06443f8ac74c6d89d092eb81c">http::server4::reply::accepted</a></div><div class="ttdeci">@ accepted</div><div class="ttdef"><b>Definition:</b> reply.hpp:30</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05ac48c0665a97ff100347891c2d9ed86d3"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05ac48c0665a97ff100347891c2d9ed86d3">http::server4::reply::forbidden</a></div><div class="ttdeci">@ forbidden</div><div class="ttdef"><b>Definition:</b> reply.hpp:38</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05adbe22fb3b3b60a388dada2fc5bcbcbc6"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05adbe22fb3b3b60a388dada2fc5bcbcbc6">http::server4::reply::internal_server_error</a></div><div class="ttdeci">@ internal_server_error</div><div class="ttdef"><b>Definition:</b> reply.hpp:40</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05aed3d4ac6c2062f1d2c12b7d664b06157"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05aed3d4ac6c2062f1d2c12b7d664b06157">http::server4::reply::unauthorized</a></div><div class="ttdeci">@ unauthorized</div><div class="ttdef"><b>Definition:</b> reply.hpp:37</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05af675a285ba481d52ffd289a1f299f0d4"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05af675a285ba481d52ffd289a1f299f0d4">http::server4::reply::service_unavailable</a></div><div class="ttdeci">@ service_unavailable</div><div class="ttdef"><b>Definition:</b> reply.hpp:43</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a2c75caf04d09f0ca6b485c847be2aa05af9818a954b28664468a643e68ebc57d8"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a2c75caf04d09f0ca6b485c847be2aa05af9818a954b28664468a643e68ebc57d8">http::server4::reply::not_implemented</a></div><div class="ttdeci">@ not_implemented</div><div class="ttdef"><b>Definition:</b> reply.hpp:41</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a572af5f89c67c8f5ed3a378dd7d1e6ca"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a572af5f89c67c8f5ed3a378dd7d1e6ca">http::server4::reply::stock_reply</a></div><div class="ttdeci">static reply stock_reply(status_type status)</div><div class="ttdoc">Get a stock reply.</div><div class="ttdef"><b>Definition:</b> reply.cpp:242</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_a8d61b7b6284486c561bf558ef662820f"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#a8d61b7b6284486c561bf558ef662820f">http::server4::reply::headers</a></div><div class="ttdeci">std::vector&lt; header &gt; headers</div><div class="ttdoc">The headers to be included in the reply.</div><div class="ttdef"><b>Definition:</b> reply.hpp:47</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_aa6e476db2661255eac048aee7e28daf3"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#aa6e476db2661255eac048aee7e28daf3">http::server4::reply::to_buffers</a></div><div class="ttdeci">std::vector&lt; asio::const_buffer &gt; to_buffers()</div><div class="ttdef"><b>Definition:</b> reply.cpp:103</div></div>
+<div class="ttc" id="astructhttp_1_1server4_1_1reply_html_ab0eee588aeeb98f248c811de8a27196e"><div class="ttname"><a href="structhttp_1_1server4_1_1reply.html#ab0eee588aeeb98f248c811de8a27196e">http::server4::reply::status</a></div><div class="ttdeci">enum http::server4::reply::status_type status</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

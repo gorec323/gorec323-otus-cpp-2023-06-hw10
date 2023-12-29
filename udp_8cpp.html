@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/ip/udp.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li><li class="navelem"><a class="el" href="dir_a93cc0b688d3b7b177edf24c783d51c9.html">ip</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл udp.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="udp_8hpp_source.html">asio/ip/udp.hpp</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8hpp_source.html">asio/io_context.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">../unit_test.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2tests_2unit_2archetypes_2async__result_8hpp_source.html">../archetypes/async_result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gettable__socket__option_8hpp_source.html">../archetypes/gettable_socket_option.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__control__command_8hpp_source.html">../archetypes/io_control_command.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="settable__socket__option_8hpp_source.html">../archetypes/settable_socket_option.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для udp.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="udp_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2udp_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2udp_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2udp_8cpp">
+<area shape="rect" title=" " alt="" coords="4138,5,4319,47"/>
+<area shape="rect" href="udp_8hpp.html" title=" " alt="" coords="3364,102,3485,129"/>
+<area shape="rect" title=" " alt="" coords="4680,541,4767,568"/>
+<area shape="rect" title=" " alt="" coords="4195,459,4262,486"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="1126,191,1275,218"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="5,370,124,397"/>
+<area shape="rect" href="src_2tests_2unit_2archetypes_2async__result_8hpp.html" title=" " alt="" coords="1391,363,1539,404"/>
+<area shape="rect" href="gettable__socket__option_8hpp.html" title=" " alt="" coords="4773,616,4937,657"/>
+<area shape="rect" href="io__control__command_8hpp.html" title=" " alt="" coords="4944,95,5119,136"/>
+<area shape="rect" href="settable__socket__option_8hpp.html" title=" " alt="" coords="4893,184,5055,225"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="1621,623,1783,650"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="2215,184,2373,225"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2113,541,2321,568"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2987,541,3188,568"/>
+<area shape="rect" href="socket__types_8hpp.html" title=" " alt="" coords="4035,452,4171,493"/>
+<area shape="rect" href="ip_2basic__endpoint_8hpp.html" title=" " alt="" coords="3563,459,3758,486"/>
+<area shape="rect" href="basic__resolver_8hpp.html" title=" " alt="" coords="2729,281,2920,307"/>
+<area shape="rect" href="basic__resolver__iterator_8hpp.html" title=" " alt="" coords="3775,363,3938,404"/>
+<area shape="rect" href="basic__resolver__query_8hpp.html" title=" " alt="" coords="3174,452,3337,493"/>
+<area shape="rect" title=" " alt="" coords="3768,705,3839,732"/>
+<area shape="rect" title=" " alt="" coords="1717,705,1847,732"/>
+<area shape="rect" title=" " alt="" coords="1554,705,1693,732"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="2212,281,2376,307"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1447,541,1639,568"/>
+<area shape="rect" href="handler__type__requirements_8hpp.html" title=" " alt="" coords="2476,363,2656,404"/>
+<area shape="rect" href="non__const__lvalue_8hpp.html" title=" " alt="" coords="1817,363,1977,404"/>
+<area shape="rect" href="throw__error_8hpp.html" title=" " alt="" coords="2052,370,2248,397"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="2732,370,2843,397"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2305,459,2467,486"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="929,459,1129,486"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="2028,459,2179,486"/>
+<area shape="rect" title=" " alt="" coords="515,541,601,568"/>
+<area shape="rect" title=" " alt="" coords="625,541,701,568"/>
+<area shape="rect" title=" " alt="" coords="3891,541,3979,568"/>
+<area shape="rect" title=" " alt="" coords="4004,541,4088,568"/>
+<area shape="rect" title=" " alt="" coords="4113,541,4209,568"/>
+<area shape="rect" title=" " alt="" coords="4233,541,4318,568"/>
+<area shape="rect" title=" " alt="" coords="4343,541,4405,568"/>
+<area shape="rect" title=" " alt="" coords="4430,541,4529,568"/>
+<area shape="rect" title=" " alt="" coords="4553,541,4656,568"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="2796,541,2963,568"/>
+<area shape="rect" href="chrono_8hpp.html" title=" " alt="" coords="251,281,417,307"/>
+<area shape="rect" href="concurrency__hint_8hpp.html" title=" " alt="" coords="442,273,615,315"/>
+<area shape="rect" href="wrapped__handler_8hpp.html" title=" " alt="" coords="2847,452,2997,493"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="935,541,1079,568"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="979,370,1163,397"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="1817,281,2000,307"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="250,452,389,493"/>
+<area shape="rect" title=" " alt="" coords="45,459,125,486"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="1255,459,1445,486"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__udp__socket__compile_1_1connect__handler.html">ip_udp_socket_compile::connect_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__udp__socket__compile_1_1wait__handler.html">ip_udp_socket_compile::wait_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__udp__socket__compile_1_1send__handler.html">ip_udp_socket_compile::send_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__udp__socket__compile_1_1receive__handler.html">ip_udp_socket_compile::receive_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__udp__resolver__compile_1_1resolve__handler.html">ip_udp_resolver_compile::resolve_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceip__udp__socket__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__socket__compile.html">ip_udp_socket_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__udp__socket__runtime"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__socket__runtime.html">ip_udp_socket_runtime</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__udp__resolver__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__resolver__compile.html">ip_udp_resolver_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="udp_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a62c64b99fee4c4a2184c2f324554844a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__socket__compile.html#a62c64b99fee4c4a2184c2f324554844a">ip_udp_socket_compile::test</a> ()</td></tr>
+<tr class="separator:a62c64b99fee4c4a2184c2f324554844a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ab2d857e3bd89921367faa7fa073f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__socket__runtime.html#a83ab2d857e3bd89921367faa7fa073f9">ip_udp_socket_runtime::handle_send</a> (size_t expected_bytes_sent, const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_sent)</td></tr>
+<tr class="separator:a83ab2d857e3bd89921367faa7fa073f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6ebb82f8a75d41b372b947c14278fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__socket__runtime.html#abe6ebb82f8a75d41b372b947c14278fc">ip_udp_socket_runtime::handle_recv</a> (size_t expected_bytes_recvd, const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_recvd)</td></tr>
+<tr class="separator:abe6ebb82f8a75d41b372b947c14278fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0183f09bd3457c090a00f7cf4042d060"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__socket__runtime.html#a0183f09bd3457c090a00f7cf4042d060">ip_udp_socket_runtime::test</a> ()</td></tr>
+<tr class="separator:a0183f09bd3457c090a00f7cf4042d060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac125c3691d4d84049316800e03354da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__udp__resolver__compile.html#ac125c3691d4d84049316800e03354da0">ip_udp_resolver_compile::test</a> ()</td></tr>
+<tr class="separator:ac125c3691d4d84049316800e03354da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

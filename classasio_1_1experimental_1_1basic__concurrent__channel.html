@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::experimental::basic_concurrent_channel&lt; Executor, Traits, Signatures &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1experimental_1_1basic__concurrent__channel-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::experimental::basic_concurrent_channel&lt; Executor, Traits, Signatures &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A channel for messages.  
+ <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="basic__concurrent__channel_8hpp_source.html">basic_concurrent_channel.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::experimental::basic_concurrent_channel&lt; Executor, Traits, Signatures &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1experimental_1_1basic__concurrent__channel__inherit__graph.png" border="0" usemap="#aasio_1_1experimental_1_1basic__concurrent__channel_3_01Executor_00_01Traits_00_01Signatures_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1experimental_1_1basic__concurrent__channel_3_01Executor_00_01Traits_00_01Signatures_01_4_inherit__map" id="aasio_1_1experimental_1_1basic__concurrent__channel_3_01Executor_00_01Traits_00_01Signatures_01_4_inherit__map">
+<area shape="rect" title="A channel for messages." alt="" coords="268,27,496,83"/>
+<area shape="rect" href="classasio_1_1experimental_1_1detail_1_1channel__send__functions.html" title=" " alt="" coords="5,5,220,105"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::experimental::basic_concurrent_channel&lt; Executor, Traits, Signatures &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1experimental_1_1basic__concurrent__channel__coll__graph.png" border="0" usemap="#aasio_1_1experimental_1_1basic__concurrent__channel_3_01Executor_00_01Traits_00_01Signatures_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1experimental_1_1basic__concurrent__channel_3_01Executor_00_01Traits_00_01Signatures_01_4_coll__map" id="aasio_1_1experimental_1_1basic__concurrent__channel_3_01Executor_00_01Traits_00_01Signatures_01_4_coll__map">
+<area shape="rect" title="A channel for messages." alt="" coords="268,27,496,83"/>
+<area shape="rect" href="classasio_1_1experimental_1_1detail_1_1channel__send__functions.html" title=" " alt="" coords="5,5,220,105"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1basic__concurrent__channel_1_1rebind__executor.html">rebind_executor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebinds the channel type to another executor.  <a href="structasio_1_1experimental_1_1basic__concurrent__channel_1_1rebind__executor.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a48db71c0a7327acf396ec6680fda8fcb"><td class="memItemLeft" align="right" valign="top">typedef Executor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48db71c0a7327acf396ec6680fda8fcb">executor_type</a></td></tr>
+<tr class="memdesc:a48db71c0a7327acf396ec6680fda8fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the executor associated with the channel.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48db71c0a7327acf396ec6680fda8fcb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a48db71c0a7327acf396ec6680fda8fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdc509acd871707f2a979ca70fe8223"><td class="memItemLeft" align="right" valign="top">typedef Traits::template rebind&lt; Signatures... &gt;::other&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a1fdc509acd871707f2a979ca70fe8223">traits_type</a></td></tr>
+<tr class="memdesc:a1fdc509acd871707f2a979ca70fe8223"><td class="mdescLeft">&#160;</td><td class="mdescRight">The traits type associated with the channel.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a1fdc509acd871707f2a979ca70fe8223">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1fdc509acd871707f2a979ca70fe8223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a18ba676ba710579668aa33ed2d0b3dc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a18ba676ba710579668aa33ed2d0b3dc9">basic_concurrent_channel</a> (const <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48db71c0a7327acf396ec6680fda8fcb">executor_type</a> &amp;ex, std::size_t max_buffer_size=0)</td></tr>
+<tr class="memdesc:a18ba676ba710579668aa33ed2d0b3dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a>.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a18ba676ba710579668aa33ed2d0b3dc9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a18ba676ba710579668aa33ed2d0b3dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadae8c24e4f12a72e86957a09eff8a5d"><td class="memTemplParams" colspan="2">template&lt;typename ExecutionContext &gt; </td></tr>
+<tr class="memitem:aadae8c24e4f12a72e86957a09eff8a5d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#aadae8c24e4f12a72e86957a09eff8a5d">basic_concurrent_channel</a> (ExecutionContext &amp;context, std::size_t max_buffer_size=0, <a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt; ExecutionContext &amp;, <a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp; &gt;::value, <a class="el" href="structasio_1_1defaulted__constraint.html">defaulted_constraint</a> &gt;=<a class="el" href="structasio_1_1defaulted__constraint.html">defaulted_constraint</a>())</td></tr>
+<tr class="memdesc:aadae8c24e4f12a72e86957a09eff8a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and open a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a>.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#aadae8c24e4f12a72e86957a09eff8a5d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aadae8c24e4f12a72e86957a09eff8a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9721a065936a7fec6df489098b7f6353"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a9721a065936a7fec6df489098b7f6353">basic_concurrent_channel</a> (<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a9721a065936a7fec6df489098b7f6353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-construct a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a9721a065936a7fec6df489098b7f6353">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9721a065936a7fec6df489098b7f6353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad441292acf61eb664251f03041b608f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ad441292acf61eb664251f03041b608f6">operator=</a> (<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:ad441292acf61eb664251f03041b608f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-assign a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ad441292acf61eb664251f03041b608f6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad441292acf61eb664251f03041b608f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a075028cdbe8efd3eef9bfecce298f2e7"><td class="memTemplParams" colspan="2">template&lt;typename Executor1 &gt; </td></tr>
+<tr class="memitem:a075028cdbe8efd3eef9bfecce298f2e7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a075028cdbe8efd3eef9bfecce298f2e7">basic_concurrent_channel</a> (<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&lt; Executor1, Traits, Signatures... &gt; &amp;&amp;other, <a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt; Executor1, Executor &gt;::value &gt;=0)</td></tr>
+<tr class="memdesc:a075028cdbe8efd3eef9bfecce298f2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-construct a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a075028cdbe8efd3eef9bfecce298f2e7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a075028cdbe8efd3eef9bfecce298f2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d5d9f7a9c6ed699add5821fd8e8fcd"><td class="memTemplParams" colspan="2">template&lt;typename Executor1 &gt; </td></tr>
+<tr class="memitem:a27d5d9f7a9c6ed699add5821fd8e8fcd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt; Executor1, Executor &gt;::value, <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a27d5d9f7a9c6ed699add5821fd8e8fcd">operator=</a> (<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&lt; Executor1, Traits, Signatures... &gt; &amp;&amp;other)</td></tr>
+<tr class="memdesc:a27d5d9f7a9c6ed699add5821fd8e8fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-assign a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a27d5d9f7a9c6ed699add5821fd8e8fcd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a27d5d9f7a9c6ed699add5821fd8e8fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0a865aabacc5760ad9639d30e419f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#adc0a865aabacc5760ad9639d30e419f6">~basic_concurrent_channel</a> ()</td></tr>
+<tr class="memdesc:adc0a865aabacc5760ad9639d30e419f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#adc0a865aabacc5760ad9639d30e419f6">Подробнее...</a><br /></td></tr>
+<tr class="separator:adc0a865aabacc5760ad9639d30e419f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d2ef09390b580d2886e7e621fabc14"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48db71c0a7327acf396ec6680fda8fcb">executor_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a86d2ef09390b580d2886e7e621fabc14">get_executor</a> () noexcept</td></tr>
+<tr class="memdesc:a86d2ef09390b580d2886e7e621fabc14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the executor associated with the object.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a86d2ef09390b580d2886e7e621fabc14">Подробнее...</a><br /></td></tr>
+<tr class="separator:a86d2ef09390b580d2886e7e621fabc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a5fdd2b62a107d5951635f2a643433"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ac9a5fdd2b62a107d5951635f2a643433">capacity</a> () noexcept</td></tr>
+<tr class="memdesc:ac9a5fdd2b62a107d5951635f2a643433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the capacity of the channel's buffer.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ac9a5fdd2b62a107d5951635f2a643433">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac9a5fdd2b62a107d5951635f2a643433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e06f26570b7cd6d18718185b396e82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48e06f26570b7cd6d18718185b396e82">is_open</a> () const noexcept</td></tr>
+<tr class="memdesc:a48e06f26570b7cd6d18718185b396e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the channel is open.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48e06f26570b7cd6d18718185b396e82">Подробнее...</a><br /></td></tr>
+<tr class="separator:a48e06f26570b7cd6d18718185b396e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acadc3b517d54df2517ec02490730c0e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#acadc3b517d54df2517ec02490730c0e6">reset</a> ()</td></tr>
+<tr class="memdesc:acadc3b517d54df2517ec02490730c0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the channel to its initial state.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#acadc3b517d54df2517ec02490730c0e6">Подробнее...</a><br /></td></tr>
+<tr class="separator:acadc3b517d54df2517ec02490730c0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4acf869ca017c3eabad001cf22b4899f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a4acf869ca017c3eabad001cf22b4899f">close</a> ()</td></tr>
+<tr class="memdesc:a4acf869ca017c3eabad001cf22b4899f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the channel.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a4acf869ca017c3eabad001cf22b4899f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4acf869ca017c3eabad001cf22b4899f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90d4e92061a6b3a271280e2f2f5adec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ae90d4e92061a6b3a271280e2f2f5adec">cancel</a> ()</td></tr>
+<tr class="memdesc:ae90d4e92061a6b3a271280e2f2f5adec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel all asynchronous operations waiting on the channel.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ae90d4e92061a6b3a271280e2f2f5adec">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae90d4e92061a6b3a271280e2f2f5adec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6216ae5320f8758e60310a61328dfc40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a6216ae5320f8758e60310a61328dfc40">ready</a> () const noexcept</td></tr>
+<tr class="memdesc:a6216ae5320f8758e60310a61328dfc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether a message can be received without blocking.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a6216ae5320f8758e60310a61328dfc40">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6216ae5320f8758e60310a61328dfc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfec834edb7087d4e84eb830cba3116"><td class="memTemplParams" colspan="2">template&lt;typename Handler &gt; </td></tr>
+<tr class="memitem:a0cfec834edb7087d4e84eb830cba3116"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a0cfec834edb7087d4e84eb830cba3116">try_receive</a> (Handler &amp;&amp;handler)</td></tr>
+<tr class="memdesc:a0cfec834edb7087d4e84eb830cba3116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to receive a message without blocking.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a0cfec834edb7087d4e84eb830cba3116">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0cfec834edb7087d4e84eb830cba3116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dbf0d9ea7fe6d206543ddb9ab20fff2"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken  ASIO_DEFAULT_COMPLETION_TOKEN_TYPE&gt; </td></tr>
+<tr class="memitem:a0dbf0d9ea7fe6d206543ddb9ab20fff2"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a0dbf0d9ea7fe6d206543ddb9ab20fff2">async_receive</a> (CompletionToken &amp;&amp;<a class="el" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a> <a class="el" href="include_2asio_2async__result_8hpp.html#af222a79cb09333ff6a83f461d2443356">ASIO_DEFAULT_COMPLETION_TOKEN</a>(Executor)) -&gt; decltype(this-&gt;do_async_receive(static_cast&lt; payload_type * &gt;(0), static_cast&lt; CompletionToken &amp;&amp; &gt;(<a class="el" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)))</td></tr>
+<tr class="memdesc:a0dbf0d9ea7fe6d206543ddb9ab20fff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronously receive a message.  <a href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a0dbf0d9ea7fe6d206543ddb9ab20fff2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0dbf0d9ea7fe6d206543ddb9ab20fff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:ae7591e1989f1280976a3095d2337dd38"><td class="memTemplParams" colspan="2">template&lt;typename , typename , typename... &gt; </td></tr>
+<tr class="memitem:ae7591e1989f1280976a3095d2337dd38"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ae7591e1989f1280976a3095d2337dd38">basic_concurrent_channel</a></td></tr>
+<tr class="separator:ae7591e1989f1280976a3095d2337dd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d2acaf542b0dee27e220711b1e39a2"><td class="memTemplParams" colspan="2">template&lt;typename , typename , typename... &gt; </td></tr>
+<tr class="memitem:ae9d2acaf542b0dee27e220711b1e39a2"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#ae9d2acaf542b0dee27e220711b1e39a2">detail::channel_send_functions</a></td></tr>
+<tr class="separator:ae9d2acaf542b0dee27e220711b1e39a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename Executor, typename Traits, typename... Signatures&gt;<br />
+class asio::experimental::basic_concurrent_channel&lt; Executor, Traits, Signatures &gt;</h3>
+
+<p>A channel for messages. </p>
+<p>The <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> class template is used for sending messages between different parts of the same application. A <em>message</em> is defined as a collection of arguments to be passed to a completion handler, and the set of messages supported by a channel is specified by its <code>Traits</code> and <code>Signatures...</code> template parameters. Messages may be sent and received using asynchronous or non-blocking synchronous operations.</p>
+<p>Unless customising the traits, applications will typically use the <code><a class="el" href="namespaceasio_1_1experimental.html#a33a68f089b90bda97e79ab1855f02b0d" title="Template type alias for common use of channel.">experimental::concurrent_channel</a></code> alias template. For example: </p><div class="fragment"><div class="line"> <span class="keywordtype">void</span> send_loop(<span class="keywordtype">int</span> i, <a class="code" href="namespaceasio.html#a627a7abd2bc87969838f17e46b8dc20d">steady_timer</a>&amp; <a class="code" href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a>,</div>
+<div class="line">    <a class="code" href="namespaceasio_1_1experimental.html#a33a68f089b90bda97e79ab1855f02b0d">concurrent_channel</a>&lt;<span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">error_code</a>, <span class="keywordtype">int</span>)&gt;&amp; ch)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (i &lt; 10)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a>.expires_after(chrono::seconds(1));</div>
+<div class="line">    <a class="code" href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a>.async_wait(</div>
+<div class="line">        [i, &amp;<a class="code" href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a>, &amp;ch](<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">error_code</a> error)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordflow">if</span> (!error)</div>
+<div class="line">          {</div>
+<div class="line">            ch.async_send(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">error_code</a>(), i,</div>
+<div class="line">                [i, &amp;<a class="code" href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a>, &amp;ch](<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">error_code</a> error)</div>
+<div class="line">                {</div>
+<div class="line">                  <span class="keywordflow">if</span> (!error)</div>
+<div class="line">                  {</div>
+<div class="line">                    send_loop(i + 1, <a class="code" href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a>, ch);</div>
+<div class="line">                  }</div>
+<div class="line">                });</div>
+<div class="line">          }</div>
+<div class="line">        });</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">  {</div>
+<div class="line">    ch.close();</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> receive_loop(concurent_channel&lt;<span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">error_code</a>, <span class="keywordtype">int</span>)&gt;&amp; ch)</div>
+<div class="line">{</div>
+<div class="line">  ch.async_receive(</div>
+<div class="line">      [&amp;ch](<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">error_code</a> error, <span class="keywordtype">int</span> i)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keywordflow">if</span> (!error)</div>
+<div class="line">        {</div>
+<div class="line">          std::cout &lt;&lt; <span class="stringliteral">&quot;Received &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">          receive_loop(ch);</div>
+<div class="line">        }</div>
+<div class="line">      });</div>
+<div class="line">} </div>
+<div class="ttc" id="abind__allocator_8cpp_html_af1abddd6ed87a43a672d1f851b84a694"><div class="ttname"><a href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a></div><div class="ttdeci">steady_timer timer</div><div class="ttdef"><b>Definition:</b> bind_allocator.cpp:37</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a33a68f089b90bda97e79ab1855f02b0d"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a33a68f089b90bda97e79ab1855f02b0d">asio::experimental::concurrent_channel</a></div><div class="ttdeci">typename detail::concurrent_channel_type&lt; ExecutorOrSignature &gt;::template inner&lt; Signatures... &gt;::type concurrent_channel</div><div class="ttdoc">Template type alias for common use of channel.</div><div class="ttdef"><b>Definition:</b> concurrent_channel.hpp:63</div></div>
+<div class="ttc" id="anamespaceasio_html_a627a7abd2bc87969838f17e46b8dc20d"><div class="ttname"><a href="namespaceasio.html#a627a7abd2bc87969838f17e46b8dc20d">asio::steady_timer</a></div><div class="ttdeci">basic_waitable_timer&lt; chrono::steady_clock &gt; steady_timer</div><div class="ttdoc">Typedef for a timer based on the steady clock.</div><div class="ttdef"><b>Definition:</b> steady_timer.hpp:33</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+</div><!-- fragment --><dl class="section user"><dt>Thread Safety</dt><dd><em>Distinct</em> <em>objects:</em> Safe.<br  />
+<em>Shared</em> <em>objects:</em> Safe.</dd></dl>
+<p>The <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> class template is thread-safe, and would typically be used for passing messages between application code that run on different threads. Consider using <a class="el" href="classasio_1_1experimental_1_1basic__channel.html">basic_channel</a>, and its alias template <code><a class="el" href="namespaceasio_1_1experimental.html#ab360a432854fdf77bccc3e0079ae3d8d" title="Template type alias for common use of channel.">experimental::channel</a></code>, to pass messages between code running in a single thread or on the same strand. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a48db71c0a7327acf396ec6680fda8fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48db71c0a7327acf396ec6680fda8fcb">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Executor <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48db71c0a7327acf396ec6680fda8fcb">executor_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of the executor associated with the channel. </p>
+
+</div>
+</div>
+<a id="a1fdc509acd871707f2a979ca70fe8223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdc509acd871707f2a979ca70fe8223">&#9670;&nbsp;</a></span>traits_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Traits::template rebind&lt;Signatures...&gt;::other <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a1fdc509acd871707f2a979ca70fe8223">traits_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The traits type associated with the channel. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a18ba676ba710579668aa33ed2d0b3dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ba676ba710579668aa33ed2d0b3dc9">&#9670;&nbsp;</a></span>basic_concurrent_channel() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48db71c0a7327acf396ec6680fda8fcb">executor_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>max_buffer_size</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a>. </p>
+<p>This constructor creates and channel.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ex</td><td>The I/O executor that the channel will use, by default, to dispatch handlers for any asynchronous operations performed on the channel.</td></tr>
+    <tr><td class="paramname">max_buffer_size</td><td>The maximum number of messages that may be buffered in the channel. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aadae8c24e4f12a72e86957a09eff8a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadae8c24e4f12a72e86957a09eff8a5d">&#9670;&nbsp;</a></span>basic_concurrent_channel() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename ExecutionContext &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> </td>
+          <td>(</td>
+          <td class="paramtype">ExecutionContext &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>max_buffer_size</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt; ExecutionContext &amp;, <a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp; &gt;::value, <a class="el" href="structasio_1_1defaulted__constraint.html">defaulted_constraint</a> &gt;&#160;</td>
+          <td class="paramname"> = <code><a class="el" href="structasio_1_1defaulted__constraint.html">defaulted_constraint</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct and open a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a>. </p>
+<p>This constructor creates and opens a channel.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>An execution context which provides the I/O executor that the channel will use, by default, to dispatch handlers for any asynchronous operations performed on the channel.</td></tr>
+    <tr><td class="paramname">max_buffer_size</td><td>The maximum number of messages that may be buffered in the channel. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9721a065936a7fec6df489098b7f6353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9721a065936a7fec6df489098b7f6353">&#9670;&nbsp;</a></span>basic_concurrent_channel() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move-construct a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another. </p>
+<p>This constructor moves a channel from one object to another.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> object from which the move will occur.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Following the move, the moved-from object is in the same state as if constructed using the <code>basic_concurrent_channel(const executor_type&amp;)</code> constructor. </dd></dl>
+
+</div>
+</div>
+<a id="a075028cdbe8efd3eef9bfecce298f2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075028cdbe8efd3eef9bfecce298f2e7">&#9670;&nbsp;</a></span>basic_concurrent_channel() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename Executor1 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&lt; Executor1, Traits, Signatures... &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt; Executor1, Executor &gt;::value &gt;&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move-construct a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another. </p>
+<p>This constructor moves a channel from one object to another.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> object from which the move will occur.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Following the move, the moved-from object is in the same state as if constructed using the <code>basic_concurrent_channel(const executor_type&amp;)</code> constructor. </dd></dl>
+
+</div>
+</div>
+<a id="adc0a865aabacc5760ad9639d30e419f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0a865aabacc5760ad9639d30e419f6">&#9670;&nbsp;</a></span>~basic_concurrent_channel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::~<a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a0dbf0d9ea7fe6d206543ddb9ab20fff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dbf0d9ea7fe6d206543ddb9ab20fff2">&#9670;&nbsp;</a></span>async_receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename CompletionToken  ASIO_DEFAULT_COMPLETION_TOKEN_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::async_receive </td>
+          <td>(</td>
+          <td class="paramtype">CompletionToken &amp;&amp;<a class="el" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a> &#160;</td>
+          <td class="paramname"><em>ASIO_DEFAULT_COMPLETION_TOKEN</em>Executor</td><td>)</td>
+          <td> -&gt; decltype(
+        this-&gt;do_async_receive(static_cast&lt;payload_type*&gt;(0),
+          static_cast&lt;CompletionToken&amp;&amp;&gt;(<a class="el" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)))
+
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Asynchronously receive a message. </p>
+
+</div>
+</div>
+<a id="ae90d4e92061a6b3a271280e2f2f5adec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90d4e92061a6b3a271280e2f2f5adec">&#9670;&nbsp;</a></span>cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cancel all asynchronous operations waiting on the channel. </p>
+<p>All outstanding send operations will complete with the error <code><a class="el" href="namespaceasio_1_1experimental_1_1error.html#a8fa1047ebd0d8634fcbd581a9da620a5af27df598ac759b03a4d2a0cd221e9018" title="The channel was cancelled.">asio::experimental::error::channel_cancelled</a></code>. Outstanding receive operations complete with the result as determined by the channel traits. </p>
+
+</div>
+</div>
+<a id="ac9a5fdd2b62a107d5951635f2a643433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a5fdd2b62a107d5951635f2a643433">&#9670;&nbsp;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the capacity of the channel's buffer. </p>
+
+</div>
+</div>
+<a id="a4acf869ca017c3eabad001cf22b4899f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4acf869ca017c3eabad001cf22b4899f">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close the channel. </p>
+
+</div>
+</div>
+<a id="a86d2ef09390b580d2886e7e621fabc14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d2ef09390b580d2886e7e621fabc14">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html#a48db71c0a7327acf396ec6680fda8fcb">executor_type</a>&amp; <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the executor associated with the object. </p>
+
+</div>
+</div>
+<a id="a48e06f26570b7cd6d18718185b396e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48e06f26570b7cd6d18718185b396e82">&#9670;&nbsp;</a></span>is_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::is_open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether the channel is open. </p>
+
+</div>
+</div>
+<a id="ad441292acf61eb664251f03041b608f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad441292acf61eb664251f03041b608f6">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&amp; <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move-assign a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another. </p>
+<p>This assignment operator moves a channel from one object to another. Cancels any outstanding asynchronous operations associated with the target object.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> object from which the move will occur.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Following the move, the moved-from object is in the same state as if constructed using the <code>basic_concurrent_channel(const executor_type&amp;)</code> constructor. </dd></dl>
+
+</div>
+</div>
+<a id="a27d5d9f7a9c6ed699add5821fd8e8fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d5d9f7a9c6ed699add5821fd8e8fcd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename Executor1 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt;Executor1, Executor&gt;::value, <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&amp; &gt; <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a>&lt; Executor1, Traits, Signatures... &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move-assign a <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> from another. </p>
+<p>This assignment operator moves a channel from one object to another. Cancels any outstanding asynchronous operations associated with the target object.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html" title="A channel for messages.">basic_concurrent_channel</a> object from which the move will occur.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Following the move, the moved-from object is in the same state as if constructed using the <code>basic_concurrent_channel(const executor_type&amp;)</code> constructor. </dd></dl>
+
+</div>
+</div>
+<a id="a6216ae5320f8758e60310a61328dfc40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6216ae5320f8758e60310a61328dfc40">&#9670;&nbsp;</a></span>ready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::ready </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether a message can be received without blocking. </p>
+
+</div>
+</div>
+<a id="acadc3b517d54df2517ec02490730c0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acadc3b517d54df2517ec02490730c0e6">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the channel to its initial state. </p>
+
+</div>
+</div>
+<a id="a0cfec834edb7087d4e84eb830cba3116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfec834edb7087d4e84eb830cba3116">&#9670;&nbsp;</a></span>try_receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">asio::experimental::basic_concurrent_channel</a>&lt; Executor, Traits, Signatures &gt;::try_receive </td>
+          <td>(</td>
+          <td class="paramtype">Handler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Try to receive a message without blocking. </p>
+<p>Fails if the buffer is full and there are no waiting receive operations.</p>
+<dl class="section return"><dt>Возвращает</dt><dd><code>true</code> on success, <code>false</code> on failure. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="ae7591e1989f1280976a3095d2337dd38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7591e1989f1280976a3095d2337dd38">&#9670;&nbsp;</a></span>basic_concurrent_channel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename , typename , typename... &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1experimental_1_1basic__concurrent__channel.html">basic_concurrent_channel</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9d2acaf542b0dee27e220711b1e39a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d2acaf542b0dee27e220711b1e39a2">&#9670;&nbsp;</a></span>detail::channel_send_functions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Traits , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename , typename , typename... &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__functions.html">detail::channel_send_functions</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/<a class="el" href="basic__concurrent__channel_8hpp_source.html">basic_concurrent_channel.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

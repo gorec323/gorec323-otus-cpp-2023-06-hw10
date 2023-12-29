@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::experimental::ranged_parallel_group&lt; Range, Allocator &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html">ranged_parallel_group</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1experimental_1_1ranged__parallel__group-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::experimental::ranged_parallel_group&lt; Range, Allocator &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="parallel__group_8hpp_source.html">parallel_group.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a4095370b77a7ce0857991d26725e2f49"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature.html">detail::ranged_parallel_group_signature</a>&lt; <a class="el" href="namespaceasio.html#a7335867dac5c662e8386346c9669d710">completion_signature_of_t</a>&lt; <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; decltype(*std::declval&lt; typename Range::iterator &gt;))&gt; &gt;, Allocator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">signature</a></td></tr>
+<tr class="memdesc:a4095370b77a7ce0857991d26725e2f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">The completion signature for the group of operations.  <a href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4095370b77a7ce0857991d26725e2f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6aa7f170a9679ef4e94dae5873eb23de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a6aa7f170a9679ef4e94dae5873eb23de">ranged_parallel_group</a> (Range range, const Allocator &amp;<a class="el" href="classallocator.html">allocator</a>=Allocator())</td></tr>
+<tr class="memdesc:a6aa7f170a9679ef4e94dae5873eb23de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classasio_1_1experimental_1_1ranged__parallel__group.html#a6aa7f170a9679ef4e94dae5873eb23de">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6aa7f170a9679ef4e94dae5873eb23de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e45f442502b7baf294899cb19419f0"><td class="memTemplParams" colspan="2">template&lt;typename CancellationCondition , ASIO_COMPLETION_TOKEN_FOR(signature) CompletionToken&gt; </td></tr>
+<tr class="memitem:ae8e45f442502b7baf294899cb19419f0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html#ae8e45f442502b7baf294899cb19419f0">async_wait</a> (CancellationCondition cancellation_condition, CompletionToken &amp;&amp;<a class="el" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>) -&gt; decltype(<a class="el" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a>&lt; CompletionToken, <a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">signature</a> &gt;(declval&lt; initiate_async_wait &gt;(), <a class="el" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>, std::move(cancellation_condition), std::move(range_), allocator_))</td></tr>
+<tr class="memdesc:ae8e45f442502b7baf294899cb19419f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate an asynchronous wait for the group of operations.  <a href="classasio_1_1experimental_1_1ranged__parallel__group.html#ae8e45f442502b7baf294899cb19419f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae8e45f442502b7baf294899cb19419f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename Range, typename Allocator = std::allocator&lt;void&gt;&gt;<br />
+class asio::experimental::ranged_parallel_group&lt; Range, Allocator &gt;</h3>
+
+<p>A range-based group of asynchronous operations that may be launched in parallel. See the documentation for <a class="el" href="namespaceasio_1_1experimental.html#a22debae745bb0fa45a824d9b5e601498" title="Create a group of operations that may be launched in parallel.">asio::experimental::make_parallel_group</a> for a usage example. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a4095370b77a7ce0857991d26725e2f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4095370b77a7ce0857991d26725e2f49">&#9670;&nbsp;</a></span>signature</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Range , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature.html">detail::ranged_parallel_group_signature</a>&lt; <a class="el" href="namespaceasio.html#a7335867dac5c662e8386346c9669d710">completion_signature_of_t</a>&lt; <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;decltype(*std::declval&lt;typename Range::iterator&gt;))&gt; &gt;, Allocator&gt;::type <a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html">asio::experimental::ranged_parallel_group</a>&lt; Range, Allocator &gt;::<a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">signature</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The completion signature for the group of operations. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a6aa7f170a9679ef4e94dae5873eb23de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa7f170a9679ef4e94dae5873eb23de">&#9670;&nbsp;</a></span>ranged_parallel_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Range , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html">asio::experimental::ranged_parallel_group</a>&lt; Range, Allocator &gt;::<a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html">ranged_parallel_group</a> </td>
+          <td>(</td>
+          <td class="paramtype">Range&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code>Allocator()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ae8e45f442502b7baf294899cb19419f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e45f442502b7baf294899cb19419f0">&#9670;&nbsp;</a></span>async_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Range , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename CancellationCondition , ASIO_COMPLETION_TOKEN_FOR(signature) CompletionToken&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html">asio::experimental::ranged_parallel_group</a>&lt; Range, Allocator &gt;::async_wait </td>
+          <td>(</td>
+          <td class="paramtype">CancellationCondition&#160;</td>
+          <td class="paramname"><em>cancellation_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(
+      <a class="el" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a>&lt;CompletionToken, <a class="el" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">signature</a>&gt;(
+        declval&lt;initiate_async_wait&gt;(), <a class="el" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>,
+        std::move(cancellation_condition),
+        std::move(range_), allocator_))
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initiate an asynchronous wait for the group of operations. </p>
+<p>Launches the group and asynchronously waits for completion.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cancellation_condition</td><td>A function object, called on completion of an operation within the group, that is used to determine whether to cancel the remaining operations. The function object is passed the arguments of the completed operation's handler. To trigger cancellation of the remaining operations, it must return a <a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type</a> value other than <code><a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6a334c4a4c42fdb79d7ebc3e73b517e6f8">asio::cancellation_type::none</a></code>.</td></tr>
+    <tr><td class="paramname">token</td><td>A completion_token whose signature is comprised of a <code>std::vector&lt;std::size_t, Allocator&gt;</code> indicating the completion order of the operations, followed by a vector for each of the completion signature's arguments.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The library provides the following <code>cancellation_condition</code> types:</p>
+<ul>
+<li><a class="el" href="classasio_1_1experimental_1_1wait__for__all.html" title="Wait for all operations to complete.">asio::experimental::wait_for_all</a> </li>
+<li><a class="el" href="classasio_1_1experimental_1_1wait__for__one.html" title="Wait until an operation completes, then cancel the others.">asio::experimental::wait_for_one</a> </li>
+<li><a class="el" href="classasio_1_1experimental_1_1wait__for__one__error.html" title="Wait until an operation completes with an error, then cancel the others.">asio::experimental::wait_for_one_error</a> </li>
+<li><a class="el" href="classasio_1_1experimental_1_1wait__for__one__success.html" title="Wait until an operation completes without an error, then cancel the others.">asio::experimental::wait_for_one_success</a> </li>
+</ul>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/<a class="el" href="parallel__group_8hpp_source.html">parallel_group.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

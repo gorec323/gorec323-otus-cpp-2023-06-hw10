@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/experimental/detail/coro_promise_allocator.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_4b7ec68c1dc10d9fd423a12bdfeaade0.html">experimental</a></li><li class="navelem"><a class="el" href="dir_bb9653e276c8b36ee5fb128cf244a7ab.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл coro_promise_allocator.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="coro__traits_8hpp_source.html">asio/experimental/coro_traits.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для coro_promise_allocator.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="coro__promise__allocator_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2experimental_2detail_2coro__promise__allocator_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2experimental_2detail_2coro__promise__allocator_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2experimental_2detail_2coro__promise__allocator_8hpp">
+<area shape="rect" title=" " alt="" coords="6253,5,6499,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="4371,795,4533,821"/>
+<area shape="rect" href="coro__traits_8hpp.html" title=" " alt="" coords="6193,109,6365,151"/>
+<area shape="rect" title=" " alt="" coords="6015,869,6086,896"/>
+<area shape="rect" title=" " alt="" coords="4309,869,4438,896"/>
+<area shape="rect" title=" " alt="" coords="4463,869,4601,896"/>
+<area shape="rect" title=" " alt="" coords="6316,199,6391,225"/>
+<area shape="rect" title=" " alt="" coords="5941,199,6009,225"/>
+<area shape="rect" href="any__io__executor_8hpp.html" title=" " alt="" coords="6033,199,6220,225"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="2664,273,2808,300"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="3968,713,4176,739"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2949,713,3150,739"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="5875,445,6075,471"/>
+<area shape="rect" href="include_2asio_2execution_2allocator_8hpp.html" title=" " alt="" coords="319,445,523,471"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="2824,534,3027,561"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="3439,616,3622,657"/>
+<area shape="rect" href="any__executor_8hpp.html" title=" " alt="" coords="4725,348,4869,389"/>
+<area shape="rect" href="bad__executor_8hpp.html" title=" " alt="" coords="5111,616,5255,657"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="3368,445,3571,471"/>
+<area shape="rect" href="blocking__adaptation_8hpp.html" title=" " alt="" coords="2649,437,2823,479"/>
+<area shape="rect" href="execution_2context_8hpp.html" title=" " alt="" coords="548,445,745,471"/>
+<area shape="rect" href="context__as_8hpp.html" title=" " alt="" coords="749,348,918,389"/>
+<area shape="rect" href="mapping_8hpp.html" title=" " alt="" coords="2380,445,2585,471"/>
+<area shape="rect" href="occupancy_8hpp.html" title=" " alt="" coords="3001,445,3215,471"/>
+<area shape="rect" href="outstanding__work_8hpp.html" title=" " alt="" coords="1616,437,1813,479"/>
+<area shape="rect" href="prefer__only_8hpp.html" title=" " alt="" coords="1958,437,2117,479"/>
+<area shape="rect" href="relationship_8hpp.html" title=" " alt="" coords="1366,445,1591,471"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="2244,713,2436,739"/>
+<area shape="rect" href="is__applicable__property_8hpp.html" title=" " alt="" coords="1831,616,1969,657"/>
+<area shape="rect" href="query__static__constexpr__member_8hpp.html" title=" " alt="" coords="1209,527,1391,568"/>
+<area shape="rect" href="static__query_8hpp.html" title=" " alt="" coords="1578,616,1705,657"/>
+<area shape="rect" href="execute__member_8hpp.html" title=" " alt="" coords="3170,616,3313,657"/>
+<area shape="rect" title=" " alt="" coords="5989,713,6038,739"/>
+<area shape="rect" title=" " alt="" coords="5526,534,5602,561"/>
+<area shape="rect" href="assert_8hpp.html" title=" " alt="" coords="4692,713,4855,739"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="4879,705,5017,747"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="6215,713,6385,739"/>
+<area shape="rect" href="executor__function_8hpp.html" title=" " alt="" coords="5097,527,5247,568"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="5813,623,5987,650"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="5631,713,5862,739"/>
+<area shape="rect" href="non__const__lvalue_8hpp.html" title=" " alt="" coords="3697,616,3857,657"/>
+<area shape="rect" href="scoped__ptr_8hpp.html" title=" " alt="" coords="4946,616,5086,657"/>
+<area shape="rect" href="prefer_8hpp.html" title=" " alt="" coords="3507,534,3626,561"/>
+<area shape="rect" href="query_8hpp.html" title=" " alt="" coords="2278,534,2394,561"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="3803,534,3930,561"/>
+<area shape="rect" title=" " alt="" coords="5143,713,5230,739"/>
+<area shape="rect" href="query__free_8hpp.html" title=" " alt="" coords="2145,623,2335,650"/>
+<area shape="rect" title=" " alt="" coords="5626,534,5713,561"/>
+<area shape="rect" href="noncopyable_8hpp.html" title=" " alt="" coords="5329,623,5535,650"/>
+<area shape="rect" href="impl_2execution__context_8hpp.html" title=" " alt="" coords="5788,527,5937,568"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="coro__promise__allocator_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2experimental_2detail_2coro__promise__allocator_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2experimental_2detail_2coro__promise__allocator_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2experimental_2detail_2coro__promise__allocator_8hppdep">
+<area shape="rect" title=" " alt="" coords="1031,5,1277,61"/>
+<area shape="rect" href="coro_8hpp.html" title=" " alt="" coords="1057,109,1251,165"/>
+<area shape="rect" href="experimental_2co__spawn_8hpp.html" title=" " alt="" coords="9,221,203,277"/>
+<area shape="rect" href="coro__completion__handler_8hpp.html" title=" " alt="" coords="497,213,691,284"/>
+<area shape="rect" href="impl_2use__coro_8hpp.html" title=" " alt="" coords="227,221,422,277"/>
+<area shape="rect" href="use__coro_8hpp.html" title=" " alt="" coords="309,332,503,388"/>
+<area shape="rect" href="allocator_8cpp.html" title=" " alt="" coords="716,221,917,277"/>
+<area shape="rect" href="cancel_8cpp.html" title=" " alt="" coords="941,221,1143,277"/>
+<area shape="rect" href="exception_8cpp.html" title=" " alt="" coords="1167,221,1368,277"/>
+<area shape="rect" href="experimental_2coro_2executor_8cpp.html" title=" " alt="" coords="1392,221,1593,277"/>
+<area shape="rect" href="partial_8cpp.html" title=" " alt="" coords="1617,221,1819,277"/>
+<area shape="rect" href="simple__test_8cpp.html" title=" " alt="" coords="1843,221,2044,277"/>
+<area shape="rect" href="stack__test_8cpp.html" title=" " alt="" coords="2068,221,2269,277"/>
+<area shape="rect" href="experimental_2coro_2co__spawn_8cpp.html" title=" " alt="" coords="5,332,207,388"/>
+<area shape="rect" href="impl_2coro_8hpp.html" title=" " alt="" coords="550,332,745,388"/>
+<area shape="rect" href="use__coro_8cpp.html" title=" " alt="" coords="305,436,507,492"/>
+</map>
+</div>
+</div>
+<p><a href="coro__promise__allocator_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__allocator.html">asio::experimental::detail::coro_promise_allocator&lt; Allocator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__allocator_3_01std_1_1allocator_3_01void_01_4_01_4.html">asio::experimental::detail::coro_promise_allocator&lt; std::allocator&lt; void &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1experimental"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental.html">asio::experimental</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1experimental_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">asio::experimental::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a7ac588fcaccb53f0844f0f870c477be0"><td class="memTemplParams" colspan="2">template&lt;typename AllocatorType &gt; </td></tr>
+<tr class="memitem:a7ac588fcaccb53f0844f0f870c477be0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a7ac588fcaccb53f0844f0f870c477be0">asio::experimental::detail::allocate_coroutine</a> (const std::size_t size, AllocatorType alloc_)</td></tr>
+<tr class="memdesc:a7ac588fcaccb53f0844f0f870c477be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the memory and put the allocator behind the coro memory.  <a href="namespaceasio_1_1experimental_1_1detail.html#a7ac588fcaccb53f0844f0f870c477be0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7ac588fcaccb53f0844f0f870c477be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fd78ff912ee42cfe0ef19b7800a3d3"><td class="memTemplParams" colspan="2">template&lt;typename AllocatorType &gt; </td></tr>
+<tr class="memitem:af4fd78ff912ee42cfe0ef19b7800a3d3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#af4fd78ff912ee42cfe0ef19b7800a3d3">asio::experimental::detail::deallocate_coroutine</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *raw_, const std::size_t size)</td></tr>
+<tr class="memdesc:af4fd78ff912ee42cfe0ef19b7800a3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the memory and destroy the allocator in the coro memory.  <a href="namespaceasio_1_1experimental_1_1detail.html#af4fd78ff912ee42cfe0ef19b7800a3d3">Подробнее...</a><br /></td></tr>
+<tr class="separator:af4fd78ff912ee42cfe0ef19b7800a3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21010f0c8365b3ee39875707c19ac749"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a21010f0c8365b3ee39875707c19ac749"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a21010f0c8365b3ee39875707c19ac749">asio::experimental::detail::variadic_first</a> (std::size_t=0u)</td></tr>
+<tr class="separator:a21010f0c8365b3ee39875707c19ac749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d566a0dc40736dfa55434dd2dbcd9c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename First , typename... Args&gt; </td></tr>
+<tr class="memitem:ad2d566a0dc40736dfa55434dd2dbcd9c"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#ad2d566a0dc40736dfa55434dd2dbcd9c">asio::experimental::detail::variadic_first</a> (std::size_t pos=0u)</td></tr>
+<tr class="separator:ad2d566a0dc40736dfa55434dd2dbcd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eaca7209c7978c9eca16d0b612b569b"><td class="memTemplParams" colspan="2">template&lt;std::size_t Idx, typename First , typename... Args&gt; </td></tr>
+<tr class="memitem:a2eaca7209c7978c9eca16d0b612b569b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a2eaca7209c7978c9eca16d0b612b569b">asio::experimental::detail::requires</a> (Idx&lt;=sizeof...(Args)) const expr decltype(auto) get_variadic(First &amp;&amp;first</td></tr>
+<tr class="separator:a2eaca7209c7978c9eca16d0b612b569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35332e6b104e3a3670fa4404f1821102"><td class="memItemLeft" align="right" valign="top">else return&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a35332e6b104e3a3670fa4404f1821102">asio::experimental::detail::get_variadic&lt; Idx-1u &gt;</a> (static_cast&lt; Args &gt;(args)...)</td></tr>
+<tr class="separator:a35332e6b104e3a3670fa4404f1821102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758c9597ed551d4295463d178fbef60f"><td class="memTemplParams" colspan="2">template&lt;std::size_t Idx&gt; </td></tr>
+<tr class="memitem:a758c9597ed551d4295463d178fbef60f"><td class="memTemplItemLeft" align="right" valign="top">constexpr decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a758c9597ed551d4295463d178fbef60f">asio::experimental::detail::get_variadic</a> ()</td></tr>
+<tr class="separator:a758c9597ed551d4295463d178fbef60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ab175239b1fe47ff8bb64b26833d8f62a"><td class="memItemLeft" align="right" valign="top">Args &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#ab175239b1fe47ff8bb64b26833d8f62a">asio::experimental::detail::args</a></td></tr>
+<tr class="separator:ab175239b1fe47ff8bb64b26833d8f62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

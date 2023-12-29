@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/ip/icmp.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li><li class="navelem"><a class="el" href="dir_a93cc0b688d3b7b177edf24c783d51c9.html">ip</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл icmp.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="icmp_8hpp_source.html">asio/ip/icmp.hpp</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8hpp_source.html">asio/io_context.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="placeholders_8hpp_source.html">asio/placeholders.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">../unit_test.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2tests_2unit_2archetypes_2async__result_8hpp_source.html">../archetypes/async_result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gettable__socket__option_8hpp_source.html">../archetypes/gettable_socket_option.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__control__command_8hpp_source.html">../archetypes/io_control_command.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="settable__socket__option_8hpp_source.html">../archetypes/settable_socket_option.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для icmp.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="icmp_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2icmp_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2icmp_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2icmp_8cpp">
+<area shape="rect" title=" " alt="" coords="3069,5,3258,47"/>
+<area shape="rect" href="icmp_8hpp.html" title=" " alt="" coords="1640,102,1770,129"/>
+<area shape="rect" title=" " alt="" coords="600,370,666,397"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="3089,191,3238,218"/>
+<area shape="rect" href="placeholders_8hpp.html" title=" " alt="" coords="3950,281,4114,307"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="4168,281,4287,307"/>
+<area shape="rect" href="src_2tests_2unit_2archetypes_2async__result_8hpp.html" title=" " alt="" coords="2579,273,2727,315"/>
+<area shape="rect" href="gettable__socket__option_8hpp.html" title=" " alt="" coords="3530,184,3694,225"/>
+<area shape="rect" href="io__control__command_8hpp.html" title=" " alt="" coords="3364,95,3539,136"/>
+<area shape="rect" href="settable__socket__option_8hpp.html" title=" " alt="" coords="269,95,432,136"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="2908,452,3070,479"/>
+<area shape="rect" href="socket__types_8hpp.html" title=" " alt="" coords="690,363,826,404"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="1584,452,1792,479"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="1994,452,2195,479"/>
+<area shape="rect" href="basic__raw__socket_8hpp.html" title=" " alt="" coords="1053,370,1248,397"/>
+<area shape="rect" href="ip_2basic__endpoint_8hpp.html" title=" " alt="" coords="2309,281,2504,307"/>
+<area shape="rect" href="basic__resolver_8hpp.html" title=" " alt="" coords="1686,191,1876,218"/>
+<area shape="rect" href="basic__resolver__iterator_8hpp.html" title=" " alt="" coords="952,273,1114,315"/>
+<area shape="rect" href="basic__resolver__query_8hpp.html" title=" " alt="" coords="1632,363,1794,404"/>
+<area shape="rect" title=" " alt="" coords="2830,527,2900,553"/>
+<area shape="rect" title=" " alt="" coords="2924,527,3054,553"/>
+<area shape="rect" title=" " alt="" coords="3078,527,3217,553"/>
+<area shape="rect" title=" " alt="" coords="45,452,133,479"/>
+<area shape="rect" title=" " alt="" coords="158,452,242,479"/>
+<area shape="rect" title=" " alt="" coords="266,452,362,479"/>
+<area shape="rect" title=" " alt="" coords="386,452,472,479"/>
+<area shape="rect" title=" " alt="" coords="496,452,559,479"/>
+<area shape="rect" title=" " alt="" coords="584,452,682,479"/>
+<area shape="rect" title=" " alt="" coords="707,452,810,479"/>
+<area shape="rect" title=" " alt="" coords="834,452,914,479"/>
+<area shape="rect" title=" " alt="" coords="939,452,1015,479"/>
+<area shape="rect" title=" " alt="" coords="1040,452,1136,479"/>
+<area shape="rect" title=" " alt="" coords="1160,452,1264,479"/>
+<area shape="rect" title=" " alt="" coords="1288,452,1380,479"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="2904,370,3071,397"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2072,370,2234,397"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="3424,370,3624,397"/>
+<area shape="rect" title=" " alt="" coords="3667,452,3754,479"/>
+<area shape="rect" title=" " alt="" coords="4036,452,4112,479"/>
+<area shape="rect" href="chrono_8hpp.html" title=" " alt="" coords="3759,281,3926,307"/>
+<area shape="rect" href="concurrency__hint_8hpp.html" title=" " alt="" coords="3510,273,3684,315"/>
+<area shape="rect" href="wrapped__handler_8hpp.html" title=" " alt="" coords="2259,363,2410,404"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="3147,370,3298,397"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="3457,452,3601,479"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="3201,281,3385,307"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="1374,370,1556,397"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="3901,363,4040,404"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="4064,370,4250,397"/>
+<area shape="rect" title=" " alt="" coords="4325,370,4405,397"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="2486,370,2676,397"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__icmp__socket__compile_1_1connect__handler.html">ip_icmp_socket_compile::connect_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__icmp__socket__compile_1_1send__handler.html">ip_icmp_socket_compile::send_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__icmp__socket__compile_1_1receive__handler.html">ip_icmp_socket_compile::receive_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__icmp__resolver__compile_1_1resolve__handler.html">ip_icmp_resolver_compile::resolve_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceip__icmp__socket__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__icmp__socket__compile.html">ip_icmp_socket_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__icmp__resolver__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__icmp__resolver__compile.html">ip_icmp_resolver_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="icmp_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:acd8c3c86963e170fa14c4618fd139bc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__icmp__socket__compile.html#acd8c3c86963e170fa14c4618fd139bc1">ip_icmp_socket_compile::test</a> ()</td></tr>
+<tr class="separator:acd8c3c86963e170fa14c4618fd139bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af429a21458448341bf77ad860f28d177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__icmp__resolver__compile.html#af429a21458448341bf77ad860f28d177">ip_icmp_resolver_compile::test</a> ()</td></tr>
+<tr class="separator:af429a21458448341bf77ad860f28d177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

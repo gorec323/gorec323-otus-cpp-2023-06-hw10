@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/cancellation_signal.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл cancellation_signal.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;new&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="cancellation__type_8hpp_source.html">asio/cancellation_type.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cstddef_8hpp_source.html">asio/detail/cstddef.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">asio/detail/type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для cancellation_signal.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="cancellation__signal_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2cancellation__signal_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2cancellation__signal_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2cancellation__signal_8hpp">
+<area shape="rect" title=" " alt="" coords="522,5,709,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="125,184,287,211"/>
+<area shape="rect" title=" " alt="" coords="789,109,858,136"/>
+<area shape="rect" title=" " alt="" coords="883,109,932,136"/>
+<area shape="rect" title=" " alt="" coords="956,109,1016,136"/>
+<area shape="rect" href="cancellation__type_8hpp.html" title=" " alt="" coords="517,109,713,136"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="427,184,635,211"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="660,184,861,211"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="5,109,175,136"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="250,109,442,136"/>
+<area shape="rect" title=" " alt="" coords="44,259,115,285"/>
+<area shape="rect" title=" " alt="" coords="303,259,432,285"/>
+<area shape="rect" title=" " alt="" coords="139,259,278,285"/>
+<area shape="rect" title=" " alt="" coords="311,184,403,211"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="cancellation__signal_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2cancellation__signal_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2cancellation__signal_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2cancellation__signal_8hppdep">
+<area shape="rect" title=" " alt="" coords="3990,5,4177,61"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="2522,109,2701,165"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="2178,339,2325,381"/>
+<area shape="rect" href="bind__cancellation__slot_8cpp.html" title=" " alt="" coords="3723,332,3889,388"/>
+<area shape="rect" href="compose_8cpp.html" title=" " alt="" coords="3914,339,4114,381"/>
+<area shape="rect" href="system__timer_8cpp.html" title=" " alt="" coords="4365,332,4527,388"/>
+<area shape="rect" href="promise_8hpp.html" title=" " alt="" coords="4171,221,4366,277"/>
+<area shape="rect" href="spawn_8hpp.html" title=" " alt="" coords="415,339,594,381"/>
+<area shape="rect" href="cancellation__state_8hpp.html" title=" " alt="" coords="907,109,1094,165"/>
+<area shape="rect" href="impl_2awaitable_8hpp.html" title=" " alt="" coords="388,228,621,269"/>
+<area shape="rect" href="impl_2promise_8hpp.html" title=" " alt="" coords="4121,109,4315,165"/>
+<area shape="rect" href="cancellation__signal_8ipp.html" title=" " alt="" coords="4441,109,4661,165"/>
+<area shape="rect" href="impl_2use__awaitable_8hpp.html" title=" " alt="" coords="4685,109,4849,165"/>
+<area shape="rect" href="cancellation__signal_8cpp.html" title=" " alt="" coords="4873,109,5067,165"/>
+<area shape="rect" href="any__completion__handler_8hpp.html" title=" " alt="" coords="965,221,1177,277"/>
+<area shape="rect" href="bind__cancellation__slot_8hpp.html" title=" " alt="" coords="3875,221,4097,277"/>
+<area shape="rect" href="base__from__cancellation__state_8hpp.html" title=" " alt="" coords="1421,213,1602,284"/>
+<area shape="rect" href="deadline__timer__service_8hpp.html" title=" " alt="" coords="1912,221,2119,277"/>
+<area shape="rect" href="reactive__descriptor__service_8hpp.html" title=" " alt="" coords="2143,213,2293,284"/>
+<area shape="rect" href="reactive__socket__service__base_8hpp.html" title=" " alt="" coords="2317,213,2500,284"/>
+<area shape="rect" href="signal__set__service_8hpp.html" title=" " alt="" coords="2524,221,2699,277"/>
+<area shape="rect" href="channel__service_8hpp.html" title=" " alt="" coords="2723,221,2923,277"/>
+<area shape="rect" href="impl_2co__composed_8hpp.html" title=" " alt="" coords="1202,221,1397,277"/>
+<area shape="rect" href="impl_2coro_8hpp.html" title=" " alt="" coords="2947,221,3142,277"/>
+<area shape="rect" href="impl_2parallel__group_8hpp.html" title=" " alt="" coords="3166,221,3361,277"/>
+<area shape="rect" href="impl_2co__spawn_8hpp.html" title=" " alt="" coords="3385,221,3541,277"/>
+<area shape="rect" href="impl_2spawn_8hpp.html" title=" " alt="" coords="1626,228,1837,269"/>
+<area shape="rect" href="associated__cancellation__slot_8cpp.html" title=" " alt="" coords="3566,221,3750,277"/>
+<area shape="rect" href="examples_2cpp03_2allocation_2server_8cpp.html" title=" " alt="" coords="2895,443,3056,499"/>
+<area shape="rect" href="cpp03_2buffers_2reference__counted_8cpp.html" title=" " alt="" coords="3080,443,3303,499"/>
+<area shape="rect" href="cpp03_2chat_2chat__client_8cpp.html" title=" " alt="" coords="3327,443,3483,499"/>
+<area shape="rect" href="cpp03_2chat_2chat__server_8cpp.html" title=" " alt="" coords="3507,443,3667,499"/>
+<area shape="rect" href="posix__chat__client_8cpp.html" title=" " alt="" coords="3692,443,3891,499"/>
+<area shape="rect" href="cpp03_2echo_2async__tcp__echo__server_8cpp.html" title=" " alt="" coords="827,436,991,507"/>
+<area shape="rect" href="cpp03_2echo_2async__udp__echo__server_8cpp.html" title=" " alt="" coords="1015,436,1183,507"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__client_8cpp.html" title=" " alt="" coords="1207,436,1389,507"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__server_8cpp.html" title=" " alt="" coords="1413,436,1594,507"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__client_8cpp.html" title=" " alt="" coords="1619,436,1804,507"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__server_8cpp.html" title=" " alt="" coords="1828,436,2013,507"/>
+<area shape="rect" href="async__client_8cpp.html" title=" " alt="" coords="2037,443,2241,499"/>
+<area shape="rect" href="cpp03_2http_2client_2sync__client_8cpp.html" title=" " alt="" coords="2265,443,2461,499"/>
+<area shape="rect" href="cpp03_2http_2server_2connection_8hpp.html" title=" " alt="" coords="2486,443,2686,499"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server_2main_8cpp.html" title=" " alt="" coords="2709,443,2871,499"/>
+<area shape="rect" href="promise_8cpp.html" title=" " alt="" coords="4139,332,4340,388"/>
+<area shape="rect" href="cpp03_2spawn_2echo__server_8cpp.html" title=" " alt="" coords="5,443,183,499"/>
+<area shape="rect" href="cpp03_2spawn_2parallel__grep_8cpp.html" title=" " alt="" coords="207,443,391,499"/>
+<area shape="rect" href="cpp11_2spawn_2echo__server_8cpp.html" title=" " alt="" coords="416,443,593,499"/>
+<area shape="rect" href="cpp11_2spawn_2parallel__grep_8cpp.html" title=" " alt="" coords="618,443,802,499"/>
+<area shape="rect" href="cancellation__state_8cpp.html" title=" " alt="" coords="697,221,891,277"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="4457,228,4645,269"/>
+</map>
+</div>
+</div>
+<p><a href="cancellation__signal_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1cancellation__handler__base.html">asio::detail::cancellation_handler_base</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1cancellation__handler.html">asio::detail::cancellation_handler&lt; Handler &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__signal.html">asio::cancellation_signal</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A cancellation signal with a single slot.  <a href="classasio_1_1cancellation__signal.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html">asio::cancellation_slot</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A slot associated with a cancellation signal.  <a href="classasio_1_1cancellation__slot.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::experimental::detail::channel_service&lt; Mutex &gt;::implementation_type&lt; Traits, R(asio::error_code)&gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">channel_service</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html">implementation_type&lt; Traits, R(asio::error_code)&gt;</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_0109f372822a837ff3d5ac8ac695761a5.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::experimental::detail::channel_service&lt; Mutex &gt;::implementation_type&lt; Traits, R(asio::error_code)&gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="channel__service_8hpp_source.html">channel_service.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::experimental::detail::channel_service&lt; Mutex &gt;::implementation_type&lt; Traits, R(asio::error_code)&gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_09ad09d73bc2e48193d1014059244f0bd.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1channel__service_3_01Mutex_01_4_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1channel__service_3_01Mutex_01_4_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4_inherit__map" id="aasio_1_1experimental_1_1detail_1_1channel__service_3_01Mutex_01_4_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="19,109,270,180"/>
+<area shape="rect" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html" title=" " alt="" coords="5,5,284,61"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::experimental::detail::channel_service&lt; Mutex &gt;::implementation_type&lt; Traits, R(asio::error_code)&gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_000b950011008ada819d059178969f805.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1channel__service_3_01Mutex_01_4_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1channel__service_3_01Mutex_01_4_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4_coll__map" id="aasio_1_1experimental_1_1detail_1_1channel__service_3_01Mutex_01_4_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4_coll__map">
+<area shape="rect" title=" " alt="" coords="19,291,270,361"/>
+<area shape="rect" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html" title=" " alt="" coords="5,185,284,241"/>
+<area shape="rect" href="classasio_1_1detail_1_1op__queue.html" title=" " alt="" coords="59,81,231,123"/>
+<area shape="rect" href="classasio_1_1detail_1_1noncopyable.html" title=" " alt="" coords="52,5,237,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a62ce2eeff5ec8999493eb9df30e33dc4"><td class="memItemLeft" align="right" valign="top">typedef Traits::template rebind&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::other&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a62ce2eeff5ec8999493eb9df30e33dc4">traits_type</a></td></tr>
+<tr class="separator:a62ce2eeff5ec8999493eb9df30e33dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667f8ea9e78257933341466216837bf6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1has__signature.html">has_signature</a>&lt; typename traits_type::receive_cancelled_signature, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>) &gt;::value, <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1has__signature.html">has_signature</a>&lt; typename traits_type::receive_closed_signature, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>) &gt;::value, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_closed_signature &gt; &gt;, <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1has__signature.html">has_signature</a>&lt; typename traits_type::receive_closed_signature, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_cancelled_signature &gt;::value, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_cancelled_signature &gt;, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_cancelled_signature, typename traits_type::receive_closed_signature &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a></td></tr>
+<tr class="separator:a667f8ea9e78257933341466216837bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac452816db0a33651e0a6e23f6f819ded"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#ac452816db0a33651e0a6e23f6f819ded">implementation_type</a> ()</td></tr>
+<tr class="separator:ac452816db0a33651e0a6e23f6f819ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d97bb5091d65e4c9a33521c28af73f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a32d97bb5091d65e4c9a33521c28af73f">buffer_move_from</a> (<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a> &amp;other)</td></tr>
+<tr class="separator:a32d97bb5091d65e4c9a33521c28af73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b72e756f96c1d318e24758cc9a48d45"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a5b72e756f96c1d318e24758cc9a48d45">buffer_size</a> () const</td></tr>
+<tr class="separator:a5b72e756f96c1d318e24758cc9a48d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b00c2768840e6ca25bd8b8bfa6b48cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a1b00c2768840e6ca25bd8b8bfa6b48cd">buffer_push</a> (<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a> payload)</td></tr>
+<tr class="separator:a1b00c2768840e6ca25bd8b8bfa6b48cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f092a9a4abddb92e9673bd1411ffab"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#ae7f092a9a4abddb92e9673bd1411ffab">buffer_push_n</a> (std::size_t count, <a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a> payload)</td></tr>
+<tr class="separator:ae7f092a9a4abddb92e9673bd1411ffab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee01e57b1621dd85599ec2fca5f8c89a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#aee01e57b1621dd85599ec2fca5f8c89a">buffer_front</a> ()</td></tr>
+<tr class="separator:aee01e57b1621dd85599ec2fca5f8c89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bd855370255979e7a62fba9f519e54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a55bd855370255979e7a62fba9f519e54">buffer_pop</a> ()</td></tr>
+<tr class="separator:a55bd855370255979e7a62fba9f519e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab167c564ae181553c1da2ed16cf3c355"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#ab167c564ae181553c1da2ed16cf3c355">buffer_clear</a> ()</td></tr>
+<tr class="separator:ab167c564ae181553c1da2ed16cf3c355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html">asio::experimental::detail::channel_service&lt; Mutex &gt;::base_implementation_type</a></td></tr>
+<tr class="memitem:a71d5925a6520681da652f803ee2fbc7b inherit pub_methods_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#a71d5925a6520681da652f803ee2fbc7b">base_implementation_type</a> ()</td></tr>
+<tr class="separator:a71d5925a6520681da652f803ee2fbc7b inherit pub_methods_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type')"><img src="closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html">asio::experimental::detail::channel_service&lt; Mutex &gt;::base_implementation_type</a></td></tr>
+<tr class="memitem:a4b0b910998452f18df0215faaf1ee956 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html#a65144a28a87ce528216e956f391207e5">state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#a4b0b910998452f18df0215faaf1ee956">receive_state_</a>: 16</td></tr>
+<tr class="separator:a4b0b910998452f18df0215faaf1ee956 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3895b7b0c8f80189bd35360e63f5bc8a inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html#a65144a28a87ce528216e956f391207e5">state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#a3895b7b0c8f80189bd35360e63f5bc8a">send_state_</a>: 16</td></tr>
+<tr class="separator:a3895b7b0c8f80189bd35360e63f5bc8a inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea4fbb47842e6040fceb8bb7f23f519 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#a9ea4fbb47842e6040fceb8bb7f23f519">max_buffer_size_</a></td></tr>
+<tr class="separator:a9ea4fbb47842e6040fceb8bb7f23f519 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86c16fa0b809916e386b2def0b100b4 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1op__queue.html">asio::detail::op_queue</a>&lt; channel_operation &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#ac86c16fa0b809916e386b2def0b100b4">waiters_</a></td></tr>
+<tr class="separator:ac86c16fa0b809916e386b2def0b100b4 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e78426d689b461ea5ce094c2eede1a4 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html">base_implementation_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#a1e78426d689b461ea5ce094c2eede1a4">next_</a></td></tr>
+<tr class="separator:a1e78426d689b461ea5ce094c2eede1a4 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d30cfb049bb06ee9b3ba4b39fab3cd5 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html">base_implementation_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#a5d30cfb049bb06ee9b3ba4b39fab3cd5">prev_</a></td></tr>
+<tr class="separator:a5d30cfb049bb06ee9b3ba4b39fab3cd5 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ec5a47954258f55015b033011f8c7c inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memItemLeft" align="right" valign="top">Mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type.html#a02ec5a47954258f55015b033011f8c7c">mutex_</a></td></tr>
+<tr class="separator:a02ec5a47954258f55015b033011f8c7c inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1channel__service_1_1base__implementation__type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a667f8ea9e78257933341466216837bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667f8ea9e78257933341466216837bf6">&#9670;&nbsp;</a></span>payload_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1has__signature.html">has_signature</a>&lt; typename traits_type::receive_cancelled_signature, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>) &gt;::value, <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1has__signature.html">has_signature</a>&lt; typename traits_type::receive_closed_signature, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>) &gt;::value, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt;R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_closed_signature &gt; &gt;, <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1has__signature.html">has_signature</a>&lt; typename traits_type::receive_closed_signature, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_cancelled_signature &gt;::value, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_cancelled_signature &gt;, <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__payload.html">channel_payload</a>&lt; R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>), typename traits_type::receive_cancelled_signature, typename traits_type::receive_closed_signature &gt; &gt; &gt; <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62ce2eeff5ec8999493eb9df30e33dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ce2eeff5ec8999493eb9df30e33dc4">&#9670;&nbsp;</a></span>traits_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Traits::template rebind&lt;R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::other <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a62ce2eeff5ec8999493eb9df30e33dc4">traits_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac452816db0a33651e0a6e23f6f819ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac452816db0a33651e0a6e23f6f819ded">&#9670;&nbsp;</a></span>implementation_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab167c564ae181553c1da2ed16cf3c355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab167c564ae181553c1da2ed16cf3c355">&#9670;&nbsp;</a></span>buffer_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::buffer_clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee01e57b1621dd85599ec2fca5f8c89a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee01e57b1621dd85599ec2fca5f8c89a">&#9670;&nbsp;</a></span>buffer_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::buffer_front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32d97bb5091d65e4c9a33521c28af73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d97bb5091d65e4c9a33521c28af73f">&#9670;&nbsp;</a></span>buffer_move_from()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::buffer_move_from </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55bd855370255979e7a62fba9f519e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bd855370255979e7a62fba9f519e54">&#9670;&nbsp;</a></span>buffer_pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::buffer_pop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b00c2768840e6ca25bd8b8bfa6b48cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b00c2768840e6ca25bd8b8bfa6b48cd">&#9670;&nbsp;</a></span>buffer_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::buffer_push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a>&#160;</td>
+          <td class="paramname"><em>payload</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7f092a9a4abddb92e9673bd1411ffab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f092a9a4abddb92e9673bd1411ffab">&#9670;&nbsp;</a></span>buffer_push_n()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::buffer_push_n </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type_3_01Traits_00_01R_07asio_1_1error__code_08_4.html#a667f8ea9e78257933341466216837bf6">payload_type</a>&#160;</td>
+          <td class="paramname"><em>payload</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b72e756f96c1d318e24758cc9a48d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b72e756f96c1d318e24758cc9a48d45">&#9670;&nbsp;</a></span>buffer_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutex &gt; </div>
+<div class="memtemplate">
+template&lt;typename Traits , typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__service.html">asio::experimental::detail::channel_service</a>&lt; Mutex &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1channel__service_1_1implementation__type.html">implementation_type</a>&lt; Traits, R(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;::buffer_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/detail/<a class="el" href="channel__service_8hpp_source.html">channel_service.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

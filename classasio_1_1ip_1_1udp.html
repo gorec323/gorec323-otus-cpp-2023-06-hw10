@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::ip::udp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ip.html">ip</a></li><li class="navelem"><a class="el" href="classasio_1_1ip_1_1udp.html">udp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1ip_1_1udp-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::ip::udp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Encapsulates the flags needed for UDP.  
+ <a href="classasio_1_1ip_1_1udp.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="udp_8hpp_source.html">udp.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a6356426903164272827153752845368c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1ip_1_1basic__endpoint.html">basic_endpoint</a>&lt; <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#a6356426903164272827153752845368c">endpoint</a></td></tr>
+<tr class="memdesc:a6356426903164272827153752845368c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of a UDP endpoint.  <a href="classasio_1_1ip_1_1udp.html#a6356426903164272827153752845368c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6356426903164272827153752845368c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f8cc1a666bdbbd6c3963f2396f253e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1basic__datagram__socket.html">basic_datagram_socket</a>&lt; <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#ab8f8cc1a666bdbbd6c3963f2396f253e">socket</a></td></tr>
+<tr class="memdesc:ab8f8cc1a666bdbbd6c3963f2396f253e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The UDP socket type.  <a href="classasio_1_1ip_1_1udp.html#ab8f8cc1a666bdbbd6c3963f2396f253e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab8f8cc1a666bdbbd6c3963f2396f253e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4d8eff41b11c6c2053bf799d43dba2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1ip_1_1basic__resolver.html">basic_resolver</a>&lt; <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#abb4d8eff41b11c6c2053bf799d43dba2">resolver</a></td></tr>
+<tr class="memdesc:abb4d8eff41b11c6c2053bf799d43dba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The UDP resolver type.  <a href="classasio_1_1ip_1_1udp.html#abb4d8eff41b11c6c2053bf799d43dba2">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb4d8eff41b11c6c2053bf799d43dba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6832041c2b316b22a461e84a19b3f50b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#a6832041c2b316b22a461e84a19b3f50b">type</a> () const noexcept</td></tr>
+<tr class="memdesc:a6832041c2b316b22a461e84a19b3f50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the type of the protocol.  <a href="classasio_1_1ip_1_1udp.html#a6832041c2b316b22a461e84a19b3f50b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6832041c2b316b22a461e84a19b3f50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00d39b4787f6274ea2b4dc0fd77fa7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#aa00d39b4787f6274ea2b4dc0fd77fa7b">protocol</a> () const noexcept</td></tr>
+<tr class="memdesc:aa00d39b4787f6274ea2b4dc0fd77fa7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the protocol.  <a href="classasio_1_1ip_1_1udp.html#aa00d39b4787f6274ea2b4dc0fd77fa7b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa00d39b4787f6274ea2b4dc0fd77fa7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a56838c36f723411ae86a2c9a19c981"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#a4a56838c36f723411ae86a2c9a19c981">family</a> () const noexcept</td></tr>
+<tr class="memdesc:a4a56838c36f723411ae86a2c9a19c981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the protocol family.  <a href="classasio_1_1ip_1_1udp.html#a4a56838c36f723411ae86a2c9a19c981">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4a56838c36f723411ae86a2c9a19c981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:adaa851b16777e387ef86dc45abbda71d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#adaa851b16777e387ef86dc45abbda71d">v4</a> () noexcept</td></tr>
+<tr class="memdesc:adaa851b16777e387ef86dc45abbda71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct to represent the IPv4 UDP protocol.  <a href="classasio_1_1ip_1_1udp.html#adaa851b16777e387ef86dc45abbda71d">Подробнее...</a><br /></td></tr>
+<tr class="separator:adaa851b16777e387ef86dc45abbda71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c941465d03643de810356abdfeaaf1d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#a0c941465d03643de810356abdfeaaf1d">v6</a> () noexcept</td></tr>
+<tr class="memdesc:a0c941465d03643de810356abdfeaaf1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct to represent the IPv6 UDP protocol.  <a href="classasio_1_1ip_1_1udp.html#a0c941465d03643de810356abdfeaaf1d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0c941465d03643de810356abdfeaaf1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a2cc08fe9f5c9186018e71eebcecb2310"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#a2cc08fe9f5c9186018e71eebcecb2310">operator==</a> (const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;p1, const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;p2)</td></tr>
+<tr class="memdesc:a2cc08fe9f5c9186018e71eebcecb2310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two protocols for equality.  <a href="classasio_1_1ip_1_1udp.html#a2cc08fe9f5c9186018e71eebcecb2310">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cc08fe9f5c9186018e71eebcecb2310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bb54ad4ac96d2e219bc2c357476c7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1udp.html#a86bb54ad4ac96d2e219bc2c357476c7c">operator!=</a> (const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;p1, const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;p2)</td></tr>
+<tr class="memdesc:a86bb54ad4ac96d2e219bc2c357476c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two protocols for inequality.  <a href="classasio_1_1ip_1_1udp.html#a86bb54ad4ac96d2e219bc2c357476c7c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a86bb54ad4ac96d2e219bc2c357476c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Encapsulates the flags needed for UDP. </p>
+<p>The <a class="el" href="classasio_1_1ip_1_1udp.html" title="Encapsulates the flags needed for UDP.">asio::ip::udp</a> class contains flags necessary for UDP sockets.</p>
+<dl class="section user"><dt>Thread Safety</dt><dd><em>Distinct</em> <em>objects:</em> Safe.<br  />
+<em>Shared</em> <em>objects:</em> Safe.</dd></dl>
+<dl class="section user"><dt>Concepts:</dt><dd>Protocol, InternetProtocol. </dd></dl>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a6356426903164272827153752845368c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6356426903164272827153752845368c">&#9670;&nbsp;</a></span>endpoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1ip_1_1basic__endpoint.html">basic_endpoint</a>&lt;<a class="el" href="classasio_1_1ip_1_1udp.html">udp</a>&gt; <a class="el" href="classasio_1_1ip_1_1udp.html#a6356426903164272827153752845368c">asio::ip::udp::endpoint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of a UDP endpoint. </p>
+
+</div>
+</div>
+<a id="abb4d8eff41b11c6c2053bf799d43dba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4d8eff41b11c6c2053bf799d43dba2">&#9670;&nbsp;</a></span>resolver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1ip_1_1basic__resolver.html">basic_resolver</a>&lt;<a class="el" href="classasio_1_1ip_1_1udp.html">udp</a>&gt; <a class="el" href="classasio_1_1ip_1_1udp.html#abb4d8eff41b11c6c2053bf799d43dba2">asio::ip::udp::resolver</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The UDP resolver type. </p>
+
+</div>
+</div>
+<a id="ab8f8cc1a666bdbbd6c3963f2396f253e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f8cc1a666bdbbd6c3963f2396f253e">&#9670;&nbsp;</a></span>socket</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1basic__datagram__socket.html">basic_datagram_socket</a>&lt;<a class="el" href="classasio_1_1ip_1_1udp.html">udp</a>&gt; <a class="el" href="classasio_1_1ip_1_1udp.html#ab8f8cc1a666bdbbd6c3963f2396f253e">asio::ip::udp::socket</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The UDP socket type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a4a56838c36f723411ae86a2c9a19c981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a56838c36f723411ae86a2c9a19c981">&#9670;&nbsp;</a></span>family()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::ip::udp::family </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the protocol family. </p>
+
+</div>
+</div>
+<a id="aa00d39b4787f6274ea2b4dc0fd77fa7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00d39b4787f6274ea2b4dc0fd77fa7b">&#9670;&nbsp;</a></span>protocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::ip::udp::protocol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the protocol. </p>
+
+</div>
+</div>
+<a id="a6832041c2b316b22a461e84a19b3f50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6832041c2b316b22a461e84a19b3f50b">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::ip::udp::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the type of the protocol. </p>
+
+</div>
+</div>
+<a id="adaa851b16777e387ef86dc45abbda71d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa851b16777e387ef86dc45abbda71d">&#9670;&nbsp;</a></span>v4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> asio::ip::udp::v4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct to represent the IPv4 UDP protocol. </p>
+
+</div>
+</div>
+<a id="a0c941465d03643de810356abdfeaaf1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c941465d03643de810356abdfeaaf1d">&#9670;&nbsp;</a></span>v6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> asio::ip::udp::v6 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct to represent the IPv6 UDP protocol. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a86bb54ad4ac96d2e219bc2c357476c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86bb54ad4ac96d2e219bc2c357476c7c">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two protocols for inequality. </p>
+
+</div>
+</div>
+<a id="a2cc08fe9f5c9186018e71eebcecb2310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc08fe9f5c9186018e71eebcecb2310">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1udp.html">udp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two protocols for equality. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/ip/<a class="el" href="udp_8hpp_source.html">udp.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

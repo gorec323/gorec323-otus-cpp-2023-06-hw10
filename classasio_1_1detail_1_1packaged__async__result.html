@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::detail::packaged_async_result&lt; Function, Allocator, Result &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html">packaged_async_result</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1detail_1_1packaged__async__result-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::detail::packaged_async_result&lt; Function, Allocator, Result &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2use__future_8hpp_source.html">use_future.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ae6e1f3ab066209018e56db67f2392956"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1detail_1_1packaged__handler.html">packaged_handler</a>&lt; Function, Allocator, Result &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#ae6e1f3ab066209018e56db67f2392956">completion_handler_type</a></td></tr>
+<tr class="separator:ae6e1f3ab066209018e56db67f2392956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1474957dc64d90b8cd63c31ddc042e6d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1detail_1_1promise__creator.html#a836c5cc4123372c15e2090fc4934e04b">completion_handler_type::future_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#a1474957dc64d90b8cd63c31ddc042e6d">return_type</a></td></tr>
+<tr class="separator:a1474957dc64d90b8cd63c31ddc042e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac40f580b8c81cb036720918f93209066"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#ac40f580b8c81cb036720918f93209066">packaged_async_result</a> (<a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#ae6e1f3ab066209018e56db67f2392956">completion_handler_type</a> &amp;h)</td></tr>
+<tr class="separator:ac40f580b8c81cb036720918f93209066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a081ea2148496d0893a30238efce40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#a1474957dc64d90b8cd63c31ddc042e6d">return_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#a66a081ea2148496d0893a30238efce40">get</a> ()</td></tr>
+<tr class="separator:a66a081ea2148496d0893a30238efce40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="ae6e1f3ab066209018e56db67f2392956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e1f3ab066209018e56db67f2392956">&#9670;&nbsp;</a></span>completion_handler_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Allocator , typename Result &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1detail_1_1packaged__handler.html">packaged_handler</a>&lt;Function, Allocator, Result&gt; <a class="el" href="classasio_1_1detail_1_1packaged__async__result.html">asio::detail::packaged_async_result</a>&lt; Function, Allocator, Result &gt;::<a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#ae6e1f3ab066209018e56db67f2392956">completion_handler_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1474957dc64d90b8cd63c31ddc042e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1474957dc64d90b8cd63c31ddc042e6d">&#9670;&nbsp;</a></span>return_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Allocator , typename Result &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1detail_1_1promise__creator.html#a836c5cc4123372c15e2090fc4934e04b">completion_handler_type::future_type</a> <a class="el" href="classasio_1_1detail_1_1packaged__async__result.html">asio::detail::packaged_async_result</a>&lt; Function, Allocator, Result &gt;::<a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#a1474957dc64d90b8cd63c31ddc042e6d">return_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac40f580b8c81cb036720918f93209066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40f580b8c81cb036720918f93209066">&#9670;&nbsp;</a></span>packaged_async_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Allocator , typename Result &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html">asio::detail::packaged_async_result</a>&lt; Function, Allocator, Result &gt;::<a class="el" href="classasio_1_1detail_1_1packaged__async__result.html">packaged_async_result</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#ae6e1f3ab066209018e56db67f2392956">completion_handler_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a66a081ea2148496d0893a30238efce40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a081ea2148496d0893a30238efce40">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Allocator , typename Result &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html#a1474957dc64d90b8cd63c31ddc042e6d">return_type</a> <a class="el" href="classasio_1_1detail_1_1packaged__async__result.html">asio::detail::packaged_async_result</a>&lt; Function, Allocator, Result &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/impl/<a class="el" href="impl_2use__future_8hpp_source.html">use_future.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

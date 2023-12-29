@@ -1,0 +1,690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::detail::awaitable_thread&lt; Executor &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">awaitable_thread</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1detail_1_1awaitable__thread-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::detail::awaitable_thread&lt; Executor &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2awaitable_8hpp_source.html">awaitable.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::awaitable_thread&lt; Executor &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1awaitable__thread__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1awaitable__thread_3_01Executor_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1awaitable__thread_3_01Executor_01_4_inherit__map" id="aasio_1_1detail_1_1awaitable__thread_3_01Executor_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,628,172,669"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler__base.html" title=" " alt="" coords="234,107,425,163"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler__base.html" title=" " alt="" coords="234,261,425,317"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07_08_00_01Executor_01_4.html" title=" " alt="" coords="239,341,419,397"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07T_08_00_01Executor_01_4.html" title=" " alt="" coords="235,421,423,477"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07Ts_8_8_8_08_00_01Executor_01_4.html" title=" " alt="" coords="227,501,432,557"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07asio_1_1error__code_08_00_01Executor_01_4.html" title=" " alt="" coords="228,581,431,637"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07asio_1_1error__code_00_01T_08_00_01Executor_01_4.html" title=" " alt="" coords="228,661,431,717"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07asio_1_1error__code_00_01Ts_8_8_8_08_00_01Executor_01_4.html" title=" " alt="" coords="221,741,437,797"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07std_1_1exception__ptr_08_00_01Executor_01_4.html" title=" " alt="" coords="228,821,431,877"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07std_1_1exception__ptr_00_01T_08_00_01Executor_01_4.html" title=" " alt="" coords="220,901,439,957"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__async__op__handler_3_01R_07std_1_1exception__ptr_00_01Ts_8_8_8_08_00_01Executor_01_4.html" title=" " alt="" coords="232,981,427,1052"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler__base.html" title=" " alt="" coords="220,1076,439,1117"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler.html" title=" " alt="" coords="487,5,672,47"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_00_01asio_1_1error__code_00_01Ts_8_8_8_01_4.html" title=" " alt="" coords="487,71,671,127"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_00_01std_1_1exception__ptr_00_01Ts_8_8_8_01_4.html" title=" " alt="" coords="491,151,668,207"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_01_4.html" title=" " alt="" coords="496,232,663,273"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_00_01asio_1_1error__code_01_4.html" title=" " alt="" coords="487,298,671,354"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_00_01std_1_1exception__ptr_01_4.html" title=" " alt="" coords="491,378,668,434"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_00_01T_01_4.html" title=" " alt="" coords="489,1003,669,1044"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_00_01asio_1_1error__code_00_01T_01_4.html" title=" " alt="" coords="487,1069,671,1125"/>
+<area shape="rect" href="classasio_1_1detail_1_1awaitable__handler_3_01Executor_00_01std_1_1exception__ptr_00_01T_01_4.html" title=" " alt="" coords="491,1149,668,1205"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::detail::awaitable_thread&lt; Executor &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1awaitable__thread__coll__graph.png" border="0" usemap="#aasio_1_1detail_1_1awaitable__thread_3_01Executor_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1detail_1_1awaitable__thread_3_01Executor_01_4_coll__map" id="aasio_1_1detail_1_1awaitable__thread_3_01Executor_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="14,124,181,165"/>
+<area shape="rect" title=" " alt="" coords="5,5,189,61"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a82fadced349b1d26f6c9f7857b5376f1"><td class="memItemLeft" align="right" valign="top">typedef Executor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a82fadced349b1d26f6c9f7857b5376f1">executor_type</a></td></tr>
+<tr class="separator:a82fadced349b1d26f6c9f7857b5376f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48efb1ddf26cd50500edefc1922985fe"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a48efb1ddf26cd50500edefc1922985fe">cancellation_slot_type</a></td></tr>
+<tr class="separator:a48efb1ddf26cd50500edefc1922985fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7c03730663b7e351bdd6c6f3bb3d85ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a7c03730663b7e351bdd6c6f3bb3d85ea">awaitable_thread</a> (awaitable&lt; <a class="el" href="structasio_1_1detail_1_1awaitable__thread__entry__point.html">awaitable_thread_entry_point</a>, Executor &gt; p, const Executor &amp;ex, <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> parent_cancel_slot, <a class="el" href="classasio_1_1cancellation__state.html">cancellation_state</a> cancel_state)</td></tr>
+<tr class="separator:a7c03730663b7e351bdd6c6f3bb3d85ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c980879bd09a2be2ce8903ae4de6318"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a1c980879bd09a2be2ce8903ae4de6318">awaitable_thread</a> (<a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">awaitable_thread</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a1c980879bd09a2be2ce8903ae4de6318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74e8f58de05a18e1f6b911781c88749"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#af74e8f58de05a18e1f6b911781c88749">~awaitable_thread</a> ()</td></tr>
+<tr class="separator:af74e8f58de05a18e1f6b911781c88749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc7287590d082605257b498eba858657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1awaitable__frame.html">awaitable_frame</a>&lt; <a class="el" href="structasio_1_1detail_1_1awaitable__thread__entry__point.html">awaitable_thread_entry_point</a>, Executor &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#afc7287590d082605257b498eba858657">entry_point</a> ()</td></tr>
+<tr class="separator:afc7287590d082605257b498eba858657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83eab1971a20c3476af9348a32fc81e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a82fadced349b1d26f6c9f7857b5376f1">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a83eab1971a20c3476af9348a32fc81e8">get_executor</a> () const noexcept</td></tr>
+<tr class="separator:a83eab1971a20c3476af9348a32fc81e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699d2bf86957f1455e45f6f014d2f336"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1cancellation__state.html">cancellation_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a699d2bf86957f1455e45f6f014d2f336">get_cancellation_state</a> () const noexcept</td></tr>
+<tr class="separator:a699d2bf86957f1455e45f6f014d2f336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac829fdbe69319a9adba8ae5cd4b940e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#ac829fdbe69319a9adba8ae5cd4b940e7">reset_cancellation_state</a> ()</td></tr>
+<tr class="separator:ac829fdbe69319a9adba8ae5cd4b940e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e42a4300503b155ae5810cd561b289f"><td class="memTemplParams" colspan="2">template&lt;typename Filter &gt; </td></tr>
+<tr class="memitem:a1e42a4300503b155ae5810cd561b289f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a1e42a4300503b155ae5810cd561b289f">reset_cancellation_state</a> (Filter &amp;&amp;<a class="el" href="cpp14_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a>)</td></tr>
+<tr class="separator:a1e42a4300503b155ae5810cd561b289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60426a9cc6b57cab51e4c25e7bee09e6"><td class="memTemplParams" colspan="2">template&lt;typename InFilter , typename OutFilter &gt; </td></tr>
+<tr class="memitem:a60426a9cc6b57cab51e4c25e7bee09e6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a60426a9cc6b57cab51e4c25e7bee09e6">reset_cancellation_state</a> (InFilter &amp;&amp;in_filter, OutFilter &amp;&amp;out_filter)</td></tr>
+<tr class="separator:a60426a9cc6b57cab51e4c25e7bee09e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff20ff75db4ed19341c676c2f34fe4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a7ff20ff75db4ed19341c676c2f34fe4b">throw_if_cancelled</a> () const</td></tr>
+<tr class="separator:a7ff20ff75db4ed19341c676c2f34fe4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef48322549b51dade5a07f207a54e374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#aef48322549b51dade5a07f207a54e374">throw_if_cancelled</a> (bool value)</td></tr>
+<tr class="separator:aef48322549b51dade5a07f207a54e374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1b642229a35f676c3268e545fe102b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a48efb1ddf26cd50500edefc1922985fe">cancellation_slot_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#ade1b642229a35f676c3268e545fe102b">get_cancellation_slot</a> () const noexcept</td></tr>
+<tr class="separator:ade1b642229a35f676c3268e545fe102b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456e0e5daca9a85e62e36cd40b677c84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a456e0e5daca9a85e62e36cd40b677c84">launch</a> ()</td></tr>
+<tr class="separator:a456e0e5daca9a85e62e36cd40b677c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a80d47552fd4cf85b0814477f881da936"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a80d47552fd4cf85b0814477f881da936">pump</a> ()</td></tr>
+<tr class="separator:a80d47552fd4cf85b0814477f881da936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a0f574c3842d46d4c716d7fbf846302a2"><td class="memItemLeft" align="right" valign="top">awaitable&lt; <a class="el" href="structasio_1_1detail_1_1awaitable__thread__entry__point.html">awaitable_thread_entry_point</a>, Executor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a0f574c3842d46d4c716d7fbf846302a2">bottom_of_stack_</a></td></tr>
+<tr class="separator:a0f574c3842d46d4c716d7fbf846302a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a791bb4fb759810883aecc9550735c53d"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
+<tr class="memitem:a791bb4fb759810883aecc9550735c53d"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a791bb4fb759810883aecc9550735c53d">awaitable_frame_base</a></td></tr>
+<tr class="separator:a791bb4fb759810883aecc9550735c53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a48efb1ddf26cd50500edefc1922985fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48efb1ddf26cd50500edefc1922985fe">&#9670;&nbsp;</a></span>cancellation_slot_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::<a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a48efb1ddf26cd50500edefc1922985fe">cancellation_slot_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82fadced349b1d26f6c9f7857b5376f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82fadced349b1d26f6c9f7857b5376f1">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Executor <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::<a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a82fadced349b1d26f6c9f7857b5376f1">executor_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7c03730663b7e351bdd6c6f3bb3d85ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c03730663b7e351bdd6c6f3bb3d85ea">&#9670;&nbsp;</a></span>awaitable_thread() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::<a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">awaitable_thread</a> </td>
+          <td>(</td>
+          <td class="paramtype">awaitable&lt; <a class="el" href="structasio_1_1detail_1_1awaitable__thread__entry__point.html">awaitable_thread_entry_point</a>, Executor &gt;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Executor &amp;&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a>&#160;</td>
+          <td class="paramname"><em>parent_cancel_slot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1cancellation__state.html">cancellation_state</a>&#160;</td>
+          <td class="paramname"><em>cancel_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c980879bd09a2be2ce8903ae4de6318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c980879bd09a2be2ce8903ae4de6318">&#9670;&nbsp;</a></span>awaitable_thread() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::<a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">awaitable_thread</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">awaitable_thread</a>&lt; Executor &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af74e8f58de05a18e1f6b911781c88749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74e8f58de05a18e1f6b911781c88749">&#9670;&nbsp;</a></span>~awaitable_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::~<a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">awaitable_thread</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="afc7287590d082605257b498eba858657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc7287590d082605257b498eba858657">&#9670;&nbsp;</a></span>entry_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1awaitable__frame.html">awaitable_frame</a>&lt;<a class="el" href="structasio_1_1detail_1_1awaitable__thread__entry__point.html">awaitable_thread_entry_point</a>, Executor&gt;* <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::entry_point </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade1b642229a35f676c3268e545fe102b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1b642229a35f676c3268e545fe102b">&#9670;&nbsp;</a></span>get_cancellation_slot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a48efb1ddf26cd50500edefc1922985fe">cancellation_slot_type</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::get_cancellation_slot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a699d2bf86957f1455e45f6f014d2f336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a699d2bf86957f1455e45f6f014d2f336">&#9670;&nbsp;</a></span>get_cancellation_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1cancellation__state.html">cancellation_state</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::get_cancellation_state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83eab1971a20c3476af9348a32fc81e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83eab1971a20c3476af9348a32fc81e8">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1awaitable__thread.html#a82fadced349b1d26f6c9f7857b5376f1">executor_type</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a456e0e5daca9a85e62e36cd40b677c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456e0e5daca9a85e62e36cd40b677c84">&#9670;&nbsp;</a></span>launch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::launch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80d47552fd4cf85b0814477f881da936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d47552fd4cf85b0814477f881da936">&#9670;&nbsp;</a></span>pump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::pump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac829fdbe69319a9adba8ae5cd4b940e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac829fdbe69319a9adba8ae5cd4b940e7">&#9670;&nbsp;</a></span>reset_cancellation_state() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::reset_cancellation_state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e42a4300503b155ae5810cd561b289f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e42a4300503b155ae5810cd561b289f">&#9670;&nbsp;</a></span>reset_cancellation_state() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<div class="memtemplate">
+template&lt;typename Filter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::reset_cancellation_state </td>
+          <td>(</td>
+          <td class="paramtype">Filter &amp;&amp;&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60426a9cc6b57cab51e4c25e7bee09e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60426a9cc6b57cab51e4c25e7bee09e6">&#9670;&nbsp;</a></span>reset_cancellation_state() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<div class="memtemplate">
+template&lt;typename InFilter , typename OutFilter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::reset_cancellation_state </td>
+          <td>(</td>
+          <td class="paramtype">InFilter &amp;&amp;&#160;</td>
+          <td class="paramname"><em>in_filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutFilter &amp;&amp;&#160;</td>
+          <td class="paramname"><em>out_filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ff20ff75db4ed19341c676c2f34fe4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff20ff75db4ed19341c676c2f34fe4b">&#9670;&nbsp;</a></span>throw_if_cancelled() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::throw_if_cancelled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef48322549b51dade5a07f207a54e374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef48322549b51dade5a07f207a54e374">&#9670;&nbsp;</a></span>throw_if_cancelled() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::throw_if_cancelled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a791bb4fb759810883aecc9550735c53d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a791bb4fb759810883aecc9550735c53d">&#9670;&nbsp;</a></span>awaitable_frame_base</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<div class="memtemplate">
+template&lt;typename &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1detail_1_1awaitable__frame__base.html">awaitable_frame_base</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a0f574c3842d46d4c716d7fbf846302a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f574c3842d46d4c716d7fbf846302a2">&#9670;&nbsp;</a></span>bottom_of_stack_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">awaitable&lt;<a class="el" href="structasio_1_1detail_1_1awaitable__thread__entry__point.html">awaitable_thread_entry_point</a>, Executor&gt; <a class="el" href="classasio_1_1detail_1_1awaitable__thread.html">asio::detail::awaitable_thread</a>&lt; Executor &gt;::bottom_of_stack_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/impl/<a class="el" href="impl_2awaitable_8hpp_source.html">awaitable.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

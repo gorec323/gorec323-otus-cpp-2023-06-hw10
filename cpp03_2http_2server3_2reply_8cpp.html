@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/examples/cpp03/http/server3/reply.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_97d4d118eba55c3b8cfaf2639dfa73b6.html">http</a></li><li class="navelem"><a class="el" href="dir_68a4252a8eabb1b18146ed8ac5feed3e.html">server3</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл reply.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="cpp03_2http_2server3_2reply_8hpp_source.html">reply.hpp</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;boost/lexical_cast.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для reply.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="cpp03_2http_2server3_2reply_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server3_2reply_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server3_2reply_8cpp" id="a__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server3_2reply_8cpp">
+<area shape="rect" title=" " alt="" coords="5360,5,5527,61"/>
+<area shape="rect" href="cpp03_2http_2server3_2reply_8hpp.html" title=" " alt="" coords="5267,109,5348,136"/>
+<area shape="rect" title=" " alt="" coords="5338,534,5397,561"/>
+<area shape="rect" title=" " alt="" coords="5481,109,5648,136"/>
+<area shape="rect" title=" " alt="" coords="2505,534,2568,561"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="2835,184,2913,211"/>
+<area shape="rect" href="cpp03_2http_2server3_2header_8hpp.html" title=" " alt="" coords="5260,184,5355,211"/>
+<area shape="rect" href="any__completion__executor_8hpp.html" title=" " alt="" coords="3753,348,3910,389"/>
+<area shape="rect" href="any__completion__handler_8hpp.html" title=" " alt="" coords="3865,259,4022,300"/>
+<area shape="rect" href="any__io__executor_8hpp.html" title=" " alt="" coords="353,616,539,643"/>
+<area shape="rect" href="associated__allocator_8hpp.html" title=" " alt="" coords="3935,355,4149,382"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="3969,445,4115,471"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="3180,348,3389,389"/>
+<area shape="rect" href="associated__executor_8hpp.html" title=" " alt="" coords="3465,355,3678,382"/>
+<area shape="rect" href="associated__immediate__executor_8hpp.html" title=" " alt="" coords="4225,348,4427,389"/>
+<area shape="rect" href="append_8hpp.html" title=" " alt="" coords="787,266,916,293"/>
+<area shape="rect" href="as__tuple_8hpp.html" title=" " alt="" coords="941,266,1077,293"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2971,616,3134,643"/>
+<area shape="rect" href="awaitable_8hpp.html" title=" " alt="" coords="1101,266,1247,293"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="994,437,1151,479"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="991,534,1155,561"/>
+<area shape="rect" href="basic__deadline__timer_8hpp.html" title=" " alt="" coords="1576,259,1727,300"/>
+<area shape="rect" href="basic__file_8hpp.html" title=" " alt="" coords="1751,266,1893,293"/>
+<area shape="rect" href="basic__io__object_8hpp.html" title=" " alt="" coords="1918,266,2099,293"/>
+<area shape="rect" href="basic__random__access__file_8hpp.html" title=" " alt="" coords="2123,259,2318,300"/>
+<area shape="rect" href="basic__raw__socket_8hpp.html" title=" " alt="" coords="583,445,778,471"/>
+<area shape="rect" href="basic__readable__pipe_8hpp.html" title=" " alt="" coords="2393,259,2544,300"/>
+<area shape="rect" href="basic__seq__packet__socket_8hpp.html" title=" " alt="" coords="803,437,969,479"/>
+<area shape="rect" href="basic__serial__port_8hpp.html" title=" " alt="" coords="2620,266,2811,293"/>
+<area shape="rect" href="basic__signal__set_8hpp.html" title=" " alt="" coords="452,534,640,561"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="231,445,458,471"/>
+<area shape="rect" href="basic__socket__iostream_8hpp.html" title=" " alt="" coords="1322,266,1551,293"/>
+<area shape="rect" href="basic__socket__streambuf_8hpp.html" title=" " alt="" coords="1318,355,1555,382"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="1643,445,1860,471"/>
+<area shape="rect" href="basic__stream__file_8hpp.html" title=" " alt="" coords="3179,266,3374,293"/>
+<area shape="rect" href="basic__streambuf_8hpp.html" title=" " alt="" coords="2764,355,2952,382"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="4563,445,4681,471"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="5,527,156,568"/>
+<area shape="rect" href="basic__writable__pipe_8hpp.html" title=" " alt="" coords="3694,259,3841,300"/>
+<area shape="rect" href="bind__allocator_8hpp.html" title=" " alt="" coords="4148,266,4320,293"/>
+<area shape="rect" href="bind__cancellation__slot_8hpp.html" title=" " alt="" coords="2937,259,3104,300"/>
+<area shape="rect" href="bind__executor_8hpp.html" title=" " alt="" coords="3449,266,3619,293"/>
+<area shape="rect" href="bind__immediate__executor_8hpp.html" title=" " alt="" coords="4396,259,4555,300"/>
+<area shape="rect" href="buffer__registration_8hpp.html" title=" " alt="" coords="2436,445,2637,471"/>
+<area shape="rect" href="buffered__read__stream__fwd_8hpp.html" title=" " alt="" coords="4705,437,4848,479"/>
+<area shape="rect" href="buffered__read__stream_8hpp.html" title=" " alt="" coords="4705,348,4848,389"/>
+<area shape="rect" href="buffered__stream__fwd_8hpp.html" title=" " alt="" coords="4873,348,5033,389"/>
+<area shape="rect" href="buffered__stream_8hpp.html" title=" " alt="" coords="4859,266,5047,293"/>
+<area shape="rect" href="buffered__write__stream_8hpp.html" title=" " alt="" coords="5107,348,5254,389"/>
+<area shape="rect" href="buffered__write__stream__fwd_8hpp.html" title=" " alt="" coords="5133,437,5279,479"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacehttp"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp.html">http</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacehttp_1_1server3"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3.html">http::server3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacehttp_1_1server3_1_1status__strings"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html">http::server3::status_strings</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacehttp_1_1server3_1_1misc__strings"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1misc__strings.html">http::server3::misc_strings</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacehttp_1_1server3_1_1stock__replies"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html">http::server3::stock_replies</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ac08fdaf5def8e549f084a7fef30672a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1const__buffer.html">asio::const_buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#ac08fdaf5def8e549f084a7fef30672a3">http::server3::status_strings::to_buffer</a> (reply::status_type status)</td></tr>
+<tr class="separator:ac08fdaf5def8e549f084a7fef30672a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd4f92546e3e5368b7687fc23e5db57"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#afbd4f92546e3e5368b7687fc23e5db57">http::server3::stock_replies::to_string</a> (reply::status_type status)</td></tr>
+<tr class="separator:afbd4f92546e3e5368b7687fc23e5db57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a820e8fa305fab391ced55830863724a5"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#a820e8fa305fab391ced55830863724a5">http::server3::status_strings::ok</a></td></tr>
+<tr class="separator:a820e8fa305fab391ced55830863724a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda54a1db4173e122f467db7b281d582"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#aeda54a1db4173e122f467db7b281d582">http::server3::status_strings::created</a></td></tr>
+<tr class="separator:aeda54a1db4173e122f467db7b281d582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b49f564256b9c9bacaf4de673de91d2"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#a8b49f564256b9c9bacaf4de673de91d2">http::server3::status_strings::accepted</a></td></tr>
+<tr class="separator:a8b49f564256b9c9bacaf4de673de91d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb5d41990f9f36b56826688ab94750b"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#a5cb5d41990f9f36b56826688ab94750b">http::server3::status_strings::no_content</a></td></tr>
+<tr class="separator:a5cb5d41990f9f36b56826688ab94750b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff108166c31fa9dfd67e0b41aee41cd3"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#aff108166c31fa9dfd67e0b41aee41cd3">http::server3::status_strings::multiple_choices</a></td></tr>
+<tr class="separator:aff108166c31fa9dfd67e0b41aee41cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da42d8d3b230e80f1ad2e3a3b246ec7"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#a6da42d8d3b230e80f1ad2e3a3b246ec7">http::server3::status_strings::moved_permanently</a></td></tr>
+<tr class="separator:a6da42d8d3b230e80f1ad2e3a3b246ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1895faa11bc3b1025ee04fd1664278a4"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#a1895faa11bc3b1025ee04fd1664278a4">http::server3::status_strings::moved_temporarily</a></td></tr>
+<tr class="separator:a1895faa11bc3b1025ee04fd1664278a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad032015467d3286db7ac8f971732a30"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#aad032015467d3286db7ac8f971732a30">http::server3::status_strings::not_modified</a></td></tr>
+<tr class="separator:aad032015467d3286db7ac8f971732a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7dd24947e36de41b82ae1d990779b6c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#ad7dd24947e36de41b82ae1d990779b6c">http::server3::status_strings::bad_request</a></td></tr>
+<tr class="separator:ad7dd24947e36de41b82ae1d990779b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94f49943e824a02c58d84ebaf859020"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#ac94f49943e824a02c58d84ebaf859020">http::server3::status_strings::unauthorized</a></td></tr>
+<tr class="separator:ac94f49943e824a02c58d84ebaf859020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab157d53d86ebc0a562135391d9e14508"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#ab157d53d86ebc0a562135391d9e14508">http::server3::status_strings::forbidden</a></td></tr>
+<tr class="separator:ab157d53d86ebc0a562135391d9e14508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6098a2031f454db49b638d6ba15301"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#afa6098a2031f454db49b638d6ba15301">http::server3::status_strings::not_found</a></td></tr>
+<tr class="separator:afa6098a2031f454db49b638d6ba15301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e85cb93c57a0eed2096d6e8da7cf64"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#ad3e85cb93c57a0eed2096d6e8da7cf64">http::server3::status_strings::internal_server_error</a></td></tr>
+<tr class="separator:ad3e85cb93c57a0eed2096d6e8da7cf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1756902387c924dba84667b8f180b5e"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#aa1756902387c924dba84667b8f180b5e">http::server3::status_strings::not_implemented</a></td></tr>
+<tr class="separator:aa1756902387c924dba84667b8f180b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14f10f166fb7dc82dec0126788bfe80"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#ae14f10f166fb7dc82dec0126788bfe80">http::server3::status_strings::bad_gateway</a></td></tr>
+<tr class="separator:ae14f10f166fb7dc82dec0126788bfe80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2d448fb3ac0a1e44a3cb06cafc3ead"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1status__strings.html#a1d2d448fb3ac0a1e44a3cb06cafc3ead">http::server3::status_strings::service_unavailable</a></td></tr>
+<tr class="separator:a1d2d448fb3ac0a1e44a3cb06cafc3ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d900bc2a0e15ef45c9f9df0f5d09c99"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1misc__strings.html#a3d900bc2a0e15ef45c9f9df0f5d09c99">http::server3::misc_strings::name_value_separator</a> [] = { ':', ' ' }</td></tr>
+<tr class="separator:a3d900bc2a0e15ef45c9f9df0f5d09c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6526bb6ff5935d608f7eaf1f0e70bd3c"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1misc__strings.html#a6526bb6ff5935d608f7eaf1f0e70bd3c">http::server3::misc_strings::crlf</a> [] = { '\r', '\n' }</td></tr>
+<tr class="separator:a6526bb6ff5935d608f7eaf1f0e70bd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eaf1f08c17783af38f05df5b5f410f1"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a8eaf1f08c17783af38f05df5b5f410f1">http::server3::stock_replies::ok</a> [] = &quot;&quot;</td></tr>
+<tr class="separator:a8eaf1f08c17783af38f05df5b5f410f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf7710d7462f4a9abc6f65cb07a4d6c"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a3bf7710d7462f4a9abc6f65cb07a4d6c">http::server3::stock_replies::created</a> []</td></tr>
+<tr class="separator:a3bf7710d7462f4a9abc6f65cb07a4d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7724bbdb5503d6cfb043f46cdc22f2b"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#ad7724bbdb5503d6cfb043f46cdc22f2b">http::server3::stock_replies::accepted</a> []</td></tr>
+<tr class="separator:ad7724bbdb5503d6cfb043f46cdc22f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde2469ae7222b6e92ffe24f46ec6d2e"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#afde2469ae7222b6e92ffe24f46ec6d2e">http::server3::stock_replies::no_content</a> []</td></tr>
+<tr class="separator:afde2469ae7222b6e92ffe24f46ec6d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fa70153139bcb3c8d58a161ff04e60"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a80fa70153139bcb3c8d58a161ff04e60">http::server3::stock_replies::multiple_choices</a> []</td></tr>
+<tr class="separator:a80fa70153139bcb3c8d58a161ff04e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa1a967daf8ee3a938ac2af664a995e"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#abaa1a967daf8ee3a938ac2af664a995e">http::server3::stock_replies::moved_permanently</a> []</td></tr>
+<tr class="separator:abaa1a967daf8ee3a938ac2af664a995e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e08665f117264e8a4b9d86653f6f5d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a87e08665f117264e8a4b9d86653f6f5d">http::server3::stock_replies::moved_temporarily</a> []</td></tr>
+<tr class="separator:a87e08665f117264e8a4b9d86653f6f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78d50588dcfb8727035362de6022c7f"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#ab78d50588dcfb8727035362de6022c7f">http::server3::stock_replies::not_modified</a> []</td></tr>
+<tr class="separator:ab78d50588dcfb8727035362de6022c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c4e3f8f46241acc5ee198d504d8e3df"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a4c4e3f8f46241acc5ee198d504d8e3df">http::server3::stock_replies::bad_request</a> []</td></tr>
+<tr class="separator:a4c4e3f8f46241acc5ee198d504d8e3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd0c41dd5f583ccca77767e2d997b07"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#abbd0c41dd5f583ccca77767e2d997b07">http::server3::stock_replies::unauthorized</a> []</td></tr>
+<tr class="separator:abbd0c41dd5f583ccca77767e2d997b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff0db486d24ab49a50673cf36bb4675"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#abff0db486d24ab49a50673cf36bb4675">http::server3::stock_replies::forbidden</a> []</td></tr>
+<tr class="separator:abff0db486d24ab49a50673cf36bb4675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d493ec22d48870135537153ae450f0a"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a9d493ec22d48870135537153ae450f0a">http::server3::stock_replies::not_found</a> []</td></tr>
+<tr class="separator:a9d493ec22d48870135537153ae450f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7811c411c1dfe3d4c15aee3d9f519748"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a7811c411c1dfe3d4c15aee3d9f519748">http::server3::stock_replies::internal_server_error</a> []</td></tr>
+<tr class="separator:a7811c411c1dfe3d4c15aee3d9f519748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab040035a8113e4496b1c0782916c458"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#aab040035a8113e4496b1c0782916c458">http::server3::stock_replies::not_implemented</a> []</td></tr>
+<tr class="separator:aab040035a8113e4496b1c0782916c458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a314ad84d2a5371a71b157123e64880c0"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#a314ad84d2a5371a71b157123e64880c0">http::server3::stock_replies::bad_gateway</a> []</td></tr>
+<tr class="separator:a314ad84d2a5371a71b157123e64880c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af880df89bb9b2f53f2996a806535ec0d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttp_1_1server3_1_1stock__replies.html#af880df89bb9b2f53f2996a806535ec0d">http::server3::stock_replies::service_unavailable</a> []</td></tr>
+<tr class="separator:af880df89bb9b2f53f2996a806535ec0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

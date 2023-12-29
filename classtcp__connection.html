@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс tcp_connection</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classtcp__connection-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс tcp_connection</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:tcp_connection:</div>
+<div class="dyncontent">
+<div class="center"><img src="classtcp__connection__inherit__graph.png" border="0" usemap="#atcp__connection_inherit__map" alt="Inheritance graph"/></div>
+<map name="atcp__connection_inherit__map" id="atcp__connection_inherit__map">
+<area shape="rect" title=" " alt="" coords="55,95,175,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,224,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса tcp_connection:</div>
+<div class="dyncontent">
+<div class="center"><img src="classtcp__connection__coll__graph.png" border="0" usemap="#atcp__connection_coll__map" alt="Collaboration graph"/></div>
+<map name="atcp__connection_coll__map" id="atcp__connection_coll__map">
+<area shape="rect" title=" " alt="" coords="55,95,175,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,224,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:af65a4d4a0e58102041dd699d15a4b338"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classtcp__connection.html">tcp_connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">pointer</a></td></tr>
+<tr class="separator:af65a4d4a0e58102041dd699d15a4b338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65a4d4a0e58102041dd699d15a4b338"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classtcp__connection.html">tcp_connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">pointer</a></td></tr>
+<tr class="separator:af65a4d4a0e58102041dd699d15a4b338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a173b742721cd58a017cac3d55007b973"><td class="memItemLeft" align="right" valign="top">tcp::socket &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#a173b742721cd58a017cac3d55007b973">socket</a> ()</td></tr>
+<tr class="separator:a173b742721cd58a017cac3d55007b973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1967f305a797f7af974cdc7d49a283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#a2a1967f305a797f7af974cdc7d49a283">start</a> ()</td></tr>
+<tr class="separator:a2a1967f305a797f7af974cdc7d49a283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a173b742721cd58a017cac3d55007b973"><td class="memItemLeft" align="right" valign="top">tcp::socket &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#a173b742721cd58a017cac3d55007b973">socket</a> ()</td></tr>
+<tr class="separator:a173b742721cd58a017cac3d55007b973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1967f305a797f7af974cdc7d49a283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#a2a1967f305a797f7af974cdc7d49a283">start</a> ()</td></tr>
+<tr class="separator:a2a1967f305a797f7af974cdc7d49a283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a7912bb8d47482ba562ac3e806c143784"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#a7912bb8d47482ba562ac3e806c143784">create</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;io_context)</td></tr>
+<tr class="separator:a7912bb8d47482ba562ac3e806c143784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7912bb8d47482ba562ac3e806c143784"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtcp__connection.html#a7912bb8d47482ba562ac3e806c143784">create</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;io_context)</td></tr>
+<tr class="separator:a7912bb8d47482ba562ac3e806c143784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="af65a4d4a0e58102041dd699d15a4b338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65a4d4a0e58102041dd699d15a4b338">&#9670;&nbsp;</a></span>pointer <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classtcp__connection.html">tcp_connection</a>&gt; <a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">tcp_connection::pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af65a4d4a0e58102041dd699d15a4b338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65a4d4a0e58102041dd699d15a4b338">&#9670;&nbsp;</a></span>pointer <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classtcp__connection.html">tcp_connection</a>&gt; <a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">tcp_connection::pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7912bb8d47482ba562ac3e806c143784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7912bb8d47482ba562ac3e806c143784">&#9670;&nbsp;</a></span>create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">pointer</a> tcp_connection::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>io_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7912bb8d47482ba562ac3e806c143784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7912bb8d47482ba562ac3e806c143784">&#9670;&nbsp;</a></span>create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classtcp__connection.html#af65a4d4a0e58102041dd699d15a4b338">pointer</a> tcp_connection::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>io_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a173b742721cd58a017cac3d55007b973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173b742721cd58a017cac3d55007b973">&#9670;&nbsp;</a></span>socket() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tcp::socket&amp; tcp_connection::socket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a173b742721cd58a017cac3d55007b973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173b742721cd58a017cac3d55007b973">&#9670;&nbsp;</a></span>socket() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tcp::socket&amp; tcp_connection::socket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a1967f305a797f7af974cdc7d49a283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1967f305a797f7af974cdc7d49a283">&#9670;&nbsp;</a></span>start() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> tcp_connection::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a1967f305a797f7af974cdc7d49a283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1967f305a797f7af974cdc7d49a283">&#9670;&nbsp;</a></span>start() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> tcp_connection::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/src/examples/cpp03/tutorial/daytime3/<a class="el" href="examples_2cpp03_2tutorial_2daytime3_2server_8cpp.html">server.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

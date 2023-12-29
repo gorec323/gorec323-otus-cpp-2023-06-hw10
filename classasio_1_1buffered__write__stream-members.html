@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Cписок членов класса</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1buffered__write__stream.html">buffered_write_stream</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">asio::buffered_write_stream&lt; Stream &gt; Cписок членов класса</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Полный список членов класса <a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a>, включая наследуемые из базового класса</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a32f9a1c89852f17c82394a2dcd09f578">ASIO_STATIC_CONSTANT</a>(std::size_t, default_buffer_size=1024)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#ad4e37e04c3edb6b05b82aa4ba27aa121">async_flush</a>(WriteHandler &amp;&amp;handler=default_completion_token_t&lt; executor_type &gt;()) -&gt; decltype(async_initiate&lt; WriteHandler, void(asio::error_code, std::size_t)&gt;(declval&lt; detail::initiate_async_buffered_flush&lt; Stream &gt;&gt;(), handler, declval&lt; detail::buffered_stream_storage * &gt;()))</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a87c365bef58dae35f46cc182cc229628">async_read_some</a>(const MutableBufferSequence &amp;buffers, ReadHandler &amp;&amp;handler=default_completion_token_t&lt; executor_type &gt;()) -&gt; decltype(declval&lt; conditional_t&lt; true, Stream &amp;, ReadHandler &gt;&gt;().async_read_some(buffers, static_cast&lt; ReadHandler &amp;&amp; &gt;(handler)))</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a5cc4224c59e844d5d5617e1e7d15d00d">async_write_some</a>(const ConstBufferSequence &amp;buffers, WriteHandler &amp;&amp;handler=default_completion_token_t&lt; executor_type &gt;()) -&gt; decltype(async_initiate&lt; WriteHandler, void(asio::error_code, std::size_t)&gt;(declval&lt; detail::initiate_async_buffered_write_some&lt; Stream &gt;&gt;(), handler, declval&lt; detail::buffered_stream_storage * &gt;(), buffers))</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a1d4c4a9472fe93412b111e330d7786fc">buffered_write_stream</a>(Arg &amp;&amp;a)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a9fa40688d36d01f90df36044bc1b778c">buffered_write_stream</a>(Arg &amp;&amp;a, std::size_t buffer_size)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a0879be88d9d9ea9a1212444bfcf410f4">close</a>()</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#aa6be10346784f8d9eab057c372af5104">close</a>(asio::error_code &amp;ec)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a2ac984857eefb28ce6d4df1a32da2cc2">executor_type</a> typedef</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a2974f1b010b5fae2e7c1a359de8a9630">flush</a>()</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a8bcdf1dae02dc31c3cc8f190e38ded58">flush</a>(asio::error_code &amp;ec)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#aa2d4ab7cd7ddb58c4bc79c9c3307ee95">get_executor</a>() noexcept</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a1e0fd46ecd1c6c661514415b25a848ac">in_avail</a>()</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#aab154b5c30ce124be72837110c18df81">in_avail</a>(asio::error_code &amp;ec)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a2d356fdcb475b86830b67e9ebc6d8fbd">lowest_layer</a>()</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a73f1c65f402c3cb1c5e3a1f4cec8717d">lowest_layer</a>() const</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#af545c11f1e192498c8fa28743590191e">lowest_layer_type</a> typedef</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#af5a9541a4f426f3b4b23ce886c28d8f6">next_layer</a>()</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#ab15b46989632b3c1b89beaa807edc16f">next_layer_type</a> typedef</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#af405d792626b63386d1b2581b3f8a373">peek</a>(const MutableBufferSequence &amp;buffers)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a1a79234be08178c11ca81d173adccc62">peek</a>(const MutableBufferSequence &amp;buffers, asio::error_code &amp;ec)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a56e2b6c503166193e5688980dd0bd94c">read_some</a>(const MutableBufferSequence &amp;buffers)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a86fb1b9c4d16604bce669594fc2e159f">read_some</a>(const MutableBufferSequence &amp;buffers, asio::error_code &amp;ec)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#a087d80b41a8ca12e6788222948eebd88">write_some</a>(const ConstBufferSequence &amp;buffers)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html#acc1d946a2b73da5097909d35abcec65c">write_some</a>(const ConstBufferSequence &amp;buffers, asio::error_code &amp;ec)</td><td class="entry"><a class="el" href="classasio_1_1buffered__write__stream.html">asio::buffered_write_stream&lt; Stream &gt;</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::async_result&lt; deferred_function&lt; Function &gt;, Signature &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1async__result_3_01deferred__function_3_01Function_01_4_00_01Signature_01_4.html">async_result&lt; deferred_function&lt; Function &gt;, Signature &gt;</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classasio_1_1async__result_3_01deferred__function_3_01Function_01_4_00_01Signature_01_4-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::async_result&lt; deferred_function&lt; Function &gt;, Signature &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2deferred_8hpp_source.html">deferred.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ab5eaaddabbf25981645f6818e3efccfc"><td class="memTemplParams" colspan="2">template&lt;typename Initiation , typename... InitArgs&gt; </td></tr>
+<tr class="memitem:ab5eaaddabbf25981645f6818e3efccfc"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result_3_01deferred__function_3_01Function_01_4_00_01Signature_01_4.html#ab5eaaddabbf25981645f6818e3efccfc">initiate</a> (Initiation &amp;&amp;initiation, <a class="el" href="classasio_1_1deferred__function.html">deferred_function</a>&lt; Function &gt; <a class="el" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, InitArgs &amp;&amp;... init_args) -&gt; decltype(<a class="el" href="classasio_1_1deferred__sequence.html">deferred_sequence</a>&lt; <a class="el" href="classasio_1_1deferred__async__operation.html">deferred_async_operation</a>&lt; Signature, Initiation, InitArgs... &gt;, Function &gt;(<a class="el" href="structasio_1_1deferred__init__tag.html">deferred_init_tag</a>{}, <a class="el" href="classasio_1_1deferred__async__operation.html">deferred_async_operation</a>&lt; Signature, Initiation, InitArgs... &gt;(<a class="el" href="structasio_1_1deferred__init__tag.html">deferred_init_tag</a>{}, static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; InitArgs &amp;&amp; &gt;(init_args)...), static_cast&lt; Function &amp;&amp; &gt;(token.function_)))</td></tr>
+<tr class="separator:ab5eaaddabbf25981645f6818e3efccfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Методы</h2>
+<a id="ab5eaaddabbf25981645f6818e3efccfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5eaaddabbf25981645f6818e3efccfc">&#9670;&nbsp;</a></span>initiate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Signature &gt; </div>
+<div class="memtemplate">
+template&lt;typename Initiation , typename... InitArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classasio_1_1async__result.html">asio::async_result</a>&lt; <a class="el" href="classasio_1_1deferred__function.html">deferred_function</a>&lt; Function &gt;, Signature &gt;::initiate </td>
+          <td>(</td>
+          <td class="paramtype">Initiation &amp;&amp;&#160;</td>
+          <td class="paramname"><em>initiation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1deferred__function.html">deferred_function</a>&lt; Function &gt;&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InitArgs &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>init_args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(
+        <a class="el" href="classasio_1_1deferred__sequence.html">deferred_sequence</a>&lt;
+          <a class="el" href="classasio_1_1deferred__async__operation.html">deferred_async_operation</a>&lt;
+            Signature, Initiation, InitArgs...&gt;,
+          Function&gt;(<a class="el" href="structasio_1_1deferred__init__tag.html">deferred_init_tag</a>{},
+            <a class="el" href="classasio_1_1deferred__async__operation.html">deferred_async_operation</a>&lt;
+              Signature, Initiation, InitArgs...&gt;(
+                <a class="el" href="structasio_1_1deferred__init__tag.html">deferred_init_tag</a>{},
+                static_cast&lt;Initiation&amp;&amp;&gt;(initiation),
+                static_cast&lt;InitArgs&amp;&amp;&gt;(init_args)...),
+            static_cast&lt;Function&amp;&amp;&gt;(token.function_)))
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/impl/<a class="el" href="impl_2deferred_8hpp_source.html">deferred.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

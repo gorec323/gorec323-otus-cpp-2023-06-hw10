@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/basic_streambuf.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">basic_streambuf.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="basic__streambuf_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// basic_streambuf.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_BASIC_STREAMBUF_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_BASIC_STREAMBUF_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;streambuf&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__streambuf__fwd_8hpp.html">asio/basic_streambuf_fwd.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="buffer_8hpp.html">asio/buffer.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="limits_8hpp.html">asio/detail/limits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="noncopyable_8hpp.html">asio/detail/noncopyable.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="throw__exception_8hpp.html">asio/detail/throw_exception.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator = std::allocator&lt;<span class="keywordtype">char</span>&gt;&gt;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html">  110</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1basic__streambuf.html">basic_streambuf</a></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  : <span class="keyword">public</span> <a class="code" href="namespaceasio.html#a6a7ba348943527312eeace3492bf32ee">std::streambuf</a>,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">private</span> <a class="code" href="classasio_1_1detail_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">typedef</span> implementation_defined <a class="code" href="classasio_1_1basic__streambuf.html#a9e2ffddcb9e89d68048254ea787c2258">const_buffers_type</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">typedef</span> implementation_defined <a class="code" href="classasio_1_1basic__streambuf.html#a195fab1814cb4176eb11862dfd9b96eb">mutable_buffers_type</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a9e2ffddcb9e89d68048254ea787c2258">  122</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="buffer_8hpp.html#a7b6da84e4718b534c36914c3b9b8bb73">ASIO_CONST_BUFFER</a> <a class="code" href="classasio_1_1basic__streambuf.html#a9e2ffddcb9e89d68048254ea787c2258">const_buffers_type</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a195fab1814cb4176eb11862dfd9b96eb">  123</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="buffer_8hpp.html#ab9c4237f8d208b449fe76300bf5f1da1">ASIO_MUTABLE_BUFFER</a> <a class="code" href="classasio_1_1basic__streambuf.html#a195fab1814cb4176eb11862dfd9b96eb">mutable_buffers_type</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#ae170fa1aa36003d7bf294b18d95559a8">  131</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1basic__streambuf.html#ae170fa1aa36003d7bf294b18d95559a8">basic_streambuf</a>(</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      std::size_t maximum_size = (std::numeric_limits&lt;std::size_t&gt;::max)(),</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keyword">const</span> Allocator&amp; <a class="code" href="classallocator.html">allocator</a> = Allocator())</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    : max_size_(maximum_size),</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      buffer_(<a class="code" href="classallocator.html">allocator</a>)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    std::size_t pend = (std::min&lt;std::size_t&gt;)(max_size_, <a class="code" href="classasio_1_1basic__streambuf.html#a69fa699929e44c40b6194b8a4f600de0ad665b162cf9d1a1e82e74d40b3e8a329">buffer_delta</a>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    buffer_.resize((std::max&lt;std::size_t&gt;)(pend, 1));</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    setg(&amp;buffer_[0], &amp;buffer_[0], &amp;buffer_[0]);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    setp(&amp;buffer_[0], &amp;buffer_[0] + pend);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a92cd17fe1a52575f8b3aa2eb486ed9e2">  158</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__streambuf.html#a92cd17fe1a52575f8b3aa2eb486ed9e2">size</a>() const noexcept</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> pptr() - gptr();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#af271de251f956938caa898aa9a052e85">  168</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__streambuf.html#af271de251f956938caa898aa9a052e85">max_size</a>() const noexcept</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> max_size_;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#aeb32ba223ef5d156596a631fe5b2777c">  178</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__streambuf.html#aeb32ba223ef5d156596a631fe5b2777c">capacity</a>() const noexcept</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> buffer_.capacity();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a0781a0f0af7e859872ea52e85fc80fdd">  192</a></span>&#160;  <a class="code" href="classasio_1_1basic__streambuf.html#a9e2ffddcb9e89d68048254ea787c2258">const_buffers_type</a> <a class="code" href="classasio_1_1basic__streambuf.html#a0781a0f0af7e859872ea52e85fc80fdd">data</a>() const noexcept</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a>(<a class="code" href="classasio_1_1const__buffer.html">asio::const_buffer</a>(gptr(),</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          (pptr() - gptr()) * <span class="keyword">sizeof</span>(char_type)));</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a4f19d44bcf40de432f9e6984df959e73">  214</a></span>&#160;  <a class="code" href="classasio_1_1basic__streambuf.html#a195fab1814cb4176eb11862dfd9b96eb">mutable_buffers_type</a> <a class="code" href="classasio_1_1basic__streambuf.html#a4f19d44bcf40de432f9e6984df959e73">prepare</a>(std::size_t n)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html#a76d97a93b5e468f95ebe343aff1b3aa8">reserve</a>(n);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a>(<a class="code" href="classasio_1_1mutable__buffer.html">asio::mutable_buffer</a>(</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;          pptr(), n * <span class="keyword">sizeof</span>(char_type)));</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a6d01805ae2a9382cbb81934111c8ea1c">  233</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1basic__streambuf.html#a6d01805ae2a9382cbb81934111c8ea1c">commit</a>(std::size_t n)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    n = std::min&lt;std::size_t&gt;(n, epptr() - pptr());</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    pbump(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(n));</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    setg(eback(), gptr(), pptr());</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a83ca4bad37c9c96f72eda6c8ef133df4">  247</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1basic__streambuf.html#a83ca4bad37c9c96f72eda6c8ef133df4">consume</a>(std::size_t n)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> (egptr() &lt; pptr())</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      setg(&amp;buffer_[0], gptr(), pptr());</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span> (gptr() + n &gt; pptr())</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      n = pptr() - gptr();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    gbump(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(n));</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a69fa699929e44c40b6194b8a4f600de0ad665b162cf9d1a1e82e74d40b3e8a329">  257</a></span>&#160;  <span class="keyword">enum</span> { <a class="code" href="classasio_1_1basic__streambuf.html#a69fa699929e44c40b6194b8a4f600de0ad665b162cf9d1a1e82e74d40b3e8a329">buffer_delta</a> = 128 };</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#ab1d0caa8e5cd788d2d7588ff79b9fd5e">  263</a></span>&#160;  int_type <a class="code" href="classasio_1_1basic__streambuf.html#ab1d0caa8e5cd788d2d7588ff79b9fd5e">underflow</a>()</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">if</span> (gptr() &lt; pptr())</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      setg(&amp;buffer_[0], gptr(), pptr());</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <span class="keywordflow">return</span> traits_type::to_int_type(*gptr());</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceasio_1_1error.html#ade61a402d1dfb10b1c223906f5ea7847abb0b3b47deff67dd67b180d9d1e34154">traits_type::eof</a>();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a8c66d95fc706065ca0c87e0d6959e72f">  283</a></span>&#160;  int_type <a class="code" href="classasio_1_1basic__streambuf.html#a8c66d95fc706065ca0c87e0d6959e72f">overflow</a>(int_type <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> (!traits_type::eq_int_type(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, <a class="code" href="namespaceasio_1_1error.html#ade61a402d1dfb10b1c223906f5ea7847abb0b3b47deff67dd67b180d9d1e34154">traits_type::eof</a>()))</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">if</span> (pptr() == epptr())</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        std::size_t <a class="code" href="namespaceasio.html#a32ffb00a82a2cb0dcbb976e02d82cc79">buffer_size</a> = pptr() - gptr();</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespaceasio.html#a32ffb00a82a2cb0dcbb976e02d82cc79">buffer_size</a> &lt; max_size_ &amp;&amp; max_size_ - <a class="code" href="namespaceasio.html#a32ffb00a82a2cb0dcbb976e02d82cc79">buffer_size</a> &lt; <a class="code" href="classasio_1_1basic__streambuf.html#a69fa699929e44c40b6194b8a4f600de0ad665b162cf9d1a1e82e74d40b3e8a329">buffer_delta</a>)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;          <a class="code" href="classasio_1_1basic__streambuf.html#a76d97a93b5e468f95ebe343aff1b3aa8">reserve</a>(max_size_ - <a class="code" href="namespaceasio.html#a32ffb00a82a2cb0dcbb976e02d82cc79">buffer_size</a>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;          <a class="code" href="classasio_1_1basic__streambuf.html#a76d97a93b5e468f95ebe343aff1b3aa8">reserve</a>(<a class="code" href="classasio_1_1basic__streambuf.html#a69fa699929e44c40b6194b8a4f600de0ad665b162cf9d1a1e82e74d40b3e8a329">buffer_delta</a>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      *pptr() = traits_type::to_char_type(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      pbump(1);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span> traits_type::not_eof(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#a76d97a93b5e468f95ebe343aff1b3aa8">  308</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1basic__streambuf.html#a76d97a93b5e468f95ebe343aff1b3aa8">reserve</a>(std::size_t n)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">// Get current stream positions as offsets.</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    std::size_t gnext = gptr() - &amp;buffer_[0];</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    std::size_t pnext = pptr() - &amp;buffer_[0];</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    std::size_t pend = epptr() - &amp;buffer_[0];</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">// Check if there is already enough space in the put area.</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">if</span> (n &lt;= pend - pnext)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="comment">// Shift existing contents of get area to start of buffer.</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">if</span> (gnext &gt; 0)</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      pnext -= gnext;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      std::memmove(&amp;buffer_[0], &amp;buffer_[0] + gnext, pnext);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="comment">// Ensure buffer is large enough to hold at least the specified size.</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">if</span> (n &gt; pend - pnext)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordflow">if</span> (n &lt;= max_size_ &amp;&amp; pnext &lt;= max_size_ - n)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        pend = pnext + n;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        buffer_.resize((std::max&lt;std::size_t&gt;)(pend, 1));</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        std::length_error ex(<span class="stringliteral">&quot;asio::streambuf too long&quot;</span>);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <a class="code" href="namespaceasio_1_1detail.html#adf353499452f212576d0e69d7d35693e">asio::detail::throw_exception</a>(ex);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">// Update stream positions.</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    setg(&amp;buffer_[0], &amp;buffer_[0], &amp;buffer_[0] + pnext);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    setp(&amp;buffer_[0] + pnext, &amp;buffer_[0] + pend);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  std::size_t max_size_;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  std::vector&lt;char_type, Allocator&gt; buffer_;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="comment">// Helper function to get the preferred size for reading data.</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf.html#af169822c1317b8129f360cb23ddd2e15">  353</a></span>&#160;  <span class="keyword">friend</span> std::size_t <a class="code" href="classasio_1_1basic__streambuf.html#af169822c1317b8129f360cb23ddd2e15">read_size_helper</a>(</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <a class="code" href="classasio_1_1basic__streambuf.html">basic_streambuf</a>&amp; sb, std::size_t <a class="code" href="classasio_1_1basic__streambuf.html#af271de251f956938caa898aa9a052e85">max_size</a>)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">return</span> std::min&lt;std::size_t&gt;(</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        std::max&lt;std::size_t&gt;(512, sb.buffer_.capacity() - sb.<a class="code" href="classasio_1_1basic__streambuf.html#a92cd17fe1a52575f8b3aa2eb486ed9e2">size</a>()),</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        std::min&lt;std::size_t&gt;(<a class="code" href="classasio_1_1basic__streambuf.html#af271de251f956938caa898aa9a052e85">max_size</a>, sb.<a class="code" href="classasio_1_1basic__streambuf.html#af271de251f956938caa898aa9a052e85">max_size</a>() - sb.<a class="code" href="classasio_1_1basic__streambuf.html#a92cd17fe1a52575f8b3aa2eb486ed9e2">size</a>()));</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;};</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator = std::allocator&lt;<span class="keywordtype">char</span>&gt;&gt;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html">  368</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;{</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classasio_1_1basic__streambuf.html#a9e2ffddcb9e89d68048254ea787c2258">basic_streambuf&lt;Allocator&gt;::const_buffers_type</a></div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">  373</a></span>&#160;    <a class="code" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a>;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classasio_1_1basic__streambuf.html#a195fab1814cb4176eb11862dfd9b96eb">basic_streambuf&lt;Allocator&gt;::mutable_buffers_type</a></div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">  377</a></span>&#160;    <a class="code" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#acdcaf7be686c6674c86b0a04ce4a5edd">  380</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1basic__streambuf__ref.html#acdcaf7be686c6674c86b0a04ce4a5edd">basic_streambuf_ref</a>(<a class="code" href="classasio_1_1basic__streambuf.html">basic_streambuf&lt;Allocator&gt;</a>&amp; sb)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    : sb_(sb)</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a78dcba8416d7139c58464b819a18c41b">  386</a></span>&#160;  <a class="code" href="classasio_1_1basic__streambuf__ref.html#a78dcba8416d7139c58464b819a18c41b">basic_streambuf_ref</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a>&amp; other) noexcept</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    : sb_(other.sb_)</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  {</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#abd77ab02a8a0d1feade877d5a6db118d">  392</a></span>&#160;  <a class="code" href="classasio_1_1basic__streambuf__ref.html#abd77ab02a8a0d1feade877d5a6db118d">basic_streambuf_ref</a>(<a class="code" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a>&amp;&amp; other) noexcept</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    : sb_(other.sb_)</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#ad5b39a8f72b5f08dab729f7fc28bf7b9">  398</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__streambuf__ref.html#ad5b39a8f72b5f08dab729f7fc28bf7b9">size</a>() const noexcept</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">return</span> sb_.size();</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a4350f8c4241a20945657bba39cd5ec91">  404</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__streambuf__ref.html#a4350f8c4241a20945657bba39cd5ec91">max_size</a>() const noexcept</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">return</span> sb_.max_size();</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  }</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a5784c540141c37f436487432c5046537">  410</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__streambuf__ref.html#a5784c540141c37f436487432c5046537">capacity</a>() const noexcept</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">return</span> sb_.capacity();</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#aed3b7cb5b0c9feb639bd1c22656f3798">  416</a></span>&#160;  <a class="code" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a> <a class="code" href="classasio_1_1basic__streambuf__ref.html#aed3b7cb5b0c9feb639bd1c22656f3798">data</a>() const noexcept</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordflow">return</span> sb_.data();</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  }</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a688a8763c3df8f42c736dadb08ed622c">  423</a></span>&#160;  <a class="code" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a> <a class="code" href="classasio_1_1basic__streambuf__ref.html#a688a8763c3df8f42c736dadb08ed622c">prepare</a>(std::size_t n)</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  {</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">return</span> sb_.prepare(n);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a4fea0506affe2c0b9b4276825ab4d1d8">  429</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1basic__streambuf__ref.html#a4fea0506affe2c0b9b4276825ab4d1d8">commit</a>(std::size_t n)</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">return</span> sb_.commit(n);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="classasio_1_1basic__streambuf__ref.html#a74662ed4cd5a80f4b387fb93e798bacd">  435</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1basic__streambuf__ref.html#a74662ed4cd5a80f4b387fb93e798bacd">consume</a>(std::size_t n)</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  {</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">return</span> sb_.consume(n);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <a class="code" href="classasio_1_1basic__streambuf.html">basic_streambuf&lt;Allocator&gt;</a>&amp; sb_;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;};</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_BASIC_STREAMBUF_HPP</span></div>
+<div class="ttc" id="abasic__streambuf__fwd_8hpp_html"><div class="ttname"><a href="basic__streambuf__fwd_8hpp.html">basic_streambuf_fwd.hpp</a></div></div>
+<div class="ttc" id="abuffer_8hpp_html"><div class="ttname"><a href="buffer_8hpp.html">buffer.hpp</a></div></div>
+<div class="ttc" id="abuffer_8hpp_html_a7b6da84e4718b534c36914c3b9b8bb73"><div class="ttname"><a href="buffer_8hpp.html#a7b6da84e4718b534c36914c3b9b8bb73">ASIO_CONST_BUFFER</a></div><div class="ttdeci">#define ASIO_CONST_BUFFER</div><div class="ttdef"><b>Definition:</b> buffer.hpp:855</div></div>
+<div class="ttc" id="abuffer_8hpp_html_ab9c4237f8d208b449fe76300bf5f1da1"><div class="ttname"><a href="buffer_8hpp.html#ab9c4237f8d208b449fe76300bf5f1da1">ASIO_MUTABLE_BUFFER</a></div><div class="ttdeci">#define ASIO_MUTABLE_BUFFER</div><div class="ttdef"><b>Definition:</b> buffer.hpp:854</div></div>
+<div class="ttc" id="aclassallocator_html"><div class="ttname"><a href="classallocator.html">allocator</a></div><div class="ttdef"><b>Definition:</b> allocator.hpp:18</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a></div><div class="ttdoc">Adapts basic_streambuf to the dynamic buffer sequence type requirements.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:369</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a0c7b3968c18c6707e56b307ebb2b3214"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">asio::basic_streambuf_ref::const_buffers_type</a></div><div class="ttdeci">basic_streambuf&lt; Allocator &gt;::const_buffers_type const_buffers_type</div><div class="ttdoc">The type used to represent the input sequence as a list of buffers.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:373</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a282ca19ec4038b1a78330b550def7bb7"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">asio::basic_streambuf_ref::mutable_buffers_type</a></div><div class="ttdeci">basic_streambuf&lt; Allocator &gt;::mutable_buffers_type mutable_buffers_type</div><div class="ttdoc">The type used to represent the output sequence as a list of buffers.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:377</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a4350f8c4241a20945657bba39cd5ec91"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a4350f8c4241a20945657bba39cd5ec91">asio::basic_streambuf_ref::max_size</a></div><div class="ttdeci">std::size_t max_size() const noexcept</div><div class="ttdoc">Get the maximum size of the dynamic buffer.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:404</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a4fea0506affe2c0b9b4276825ab4d1d8"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a4fea0506affe2c0b9b4276825ab4d1d8">asio::basic_streambuf_ref::commit</a></div><div class="ttdeci">void commit(std::size_t n)</div><div class="ttdoc">Move bytes from the output sequence to the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:429</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a5784c540141c37f436487432c5046537"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a5784c540141c37f436487432c5046537">asio::basic_streambuf_ref::capacity</a></div><div class="ttdeci">std::size_t capacity() const noexcept</div><div class="ttdoc">Get the current capacity of the dynamic buffer.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:410</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a688a8763c3df8f42c736dadb08ed622c"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a688a8763c3df8f42c736dadb08ed622c">asio::basic_streambuf_ref::prepare</a></div><div class="ttdeci">mutable_buffers_type prepare(std::size_t n)</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:423</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a74662ed4cd5a80f4b387fb93e798bacd"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a74662ed4cd5a80f4b387fb93e798bacd">asio::basic_streambuf_ref::consume</a></div><div class="ttdeci">void consume(std::size_t n)</div><div class="ttdoc">Remove characters from the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:435</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_a78dcba8416d7139c58464b819a18c41b"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#a78dcba8416d7139c58464b819a18c41b">asio::basic_streambuf_ref::basic_streambuf_ref</a></div><div class="ttdeci">basic_streambuf_ref(const basic_streambuf_ref &amp;other) noexcept</div><div class="ttdoc">Copy construct a basic_streambuf_ref.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:386</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_abd77ab02a8a0d1feade877d5a6db118d"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#abd77ab02a8a0d1feade877d5a6db118d">asio::basic_streambuf_ref::basic_streambuf_ref</a></div><div class="ttdeci">basic_streambuf_ref(basic_streambuf_ref &amp;&amp;other) noexcept</div><div class="ttdoc">Move construct a basic_streambuf_ref.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:392</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_acdcaf7be686c6674c86b0a04ce4a5edd"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#acdcaf7be686c6674c86b0a04ce4a5edd">asio::basic_streambuf_ref::basic_streambuf_ref</a></div><div class="ttdeci">basic_streambuf_ref(basic_streambuf&lt; Allocator &gt; &amp;sb)</div><div class="ttdoc">Construct a basic_streambuf_ref for the given basic_streambuf object.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:380</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_ad5b39a8f72b5f08dab729f7fc28bf7b9"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#ad5b39a8f72b5f08dab729f7fc28bf7b9">asio::basic_streambuf_ref::size</a></div><div class="ttdeci">std::size_t size() const noexcept</div><div class="ttdoc">Get the size of the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:398</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html_aed3b7cb5b0c9feb639bd1c22656f3798"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html#aed3b7cb5b0c9feb639bd1c22656f3798">asio::basic_streambuf_ref::data</a></div><div class="ttdeci">const_buffers_type data() const noexcept</div><div class="ttdoc">Get a list of buffers that represents the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:416</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html"><div class="ttname"><a href="classasio_1_1basic__streambuf.html">asio::basic_streambuf</a></div><div class="ttdoc">Automatically resizable buffer class based on std::streambuf.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:113</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a0781a0f0af7e859872ea52e85fc80fdd"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a0781a0f0af7e859872ea52e85fc80fdd">asio::basic_streambuf::data</a></div><div class="ttdeci">const_buffers_type data() const noexcept</div><div class="ttdoc">Get a list of buffers that represents the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:192</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a195fab1814cb4176eb11862dfd9b96eb"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a195fab1814cb4176eb11862dfd9b96eb">asio::basic_streambuf::mutable_buffers_type</a></div><div class="ttdeci">ASIO_MUTABLE_BUFFER mutable_buffers_type</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:123</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a4f19d44bcf40de432f9e6984df959e73"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a4f19d44bcf40de432f9e6984df959e73">asio::basic_streambuf::prepare</a></div><div class="ttdeci">mutable_buffers_type prepare(std::size_t n)</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:214</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a69fa699929e44c40b6194b8a4f600de0ad665b162cf9d1a1e82e74d40b3e8a329"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a69fa699929e44c40b6194b8a4f600de0ad665b162cf9d1a1e82e74d40b3e8a329">asio::basic_streambuf::buffer_delta</a></div><div class="ttdeci">@ buffer_delta</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:257</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a6d01805ae2a9382cbb81934111c8ea1c"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a6d01805ae2a9382cbb81934111c8ea1c">asio::basic_streambuf::commit</a></div><div class="ttdeci">void commit(std::size_t n)</div><div class="ttdoc">Move characters from the output sequence to the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:233</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a76d97a93b5e468f95ebe343aff1b3aa8"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a76d97a93b5e468f95ebe343aff1b3aa8">asio::basic_streambuf::reserve</a></div><div class="ttdeci">void reserve(std::size_t n)</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:308</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a83ca4bad37c9c96f72eda6c8ef133df4"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a83ca4bad37c9c96f72eda6c8ef133df4">asio::basic_streambuf::consume</a></div><div class="ttdeci">void consume(std::size_t n)</div><div class="ttdoc">Remove characters from the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:247</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a8c66d95fc706065ca0c87e0d6959e72f"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a8c66d95fc706065ca0c87e0d6959e72f">asio::basic_streambuf::overflow</a></div><div class="ttdeci">int_type overflow(int_type c)</div><div class="ttdoc">Override std::streambuf behaviour.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:283</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a92cd17fe1a52575f8b3aa2eb486ed9e2"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a92cd17fe1a52575f8b3aa2eb486ed9e2">asio::basic_streambuf::size</a></div><div class="ttdeci">std::size_t size() const noexcept</div><div class="ttdoc">Get the size of the input sequence.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:158</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_a9e2ffddcb9e89d68048254ea787c2258"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#a9e2ffddcb9e89d68048254ea787c2258">asio::basic_streambuf::const_buffers_type</a></div><div class="ttdeci">ASIO_CONST_BUFFER const_buffers_type</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:122</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_ab1d0caa8e5cd788d2d7588ff79b9fd5e"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#ab1d0caa8e5cd788d2d7588ff79b9fd5e">asio::basic_streambuf::underflow</a></div><div class="ttdeci">int_type underflow()</div><div class="ttdoc">Override std::streambuf behaviour.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:263</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_ae170fa1aa36003d7bf294b18d95559a8"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#ae170fa1aa36003d7bf294b18d95559a8">asio::basic_streambuf::basic_streambuf</a></div><div class="ttdeci">basic_streambuf(std::size_t maximum_size=(std::numeric_limits&lt; std::size_t &gt;::max)(), const Allocator &amp;allocator=Allocator())</div><div class="ttdoc">Construct a basic_streambuf object.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:131</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_aeb32ba223ef5d156596a631fe5b2777c"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#aeb32ba223ef5d156596a631fe5b2777c">asio::basic_streambuf::capacity</a></div><div class="ttdeci">std::size_t capacity() const noexcept</div><div class="ttdoc">Get the current capacity of the basic_streambuf.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:178</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_af169822c1317b8129f360cb23ddd2e15"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#af169822c1317b8129f360cb23ddd2e15">asio::basic_streambuf::read_size_helper</a></div><div class="ttdeci">friend std::size_t read_size_helper(basic_streambuf &amp;sb, std::size_t max_size)</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:353</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html_af271de251f956938caa898aa9a052e85"><div class="ttname"><a href="classasio_1_1basic__streambuf.html#af271de251f956938caa898aa9a052e85">asio::basic_streambuf::max_size</a></div><div class="ttdeci">std::size_t max_size() const noexcept</div><div class="ttdoc">Get the maximum size of the basic_streambuf.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:168</div></div>
+<div class="ttc" id="aclassasio_1_1const__buffer_html"><div class="ttname"><a href="classasio_1_1const__buffer.html">asio::const_buffer</a></div><div class="ttdoc">Holds a buffer that cannot be modified.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:213</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1noncopyable_html"><div class="ttname"><a href="classasio_1_1detail_1_1noncopyable.html">asio::detail::noncopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.hpp:26</div></div>
+<div class="ttc" id="aclassasio_1_1mutable__buffer_html"><div class="ttname"><a href="classasio_1_1mutable__buffer.html">asio::mutable_buffer</a></div><div class="ttdoc">Holds a buffer that can be modified.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:79</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="alimits_8hpp_html"><div class="ttname"><a href="limits_8hpp.html">limits.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_adf353499452f212576d0e69d7d35693e"><div class="ttname"><a href="namespaceasio_1_1detail.html#adf353499452f212576d0e69d7d35693e">asio::detail::throw_exception</a></div><div class="ttdeci">void throw_exception(const Exception &amp;e ASIO_SOURCE_LOCATION_DEFAULTED_PARAM)</div><div class="ttdef"><b>Definition:</b> throw_exception.hpp:42</div></div>
+<div class="ttc" id="anamespaceasio_1_1error_html_ade61a402d1dfb10b1c223906f5ea7847abb0b3b47deff67dd67b180d9d1e34154"><div class="ttname"><a href="namespaceasio_1_1error.html#ade61a402d1dfb10b1c223906f5ea7847abb0b3b47deff67dd67b180d9d1e34154">asio::error::eof</a></div><div class="ttdeci">@ eof</div><div class="ttdoc">End of file or stream.</div><div class="ttdef"><b>Definition:</b> error.hpp:217</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a4607a9754bf2707c054f0ff16b958b82"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">asio::experimental::c</a></div><div class="ttdeci">Executor c</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a32ffb00a82a2cb0dcbb976e02d82cc79"><div class="ttname"><a href="namespaceasio.html#a32ffb00a82a2cb0dcbb976e02d82cc79">asio::buffer_size</a></div><div class="ttdeci">std::size_t buffer_size(const BufferSequence &amp;b) noexcept</div><div class="ttdoc">Get the total number of bytes in a buffer sequence.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:529</div></div>
+<div class="ttc" id="anamespaceasio_html_a6a7ba348943527312eeace3492bf32ee"><div class="ttname"><a href="namespaceasio.html#a6a7ba348943527312eeace3492bf32ee">asio::streambuf</a></div><div class="ttdeci">basic_streambuf streambuf</div><div class="ttdoc">Typedef for the typical usage of basic_streambuf.</div><div class="ttdef"><b>Definition:</b> streambuf.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_af691d016b23fd6c2da9ac91ce00c2e7e"><div class="ttname"><a href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a></div><div class="ttdeci">ASIO_NODISCARD ASIO_MUTABLE_BUFFER buffer(const mutable_buffer &amp;b) noexcept</div><div class="ttdoc">Create a new modifiable buffer from an existing buffer.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:862</div></div>
+<div class="ttc" id="anoncopyable_8hpp_html"><div class="ttname"><a href="noncopyable_8hpp.html">noncopyable.hpp</a></div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="athrow__exception_8hpp_html"><div class="ttname"><a href="throw__exception_8hpp.html">throw_exception.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

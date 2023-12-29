@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/read_at.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">read_at.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="read__at_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// read_at.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_READ_AT_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_READ_AT_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_2asio_2async__result_8hpp.html">asio/async_result.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="completion__condition_8hpp.html">asio/completion_condition.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cstdint_8hpp.html">asio/detail/cstdint.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">asio/error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="basic__streambuf__fwd_8hpp.html">asio/basic_streambuf_fwd.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_at;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_at_streambuf;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> MutableBufferSequence&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    uint64_t offset, <span class="keyword">const</span> MutableBufferSequence&amp; buffers);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> MutableBufferSequence&gt;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    uint64_t offset, <span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> MutableBufferSequence,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">typename</span> CompletionCondition&gt;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    uint64_t offset, <span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    CompletionCondition completion_condition);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> MutableBufferSequence,</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keyword">typename</span> CompletionCondition&gt;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    uint64_t offset, <span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    CompletionCondition completion_condition, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    uint64_t offset, basic_streambuf&lt;Allocator&gt;&amp; b);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    uint64_t offset, basic_streambuf&lt;Allocator&gt;&amp; b,</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> Allocator,</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keyword">typename</span> CompletionCondition&gt;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    uint64_t offset, basic_streambuf&lt;Allocator&gt;&amp; b,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    CompletionCondition completion_condition);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncRandomAccessReadDevice, <span class="keyword">typename</span> Allocator,</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keyword">typename</span> CompletionCondition&gt;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;std::size_t <a class="code" href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">read_at</a>(SyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    uint64_t offset, basic_streambuf&lt;Allocator&gt;&amp; b,</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    CompletionCondition completion_condition, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncRandomAccessReadDevice, <span class="keyword">typename</span> MutableBufferSequence,</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;&gt;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#afb3e2f9690fef3e01df80513906c4658">async_read_at</a>(AsyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    uint64_t offset, <span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;      <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;())</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        declval&lt;detail::initiate_async_read_at&lt;AsyncRandomAccessReadDevice&gt;&gt;(),</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, offset, buffers, <a class="code" href="namespaceasio.html#a4a82e92df79aa8401a8bc2117d4cf900">transfer_all</a>()));</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160; </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncRandomAccessReadDevice,</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keyword">typename</span> MutableBufferSequence, <span class="keyword">typename</span> CompletionCondition,</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;&gt;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#afb3e2f9690fef3e01df80513906c4658">async_read_at</a>(AsyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    uint64_t offset, <span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    CompletionCondition completion_condition,</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;      <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;())</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        declval&lt;detail::initiate_async_read_at&lt;AsyncRandomAccessReadDevice&gt;&gt;(),</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, offset, buffers,</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <span class="keyword">static_cast&lt;</span>CompletionCondition&amp;&amp;<span class="keyword">&gt;</span>(completion_condition)));</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160; </div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160; </div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160; </div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncRandomAccessReadDevice, <span class="keyword">typename</span> Allocator,</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;&gt;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#afb3e2f9690fef3e01df80513906c4658">async_read_at</a>(AsyncRandomAccessReadDevice&amp; d,</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    uint64_t offset, basic_streambuf&lt;Allocator&gt;&amp; b,</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;      <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;())</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        declval&lt;detail::initiate_async_read_at_streambuf&lt;</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;          AsyncRandomAccessReadDevice&gt;&gt;(),</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, offset, &amp;b, <a class="code" href="namespaceasio.html#a4a82e92df79aa8401a8bc2117d4cf900">transfer_all</a>()));</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160; </div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncRandomAccessReadDevice,</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> CompletionCondition,</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;&gt;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#afb3e2f9690fef3e01df80513906c4658">async_read_at</a>(AsyncRandomAccessReadDevice&amp; d, uint64_t offset,</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    basic_streambuf&lt;Allocator&gt;&amp; b, CompletionCondition completion_condition,</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;      <span class="keyword">typename</span> AsyncRandomAccessReadDevice::executor_type&gt;())</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        declval&lt;detail::initiate_async_read_at_streambuf&lt;</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;          AsyncRandomAccessReadDevice&gt;&gt;(),</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, offset, &amp;b,</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        <span class="keyword">static_cast&lt;</span>CompletionCondition&amp;&amp;<span class="keyword">&gt;</span>(completion_condition)));</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160; </div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160; </div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160; </div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="impl_2read__at_8hpp.html">asio/impl/read_at.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160; </div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_READ_AT_HPP</span></div>
+<div class="ttc" id="abasic__streambuf__fwd_8hpp_html"><div class="ttname"><a href="basic__streambuf__fwd_8hpp.html">basic_streambuf_fwd.hpp</a></div></div>
+<div class="ttc" id="acompletion__condition_8hpp_html"><div class="ttname"><a href="completion__condition_8hpp.html">completion_condition.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="acstdint_8hpp_html"><div class="ttname"><a href="cstdint_8hpp.html">cstdint.hpp</a></div></div>
+<div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="aimpl_2read__at_8hpp_html"><div class="ttname"><a href="impl_2read__at_8hpp.html">read_at.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html">async_result.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a4a82e92df79aa8401a8bc2117d4cf900"><div class="ttname"><a href="namespaceasio.html#a4a82e92df79aa8401a8bc2117d4cf900">asio::transfer_all</a></div><div class="ttdeci">detail::transfer_all_t transfer_all()</div><div class="ttdef"><b>Definition:</b> completion_condition.hpp:138</div></div>
+<div class="ttc" id="anamespaceasio_html_a84bbc083cf9153b28ce2d86c3ea16458"><div class="ttname"><a href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">asio::default_completion_token_t</a></div><div class="ttdeci">typename default_completion_token&lt; T &gt;::type default_completion_token_t</div><div class="ttdef"><b>Definition:</b> async_result.hpp:882</div></div>
+<div class="ttc" id="anamespaceasio_html_a88604242259da9fb0bacf3c4f0cc0002"><div class="ttname"><a href="namespaceasio.html#a88604242259da9fb0bacf3c4f0cc0002">asio::read_at</a></div><div class="ttdeci">std::size_t read_at(SyncRandomAccessReadDevice &amp;d, uint64_t offset, const MutableBufferSequence &amp;buffers, CompletionCondition completion_condition, asio::error_code &amp;ec)</div><div class="ttdef"><b>Definition:</b> read_at.hpp:67</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="anamespaceasio_html_acbf600e256af39d8a0c65fb6e3eb988d"><div class="ttname"><a href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a></div><div class="ttdeci">auto async_initiate(Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;token, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(token), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</div><div class="ttdef"><b>Definition:</b> async_result.hpp:558</div></div>
+<div class="ttc" id="anamespaceasio_html_adff1e9f7bb336026f18afa2221c9df07"><div class="ttname"><a href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">asio::token</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="anamespaceasio_html_afb3e2f9690fef3e01df80513906c4658"><div class="ttname"><a href="namespaceasio.html#afb3e2f9690fef3e01df80513906c4658">asio::async_read_at</a></div><div class="ttdeci">auto async_read_at(AsyncRandomAccessReadDevice &amp;d, uint64_t offset, const MutableBufferSequence &amp;buffers, CompletionCondition completion_condition, ReadToken &amp;&amp;token) -&gt; decltype(async_initiate&lt; ReadToken, void(asio::error_code, std::size_t)&gt;(declval&lt; detail::initiate_async_read_at&lt; AsyncRandomAccessReadDevice &gt;&gt;(), token, offset, buffers, static_cast&lt; CompletionCondition &amp;&amp; &gt;(completion_condition)))</div><div class="ttdef"><b>Definition:</b> read_at.hpp:366</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

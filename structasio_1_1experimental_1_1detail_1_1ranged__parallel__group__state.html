@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::experimental::detail::ranged_parallel_group_state&lt; Condition, Handler, Op, Allocator &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">ranged_parallel_group_state</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::experimental::detail::ranged_parallel_group_state&lt; Condition, Handler, Op, Allocator &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2parallel__group_8hpp_source.html">parallel_group.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9b563049a38befd98f05b0a96a9a4aab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#a9b563049a38befd98f05b0a96a9a4aab">ranged_parallel_group_state</a> (Condition &amp;&amp;<a class="el" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, Handler &amp;&amp;h, std::size_t size, const Allocator &amp;<a class="el" href="classallocator.html">allocator</a>)</td></tr>
+<tr class="separator:a9b563049a38befd98f05b0a96a9a4aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ae627b44cdea763e25b66cafe2bf338c6"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#ae627b44cdea763e25b66cafe2bf338c6">completed_</a> {0}</td></tr>
+<tr class="separator:ae627b44cdea763e25b66cafe2bf338c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6289a2be16494d29afc34c9b1fb2aff"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#af6289a2be16494d29afc34c9b1fb2aff">cancel_type_</a> {<a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6a334c4a4c42fdb79d7ebc3e73b517e6f8">cancellation_type::none</a>}</td></tr>
+<tr class="separator:af6289a2be16494d29afc34c9b1fb2aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e9ee9551690a479749df3646a5976b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#a88e9ee9551690a479749df3646a5976b">cancellations_requested_</a></td></tr>
+<tr class="separator:a88e9ee9551690a479749df3646a5976b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e16a81fa4e20979aab80d8510ceef64"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#a3e16a81fa4e20979aab80d8510ceef64">outstanding_</a></td></tr>
+<tr class="separator:a3e16a81fa4e20979aab80d8510ceef64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50de53833422d7d96684f8e645e762c"><td class="memItemLeft" align="right" valign="top">std::deque&lt; <a class="el" href="classasio_1_1cancellation__signal.html">asio::cancellation_signal</a>, <a class="el" href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a>(Allocator, <a class="el" href="classasio_1_1cancellation__signal.html">asio::cancellation_signal</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#ad50de53833422d7d96684f8e645e762c">cancellation_signals_</a></td></tr>
+<tr class="separator:ad50de53833422d7d96684f8e645e762c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89504a9078e0fa9c31ad9a8d53a91c2e"><td class="memItemLeft" align="right" valign="top">Condition&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#a89504a9078e0fa9c31ad9a8d53a91c2e">cancellation_condition_</a></td></tr>
+<tr class="separator:a89504a9078e0fa9c31ad9a8d53a91c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb2175f6e1ed3ea501a0d0dc2a2fd32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__completion__handler.html">ranged_parallel_group_completion_handler</a>&lt; Handler, Op, Allocator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html#adfb2175f6e1ed3ea501a0d0dc2a2fd32">handler_</a></td></tr>
+<tr class="separator:adfb2175f6e1ed3ea501a0d0dc2a2fd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9b563049a38befd98f05b0a96a9a4aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b563049a38befd98f05b0a96a9a4aab">&#9670;&nbsp;</a></span>ranged_parallel_group_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">ranged_parallel_group_state</a> </td>
+          <td>(</td>
+          <td class="paramtype">Condition &amp;&amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af6289a2be16494d29afc34c9b1fb2aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6289a2be16494d29afc34c9b1fb2aff">&#9670;&nbsp;</a></span>cancel_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;<a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a>&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::cancel_type_ {<a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6a334c4a4c42fdb79d7ebc3e73b517e6f8">cancellation_type::none</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89504a9078e0fa9c31ad9a8d53a91c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89504a9078e0fa9c31ad9a8d53a91c2e">&#9670;&nbsp;</a></span>cancellation_condition_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Condition <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::cancellation_condition_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad50de53833422d7d96684f8e645e762c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad50de53833422d7d96684f8e645e762c">&#9670;&nbsp;</a></span>cancellation_signals_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt;<a class="el" href="classasio_1_1cancellation__signal.html">asio::cancellation_signal</a>, <a class="el" href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a>(Allocator, <a class="el" href="classasio_1_1cancellation__signal.html">asio::cancellation_signal</a>)&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::cancellation_signals_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88e9ee9551690a479749df3646a5976b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e9ee9551690a479749df3646a5976b">&#9670;&nbsp;</a></span>cancellations_requested_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;unsigned int&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::cancellations_requested_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae627b44cdea763e25b66cafe2bf338c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae627b44cdea763e25b66cafe2bf338c6">&#9670;&nbsp;</a></span>completed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;unsigned int&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::completed_ {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfb2175f6e1ed3ea501a0d0dc2a2fd32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb2175f6e1ed3ea501a0d0dc2a2fd32">&#9670;&nbsp;</a></span>handler_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__completion__handler.html">ranged_parallel_group_completion_handler</a>&lt;Handler, Op, Allocator&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::handler_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e16a81fa4e20979aab80d8510ceef64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e16a81fa4e20979aab80d8510ceef64">&#9670;&nbsp;</a></span>outstanding_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;unsigned int&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">asio::experimental::detail::ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;::outstanding_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/impl/<a class="el" href="impl_2parallel__group_8hpp_source.html">parallel_group.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

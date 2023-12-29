@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/src/examples/cpp03/icmp/ipv4_header.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_e5c02afa3792a27ac86a89f1743ac235.html">icmp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ipv4_header.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ipv4__header_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ipv4_header.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef IPV4_HEADER_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define IPV4_HEADER_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="address__v4_8hpp.html">asio/ip/address_v4.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Packet header for IPv4.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// The wire format of an IPv4 header is:</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// 0               8               16                             31</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// +-------+-------+---------------+------------------------------+      ---</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// |       |       |               |                              |       ^</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// |version|header |    type of    |    total length in bytes     |       |</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// |  (4)  | length|    service    |                              |       |</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// +-------+-------+---------------+-+-+-+------------------------+       |</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// |                               | | | |                        |       |</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// |        identification         |0|D|M|    fragment offset     |       |</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// |                               | |F|F|                        |       |</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// +---------------+---------------+-+-+-+------------------------+       |</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// |               |               |                              |       |</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// | time to live  |   protocol    |       header checksum        |   20 bytes</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// |               |               |                              |       |</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// +---------------+---------------+------------------------------+       |</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// |                                                              |       |</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// |                      source IPv4 address                     |       |</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// |                                                              |       |</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// +--------------------------------------------------------------+       |</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// |                                                              |       |</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// |                   destination IPv4 address                   |       |</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// |                                                              |       v</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// +--------------------------------------------------------------+      ---</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// |                                                              |       ^</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// |                                                              |       |</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// /                        options (if any)                      /    0 - 40</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// /                                                              /     bytes</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// |                                                              |       |</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// |                                                              |       v</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// +--------------------------------------------------------------+      ---</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classipv4__header.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classipv4__header.html">ipv4_header</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classipv4__header.html#ab94dc438881acf5b35c0a045aee5eeb5">   54</a></span>&#160;  <a class="code" href="classipv4__header.html#ab94dc438881acf5b35c0a045aee5eeb5">ipv4_header</a>() { std::fill(rep_, rep_ + <span class="keyword">sizeof</span>(rep_), 0); }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classipv4__header.html#a8420b36394c45578dfee10916dea0d96">   56</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classipv4__header.html#a8420b36394c45578dfee10916dea0d96">version</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (rep_[0] &gt;&gt; 4) &amp; 0xF; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classipv4__header.html#ab4daf25e072c414ed7381e8d8dcf98ca">   57</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classipv4__header.html#ab4daf25e072c414ed7381e8d8dcf98ca">header_length</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (rep_[0] &amp; 0xF) * 4; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classipv4__header.html#a84a27f2690e844fedc3f2944dd4eeb78">   58</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classipv4__header.html#a84a27f2690e844fedc3f2944dd4eeb78">type_of_service</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rep_[1]; }</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classipv4__header.html#a809aaa76cc01f2dea17973e43349c542">   59</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classipv4__header.html#a809aaa76cc01f2dea17973e43349c542">total_length</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decode(2, 3); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classipv4__header.html#a5bad9ce0333ece2b40015f9388cd5363">   60</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classipv4__header.html#a5bad9ce0333ece2b40015f9388cd5363">identification</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decode(4, 5); }</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classipv4__header.html#acbc9ec1fe720f3932f6e59a6b4c50bda">   61</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classipv4__header.html#acbc9ec1fe720f3932f6e59a6b4c50bda">dont_fragment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (rep_[6] &amp; 0x40) != 0; }</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classipv4__header.html#a87cce510ce3fbff6f2288ddc2f78dccf">   62</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classipv4__header.html#a87cce510ce3fbff6f2288ddc2f78dccf">more_fragments</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (rep_[6] &amp; 0x20) != 0; }</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classipv4__header.html#a9ecd340f25620bbae3913bc9b89db061">   63</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classipv4__header.html#a9ecd340f25620bbae3913bc9b89db061">fragment_offset</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decode(6, 7) &amp; 0x1FFF; }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classipv4__header.html#ac3e4d84e061391642afd40f00f3a20f1">   64</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classipv4__header.html#ac3e4d84e061391642afd40f00f3a20f1">time_to_live</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rep_[8]; }</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classipv4__header.html#ae6e80388240feee1d93ca277d41d0bd8">   65</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classipv4__header.html#ae6e80388240feee1d93ca277d41d0bd8">protocol</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rep_[9]; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classipv4__header.html#aa52417d568c17b6d7f09264e9a25f80b">   66</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classipv4__header.html#aa52417d568c17b6d7f09264e9a25f80b">header_checksum</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decode(10, 11); }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classipv4__header.html#ac1b866c91df4563fd64adf709dc7ab3e">   68</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1address__v4.html">asio::ip::address_v4</a> <a class="code" href="classipv4__header.html#ac1b866c91df4563fd64adf709dc7ab3e">source_address</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classasio_1_1ip_1_1address__v4.html#a215b307474a39b561a7dd9be3e7a99ad">asio::ip::address_v4::bytes_type</a> bytes</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      = { { rep_[12], rep_[13], rep_[14], rep_[15] } };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classasio_1_1ip_1_1address__v4.html">asio::ip::address_v4</a>(bytes);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classipv4__header.html#a5bf60d3f9861c1fba7b2f720f0e17a5c">   75</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1address__v4.html">asio::ip::address_v4</a> <a class="code" href="classipv4__header.html#a5bf60d3f9861c1fba7b2f720f0e17a5c">destination_address</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classasio_1_1ip_1_1address__v4.html#a215b307474a39b561a7dd9be3e7a99ad">asio::ip::address_v4::bytes_type</a> bytes</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      = { { rep_[16], rep_[17], rep_[18], rep_[19] } };</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classasio_1_1ip_1_1address__v4.html">asio::ip::address_v4</a>(bytes);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classipv4__header.html#a6d81dda8dc447a294aacdb3e692cdd8b">   82</a></span>&#160;  <span class="keyword">friend</span> std::istream&amp; <a class="code" href="classipv4__header.html#a6d81dda8dc447a294aacdb3e692cdd8b">operator&gt;&gt;</a>(std::istream&amp; is, <a class="code" href="classipv4__header.html">ipv4_header</a>&amp; header)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    is.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(header.rep_), 20);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (header.<a class="code" href="classipv4__header.html#a8420b36394c45578dfee10916dea0d96">version</a>() != 4)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      is.setstate(std::ios::failbit);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::streamsize options_length = header.<a class="code" href="classipv4__header.html#ab4daf25e072c414ed7381e8d8dcf98ca">header_length</a>() - 20;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (options_length &lt; 0 || options_length &gt; 40)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      is.setstate(std::ios::failbit);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      is.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(header.rep_) + 20, options_length);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> decode(<span class="keywordtype">int</span> <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, <span class="keywordtype">int</span> b)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> (rep_[<a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>] &lt;&lt; 8) + rep_[b]; }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> rep_[60];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// IPV4_HEADER_HPP</span></div>
+<div class="ttc" id="aaddress__v4_8hpp_html"><div class="ttname"><a href="address__v4_8hpp.html">address_v4.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1address__v4_html"><div class="ttname"><a href="classasio_1_1ip_1_1address__v4.html">asio::ip::address_v4</a></div><div class="ttdoc">Implements IP version 4 style addresses.</div><div class="ttdef"><b>Definition:</b> address_v4.hpp:47</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1address__v4_html_a215b307474a39b561a7dd9be3e7a99ad"><div class="ttname"><a href="classasio_1_1ip_1_1address__v4.html#a215b307474a39b561a7dd9be3e7a99ad">asio::ip::address_v4::bytes_type</a></div><div class="ttdeci">asio::detail::array&lt; unsigned char, 4 &gt; bytes_type</div><div class="ttdoc">The type used to represent an address as an array of bytes.</div><div class="ttdef"><b>Definition:</b> address_v4.hpp:60</div></div>
+<div class="ttc" id="aclassipv4__header_html"><div class="ttname"><a href="classipv4__header.html">ipv4_header</a></div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:52</div></div>
+<div class="ttc" id="aclassipv4__header_html_a5bad9ce0333ece2b40015f9388cd5363"><div class="ttname"><a href="classipv4__header.html#a5bad9ce0333ece2b40015f9388cd5363">ipv4_header::identification</a></div><div class="ttdeci">unsigned short identification() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:60</div></div>
+<div class="ttc" id="aclassipv4__header_html_a5bf60d3f9861c1fba7b2f720f0e17a5c"><div class="ttname"><a href="classipv4__header.html#a5bf60d3f9861c1fba7b2f720f0e17a5c">ipv4_header::destination_address</a></div><div class="ttdeci">asio::ip::address_v4 destination_address() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:75</div></div>
+<div class="ttc" id="aclassipv4__header_html_a6d81dda8dc447a294aacdb3e692cdd8b"><div class="ttname"><a href="classipv4__header.html#a6d81dda8dc447a294aacdb3e692cdd8b">ipv4_header::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;is, ipv4_header &amp;header)</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:82</div></div>
+<div class="ttc" id="aclassipv4__header_html_a809aaa76cc01f2dea17973e43349c542"><div class="ttname"><a href="classipv4__header.html#a809aaa76cc01f2dea17973e43349c542">ipv4_header::total_length</a></div><div class="ttdeci">unsigned short total_length() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:59</div></div>
+<div class="ttc" id="aclassipv4__header_html_a8420b36394c45578dfee10916dea0d96"><div class="ttname"><a href="classipv4__header.html#a8420b36394c45578dfee10916dea0d96">ipv4_header::version</a></div><div class="ttdeci">unsigned char version() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:56</div></div>
+<div class="ttc" id="aclassipv4__header_html_a84a27f2690e844fedc3f2944dd4eeb78"><div class="ttname"><a href="classipv4__header.html#a84a27f2690e844fedc3f2944dd4eeb78">ipv4_header::type_of_service</a></div><div class="ttdeci">unsigned char type_of_service() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:58</div></div>
+<div class="ttc" id="aclassipv4__header_html_a87cce510ce3fbff6f2288ddc2f78dccf"><div class="ttname"><a href="classipv4__header.html#a87cce510ce3fbff6f2288ddc2f78dccf">ipv4_header::more_fragments</a></div><div class="ttdeci">bool more_fragments() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:62</div></div>
+<div class="ttc" id="aclassipv4__header_html_a9ecd340f25620bbae3913bc9b89db061"><div class="ttname"><a href="classipv4__header.html#a9ecd340f25620bbae3913bc9b89db061">ipv4_header::fragment_offset</a></div><div class="ttdeci">unsigned short fragment_offset() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:63</div></div>
+<div class="ttc" id="aclassipv4__header_html_aa52417d568c17b6d7f09264e9a25f80b"><div class="ttname"><a href="classipv4__header.html#aa52417d568c17b6d7f09264e9a25f80b">ipv4_header::header_checksum</a></div><div class="ttdeci">unsigned short header_checksum() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:66</div></div>
+<div class="ttc" id="aclassipv4__header_html_ab4daf25e072c414ed7381e8d8dcf98ca"><div class="ttname"><a href="classipv4__header.html#ab4daf25e072c414ed7381e8d8dcf98ca">ipv4_header::header_length</a></div><div class="ttdeci">unsigned short header_length() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:57</div></div>
+<div class="ttc" id="aclassipv4__header_html_ab94dc438881acf5b35c0a045aee5eeb5"><div class="ttname"><a href="classipv4__header.html#ab94dc438881acf5b35c0a045aee5eeb5">ipv4_header::ipv4_header</a></div><div class="ttdeci">ipv4_header()</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:54</div></div>
+<div class="ttc" id="aclassipv4__header_html_ac1b866c91df4563fd64adf709dc7ab3e"><div class="ttname"><a href="classipv4__header.html#ac1b866c91df4563fd64adf709dc7ab3e">ipv4_header::source_address</a></div><div class="ttdeci">asio::ip::address_v4 source_address() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:68</div></div>
+<div class="ttc" id="aclassipv4__header_html_ac3e4d84e061391642afd40f00f3a20f1"><div class="ttname"><a href="classipv4__header.html#ac3e4d84e061391642afd40f00f3a20f1">ipv4_header::time_to_live</a></div><div class="ttdeci">unsigned int time_to_live() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:64</div></div>
+<div class="ttc" id="aclassipv4__header_html_acbc9ec1fe720f3932f6e59a6b4c50bda"><div class="ttname"><a href="classipv4__header.html#acbc9ec1fe720f3932f6e59a6b4c50bda">ipv4_header::dont_fragment</a></div><div class="ttdeci">bool dont_fragment() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:61</div></div>
+<div class="ttc" id="aclassipv4__header_html_ae6e80388240feee1d93ca277d41d0bd8"><div class="ttname"><a href="classipv4__header.html#ae6e80388240feee1d93ca277d41d0bd8">ipv4_header::protocol</a></div><div class="ttdeci">unsigned char protocol() const</div><div class="ttdef"><b>Definition:</b> ipv4_header.hpp:65</div></div>
+<div class="ttc" id="anamespaceasio_html_aa80c4033469ae5aaa092c0d49852403c"><div class="ttname"><a href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">asio::a</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; a</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

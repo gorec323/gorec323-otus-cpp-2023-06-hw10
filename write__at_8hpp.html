@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/write_at.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл write_at.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &quot;<a class="el" href="include_2asio_2async__result_8hpp_source.html">asio/async_result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="completion__condition_8hpp_source.html">asio/completion_condition.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cstdint_8hpp_source.html">asio/detail/cstdint.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error_8hpp_source.html">asio/error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="basic__streambuf__fwd_8hpp_source.html">asio/basic_streambuf_fwd.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="impl_2write__at_8hpp_source.html">asio/impl/write_at.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для write_at.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="write__at_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2write__at_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2write__at_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2write__at_8hpp">
+<area shape="rect" title=" " alt="" coords="3035,5,3181,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="1970,631,2131,657"/>
+<area shape="rect" title=" " alt="" coords="303,705,374,732"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2537,459,2700,486"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2957,549,3165,575"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3957,549,4158,575"/>
+<area shape="rect" href="completion__condition_8hpp.html" title=" " alt="" coords="4519,459,4740,486"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="145,549,311,575"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="5034,370,5145,397"/>
+<area shape="rect" href="basic__streambuf__fwd_8hpp.html" title=" " alt="" coords="5567,452,5729,493"/>
+<area shape="rect" href="impl_2write__at_8hpp.html" title=" " alt="" coords="2923,109,3090,136"/>
+<area shape="rect" title=" " alt="" coords="2065,705,2194,732"/>
+<area shape="rect" title=" " alt="" coords="1901,705,2040,732"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1788,549,1980,575"/>
+<area shape="rect" title=" " alt="" coords="1838,631,1930,657"/>
+<area shape="rect" title=" " alt="" coords="195,631,261,657"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="4815,459,4966,486"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="5325,459,5491,486"/>
+<area shape="rect" title=" " alt="" coords="5143,459,5206,486"/>
+<area shape="rect" title=" " alt="" coords="5230,459,5301,486"/>
+<area shape="rect" title=" " alt="" coords="5174,549,5282,575"/>
+<area shape="rect" title=" " alt="" coords="2805,549,2883,575"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="4145,459,4292,486"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="1187,370,1306,397"/>
+<area shape="rect" href="array__fwd_8hpp.html" title=" " alt="" coords="313,459,500,486"/>
+<area shape="rect" href="base__from__cancellation__state_8hpp.html" title=" " alt="" coords="3257,273,3433,315"/>
+<area shape="rect" href="base__from__completion__cond_8hpp.html" title=" " alt="" coords="4412,363,4580,404"/>
+<area shape="rect" href="bind__handler_8hpp.html" title=" " alt="" coords="2388,281,2593,307"/>
+<area shape="rect" href="handler__cont__helpers_8hpp.html" title=" " alt="" coords="2259,363,2402,404"/>
+<area shape="rect" href="consuming__buffers_8hpp.html" title=" " alt="" coords="1473,184,1639,225"/>
+<area shape="rect" href="dependent__type_8hpp.html" title=" " alt="" coords="2825,452,2988,493"/>
+<area shape="rect" href="handler__tracking_8hpp.html" title=" " alt="" coords="3450,452,3593,493"/>
+<area shape="rect" href="handler__type__requirements_8hpp.html" title=" " alt="" coords="2529,363,2709,404"/>
+<area shape="rect" href="non__const__lvalue_8hpp.html" title=" " alt="" coords="3164,452,3324,493"/>
+<area shape="rect" href="throw__error_8hpp.html" title=" " alt="" coords="2733,370,2929,397"/>
+<area shape="rect" title=" " alt="" coords="1015,459,1081,486"/>
+<area shape="rect" title=" " alt="" coords="1401,459,1460,486"/>
+<area shape="rect" title=" " alt="" coords="1106,459,1193,486"/>
+<area shape="rect" title=" " alt="" coords="1217,459,1276,486"/>
+<area shape="rect" title=" " alt="" coords="927,459,990,486"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="525,459,699,486"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="911,549,1142,575"/>
+<area shape="rect" href="string__view_8hpp.html" title=" " alt="" coords="1196,541,1327,583"/>
+<area shape="rect" href="is__contiguous__iterator_8hpp.html" title=" " alt="" coords="2066,452,2209,493"/>
+<area shape="rect" href="is__buffer__sequence_8hpp.html" title=" " alt="" coords="1839,452,1990,493"/>
+<area shape="rect" title=" " alt="" coords="437,549,493,575"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="3975,363,4185,404"/>
+<area shape="rect" href="cancellation__state_8hpp.html" title=" " alt="" coords="3617,459,3817,486"/>
+<area shape="rect" href="buffer__sequence__adapter_8hpp.html" title=" " alt="" coords="1406,273,1581,315"/>
+<area shape="rect" href="limits_8hpp.html" title=" " alt="" coords="1535,370,1694,397"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="write__at_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2write__at_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2write__at_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2write__at_8hppdep">
+<area shape="rect" title=" " alt="" coords="3562,5,3709,61"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="3477,117,3623,158"/>
+<area shape="rect" href="write__at_8cpp.html" title=" " alt="" coords="3647,109,3794,165"/>
+<area shape="rect" href="examples_2cpp03_2allocation_2server_8cpp.html" title=" " alt="" coords="5,221,167,277"/>
+<area shape="rect" href="cpp03_2buffers_2reference__counted_8cpp.html" title=" " alt="" coords="191,221,413,277"/>
+<area shape="rect" href="cpp03_2chat_2chat__client_8cpp.html" title=" " alt="" coords="437,221,593,277"/>
+<area shape="rect" href="cpp03_2chat_2chat__server_8cpp.html" title=" " alt="" coords="618,221,778,277"/>
+<area shape="rect" href="posix__chat__client_8cpp.html" title=" " alt="" coords="803,221,1001,277"/>
+<area shape="rect" href="cpp03_2echo_2async__tcp__echo__server_8cpp.html" title=" " alt="" coords="1025,213,1189,284"/>
+<area shape="rect" href="cpp03_2echo_2async__udp__echo__server_8cpp.html" title=" " alt="" coords="1214,213,1382,284"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__client_8cpp.html" title=" " alt="" coords="1406,213,1587,284"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__server_8cpp.html" title=" " alt="" coords="1611,213,1793,284"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__client_8cpp.html" title=" " alt="" coords="1817,213,2003,284"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__server_8cpp.html" title=" " alt="" coords="2027,213,2212,284"/>
+<area shape="rect" href="async__client_8cpp.html" title=" " alt="" coords="2236,221,2440,277"/>
+<area shape="rect" href="cpp03_2http_2client_2sync__client_8cpp.html" title=" " alt="" coords="2464,221,2660,277"/>
+<area shape="rect" href="cpp03_2http_2server_2connection_8hpp.html" title=" " alt="" coords="2607,339,2807,395"/>
+<area shape="rect" href="cpp03_2http_2server_2server_8hpp.html" title=" " alt="" coords="2623,451,2792,507"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server_2main_8cpp.html" title=" " alt="" coords="2696,555,2857,611"/>
+<area shape="rect" href="cpp03_2http_2server_2reply_8hpp.html" title=" " alt="" coords="2735,221,2895,277"/>
+<area shape="rect" href="cpp03_2http_2server2_2connection_8hpp.html" title=" " alt="" coords="3135,339,3343,395"/>
+<area shape="rect" href="cpp03_2http_2server2_2server_8hpp.html" title=" " alt="" coords="3080,451,3257,507"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server2_2main_8cpp.html" title=" " alt="" coords="3225,555,3395,611"/>
+<area shape="rect" href="io__context__pool_8hpp.html" title=" " alt="" coords="2883,332,3060,403"/>
+<area shape="rect" href="cpp03_2http_2server2_2reply_8hpp.html" title=" " alt="" coords="3122,221,3290,277"/>
+<area shape="rect" href="cpp03_2http_2server3_2connection_8hpp.html" title=" " alt="" coords="3474,339,3682,395"/>
+<area shape="rect" href="cpp03_2http_2server3_2server_8hpp.html" title=" " alt="" coords="3489,451,3667,507"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server3_2main_8cpp.html" title=" " alt="" coords="3565,555,3735,611"/>
+<area shape="rect" href="cpp03_2http_2server3_2reply_8hpp.html" title=" " alt="" coords="3466,221,3634,277"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server4_2main_8cpp.html" title=" " alt="" coords="3924,339,4093,395"/>
+<area shape="rect" href="cpp03_2http_2server4_2reply_8hpp.html" title=" " alt="" coords="3962,221,4130,277"/>
+<area shape="rect" href="cpp03_2http_2server4_2server_8hpp.html" title=" " alt="" coords="3760,221,3937,277"/>
+<area shape="rect" href="ping_8cpp.html" title=" " alt="" coords="4205,221,4361,277"/>
+<area shape="rect" href="cpp03_2invocation_2prioritised__handlers_8cpp.html" title=" " alt="" coords="4385,213,4549,284"/>
+<area shape="rect" href="cpp03_2iostreams_2daytime__client_8cpp.html" title=" " alt="" coords="4574,221,4793,277"/>
+<area shape="rect" href="daytime__server_8cpp.html" title=" " alt="" coords="4817,221,5040,277"/>
+<area shape="rect" href="examples_2cpp03_2local_2connect__pair_8cpp.html" title=" " alt="" coords="5065,221,5235,277"/>
+<area shape="rect" href="cpp03_2local_2iostream__client_8cpp.html" title=" " alt="" coords="5259,221,5449,277"/>
+<area shape="rect" href="cpp03_2local_2stream__client_8cpp.html" title=" " alt="" coords="5473,221,5651,277"/>
+<area shape="rect" href="cpp03_2local_2stream__server_8cpp.html" title=" " alt="" coords="5675,221,5857,277"/>
+<area shape="rect" href="cpp03_2multicast_2receiver_8cpp.html" title=" " alt="" coords="5881,221,6051,277"/>
+<area shape="rect" href="cpp03_2multicast_2sender_8cpp.html" title=" " alt="" coords="6076,221,6237,277"/>
+<area shape="rect" href="cpp03_2nonblocking_2third__party__lib_8cpp.html" title=" " alt="" coords="6261,213,6441,284"/>
+<area shape="rect" href="examples_2cpp03_2porthopper_2client_8cpp.html" title=" " alt="" coords="6397,339,6561,395"/>
+<area shape="rect" href="protocol_8hpp.html" title=" " alt="" coords="6517,221,6700,277"/>
+<area shape="rect" href="examples_2cpp03_2porthopper_2server_8cpp.html" title=" " alt="" coords="6590,339,6758,395"/>
+<area shape="rect" href="examples_2cpp03_2serialization_2client_8cpp.html" title=" " alt="" coords="6785,339,6958,395"/>
+<area shape="rect" href="cpp03_2serialization_2connection_8hpp.html" title=" " alt="" coords="6827,221,7036,277"/>
+<area shape="rect" href="examples_2cpp03_2serialization_2server_8cpp.html" title=" " alt="" coords="6984,339,7161,395"/>
+<area shape="rect" href="basic__logger_8hpp.html" title=" " alt="" coords="7112,221,7305,277"/>
+</map>
+</div>
+</div>
+<p><a href="write__at_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:add67a05a29d183782491d14aceec7d41"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename ConstBufferSequence &gt; </td></tr>
+<tr class="memitem:add67a05a29d183782491d14aceec7d41"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#add67a05a29d183782491d14aceec7d41">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, const ConstBufferSequence &amp;buffers)</td></tr>
+<tr class="memdesc:add67a05a29d183782491d14aceec7d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all of the supplied data at the specified offset before returning.  <a href="namespaceasio.html#add67a05a29d183782491d14aceec7d41">Подробнее...</a><br /></td></tr>
+<tr class="separator:add67a05a29d183782491d14aceec7d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1abcb5870505ea2a0c524a59638da0"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename ConstBufferSequence &gt; </td></tr>
+<tr class="memitem:a8c1abcb5870505ea2a0c524a59638da0"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a8c1abcb5870505ea2a0c524a59638da0">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, const ConstBufferSequence &amp;buffers, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="memdesc:a8c1abcb5870505ea2a0c524a59638da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all of the supplied data at the specified offset before returning.  <a href="namespaceasio.html#a8c1abcb5870505ea2a0c524a59638da0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8c1abcb5870505ea2a0c524a59638da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6b2f5dd13f4273695fbf0cdec0314a"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename ConstBufferSequence , typename CompletionCondition &gt; </td></tr>
+<tr class="memitem:a3e6b2f5dd13f4273695fbf0cdec0314a"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a3e6b2f5dd13f4273695fbf0cdec0314a">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, const ConstBufferSequence &amp;buffers, CompletionCondition completion_condition)</td></tr>
+<tr class="memdesc:a3e6b2f5dd13f4273695fbf0cdec0314a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a certain amount of data at a specified offset before returning.  <a href="namespaceasio.html#a3e6b2f5dd13f4273695fbf0cdec0314a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3e6b2f5dd13f4273695fbf0cdec0314a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51133c1e260b8abeeed55646e765fdd6"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename ConstBufferSequence , typename CompletionCondition &gt; </td></tr>
+<tr class="memitem:a51133c1e260b8abeeed55646e765fdd6"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a51133c1e260b8abeeed55646e765fdd6">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, const ConstBufferSequence &amp;buffers, CompletionCondition completion_condition, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="memdesc:a51133c1e260b8abeeed55646e765fdd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a certain amount of data at a specified offset before returning.  <a href="namespaceasio.html#a51133c1e260b8abeeed55646e765fdd6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a51133c1e260b8abeeed55646e765fdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db1f75a907c17918092b41f2f242104"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename Allocator &gt; </td></tr>
+<tr class="memitem:a1db1f75a907c17918092b41f2f242104"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a1db1f75a907c17918092b41f2f242104">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, basic_streambuf&lt; Allocator &gt; &amp;b)</td></tr>
+<tr class="memdesc:a1db1f75a907c17918092b41f2f242104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all of the supplied data at the specified offset before returning.  <a href="namespaceasio.html#a1db1f75a907c17918092b41f2f242104">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1db1f75a907c17918092b41f2f242104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f42435acf937c35ee4c81af44ee6ce"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename Allocator &gt; </td></tr>
+<tr class="memitem:aa6f42435acf937c35ee4c81af44ee6ce"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aa6f42435acf937c35ee4c81af44ee6ce">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, basic_streambuf&lt; Allocator &gt; &amp;b, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="memdesc:aa6f42435acf937c35ee4c81af44ee6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all of the supplied data at the specified offset before returning.  <a href="namespaceasio.html#aa6f42435acf937c35ee4c81af44ee6ce">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa6f42435acf937c35ee4c81af44ee6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e23f5418309ba130d75f6757b7b8e15"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename Allocator , typename CompletionCondition &gt; </td></tr>
+<tr class="memitem:a2e23f5418309ba130d75f6757b7b8e15"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a2e23f5418309ba130d75f6757b7b8e15">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, basic_streambuf&lt; Allocator &gt; &amp;b, CompletionCondition completion_condition)</td></tr>
+<tr class="memdesc:a2e23f5418309ba130d75f6757b7b8e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a certain amount of data at a specified offset before returning.  <a href="namespaceasio.html#a2e23f5418309ba130d75f6757b7b8e15">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2e23f5418309ba130d75f6757b7b8e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431966af634f0701ceac7f54fc1b0371"><td class="memTemplParams" colspan="2">template&lt;typename SyncRandomAccessWriteDevice , typename Allocator , typename CompletionCondition &gt; </td></tr>
+<tr class="memitem:a431966af634f0701ceac7f54fc1b0371"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a431966af634f0701ceac7f54fc1b0371">asio::write_at</a> (SyncRandomAccessWriteDevice &amp;d, uint64_t offset, basic_streambuf&lt; Allocator &gt; &amp;b, CompletionCondition completion_condition, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="memdesc:a431966af634f0701ceac7f54fc1b0371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a certain amount of data at a specified offset before returning.  <a href="namespaceasio.html#a431966af634f0701ceac7f54fc1b0371">Подробнее...</a><br /></td></tr>
+<tr class="separator:a431966af634f0701ceac7f54fc1b0371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007ae4a9e3ecea6b02ebeed8dd7f855f"><td class="memTemplParams" colspan="2">template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, std::size_t)) WriteToken&gt; </td></tr>
+<tr class="memitem:a007ae4a9e3ecea6b02ebeed8dd7f855f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a007ae4a9e3ecea6b02ebeed8dd7f855f">asio::async_write_at</a> (AsyncRandomAccessWriteDevice &amp;d, uint64_t offset, const ConstBufferSequence &amp;buffers, WriteToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>) -&gt; decltype(async_initiate&lt; WriteToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(declval&lt; detail::initiate_async_write_at&lt; AsyncRandomAccessWriteDevice &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, offset, buffers, <a class="el" href="structtransfer__all.html">transfer_all</a>()))</td></tr>
+<tr class="separator:a007ae4a9e3ecea6b02ebeed8dd7f855f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff40274147e80d3b902b3a719f979e3a"><td class="memTemplParams" colspan="2">template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename CompletionCondition , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, std::size_t)) WriteToken&gt; </td></tr>
+<tr class="memitem:aff40274147e80d3b902b3a719f979e3a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aff40274147e80d3b902b3a719f979e3a">asio::async_write_at</a> (AsyncRandomAccessWriteDevice &amp;d, uint64_t offset, const ConstBufferSequence &amp;buffers, CompletionCondition completion_condition, WriteToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>) -&gt; decltype(async_initiate&lt; WriteToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(declval&lt; detail::initiate_async_write_at&lt; AsyncRandomAccessWriteDevice &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, offset, buffers, static_cast&lt; CompletionCondition &amp;&amp; &gt;(completion_condition)))</td></tr>
+<tr class="separator:aff40274147e80d3b902b3a719f979e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22aebde0039839b99cfd2e7973ec519d"><td class="memTemplParams" colspan="2">template&lt;typename AsyncRandomAccessWriteDevice , typename Allocator , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, std::size_t)) WriteToken&gt; </td></tr>
+<tr class="memitem:a22aebde0039839b99cfd2e7973ec519d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a22aebde0039839b99cfd2e7973ec519d">asio::async_write_at</a> (AsyncRandomAccessWriteDevice &amp;d, uint64_t offset, <a class="el" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf</a>&lt; Allocator &gt; &amp;b, WriteToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>) -&gt; decltype(async_initiate&lt; WriteToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(declval&lt; detail::initiate_async_write_at_streambuf&lt; AsyncRandomAccessWriteDevice &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, offset, &amp;b, <a class="el" href="structtransfer__all.html">transfer_all</a>()))</td></tr>
+<tr class="separator:a22aebde0039839b99cfd2e7973ec519d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d21c5fbc0b6ac9839d1023307aae129"><td class="memTemplParams" colspan="2">template&lt;typename AsyncRandomAccessWriteDevice , typename Allocator , typename CompletionCondition , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, std::size_t)) WriteToken&gt; </td></tr>
+<tr class="memitem:a1d21c5fbc0b6ac9839d1023307aae129"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a1d21c5fbc0b6ac9839d1023307aae129">asio::async_write_at</a> (AsyncRandomAccessWriteDevice &amp;d, uint64_t offset, <a class="el" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf</a>&lt; Allocator &gt; &amp;b, CompletionCondition completion_condition, WriteToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>) -&gt; decltype(async_initiate&lt; WriteToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(declval&lt; detail::initiate_async_write_at_streambuf&lt; AsyncRandomAccessWriteDevice &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, offset, &amp;b, static_cast&lt; CompletionCondition &amp;&amp; &gt;(completion_condition)))</td></tr>
+<tr class="separator:a1d21c5fbc0b6ac9839d1023307aae129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

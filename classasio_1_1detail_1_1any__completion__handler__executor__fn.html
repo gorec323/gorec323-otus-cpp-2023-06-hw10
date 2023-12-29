@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::detail::any_completion_handler_executor_fn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html">any_completion_handler_executor_fn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classasio_1_1detail_1_1any__completion__handler__executor__fn-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::detail::any_completion_handler_executor_fn</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="any__completion__handler_8hpp_source.html">any_completion_handler.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::any_completion_handler_executor_fn:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1any__completion__handler__executor__fn__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1any__completion__handler__executor__fn_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1any__completion__handler__executor__fn_inherit__map" id="aasio_1_1detail_1_1any__completion__handler__executor__fn_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,39,212,80"/>
+<area shape="rect" href="classasio_1_1detail_1_1any__completion__handler__fn__table.html" title=" " alt="" coords="260,5,509,47"/>
+<area shape="rect" href="classasio_1_1detail_1_1any__completion__handler__fn__table.html" title=" " alt="" coords="266,71,503,112"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:af370268613952c22566401abaa45cc36"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#af370268613952c22566401abaa45cc36">type</a> = <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a>(*)(<a class="el" href="classasio_1_1detail_1_1any__completion__handler__impl__base.html">any_completion_handler_impl_base</a> *, const <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a> &amp;)</td></tr>
+<tr class="separator:af370268613952c22566401abaa45cc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa4abf690c00c1ef39e95fd60825770ad"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#aa4abf690c00c1ef39e95fd60825770ad">any_completion_handler_executor_fn</a> (<a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#af370268613952c22566401abaa45cc36">type</a> fn)</td></tr>
+<tr class="separator:aa4abf690c00c1ef39e95fd60825770ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1733220a0819ea13addc6b4764c47d99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#a1733220a0819ea13addc6b4764c47d99">executor</a> (<a class="el" href="classasio_1_1detail_1_1any__completion__handler__impl__base.html">any_completion_handler_impl_base</a> *<a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#a302e22613dd4f0f7df3af8dd83951f0e">impl</a>, const <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a> &amp;candidate) const</td></tr>
+<tr class="separator:a1733220a0819ea13addc6b4764c47d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a302e22613dd4f0f7df3af8dd83951f0e"><td class="memTemplParams" colspan="2">template&lt;typename Handler &gt; </td></tr>
+<tr class="memitem:a302e22613dd4f0f7df3af8dd83951f0e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#a302e22613dd4f0f7df3af8dd83951f0e">impl</a> (<a class="el" href="classasio_1_1detail_1_1any__completion__handler__impl__base.html">any_completion_handler_impl_base</a> *impl, const <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a> &amp;candidate)</td></tr>
+<tr class="separator:a302e22613dd4f0f7df3af8dd83951f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="af370268613952c22566401abaa45cc36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af370268613952c22566401abaa45cc36">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#af370268613952c22566401abaa45cc36">asio::detail::any_completion_handler_executor_fn::type</a> =  <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a>(*)( <a class="el" href="classasio_1_1detail_1_1any__completion__handler__impl__base.html">any_completion_handler_impl_base</a>*, const <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a>&amp;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa4abf690c00c1ef39e95fd60825770ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4abf690c00c1ef39e95fd60825770ad">&#9670;&nbsp;</a></span>any_completion_handler_executor_fn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr asio::detail::any_completion_handler_executor_fn::any_completion_handler_executor_fn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__executor__fn.html#af370268613952c22566401abaa45cc36">type</a>&#160;</td>
+          <td class="paramname"><em>fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1733220a0819ea13addc6b4764c47d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1733220a0819ea13addc6b4764c47d99">&#9670;&nbsp;</a></span>executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a> asio::detail::any_completion_handler_executor_fn::executor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__impl__base.html">any_completion_handler_impl_base</a> *&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>candidate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a302e22613dd4f0f7df3af8dd83951f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302e22613dd4f0f7df3af8dd83951f0e">&#9670;&nbsp;</a></span>impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a> asio::detail::any_completion_handler_executor_fn::impl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1any__completion__handler__impl__base.html">any_completion_handler_impl_base</a> *&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1any__completion__executor.html">any_completion_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>candidate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="any__completion__handler_8hpp_source.html">any_completion_handler.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

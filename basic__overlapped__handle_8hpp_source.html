@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/windows/basic_overlapped_handle.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_131e3ff8db4fe6aad252c1977a1167f6.html">windows</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">basic_overlapped_handle.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="basic__overlapped__handle_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// windows/basic_overlapped_handle.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_WINDOWS_BASIC_OVERLAPPED_HANDLE_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_WINDOWS_BASIC_OVERLAPPED_HANDLE_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_WINDOWS_RANDOM_ACCESS_HANDLE) \</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">  || defined(ASIO_HAS_WINDOWS_STREAM_HANDLE) \</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="any__io__executor_8hpp.html">asio/any_io_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_2asio_2async__result_8hpp.html">asio/async_result.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="io__object__impl_8hpp.html">asio/detail/io_object_impl.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="throw__error_8hpp.html">asio/detail/throw_error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="win__iocp__handle__service_8hpp.html">asio/detail/win_iocp_handle_service.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">asio/error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="execution__context_8hpp.html">asio/execution_context.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>windows {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor = any_io_executor&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">class </span>basic_overlapped_handle</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">typedef</span> Executor executor_type;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">struct </span>rebind_executor</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">typedef</span> basic_overlapped_handle&lt;Executor1&gt; other;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">typedef</span> implementation_defined native_handle_type;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">typedef</span> asio::detail::win_iocp_handle_service::native_handle_type</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    native_handle_type;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">typedef</span> basic_overlapped_handle lowest_layer_type;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">explicit</span> basic_overlapped_handle(<span class="keyword">const</span> executor_type&amp; ex)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    : impl_(0, ex)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">explicit</span> basic_overlapped_handle(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        defaulted_constraint</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      &gt; = defaulted_constraint())</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    : impl_(0, 0, <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  basic_overlapped_handle(<span class="keyword">const</span> executor_type&amp; ex,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keyword">const</span> native_handle_type&amp; native_handle)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    : impl_(0, ex)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    impl_.get_service().assign(impl_.get_implementation(), native_handle, ec);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;assign&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  basic_overlapped_handle(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keyword">const</span> native_handle_type&amp; native_handle,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    : impl_(0, 0, <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    impl_.get_service().assign(impl_.get_implementation(), native_handle, ec);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;assign&quot;</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  basic_overlapped_handle(basic_overlapped_handle&amp;&amp; other)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    : impl_(<a class="code" href="namespacestd.html">std</a>::move(other.impl_))</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  basic_overlapped_handle&amp; operator=(basic_overlapped_handle&amp;&amp; other)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    impl_ = std::move(other.impl_);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="comment">// All overlapped handles have access to each other&#39;s implementations.</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>basic_overlapped_handle;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  basic_overlapped_handle(basic_overlapped_handle&lt;Executor1&gt;&amp;&amp; other,</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        is_convertible&lt;Executor1, Executor&gt;::value,</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        defaulted_constraint</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      &gt; = defaulted_constraint())</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    : impl_(<a class="code" href="namespacestd.html">std</a>::move(other.impl_))</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    is_convertible&lt;Executor1, Executor&gt;::value,</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    basic_overlapped_handle&amp;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  &gt; operator=(basic_overlapped_handle&lt;Executor1&gt;&amp;&amp; other)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    impl_ = std::move(other.impl_);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keyword">const</span> executor_type&amp; get_executor() noexcept</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> impl_.get_executor();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  lowest_layer_type&amp; lowest_layer()</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keyword">const</span> lowest_layer_type&amp; lowest_layer()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">   * This function opens the handle to hold an existing native handle.</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">   *</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">   * @param handle A native handle.</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">   *</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">   * @throws asio::system_error Thrown on failure.</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">void</span> assign(<span class="keyword">const</span> native_handle_type&amp; handle)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    impl_.get_service().assign(impl_.get_implementation(), handle, ec);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;assign&quot;</span>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">   * This function opens the handle to hold an existing native handle.</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">   *</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">   * @param handle A native handle.</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">   *</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">   * @param ec Set to indicate what error occurred, if any.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> assign(<span class="keyword">const</span> native_handle_type&amp; handle,</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    impl_.get_service().assign(impl_.get_implementation(), handle, ec);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <a class="code" href="config_8hpp.html#af855cbc0cd4903ce77a735560cfa933d">ASIO_SYNC_OP_VOID_RETURN</a>(ec);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordtype">bool</span> is_open()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().is_open(impl_.get_implementation());</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="namespaceasio_1_1detail_1_1descriptor__ops.html#adb08bf6a6ad29284d586da2720ba7053">close</a>()</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    impl_.get_service().close(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;close&quot;</span>);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="namespaceasio_1_1detail_1_1descriptor__ops.html#adb08bf6a6ad29284d586da2720ba7053">close</a>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    impl_.get_service().close(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <a class="code" href="config_8hpp.html#af855cbc0cd4903ce77a735560cfa933d">ASIO_SYNC_OP_VOID_RETURN</a>(ec);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">#if defined(ASIO_MSVC) &amp;&amp; (ASIO_MSVC &gt;= 1400) \</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">  &amp;&amp; (!defined(_WIN32_WINNT) || _WIN32_WINNT &lt; 0x0603)</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  __declspec(deprecated(<span class="stringliteral">&quot;This function always fails with &quot;</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="stringliteral">&quot;operation_not_supported when used on Windows versions &quot;</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="stringliteral">&quot;prior to Windows 8.1.&quot;</span>))</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  native_handle_type release()</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    native_handle_type <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = impl_.get_service().release(</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;release&quot;</span>);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">#if defined(ASIO_MSVC) &amp;&amp; (ASIO_MSVC &gt;= 1400) \</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">  &amp;&amp; (!defined(_WIN32_WINNT) || _WIN32_WINNT &lt; 0x0603)</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  __declspec(deprecated(<span class="stringliteral">&quot;This function always fails with &quot;</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="stringliteral">&quot;operation_not_supported when used on Windows versions &quot;</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="stringliteral">&quot;prior to Windows 8.1.&quot;</span>))</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  native_handle_type release(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().release(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  native_handle_type native_handle()</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().native_handle(impl_.get_implementation());</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keywordtype">void</span> cancel()</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    impl_.get_service().cancel(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;cancel&quot;</span>);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> cancel(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    impl_.get_service().cancel(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <a class="code" href="config_8hpp.html#af855cbc0cd4903ce77a735560cfa933d">ASIO_SYNC_OP_VOID_RETURN</a>(ec);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  ~basic_overlapped_handle()</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  {</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  }</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <a class="code" href="classasio_1_1detail_1_1io__object__impl.html">asio::detail::io_object_impl</a>&lt;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    asio::detail::win_iocp_handle_service, Executor&gt; impl_;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  <span class="comment">// Disallow copying and assignment.</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  basic_overlapped_handle(<span class="keyword">const</span> basic_overlapped_handle&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  basic_overlapped_handle&amp; operator=(</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;      <span class="keyword">const</span> basic_overlapped_handle&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;};</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;} <span class="comment">// namespace windows</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_WINDOWS_RANDOM_ACCESS_HANDLE)</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;       <span class="comment">//   || defined(ASIO_HAS_WINDOWS_STREAM_HANDLE)</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;       <span class="comment">//   || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160; </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_WINDOWS_BASIC_OVERLAPPED_HANDLE_HPP</span></div>
+<div class="ttc" id="aany__io__executor_8hpp_html"><div class="ttname"><a href="any__io__executor_8hpp.html">any_io_executor.hpp</a></div></div>
+<div class="ttc" id="ablocking_8cpp_html_a0337bda4434eac48c7c441ec80725e39"><div class="ttname"><a href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a></div><div class="ttdeci">exec::blocking_t s</div><div class="ttdef"><b>Definition:</b> blocking.cpp:26</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1io__object__impl_html"><div class="ttname"><a href="classasio_1_1detail_1_1io__object__impl.html">asio::detail::io_object_impl</a></div><div class="ttdef"><b>Definition:</b> io_object_impl.hpp:34</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_a83e66f7c66c4e73c01aa6b3d523e12a4"><div class="ttname"><a href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a></div><div class="ttdeci">#define ASIO_SYNC_OP_VOID</div><div class="ttdef"><b>Definition:</b> config.hpp:1250</div></div>
+<div class="ttc" id="aconfig_8hpp_html_af855cbc0cd4903ce77a735560cfa933d"><div class="ttname"><a href="config_8hpp.html#af855cbc0cd4903ce77a735560cfa933d">ASIO_SYNC_OP_VOID_RETURN</a></div><div class="ttdeci">#define ASIO_SYNC_OP_VOID_RETURN(e)</div><div class="ttdef"><b>Definition:</b> config.hpp:1251</div></div>
+<div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="aexecution__context_8hpp_html"><div class="ttname"><a href="execution__context_8hpp.html">execution_context.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html">async_result.hpp</a></div></div>
+<div class="ttc" id="aio__object__impl_8hpp_html"><div class="ttname"><a href="io__object__impl_8hpp.html">io_object_impl.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_1_1descriptor__ops_html_adb08bf6a6ad29284d586da2720ba7053"><div class="ttname"><a href="namespaceasio_1_1detail_1_1descriptor__ops.html#adb08bf6a6ad29284d586da2720ba7053">asio::detail::descriptor_ops::close</a></div><div class="ttdeci">ASIO_DECL int close(int d, state_type &amp;state, asio::error_code &amp;ec)</div><div class="ttdef"><b>Definition:</b> descriptor_ops.ipp:48</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_ac16aa46e6a6a3c19ea8ff34ae3e77633"><div class="ttname"><a href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a></div><div class="ttdeci">void throw_error(const asio::error_code &amp;err ASIO_SOURCE_LOCATION_DEFAULTED_PARAM)</div><div class="ttdef"><b>Definition:</b> throw_error.hpp:36</div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html_adebdf38d8a61e5145c9d6b51730e6a74"><div class="ttname"><a href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">asio::execution::context</a></div><div class="ttdeci">constexpr context_t context</div><div class="ttdef"><b>Definition:</b> context.hpp:141</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> error.hpp:307</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1execution_1_1detail_1_1blocking__t_html"><div class="ttname"><a href="structasio_1_1execution_1_1detail_1_1blocking__t.html">asio::execution::detail::blocking_t</a></div><div class="ttdef"><b>Definition:</b> blocking.hpp:200</div></div>
+<div class="ttc" id="athrow__error_8hpp_html"><div class="ttname"><a href="throw__error_8hpp.html">throw_error.hpp</a></div></div>
+<div class="ttc" id="awin__iocp__handle__service_8hpp_html"><div class="ttname"><a href="win__iocp__handle__service_8hpp.html">win_iocp_handle_service.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

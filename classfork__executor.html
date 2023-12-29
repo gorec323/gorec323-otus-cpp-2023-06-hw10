@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс fork_executor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classfork__executor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс fork_executor</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa449c581f9871add63bbdb58c8dfb3aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#aa449c581f9871add63bbdb58c8dfb3aa">fork_executor</a> (<a class="el" href="classfork__join__pool.html">fork_join_pool</a> &amp;ctx)</td></tr>
+<tr class="separator:aa449c581f9871add63bbdb58c8dfb3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae296ee8d0da86f99541640b351f1bae9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfork__join__pool.html">fork_join_pool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#ae296ee8d0da86f99541640b351f1bae9">query</a> (<a class="el" href="namespaceasio_1_1execution.html#a20a31557fa7267fd779be278a94b00ce">execution::context_t</a>) const noexcept</td></tr>
+<tr class="separator:ae296ee8d0da86f99541640b351f1bae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74b091dfee97257d5225dbc8b3ec090"><td class="memTemplParams" colspan="2">template&lt;class Func &gt; </td></tr>
+<tr class="memitem:af74b091dfee97257d5225dbc8b3ec090"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classfork__executor.html#af74b091dfee97257d5225dbc8b3ec090">execute</a> (Func f) const</td></tr>
+<tr class="separator:af74b091dfee97257d5225dbc8b3ec090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f38dc55d066dcd5ead29d412d6424e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#a60f38dc55d066dcd5ead29d412d6424e">join</a> () const</td></tr>
+<tr class="separator:a60f38dc55d066dcd5ead29d412d6424e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa449c581f9871add63bbdb58c8dfb3aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#aa449c581f9871add63bbdb58c8dfb3aa">fork_executor</a> (<a class="el" href="classfork__join__pool.html">fork_join_pool</a> &amp;ctx)</td></tr>
+<tr class="separator:aa449c581f9871add63bbdb58c8dfb3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae296ee8d0da86f99541640b351f1bae9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfork__join__pool.html">fork_join_pool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#ae296ee8d0da86f99541640b351f1bae9">query</a> (<a class="el" href="namespaceasio_1_1execution.html#a20a31557fa7267fd779be278a94b00ce">execution::context_t</a>) const noexcept</td></tr>
+<tr class="separator:ae296ee8d0da86f99541640b351f1bae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74b091dfee97257d5225dbc8b3ec090"><td class="memTemplParams" colspan="2">template&lt;class Func &gt; </td></tr>
+<tr class="memitem:af74b091dfee97257d5225dbc8b3ec090"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classfork__executor.html#af74b091dfee97257d5225dbc8b3ec090">execute</a> (Func f) const</td></tr>
+<tr class="separator:af74b091dfee97257d5225dbc8b3ec090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f38dc55d066dcd5ead29d412d6424e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#a60f38dc55d066dcd5ead29d412d6424e">join</a> () const</td></tr>
+<tr class="separator:a60f38dc55d066dcd5ead29d412d6424e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a5dde3732d02bfc2aba2b14348b0d5caf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#a5dde3732d02bfc2aba2b14348b0d5caf">operator==</a> (const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;a, const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a5dde3732d02bfc2aba2b14348b0d5caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efdd916d9a88e327ae6b82db12306a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#a1efdd916d9a88e327ae6b82db12306a2">operator!=</a> (const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;a, const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a1efdd916d9a88e327ae6b82db12306a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dde3732d02bfc2aba2b14348b0d5caf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#a5dde3732d02bfc2aba2b14348b0d5caf">operator==</a> (const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;a, const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a5dde3732d02bfc2aba2b14348b0d5caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efdd916d9a88e327ae6b82db12306a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfork__executor.html#a1efdd916d9a88e327ae6b82db12306a2">operator!=</a> (const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;a, const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a1efdd916d9a88e327ae6b82db12306a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa449c581f9871add63bbdb58c8dfb3aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa449c581f9871add63bbdb58c8dfb3aa">&#9670;&nbsp;</a></span>fork_executor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">fork_executor::fork_executor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfork__join__pool.html">fork_join_pool</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa449c581f9871add63bbdb58c8dfb3aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa449c581f9871add63bbdb58c8dfb3aa">&#9670;&nbsp;</a></span>fork_executor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">fork_executor::fork_executor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfork__join__pool.html">fork_join_pool</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af74b091dfee97257d5225dbc8b3ec090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74b091dfee97257d5225dbc8b3ec090">&#9670;&nbsp;</a></span>execute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> fork_executor::execute </td>
+          <td>(</td>
+          <td class="paramtype">Func&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af74b091dfee97257d5225dbc8b3ec090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74b091dfee97257d5225dbc8b3ec090">&#9670;&nbsp;</a></span>execute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> fork_executor::execute </td>
+          <td>(</td>
+          <td class="paramtype">Func&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60f38dc55d066dcd5ead29d412d6424e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f38dc55d066dcd5ead29d412d6424e">&#9670;&nbsp;</a></span>join() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> fork_executor::join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60f38dc55d066dcd5ead29d412d6424e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f38dc55d066dcd5ead29d412d6424e">&#9670;&nbsp;</a></span>join() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> fork_executor::join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae296ee8d0da86f99541640b351f1bae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae296ee8d0da86f99541640b351f1bae9">&#9670;&nbsp;</a></span>query() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfork__join__pool.html">fork_join_pool</a>&amp; fork_executor::query </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio_1_1execution.html#a20a31557fa7267fd779be278a94b00ce">execution::context_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae296ee8d0da86f99541640b351f1bae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae296ee8d0da86f99541640b351f1bae9">&#9670;&nbsp;</a></span>query() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfork__join__pool.html">fork_join_pool</a>&amp; fork_executor::query </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio_1_1execution.html#a20a31557fa7267fd779be278a94b00ce">execution::context_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a1efdd916d9a88e327ae6b82db12306a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1efdd916d9a88e327ae6b82db12306a2">&#9670;&nbsp;</a></span>operator!= <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1efdd916d9a88e327ae6b82db12306a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1efdd916d9a88e327ae6b82db12306a2">&#9670;&nbsp;</a></span>operator!= <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dde3732d02bfc2aba2b14348b0d5caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dde3732d02bfc2aba2b14348b0d5caf">&#9670;&nbsp;</a></span>operator== <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dde3732d02bfc2aba2b14348b0d5caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dde3732d02bfc2aba2b14348b0d5caf">&#9670;&nbsp;</a></span>operator== <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classfork__executor.html">fork_executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/src/examples/cpp11/executors/<a class="el" href="cpp11_2executors_2fork__join_8cpp.html">fork_join.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

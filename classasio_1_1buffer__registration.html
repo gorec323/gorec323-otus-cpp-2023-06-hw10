@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::buffer_registration&lt; MutableBufferSequence, Allocator &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1buffer__registration-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::buffer_registration&lt; MutableBufferSequence, Allocator &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Automatically registers and unregistered buffers with an execution context.  
+ <a href="classasio_1_1buffer__registration.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="buffer__registration_8hpp_source.html">buffer_registration.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::buffer_registration&lt; MutableBufferSequence, Allocator &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1buffer__registration__inherit__graph.png" border="0" usemap="#aasio_1_1buffer__registration_3_01MutableBufferSequence_00_01Allocator_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1buffer__registration_3_01MutableBufferSequence_00_01Allocator_01_4_inherit__map" id="aasio_1_1buffer__registration_3_01MutableBufferSequence_00_01Allocator_01_4_inherit__map">
+<area shape="rect" title="Automatically registers and unregistered buffers with an execution context." alt="" coords="5,95,201,151"/>
+<area shape="rect" href="classasio_1_1detail_1_1buffer__registration__base.html" title=" " alt="" coords="32,5,175,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::buffer_registration&lt; MutableBufferSequence, Allocator &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1buffer__registration__coll__graph.png" border="0" usemap="#aasio_1_1buffer__registration_3_01MutableBufferSequence_00_01Allocator_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1buffer__registration_3_01MutableBufferSequence_00_01Allocator_01_4_coll__map" id="aasio_1_1buffer__registration_3_01MutableBufferSequence_00_01Allocator_01_4_coll__map">
+<area shape="rect" title="Automatically registers and unregistered buffers with an execution context." alt="" coords="5,95,201,151"/>
+<area shape="rect" href="classasio_1_1detail_1_1buffer__registration__base.html" title=" " alt="" coords="32,5,175,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a8de9876c4da6b9681ce4e2621ae50031"><td class="memItemLeft" align="right" valign="top">typedef Allocator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a></td></tr>
+<tr class="memdesc:a8de9876c4da6b9681ce4e2621ae50031"><td class="mdescLeft">&#160;</td><td class="mdescRight">The allocator type used for allocating storage for the buffers container.  <a href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8de9876c4da6b9681ce4e2621ae50031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5137e8efb09de04c0f1d2057bfac8245"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a> &gt;::<a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#a5137e8efb09de04c0f1d2057bfac8245">iterator</a></td></tr>
+<tr class="separator:a5137e8efb09de04c0f1d2057bfac8245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabdb0adfa1358bcecf745d2ba4273fe"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a> &gt;::<a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a></td></tr>
+<tr class="separator:aaabdb0adfa1358bcecf745d2ba4273fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af8de242b4f299db53d91152c95aa58a3"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:af8de242b4f299db53d91152c95aa58a3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#af8de242b4f299db53d91152c95aa58a3">buffer_registration</a> (const Executor &amp;ex, const MutableBufferSequence &amp;buffer_sequence, const <a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a> &amp;alloc=<a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a>(), <a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; <a class="el" href="structasio_1_1is__executor.html">is_executor</a>&lt; Executor &gt;::value||<a class="el" href="structasio_1_1execution_1_1is__executor.html">execution::is_executor</a>&lt; Executor &gt;::value &gt;=0)</td></tr>
+<tr class="memdesc:af8de242b4f299db53d91152c95aa58a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register buffers with an executor's execution context.  <a href="classasio_1_1buffer__registration.html#af8de242b4f299db53d91152c95aa58a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:af8de242b4f299db53d91152c95aa58a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a586e98879ce7ef803f20e0651a9642"><td class="memTemplParams" colspan="2">template&lt;typename ExecutionContext &gt; </td></tr>
+<tr class="memitem:a3a586e98879ce7ef803f20e0651a9642"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#a3a586e98879ce7ef803f20e0651a9642">buffer_registration</a> (ExecutionContext &amp;ctx, const MutableBufferSequence &amp;buffer_sequence, const <a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a> &amp;alloc=<a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a>(), <a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt; ExecutionContext &amp;, <a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp; &gt;::value &gt;=0)</td></tr>
+<tr class="memdesc:a3a586e98879ce7ef803f20e0651a9642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register buffers with an execution context.  <a href="classasio_1_1buffer__registration.html#a3a586e98879ce7ef803f20e0651a9642">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3a586e98879ce7ef803f20e0651a9642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7798326928ec9c7ef5ad5338cb22300"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#af7798326928ec9c7ef5ad5338cb22300">buffer_registration</a> (<a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:af7798326928ec9c7ef5ad5338cb22300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <a href="classasio_1_1buffer__registration.html#af7798326928ec9c7ef5ad5338cb22300">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7798326928ec9c7ef5ad5338cb22300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53998b5b0f51b35c904966f5d0f15036"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#a53998b5b0f51b35c904966f5d0f15036">~buffer_registration</a> ()</td></tr>
+<tr class="memdesc:a53998b5b0f51b35c904966f5d0f15036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters the buffers.  <a href="classasio_1_1buffer__registration.html#a53998b5b0f51b35c904966f5d0f15036">Подробнее...</a><br /></td></tr>
+<tr class="separator:a53998b5b0f51b35c904966f5d0f15036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d65043339330bb4e10fd40e5fd6533"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#a28d65043339330bb4e10fd40e5fd6533">operator=</a> (<a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a28d65043339330bb4e10fd40e5fd6533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment.  <a href="classasio_1_1buffer__registration.html#a28d65043339330bb4e10fd40e5fd6533">Подробнее...</a><br /></td></tr>
+<tr class="separator:a28d65043339330bb4e10fd40e5fd6533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5303e55ab4d7bfe32e8dad2b402abd4"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#aa5303e55ab4d7bfe32e8dad2b402abd4">size</a> () const noexcept</td></tr>
+<tr class="memdesc:aa5303e55ab4d7bfe32e8dad2b402abd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of registered buffers.  <a href="classasio_1_1buffer__registration.html#aa5303e55ab4d7bfe32e8dad2b402abd4">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa5303e55ab4d7bfe32e8dad2b402abd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57269881ab52906c39fdb0ba2e83e54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#ae57269881ab52906c39fdb0ba2e83e54">begin</a> () const noexcept</td></tr>
+<tr class="memdesc:ae57269881ab52906c39fdb0ba2e83e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the begin iterator for the sequence of registered buffers.  <a href="classasio_1_1buffer__registration.html#ae57269881ab52906c39fdb0ba2e83e54">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae57269881ab52906c39fdb0ba2e83e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae807315a49e7967844469ef95c4f009"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#aae807315a49e7967844469ef95c4f009">cbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:aae807315a49e7967844469ef95c4f009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the begin iterator for the sequence of registered buffers.  <a href="classasio_1_1buffer__registration.html#aae807315a49e7967844469ef95c4f009">Подробнее...</a><br /></td></tr>
+<tr class="separator:aae807315a49e7967844469ef95c4f009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b3d9f777f8b0bd8296fcdff9a27966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#a11b3d9f777f8b0bd8296fcdff9a27966">end</a> () const noexcept</td></tr>
+<tr class="memdesc:a11b3d9f777f8b0bd8296fcdff9a27966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the end iterator for the sequence of registered buffers.  <a href="classasio_1_1buffer__registration.html#a11b3d9f777f8b0bd8296fcdff9a27966">Подробнее...</a><br /></td></tr>
+<tr class="separator:a11b3d9f777f8b0bd8296fcdff9a27966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b367343d222b55770495663ad7a21f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#a6b367343d222b55770495663ad7a21f5">cend</a> () const noexcept</td></tr>
+<tr class="memdesc:a6b367343d222b55770495663ad7a21f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the end iterator for the sequence of registered buffers.  <a href="classasio_1_1buffer__registration.html#a6b367343d222b55770495663ad7a21f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6b367343d222b55770495663ad7a21f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaadfa8d8bc08a719d92ec96a85eb7f1c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#aaadfa8d8bc08a719d92ec96a85eb7f1c">operator[]</a> (std::size_t i) noexcept</td></tr>
+<tr class="memdesc:aaadfa8d8bc08a719d92ec96a85eb7f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer at the specified index.  <a href="classasio_1_1buffer__registration.html#aaadfa8d8bc08a719d92ec96a85eb7f1c">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaadfa8d8bc08a719d92ec96a85eb7f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34b87c96075703a307ec1a556a04fa6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffer__registration.html#af34b87c96075703a307ec1a556a04fa6">at</a> (std::size_t i) noexcept</td></tr>
+<tr class="memdesc:af34b87c96075703a307ec1a556a04fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer at the specified index.  <a href="classasio_1_1buffer__registration.html#af34b87c96075703a307ec1a556a04fa6">Подробнее...</a><br /></td></tr>
+<tr class="separator:af34b87c96075703a307ec1a556a04fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename MutableBufferSequence, typename Allocator = std::allocator&lt;void&gt;&gt;<br />
+class asio::buffer_registration&lt; MutableBufferSequence, Allocator &gt;</h3>
+
+<p>Automatically registers and unregistered buffers with an execution context. </p>
+<p>For portability, applications should assume that only one registration is permitted per execution context. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a8de9876c4da6b9681ce4e2621ae50031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de9876c4da6b9681ce4e2621ae50031">&#9670;&nbsp;</a></span>allocator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Allocator <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::<a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The allocator type used for allocating storage for the buffers container. </p>
+
+</div>
+</div>
+<a id="aaabdb0adfa1358bcecf745d2ba4273fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaabdb0adfa1358bcecf745d2ba4273fe">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a>&gt;::<a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a> <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::<a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5137e8efb09de04c0f1d2057bfac8245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5137e8efb09de04c0f1d2057bfac8245">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a>&gt;::<a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a> <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::<a class="el" href="classasio_1_1buffer__registration.html#a5137e8efb09de04c0f1d2057bfac8245">iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="af8de242b4f299db53d91152c95aa58a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8de242b4f299db53d91152c95aa58a3">&#9670;&nbsp;</a></span>buffer_registration() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::<a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Executor &amp;&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MutableBufferSequence &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sequence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>alloc</em> = <code><a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; <a class="el" href="structasio_1_1is__executor.html">is_executor</a>&lt; Executor &gt;::value||<a class="el" href="structasio_1_1execution_1_1is__executor.html">execution::is_executor</a>&lt; Executor &gt;::value &gt;&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register buffers with an executor's execution context. </p>
+
+</div>
+</div>
+<a id="a3a586e98879ce7ef803f20e0651a9642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a586e98879ce7ef803f20e0651a9642">&#9670;&nbsp;</a></span>buffer_registration() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename ExecutionContext &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::<a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a> </td>
+          <td>(</td>
+          <td class="paramtype">ExecutionContext &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MutableBufferSequence &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sequence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>alloc</em> = <code><a class="el" href="classasio_1_1buffer__registration.html#a8de9876c4da6b9681ce4e2621ae50031">allocator_type</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; is_convertible&lt; ExecutionContext &amp;, <a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp; &gt;::value &gt;&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register buffers with an execution context. </p>
+
+</div>
+</div>
+<a id="af7798326928ec9c7ef5ad5338cb22300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7798326928ec9c7ef5ad5338cb22300">&#9670;&nbsp;</a></span>buffer_registration() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::<a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. </p>
+
+</div>
+</div>
+<a id="a53998b5b0f51b35c904966f5d0f15036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53998b5b0f51b35c904966f5d0f15036">&#9670;&nbsp;</a></span>~buffer_registration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::~<a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unregisters the buffers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af34b87c96075703a307ec1a556a04fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34b87c96075703a307ec1a556a04fa6">&#9670;&nbsp;</a></span>at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a>&amp; <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the buffer at the specified index. </p>
+
+</div>
+</div>
+<a id="ae57269881ab52906c39fdb0ba2e83e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57269881ab52906c39fdb0ba2e83e54">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a> <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the begin iterator for the sequence of registered buffers. </p>
+
+</div>
+</div>
+<a id="aae807315a49e7967844469ef95c4f009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae807315a49e7967844469ef95c4f009">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a> <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the begin iterator for the sequence of registered buffers. </p>
+
+</div>
+</div>
+<a id="a6b367343d222b55770495663ad7a21f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b367343d222b55770495663ad7a21f5">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a> <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the end iterator for the sequence of registered buffers. </p>
+
+</div>
+</div>
+<a id="a11b3d9f777f8b0bd8296fcdff9a27966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b3d9f777f8b0bd8296fcdff9a27966">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html#aaabdb0adfa1358bcecf745d2ba4273fe">const_iterator</a> <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the end iterator for the sequence of registered buffers. </p>
+
+</div>
+</div>
+<a id="a28d65043339330bb4e10fd40e5fd6533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d65043339330bb4e10fd40e5fd6533">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a>&amp; <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1buffer__registration.html">buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment. </p>
+
+</div>
+</div>
+<a id="aaadfa8d8bc08a719d92ec96a85eb7f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaadfa8d8bc08a719d92ec96a85eb7f1c">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">mutable_registered_buffer</a>&amp; <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the buffer at the specified index. </p>
+
+</div>
+</div>
+<a id="aa5303e55ab4d7bfe32e8dad2b402abd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5303e55ab4d7bfe32e8dad2b402abd4">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MutableBufferSequence , typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1buffer__registration.html">asio::buffer_registration</a>&lt; MutableBufferSequence, Allocator &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of registered buffers. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="buffer__registration_8hpp_source.html">buffer_registration.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

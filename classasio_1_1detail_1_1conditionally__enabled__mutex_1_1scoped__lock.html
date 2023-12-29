@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::detail::conditionally_enabled_mutex::scoped_lock</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex.html">conditionally_enabled_mutex</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html">scoped_lock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::detail::conditionally_enabled_mutex::scoped_lock</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="conditionally__enabled__mutex_8hpp_source.html">conditionally_enabled_mutex.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::conditionally_enabled_mutex::scoped_lock:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock_inherit__map" id="aasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,224,121"/>
+<area shape="rect" href="classasio_1_1detail_1_1noncopyable.html" title=" " alt="" coords="22,5,207,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::detail::conditionally_enabled_mutex::scoped_lock:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock__coll__graph.png" border="0" usemap="#aasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock_coll__map" id="aasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,224,121"/>
+<area shape="rect" href="classasio_1_1detail_1_1noncopyable.html" title=" " alt="" coords="22,5,207,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ac579c2dea9b3b09ba585b5abefc829e7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#ac579c2dea9b3b09ba585b5abefc829e7">adopt_lock_t</a> { <a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#ac579c2dea9b3b09ba585b5abefc829e7acbea55baa2cb38a2ae4ae8800eaa8fe1">adopt_lock</a>
+ }</td></tr>
+<tr class="separator:ac579c2dea9b3b09ba585b5abefc829e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1d59142c0b199ad17074d43b5e863435"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#a1d59142c0b199ad17074d43b5e863435">scoped_lock</a> (<a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex.html">conditionally_enabled_mutex</a> &amp;m, <a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#ac579c2dea9b3b09ba585b5abefc829e7">adopt_lock_t</a>)</td></tr>
+<tr class="separator:a1d59142c0b199ad17074d43b5e863435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0250760b61560d4c7624e1129d261f25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#a0250760b61560d4c7624e1129d261f25">scoped_lock</a> (<a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex.html">conditionally_enabled_mutex</a> &amp;m)</td></tr>
+<tr class="separator:a0250760b61560d4c7624e1129d261f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ac98968160045899e69e45ba7d32e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#a68ac98968160045899e69e45ba7d32e0">~scoped_lock</a> ()</td></tr>
+<tr class="separator:a68ac98968160045899e69e45ba7d32e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2052d74208d6ce3b37cf9bc1ee3a9b08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#a2052d74208d6ce3b37cf9bc1ee3a9b08">lock</a> ()</td></tr>
+<tr class="separator:a2052d74208d6ce3b37cf9bc1ee3a9b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb8992cb79f403b2126ea85d67b2cac1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#aeb8992cb79f403b2126ea85d67b2cac1">unlock</a> ()</td></tr>
+<tr class="separator:aeb8992cb79f403b2126ea85d67b2cac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadba3947a6ff6f30d37cf7aa56d3fb0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#aadba3947a6ff6f30d37cf7aa56d3fb0d">locked</a> () const</td></tr>
+<tr class="separator:aadba3947a6ff6f30d37cf7aa56d3fb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67771dab8d9a9e183ea7d5201912a0d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1detail.html#a5740d9cd098ece66556d1e8644cf3060">asio::detail::mutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#a67771dab8d9a9e183ea7d5201912a0d6">mutex</a> ()</td></tr>
+<tr class="separator:a67771dab8d9a9e183ea7d5201912a0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a5710308986677ba04752a56884691a33"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#a5710308986677ba04752a56884691a33">conditionally_enabled_event</a></td></tr>
+<tr class="separator:a5710308986677ba04752a56884691a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ac579c2dea9b3b09ba585b5abefc829e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac579c2dea9b3b09ba585b5abefc829e7">&#9670;&nbsp;</a></span>adopt_lock_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#ac579c2dea9b3b09ba585b5abefc829e7">asio::detail::conditionally_enabled_mutex::scoped_lock::adopt_lock_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac579c2dea9b3b09ba585b5abefc829e7acbea55baa2cb38a2ae4ae8800eaa8fe1"></a>adopt_lock&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1d59142c0b199ad17074d43b5e863435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d59142c0b199ad17074d43b5e863435">&#9670;&nbsp;</a></span>scoped_lock() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::detail::conditionally_enabled_mutex::scoped_lock::scoped_lock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex.html">conditionally_enabled_mutex</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex_1_1scoped__lock.html#ac579c2dea9b3b09ba585b5abefc829e7">adopt_lock_t</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0250760b61560d4c7624e1129d261f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0250760b61560d4c7624e1129d261f25">&#9670;&nbsp;</a></span>scoped_lock() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::detail::conditionally_enabled_mutex::scoped_lock::scoped_lock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1conditionally__enabled__mutex.html">conditionally_enabled_mutex</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68ac98968160045899e69e45ba7d32e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ac98968160045899e69e45ba7d32e0">&#9670;&nbsp;</a></span>~scoped_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::detail::conditionally_enabled_mutex::scoped_lock::~scoped_lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2052d74208d6ce3b37cf9bc1ee3a9b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2052d74208d6ce3b37cf9bc1ee3a9b08">&#9670;&nbsp;</a></span>lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::conditionally_enabled_mutex::scoped_lock::lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadba3947a6ff6f30d37cf7aa56d3fb0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadba3947a6ff6f30d37cf7aa56d3fb0d">&#9670;&nbsp;</a></span>locked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool asio::detail::conditionally_enabled_mutex::scoped_lock::locked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67771dab8d9a9e183ea7d5201912a0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67771dab8d9a9e183ea7d5201912a0d6">&#9670;&nbsp;</a></span>mutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1detail.html#a5740d9cd098ece66556d1e8644cf3060">asio::detail::mutex</a>&amp; asio::detail::conditionally_enabled_mutex::scoped_lock::mutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb8992cb79f403b2126ea85d67b2cac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8992cb79f403b2126ea85d67b2cac1">&#9670;&nbsp;</a></span>unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::conditionally_enabled_mutex::scoped_lock::unlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a5710308986677ba04752a56884691a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5710308986677ba04752a56884691a33">&#9670;&nbsp;</a></span>conditionally_enabled_event</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1detail_1_1conditionally__enabled__event.html">conditionally_enabled_event</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="conditionally__enabled__mutex_8hpp_source.html">conditionally_enabled_mutex.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

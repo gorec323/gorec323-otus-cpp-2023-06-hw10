@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/experimental/co_composed.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li><li class="navelem"><a class="el" href="dir_d2a7bc7eac127ca5321f8c6bdb181c49.html">experimental</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл co_composed.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="co__composed_8hpp_source.html">asio/experimental/co_composed.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bind__cancellation__slot_8hpp_source.html">asio/bind_cancellation_slot.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="deferred_8hpp_source.html">asio/deferred.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="detached_8hpp_source.html">asio/detached.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8hpp_source.html">asio/io_context.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="post_8hpp_source.html">asio/post.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">../unit_test.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для co_composed.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="co__composed_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2experimental_2co__composed_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2experimental_2co__composed_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2experimental_2co__composed_8cpp">
+<area shape="rect" title=" " alt="" coords="1866,5,2067,61"/>
+<area shape="rect" href="co__composed_8hpp.html" title=" " alt="" coords="2454,109,2613,151"/>
+<area shape="rect" href="bind__cancellation__slot_8hpp.html" title=" " alt="" coords="1883,199,2050,240"/>
+<area shape="rect" href="deferred_8hpp.html" title=" " alt="" coords="1415,295,1551,322"/>
+<area shape="rect" href="detached_8hpp.html" title=" " alt="" coords="1717,206,1859,233"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="4740,117,4889,143"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="808,117,917,143"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="5671,295,5790,322"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3791,556,3953,583"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="1333,385,1496,411"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="3293,474,3501,501"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2139,474,2341,501"/>
+<area shape="rect" href="impl_2co__composed_8hpp.html" title=" " alt="" coords="2615,199,2788,240"/>
+<area shape="rect" title=" " alt="" coords="4841,631,4911,657"/>
+<area shape="rect" title=" " alt="" coords="3887,631,4017,657"/>
+<area shape="rect" title=" " alt="" coords="3724,631,3863,657"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="720,474,912,501"/>
+<area shape="rect" title=" " alt="" coords="4427,474,4477,501"/>
+<area shape="rect" title=" " alt="" coords="1622,385,1677,411"/>
+<area shape="rect" title=" " alt="" coords="2529,295,2597,322"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="2130,288,2339,329"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="1853,385,2000,411"/>
+<area shape="rect" href="cancellation__state_8hpp.html" title=" " alt="" coords="3917,385,4117,411"/>
+<area shape="rect" href="composed__work_8hpp.html" title=" " alt="" coords="2621,288,2782,329"/>
+<area shape="rect" href="detail_2recycling__allocator_8hpp.html" title=" " alt="" coords="3486,377,3639,419"/>
+<area shape="rect" href="throw__error_8hpp.html" title=" " alt="" coords="4105,295,4301,322"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="3918,295,4029,322"/>
+<area shape="rect" title=" " alt="" coords="3363,295,3538,322"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="1005,385,1208,411"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="2624,385,2779,411"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="4294,385,4445,411"/>
+<area shape="rect" href="utility_8hpp.html" title=" " alt="" coords="421,474,579,501"/>
+<area shape="rect" href="impl_2deferred_8hpp.html" title=" " alt="" coords="2329,385,2498,411"/>
+<area shape="rect" title=" " alt="" coords="1775,295,1852,322"/>
+<area shape="rect" href="impl_2detached_8hpp.html" title=" " alt="" coords="1575,295,1750,322"/>
+<area shape="rect" title=" " alt="" coords="4914,474,5001,501"/>
+<area shape="rect" title=" " alt="" coords="5025,474,5101,501"/>
+<area shape="rect" href="chrono_8hpp.html" title=" " alt="" coords="5125,474,5291,501"/>
+<area shape="rect" href="concurrency__hint_8hpp.html" title=" " alt="" coords="5316,467,5489,508"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="5314,206,5481,233"/>
+<area shape="rect" href="wrapped__handler_8hpp.html" title=" " alt="" coords="3107,377,3258,419"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="791,206,935,233"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="4875,385,5075,411"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="4723,295,4907,322"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="4111,206,4294,233"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="468,295,671,322"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="449,385,575,411"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="5452,377,5591,419"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="575,199,715,240"/>
+<area shape="rect" title=" " alt="" coords="5716,385,5796,411"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af801caa0803ded257cb30000090aa864"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#af801caa0803ded257cb30000090aa864">BOOST_SYSTEM_NO_DEPRECATED</a></td></tr>
+<tr class="separator:af801caa0803ded257cb30000090aa864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ada249de4bcdf033a47510b9afbfd7c44"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:ada249de4bcdf033a47510b9afbfd7c44"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#ada249de4bcdf033a47510b9afbfd7c44">async_throw</a> (CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:ada249de4bcdf033a47510b9afbfd7c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5897fa0e171a548436a1b48f87e30a0"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:aa5897fa0e171a548436a1b48f87e30a0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#aa5897fa0e171a548436a1b48f87e30a0">throw_first</a> (CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:aa5897fa0e171a548436a1b48f87e30a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5b823ea5eaf4d0436046c95e974cab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a8e5b823ea5eaf4d0436046c95e974cab">test_throw_first</a> ()</td></tr>
+<tr class="separator:a8e5b823ea5eaf4d0436046c95e974cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28dd786f229afe83c2ed2e57ede6bd80"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a28dd786f229afe83c2ed2e57ede6bd80"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a28dd786f229afe83c2ed2e57ede6bd80">throw_after_await</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a28dd786f229afe83c2ed2e57ede6bd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebbfdf16c26b24dac6de6a769c98dfb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#aebbfdf16c26b24dac6de6a769c98dfb8">test_throw_after_await</a> ()</td></tr>
+<tr class="separator:aebbfdf16c26b24dac6de6a769c98dfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9a705a284bae356e000ebf17bab16e"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a7b9a705a284bae356e000ebf17bab16e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a7b9a705a284bae356e000ebf17bab16e">throw_in_first_suspend</a> (CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a7b9a705a284bae356e000ebf17bab16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ccefac8486df4e02fd582c94ce1d3e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a4ccefac8486df4e02fd582c94ce1d3e0">test_throw_in_first_suspend</a> ()</td></tr>
+<tr class="separator:a4ccefac8486df4e02fd582c94ce1d3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15759a82c94d8809ce75d1d7015d29c4"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a15759a82c94d8809ce75d1d7015d29c4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a15759a82c94d8809ce75d1d7015d29c4">throw_in_suspend_after_await</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a15759a82c94d8809ce75d1d7015d29c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307f429a18d6e189ba7d98acaba54f24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a307f429a18d6e189ba7d98acaba54f24">test_throw_in_suspend_after_await</a> ()</td></tr>
+<tr class="separator:a307f429a18d6e189ba7d98acaba54f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d1f2fc30e3bb29ab9aa6899fb336f02"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a2d1f2fc30e3bb29ab9aa6899fb336f02"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a2d1f2fc30e3bb29ab9aa6899fb336f02">post_loop</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a2d1f2fc30e3bb29ab9aa6899fb336f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d0fb215b9c84e9c1731303686c78c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#ae1d0fb215b9c84e9c1731303686c78c0">test_post_loop</a> ()</td></tr>
+<tr class="separator:ae1d0fb215b9c84e9c1731303686c78c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350edacba9b9e58c25e53fa1a9c9c195"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a350edacba9b9e58c25e53fa1a9c9c195"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a350edacba9b9e58c25e53fa1a9c9c195">nested_post</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a350edacba9b9e58c25e53fa1a9c9c195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0d46782a3506c8e674a0ed948ebcf8"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:afc0d46782a3506c8e674a0ed948ebcf8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#afc0d46782a3506c8e674a0ed948ebcf8">nested_post_loop</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:afc0d46782a3506c8e674a0ed948ebcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82666b0c490214b07a321a84bda13f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a82666b0c490214b07a321a84bda13f5a">test_nested_post_loop</a> ()</td></tr>
+<tr class="separator:a82666b0c490214b07a321a84bda13f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646a5e0cece35e0361ee0a218f202de1"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a646a5e0cece35e0361ee0a218f202de1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a646a5e0cece35e0361ee0a218f202de1">post_loop_return_1_0</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a646a5e0cece35e0361ee0a218f202de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6186bf73591a4749c3e261db93eb1cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a6186bf73591a4749c3e261db93eb1cb5">test_post_loop_return_1_0</a> ()</td></tr>
+<tr class="separator:a6186bf73591a4749c3e261db93eb1cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab584eee93a74bf9c4410477dbb62cfbf"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:ab584eee93a74bf9c4410477dbb62cfbf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#ab584eee93a74bf9c4410477dbb62cfbf">post_loop_return_1_1</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:ab584eee93a74bf9c4410477dbb62cfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4f9458442de4a6fd26cf90cca864a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a2d4f9458442de4a6fd26cf90cca864a4">test_post_loop_return_1_1</a> ()</td></tr>
+<tr class="separator:a2d4f9458442de4a6fd26cf90cca864a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae8e3749f91d7bdb9d91c1d83e7c4ef"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a2ae8e3749f91d7bdb9d91c1d83e7c4ef"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a2ae8e3749f91d7bdb9d91c1d83e7c4ef">post_loop_return_1_2</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a2ae8e3749f91d7bdb9d91c1d83e7c4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698d8c0c644609c9a71d42ee49f85b7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a698d8c0c644609c9a71d42ee49f85b7a">test_post_loop_return_1_2</a> ()</td></tr>
+<tr class="separator:a698d8c0c644609c9a71d42ee49f85b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c101113243c9b4f8f3bd4ac5ebe016"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a69c101113243c9b4f8f3bd4ac5ebe016"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a69c101113243c9b4f8f3bd4ac5ebe016">post_loop_return_2</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a69c101113243c9b4f8f3bd4ac5ebe016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7d7d5e965092b35b5fe4307e511737"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a1b7d7d5e965092b35b5fe4307e511737">test_post_loop_return_2</a> ()</td></tr>
+<tr class="separator:a1b7d7d5e965092b35b5fe4307e511737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1de01afaa5959314ce56b518aa96b18"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:ad1de01afaa5959314ce56b518aa96b18"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#ad1de01afaa5959314ce56b518aa96b18">complete_on_cancel</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:ad1de01afaa5959314ce56b518aa96b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37720006c510285b01869e4f7ad6f637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a37720006c510285b01869e4f7ad6f637">test_complete_on_cancel</a> ()</td></tr>
+<tr class="separator:a37720006c510285b01869e4f7ad6f637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcd4f391d5789a044be088ea6dfc87e"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a9dcd4f391d5789a044be088ea6dfc87e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a9dcd4f391d5789a044be088ea6dfc87e">complete_with_default_on_cancel</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a9dcd4f391d5789a044be088ea6dfc87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243a207f012fdebb0dc7c355a4cc9d4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a243a207f012fdebb0dc7c355a4cc9d4a">test_complete_with_default_on_cancel</a> ()</td></tr>
+<tr class="separator:a243a207f012fdebb0dc7c355a4cc9d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da4c5eacc0202076e35e8c55ab5313c"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken &gt; </td></tr>
+<tr class="memitem:a4da4c5eacc0202076e35e8c55ab5313c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a4da4c5eacc0202076e35e8c55ab5313c">throw_on_cancel</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;ctx, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a4da4c5eacc0202076e35e8c55ab5313c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e59e4a84da6935f6e28a7c4885afec0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="co__composed_8cpp.html#a3e59e4a84da6935f6e28a7c4885afec0">test_throw_on_cancel</a> ()</td></tr>
+<tr class="separator:a3e59e4a84da6935f6e28a7c4885afec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af801caa0803ded257cb30000090aa864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af801caa0803ded257cb30000090aa864">&#9670;&nbsp;</a></span>BOOST_SYSTEM_NO_DEPRECATED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_SYSTEM_NO_DEPRECATED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ada249de4bcdf033a47510b9afbfd7c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada249de4bcdf033a47510b9afbfd7c44">&#9670;&nbsp;</a></span>async_throw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto async_throw </td>
+          <td>(</td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1de01afaa5959314ce56b518aa96b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1de01afaa5959314ce56b518aa96b18">&#9670;&nbsp;</a></span>complete_on_cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto complete_on_cancel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dcd4f391d5789a044be088ea6dfc87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dcd4f391d5789a044be088ea6dfc87e">&#9670;&nbsp;</a></span>complete_with_default_on_cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto complete_with_default_on_cancel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a350edacba9b9e58c25e53fa1a9c9c195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350edacba9b9e58c25e53fa1a9c9c195">&#9670;&nbsp;</a></span>nested_post()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto nested_post </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc0d46782a3506c8e674a0ed948ebcf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0d46782a3506c8e674a0ed948ebcf8">&#9670;&nbsp;</a></span>nested_post_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto nested_post_loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d1f2fc30e3bb29ab9aa6899fb336f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1f2fc30e3bb29ab9aa6899fb336f02">&#9670;&nbsp;</a></span>post_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto post_loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a646a5e0cece35e0361ee0a218f202de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646a5e0cece35e0361ee0a218f202de1">&#9670;&nbsp;</a></span>post_loop_return_1_0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto post_loop_return_1_0 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab584eee93a74bf9c4410477dbb62cfbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab584eee93a74bf9c4410477dbb62cfbf">&#9670;&nbsp;</a></span>post_loop_return_1_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto post_loop_return_1_1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ae8e3749f91d7bdb9d91c1d83e7c4ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae8e3749f91d7bdb9d91c1d83e7c4ef">&#9670;&nbsp;</a></span>post_loop_return_1_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto post_loop_return_1_2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69c101113243c9b4f8f3bd4ac5ebe016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c101113243c9b4f8f3bd4ac5ebe016">&#9670;&nbsp;</a></span>post_loop_return_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto post_loop_return_2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37720006c510285b01869e4f7ad6f637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37720006c510285b01869e4f7ad6f637">&#9670;&nbsp;</a></span>test_complete_on_cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_complete_on_cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a243a207f012fdebb0dc7c355a4cc9d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243a207f012fdebb0dc7c355a4cc9d4a">&#9670;&nbsp;</a></span>test_complete_with_default_on_cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_complete_with_default_on_cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82666b0c490214b07a321a84bda13f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82666b0c490214b07a321a84bda13f5a">&#9670;&nbsp;</a></span>test_nested_post_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_nested_post_loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1d0fb215b9c84e9c1731303686c78c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d0fb215b9c84e9c1731303686c78c0">&#9670;&nbsp;</a></span>test_post_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_post_loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6186bf73591a4749c3e261db93eb1cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6186bf73591a4749c3e261db93eb1cb5">&#9670;&nbsp;</a></span>test_post_loop_return_1_0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_post_loop_return_1_0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d4f9458442de4a6fd26cf90cca864a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4f9458442de4a6fd26cf90cca864a4">&#9670;&nbsp;</a></span>test_post_loop_return_1_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_post_loop_return_1_1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a698d8c0c644609c9a71d42ee49f85b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a698d8c0c644609c9a71d42ee49f85b7a">&#9670;&nbsp;</a></span>test_post_loop_return_1_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_post_loop_return_1_2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b7d7d5e965092b35b5fe4307e511737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7d7d5e965092b35b5fe4307e511737">&#9670;&nbsp;</a></span>test_post_loop_return_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_post_loop_return_2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebbfdf16c26b24dac6de6a769c98dfb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebbfdf16c26b24dac6de6a769c98dfb8">&#9670;&nbsp;</a></span>test_throw_after_await()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_throw_after_await </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e5b823ea5eaf4d0436046c95e974cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5b823ea5eaf4d0436046c95e974cab">&#9670;&nbsp;</a></span>test_throw_first()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_throw_first </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ccefac8486df4e02fd582c94ce1d3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ccefac8486df4e02fd582c94ce1d3e0">&#9670;&nbsp;</a></span>test_throw_in_first_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_throw_in_first_suspend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a307f429a18d6e189ba7d98acaba54f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307f429a18d6e189ba7d98acaba54f24">&#9670;&nbsp;</a></span>test_throw_in_suspend_after_await()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_throw_in_suspend_after_await </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e59e4a84da6935f6e28a7c4885afec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e59e4a84da6935f6e28a7c4885afec0">&#9670;&nbsp;</a></span>test_throw_on_cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_throw_on_cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28dd786f229afe83c2ed2e57ede6bd80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28dd786f229afe83c2ed2e57ede6bd80">&#9670;&nbsp;</a></span>throw_after_await()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto throw_after_await </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5897fa0e171a548436a1b48f87e30a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5897fa0e171a548436a1b48f87e30a0">&#9670;&nbsp;</a></span>throw_first()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto throw_first </td>
+          <td>(</td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b9a705a284bae356e000ebf17bab16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9a705a284bae356e000ebf17bab16e">&#9670;&nbsp;</a></span>throw_in_first_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto throw_in_first_suspend </td>
+          <td>(</td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15759a82c94d8809ce75d1d7015d29c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15759a82c94d8809ce75d1d7015d29c4">&#9670;&nbsp;</a></span>throw_in_suspend_after_await()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto throw_in_suspend_after_await </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4da4c5eacc0202076e35e8c55ab5313c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da4c5eacc0202076e35e8c55ab5313c">&#9670;&nbsp;</a></span>throw_on_cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto throw_on_cancel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

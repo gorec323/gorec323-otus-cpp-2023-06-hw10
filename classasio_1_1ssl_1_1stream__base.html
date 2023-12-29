@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::ssl::stream_base</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ssl.html">ssl</a></li><li class="navelem"><a class="el" href="classasio_1_1ssl_1_1stream__base.html">stream_base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="classasio_1_1ssl_1_1stream__base-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::ssl::stream_base</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="stream__base_8hpp_source.html">stream_base.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::ssl::stream_base:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1ssl_1_1stream__base__inherit__graph.png" border="0" usemap="#aasio_1_1ssl_1_1stream__base_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1ssl_1_1stream__base_inherit__map" id="aasio_1_1ssl_1_1stream__base_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,115,172,142"/>
+<area shape="rect" href="classasio_1_1ssl_1_1stream.html" title=" " alt="" coords="220,5,387,47"/>
+<area shape="rect" href="classasio_1_1ssl_1_1stream.html" title=" " alt="" coords="233,71,373,112"/>
+<area shape="rect" href="classasio_1_1ssl_1_1stream.html" title=" " alt="" coords="229,137,377,193"/>
+<area shape="rect" href="classasio_1_1ssl_1_1stream.html" title="Provides stream&#45;oriented functionality using SSL." alt="" coords="233,217,373,259"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a2f18813d3860bc8aee99249834d7c320"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320">handshake_type</a> { <a class="el" href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320a68134fb041cb11ffe46e248ed1e1d73f">client</a>
+, <a class="el" href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320a2f9bac13b8adb5945e7436945061d090">server</a>
+ }</td></tr>
+<tr class="memdesc:a2f18813d3860bc8aee99249834d7c320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Different handshake types.  <a href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2f18813d3860bc8aee99249834d7c320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:af44f60fc18949a1235701c7ab76848b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1stream__base.html#af44f60fc18949a1235701c7ab76848b8">~stream_base</a> ()</td></tr>
+<tr class="memdesc:af44f60fc18949a1235701c7ab76848b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected destructor to prevent deletion through this type.  <a href="classasio_1_1ssl_1_1stream__base.html#af44f60fc18949a1235701c7ab76848b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:af44f60fc18949a1235701c7ab76848b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>The <a class="el" href="classasio_1_1ssl_1_1stream__base.html">stream_base</a> class is used as a base for the <a class="el" href="classasio_1_1ssl_1_1stream.html" title="Provides stream-oriented functionality using SSL.">asio::ssl::stream</a> class template so that we have a common place to define various enums. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a2f18813d3860bc8aee99249834d7c320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f18813d3860bc8aee99249834d7c320">&#9670;&nbsp;</a></span>handshake_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320">asio::ssl::stream_base::handshake_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Different handshake types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a2f18813d3860bc8aee99249834d7c320a68134fb041cb11ffe46e248ed1e1d73f"></a>client&#160;</td><td class="fielddoc"><p>Perform handshaking as a client. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f18813d3860bc8aee99249834d7c320a2f9bac13b8adb5945e7436945061d090"></a>server&#160;</td><td class="fielddoc"><p>Perform handshaking as a server. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="af44f60fc18949a1235701c7ab76848b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af44f60fc18949a1235701c7ab76848b8">&#9670;&nbsp;</a></span>~stream_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::ssl::stream_base::~stream_base </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Protected destructor to prevent deletion through this type. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/ssl/<a class="el" href="stream__base_8hpp_source.html">stream_base.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

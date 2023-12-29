@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура asio::detail::thread_info_base::cancellation_signal_tag</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html">thread_info_base</a></li><li class="navelem"><a class="el" href="structasio_1_1detail_1_1thread__info__base_1_1cancellation__signal__tag.html">cancellation_signal_tag</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="structasio_1_1detail_1_1thread__info__base_1_1cancellation__signal__tag-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура asio::detail::thread_info_base::cancellation_signal_tag</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="thread__info__base_8hpp_source.html">thread_info_base.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a01836bf713f9e2aae3d8a4c4c0f6ae03"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="structasio_1_1detail_1_1thread__info__base_1_1cancellation__signal__tag.html#a01836bf713f9e2aae3d8a4c4c0f6ae03abf509658d26f97d205cde12bd1c35361">cache_size</a> = ASIO_RECYCLING_ALLOCATOR_CACHE_SIZE
+, <a class="el" href="structasio_1_1detail_1_1thread__info__base_1_1cancellation__signal__tag.html#a01836bf713f9e2aae3d8a4c4c0f6ae03ae5b0083660bf7ce02acbbbf31d15336f">begin_mem_index</a> = executor_function_tag::end_mem_index
+, <a class="el" href="structasio_1_1detail_1_1thread__info__base_1_1cancellation__signal__tag.html#a01836bf713f9e2aae3d8a4c4c0f6ae03a19cb567096f36de7382d812861698629">end_mem_index</a> = begin_mem_index + cache_size
+ }</td></tr>
+<tr class="separator:a01836bf713f9e2aae3d8a4c4c0f6ae03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a01836bf713f9e2aae3d8a4c4c0f6ae03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01836bf713f9e2aae3d8a4c4c0f6ae03">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a01836bf713f9e2aae3d8a4c4c0f6ae03abf509658d26f97d205cde12bd1c35361"></a>cache_size&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a01836bf713f9e2aae3d8a4c4c0f6ae03ae5b0083660bf7ce02acbbbf31d15336f"></a>begin_mem_index&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a01836bf713f9e2aae3d8a4c4c0f6ae03a19cb567096f36de7382d812861698629"></a>end_mem_index&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="thread__info__base_8hpp_source.html">thread_info_base.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

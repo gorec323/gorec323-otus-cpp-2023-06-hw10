@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/impl/co_spawn.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_8c6c10ebdd857c41e2ac833cd6d1f150.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл co_spawn.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="associated__cancellation__slot_8hpp_source.html">asio/associated_cancellation_slot.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="awaitable_8hpp_source.html">asio/awaitable.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory_8hpp_source.html">asio/detail/memory.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="detail_2recycling__allocator_8hpp_source.html">asio/detail/recycling_allocator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dispatch_8hpp_source.html">asio/dispatch.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="outstanding__work_8hpp_source.html">asio/execution/outstanding_work.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="post_8hpp_source.html">asio/post.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="prefer_8hpp_source.html">asio/prefer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="use__awaitable_8hpp_source.html">asio/use_awaitable.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для co_spawn.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2co__spawn_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2impl_2co__spawn_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2impl_2co__spawn_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2impl_2co__spawn_8hpp">
+<area shape="rect" title=" " alt="" coords="4934,5,5090,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="4029,691,4190,717"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="4629,348,4838,389"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2817,616,3025,643"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3717,616,3918,643"/>
+<area shape="rect" href="awaitable_8hpp.html" title=" " alt="" coords="6203,273,6349,300"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="5983,534,6158,561"/>
+<area shape="rect" href="detail_2recycling__allocator_8hpp.html" title=" " alt="" coords="5611,348,5765,389"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="3848,109,3984,136"/>
+<area shape="rect" href="prefer_8hpp.html" title=" " alt="" coords="2027,355,2146,382"/>
+<area shape="rect" href="outstanding__work_8hpp.html" title=" " alt="" coords="1035,348,1232,389"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="2917,109,3027,136"/>
+<area shape="rect" href="use__awaitable_8hpp.html" title=" " alt="" coords="6641,191,6815,218"/>
+<area shape="rect" title=" " alt="" coords="6523,765,6594,792"/>
+<area shape="rect" title=" " alt="" coords="4125,765,4254,792"/>
+<area shape="rect" title=" " alt="" coords="3961,765,4100,792"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="4864,534,5011,561"/>
+<area shape="rect" href="cancellation__signal_8hpp.html" title=" " alt="" coords="4539,445,4746,471"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1325,616,1517,643"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="4973,445,5160,471"/>
+<area shape="rect" title=" " alt="" coords="4413,534,4483,561"/>
+<area shape="rect" title=" " alt="" coords="5491,616,5541,643"/>
+<area shape="rect" title=" " alt="" coords="4507,534,4567,561"/>
+<area shape="rect" href="cancellation__type_8hpp.html" title=" " alt="" coords="4643,534,4839,561"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="6357,616,6526,643"/>
+<area shape="rect" title=" " alt="" coords="6114,616,6179,643"/>
+<area shape="rect" title=" " alt="" coords="6204,616,6281,643"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="5617,616,5783,643"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="5807,616,6038,643"/>
+<area shape="rect" href="thread__context_8hpp.html" title=" " alt="" coords="5512,527,5648,568"/>
+<area shape="rect" href="thread__info__base_8hpp.html" title=" " alt="" coords="5871,437,6007,479"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="3187,534,3349,561"/>
+<area shape="rect" href="initiate__dispatch_8hpp.html" title=" " alt="" coords="3317,184,3457,225"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="2656,445,2859,471"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="5237,534,5437,561"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="4032,534,4187,561"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="1599,273,1801,300"/>
+<area shape="rect" href="is__applicable__property_8hpp.html" title=" " alt="" coords="411,527,549,568"/>
+<area shape="rect" href="static__require_8hpp.html" title=" " alt="" coords="1535,437,1662,479"/>
+<area shape="rect" href="static__query_8hpp.html" title=" " alt="" coords="1130,527,1257,568"/>
+<area shape="rect" href="query_8hpp.html" title=" " alt="" coords="939,445,1055,471"/>
+<area shape="rect" href="query__member_8hpp.html" title=" " alt="" coords="889,534,1106,561"/>
+<area shape="rect" href="query__free_8hpp.html" title=" " alt="" coords="624,534,813,561"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="2362,355,2489,382"/>
+<area shape="rect" href="query__static__constexpr__member_8hpp.html" title=" " alt="" coords="1687,527,1870,568"/>
+<area shape="rect" href="prefer__free_8hpp.html" title=" " alt="" coords="1945,527,2076,568"/>
+<area shape="rect" href="prefer__member_8hpp.html" title=" " alt="" coords="2201,527,2332,568"/>
+<area shape="rect" href="require__free_8hpp.html" title=" " alt="" coords="2357,527,2494,568"/>
+<area shape="rect" href="require__member_8hpp.html" title=" " alt="" coords="2518,527,2655,568"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="2769,184,2909,225"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2co__spawn_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1co__spawn__work__guard.html">asio::detail::co_spawn_work_guard&lt; Executor, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1co__spawn__work__guard_3_01Executor_00_01enable__if__t_3_01_9execution_1da3b335eb07815b1718087023d3c9c73.html">asio::detail::co_spawn_work_guard&lt; Executor, enable_if_t&lt; !execution::is_executor&lt; Executor &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1co__spawn__state.html">asio::detail::co_spawn_state&lt; Handler, Executor, Function, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1co__spawn__state_3_01Handler_00_01Executor_00_01Function_00_01enable__if006c13fe8c6fc1e8c1e2250470cdade5.html">asio::detail::co_spawn_state&lt; Handler, Executor, Function, enable_if_t&lt; is_same&lt; typename associated_executor&lt; Handler, Executor &gt;::asio_associated_executor_is_unspecialised, void &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1co__spawn__dispatch.html">asio::detail::co_spawn_dispatch</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1co__spawn__post.html">asio::detail::co_spawn_post</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1awaitable__as__function.html">asio::detail::awaitable_as_function&lt; T, Executor &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1co__spawn__cancellation__handler.html">asio::detail::co_spawn_cancellation_handler&lt; Handler, Executor, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1co__spawn__cancellation__handler_3_01Handler_00_01Executor_00_01enable__idcee91c0afe1be6368b36bc353559d4c.html">asio::detail::co_spawn_cancellation_handler&lt; Handler, Executor, enable_if_t&lt; is_same&lt; typename associated_executor&lt; Handler, Executor &gt;::asio_associated_executor_is_unspecialised, void &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1initiate__co__spawn.html">asio::detail::initiate_co_spawn&lt; Executor &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a93a9bfcb8595f701703b087437d3975c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Handler , typename Executor , typename Function &gt; </td></tr>
+<tr class="memitem:a93a9bfcb8595f701703b087437d3975c"><td class="memTemplItemLeft" align="right" valign="top">awaitable&lt; awaitable_thread_entry_point, Executor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a93a9bfcb8595f701703b087437d3975c">asio::detail::co_spawn_entry_point</a> (awaitable&lt; T, Executor &gt; *, co_spawn_state&lt; Handler, Executor, Function &gt; <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>)</td></tr>
+<tr class="separator:a93a9bfcb8595f701703b087437d3975c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c73dacc3f75222334cd5bbcf880bdd"><td class="memTemplParams" colspan="2">template&lt;typename Handler , typename Executor , typename Function &gt; </td></tr>
+<tr class="memitem:a58c73dacc3f75222334cd5bbcf880bdd"><td class="memTemplItemLeft" align="right" valign="top">awaitable&lt; awaitable_thread_entry_point, Executor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a58c73dacc3f75222334cd5bbcf880bdd">asio::detail::co_spawn_entry_point</a> (awaitable&lt; <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>, Executor &gt; *, co_spawn_state&lt; Handler, Executor, Function &gt; <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>)</td></tr>
+<tr class="separator:a58c73dacc3f75222334cd5bbcf880bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0d72619732becbd6a8aa9a1a831ca2"><td class="memTemplParams" colspan="2">template&lt;typename Executor , typename T , typename AwaitableExecutor , ASIO_COMPLETION_TOKEN_FOR(void(std::exception_ptr, T)) CompletionToken&gt; </td></tr>
+<tr class="memitem:a7c0d72619732becbd6a8aa9a1a831ca2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a7c0d72619732becbd6a8aa9a1a831ca2">asio::ASIO_INITFN_AUTO_RESULT_TYPE</a> (CompletionToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(std::exception_ptr, T)) co_spawn(const Executor &amp;ex</td></tr>
+<tr class="separator:a7c0d72619732becbd6a8aa9a1a831ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcd6e783eb9d5fd4691c2cfa3e40f43"><td class="memTemplParams" colspan="2">template&lt;typename Executor , typename AwaitableExecutor , ASIO_COMPLETION_TOKEN_FOR(void(std::exception_ptr)) CompletionToken&gt; </td></tr>
+<tr class="memitem:a5bcd6e783eb9d5fd4691c2cfa3e40f43"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a5bcd6e783eb9d5fd4691c2cfa3e40f43">asio::ASIO_INITFN_AUTO_RESULT_TYPE</a> (CompletionToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(std::exception_ptr)) co_spawn(const Executor &amp;ex</td></tr>
+<tr class="separator:a5bcd6e783eb9d5fd4691c2cfa3e40f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280ea30802ca4f92b837d51ef9c60ee5"><td class="memTemplParams" colspan="2">template&lt;typename Executor , typename F , ASIO_COMPLETION_TOKEN_FOR(typename detail::awaitable_signature&lt; result_of_t&lt; F()&gt;&gt;::type) CompletionToken&gt; </td></tr>
+<tr class="memitem:a280ea30802ca4f92b837d51ef9c60ee5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a280ea30802ca4f92b837d51ef9c60ee5">asio::ASIO_INITFN_AUTO_RESULT_TYPE</a> (CompletionToken, typename detail::awaitable_signature&lt; result_of_t&lt; F()&gt;&gt;::type) co_spawn(const Executor &amp;ex</td></tr>
+<tr class="separator:a280ea30802ca4f92b837d51ef9c60ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:aa80c4033469ae5aaa092c0d49852403c"><td class="memItemLeft" align="right" valign="top">awaitable&lt; T, AwaitableExecutor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">asio::a</a></td></tr>
+<tr class="separator:aa80c4033469ae5aaa092c0d49852403c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff1e9f7bb336026f18afa2221c9df07"><td class="memItemLeft" align="right" valign="top">awaitable&lt; T, AwaitableExecutor &gt; CompletionToken &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">asio::token</a></td></tr>
+<tr class="separator:adff1e9f7bb336026f18afa2221c9df07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac172b717c13db01d7f99af7e42edcb68"><td class="memItemLeft" align="right" valign="top">F &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">asio::f</a></td></tr>
+<tr class="separator:ac172b717c13db01d7f99af7e42edcb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

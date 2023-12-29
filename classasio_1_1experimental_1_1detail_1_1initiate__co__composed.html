@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::experimental::detail::initiate_co_composed&lt; Implementation, Executors, Signatures &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">initiate_co_composed</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::experimental::detail::initiate_co_composed&lt; Implementation, Executors, Signatures &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2co__composed_8hpp_source.html">co_composed.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a59f85205f59348de01ef5e51200d8d68"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#a59f85205f59348de01ef5e51200d8d68">executor_type</a> = typename <a class="el" href="structasio_1_1detail_1_1composed__io__executors.html">composed_io_executors</a>&lt; Executors &gt;::head_type</td></tr>
+<tr class="separator:a59f85205f59348de01ef5e51200d8d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:abac2798748462a6f9708db9ef90e64c5"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
+<tr class="memitem:abac2798748462a6f9708db9ef90e64c5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#abac2798748462a6f9708db9ef90e64c5">initiate_co_composed</a> (I &amp;&amp;impl, <a class="el" href="structasio_1_1detail_1_1composed__io__executors.html">composed_io_executors</a>&lt; Executors &gt; &amp;&amp;executors)</td></tr>
+<tr class="separator:abac2798748462a6f9708db9ef90e64c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e653e970f9135b52d8e8ec6bdf2801c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#a59f85205f59348de01ef5e51200d8d68">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#a1e653e970f9135b52d8e8ec6bdf2801c">get_executor</a> () const noexcept</td></tr>
+<tr class="separator:a1e653e970f9135b52d8e8ec6bdf2801c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f5db4dd8dff228350d116134c6422a"><td class="memTemplParams" colspan="2">template&lt;typename Handler , typename... InitArgs&gt; </td></tr>
+<tr class="memitem:a95f5db4dd8dff228350d116134c6422a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#a95f5db4dd8dff228350d116134c6422a">operator()</a> (Handler &amp;&amp;handler, InitArgs &amp;&amp;... init_args) const &amp;</td></tr>
+<tr class="separator:a95f5db4dd8dff228350d116134c6422a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7caa2db12bdcfecfbc4af4893dd9c153"><td class="memTemplParams" colspan="2">template&lt;typename Handler , typename... InitArgs&gt; </td></tr>
+<tr class="memitem:a7caa2db12bdcfecfbc4af4893dd9c153"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#a7caa2db12bdcfecfbc4af4893dd9c153">operator()</a> (Handler &amp;&amp;handler, InitArgs &amp;&amp;... init_args) &amp;&amp;</td></tr>
+<tr class="separator:a7caa2db12bdcfecfbc4af4893dd9c153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a59f85205f59348de01ef5e51200d8d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f85205f59348de01ef5e51200d8d68">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Implementation , typename Executors , typename... Signatures&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">asio::experimental::detail::initiate_co_composed</a>&lt; Implementation, Executors, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#a59f85205f59348de01ef5e51200d8d68">executor_type</a> =  typename <a class="el" href="structasio_1_1detail_1_1composed__io__executors.html">composed_io_executors</a>&lt;Executors&gt;::head_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="abac2798748462a6f9708db9ef90e64c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac2798748462a6f9708db9ef90e64c5">&#9670;&nbsp;</a></span>initiate_co_composed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Implementation , typename Executors , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename I &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">asio::experimental::detail::initiate_co_composed</a>&lt; Implementation, Executors, Signatures &gt;::<a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">initiate_co_composed</a> </td>
+          <td>(</td>
+          <td class="paramtype">I &amp;&amp;&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1detail_1_1composed__io__executors.html">composed_io_executors</a>&lt; Executors &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>executors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1e653e970f9135b52d8e8ec6bdf2801c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e653e970f9135b52d8e8ec6bdf2801c">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Implementation , typename Executors , typename... Signatures&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html#a59f85205f59348de01ef5e51200d8d68">executor_type</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">asio::experimental::detail::initiate_co_composed</a>&lt; Implementation, Executors, Signatures &gt;::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7caa2db12bdcfecfbc4af4893dd9c153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7caa2db12bdcfecfbc4af4893dd9c153">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Implementation , typename Executors , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename Handler , typename... InitArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">asio::experimental::detail::initiate_co_composed</a>&lt; Implementation, Executors, Signatures &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Handler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InitArgs &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>init_args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95f5db4dd8dff228350d116134c6422a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f5db4dd8dff228350d116134c6422a">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Implementation , typename Executors , typename... Signatures&gt; </div>
+<div class="memtemplate">
+template&lt;typename Handler , typename... InitArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">asio::experimental::detail::initiate_co_composed</a>&lt; Implementation, Executors, Signatures &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Handler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InitArgs &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>init_args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/impl/<a class="el" href="impl_2co__composed_8hpp_source.html">co_composed.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

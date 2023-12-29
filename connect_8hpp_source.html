@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/connect.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">connect.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="connect_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// connect.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_CONNECT_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_CONNECT_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_2asio_2async__result_8hpp.html">asio/async_result.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__socket_8hpp.html">asio/basic_socket.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">asio/error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">struct </span>default_connect_condition;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_range_connect;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_iterator_connect;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespaceasio_1_1detail.html#ae0f6ebdcf40b0bddc7baa85eb1bb0974">   34</a></span>&#160;  char (&amp;<a class="code" href="namespaceasio_1_1detail.html#ae0f6ebdcf40b0bddc7baa85eb1bb0974">has_iterator_helper</a>(...))[2];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespaceasio_1_1detail.html#a2edc68f38b832be97f2b368e72b2de3c">   37</a></span>&#160;  <span class="keywordtype">char</span> <a class="code" href="namespaceasio_1_1detail.html#ae0f6ebdcf40b0bddc7baa85eb1bb0974">has_iterator_helper</a>(<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>*, <span class="keyword">typename</span> T::iterator* = 0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__iterator__typedef.html">   40</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1has__iterator__typedef.html">has_iterator_typedef</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__iterator__typedef.html#aebb9fe68255de821d51f041249d65679a0e5c937e9f3bb0dd15bdcee482d7cadd">   42</a></span>&#160;    <span class="keyword">enum</span> { <a class="code" href="structasio_1_1detail_1_1has__iterator__typedef.html#aebb9fe68255de821d51f041249d65679a0e5c937e9f3bb0dd15bdcee482d7cadd">value</a> = (<span class="keyword">sizeof</span>((<a class="code" href="namespaceasio_1_1detail.html#ae0f6ebdcf40b0bddc7baa85eb1bb0974">has_iterator_helper</a>)((<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>*)(0))) == 1) };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  };</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structasio_1_1is__endpoint__sequence.html">   49</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1is__endpoint__sequence.html">is_endpoint_sequence</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">value</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">enum</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">value</a> = <a class="code" href="structasio_1_1detail_1_1has__iterator__typedef.html">detail::has_iterator_typedef&lt;T&gt;::value</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">   58</a></span>&#160;  };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Endpo<span class="keywordtype">int</span>Sequence&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">typename</span> Protocol::endpoint <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">const</span> EndpointSequence&amp; endpoints,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;EndpointSequence&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Endpo<span class="keywordtype">int</span>Sequence&gt;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">typename</span> Protocol::endpoint <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">const</span> EndpointSequence&amp; endpoints, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;EndpointSequence&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, Iterator begin,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;!<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;Iterator&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    Iterator begin, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;!<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;Iterator&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    Iterator begin, Iterator end);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    Iterator begin, Iterator end, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">typename</span> EndpointSequence, <span class="keyword">typename</span> ConnectCondition&gt;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="keyword">typename</span> Protocol::endpoint <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keyword">const</span> EndpointSequence&amp; endpoints, ConnectCondition connect_condition,</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;EndpointSequence&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keyword">typename</span> EndpointSequence, <span class="keyword">typename</span> ConnectCondition&gt;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="keyword">typename</span> Protocol::endpoint <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">const</span> EndpointSequence&amp; endpoints, ConnectCondition connect_condition,</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;EndpointSequence&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> ConnectCondition&gt;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    Iterator begin, ConnectCondition connect_condition,</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;!<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;Iterator&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> ConnectCondition&gt;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, Iterator begin,</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    ConnectCondition connect_condition, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;!<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;Iterator&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> ConnectCondition&gt;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, Iterator begin,</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    Iterator end, ConnectCondition connect_condition);</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> ConnectCondition&gt;</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;Iterator <a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    Iterator begin, Iterator end, ConnectCondition connect_condition,</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160; </div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> EndpointSequence,</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;      <span class="keyword">typename</span> Protocol::endpoint)) RangeConnectToken</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        = default_completion_token_t&lt;Executor&gt;&gt;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">async_connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keyword">const</span> EndpointSequence&amp; endpoints,</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    RangeConnectToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = default_completion_token_t&lt;Executor&gt;(),</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;EndpointSequence&gt;::value</a>&gt; = 0)</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;RangeConnectToken,</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, <span class="keyword">typename</span> Protocol::endpoint)&gt;(</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        declval&lt;detail::initiate_async_range_connect&lt;Protocol, Executor&gt;&gt;(),</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, endpoints, declval&lt;detail::default_connect_condition&gt;()));</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160; </div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Iterator,</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;      Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt;</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">async_connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, Iterator begin,</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    IteratorConnectToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = default_completion_token_t&lt;Executor&gt;(),</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;!<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;Iterator&gt;::value</a>&gt; = 0)</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;IteratorConnectToken,</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        declval&lt;detail::initiate_async_iterator_connect&lt;Protocol, Executor&gt;&gt;(),</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, begin, Iterator(),</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;        declval&lt;detail::default_connect_condition&gt;()));</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160; </div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Iterator,</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;      Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">async_connect</a>(</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;    basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, Iterator begin, Iterator end,</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    IteratorConnectToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = default_completion_token_t&lt;Executor&gt;())</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;IteratorConnectToken,</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        declval&lt;detail::initiate_async_iterator_connect&lt;Protocol, Executor&gt;&gt;(),</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, begin, end, declval&lt;detail::default_connect_condition&gt;()));</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160; </div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160; </div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <span class="keyword">typename</span> EndpointSequence, <span class="keyword">typename</span> ConnectCondition,</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;      <span class="keyword">typename</span> Protocol::endpoint)) RangeConnectToken</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;        = default_completion_token_t&lt;Executor&gt;&gt;</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">async_connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    <span class="keyword">const</span> EndpointSequence&amp; endpoints, ConnectCondition connect_condition,</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;    RangeConnectToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = default_completion_token_t&lt;Executor&gt;(),</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;EndpointSequence&gt;::value</a>&gt; = 0)</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;RangeConnectToken,</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, <span class="keyword">typename</span> Protocol::endpoint)&gt;(</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;        declval&lt;detail::initiate_async_range_connect&lt;Protocol, Executor&gt;&gt;(),</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, endpoints, connect_condition));</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160; </div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160; </div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;    <span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> ConnectCondition,</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;      Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt;</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">async_connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;    Iterator begin, ConnectCondition connect_condition,</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;    IteratorConnectToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = default_completion_token_t&lt;Executor&gt;(),</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;!<a class="code" href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">is_endpoint_sequence&lt;Iterator&gt;::value</a>&gt; = 0)</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;IteratorConnectToken,</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;        declval&lt;detail::initiate_async_iterator_connect&lt;Protocol, Executor&gt;&gt;(),</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, begin, Iterator(), connect_condition));</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160; </div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160; </div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;    <span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> ConnectCondition,</div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;      Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt;</div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">async_connect</a>(basic_socket&lt;Protocol, Executor&gt;&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;    Iterator begin, Iterator end, ConnectCondition connect_condition,</div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;    IteratorConnectToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = default_completion_token_t&lt;Executor&gt;())</div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;IteratorConnectToken,</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;        declval&lt;detail::initiate_async_iterator_connect&lt;Protocol, Executor&gt;&gt;(),</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, begin, end, connect_condition));</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160; </div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160; </div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160; </div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="impl_2connect_8hpp.html">asio/impl/connect.hpp</a>&quot;</span></div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160; </div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abasic__socket_8hpp_html"><div class="ttname"><a href="basic__socket_8hpp.html">basic_socket.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="aimpl_2connect_8hpp_html"><div class="ttname"><a href="impl_2connect_8hpp.html">connect.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html">async_result.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_ae0f6ebdcf40b0bddc7baa85eb1bb0974"><div class="ttname"><a href="namespaceasio_1_1detail.html#ae0f6ebdcf40b0bddc7baa85eb1bb0974">asio::detail::has_iterator_helper</a></div><div class="ttdeci">char(&amp; has_iterator_helper(...))[2]</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="anamespaceasio_html_acbf600e256af39d8a0c65fb6e3eb988d"><div class="ttname"><a href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a></div><div class="ttdeci">auto async_initiate(Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;token, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(token), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</div><div class="ttdef"><b>Definition:</b> async_result.hpp:558</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="anamespaceasio_html_ad9722498362a99a18c1daabb554ac3f7"><div class="ttname"><a href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">asio::connect</a></div><div class="ttdeci">Protocol::endpoint connect(basic_socket&lt; Protocol, Executor &gt; &amp;s, const EndpointSequence &amp;endpoints, constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0)</div><div class="ttdoc">Establishes a socket connection by trying each endpoint in a sequence.</div><div class="ttdef"><b>Definition:</b> connect.hpp:105</div></div>
+<div class="ttc" id="anamespaceasio_html_adff1e9f7bb336026f18afa2221c9df07"><div class="ttname"><a href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">asio::token</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="anamespaceasio_html_aebeb13d868fe4894497e23cff8a8f586"><div class="ttname"><a href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">asio::async_connect</a></div><div class="ttdeci">auto async_connect(basic_socket&lt; Protocol, Executor &gt; &amp;s, const EndpointSequence &amp;endpoints, RangeConnectToken &amp;&amp;token=default_completion_token_t&lt; Executor &gt;(), constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0) -&gt; decltype(async_initiate&lt; RangeConnectToken, void(asio::error_code, typename Protocol::endpoint)&gt;(declval&lt; detail::initiate_async_range_connect&lt; Protocol, Executor &gt;&gt;(), token, endpoints, declval&lt; detail::default_connect_condition &gt;()))</div><div class="ttdef"><b>Definition:</b> connect.hpp:693</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1has__iterator__typedef_html"><div class="ttname"><a href="structasio_1_1detail_1_1has__iterator__typedef.html">asio::detail::has_iterator_typedef</a></div><div class="ttdef"><b>Definition:</b> connect.hpp:41</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1has__iterator__typedef_html_aebb9fe68255de821d51f041249d65679a0e5c937e9f3bb0dd15bdcee482d7cadd"><div class="ttname"><a href="structasio_1_1detail_1_1has__iterator__typedef.html#aebb9fe68255de821d51f041249d65679a0e5c937e9f3bb0dd15bdcee482d7cadd">asio::detail::has_iterator_typedef::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> connect.hpp:42</div></div>
+<div class="ttc" id="astructasio_1_1execution_1_1detail_1_1blocking__t_html"><div class="ttname"><a href="structasio_1_1execution_1_1detail_1_1blocking__t.html">asio::execution::detail::blocking_t</a></div><div class="ttdef"><b>Definition:</b> blocking.hpp:200</div></div>
+<div class="ttc" id="astructasio_1_1is__endpoint__sequence_html"><div class="ttname"><a href="structasio_1_1is__endpoint__sequence.html">asio::is_endpoint_sequence</a></div><div class="ttdef"><b>Definition:</b> connect.hpp:50</div></div>
+<div class="ttc" id="astructasio_1_1is__endpoint__sequence_html_ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471"><div class="ttname"><a href="structasio_1_1is__endpoint__sequence.html#ac22324c77c9006fd7d411a3385760864ad66f66b3db60aa94d303f572f6d81471">asio::is_endpoint_sequence::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> connect.hpp:57</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

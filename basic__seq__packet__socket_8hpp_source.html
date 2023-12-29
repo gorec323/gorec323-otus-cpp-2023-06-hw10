@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/basic_seq_packet_socket.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">basic_seq_packet_socket.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="basic__seq__packet__socket_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// basic_seq_packet_socket.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_BASIC_SEQ_PACKET_SOCKET_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_BASIC_SEQ_PACKET_SOCKET_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__socket_8hpp.html">asio/basic_socket.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="handler__type__requirements_8hpp.html">asio/detail/handler_type_requirements.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="throw__error_8hpp.html">asio/detail/throw_error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">asio/error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#if !defined(ASIO_BASIC_SEQ_PACKET_SOCKET_FWD_DECL)</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="basic__seq__packet__socket_8hpp.html#aa7a67b07f48e4dc268795e66297c90d9">   30</a></span>&#160;<span class="preprocessor">#define ASIO_BASIC_SEQ_PACKET_SOCKET_FWD_DECL</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// Forward declaration with defaulted arguments.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor = any_io_executor&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span>basic_seq_packet_socket;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_BASIC_SEQ_PACKET_SOCKET_FWD_DECL)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol, <span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">class </span>initiate_async_send;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">class </span>initiate_async_receive_with_flags;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">   64</a></span>&#160;  <span class="keyword">typedef</span> Executor <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structasio_1_1basic__seq__packet__socket_1_1rebind__executor.html">   68</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1basic__seq__packet__socket_1_1rebind__executor.html">rebind_executor</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structasio_1_1basic__seq__packet__socket_1_1rebind__executor.html#a331d5692ec04d95652efc1c5b695a083">   71</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket&lt;Protocol, Executor1&gt;</a> <a class="code" href="structasio_1_1basic__seq__packet__socket_1_1rebind__executor.html#a331d5692ec04d95652efc1c5b695a083">other</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">typedef</span> implementation_defined <a class="code" href="classasio_1_1basic__seq__packet__socket.html#adae750a62818a8c6e102dc45ed992045">native_handle_type</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol,</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#adae750a62818a8c6e102dc45ed992045">   79</a></span>&#160;    Executor&gt;<a class="code" href="classasio_1_1basic__seq__packet__socket.html#adae750a62818a8c6e102dc45ed992045">::native_handle_type</a> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#adae750a62818a8c6e102dc45ed992045">native_handle_type</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#ac9d24752d136e87ad5ad0382c2c744a5">   83</a></span>&#160;  <span class="keyword">typedef</span> Protocol <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ac9d24752d136e87ad5ad0382c2c744a5">protocol_type</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a215f5722a6214bf15b7b1eb076853ff6">   86</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> Protocol::endpoint <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a215f5722a6214bf15b7b1eb076853ff6">endpoint_type</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a04a49296fbbcca35adc58cf4df610eb2">   97</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a04a49296fbbcca35adc58cf4df610eb2">basic_seq_packet_socket</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>&amp; ex)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(ex)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a64cedafbf4defc11c50d27c6188a3045">  113</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a64cedafbf4defc11c50d27c6188a3045">basic_seq_packet_socket</a>(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(<a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a0324befef7643aee98c44fe24956cd0e">  134</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a0324befef7643aee98c44fe24956cd0e">basic_seq_packet_socket</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>&amp; ex,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ac9d24752d136e87ad5ad0382c2c744a5">protocol_type</a>&amp; protocol)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(ex, protocol)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#af862b1a965fcf1d558ee0aa71c5f6d09">  155</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#af862b1a965fcf1d558ee0aa71c5f6d09">basic_seq_packet_socket</a>(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ac9d24752d136e87ad5ad0382c2c744a5">protocol_type</a>&amp; protocol,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="structasio_1_1defaulted__constraint.html">defaulted_constraint</a></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      &gt; = <a class="code" href="structasio_1_1defaulted__constraint.html">defaulted_constraint</a>())</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(<a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>, protocol)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#ac35521d1a074a9b36225780b8a58f279">  180</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ac35521d1a074a9b36225780b8a58f279">basic_seq_packet_socket</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>&amp; ex,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a215f5722a6214bf15b7b1eb076853ff6">endpoint_type</a>&amp; endpoint)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(ex, endpoint)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a45668bf7000f98b46308d0c04fec29e5">  203</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a45668bf7000f98b46308d0c04fec29e5">basic_seq_packet_socket</a>(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a215f5722a6214bf15b7b1eb076853ff6">endpoint_type</a>&amp; endpoint,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(<a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>, endpoint)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#af4febf3c080c6f9a191734a31feb353c">  226</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#af4febf3c080c6f9a191734a31feb353c">basic_seq_packet_socket</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>&amp; ex,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ac9d24752d136e87ad5ad0382c2c744a5">protocol_type</a>&amp; protocol, <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#adae750a62818a8c6e102dc45ed992045">native_handle_type</a>&amp; native_socket)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(ex, protocol, native_socket)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a1a5c511189b18a665176f0ae652c8c6a">  248</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a1a5c511189b18a665176f0ae652c8c6a">basic_seq_packet_socket</a>(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ac9d24752d136e87ad5ad0382c2c744a5">protocol_type</a>&amp; protocol, <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#adae750a62818a8c6e102dc45ed992045">native_handle_type</a>&amp; native_socket,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(<a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>, protocol, native_socket)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#af2d3a7221b80e8ed7291e41819976003">  269</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#af2d3a7221b80e8ed7291e41819976003">basic_seq_packet_socket</a>(<a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>&amp;&amp; other) noexcept</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket&lt;Protocol, Executor&gt;</a>(std::move(other))</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a2ab07b4bebb492b8dce716263c2b53e3">  286</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>&amp; <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a2ab07b4bebb492b8dce716263c2b53e3">operator=</a>(<a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>&amp;&amp; other)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="classasio_1_1basic__socket.html#a7a3804178db4768b6fbc3b136e4ec6d8">basic_socket&lt;Protocol, Executor&gt;::operator=</a>(std::move(other));</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol1, <span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a526c8f16586be42f0e055f55c2e76d47">  306</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a526c8f16586be42f0e055f55c2e76d47">basic_seq_packet_socket</a>(<a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket&lt;Protocol1, Executor1&gt;</a>&amp;&amp; other,</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        is_convertible&lt;Protocol1, Protocol&gt;::value</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;          &amp;&amp; is_convertible&lt;Executor1, Executor&gt;::value</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    : <a class="code" href="classasio_1_1basic__socket.html">basic_socket</a>&lt;Protocol, Executor&gt;(<a class="code" href="namespacestd.html">std</a>::move(other))</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol1, <span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    is_convertible&lt;Protocol1, Protocol&gt;::value</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      &amp;&amp; is_convertible&lt;Executor1, Executor&gt;::value,</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>&amp;</div>
+<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#ad4dc429b197cc9cdb67131a7fe735989">  333</a></span>&#160;  &gt; <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ad4dc429b197cc9cdb67131a7fe735989">operator=</a>(<a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket&lt;Protocol1, Executor1&gt;</a>&amp;&amp; other)</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <a class="code" href="classasio_1_1basic__socket.html#a7a3804178db4768b6fbc3b136e4ec6d8">basic_socket&lt;Protocol, Executor&gt;::operator=</a>(std::move(other));</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a7458c060475abbe0e1ec84aafb3b6668">  344</a></span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a7458c060475abbe0e1ec84aafb3b6668">~basic_seq_packet_socket</a>()</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ConstBufferSequence&gt;</div>
+<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a8ff28fabd67767b91ab0084666b59e3f">  372</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a8ff28fabd67767b91ab0084666b59e3f">send</a>(<span class="keyword">const</span> ConstBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> flags)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    std::size_t <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_service().send(</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_implementation(), buffers, flags, ec);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;send&quot;</span>);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ConstBufferSequence&gt;</div>
+<div class="line"><a name="l00401"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#abd40a21c569cbdcbe8a8b0bcd996e9bf">  401</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abd40a21c569cbdcbe8a8b0bcd996e9bf">send</a>(<span class="keyword">const</span> ConstBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> flags, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  {</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_service().send(</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_implementation(), buffers, flags, ec);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ConstBufferSequence,</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;      <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        std::size_t)) WriteToken</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;          = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t&lt;executor_type&gt;</a>&gt;</div>
+<div class="line"><a name="l00461"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#ad71a12fbbfa1ede15fac9d4bea7732f1">  461</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ad71a12fbbfa1ede15fac9d4bea7732f1">async_send</a>(<span class="keyword">const</span> ConstBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> flags,</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;      WriteToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t&lt;executor_type&gt;</a>())</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    -&gt; decltype(</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;      <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;WriteToken,</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;          declval&lt;initiate_async_send&gt;(), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, buffers, flags))</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  {</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;WriteToken,</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      <a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        initiate_async_send(<span class="keyword">this</span>), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, buffers, flags);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160; </div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MutableBufferSequence&gt;</div>
+<div class="line"><a name="l00505"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a9c3164895d46dc911e0244ae66fed712">  505</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a9c3164895d46dc911e0244ae66fed712">receive</a>(<span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>&amp; out_flags)</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;  {</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    std::size_t <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_service().receive_with_flags(</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_implementation(), buffers, 0, out_flags, ec);</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;receive&quot;</span>);</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  }</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; </div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160; </div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MutableBufferSequence&gt;</div>
+<div class="line"><a name="l00551"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a4c0e644db78a5e2feaad099f7a5a1923">  551</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a4c0e644db78a5e2feaad099f7a5a1923">receive</a>(<span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> in_flags,</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>&amp; out_flags)</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;  {</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    std::size_t <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_service().receive_with_flags(</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_implementation(), buffers, in_flags, out_flags, ec);</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;receive&quot;</span>);</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;  }</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160; </div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MutableBufferSequence&gt;</div>
+<div class="line"><a name="l00586"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#a2ff732ba26199160e56c2057cb960447">  586</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a2ff732ba26199160e56c2057cb960447">receive</a>(<span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> in_flags,</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>&amp; out_flags, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;  {</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_service().receive_with_flags(</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        this-&gt;<a class="code" href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">impl_</a>.get_implementation(), buffers, in_flags, out_flags, ec);</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  }</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160; </div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MutableBufferSequence,</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;      <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t&lt;executor_type&gt;</a>&gt;</div>
+<div class="line"><a name="l00651"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#aa60eb428ec182c3f9aa37f3dce763862">  651</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#aa60eb428ec182c3f9aa37f3dce763862">async_receive</a>(<span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>&amp; out_flags,</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;      ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t&lt;executor_type&gt;</a>())</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    -&gt; decltype(</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;      <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;          declval&lt;initiate_async_receive_with_flags&gt;(), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>,</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;          buffers, <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>(0), &amp;out_flags))</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;  {</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;      <a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        initiate_async_receive_with_flags(<span class="keyword">this</span>), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>,</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        buffers, <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>(0), &amp;out_flags);</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;  }</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160; </div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MutableBufferSequence,</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;      <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t&lt;executor_type&gt;</a>&gt;</div>
+<div class="line"><a name="l00727"></a><span class="lineno"><a class="line" href="classasio_1_1basic__seq__packet__socket.html#ab4f2e8a3168a08d92f7bc45d22aa284b">  727</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#ab4f2e8a3168a08d92f7bc45d22aa284b">async_receive</a>(<span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> in_flags,</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;      <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>&amp; out_flags,</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;      ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t&lt;executor_type&gt;</a>())</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    -&gt; decltype(</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;      <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;          declval&lt;initiate_async_receive_with_flags&gt;(),</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;          <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, buffers, in_flags, &amp;out_flags))</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;  {</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;      <a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        initiate_async_receive_with_flags(<span class="keyword">this</span>),</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, buffers, in_flags, &amp;out_flags);</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;  }</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;  <span class="comment">// Disallow copying and assignment.</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a04a49296fbbcca35adc58cf4df610eb2">basic_seq_packet_socket</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;  <a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>&amp; <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a2ab07b4bebb492b8dce716263c2b53e3">operator=</a>(</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;  <span class="keyword">class </span>initiate_async_send</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;  {</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keyword">typedef</span> Executor <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>;</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    <span class="keyword">explicit</span> initiate_async_send(<a class="code" href="classasio_1_1basic__seq__packet__socket.html">basic_seq_packet_socket</a>* <span class="keyword">self</span>)</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;      : self_(self)</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    {</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    }</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160; </div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>&amp; <a class="code" href="classasio_1_1basic__socket.html#a62c3d3a495fabefeba5fb676b62c9add">get_executor</a>() const noexcept</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    {</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;      <span class="keywordflow">return</span> self_-&gt;get_executor();</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    }</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WriteHandler, <span class="keyword">typename</span> ConstBufferSequence&gt;</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    <span class="keywordtype">void</span> operator()(WriteHandler&amp;&amp; handler,</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keyword">const</span> ConstBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> flags)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;      <span class="comment">// If you get an error on the following line it means that your handler</span></div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;      <span class="comment">// does not meet the documented type requirements for a WriteHandler.</span></div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;      <a class="code" href="handler__type__requirements_8hpp.html#a0e034a3b434ab097b8d26251356f7f0e">ASIO_WRITE_HANDLER_CHECK</a>(WriteHandler, handler) type_check;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160; </div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;      detail::non_const_lvalue&lt;WriteHandler&gt; handler2(handler);</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;      self_-&gt;impl_.get_service().async_send(</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;          self_-&gt;impl_.get_implementation(), buffers, flags,</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;          handler2.value, self_-&gt;impl_.get_executor());</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    }</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a04a49296fbbcca35adc58cf4df610eb2">basic_seq_packet_socket</a>* self_;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;  };</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160; </div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;  <span class="keyword">class </span>initiate_async_receive_with_flags</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;  {</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    <span class="keyword">typedef</span> Executor <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    <span class="keyword">explicit</span> initiate_async_receive_with_flags(<a class="code" href="classasio_1_1basic__seq__packet__socket.html#a04a49296fbbcca35adc58cf4df610eb2">basic_seq_packet_socket</a>* <span class="keyword">self</span>)</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;      : self_(self)</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    {</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    }</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160; </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keyword">const</span> <a class="code" href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">executor_type</a>&amp; <a class="code" href="classasio_1_1basic__socket.html#a62c3d3a495fabefeba5fb676b62c9add">get_executor</a>() const noexcept</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    {</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;      <span class="keywordflow">return</span> self_-&gt;get_executor();</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    }</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160; </div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ReadHandler, <span class="keyword">typename</span> MutableBufferSequence&gt;</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    <span class="keywordtype">void</span> operator()(ReadHandler&amp;&amp; handler,</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        <span class="keyword">const</span> MutableBufferSequence&amp; buffers,</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a> in_flags,</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <a class="code" href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">socket_base::message_flags</a>* out_flags)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;      <span class="comment">// If you get an error on the following line it means that your handler</span></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;      <span class="comment">// does not meet the documented type requirements for a ReadHandler.</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;      <a class="code" href="handler__type__requirements_8hpp.html#aa448f8f50d3f3aea4849ea5af0c3f3ea">ASIO_READ_HANDLER_CHECK</a>(ReadHandler, handler) type_check;</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160; </div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;      detail::non_const_lvalue&lt;ReadHandler&gt; handler2(handler);</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;      self_-&gt;impl_.get_service().async_receive_with_flags(</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;          self_-&gt;impl_.get_implementation(), buffers, in_flags,</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;          *out_flags, handler2.value, self_-&gt;impl_.get_executor());</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    }</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160; </div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    <a class="code" href="classasio_1_1basic__seq__packet__socket.html#a04a49296fbbcca35adc58cf4df610eb2">basic_seq_packet_socket</a>* self_;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;  };</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;};</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160; </div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160; </div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_BASIC_SEQ_PACKET_SOCKET_HPP</span></div>
+<div class="ttc" id="abasic__socket_8hpp_html"><div class="ttname"><a href="basic__socket_8hpp.html">basic_socket.hpp</a></div></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="ablocking_8cpp_html_a0337bda4434eac48c7c441ec80725e39"><div class="ttname"><a href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a></div><div class="ttdeci">exec::blocking_t s</div><div class="ttdef"><b>Definition:</b> blocking.cpp:26</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html">asio::basic_seq_packet_socket</a></div><div class="ttdoc">Provides sequenced packet socket functionality.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:57</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a0324befef7643aee98c44fe24956cd0e"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a0324befef7643aee98c44fe24956cd0e">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(const executor_type &amp;ex, const protocol_type &amp;protocol)</div><div class="ttdoc">Construct and open a basic_seq_packet_socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:134</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a04a49296fbbcca35adc58cf4df610eb2"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a04a49296fbbcca35adc58cf4df610eb2">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(const executor_type &amp;ex)</div><div class="ttdoc">Construct a basic_seq_packet_socket without opening it.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:97</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a1a5c511189b18a665176f0ae652c8c6a"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a1a5c511189b18a665176f0ae652c8c6a">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(ExecutionContext &amp;context, const protocol_type &amp;protocol, const native_handle_type &amp;native_socket, constraint_t&lt; is_convertible&lt; ExecutionContext &amp;, execution_context &amp; &gt;::value &gt;=0)</div><div class="ttdoc">Construct a basic_seq_packet_socket on an existing native socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:248</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a215f5722a6214bf15b7b1eb076853ff6"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a215f5722a6214bf15b7b1eb076853ff6">asio::basic_seq_packet_socket::endpoint_type</a></div><div class="ttdeci">Protocol::endpoint endpoint_type</div><div class="ttdoc">The endpoint type.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:86</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a2ab07b4bebb492b8dce716263c2b53e3"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a2ab07b4bebb492b8dce716263c2b53e3">asio::basic_seq_packet_socket::operator=</a></div><div class="ttdeci">basic_seq_packet_socket &amp; operator=(basic_seq_packet_socket &amp;&amp;other)</div><div class="ttdoc">Move-assign a basic_seq_packet_socket from another.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:286</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a2ff732ba26199160e56c2057cb960447"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a2ff732ba26199160e56c2057cb960447">asio::basic_seq_packet_socket::receive</a></div><div class="ttdeci">std::size_t receive(const MutableBufferSequence &amp;buffers, socket_base::message_flags in_flags, socket_base::message_flags &amp;out_flags, asio::error_code &amp;ec)</div><div class="ttdoc">Receive some data on a connected socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:586</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a45668bf7000f98b46308d0c04fec29e5"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a45668bf7000f98b46308d0c04fec29e5">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(ExecutionContext &amp;context, const endpoint_type &amp;endpoint, constraint_t&lt; is_convertible&lt; ExecutionContext &amp;, execution_context &amp; &gt;::value &gt;=0)</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:203</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a4c0e644db78a5e2feaad099f7a5a1923"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a4c0e644db78a5e2feaad099f7a5a1923">asio::basic_seq_packet_socket::receive</a></div><div class="ttdeci">std::size_t receive(const MutableBufferSequence &amp;buffers, socket_base::message_flags in_flags, socket_base::message_flags &amp;out_flags)</div><div class="ttdoc">Receive some data on the socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:551</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a526c8f16586be42f0e055f55c2e76d47"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a526c8f16586be42f0e055f55c2e76d47">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(basic_seq_packet_socket&lt; Protocol1, Executor1 &gt; &amp;&amp;other, constraint_t&lt; is_convertible&lt; Protocol1, Protocol &gt;::value &amp;&amp;is_convertible&lt; Executor1, Executor &gt;::value &gt;=0)</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:306</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a64cedafbf4defc11c50d27c6188a3045"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a64cedafbf4defc11c50d27c6188a3045">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(ExecutionContext &amp;context, constraint_t&lt; is_convertible&lt; ExecutionContext &amp;, execution_context &amp; &gt;::value &gt;=0)</div><div class="ttdoc">Construct a basic_seq_packet_socket without opening it.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:113</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a7458c060475abbe0e1ec84aafb3b6668"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a7458c060475abbe0e1ec84aafb3b6668">asio::basic_seq_packet_socket::~basic_seq_packet_socket</a></div><div class="ttdeci">~basic_seq_packet_socket()</div><div class="ttdoc">Destroys the socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:344</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a8ff28fabd67767b91ab0084666b59e3f"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a8ff28fabd67767b91ab0084666b59e3f">asio::basic_seq_packet_socket::send</a></div><div class="ttdeci">std::size_t send(const ConstBufferSequence &amp;buffers, socket_base::message_flags flags)</div><div class="ttdoc">Send some data on the socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:372</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_a9c3164895d46dc911e0244ae66fed712"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#a9c3164895d46dc911e0244ae66fed712">asio::basic_seq_packet_socket::receive</a></div><div class="ttdeci">std::size_t receive(const MutableBufferSequence &amp;buffers, socket_base::message_flags &amp;out_flags)</div><div class="ttdoc">Receive some data on the socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:505</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_aa60eb428ec182c3f9aa37f3dce763862"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#aa60eb428ec182c3f9aa37f3dce763862">asio::basic_seq_packet_socket::async_receive</a></div><div class="ttdeci">auto async_receive(const MutableBufferSequence &amp;buffers, socket_base::message_flags &amp;out_flags, ReadToken &amp;&amp;token=default_completion_token_t&lt; executor_type &gt;()) -&gt; decltype(async_initiate&lt; ReadToken, void(asio::error_code, std::size_t)&gt;(declval&lt; initiate_async_receive_with_flags &gt;(), token, buffers, socket_base::message_flags(0), &amp;out_flags))</div><div class="ttdoc">Start an asynchronous receive.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:651</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_ab4f2e8a3168a08d92f7bc45d22aa284b"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#ab4f2e8a3168a08d92f7bc45d22aa284b">asio::basic_seq_packet_socket::async_receive</a></div><div class="ttdeci">auto async_receive(const MutableBufferSequence &amp;buffers, socket_base::message_flags in_flags, socket_base::message_flags &amp;out_flags, ReadToken &amp;&amp;token=default_completion_token_t&lt; executor_type &gt;()) -&gt; decltype(async_initiate&lt; ReadToken, void(asio::error_code, std::size_t)&gt;(declval&lt; initiate_async_receive_with_flags &gt;(), token, buffers, in_flags, &amp;out_flags))</div><div class="ttdoc">Start an asynchronous receive.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:727</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_abb5105e58f21b18c2d9022107b5dd142"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#abb5105e58f21b18c2d9022107b5dd142">asio::basic_seq_packet_socket::executor_type</a></div><div class="ttdeci">Executor executor_type</div><div class="ttdoc">The type of the executor associated with the object.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:60</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_abd40a21c569cbdcbe8a8b0bcd996e9bf"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#abd40a21c569cbdcbe8a8b0bcd996e9bf">asio::basic_seq_packet_socket::send</a></div><div class="ttdeci">std::size_t send(const ConstBufferSequence &amp;buffers, socket_base::message_flags flags, asio::error_code &amp;ec)</div><div class="ttdoc">Send some data on the socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:401</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_ac35521d1a074a9b36225780b8a58f279"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#ac35521d1a074a9b36225780b8a58f279">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(const executor_type &amp;ex, const endpoint_type &amp;endpoint)</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:180</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_ac9d24752d136e87ad5ad0382c2c744a5"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#ac9d24752d136e87ad5ad0382c2c744a5">asio::basic_seq_packet_socket::protocol_type</a></div><div class="ttdeci">Protocol protocol_type</div><div class="ttdoc">The protocol type.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:83</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_ad4dc429b197cc9cdb67131a7fe735989"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#ad4dc429b197cc9cdb67131a7fe735989">asio::basic_seq_packet_socket::operator=</a></div><div class="ttdeci">constraint_t&lt; is_convertible&lt; Protocol1, Protocol &gt;::value &amp;&amp;is_convertible&lt; Executor1, Executor &gt;::value, basic_seq_packet_socket &amp; &gt; operator=(basic_seq_packet_socket&lt; Protocol1, Executor1 &gt; &amp;&amp;other)</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:333</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_ad71a12fbbfa1ede15fac9d4bea7732f1"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#ad71a12fbbfa1ede15fac9d4bea7732f1">asio::basic_seq_packet_socket::async_send</a></div><div class="ttdeci">auto async_send(const ConstBufferSequence &amp;buffers, socket_base::message_flags flags, WriteToken &amp;&amp;token=default_completion_token_t&lt; executor_type &gt;()) -&gt; decltype(async_initiate&lt; WriteToken, void(asio::error_code, std::size_t)&gt;(declval&lt; initiate_async_send &gt;(), token, buffers, flags))</div><div class="ttdoc">Start an asynchronous send.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:461</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_adae750a62818a8c6e102dc45ed992045"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#adae750a62818a8c6e102dc45ed992045">asio::basic_seq_packet_socket::native_handle_type</a></div><div class="ttdeci">basic_socket&lt; Protocol, Executor &gt;::native_handle_type native_handle_type</div><div class="ttdoc">The native representation of a socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:79</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_af2d3a7221b80e8ed7291e41819976003"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#af2d3a7221b80e8ed7291e41819976003">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(basic_seq_packet_socket &amp;&amp;other) noexcept</div><div class="ttdoc">Move-construct a basic_seq_packet_socket from another.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:269</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_af4febf3c080c6f9a191734a31feb353c"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#af4febf3c080c6f9a191734a31feb353c">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(const executor_type &amp;ex, const protocol_type &amp;protocol, const native_handle_type &amp;native_socket)</div><div class="ttdoc">Construct a basic_seq_packet_socket on an existing native socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:226</div></div>
+<div class="ttc" id="aclassasio_1_1basic__seq__packet__socket_html_af862b1a965fcf1d558ee0aa71c5f6d09"><div class="ttname"><a href="classasio_1_1basic__seq__packet__socket.html#af862b1a965fcf1d558ee0aa71c5f6d09">asio::basic_seq_packet_socket::basic_seq_packet_socket</a></div><div class="ttdeci">basic_seq_packet_socket(ExecutionContext &amp;context, const protocol_type &amp;protocol, constraint_t&lt; is_convertible&lt; ExecutionContext &amp;, execution_context &amp; &gt;::value, defaulted_constraint &gt;=defaulted_constraint())</div><div class="ttdoc">Construct and open a basic_seq_packet_socket.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:155</div></div>
+<div class="ttc" id="aclassasio_1_1basic__socket_html"><div class="ttname"><a href="classasio_1_1basic__socket.html">asio::basic_socket</a></div><div class="ttdoc">Provides socket functionality.</div><div class="ttdef"><b>Definition:</b> basic_socket.hpp:67</div></div>
+<div class="ttc" id="aclassasio_1_1basic__socket_html_a62c3d3a495fabefeba5fb676b62c9add"><div class="ttname"><a href="classasio_1_1basic__socket.html#a62c3d3a495fabefeba5fb676b62c9add">asio::basic_socket::get_executor</a></div><div class="ttdeci">const executor_type &amp; get_executor() noexcept</div><div class="ttdoc">Get the executor associated with the object.</div><div class="ttdef"><b>Definition:</b> basic_socket.hpp:371</div></div>
+<div class="ttc" id="aclassasio_1_1basic__socket_html_a7a3804178db4768b6fbc3b136e4ec6d8"><div class="ttname"><a href="classasio_1_1basic__socket.html#a7a3804178db4768b6fbc3b136e4ec6d8">asio::basic_socket::operator=</a></div><div class="ttdeci">basic_socket &amp; operator=(basic_socket &amp;&amp;other)</div><div class="ttdoc">Move-assign a basic_socket from another.</div><div class="ttdef"><b>Definition:</b> basic_socket.hpp:318</div></div>
+<div class="ttc" id="aclassasio_1_1basic__socket_html_ae70926d109fbc2b4c1e2f30962a8d344"><div class="ttname"><a href="classasio_1_1basic__socket.html#ae70926d109fbc2b4c1e2f30962a8d344">asio::basic_socket::impl_</a></div><div class="ttdeci">detail::io_object_impl&lt; detail::reactive_socket_service&lt; Protocol &gt;, Executor &gt; impl_</div><div class="ttdef"><b>Definition:</b> basic_socket.hpp:1848</div></div>
+<div class="ttc" id="aclassasio_1_1socket__base_html_ac3cf77465dfedfe1979b5415cf32cc94"><div class="ttname"><a href="classasio_1_1socket__base.html#ac3cf77465dfedfe1979b5415cf32cc94">asio::socket_base::message_flags</a></div><div class="ttdeci">int message_flags</div><div class="ttdoc">Bitmask type for flags that can be passed to send and receive operations.</div><div class="ttdef"><b>Definition:</b> socket_base.hpp:53</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="ahandler__type__requirements_8hpp_html"><div class="ttname"><a href="handler__type__requirements_8hpp.html">handler_type_requirements.hpp</a></div></div>
+<div class="ttc" id="ahandler__type__requirements_8hpp_html_a0e034a3b434ab097b8d26251356f7f0e"><div class="ttname"><a href="handler__type__requirements_8hpp.html#a0e034a3b434ab097b8d26251356f7f0e">ASIO_WRITE_HANDLER_CHECK</a></div><div class="ttdeci">#define ASIO_WRITE_HANDLER_CHECK(handler_type, handler)</div><div class="ttdef"><b>Definition:</b> handler_type_requirements.hpp:176</div></div>
+<div class="ttc" id="ahandler__type__requirements_8hpp_html_aa448f8f50d3f3aea4849ea5af0c3f3ea"><div class="ttname"><a href="handler__type__requirements_8hpp.html#aa448f8f50d3f3aea4849ea5af0c3f3ea">ASIO_READ_HANDLER_CHECK</a></div><div class="ttdeci">#define ASIO_READ_HANDLER_CHECK(handler_type, handler)</div><div class="ttdef"><b>Definition:</b> handler_type_requirements.hpp:149</div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_ac16aa46e6a6a3c19ea8ff34ae3e77633"><div class="ttname"><a href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a></div><div class="ttdeci">void throw_error(const asio::error_code &amp;err ASIO_SOURCE_LOCATION_DEFAULTED_PARAM)</div><div class="ttdef"><b>Definition:</b> throw_error.hpp:36</div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html_adebdf38d8a61e5145c9d6b51730e6a74"><div class="ttname"><a href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">asio::execution::context</a></div><div class="ttdeci">constexpr context_t context</div><div class="ttdef"><b>Definition:</b> context.hpp:141</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a84bbc083cf9153b28ce2d86c3ea16458"><div class="ttname"><a href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">asio::default_completion_token_t</a></div><div class="ttdeci">typename default_completion_token&lt; T &gt;::type default_completion_token_t</div><div class="ttdef"><b>Definition:</b> async_result.hpp:882</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="anamespaceasio_html_acbf600e256af39d8a0c65fb6e3eb988d"><div class="ttname"><a href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a></div><div class="ttdeci">auto async_initiate(Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;token, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(token), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</div><div class="ttdef"><b>Definition:</b> async_result.hpp:558</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="anamespaceasio_html_adff1e9f7bb336026f18afa2221c9df07"><div class="ttname"><a href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">asio::token</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> error.hpp:307</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1basic__seq__packet__socket_1_1rebind__executor_html"><div class="ttname"><a href="structasio_1_1basic__seq__packet__socket_1_1rebind__executor.html">asio::basic_seq_packet_socket::rebind_executor</a></div><div class="ttdoc">Rebinds the socket type to another executor.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:69</div></div>
+<div class="ttc" id="astructasio_1_1basic__seq__packet__socket_1_1rebind__executor_html_a331d5692ec04d95652efc1c5b695a083"><div class="ttname"><a href="structasio_1_1basic__seq__packet__socket_1_1rebind__executor.html#a331d5692ec04d95652efc1c5b695a083">asio::basic_seq_packet_socket::rebind_executor::other</a></div><div class="ttdeci">basic_seq_packet_socket&lt; Protocol, Executor1 &gt; other</div><div class="ttdoc">The socket type when rebound to the specified executor.</div><div class="ttdef"><b>Definition:</b> basic_seq_packet_socket.hpp:71</div></div>
+<div class="ttc" id="astructasio_1_1defaulted__constraint_html"><div class="ttname"><a href="structasio_1_1defaulted__constraint.html">asio::defaulted_constraint</a></div><div class="ttdef"><b>Definition:</b> type_traits.hpp:160</div></div>
+<div class="ttc" id="astructasio_1_1execution_1_1detail_1_1blocking__t_html"><div class="ttname"><a href="structasio_1_1execution_1_1detail_1_1blocking__t.html">asio::execution::detail::blocking_t</a></div><div class="ttdef"><b>Definition:</b> blocking.hpp:200</div></div>
+<div class="ttc" id="athrow__error_8hpp_html"><div class="ttname"><a href="throw__error_8hpp.html">throw_error.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

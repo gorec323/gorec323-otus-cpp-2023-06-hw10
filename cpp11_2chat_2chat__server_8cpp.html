@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/examples/cpp11/chat/chat_server.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_d46c25caae7ef9e73c73947bfdf12925.html">cpp11</a></li><li class="navelem"><a class="el" href="dir_cabb4ef72727471b37297573e4674474.html">chat</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл chat_server.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="asio_8hpp_source.html">asio.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cpp11_2chat_2chat__message_8hpp_source.html">chat_message.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для chat_server.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="cpp11_2chat_2chat__server_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2examples_2cpp11_2chat_2chat__server_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2examples_2cpp11_2chat_2chat__server_8cpp" id="a__deps_2asio-src_2asio_2src_2examples_2cpp11_2chat_2chat__server_8cpp">
+<area shape="rect" title=" " alt="" coords="357,5,517,61"/>
+<area shape="rect" title=" " alt="" coords="99,191,165,218"/>
+<area shape="rect" title=" " alt="" coords="225,109,287,136"/>
+<area shape="rect" title=" " alt="" coords="312,109,392,136"/>
+<area shape="rect" title=" " alt="" coords="416,109,459,136"/>
+<area shape="rect" title=" " alt="" coords="1923,370,2000,397"/>
+<area shape="rect" title=" " alt="" coords="2891,109,2933,136"/>
+<area shape="rect" title=" " alt="" coords="801,541,861,568"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="2789,109,2867,136"/>
+<area shape="rect" href="cpp11_2chat_2chat__message_8hpp.html" title=" " alt="" coords="5,109,149,136"/>
+<area shape="rect" href="any__completion__executor_8hpp.html" title=" " alt="" coords="1725,273,1883,315"/>
+<area shape="rect" href="any__completion__handler_8hpp.html" title=" " alt="" coords="2064,184,2221,225"/>
+<area shape="rect" href="any__io__executor_8hpp.html" title=" " alt="" coords="1385,541,1572,568"/>
+<area shape="rect" href="associated__allocator_8hpp.html" title=" " alt="" coords="2059,281,2274,307"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="2729,370,2876,397"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="2841,273,3050,315"/>
+<area shape="rect" href="associated__executor_8hpp.html" title=" " alt="" coords="2349,281,2563,307"/>
+<area shape="rect" href="associated__immediate__executor_8hpp.html" title=" " alt="" coords="3126,273,3327,315"/>
+<area shape="rect" href="append_8hpp.html" title=" " alt="" coords="3419,191,3549,218"/>
+<area shape="rect" href="as__tuple_8hpp.html" title=" " alt="" coords="3573,191,3709,218"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2569,541,2732,568"/>
+<area shape="rect" href="awaitable_8hpp.html" title=" " alt="" coords="3734,191,3879,218"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="1347,363,1504,404"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="1283,459,1447,486"/>
+<area shape="rect" href="basic__deadline__timer_8hpp.html" title=" " alt="" coords="3903,184,4054,225"/>
+<area shape="rect" href="basic__file_8hpp.html" title=" " alt="" coords="4078,191,4221,218"/>
+<area shape="rect" href="basic__io__object_8hpp.html" title=" " alt="" coords="4245,191,4427,218"/>
+<area shape="rect" href="basic__random__access__file_8hpp.html" title=" " alt="" coords="4451,184,4645,225"/>
+<area shape="rect" href="basic__raw__socket_8hpp.html" title=" " alt="" coords="1077,370,1272,397"/>
+<area shape="rect" href="basic__readable__pipe_8hpp.html" title=" " alt="" coords="4670,184,4821,225"/>
+<area shape="rect" href="basic__seq__packet__socket_8hpp.html" title=" " alt="" coords="886,363,1053,404"/>
+<area shape="rect" href="basic__serial__port_8hpp.html" title=" " alt="" coords="4845,191,5035,218"/>
+<area shape="rect" href="basic__signal__set_8hpp.html" title=" " alt="" coords="2218,459,2406,486"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="635,370,861,397"/>
+<area shape="rect" href="basic__socket__iostream_8hpp.html" title=" " alt="" coords="1464,191,1693,218"/>
+<area shape="rect" href="basic__socket__streambuf_8hpp.html" title=" " alt="" coords="1413,281,1651,307"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="1630,370,1847,397"/>
+<area shape="rect" href="basic__stream__file_8hpp.html" title=" " alt="" coords="5060,191,5255,218"/>
+<area shape="rect" href="basic__streambuf_8hpp.html" title=" " alt="" coords="5634,191,5822,218"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="5669,281,5787,307"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="811,452,962,493"/>
+<area shape="rect" href="basic__writable__pipe_8hpp.html" title=" " alt="" coords="5279,184,5425,225"/>
+<area shape="rect" href="bind__allocator_8hpp.html" title=" " alt="" coords="2593,191,2765,218"/>
+<area shape="rect" href="bind__cancellation__slot_8hpp.html" title=" " alt="" coords="2891,184,3058,225"/>
+<area shape="rect" href="bind__executor_8hpp.html" title=" " alt="" coords="2397,191,2568,218"/>
+<area shape="rect" href="bind__immediate__executor_8hpp.html" title=" " alt="" coords="3134,184,3293,225"/>
+<area shape="rect" href="buffer__registration_8hpp.html" title=" " alt="" coords="534,459,735,486"/>
+<area shape="rect" href="buffered__read__stream__fwd_8hpp.html" title=" " alt="" coords="5931,273,6074,315"/>
+<area shape="rect" href="buffered__read__stream_8hpp.html" title=" " alt="" coords="5846,184,5989,225"/>
+<area shape="rect" href="buffered__stream__fwd_8hpp.html" title=" " alt="" coords="5449,184,5609,225"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchat__participant.html">chat_participant</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchat__room.html">chat_room</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchat__session.html">chat_session</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchat__server.html">chat_server</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a657a8e513062db365625d61e08b4f0ea"><td class="memItemLeft" align="right" valign="top">typedef std::deque&lt; <a class="el" href="classchat__message.html">chat_message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp11_2chat_2chat__server_8cpp.html#a657a8e513062db365625d61e08b4f0ea">chat_message_queue</a></td></tr>
+<tr class="separator:a657a8e513062db365625d61e08b4f0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57438281b6b1e9d47e5c9e4b386b60f2"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="classchat__participant.html">chat_participant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp11_2chat_2chat__server_8cpp.html#a57438281b6b1e9d47e5c9e4b386b60f2">chat_participant_ptr</a></td></tr>
+<tr class="separator:a57438281b6b1e9d47e5c9e4b386b60f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp11_2chat_2chat__server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a657a8e513062db365625d61e08b4f0ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657a8e513062db365625d61e08b4f0ea">&#9670;&nbsp;</a></span>chat_message_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::deque&lt;<a class="el" href="classchat__message.html">chat_message</a>&gt; <a class="el" href="cpp03_2chat_2chat__client_8cpp.html#a657a8e513062db365625d61e08b4f0ea">chat_message_queue</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57438281b6b1e9d47e5c9e4b386b60f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57438281b6b1e9d47e5c9e4b386b60f2">&#9670;&nbsp;</a></span>chat_participant_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="classchat__participant.html">chat_participant</a>&gt; <a class="el" href="cpp03_2chat_2chat__server_8cpp.html#af40677d87c93deb3be190aacb08351ba">chat_participant_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

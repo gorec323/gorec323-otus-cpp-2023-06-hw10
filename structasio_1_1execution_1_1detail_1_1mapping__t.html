@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::execution::detail::mapping_t&lt; I &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1execution.html">execution</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1execution_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="structasio_1_1execution_1_1detail_1_1mapping__t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::execution::detail::mapping_t&lt; I &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="mapping_8hpp_source.html">mapping.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1convertible__from__mapping__t.html">convertible_from_mapping_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1proxy.html">proxy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1query__member.html">query_member</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1query__static__constexpr__member.html">query_static_constexpr_member</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1static__proxy.html">static_proxy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:af2fc8ae80b051f62b2b0fde1ff1eeca5"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#af2fc8ae80b051f62b2b0fde1ff1eeca5">polymorphic_query_result_type</a></td></tr>
+<tr class="separator:af2fc8ae80b051f62b2b0fde1ff1eeca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e5709edc28c78e3b31f23032e2110c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping_1_1thread__t.html">detail::mapping::thread_t</a>&lt; I &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a></td></tr>
+<tr class="separator:a53e5709edc28c78e3b31f23032e2110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4872d86c8ee579f304d1911f526ab1bb"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping_1_1new__thread__t.html">detail::mapping::new_thread_t</a>&lt; I &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a></td></tr>
+<tr class="separator:a4872d86c8ee579f304d1911f526ab1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3504708f4650f8e49949600a7b639f51"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping_1_1other__t.html">detail::mapping::other_t</a>&lt; I &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a></td></tr>
+<tr class="separator:a3504708f4650f8e49949600a7b639f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa0d33405f9e0e11e2b1bb5730d88ac84"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#aa0d33405f9e0e11e2b1bb5730d88ac84">mapping_t</a> ()</td></tr>
+<tr class="separator:aa0d33405f9e0e11e2b1bb5730d88ac84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da11909056d5a15d8f9738ba4cacea5"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a7da11909056d5a15d8f9738ba4cacea5">mapping_t</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a>)</td></tr>
+<tr class="separator:a7da11909056d5a15d8f9738ba4cacea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad44ba40481b2934a35c527e99f5df5"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a1ad44ba40481b2934a35c527e99f5df5">mapping_t</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a>)</td></tr>
+<tr class="separator:a1ad44ba40481b2934a35c527e99f5df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13eda7031d6d3a7f9a392a6c0cde6342"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a13eda7031d6d3a7f9a392a6c0cde6342">mapping_t</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a>)</td></tr>
+<tr class="separator:a13eda7031d6d3a7f9a392a6c0cde6342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1948a0d555e0bc54126063097e33c09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#ad1948a0d555e0bc54126063097e33c09">ASIO_STATIC_CONSTEXPR_DEFAULT_INIT</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a>, <a class="el" href="classasio_1_1thread.html">thread</a>)</td></tr>
+<tr class="separator:ad1948a0d555e0bc54126063097e33c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b06f9ce30b24d21c1caeabbc95c22fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a6b06f9ce30b24d21c1caeabbc95c22fb">ASIO_STATIC_CONSTEXPR_DEFAULT_INIT</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a>, new_thread)</td></tr>
+<tr class="separator:a6b06f9ce30b24d21c1caeabbc95c22fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b72f5b7dc98d1ac9f56c2931638045"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#af1b72f5b7dc98d1ac9f56c2931638045">ASIO_STATIC_CONSTEXPR_DEFAULT_INIT</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a>, other)</td></tr>
+<tr class="separator:af1b72f5b7dc98d1ac9f56c2931638045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:addd80e2863240caf3954bab876d36549"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#addd80e2863240caf3954bab876d36549">is_requirable</a> = false</td></tr>
+<tr class="separator:addd80e2863240caf3954bab876d36549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56afdc664b7beb8596a97d165796857c"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a56afdc664b7beb8596a97d165796857c">is_preferable</a> = false</td></tr>
+<tr class="separator:a56afdc664b7beb8596a97d165796857c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:abe94539cd9790436b6960f35134d5849"><td class="memItemLeft" align="right" valign="top">constexpr friend bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#abe94539cd9790436b6960f35134d5849">operator==</a> (const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> &amp;b)</td></tr>
+<tr class="separator:abe94539cd9790436b6960f35134d5849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317ef5eccf2d4407a0bbedc7d13fe816"><td class="memItemLeft" align="right" valign="top">constexpr friend bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a317ef5eccf2d4407a0bbedc7d13fe816">operator!=</a> (const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> &amp;b)</td></tr>
+<tr class="separator:a317ef5eccf2d4407a0bbedc7d13fe816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05742689d56ae03fac52af4299c5fb66"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:a05742689d56ae03fac52af4299c5fb66"><td class="memTemplItemLeft" align="right" valign="top">constexpr friend <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a05742689d56ae03fac52af4299c5fb66">query</a> (const Executor &amp;ex, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1convertible__from__mapping__t.html">convertible_from_mapping_t</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a> &gt;::value &gt; *=0) noexcept(<a class="el" href="structasio_1_1is__nothrow__query.html">is_nothrow_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a> &gt;::value)</td></tr>
+<tr class="separator:a05742689d56ae03fac52af4299c5fb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add87eeaac2471047747ef8d0fb0c4ba2"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:add87eeaac2471047747ef8d0fb0c4ba2"><td class="memTemplItemLeft" align="right" valign="top">constexpr friend <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#add87eeaac2471047747ef8d0fb0c4ba2">query</a> (const Executor &amp;ex, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1convertible__from__mapping__t.html">convertible_from_mapping_t</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a> &gt;::value &gt; *=0, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a> &gt;::value &gt; *=0) noexcept(<a class="el" href="structasio_1_1is__nothrow__query.html">is_nothrow_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a> &gt;::value)</td></tr>
+<tr class="separator:add87eeaac2471047747ef8d0fb0c4ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a360f1ef713aaf781c7dd198b71f39d"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:a4a360f1ef713aaf781c7dd198b71f39d"><td class="memTemplItemLeft" align="right" valign="top">constexpr friend <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4a360f1ef713aaf781c7dd198b71f39d">query</a> (const Executor &amp;ex, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1convertible__from__mapping__t.html">convertible_from_mapping_t</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a> &gt;::value &gt; *=0, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a> &gt;::value &gt; *=0, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a> &gt;::value &gt; *=0) noexcept(<a class="el" href="structasio_1_1is__nothrow__query.html">is_nothrow_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a> &gt;::value)</td></tr>
+<tr class="separator:a4a360f1ef713aaf781c7dd198b71f39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a4872d86c8ee579f304d1911f526ab1bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4872d86c8ee579f304d1911f526ab1bb">&#9670;&nbsp;</a></span>new_thread_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping_1_1new__thread__t.html">detail::mapping::new_thread_t</a>&lt;I&gt; <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3504708f4650f8e49949600a7b639f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3504708f4650f8e49949600a7b639f51">&#9670;&nbsp;</a></span>other_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping_1_1other__t.html">detail::mapping::other_t</a>&lt;I&gt; <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2fc8ae80b051f62b2b0fde1ff1eeca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2fc8ae80b051f62b2b0fde1ff1eeca5">&#9670;&nbsp;</a></span>polymorphic_query_result_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#af2fc8ae80b051f62b2b0fde1ff1eeca5">polymorphic_query_result_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53e5709edc28c78e3b31f23032e2110c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e5709edc28c78e3b31f23032e2110c">&#9670;&nbsp;</a></span>thread_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping_1_1thread__t.html">detail::mapping::thread_t</a>&lt;I&gt; <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa0d33405f9e0e11e2b1bb5730d88ac84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d33405f9e0e11e2b1bb5730d88ac84">&#9670;&nbsp;</a></span>mapping_t() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7da11909056d5a15d8f9738ba4cacea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da11909056d5a15d8f9738ba4cacea5">&#9670;&nbsp;</a></span>mapping_t() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ad44ba40481b2934a35c527e99f5df5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad44ba40481b2934a35c527e99f5df5">&#9670;&nbsp;</a></span>mapping_t() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13eda7031d6d3a7f9a392a6c0cde6342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13eda7031d6d3a7f9a392a6c0cde6342">&#9670;&nbsp;</a></span>mapping_t() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a6b06f9ce30b24d21c1caeabbc95c22fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b06f9ce30b24d21c1caeabbc95c22fb">&#9670;&nbsp;</a></span>ASIO_STATIC_CONSTEXPR_DEFAULT_INIT() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::ASIO_STATIC_CONSTEXPR_DEFAULT_INIT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">new_thread&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1b72f5b7dc98d1ac9f56c2931638045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b72f5b7dc98d1ac9f56c2931638045">&#9670;&nbsp;</a></span>ASIO_STATIC_CONSTEXPR_DEFAULT_INIT() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::ASIO_STATIC_CONSTEXPR_DEFAULT_INIT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">other&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1948a0d555e0bc54126063097e33c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1948a0d555e0bc54126063097e33c09">&#9670;&nbsp;</a></span>ASIO_STATIC_CONSTEXPR_DEFAULT_INIT() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::ASIO_STATIC_CONSTEXPR_DEFAULT_INIT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1thread.html">thread</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a317ef5eccf2d4407a0bbedc7d13fe816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a317ef5eccf2d4407a0bbedc7d13fe816">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&lt; I &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&lt; I &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe94539cd9790436b6960f35134d5849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe94539cd9790436b6960f35134d5849">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&lt; I &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a>&lt; I &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a360f1ef713aaf781c7dd198b71f39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a360f1ef713aaf781c7dd198b71f39d">&#9670;&nbsp;</a></span>query <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> query </td>
+          <td>(</td>
+          <td class="paramtype">const Executor &amp;&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1convertible__from__mapping__t.html">convertible_from_mapping_t</a>&lt; I &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a> &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a> &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a3504708f4650f8e49949600a7b639f51">other_t</a> &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add87eeaac2471047747ef8d0fb0c4ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add87eeaac2471047747ef8d0fb0c4ba2">&#9670;&nbsp;</a></span>query <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> query </td>
+          <td>(</td>
+          <td class="paramtype">const Executor &amp;&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1convertible__from__mapping__t.html">convertible_from_mapping_t</a>&lt; I &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a> &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a4872d86c8ee579f304d1911f526ab1bb">new_thread_t</a> &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05742689d56ae03fac52af4299c5fb66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05742689d56ae03fac52af4299c5fb66">&#9670;&nbsp;</a></span>query <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">mapping_t</a> query </td>
+          <td>(</td>
+          <td class="paramtype">const Executor &amp;&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t_1_1convertible__from__mapping__t.html">convertible_from_mapping_t</a>&lt; I &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">can_query</a>&lt; const Executor &amp;, <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html#a53e5709edc28c78e3b31f23032e2110c">thread_t</a> &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a56afdc664b7beb8596a97d165796857c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56afdc664b7beb8596a97d165796857c">&#9670;&nbsp;</a></span>is_preferable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1is__preferable.html">is_preferable</a> = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addd80e2863240caf3954bab876d36549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd80e2863240caf3954bab876d36549">&#9670;&nbsp;</a></span>is_requirable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int I = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; I &gt;::<a class="el" href="structasio_1_1execution_1_1detail_1_1is__requirable.html">is_requirable</a> = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/execution/<a class="el" href="mapping_8hpp_source.html">mapping.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

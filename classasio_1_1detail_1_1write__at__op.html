@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::detail::write_at_op&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classasio_1_1detail_1_1write__at__op-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::detail::write_at_op&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2write__at_8hpp_source.html">write_at.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::write_at_op&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1write__at__op__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1write__at__op_3_01AsyncRandomAccessWriteDevice_00_01ConstBufferSequence_00_01ConstBufferIterator_00_01CompletionCondition_00_01WriteHandler_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1write__at__op_3_01AsyncRandomAccessWriteDevice_00_01ConstBufferSequence_00_01ConstBufferIterator_00_01CompletionCondition_00_01WriteHandler_01_4_inherit__map" id="aasio_1_1detail_1_1write__at__op_3_01AsyncRandomAccessWriteDevice_00_01ConstBufferSequence_00_01ConstBufferIterator_00_01CompletionCondition_00_01WriteHandler_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="243,31,541,116"/>
+<area shape="rect" href="classasio_1_1detail_1_1base__from__cancellation__state.html" title=" " alt="" coords="7,5,193,61"/>
+<area shape="rect" href="classasio_1_1detail_1_1base__from__completion__cond.html" title=" " alt="" coords="5,85,195,141"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::detail::write_at_op&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1write__at__op__coll__graph.png" border="0" usemap="#aasio_1_1detail_1_1write__at__op_3_01AsyncRandomAccessWriteDevice_00_01ConstBufferSequence_00_01ConstBufferIterator_00_01CompletionCondition_00_01WriteHandler_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1detail_1_1write__at__op_3_01AsyncRandomAccessWriteDevice_00_01ConstBufferSequence_00_01ConstBufferIterator_00_01CompletionCondition_00_01WriteHandler_01_4_coll__map" id="aasio_1_1detail_1_1write__at__op_3_01AsyncRandomAccessWriteDevice_00_01ConstBufferSequence_00_01ConstBufferIterator_00_01CompletionCondition_00_01WriteHandler_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="360,115,659,200"/>
+<area shape="rect" href="classasio_1_1detail_1_1base__from__cancellation__state.html" title=" " alt="" coords="37,5,223,61"/>
+<area shape="rect" href="classasio_1_1detail_1_1base__from__completion__cond.html" title=" " alt="" coords="35,85,225,141"/>
+<area shape="rect" href="classasio_1_1detail_1_1consuming__buffers.html" title=" " alt="" coords="5,166,255,237"/>
+<area shape="rect" title=" " alt="" coords="93,261,167,288"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:acf0036bbb4c62271beef4b867de23b09"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1detail_1_1consuming__buffers.html">asio::detail::consuming_buffers</a>&lt; <a class="el" href="classasio_1_1const__buffer.html">const_buffer</a>, ConstBufferSequence, ConstBufferIterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#acf0036bbb4c62271beef4b867de23b09">buffers_type</a></td></tr>
+<tr class="separator:acf0036bbb4c62271beef4b867de23b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classasio_1_1detail_1_1base__from__cancellation__state"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classasio_1_1detail_1_1base__from__cancellation__state')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html">asio::detail::base_from_cancellation_state&lt; WriteHandler &gt;</a></td></tr>
+<tr class="memitem:a19bc22d7feba7c1dc051a1a71953fac6 inherit pub_types_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a19bc22d7feba7c1dc051a1a71953fac6">cancellation_slot_type</a></td></tr>
+<tr class="separator:a19bc22d7feba7c1dc051a1a71953fac6 inherit pub_types_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a4a0d3680f56de076e3ddd476c0d9e0cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a4a0d3680f56de076e3ddd476c0d9e0cc">write_at_op</a> (AsyncRandomAccessWriteDevice &amp;device, uint64_t offset, const ConstBufferSequence &amp;buffers, CompletionCondition &amp;completion_condition, WriteHandler &amp;handler)</td></tr>
+<tr class="separator:a4a0d3680f56de076e3ddd476c0d9e0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa311df3f48bb4c8c436c954038e2f11e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#aa311df3f48bb4c8c436c954038e2f11e">write_at_op</a> (const <a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a> &amp;other)</td></tr>
+<tr class="separator:aa311df3f48bb4c8c436c954038e2f11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53078e8c75dba6f8b5235f8be0620a14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a53078e8c75dba6f8b5235f8be0620a14">write_at_op</a> (<a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a53078e8c75dba6f8b5235f8be0620a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d041e639161b1220a0822e1a454df73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a7d041e639161b1220a0822e1a454df73">operator()</a> (<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec, std::size_t bytes_transferred, int start=0)</td></tr>
+<tr class="separator:a7d041e639161b1220a0822e1a454df73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classasio_1_1detail_1_1base__from__cancellation__state')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html">asio::detail::base_from_cancellation_state&lt; WriteHandler &gt;</a></td></tr>
+<tr class="memitem:ad2e564c1e3a82be18c28c33eb4161153 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a19bc22d7feba7c1dc051a1a71953fac6">cancellation_slot_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#ad2e564c1e3a82be18c28c33eb4161153">get_cancellation_slot</a> () const noexcept</td></tr>
+<tr class="separator:ad2e564c1e3a82be18c28c33eb4161153 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4987b3b34941cd3d221296f49b7615 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1cancellation__state.html">cancellation_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a3f4987b3b34941cd3d221296f49b7615">get_cancellation_state</a> () const noexcept</td></tr>
+<tr class="separator:a3f4987b3b34941cd3d221296f49b7615 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a2fcb8d715cb107411ec08a5a4f2629df"><td class="memItemLeft" align="right" valign="top">AsyncRandomAccessWriteDevice &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a2fcb8d715cb107411ec08a5a4f2629df">device_</a></td></tr>
+<tr class="separator:a2fcb8d715cb107411ec08a5a4f2629df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c7c8902ed41bf2d897b00053a388e2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a17c7c8902ed41bf2d897b00053a388e2">offset_</a></td></tr>
+<tr class="separator:a17c7c8902ed41bf2d897b00053a388e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efd11577a2e5a28bf43723f5fcd6e64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#acf0036bbb4c62271beef4b867de23b09">buffers_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a6efd11577a2e5a28bf43723f5fcd6e64">buffers_</a></td></tr>
+<tr class="separator:a6efd11577a2e5a28bf43723f5fcd6e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40fd7b540ee8bc772cf544d3c6b38e4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a40fd7b540ee8bc772cf544d3c6b38e4e">start_</a></td></tr>
+<tr class="separator:a40fd7b540ee8bc772cf544d3c6b38e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ca5a4f7aeb29d52127a3d0a0d265d9"><td class="memItemLeft" align="right" valign="top">WriteHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#a89ca5a4f7aeb29d52127a3d0a0d265d9">handler_</a></td></tr>
+<tr class="separator:a89ca5a4f7aeb29d52127a3d0a0d265d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classasio_1_1detail_1_1base__from__cancellation__state')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html">asio::detail::base_from_cancellation_state&lt; WriteHandler &gt;</a></td></tr>
+<tr class="memitem:aa4120bfb49238435a99c6392934236ee inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#aa4120bfb49238435a99c6392934236ee">base_from_cancellation_state</a> (const WriteHandler &amp;handler)</td></tr>
+<tr class="separator:aa4120bfb49238435a99c6392934236ee inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180261083ee1af1248c3957fb3453a63 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a180261083ee1af1248c3957fb3453a63">base_from_cancellation_state</a> (const WriteHandler &amp;handler, Filter <a class="el" href="cpp14_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a>)</td></tr>
+<tr class="separator:a180261083ee1af1248c3957fb3453a63 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af622e9c9e3431aa8b103a43081e4465f inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#af622e9c9e3431aa8b103a43081e4465f">base_from_cancellation_state</a> (const WriteHandler &amp;handler, InFilter &amp;&amp;in_filter, OutFilter &amp;&amp;out_filter)</td></tr>
+<tr class="separator:af622e9c9e3431aa8b103a43081e4465f inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c68b45ad46896182ef0bf51bde72c32 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a9c68b45ad46896182ef0bf51bde72c32">reset_cancellation_state</a> (const WriteHandler &amp;handler)</td></tr>
+<tr class="separator:a9c68b45ad46896182ef0bf51bde72c32 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab064a75415f8bd5054a7be7b854579aa inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#ab064a75415f8bd5054a7be7b854579aa">reset_cancellation_state</a> (const WriteHandler &amp;handler, Filter <a class="el" href="cpp14_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a>)</td></tr>
+<tr class="separator:ab064a75415f8bd5054a7be7b854579aa inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e8360c42d8377329e0d20d70c7d652 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a08e8360c42d8377329e0d20d70c7d652">reset_cancellation_state</a> (const WriteHandler &amp;handler, InFilter &amp;&amp;in_filter, OutFilter &amp;&amp;out_filter)</td></tr>
+<tr class="separator:a08e8360c42d8377329e0d20d70c7d652 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb691098884feae1251f3d16c0ea75f5 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#afb691098884feae1251f3d16c0ea75f5">cancelled</a> () const noexcept</td></tr>
+<tr class="separator:afb691098884feae1251f3d16c0ea75f5 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="acf0036bbb4c62271beef4b867de23b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0036bbb4c62271beef4b867de23b09">&#9670;&nbsp;</a></span>buffers_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1detail_1_1consuming__buffers.html">asio::detail::consuming_buffers</a>&lt;<a class="el" href="classasio_1_1const__buffer.html">const_buffer</a>, ConstBufferSequence, ConstBufferIterator&gt; <a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::<a class="el" href="classasio_1_1detail_1_1write__at__op.html#acf0036bbb4c62271beef4b867de23b09">buffers_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a4a0d3680f56de076e3ddd476c0d9e0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0d3680f56de076e3ddd476c0d9e0cc">&#9670;&nbsp;</a></span>write_at_op() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::<a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a> </td>
+          <td>(</td>
+          <td class="paramtype">AsyncRandomAccessWriteDevice &amp;&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ConstBufferSequence &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionCondition &amp;&#160;</td>
+          <td class="paramname"><em>completion_condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WriteHandler &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa311df3f48bb4c8c436c954038e2f11e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa311df3f48bb4c8c436c954038e2f11e">&#9670;&nbsp;</a></span>write_at_op() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::<a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53078e8c75dba6f8b5235f8be0620a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53078e8c75dba6f8b5235f8be0620a14">&#9670;&nbsp;</a></span>write_at_op() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::<a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1write__at__op.html">write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7d041e639161b1220a0822e1a454df73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d041e639161b1220a0822e1a454df73">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>bytes_transferred</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a6efd11577a2e5a28bf43723f5fcd6e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efd11577a2e5a28bf43723f5fcd6e64">&#9670;&nbsp;</a></span>buffers_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1write__at__op.html#acf0036bbb4c62271beef4b867de23b09">buffers_type</a> <a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::buffers_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fcb8d715cb107411ec08a5a4f2629df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fcb8d715cb107411ec08a5a4f2629df">&#9670;&nbsp;</a></span>device_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">AsyncRandomAccessWriteDevice&amp; <a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::device_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89ca5a4f7aeb29d52127a3d0a0d265d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ca5a4f7aeb29d52127a3d0a0d265d9">&#9670;&nbsp;</a></span>handler_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">WriteHandler <a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::handler_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17c7c8902ed41bf2d897b00053a388e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c7c8902ed41bf2d897b00053a388e2">&#9670;&nbsp;</a></span>offset_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t <a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::offset_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40fd7b540ee8bc772cf544d3c6b38e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fd7b540ee8bc772cf544d3c6b38e4e">&#9670;&nbsp;</a></span>start_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AsyncRandomAccessWriteDevice , typename ConstBufferSequence , typename ConstBufferIterator , typename CompletionCondition , typename WriteHandler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classasio_1_1detail_1_1write__at__op.html">asio::detail::write_at_op</a>&lt; AsyncRandomAccessWriteDevice, ConstBufferSequence, ConstBufferIterator, CompletionCondition, WriteHandler &gt;::start_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/impl/<a class="el" href="impl_2write__at_8hpp_source.html">write_at.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

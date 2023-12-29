@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::as_tuple_t&lt; CompletionToken &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1as__tuple__t.html">as_tuple_t</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classasio_1_1as__tuple__t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::as_tuple_t&lt; CompletionToken &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="as__tuple_8hpp_source.html">as_tuple.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1as__tuple__t_1_1default__constructor__tag.html">default_constructor_tag</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1as__tuple__t_1_1executor__with__default.html">executor_with_default</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a1394b98cf9301a944a027bba5c136bc7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1394b98cf9301a944a027bba5c136bc7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1as__tuple__t.html#a1394b98cf9301a944a027bba5c136bc7">as_default_on_t</a> = typename T::template rebind_executor&lt; <a class="el" href="structasio_1_1as__tuple__t_1_1executor__with__default.html">executor_with_default</a>&lt; typename T::executor_type &gt; &gt;::other</td></tr>
+<tr class="separator:a1394b98cf9301a944a027bba5c136bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a540337798299237978710ff4689477fb"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1as__tuple__t.html#a540337798299237978710ff4689477fb">as_tuple_t</a> (<a class="el" href="structasio_1_1as__tuple__t_1_1default__constructor__tag.html">default_constructor_tag</a>=<a class="el" href="structasio_1_1as__tuple__t_1_1default__constructor__tag.html">default_constructor_tag</a>(), CompletionToken <a class="el" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>=CompletionToken())</td></tr>
+<tr class="memdesc:a540337798299237978710ff4689477fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classasio_1_1as__tuple__t.html#a540337798299237978710ff4689477fb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a540337798299237978710ff4689477fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85aeb3f6129d8acf2ac3b119c91e66cb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a85aeb3f6129d8acf2ac3b119c91e66cb"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1as__tuple__t.html#a85aeb3f6129d8acf2ac3b119c91e66cb">as_tuple_t</a> (T &amp;&amp;completion_token)</td></tr>
+<tr class="memdesc:a85aeb3f6129d8acf2ac3b119c91e66cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classasio_1_1as__tuple__t.html#a85aeb3f6129d8acf2ac3b119c91e66cb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a85aeb3f6129d8acf2ac3b119c91e66cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:af3b13804eacba909fb80c92320011c76"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af3b13804eacba909fb80c92320011c76"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; T &gt;::template rebind_executor&lt; <a class="el" href="structasio_1_1as__tuple__t_1_1executor__with__default.html">executor_with_default</a>&lt; typename <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; T &gt;::executor_type &gt; &gt;::other&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1as__tuple__t.html#af3b13804eacba909fb80c92320011c76">as_default_on</a> (T &amp;&amp;<a class="el" href="structobject.html">object</a>)</td></tr>
+<tr class="separator:af3b13804eacba909fb80c92320011c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a35d36a38e33a3f4fd4a840be28a17792"><td class="memItemLeft" align="right" valign="top">CompletionToken&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1as__tuple__t.html#a35d36a38e33a3f4fd4a840be28a17792">token_</a></td></tr>
+<tr class="separator:a35d36a38e33a3f4fd4a840be28a17792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename CompletionToken&gt;<br />
+class asio::as_tuple_t&lt; CompletionToken &gt;</h3>
+
+<p>A completion_token adapter used to specify that the completion handler arguments should be combined into a single tuple argument. The <a class="el" href="classasio_1_1as__tuple__t.html">as_tuple_t</a> class is used to indicate that any arguments to the completion handler should be combined and passed as a single tuple argument. The arguments are first moved into a <code>std::tuple</code> and that tuple is then passed to the completion handler. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a1394b98cf9301a944a027bba5c136bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1394b98cf9301a944a027bba5c136bc7">&#9670;&nbsp;</a></span>as_default_on_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classasio_1_1as__tuple__t.html">asio::as_tuple_t</a>&lt; CompletionToken &gt;::<a class="el" href="classasio_1_1as__tuple__t.html#a1394b98cf9301a944a027bba5c136bc7">as_default_on_t</a> =  typename T::template rebind_executor&lt; <a class="el" href="structasio_1_1as__tuple__t_1_1executor__with__default.html">executor_with_default</a>&lt;typename T::executor_type&gt; &gt;::other</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type alias to adapt an I/O object to use <code><a class="el" href="classasio_1_1as__tuple__t.html">as_tuple_t</a></code> as its default completion token type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a540337798299237978710ff4689477fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a540337798299237978710ff4689477fb">&#9670;&nbsp;</a></span>as_tuple_t() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classasio_1_1as__tuple__t.html">asio::as_tuple_t</a>&lt; CompletionToken &gt;::<a class="el" href="classasio_1_1as__tuple__t.html">as_tuple_t</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1as__tuple__t_1_1default__constructor__tag.html">default_constructor_tag</a>&#160;</td>
+          <td class="paramname"> = <code><a class="el" href="structasio_1_1as__tuple__t_1_1default__constructor__tag.html">default_constructor_tag</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken&#160;</td>
+          <td class="paramname"><em>token</em> = <code>CompletionToken()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<p>This constructor is only valid if the underlying completion token is default constructible and move constructible. The underlying completion token is itself defaulted as an argument to allow it to capture a source location. </p>
+
+</div>
+</div>
+<a id="a85aeb3f6129d8acf2ac3b119c91e66cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85aeb3f6129d8acf2ac3b119c91e66cb">&#9670;&nbsp;</a></span>as_tuple_t() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classasio_1_1as__tuple__t.html">asio::as_tuple_t</a>&lt; CompletionToken &gt;::<a class="el" href="classasio_1_1as__tuple__t.html">as_tuple_t</a> </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>completion_token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af3b13804eacba909fb80c92320011c76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b13804eacba909fb80c92320011c76">&#9670;&nbsp;</a></span>as_default_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;T&gt;::template rebind_executor&lt; <a class="el" href="structasio_1_1as__tuple__t_1_1executor__with__default.html">executor_with_default</a>&lt;typename <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;T&gt;::executor_type&gt; &gt;::other <a class="el" href="classasio_1_1as__tuple__t.html">asio::as_tuple_t</a>&lt; CompletionToken &gt;::as_default_on </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function helper to adapt an I/O object to use <code><a class="el" href="classasio_1_1as__tuple__t.html">as_tuple_t</a></code> as its default completion token type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a35d36a38e33a3f4fd4a840be28a17792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d36a38e33a3f4fd4a840be28a17792">&#9670;&nbsp;</a></span>token_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">CompletionToken <a class="el" href="classasio_1_1as__tuple__t.html">asio::as_tuple_t</a>&lt; CompletionToken &gt;::token_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="as__tuple_8hpp_source.html">as_tuple.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

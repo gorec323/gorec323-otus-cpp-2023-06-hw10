@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::experimental::detail::coro_completion_handler&lt; Promise, Args &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">coro_completion_handler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::experimental::detail::coro_completion_handler&lt; Promise, Args &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="coro__completion__handler_8hpp_source.html">coro_completion_handler.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса asio::experimental::detail::coro_completion_handler&lt; Promise, Args &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1experimental_1_1detail_1_1coro__completion__handler__coll__graph.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1coro__completion__handler_3_01Promise_00_01Args_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1coro__completion__handler_3_01Promise_00_01Args_01_4_coll__map" id="aasio_1_1experimental_1_1detail_1_1coro__completion__handler_3_01Promise_00_01Args_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="15,95,213,151"/>
+<area shape="rect" title=" " alt="" coords="5,5,223,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a6dfaa350e387becde1c51518f87887e6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#a6dfaa350e387becde1c51518f87887e6">promise_type</a> = Promise</td></tr>
+<tr class="separator:a6dfaa350e387becde1c51518f87887e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10fe610c15f7cb0581964878d8f0d50"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ac10fe610c15f7cb0581964878d8f0d50">allocator_type</a> = typename promise_type::allocator_type</td></tr>
+<tr class="separator:ac10fe610c15f7cb0581964878d8f0d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc683ed2659cbf23285a1d92395fa26f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#adc683ed2659cbf23285a1d92395fa26f">executor_type</a> = typename promise_type::executor_type</td></tr>
+<tr class="separator:adc683ed2659cbf23285a1d92395fa26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab839e1fea8c9f642c3328b14e1387962"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ab839e1fea8c9f642c3328b14e1387962">cancellation_slot_type</a> = typename promise_type::cancellation_slot_type</td></tr>
+<tr class="separator:ab839e1fea8c9f642c3328b14e1387962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a51e53a8ec8e129c742471e65c0846b90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#a51e53a8ec8e129c742471e65c0846b90">coro_completion_handler</a> (coroutine_handle&lt; Promise &gt; h, std::optional&lt; std::tuple&lt; Args... &gt;&gt; &amp;<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ab0b7329b1a7ee3044d837956f69466b2">result</a>)</td></tr>
+<tr class="separator:a51e53a8ec8e129c742471e65c0846b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb305614ba0125d7c1e13c4ad41d59d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#abb305614ba0125d7c1e13c4ad41d59d9">coro_completion_handler</a> (<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">coro_completion_handler</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:abb305614ba0125d7c1e13c4ad41d59d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f56e37ac984b93946e333fcc7cdfbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#a45f56e37ac984b93946e333fcc7cdfbd">operator()</a> (Args... <a class="el" href="namespaceasio_1_1experimental_1_1detail.html#ab175239b1fe47ff8bb64b26833d8f62a">args</a>)</td></tr>
+<tr class="separator:a45f56e37ac984b93946e333fcc7cdfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be2e417124a1c91912c8edb30b1e17b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ac10fe610c15f7cb0581964878d8f0d50">allocator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#a7be2e417124a1c91912c8edb30b1e17b">get_allocator</a> () const noexcept</td></tr>
+<tr class="separator:a7be2e417124a1c91912c8edb30b1e17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855a1a02b2ec735a652ea06fb8e55e7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#adc683ed2659cbf23285a1d92395fa26f">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#a855a1a02b2ec735a652ea06fb8e55e7b">get_executor</a> () const noexcept</td></tr>
+<tr class="separator:a855a1a02b2ec735a652ea06fb8e55e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147d103bbef16d5fd57d884ac5a5fa70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ab839e1fea8c9f642c3328b14e1387962">cancellation_slot_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#a147d103bbef16d5fd57d884ac5a5fa70">get_cancellation_slot</a> () const noexcept</td></tr>
+<tr class="separator:a147d103bbef16d5fd57d884ac5a5fa70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:af213b5c2b570105718431b2c07cdeb0c"><td class="memItemLeft" align="right" valign="top">coroutine_handle&lt; Promise &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#af213b5c2b570105718431b2c07cdeb0c">self</a></td></tr>
+<tr class="separator:af213b5c2b570105718431b2c07cdeb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b7329b1a7ee3044d837956f69466b2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::tuple&lt; Args... &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ab0b7329b1a7ee3044d837956f69466b2">result</a></td></tr>
+<tr class="separator:ab0b7329b1a7ee3044d837956f69466b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="ac10fe610c15f7cb0581964878d8f0d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac10fe610c15f7cb0581964878d8f0d50">&#9670;&nbsp;</a></span>allocator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ac10fe610c15f7cb0581964878d8f0d50">allocator_type</a> =  typename promise_type::allocator_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab839e1fea8c9f642c3328b14e1387962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab839e1fea8c9f642c3328b14e1387962">&#9670;&nbsp;</a></span>cancellation_slot_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ab839e1fea8c9f642c3328b14e1387962">cancellation_slot_type</a> =  typename promise_type::cancellation_slot_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc683ed2659cbf23285a1d92395fa26f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc683ed2659cbf23285a1d92395fa26f">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#adc683ed2659cbf23285a1d92395fa26f">executor_type</a> =  typename promise_type::executor_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6dfaa350e387becde1c51518f87887e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dfaa350e387becde1c51518f87887e6">&#9670;&nbsp;</a></span>promise_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#a6dfaa350e387becde1c51518f87887e6">promise_type</a> =  Promise</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a51e53a8ec8e129c742471e65c0846b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e53a8ec8e129c742471e65c0846b90">&#9670;&nbsp;</a></span>coro_completion_handler() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">coro_completion_handler</a> </td>
+          <td>(</td>
+          <td class="paramtype">coroutine_handle&lt; Promise &gt;&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::tuple&lt; Args... &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb305614ba0125d7c1e13c4ad41d59d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb305614ba0125d7c1e13c4ad41d59d9">&#9670;&nbsp;</a></span>coro_completion_handler() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">coro_completion_handler</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">coro_completion_handler</a>&lt; Promise, Args &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7be2e417124a1c91912c8edb30b1e17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be2e417124a1c91912c8edb30b1e17b">&#9670;&nbsp;</a></span>get_allocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ac10fe610c15f7cb0581964878d8f0d50">allocator_type</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::get_allocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a147d103bbef16d5fd57d884ac5a5fa70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147d103bbef16d5fd57d884ac5a5fa70">&#9670;&nbsp;</a></span>get_cancellation_slot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#ab839e1fea8c9f642c3328b14e1387962">cancellation_slot_type</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::get_cancellation_slot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a855a1a02b2ec735a652ea06fb8e55e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855a1a02b2ec735a652ea06fb8e55e7b">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html#adc683ed2659cbf23285a1d92395fa26f">executor_type</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45f56e37ac984b93946e333fcc7cdfbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f56e37ac984b93946e333fcc7cdfbd">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab0b7329b1a7ee3044d837956f69466b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b7329b1a7ee3044d837956f69466b2">&#9670;&nbsp;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::tuple&lt;Args...&gt; &gt;&amp; <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::result</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af213b5c2b570105718431b2c07cdeb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af213b5c2b570105718431b2c07cdeb0c">&#9670;&nbsp;</a></span>self</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Promise , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">coroutine_handle&lt;Promise&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__completion__handler.html">asio::experimental::detail::coro_completion_handler</a>&lt; Promise, Args &gt;::self</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/detail/<a class="el" href="coro__completion__handler_8hpp_source.html">coro_completion_handler.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

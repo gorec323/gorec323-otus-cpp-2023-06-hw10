@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/associated_allocator.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">associated_allocator.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="associated__allocator_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// associated_allocator.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_ASSOCIATED_ALLOCATOR_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_ASSOCIATED_ALLOCATOR_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="associator_8hpp.html">asio/associator.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="functional_8hpp.html">asio/detail/functional.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">struct </span>associated_allocator;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__allocator__type.html">   34</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1has__allocator__type.html">has_allocator_type</a> : false_type</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__allocator__type_3_01T_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html">   39</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1has__allocator__type.html">has_allocator_type</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, <a class="code" href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">void_t</a>&lt;typename <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>::allocator_type&gt;&gt; : true_type</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> A, <span class="keyword">typename</span> = <span class="keywordtype">void</span>, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl.html">   44</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html">associated_allocator_impl</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl.html#a775048ed7440dc94f70857b37b84e1f2">   46</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a775048ed7440dc94f70857b37b84e1f2">asio_associated_allocator_is_unspecialised</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">   48</a></span>&#160;  <span class="keyword">typedef</span> A <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">type</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">   50</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">type</a> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;) noexcept</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">type</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl.html#ae4e921c9830589c13b6e826fb98f102c">   55</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">type</a>&amp; <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ae4e921c9830589c13b6e826fb98f102c">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;, <span class="keyword">const</span> A&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) noexcept</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> A&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html">   62</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html">associated_allocator_impl</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, A, <a class="code" href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">void_t</a>&lt;typename <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>::allocator_type&gt;&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#a828f4b6b007da81b7f00ae657e9381d7">   64</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> T::allocator_type <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#a828f4b6b007da81b7f00ae657e9381d7">type</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#aa116147ab61edd6d59c0d51172d41b81">   66</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#aa116147ab61edd6d59c0d51172d41b81">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t) noexcept</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    -&gt; decltype(t.get_allocator())</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> t.get_allocator();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#ac236d5ae42e109734766742e5e984f28">   72</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#ac236d5ae42e109734766742e5e984f28">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, <span class="keyword">const</span> A&amp;) noexcept</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    -&gt; decltype(t.get_allocator())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> t.get_allocator();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> A&gt;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01enable__if__t_3_01_9has__aaaf4d230c0d1a522cc09404995166c15.html">   80</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html">associated_allocator_impl</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, A,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    !<a class="code" href="structasio_1_1detail_1_1has__allocator__type.html">has_allocator_type</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&gt;::value</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  &gt;,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">void_t</a>&lt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    typename associator&lt;associated_allocator, T, A&gt;::type</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  &gt;&gt; : <a class="code" href="structasio_1_1associator.html">associator</a>&lt;associated_allocator, T, A&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Allocator = std::allocator&lt;<span class="keywordtype">void</span>&gt;&gt;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="structasio_1_1associated__allocator.html">  114</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1associated__allocator.html">associated_allocator</a></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;#if !defined(GENERATING_DOCUMENTATION)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  : <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html">detail::associated_allocator_impl</a>&lt;T, Allocator&gt;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">typedef</span> see_below <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">type</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">static</span> decltype(<span class="keyword">auto</span>) <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t) noexcept;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keyword">static</span> decltype(<span class="keyword">auto</span>) <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) noexcept;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> <span class="keyword">typename</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">associated_allocator&lt;T&gt;::type</a></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">  140</a></span>&#160;<a class="code" href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">get_associated_allocator</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t) noexcept</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">associated_allocator&lt;T&gt;::get</a>(t);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="namespaceasio.html#a82c18a9b1d0d55eb89746a4c0e679345">  150</a></span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">get_associated_allocator</a>(</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) noexcept</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  -&gt; decltype(<a class="code" href="structasio_1_1associated__allocator.html">associated_allocator&lt;T, Allocator&gt;::get</a>(t, <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>))</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">associated_allocator&lt;T, Allocator&gt;::get</a>(t, <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Allocator = std::allocator&lt;<span class="keywordtype">void</span>&gt;&gt;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="namespaceasio.html#a36a2efaadb823ea5daa2722235f03b79">  158</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceasio.html#a36a2efaadb823ea5daa2722235f03b79">associated_allocator_t</a></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  = <span class="keyword">typename</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">associated_allocator&lt;T, Allocator&gt;::type</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> A, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__forwarding__base.html">  164</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__allocator__forwarding__base.html">associated_allocator_forwarding_base</a></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;};</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> A&gt;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__forwarding__base_3_01T_00_01A_00_01enable__if__t_f21ad55aaa38640368239e26cdde3f40.html">  169</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__allocator__forwarding__base.html">associated_allocator_forwarding_base</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, A,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      is_same&lt;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        typename <a class="code" href="structasio_1_1associated__allocator.html">associated_allocator</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>,</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;          A&gt;::<a class="code" href="structasio_1_1detail_1_1associated__allocator__forwarding__base_3_01T_00_01A_00_01enable__if__t_f21ad55aaa38640368239e26cdde3f40.html#a9fe3cec8b0fee19a16b4c738f566df9e">asio_associated_allocator_is_unspecialised</a>,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      &gt;::value</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    &gt;&gt;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__allocator__forwarding__base_3_01T_00_01A_00_01enable__if__t_f21ad55aaa38640368239e26cdde3f40.html#a9fe3cec8b0fee19a16b4c738f566df9e">  178</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__forwarding__base_3_01T_00_01A_00_01enable__if__t_f21ad55aaa38640368239e26cdde3f40.html#a9fe3cec8b0fee19a16b4c738f566df9e">asio_associated_allocator_is_unspecialised</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;};</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html">  185</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1associated__allocator.html">associated_allocator</a>&lt;reference_wrapper&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&gt;, Allocator&gt;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;#if !defined(GENERATING_DOCUMENTATION)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  : <a class="code" href="structasio_1_1detail_1_1associated__allocator__forwarding__base.html">detail::associated_allocator_forwarding_base</a>&lt;T, Allocator&gt;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#ae2a6e6d6bbd7ed6d70c384577abaf1a1">  192</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">associated_allocator&lt;T, Allocator&gt;::type</a> <a class="code" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#ae2a6e6d6bbd7ed6d70c384577abaf1a1">type</a>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#ab1f05d81e7cc5dcf767d9119030e9527">  196</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#ae2a6e6d6bbd7ed6d70c384577abaf1a1">type</a> <a class="code" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#ab1f05d81e7cc5dcf767d9119030e9527">get</a>(reference_wrapper&lt;T&gt; t) noexcept</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">associated_allocator&lt;T, Allocator&gt;::get</a>(t.get());</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#a2582a3af31245ea751682e5e6a572fc9">  203</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#a2582a3af31245ea751682e5e6a572fc9">get</a>(reference_wrapper&lt;T&gt; t, <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) noexcept</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    -&gt; decltype(<a class="code" href="structasio_1_1associated__allocator.html">associated_allocator&lt;T, Allocator&gt;::get</a>(t.get(), <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>))</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">associated_allocator&lt;T, Allocator&gt;::get</a>(t.get(), <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_ASSOCIATED_ALLOCATOR_HPP</span></div>
+<div class="ttc" id="aassociator_8hpp_html"><div class="ttname"><a href="associator_8hpp.html">associator.hpp</a></div></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_ae9be9d972e87a686de9e5bd8bd93b39d"><div class="ttname"><a href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a></div><div class="ttdeci">#define ASIO_NODISCARD</div><div class="ttdef"><b>Definition:</b> config.hpp:1375</div></div>
+<div class="ttc" id="afunctional_8hpp_html"><div class="ttname"><a href="functional_8hpp.html">functional.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a05e34b80842ec318c893ca4eb6316c42"><div class="ttname"><a href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">asio::void_t</a></div><div class="ttdeci">typename void_type&lt; T &gt;::type void_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:149</div></div>
+<div class="ttc" id="anamespaceasio_html_a36a2efaadb823ea5daa2722235f03b79"><div class="ttname"><a href="namespaceasio.html#a36a2efaadb823ea5daa2722235f03b79">asio::associated_allocator_t</a></div><div class="ttdeci">typename associated_allocator&lt; T, Allocator &gt;::type associated_allocator_t</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:159</div></div>
+<div class="ttc" id="anamespaceasio_html_a713d72690f79a12548b3d3199b6d2a16"><div class="ttname"><a href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">asio::get_associated_allocator</a></div><div class="ttdeci">ASIO_NODISCARD associated_allocator&lt; T &gt;::type get_associated_allocator(const T &amp;t) noexcept</div><div class="ttdoc">Helper function to obtain an object's associated allocator.</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:140</div></div>
+<div class="ttc" id="anamespaceasio_html_a847109104af3016e3bb18a8ab5b2123c"><div class="ttname"><a href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">asio::enable_if_t</a></div><div class="ttdeci">typename std::enable_if&lt; C, T &gt;::type enable_if_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:62</div></div>
+<div class="ttc" id="anamespaceasio_html_aa80c4033469ae5aaa092c0d49852403c"><div class="ttname"><a href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">asio::a</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; a</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4_html_a2582a3af31245ea751682e5e6a572fc9"><div class="ttname"><a href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#a2582a3af31245ea751682e5e6a572fc9">asio::associated_allocator&lt; reference_wrapper&lt; T &gt;, Allocator &gt;::get</a></div><div class="ttdeci">static auto get(reference_wrapper&lt; T &gt; t, const Allocator &amp;a) noexcept -&gt; decltype(associated_allocator&lt; T, Allocator &gt;::get(t.get(), a))</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:203</div></div>
+<div class="ttc" id="astructasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4_html_ab1f05d81e7cc5dcf767d9119030e9527"><div class="ttname"><a href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#ab1f05d81e7cc5dcf767d9119030e9527">asio::associated_allocator&lt; reference_wrapper&lt; T &gt;, Allocator &gt;::get</a></div><div class="ttdeci">static type get(reference_wrapper&lt; T &gt; t) noexcept</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:196</div></div>
+<div class="ttc" id="astructasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4_html_ae2a6e6d6bbd7ed6d70c384577abaf1a1"><div class="ttname"><a href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#ae2a6e6d6bbd7ed6d70c384577abaf1a1">asio::associated_allocator&lt; reference_wrapper&lt; T &gt;, Allocator &gt;::type</a></div><div class="ttdeci">associated_allocator&lt; T, Allocator &gt;::type type</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:192</div></div>
+<div class="ttc" id="astructasio_1_1associated__allocator_html"><div class="ttname"><a href="structasio_1_1associated__allocator.html">asio::associated_allocator</a></div><div class="ttdoc">Traits type used to obtain the allocator associated with an object.</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:118</div></div>
+<div class="ttc" id="astructasio_1_1associator_html"><div class="ttname"><a href="structasio_1_1associator.html">asio::associator</a></div><div class="ttdoc">Used to generically specialise associators for a type.</div><div class="ttdef"><b>Definition:</b> associator.hpp:28</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__forwarding__base_3_01T_00_01A_00_01enable__if__t_f21ad55aaa38640368239e26cdde3f40_html_a9fe3cec8b0fee19a16b4c738f566df9e"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__forwarding__base_3_01T_00_01A_00_01enable__if__t_f21ad55aaa38640368239e26cdde3f40.html#a9fe3cec8b0fee19a16b4c738f566df9e">asio::detail::associated_allocator_forwarding_base&lt; T, A, enable_if_t&lt; is_same&lt; typename associated_allocator&lt; T, A &gt;::asio_associated_allocator_is_unspecialised, void &gt;::value &gt; &gt;::asio_associated_allocator_is_unspecialised</a></div><div class="ttdeci">void asio_associated_allocator_is_unspecialised</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:178</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__forwarding__base_html"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__forwarding__base.html">asio::detail::associated_allocator_forwarding_base</a></div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:165</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4_html_a828f4b6b007da81b7f00ae657e9381d7"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#a828f4b6b007da81b7f00ae657e9381d7">asio::detail::associated_allocator_impl&lt; T, A, void_t&lt; typename T::allocator_type &gt; &gt;::type</a></div><div class="ttdeci">T::allocator_type type</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:64</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4_html_aa116147ab61edd6d59c0d51172d41b81"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#aa116147ab61edd6d59c0d51172d41b81">asio::detail::associated_allocator_impl&lt; T, A, void_t&lt; typename T::allocator_type &gt; &gt;::get</a></div><div class="ttdeci">static auto get(const T &amp;t) noexcept -&gt; decltype(t.get_allocator())</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:66</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4_html_ac236d5ae42e109734766742e5e984f28"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html#ac236d5ae42e109734766742e5e984f28">asio::detail::associated_allocator_impl&lt; T, A, void_t&lt; typename T::allocator_type &gt; &gt;::get</a></div><div class="ttdeci">static auto get(const T &amp;t, const A &amp;) noexcept -&gt; decltype(t.get_allocator())</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:72</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_html"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl.html">asio::detail::associated_allocator_impl</a></div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:45</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_html_a5aa274f76587092357d920d3446995d1"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl.html#a5aa274f76587092357d920d3446995d1">asio::detail::associated_allocator_impl::type</a></div><div class="ttdeci">A type</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:48</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_html_a775048ed7440dc94f70857b37b84e1f2"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl.html#a775048ed7440dc94f70857b37b84e1f2">asio::detail::associated_allocator_impl::asio_associated_allocator_is_unspecialised</a></div><div class="ttdeci">void asio_associated_allocator_is_unspecialised</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:46</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_html_ada18ec8fdbda99be205fcd18aad5b7bf"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl.html#ada18ec8fdbda99be205fcd18aad5b7bf">asio::detail::associated_allocator_impl::get</a></div><div class="ttdeci">static type get(const T &amp;) noexcept</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:50</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__allocator__impl_html_ae4e921c9830589c13b6e826fb98f102c"><div class="ttname"><a href="structasio_1_1detail_1_1associated__allocator__impl.html#ae4e921c9830589c13b6e826fb98f102c">asio::detail::associated_allocator_impl::get</a></div><div class="ttdeci">static const type &amp; get(const T &amp;, const A &amp;a) noexcept</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:55</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1has__allocator__type_html"><div class="ttname"><a href="structasio_1_1detail_1_1has__allocator__type.html">asio::detail::has_allocator_type</a></div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:35</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

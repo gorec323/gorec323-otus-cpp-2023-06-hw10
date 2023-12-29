@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/dispatch.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dispatch.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dispatch_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// dispatch.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_DISPATCH_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_DISPATCH_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_2asio_2async__result_8hpp.html">asio/async_result.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="initiate__dispatch_8hpp.html">asio/detail/initiate_dispatch.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="execution__context_8hpp.html">asio/execution_context.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="execution_2executor_8hpp.html">asio/execution/executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="is__executor_8hpp.html">asio/is_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">template</span> &lt;ASIO_COMPLETION_TOKEN_FOR(<span class="keywordtype">void</span>()) NullaryToken&gt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="namespaceasio.html#a0b53f4ff238fefdfbaf52153b89e6abd">   72</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a0b53f4ff238fefdfbaf52153b89e6abd">dispatch</a>(NullaryToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;NullaryToken, <span class="keywordtype">void</span>()&gt;(</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      declval&lt;detail::initiate_dispatch&gt;(), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>))</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">return</span> async_initiate&lt;NullaryToken, void()&gt;(</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="classasio_1_1detail_1_1initiate__dispatch.html">detail::initiate_dispatch</a>(), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span>()) NullaryToken</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;Executor&gt;&gt;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="namespaceasio.html#a80db88672c1158f8662ac040ad6cb975">  146</a></span>&#160;inline auto <a class="code" href="namespaceasio.html#a0b53f4ff238fefdfbaf52153b89e6abd">dispatch</a>(const Executor&amp; ex,</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    NullaryToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;Executor&gt;(),</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <a class="code" href="namespaceasio_1_1execution.html">execution</a>::<a class="code" href="structasio_1_1is__executor.html">is_executor</a>&lt;Executor&gt;::value || <a class="code" href="structasio_1_1is__executor.html">is_executor</a>&lt;Executor&gt;::value</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;NullaryToken, <span class="keywordtype">void</span>()&gt;(</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      declval&lt;detail::initiate_dispatch_with_executor&lt;Executor&gt;&gt;(), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>))</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordflow">return</span> async_initiate&lt;NullaryToken, void()&gt;(</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <a class="code" href="classasio_1_1detail_1_1initiate__dispatch__with__executor.html">detail::initiate_dispatch_with_executor&lt;Executor&gt;</a>(ex), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span>()) NullaryToken</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;typename ExecutionContext::executor_type&gt;&gt;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="namespaceasio.html#a61872a90ad6c43350f9c0f0d4d1bcff7">  176</a></span>&#160;inline auto <a class="code" href="namespaceasio.html#a0b53f4ff238fefdfbaf52153b89e6abd">dispatch</a>(ExecutionContext&amp; ctx,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    NullaryToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      typename ExecutionContext::executor_type&gt;(),</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      is_convertible&lt;ExecutionContext&amp;, <a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp;&gt;::value</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;NullaryToken, <span class="keywordtype">void</span>()&gt;(</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      declval&lt;detail::initiate_dispatch_with_executor&lt;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        typename ExecutionContext::executor_type&gt;&gt;(), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>))</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordflow">return</span> async_initiate&lt;NullaryToken, void()&gt;(</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <a class="code" href="classasio_1_1detail_1_1initiate__dispatch__with__executor.html">detail::initiate_dispatch_with_executor</a>&lt;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">typename</span> ExecutionContext::executor_type&gt;(</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;          ctx.get_executor()), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_DISPATCH_HPP</span></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__dispatch__with__executor_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__dispatch__with__executor.html">asio::detail::initiate_dispatch_with_executor</a></div><div class="ttdef"><b>Definition:</b> initiate_dispatch.hpp:74</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__dispatch_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__dispatch.html">asio::detail::initiate_dispatch</a></div><div class="ttdef"><b>Definition:</b> initiate_dispatch.hpp:32</div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_html"><div class="ttname"><a href="classasio_1_1execution__context.html">asio::execution_context</a></div><div class="ttdoc">A context for function object execution.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:106</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aexecution_2executor_8hpp_html"><div class="ttname"><a href="execution_2executor_8hpp.html">executor.hpp</a></div></div>
+<div class="ttc" id="aexecution__context_8hpp_html"><div class="ttname"><a href="execution__context_8hpp.html">execution_context.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html">async_result.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="ainitiate__dispatch_8hpp_html"><div class="ttname"><a href="initiate__dispatch_8hpp.html">initiate_dispatch.hpp</a></div></div>
+<div class="ttc" id="ais__executor_8hpp_html"><div class="ttname"><a href="is__executor_8hpp.html">is_executor.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html"><div class="ttname"><a href="namespaceasio_1_1execution.html">asio::execution</a></div><div class="ttdef"><b>Definition:</b> handler_work.hpp:46</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a0b53f4ff238fefdfbaf52153b89e6abd"><div class="ttname"><a href="namespaceasio.html#a0b53f4ff238fefdfbaf52153b89e6abd">asio::dispatch</a></div><div class="ttdeci">auto dispatch(NullaryToken &amp;&amp;token) -&gt; decltype(async_initiate&lt; NullaryToken, void()&gt;(declval&lt; detail::initiate_dispatch &gt;(), token))</div><div class="ttdoc">Submits a completion token or function object for execution.</div><div class="ttdef"><b>Definition:</b> dispatch.hpp:72</div></div>
+<div class="ttc" id="anamespaceasio_html_a84bbc083cf9153b28ce2d86c3ea16458"><div class="ttname"><a href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">asio::default_completion_token_t</a></div><div class="ttdeci">typename default_completion_token&lt; T &gt;::type default_completion_token_t</div><div class="ttdef"><b>Definition:</b> async_result.hpp:882</div></div>
+<div class="ttc" id="anamespaceasio_html_acbf600e256af39d8a0c65fb6e3eb988d"><div class="ttname"><a href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a></div><div class="ttdeci">auto async_initiate(Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;token, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(token), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</div><div class="ttdef"><b>Definition:</b> async_result.hpp:558</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="anamespaceasio_html_adff1e9f7bb336026f18afa2221c9df07"><div class="ttname"><a href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">asio::token</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1is__executor_html"><div class="ttname"><a href="structasio_1_1is__executor.html">asio::is_executor</a></div><div class="ttdef"><b>Definition:</b> is_executor.hpp:39</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

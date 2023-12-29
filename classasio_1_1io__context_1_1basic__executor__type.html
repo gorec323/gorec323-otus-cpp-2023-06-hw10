@@ -1,0 +1,865 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::io_context::basic_executor_type&lt; Allocator, Bits &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1io__context.html">io_context</a></li><li class="navelem"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1io__context_1_1basic__executor__type-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::io_context::basic_executor_type&lt; Allocator, Bits &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Executor implementation type used to submit functions to an <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>.  
+ <a href="classasio_1_1io__context_1_1basic__executor__type.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="io__context_8hpp_source.html">io_context.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::io_context::basic_executor_type&lt; Allocator, Bits &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1io__context_1_1basic__executor__type__inherit__graph.png" border="0" usemap="#aasio_1_1io__context_1_1basic__executor__type_3_01Allocator_00_01Bits_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1io__context_1_1basic__executor__type_3_01Allocator_00_01Bits_01_4_inherit__map" id="aasio_1_1io__context_1_1basic__executor__type_3_01Allocator_00_01Bits_01_4_inherit__map">
+<area shape="rect" title="Executor implementation type used to submit functions to an io_context." alt="" coords="89,80,288,136"/>
+<area shape="rect" href="structasio_1_1detail_1_1io__context__bits.html" title=" " alt="" coords="5,5,207,32"/>
+<area shape="rect" title=" " alt="" coords="231,5,311,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::io_context::basic_executor_type&lt; Allocator, Bits &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1io__context_1_1basic__executor__type__coll__graph.png" border="0" usemap="#aasio_1_1io__context_1_1basic__executor__type_3_01Allocator_00_01Bits_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1io__context_1_1basic__executor__type_3_01Allocator_00_01Bits_01_4_coll__map" id="aasio_1_1io__context_1_1basic__executor__type_3_01Allocator_00_01Bits_01_4_coll__map">
+<area shape="rect" title="Executor implementation type used to submit functions to an io_context." alt="" coords="89,229,288,285"/>
+<area shape="rect" href="structasio_1_1detail_1_1io__context__bits.html" title=" " alt="" coords="5,153,207,180"/>
+<area shape="rect" title=" " alt="" coords="67,5,145,32"/>
+<area shape="rect" title=" " alt="" coords="231,153,311,180"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a82baac44b9285d63c2c205ef3481475b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a82baac44b9285d63c2c205ef3481475b">basic_executor_type</a> (const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a82baac44b9285d63c2c205ef3481475b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a82baac44b9285d63c2c205ef3481475b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a82baac44b9285d63c2c205ef3481475b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adebbb650f87a9c7a22d1999f83e63c18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#adebbb650f87a9c7a22d1999f83e63c18">basic_executor_type</a> (<a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:adebbb650f87a9c7a22d1999f83e63c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#adebbb650f87a9c7a22d1999f83e63c18">Подробнее...</a><br /></td></tr>
+<tr class="separator:adebbb650f87a9c7a22d1999f83e63c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb9d6f617c45b956450d5b81058c05f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#adfb9d6f617c45b956450d5b81058c05f">~basic_executor_type</a> () noexcept</td></tr>
+<tr class="memdesc:adfb9d6f617c45b956450d5b81058c05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#adfb9d6f617c45b956450d5b81058c05f">Подробнее...</a><br /></td></tr>
+<tr class="separator:adfb9d6f617c45b956450d5b81058c05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf6f834adf9847ee178d1e91226538"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a5caf6f834adf9847ee178d1e91226538">operator=</a> (const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a5caf6f834adf9847ee178d1e91226538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a5caf6f834adf9847ee178d1e91226538">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5caf6f834adf9847ee178d1e91226538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2bf44f60e0902c4c9916e9a762408d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a6c2bf44f60e0902c4c9916e9a762408d">operator=</a> (<a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a6c2bf44f60e0902c4c9916e9a762408d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a6c2bf44f60e0902c4c9916e9a762408d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6c2bf44f60e0902c4c9916e9a762408d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd6cbf2463e429a1f850425d3fbf6b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#addd6cbf2463e429a1f850425d3fbf6b2">running_in_this_thread</a> () const noexcept</td></tr>
+<tr class="memdesc:addd6cbf2463e429a1f850425d3fbf6b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> is running in the current thread.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#addd6cbf2463e429a1f850425d3fbf6b2">Подробнее...</a><br /></td></tr>
+<tr class="separator:addd6cbf2463e429a1f850425d3fbf6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f303953c1702340d392f1fc83e14219"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
+<tr class="memitem:a9f303953c1702340d392f1fc83e14219"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a9f303953c1702340d392f1fc83e14219">execute</a> (Function &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>) const</td></tr>
+<tr class="memdesc:a9f303953c1702340d392f1fc83e14219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution function.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a9f303953c1702340d392f1fc83e14219">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9f303953c1702340d392f1fc83e14219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5583ce5b633e6e8ce7066debb2b4b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1io__context.html">io_context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#aef5583ce5b633e6e8ce7066debb2b4b2">context</a> () const noexcept</td></tr>
+<tr class="memdesc:aef5583ce5b633e6e8ce7066debb2b4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying execution context.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#aef5583ce5b633e6e8ce7066debb2b4b2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aef5583ce5b633e6e8ce7066debb2b4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7fcfd8fe69666f2734bf1fb4624b566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#af7fcfd8fe69666f2734bf1fb4624b566">on_work_started</a> () const noexcept</td></tr>
+<tr class="memdesc:af7fcfd8fe69666f2734bf1fb4624b566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> that it has some outstanding work to do.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#af7fcfd8fe69666f2734bf1fb4624b566">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7fcfd8fe69666f2734bf1fb4624b566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b619b9f9c13f4077a510f27858a917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a03b619b9f9c13f4077a510f27858a917">on_work_finished</a> () const noexcept</td></tr>
+<tr class="memdesc:a03b619b9f9c13f4077a510f27858a917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> that some work is no longer outstanding.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a03b619b9f9c13f4077a510f27858a917">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03b619b9f9c13f4077a510f27858a917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368dda17ba8c5f7c55829c562691455c"><td class="memTemplParams" colspan="2">template&lt;typename Function , typename OtherAllocator &gt; </td></tr>
+<tr class="memitem:a368dda17ba8c5f7c55829c562691455c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a368dda17ba8c5f7c55829c562691455c">dispatch</a> (Function &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const OtherAllocator &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="memdesc:a368dda17ba8c5f7c55829c562691455c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to invoke the given function object.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a368dda17ba8c5f7c55829c562691455c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a368dda17ba8c5f7c55829c562691455c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b5838c38a53db39d051aa35a045dc1"><td class="memTemplParams" colspan="2">template&lt;typename Function , typename OtherAllocator &gt; </td></tr>
+<tr class="memitem:ae9b5838c38a53db39d051aa35a045dc1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#ae9b5838c38a53db39d051aa35a045dc1">post</a> (Function &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const OtherAllocator &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="memdesc:ae9b5838c38a53db39d051aa35a045dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to invoke the given function object.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#ae9b5838c38a53db39d051aa35a045dc1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae9b5838c38a53db39d051aa35a045dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0863076bf089a0f76cdc3e3f44c845ad"><td class="memTemplParams" colspan="2">template&lt;typename Function , typename OtherAllocator &gt; </td></tr>
+<tr class="memitem:a0863076bf089a0f76cdc3e3f44c845ad"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a0863076bf089a0f76cdc3e3f44c845ad">defer</a> (Function &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const OtherAllocator &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="memdesc:a0863076bf089a0f76cdc3e3f44c845ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to invoke the given function object.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a0863076bf089a0f76cdc3e3f44c845ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0863076bf089a0f76cdc3e3f44c845ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:aa3d98b058d9f370ef974f9c7741b6cc7"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#aa3d98b058d9f370ef974f9c7741b6cc7">asio_require_fn::impl</a></td></tr>
+<tr class="separator:aa3d98b058d9f370ef974f9c7741b6cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2959c062a23b6b9ca9129990a6665e7c"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a2959c062a23b6b9ca9129990a6665e7c">asio_prefer_fn::impl</a></td></tr>
+<tr class="separator:a2959c062a23b6b9ca9129990a6665e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd26fe4820ec018a12ef6e1e013d776"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#aebd26fe4820ec018a12ef6e1e013d776">asio_query_fn::impl</a></td></tr>
+<tr class="separator:aebd26fe4820ec018a12ef6e1e013d776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d22a07ab641033505ea3f0afeaa9a8b"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a3d22a07ab641033505ea3f0afeaa9a8b">asio::execution::detail::mapping_t&lt; 0 &gt;</a></td></tr>
+<tr class="separator:a3d22a07ab641033505ea3f0afeaa9a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3b8747e29c2276a1bb547ff4b00190"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#abd3b8747e29c2276a1bb547ff4b00190">asio::execution::detail::outstanding_work_t&lt; 0 &gt;</a></td></tr>
+<tr class="separator:abd3b8747e29c2276a1bb547ff4b00190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ebd7f4e6b89410361739cc952a6ace"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#ae4ebd7f4e6b89410361739cc952a6ace">io_context</a></td></tr>
+<tr class="separator:ae4ebd7f4e6b89410361739cc952a6ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2b5883e187289fbfba902e86fa4188"><td class="memTemplParams" colspan="2">template&lt;typename , uintptr_t &gt; </td></tr>
+<tr class="memitem:aec2b5883e187289fbfba902e86fa4188"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#aec2b5883e187289fbfba902e86fa4188">basic_executor_type</a></td></tr>
+<tr class="separator:aec2b5883e187289fbfba902e86fa4188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4244db48f406a75c6397917c42c37468"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a4244db48f406a75c6397917c42c37468">operator==</a> (const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a4244db48f406a75c6397917c42c37468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two executors for equality.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a4244db48f406a75c6397917c42c37468">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4244db48f406a75c6397917c42c37468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a72ebd30f8636206bdbef379ef3baeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a4a72ebd30f8636206bdbef379ef3baeb">operator!=</a> (const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a4a72ebd30f8636206bdbef379ef3baeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two executors for inequality.  <a href="classasio_1_1io__context_1_1basic__executor__type.html#a4a72ebd30f8636206bdbef379ef3baeb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4a72ebd30f8636206bdbef379ef3baeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename Allocator, uintptr_t Bits&gt;<br />
+class asio::io_context::basic_executor_type&lt; Allocator, Bits &gt;</h3>
+
+<p>Executor implementation type used to submit functions to an <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a82baac44b9285d63c2c205ef3481475b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82baac44b9285d63c2c205ef3481475b">&#9670;&nbsp;</a></span>basic_executor_type() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::<a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+</div>
+</div>
+<a id="adebbb650f87a9c7a22d1999f83e63c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adebbb650f87a9c7a22d1999f83e63c18">&#9670;&nbsp;</a></span>basic_executor_type() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::<a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. </p>
+
+</div>
+</div>
+<a id="adfb9d6f617c45b956450d5b81058c05f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb9d6f617c45b956450d5b81058c05f">&#9670;&nbsp;</a></span>~basic_executor_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::~<a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aef5583ce5b633e6e8ce7066debb2b4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5583ce5b633e6e8ce7066debb2b4b2">&#9670;&nbsp;</a></span>context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context.html">io_context</a> &amp; <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain the underlying execution context. </p>
+
+</div>
+</div>
+<a id="a0863076bf089a0f76cdc3e3f44c845ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0863076bf089a0f76cdc3e3f44c845ad">&#9670;&nbsp;</a></span>defer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<div class="memtemplate">
+template&lt;typename Function , typename OtherAllocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::defer </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const OtherAllocator &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to invoke the given function object. </p>
+<p>This function is used to ask the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to execute the given function object. The function object will never be executed inside <code><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a0863076bf089a0f76cdc3e3f44c845ad" title="Request the io_context to invoke the given function object.">defer()</a></code>. Instead, it will be scheduled to run on the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>.</p>
+<p>If the current thread belongs to the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>, <code><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a0863076bf089a0f76cdc3e3f44c845ad" title="Request the io_context to invoke the given function object.">defer()</a></code> will delay scheduling the function object until the current thread returns control to the pool.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The function object to be called. The executor will make a copy of the handler object as required. The function signature of the function object must be:<div class="fragment"><div class="line"><span class="keywordtype">void</span> <span class="keyword">function</span>(); </div>
+</div><!-- fragment --></td></tr>
+    <tr><td class="paramname">a</td><td>An allocator that may be used by the executor to allocate the internal storage needed for function invocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a368dda17ba8c5f7c55829c562691455c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368dda17ba8c5f7c55829c562691455c">&#9670;&nbsp;</a></span>dispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<div class="memtemplate">
+template&lt;typename Function , typename OtherAllocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const OtherAllocator &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to invoke the given function object. </p>
+<p>This function is used to ask the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to execute the given function object. If the current thread is running the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>, <code><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#a368dda17ba8c5f7c55829c562691455c" title="Request the io_context to invoke the given function object.">dispatch()</a></code> executes the function before returning. Otherwise, the function will be scheduled to run on the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The function object to be called. The executor will make a copy of the handler object as required. The function signature of the function object must be:<div class="fragment"><div class="line"><span class="keywordtype">void</span> <span class="keyword">function</span>(); </div>
+</div><!-- fragment --></td></tr>
+    <tr><td class="paramname">a</td><td>An allocator that may be used by the executor to allocate the internal storage needed for function invocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9f303953c1702340d392f1fc83e14219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f303953c1702340d392f1fc83e14219">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<div class="memtemplate">
+template&lt;typename Function &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::execute </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execution function. </p>
+
+</div>
+</div>
+<a id="a03b619b9f9c13f4077a510f27858a917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b619b9f9c13f4077a510f27858a917">&#9670;&nbsp;</a></span>on_work_finished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::on_work_finished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> that some work is no longer outstanding. </p>
+<p>This function is used to inform the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> that some work has finished. Once the count of unfinished work reaches zero, the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> is stopped and the <a class="el" href="classasio_1_1io__context.html#aa281eec1d504e1a5e33e7cc1eca7ce22" title="Run the io_context object&#39;s event processing loop.">run()</a> and <a class="el" href="classasio_1_1io__context.html#a167cf248d1ab7b35b1fa0af519ba8bf6">run_one()</a> functions may exit. </p>
+
+</div>
+</div>
+<a id="af7fcfd8fe69666f2734bf1fb4624b566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7fcfd8fe69666f2734bf1fb4624b566">&#9670;&nbsp;</a></span>on_work_started()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::on_work_started </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> that it has some outstanding work to do. </p>
+<p>This function is used to inform the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> that some work has begun. This ensures that the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>'s <a class="el" href="classasio_1_1io__context.html#aa281eec1d504e1a5e33e7cc1eca7ce22" title="Run the io_context object&#39;s event processing loop.">run()</a> and <a class="el" href="classasio_1_1io__context.html#a167cf248d1ab7b35b1fa0af519ba8bf6">run_one()</a> functions do not exit while the work is underway. </p>
+
+</div>
+</div>
+<a id="a6c2bf44f60e0902c4c9916e9a762408d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2bf44f60e0902c4c9916e9a762408d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">io_context::basic_executor_type</a>&lt; Allocator, Bits &gt; &amp; <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator. </p>
+
+</div>
+</div>
+<a id="a5caf6f834adf9847ee178d1e91226538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5caf6f834adf9847ee178d1e91226538">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">io_context::basic_executor_type</a>&lt; Allocator, Bits &gt; &amp; <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assignment operator. </p>
+
+</div>
+</div>
+<a id="ae9b5838c38a53db39d051aa35a045dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b5838c38a53db39d051aa35a045dc1">&#9670;&nbsp;</a></span>post()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<div class="memtemplate">
+template&lt;typename Function , typename OtherAllocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::post </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const OtherAllocator &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to invoke the given function object. </p>
+<p>This function is used to ask the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> to execute the given function object. The function object will never be executed inside <code><a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html#ae9b5838c38a53db39d051aa35a045dc1" title="Request the io_context to invoke the given function object.">post()</a></code>. Instead, it will be scheduled to run on the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The function object to be called. The executor will make a copy of the handler object as required. The function signature of the function object must be:<div class="fragment"><div class="line"><span class="keywordtype">void</span> <span class="keyword">function</span>(); </div>
+</div><!-- fragment --></td></tr>
+    <tr><td class="paramname">a</td><td>An allocator that may be used by the executor to allocate the internal storage needed for function invocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="addd6cbf2463e429a1f850425d3fbf6b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd6cbf2463e429a1f850425d3fbf6b2">&#9670;&nbsp;</a></span>running_in_this_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">asio::io_context::basic_executor_type</a>&lt; Allocator, Bits &gt;::running_in_this_thread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> is running in the current thread. </p>
+<dl class="section return"><dt>Возвращает</dt><dd><code>true</code> if the current thread is running the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>. Otherwise returns <code>false</code>. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a3d22a07ab641033505ea3f0afeaa9a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d22a07ab641033505ea3f0afeaa9a8b">&#9670;&nbsp;</a></span>asio::execution::detail::mapping_t&lt; 0 &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="structasio_1_1execution_1_1detail_1_1mapping__t.html">asio::execution::detail::mapping_t</a>&lt; 0 &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd3b8747e29c2276a1bb547ff4b00190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3b8747e29c2276a1bb547ff4b00190">&#9670;&nbsp;</a></span>asio::execution::detail::outstanding_work_t&lt; 0 &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="structasio_1_1execution_1_1detail_1_1outstanding__work__t.html">asio::execution::detail::outstanding_work_t</a>&lt; 0 &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2959c062a23b6b9ca9129990a6665e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2959c062a23b6b9ca9129990a6665e7c">&#9670;&nbsp;</a></span>asio_prefer_fn::impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="structasio__prefer__fn_1_1impl.html">asio_prefer_fn::impl</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebd26fe4820ec018a12ef6e1e013d776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd26fe4820ec018a12ef6e1e013d776">&#9670;&nbsp;</a></span>asio_query_fn::impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="structasio__query__fn_1_1impl.html">asio_query_fn::impl</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3d98b058d9f370ef974f9c7741b6cc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d98b058d9f370ef974f9c7741b6cc7">&#9670;&nbsp;</a></span>asio_require_fn::impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="structasio__require__fn_1_1impl.html">asio_require_fn::impl</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec2b5883e187289fbfba902e86fa4188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2b5883e187289fbfba902e86fa4188">&#9670;&nbsp;</a></span>basic_executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<div class="memtemplate">
+template&lt;typename , uintptr_t &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4ebd7f4e6b89410361739cc952a6ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ebd7f4e6b89410361739cc952a6ace">&#9670;&nbsp;</a></span>io_context</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1io__context.html">io_context</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a72ebd30f8636206bdbef379ef3baeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a72ebd30f8636206bdbef379ef3baeb">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two executors for inequality. </p>
+<p>Two executors are equal if they refer to the same underlying <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>. </p>
+
+</div>
+</div>
+<a id="a4244db48f406a75c6397917c42c37468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4244db48f406a75c6397917c42c37468">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator , uintptr_t Bits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1io__context_1_1basic__executor__type.html">basic_executor_type</a>&lt; Allocator, Bits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two executors for equality. </p>
+<p>Two executors are equal if they refer to the same underlying <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a>. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="io__context_8hpp_source.html">io_context.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/generic/stream_protocol.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_558717c4b65fad76fe543b245d644e3e.html">generic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">stream_protocol.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="generic_2stream__protocol_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// generic/stream_protocol.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_GENERIC_STREAM_PROTOCOL_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_GENERIC_STREAM_PROTOCOL_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;typeinfo&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__socket__iostream_8hpp.html">asio/basic_socket_iostream.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__stream__socket_8hpp.html">asio/basic_stream_socket.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="socket__types_8hpp.html">asio/detail/socket_types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="throw__exception_8hpp.html">asio/detail/throw_exception.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="generic_2basic__endpoint_8hpp.html">asio/generic/basic_endpoint.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>generic {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1generic_1_1stream__protocol.html">stream_protocol</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#aadcf2d5a99b518a537d7ab6d618a217a">   54</a></span>&#160;  <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#aadcf2d5a99b518a537d7ab6d618a217a">stream_protocol</a>(<span class="keywordtype">int</span> address_family, <span class="keywordtype">int</span> socket_protocol)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    : family_(address_family),</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      protocol_(socket_protocol)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Protocol&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#a5dbcb247a6ab11567f5e730946e46ddd">   65</a></span>&#160;  <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a5dbcb247a6ab11567f5e730946e46ddd">stream_protocol</a>(<span class="keyword">const</span> Protocol&amp; source_protocol)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    : family_(source_protocol.<a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a557a5bb0e81556d56b0bf347f029072a">family</a>()),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      protocol_(source_protocol.<a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a92673409fbb52cded7f073d4b82f1256">protocol</a>())</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (source_protocol.type() != <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a5fa039f952bb2aa72b54599779750942">type</a>())</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      std::bad_cast ex;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <a class="code" href="namespaceasio_1_1detail.html#adf353499452f212576d0e69d7d35693e">asio::detail::throw_exception</a>(ex);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#a5fa039f952bb2aa72b54599779750942">   77</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a5fa039f952bb2aa72b54599779750942">type</a>() const noexcept</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a>(SOCK_STREAM);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#a92673409fbb52cded7f073d4b82f1256">   83</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a92673409fbb52cded7f073d4b82f1256">protocol</a>() const noexcept</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> protocol_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#a557a5bb0e81556d56b0bf347f029072a">   89</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a557a5bb0e81556d56b0bf347f029072a">family</a>() const noexcept</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> family_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#a5c9769c22be0fefb71ff42caab837dba">   95</a></span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a5c9769c22be0fefb71ff42caab837dba">operator==</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html">stream_protocol</a>&amp; p1, <span class="keyword">const</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html">stream_protocol</a>&amp; p2)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> p1.family_ == p2.family_ &amp;&amp; p1.protocol_ == p2.protocol_;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#af21c816bf9da77d206ca2c32498185d0">  101</a></span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#af21c816bf9da77d206ca2c32498185d0">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html">stream_protocol</a>&amp; p1, <span class="keyword">const</span> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html">stream_protocol</a>&amp; p2)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> !(p1 == p2);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#a2217db3a8791fa9c28a340b877d2ef0f">  107</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint&lt;stream_protocol&gt;</a> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a2217db3a8791fa9c28a340b877d2ef0f">endpoint</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#abff2e68a3458693a14e871b1f94a850c">  110</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classasio_1_1basic__stream__socket.html">basic_stream_socket&lt;stream_protocol&gt;</a> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#abff2e68a3458693a14e871b1f94a850c">socket</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classasio_1_1generic_1_1stream__protocol.html#a8c47df8acd5a63bd939cef41beaf202d">  114</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classasio_1_1basic__socket__iostream.html">basic_socket_iostream&lt;stream_protocol&gt;</a> <a class="code" href="classasio_1_1generic_1_1stream__protocol.html#a8c47df8acd5a63bd939cef41beaf202d">iostream</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">int</span> family_;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">int</span> protocol_;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;} <span class="comment">// namespace generic</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_GENERIC_STREAM_PROTOCOL_HPP</span></div>
+<div class="ttc" id="abasic__socket__iostream_8hpp_html"><div class="ttname"><a href="basic__socket__iostream_8hpp.html">basic_socket_iostream.hpp</a></div></div>
+<div class="ttc" id="abasic__stream__socket_8hpp_html"><div class="ttname"><a href="basic__stream__socket_8hpp.html">basic_stream_socket.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1basic__socket__iostream_html"><div class="ttname"><a href="classasio_1_1basic__socket__iostream.html">asio::basic_socket_iostream</a></div><div class="ttdoc">Iostream interface for a socket.</div><div class="ttdef"><b>Definition:</b> basic_socket_iostream.hpp:92</div></div>
+<div class="ttc" id="aclassasio_1_1basic__stream__socket_html"><div class="ttname"><a href="classasio_1_1basic__stream__socket.html">asio::basic_stream_socket</a></div><div class="ttdoc">Provides stream-oriented socket functionality.</div><div class="ttdef"><b>Definition:</b> basic_stream_socket.hpp:62</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1basic__endpoint_html"><div class="ttname"><a href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a></div><div class="ttdoc">Describes an endpoint for any socket type.</div><div class="ttdef"><b>Definition:</b> basic_endpoint.hpp:43</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html">asio::generic::stream_protocol</a></div><div class="ttdoc">Encapsulates the flags needed for a generic stream-oriented socket.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:51</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_a2217db3a8791fa9c28a340b877d2ef0f"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#a2217db3a8791fa9c28a340b877d2ef0f">asio::generic::stream_protocol::endpoint</a></div><div class="ttdeci">basic_endpoint&lt; stream_protocol &gt; endpoint</div><div class="ttdoc">The type of an endpoint.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:107</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_a557a5bb0e81556d56b0bf347f029072a"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#a557a5bb0e81556d56b0bf347f029072a">asio::generic::stream_protocol::family</a></div><div class="ttdeci">int family() const noexcept</div><div class="ttdoc">Obtain an identifier for the protocol family.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:89</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_a5c9769c22be0fefb71ff42caab837dba"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#a5c9769c22be0fefb71ff42caab837dba">asio::generic::stream_protocol::operator==</a></div><div class="ttdeci">friend bool operator==(const stream_protocol &amp;p1, const stream_protocol &amp;p2)</div><div class="ttdoc">Compare two protocols for equality.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:95</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_a5dbcb247a6ab11567f5e730946e46ddd"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#a5dbcb247a6ab11567f5e730946e46ddd">asio::generic::stream_protocol::stream_protocol</a></div><div class="ttdeci">stream_protocol(const Protocol &amp;source_protocol)</div><div class="ttdoc">Construct a generic protocol object from a specific protocol.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:65</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_a5fa039f952bb2aa72b54599779750942"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#a5fa039f952bb2aa72b54599779750942">asio::generic::stream_protocol::type</a></div><div class="ttdeci">int type() const noexcept</div><div class="ttdoc">Obtain an identifier for the type of the protocol.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:77</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_a8c47df8acd5a63bd939cef41beaf202d"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#a8c47df8acd5a63bd939cef41beaf202d">asio::generic::stream_protocol::iostream</a></div><div class="ttdeci">basic_socket_iostream&lt; stream_protocol &gt; iostream</div><div class="ttdoc">The generic socket iostream type.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:114</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_a92673409fbb52cded7f073d4b82f1256"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#a92673409fbb52cded7f073d4b82f1256">asio::generic::stream_protocol::protocol</a></div><div class="ttdeci">int protocol() const noexcept</div><div class="ttdoc">Obtain an identifier for the protocol.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:83</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_aadcf2d5a99b518a537d7ab6d618a217a"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#aadcf2d5a99b518a537d7ab6d618a217a">asio::generic::stream_protocol::stream_protocol</a></div><div class="ttdeci">stream_protocol(int address_family, int socket_protocol)</div><div class="ttdoc">Construct a protocol object for a specific address family and protocol.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:54</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_abff2e68a3458693a14e871b1f94a850c"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#abff2e68a3458693a14e871b1f94a850c">asio::generic::stream_protocol::socket</a></div><div class="ttdeci">basic_stream_socket&lt; stream_protocol &gt; socket</div><div class="ttdoc">The generic socket type.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:110</div></div>
+<div class="ttc" id="aclassasio_1_1generic_1_1stream__protocol_html_af21c816bf9da77d206ca2c32498185d0"><div class="ttname"><a href="classasio_1_1generic_1_1stream__protocol.html#af21c816bf9da77d206ca2c32498185d0">asio::generic::stream_protocol::operator!=</a></div><div class="ttdeci">friend bool operator!=(const stream_protocol &amp;p1, const stream_protocol &amp;p2)</div><div class="ttdoc">Compare two protocols for inequality.</div><div class="ttdef"><b>Definition:</b> stream_protocol.hpp:101</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="ageneric_2basic__endpoint_8hpp_html"><div class="ttname"><a href="generic_2basic__endpoint_8hpp.html">basic_endpoint.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_adf353499452f212576d0e69d7d35693e"><div class="ttname"><a href="namespaceasio_1_1detail.html#adf353499452f212576d0e69d7d35693e">asio::detail::throw_exception</a></div><div class="ttdeci">void throw_exception(const Exception &amp;e ASIO_SOURCE_LOCATION_DEFAULTED_PARAM)</div><div class="ttdef"><b>Definition:</b> throw_exception.hpp:42</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="asocket__types_8hpp_html"><div class="ttname"><a href="socket__types_8hpp.html">socket_types.hpp</a></div></div>
+<div class="ttc" id="asocket__types_8hpp_html_a26e0208fa086ac48cf5af1b2a521c74a"><div class="ttname"><a href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a></div><div class="ttdeci">#define ASIO_OS_DEF(c)</div><div class="ttdef"><b>Definition:</b> socket_types.hpp:333</div></div>
+<div class="ttc" id="athrow__exception_8hpp_html"><div class="ttname"><a href="throw__exception_8hpp.html">throw_exception.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

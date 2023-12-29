@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::experimental::detail::channel_send_op&lt; Payload, Handler, IoExecutor &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html">channel_send_op</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classasio_1_1experimental_1_1detail_1_1channel__send__op-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::experimental::detail::channel_send_op&lt; Payload, Handler, IoExecutor &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="channel__send__op_8hpp_source.html">channel_send_op.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::experimental::detail::channel_send_op&lt; Payload, Handler, IoExecutor &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1experimental_1_1detail_1_1channel__send__op__inherit__graph.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1channel__send__op_3_01Payload_00_01Handler_00_01IoExecutor_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1channel__send__op_3_01Payload_00_01Handler_00_01IoExecutor_01_4_inherit__map" id="aasio_1_1experimental_1_1detail_1_1channel__send__op_3_01Payload_00_01Handler_00_01IoExecutor_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,184,180,255"/>
+<area shape="rect" href="classasio_1_1experimental_1_1detail_1_1channel__send.html" title=" " alt="" coords="11,80,175,136"/>
+<area shape="rect" title=" " alt="" coords="21,5,164,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::experimental::detail::channel_send_op&lt; Payload, Handler, IoExecutor &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1experimental_1_1detail_1_1channel__send__op__coll__graph.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1channel__send__op_3_01Payload_00_01Handler_00_01IoExecutor_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1channel__send__op_3_01Payload_00_01Handler_00_01IoExecutor_01_4_coll__map" id="aasio_1_1experimental_1_1detail_1_1channel__send__op_3_01Payload_00_01Handler_00_01IoExecutor_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,184,180,255"/>
+<area shape="rect" href="classasio_1_1experimental_1_1detail_1_1channel__send.html" title=" " alt="" coords="11,80,175,136"/>
+<area shape="rect" title=" " alt="" coords="21,5,164,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a295657aef0da389d6e450ab6c21545b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html#a295657aef0da389d6e450ab6c21545b5">ASIO_DEFINE_HANDLER_PTR</a> (<a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html">channel_send_op</a>)</td></tr>
+<tr class="separator:a295657aef0da389d6e450ab6c21545b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab999a45ae503670924e72b5c14247050"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html#ab999a45ae503670924e72b5c14247050">channel_send_op</a> (Payload &amp;&amp;payload, Handler &amp;handler, const IoExecutor &amp;io_ex)</td></tr>
+<tr class="separator:ab999a45ae503670924e72b5c14247050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html">asio::experimental::detail::channel_send&lt; Payload &gt;</a></td></tr>
+<tr class="memitem:a7d271ce9b6e2ffbee3fb1b430ff23d68 inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memItemLeft" align="right" valign="top">Payload&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html#a7d271ce9b6e2ffbee3fb1b430ff23d68">get_payload</a> ()</td></tr>
+<tr class="separator:a7d271ce9b6e2ffbee3fb1b430ff23d68 inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9514ba04e88043a852ef77334407f240 inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html#a9514ba04e88043a852ef77334407f240">immediate</a> ()</td></tr>
+<tr class="separator:a9514ba04e88043a852ef77334407f240 inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c1afeded02747f5e2db0045bb384ee inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html#a15c1afeded02747f5e2db0045bb384ee">post</a> ()</td></tr>
+<tr class="separator:a15c1afeded02747f5e2db0045bb384ee inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735f28adc19db390bb73857e7ff6feba inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html#a735f28adc19db390bb73857e7ff6feba">cancel</a> ()</td></tr>
+<tr class="separator:a735f28adc19db390bb73857e7ff6feba inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82c4856d34c5dac3da172b04e2bc5e53 inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html#a82c4856d34c5dac3da172b04e2bc5e53">close</a> ()</td></tr>
+<tr class="separator:a82c4856d34c5dac3da172b04e2bc5e53 inherit pub_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a44758bd0e268c024c06ddb38d0625ae2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html#a44758bd0e268c024c06ddb38d0625ae2">do_action</a> (channel_operation *base, channel_operation::action <a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> *)</td></tr>
+<tr class="separator:a44758bd0e268c024c06ddb38d0625ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classasio_1_1experimental_1_1detail_1_1channel__send')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html">asio::experimental::detail::channel_send&lt; Payload &gt;</a></td></tr>
+<tr class="memitem:ad2279ef9d27273e361890f705fcc3bf2 inherit pro_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send.html#ad2279ef9d27273e361890f705fcc3bf2">channel_send</a> (func_type func, Payload &amp;&amp;payload)</td></tr>
+<tr class="separator:ad2279ef9d27273e361890f705fcc3bf2 inherit pro_methods_classasio_1_1experimental_1_1detail_1_1channel__send"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab999a45ae503670924e72b5c14247050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab999a45ae503670924e72b5c14247050">&#9670;&nbsp;</a></span>channel_send_op()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Payload , typename Handler , typename IoExecutor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html">asio::experimental::detail::channel_send_op</a>&lt; Payload, Handler, IoExecutor &gt;::<a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html">channel_send_op</a> </td>
+          <td>(</td>
+          <td class="paramtype">Payload &amp;&amp;&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IoExecutor &amp;&#160;</td>
+          <td class="paramname"><em>io_ex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a295657aef0da389d6e450ab6c21545b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295657aef0da389d6e450ab6c21545b5">&#9670;&nbsp;</a></span>ASIO_DEFINE_HANDLER_PTR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Payload , typename Handler , typename IoExecutor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html">asio::experimental::detail::channel_send_op</a>&lt; Payload, Handler, IoExecutor &gt;::ASIO_DEFINE_HANDLER_PTR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html">channel_send_op</a>&lt; Payload, Handler, IoExecutor &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44758bd0e268c024c06ddb38d0625ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44758bd0e268c024c06ddb38d0625ae2">&#9670;&nbsp;</a></span>do_action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Payload , typename Handler , typename IoExecutor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="classasio_1_1experimental_1_1detail_1_1channel__send__op.html">asio::experimental::detail::channel_send_op</a>&lt; Payload, Handler, IoExecutor &gt;::do_action </td>
+          <td>(</td>
+          <td class="paramtype">channel_operation *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">channel_operation::action&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/detail/<a class="el" href="channel__send__op_8hpp_source.html">channel_send_op.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

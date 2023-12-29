@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::execution_context</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1execution__context.html">execution_context</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1execution__context-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::execution_context</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A context for function object execution.  
+ <a href="classasio_1_1execution__context.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="execution__context_8hpp_source.html">execution_context.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::execution_context:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1execution__context__inherit__graph.png" border="0" usemap="#aasio_1_1execution__context_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1execution__context_inherit__map" id="aasio_1_1execution__context_inherit__map">
+<area shape="rect" title="A context for function object execution." alt="" coords="320,80,496,107"/>
+<area shape="rect" href="classasio_1_1io__context.html" title="Provides core I/O functionality." alt="" coords="5,155,131,181"/>
+<area shape="rect" href="classasio_1_1system__context.html" title="The executor context for the system executor." alt="" coords="155,155,317,181"/>
+<area shape="rect" href="classasio_1_1thread__pool.html" title="A simple fixed&#45;size thread pool." alt="" coords="341,155,475,181"/>
+<area shape="rect" href="classhandler__priority__queue.html" title=" " alt="" coords="499,155,671,181"/>
+<area shape="rect" href="classasio_1_1detail_1_1noncopyable.html" title=" " alt="" coords="315,5,501,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::execution_context:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1execution__context__coll__graph.png" border="0" usemap="#aasio_1_1execution__context_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1execution__context_coll__map" id="aasio_1_1execution__context_coll__map">
+<area shape="rect" title="A context for function object execution." alt="" coords="10,80,186,107"/>
+<area shape="rect" href="classasio_1_1detail_1_1noncopyable.html" title=" " alt="" coords="5,5,191,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context_1_1id.html">id</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class used to uniquely identify a service.  <a href="classasio_1_1execution__context_1_1id.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context_1_1service.html">service</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for all <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> services.  <a href="classasio_1_1execution__context_1_1service.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:abf68ec520a046bce977a2d1d62051535"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535">fork_event</a> { <a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a61a4519875d942077a77d69a109f91d2">fork_prepare</a>
+, <a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a29ba977896e0f0830be4da42932dd0f1">fork_parent</a>
+, <a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a4d72d27c26e070ac10c636b18424e6cc">fork_child</a>
+ }</td></tr>
+<tr class="memdesc:abf68ec520a046bce977a2d1d62051535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fork-related event notifications.  <a href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf68ec520a046bce977a2d1d62051535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:afa10d1e9bffae8aef7b331b2a3ddf04d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#afa10d1e9bffae8aef7b331b2a3ddf04d">execution_context</a> ()</td></tr>
+<tr class="memdesc:afa10d1e9bffae8aef7b331b2a3ddf04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classasio_1_1execution__context.html#afa10d1e9bffae8aef7b331b2a3ddf04d">Подробнее...</a><br /></td></tr>
+<tr class="separator:afa10d1e9bffae8aef7b331b2a3ddf04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570cc190dd0f8ce6b1ff7e5a6621414d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#a570cc190dd0f8ce6b1ff7e5a6621414d">~execution_context</a> ()</td></tr>
+<tr class="memdesc:a570cc190dd0f8ce6b1ff7e5a6621414d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classasio_1_1execution__context.html#a570cc190dd0f8ce6b1ff7e5a6621414d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a570cc190dd0f8ce6b1ff7e5a6621414d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f1cde698debe8ef2b9d37782809f8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#a74f1cde698debe8ef2b9d37782809f8d">notify_fork</a> (<a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535">fork_event</a> event)</td></tr>
+<tr class="memdesc:a74f1cde698debe8ef2b9d37782809f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> of a fork-related event.  <a href="classasio_1_1execution__context.html#a74f1cde698debe8ef2b9d37782809f8d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a74f1cde698debe8ef2b9d37782809f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a10768c87fd8d13d4b0e9964c9a2be7b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#a10768c87fd8d13d4b0e9964c9a2be7b0">shutdown</a> ()</td></tr>
+<tr class="memdesc:a10768c87fd8d13d4b0e9964c9a2be7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuts down all services in the context.  <a href="classasio_1_1execution__context.html#a10768c87fd8d13d4b0e9964c9a2be7b0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a10768c87fd8d13d4b0e9964c9a2be7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8f3db5cd482d9cf7fd57e03c0acd8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#a5b8f3db5cd482d9cf7fd57e03c0acd8c">destroy</a> ()</td></tr>
+<tr class="memdesc:a5b8f3db5cd482d9cf7fd57e03c0acd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys all services in the context.  <a href="classasio_1_1execution__context.html#a5b8f3db5cd482d9cf7fd57e03c0acd8c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5b8f3db5cd482d9cf7fd57e03c0acd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a7044429cdd225d9421c831b0612c958f"><td class="memTemplParams" colspan="2">template&lt;typename Service &gt; </td></tr>
+<tr class="memitem:a7044429cdd225d9421c831b0612c958f"><td class="memTemplItemLeft" align="right" valign="top">Service &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f">use_service</a> (<a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;e)</td></tr>
+<tr class="memdesc:a7044429cdd225d9421c831b0612c958f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the service object corresponding to the given type.  <a href="classasio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7044429cdd225d9421c831b0612c958f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7290a4a78de2171cebfbc88f4c71550b"><td class="memTemplParams" colspan="2">template&lt;typename Service &gt; </td></tr>
+<tr class="memitem:a7290a4a78de2171cebfbc88f4c71550b"><td class="memTemplItemLeft" align="right" valign="top">Service &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#a7290a4a78de2171cebfbc88f4c71550b">use_service</a> (<a class="el" href="classasio_1_1io__context.html">io_context</a> &amp;ioc)</td></tr>
+<tr class="memdesc:a7290a4a78de2171cebfbc88f4c71550b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the service object corresponding to the given type.  <a href="classasio_1_1execution__context.html#a7290a4a78de2171cebfbc88f4c71550b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7290a4a78de2171cebfbc88f4c71550b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c4c4dcb463b6ca8b3eb6f0fca9d0af"><td class="memTemplParams" colspan="2">template&lt;typename Service , typename... Args&gt; </td></tr>
+<tr class="memitem:aa1c4c4dcb463b6ca8b3eb6f0fca9d0af"><td class="memTemplItemLeft" align="right" valign="top">Service &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#aa1c4c4dcb463b6ca8b3eb6f0fca9d0af">make_service</a> (<a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;e, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:aa1c4c4dcb463b6ca8b3eb6f0fca9d0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a service object and adds it to the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>.  <a href="classasio_1_1execution__context.html#aa1c4c4dcb463b6ca8b3eb6f0fca9d0af">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa1c4c4dcb463b6ca8b3eb6f0fca9d0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3014a17a4b521b57a7fdbd8c2c41f312"><td class="memTemplParams" colspan="2">template&lt;typename Service &gt; </td></tr>
+<tr class="memitem:a3014a17a4b521b57a7fdbd8c2c41f312"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#a3014a17a4b521b57a7fdbd8c2c41f312">add_service</a> (<a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;e, Service *svc)</td></tr>
+<tr class="separator:a3014a17a4b521b57a7fdbd8c2c41f312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed1173384b9ee24ce9f1633f6e772583"><td class="memTemplParams" colspan="2">template&lt;typename Service &gt; </td></tr>
+<tr class="memitem:aed1173384b9ee24ce9f1633f6e772583"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution__context.html#aed1173384b9ee24ce9f1633f6e772583">has_service</a> (<a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;e)</td></tr>
+<tr class="memdesc:aed1173384b9ee24ce9f1633f6e772583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> contains a specified service type.  <a href="classasio_1_1execution__context.html#aed1173384b9ee24ce9f1633f6e772583">Подробнее...</a><br /></td></tr>
+<tr class="separator:aed1173384b9ee24ce9f1633f6e772583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A context for function object execution. </p>
+<p>An execution context represents a place where function objects will be executed. An <code><a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a></code> is an example of an execution context.</p>
+<dl class="section user"><dt>The execution_context class and services</dt><dd></dd></dl>
+<p>Class <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> implements an extensible, type-safe, polymorphic set of services, indexed by service type.</p>
+<p>Services exist to manage the resources that are shared across an execution context. For example, timers may be implemented in terms of a single timer queue, and this queue would be stored in a service.</p>
+<p>Access to the services of an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> is via three function templates, <a class="el" href="classasio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f" title="Obtain the service object corresponding to the given type.">use_service()</a>, <a class="el" href="classasio_1_1execution__context.html#a3014a17a4b521b57a7fdbd8c2c41f312">add_service()</a> and <a class="el" href="classasio_1_1execution__context.html#aed1173384b9ee24ce9f1633f6e772583" title="Determine if an execution_context contains a specified service type.">has_service()</a>.</p>
+<p>In a call to <code><a class="el" href="classasio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f" title="Obtain the service object corresponding to the given type.">use_service&lt;Service&gt;()</a></code>, the type argument chooses a service, making available all members of the named type. If <code>Service</code> is not present in an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>, an object of type <code>Service</code> is created and added to the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>. A C++ program can check if an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> implements a particular service with the function template <code><a class="el" href="classasio_1_1execution__context.html#aed1173384b9ee24ce9f1633f6e772583" title="Determine if an execution_context contains a specified service type.">has_service&lt;Service&gt;()</a></code>.</p>
+<p>Service objects may be explicitly added to an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> using the function template <code><a class="el" href="classasio_1_1execution__context.html#a3014a17a4b521b57a7fdbd8c2c41f312">add_service&lt;Service&gt;()</a></code>. If the <code>Service</code> is already present, the <a class="el" href="classasio_1_1service__already__exists.html">service_already_exists</a> exception is thrown. If the owner of the service is not the same object as the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> parameter, the <a class="el" href="classasio_1_1invalid__service__owner.html">invalid_service_owner</a> exception is thrown.</p>
+<p>Once a service reference is obtained from an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object by calling <a class="el" href="classasio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f" title="Obtain the service object corresponding to the given type.">use_service()</a>, that reference remains usable as long as the owning <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object exists.</p>
+<p>All service implementations have <a class="el" href="classasio_1_1execution__context_1_1service.html" title="Base class for all io_context services.">execution_context::service</a> as a public base class. Custom services may be implemented by deriving from this class and then added to an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> using the facilities described above.</p>
+<dl class="section user"><dt>The execution_context as a base class</dt><dd></dd></dl>
+<p>Class <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> may be used only as a base class for concrete execution context types. The <code><a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a></code> is an example of such a derived type.</p>
+<p>On destruction, a class that is derived from <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> must perform <code><a class="el" href="classasio_1_1execution__context.html#a10768c87fd8d13d4b0e9964c9a2be7b0" title="Shuts down all services in the context.">execution_context::shutdown()</a></code> followed by <code><a class="el" href="classasio_1_1execution__context.html#a5b8f3db5cd482d9cf7fd57e03c0acd8c" title="Destroys all services in the context.">execution_context::destroy()</a></code>.</p>
+<p>This destruction sequence permits programs to simplify their resource management by using <code>shared_ptr&lt;&gt;</code>. Where an object's lifetime is tied to the lifetime of a connection (or some other sequence of asynchronous operations), a <code>shared_ptr</code> to the object would be bound into the handlers for all asynchronous operations associated with it. This works as follows:</p>
+<ul>
+<li>When a single connection ends, all associated asynchronous operations complete. The corresponding handler objects are destroyed, and all <code>shared_ptr</code> references to the objects are destroyed.</li>
+</ul>
+<ul>
+<li>To shut down the whole program, the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> function stop() is called to terminate any run() calls as soon as possible. The <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> destructor calls <code><a class="el" href="classasio_1_1execution__context.html#a10768c87fd8d13d4b0e9964c9a2be7b0" title="Shuts down all services in the context.">shutdown()</a></code> and <code><a class="el" href="classasio_1_1execution__context.html#a5b8f3db5cd482d9cf7fd57e03c0acd8c" title="Destroys all services in the context.">destroy()</a></code> to destroy all pending handlers, causing all <code>shared_ptr</code> references to all connection objects to be destroyed. </li>
+</ul>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="abf68ec520a046bce977a2d1d62051535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf68ec520a046bce977a2d1d62051535">&#9670;&nbsp;</a></span>fork_event</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535">asio::execution_context::fork_event</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fork-related event notifications. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="abf68ec520a046bce977a2d1d62051535a61a4519875d942077a77d69a109f91d2"></a>fork_prepare&#160;</td><td class="fielddoc"><p>Notify the context that the process is about to fork. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abf68ec520a046bce977a2d1d62051535a29ba977896e0f0830be4da42932dd0f1"></a>fork_parent&#160;</td><td class="fielddoc"><p>Notify the context that the process has forked and is the parent. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abf68ec520a046bce977a2d1d62051535a4d72d27c26e070ac10c636b18424e6cc"></a>fork_child&#160;</td><td class="fielddoc"><p>Notify the context that the process has forked and is the child. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="afa10d1e9bffae8aef7b331b2a3ddf04d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa10d1e9bffae8aef7b331b2a3ddf04d">&#9670;&nbsp;</a></span>execution_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">execution_context::execution_context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<a id="a570cc190dd0f8ce6b1ff7e5a6621414d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570cc190dd0f8ce6b1ff7e5a6621414d">&#9670;&nbsp;</a></span>~execution_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">execution_context::~execution_context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a5b8f3db5cd482d9cf7fd57e03c0acd8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8f3db5cd482d9cf7fd57e03c0acd8c">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> execution_context::destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroys all services in the context. </p>
+<p>This function is implemented as follows:</p>
+<ul>
+<li>For each service object <code>svc</code> in the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> set, in reverse order * of the beginning of service object lifetime, performs <code>delete static_cast&lt;execution_context::service*&gt;(svc)</code>. </li>
+</ul>
+
+</div>
+</div>
+<a id="a74f1cde698debe8ef2b9d37782809f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f1cde698debe8ef2b9d37782809f8d">&#9670;&nbsp;</a></span>notify_fork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> execution_context::notify_fork </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535">fork_event</a>&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> of a fork-related event. </p>
+<p>This function is used to inform the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> that the process is about to fork, or has just forked. This allows the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>, and the services it contains, to perform any necessary housekeeping to ensure correct operation following a fork.</p>
+<p>This function must not be called while any other <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> function, or any function associated with the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>'s derived class, is being called in another thread. It is, however, safe to call this function from within a completion handler, provided no other thread is accessing the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> or its derived class.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>A fork-related event.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="namespaceasio.html#ac5e0b6db67d52eba50e168ae78c1a049">asio::system_error</a></td><td>Thrown on failure. If the notification fails the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object should no longer be used and should be destroyed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Example</dt><dd>The following code illustrates how to incorporate the <a class="el" href="classasio_1_1execution__context.html#a74f1cde698debe8ef2b9d37782809f8d" title="Notify the execution_context of a fork-related event.">notify_fork()</a> function: <div class="fragment"><div class="line"> my_execution_context.notify_fork(<a class="code" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a61a4519875d942077a77d69a109f91d2">execution_context::fork_prepare</a>);</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="yield_8hpp.html#ab2e49d0b8dbb3181c7d1f622fd5ea1b4">fork</a>() == 0)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// This is the child process.</span></div>
+<div class="line">  my_execution_context.notify_fork(<a class="code" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a4d72d27c26e070ac10c636b18424e6cc">execution_context::fork_child</a>);</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// This is the parent process.</span></div>
+<div class="line">  my_execution_context.notify_fork(<a class="code" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a29ba977896e0f0830be4da42932dd0f1">execution_context::fork_parent</a>);</div>
+<div class="line">} </div>
+<div class="ttc" id="aclassasio_1_1execution__context_html_abf68ec520a046bce977a2d1d62051535a29ba977896e0f0830be4da42932dd0f1"><div class="ttname"><a href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a29ba977896e0f0830be4da42932dd0f1">asio::execution_context::fork_parent</a></div><div class="ttdeci">@ fork_parent</div><div class="ttdoc">Notify the context that the process has forked and is the parent.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:147</div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_html_abf68ec520a046bce977a2d1d62051535a4d72d27c26e070ac10c636b18424e6cc"><div class="ttname"><a href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a4d72d27c26e070ac10c636b18424e6cc">asio::execution_context::fork_child</a></div><div class="ttdeci">@ fork_child</div><div class="ttdoc">Notify the context that the process has forked and is the child.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:150</div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_html_abf68ec520a046bce977a2d1d62051535a61a4519875d942077a77d69a109f91d2"><div class="ttname"><a href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535a61a4519875d942077a77d69a109f91d2">asio::execution_context::fork_prepare</a></div><div class="ttdeci">@ fork_prepare</div><div class="ttdoc">Notify the context that the process is about to fork.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:144</div></div>
+<div class="ttc" id="ayield_8hpp_html_ab2e49d0b8dbb3181c7d1f622fd5ea1b4"><div class="ttname"><a href="yield_8hpp.html#ab2e49d0b8dbb3181c7d1f622fd5ea1b4">fork</a></div><div class="ttdeci">#define fork</div><div class="ttdef"><b>Definition:</b> yield.hpp:22</div></div>
+</div><!-- fragment --></dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>For each service object <code>svc</code> in the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> set, performs <code>svc-&gt;<a class="el" href="classasio_1_1execution__context.html#a74f1cde698debe8ef2b9d37782809f8d" title="Notify the execution_context of a fork-related event.">notify_fork()</a>;</code>. When processing the fork_prepare event, services are visited in reverse order of the beginning of service object lifetime. Otherwise, services are visited in order of the beginning of service object lifetime. </dd></dl>
+
+</div>
+</div>
+<a id="a10768c87fd8d13d4b0e9964c9a2be7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10768c87fd8d13d4b0e9964c9a2be7b0">&#9670;&nbsp;</a></span>shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> execution_context::shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shuts down all services in the context. </p>
+<p>This function is implemented as follows:</p>
+<ul>
+<li>For each service object <code>svc</code> in the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> set, in reverse order of the beginning of service object lifetime, performs <code>svc-&gt;<a class="el" href="classasio_1_1execution__context.html#a10768c87fd8d13d4b0e9964c9a2be7b0" title="Shuts down all services in the context.">shutdown()</a></code>. </li>
+</ul>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a3014a17a4b521b57a7fdbd8c2c41f312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3014a17a4b521b57a7fdbd8c2c41f312">&#9670;&nbsp;</a></span>add_service</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Service &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> add_service </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Service *&#160;</td>
+          <td class="paramname"><em>svc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>(Deprecated: Use <a class="el" href="classasio_1_1execution__context.html#aa1c4c4dcb463b6ca8b3eb6f0fca9d0af" title="Creates a service object and adds it to the execution_context.">make_service()</a>.) Add a service object to the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>. This function is used to add a service to the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object that owns the service.</td></tr>
+    <tr><td class="paramname">svc</td><td>The service object. On success, ownership of the service object is transferred to the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>. When the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object is destroyed, it will destroy the service object by performing:<div class="fragment"><div class="line"><span class="keyword">delete</span> <span class="keyword">static_cast&lt;</span>execution_context::service*<span class="keyword">&gt;</span>(svc) </div>
+</div><!-- fragment --></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classasio_1_1service__already__exists.html">asio::service_already_exists</a></td><td>Thrown if a service of the given type is already present in the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>.</td></tr>
+    <tr><td class="paramname"><a class="el" href="classasio_1_1invalid__service__owner.html">asio::invalid_service_owner</a></td><td>Thrown if the service's owning <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> is not the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object specified by the <code>e</code> parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed1173384b9ee24ce9f1633f6e772583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1173384b9ee24ce9f1633f6e772583">&#9670;&nbsp;</a></span>has_service</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Service &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_service </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if an <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> contains a specified service type. </p>
+<p>This function is used to determine whether the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> contains a service object corresponding to the given service type.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object that owns the service.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A boolean indicating whether the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> contains the service. </dd></dl>
+
+</div>
+</div>
+<a id="aa1c4c4dcb463b6ca8b3eb6f0fca9d0af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c4c4dcb463b6ca8b3eb6f0fca9d0af">&#9670;&nbsp;</a></span>make_service</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Service , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Service&amp; make_service </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a service object and adds it to the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>. </p>
+<p>This function is used to add a service to the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object that owns the service.</td></tr>
+    <tr><td class="paramname">args</td><td>Zero or more arguments to be passed to the service constructor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classasio_1_1service__already__exists.html">asio::service_already_exists</a></td><td>Thrown if a service of the given type is already present in the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7044429cdd225d9421c831b0612c958f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7044429cdd225d9421c831b0612c958f">&#9670;&nbsp;</a></span>use_service <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Service &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Service&amp; use_service </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain the service object corresponding to the given type. </p>
+<p>This function is used to locate a service object that corresponds to the given service type. If there is no existing implementation of the service, then the <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> will create a new instance of the service.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The <a class="el" href="classasio_1_1execution__context.html" title="A context for function object execution.">execution_context</a> object that owns the service.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The service interface implementing the specified service type. Ownership of the service interface is not transferred to the caller. </dd></dl>
+
+</div>
+</div>
+<a id="a7290a4a78de2171cebfbc88f4c71550b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7290a4a78de2171cebfbc88f4c71550b">&#9670;&nbsp;</a></span>use_service <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Service &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Service&amp; use_service </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ioc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain the service object corresponding to the given type. </p>
+<p>This function is used to locate a service object that corresponds to the given service type. If there is no existing implementation of the service, then the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> will create a new instance of the service.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ioc</td><td>The <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> object that owns the service.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The service interface implementing the specified service type. Ownership of the service interface is not transferred to the caller.</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>This overload is preserved for backwards compatibility with services that inherit from <a class="el" href="classasio_1_1io__context_1_1service.html" title="Base class for all io_context services.">io_context::service</a>. </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="execution__context_8hpp_source.html">execution_context.hpp</a></li>
+<li>_deps/asio-src/asio/include/asio/impl/<a class="el" href="execution__context_8ipp.html">execution_context.ipp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/experimental/impl/co_composed.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_4b7ec68c1dc10d9fd423a12bdfeaade0.html">experimental</a></li><li class="navelem"><a class="el" href="dir_b91b1f1de8941ff14ee4666f3c87af55.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл co_composed.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;new&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;variant&gt;</code><br />
+<code>#include &quot;<a class="el" href="associated__cancellation__slot_8hpp_source.html">asio/associated_cancellation_slot.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="associator_8hpp_source.html">asio/associator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2asio_2async__result_8hpp_source.html">asio/async_result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cancellation__state_8hpp_source.html">asio/cancellation_state.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="composed__work_8hpp_source.html">asio/detail/composed_work.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="detail_2recycling__allocator_8hpp_source.html">asio/detail/recycling_allocator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="throw__error_8hpp_source.html">asio/detail/throw_error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">asio/detail/type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error_8hpp_source.html">asio/error.hpp</a>&quot;</code><br />
+<code>#include &lt;experimental/coroutine&gt;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для co_composed.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2co__composed_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2co__composed_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2co__composed_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2co__composed_8hpp">
+<area shape="rect" title=" " alt="" coords="4100,5,4295,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="2883,541,3045,568"/>
+<area shape="rect" title=" " alt="" coords="6214,467,6263,493"/>
+<area shape="rect" title=" " alt="" coords="5725,117,5779,143"/>
+<area shape="rect" title=" " alt="" coords="5803,117,5871,143"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="3469,199,3678,240"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="3500,385,3647,411"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2615,467,2823,493"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3311,467,3513,493"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="777,467,969,493"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2959,385,3121,411"/>
+<area shape="rect" href="cancellation__state_8hpp.html" title=" " alt="" coords="5323,206,5523,233"/>
+<area shape="rect" href="composed__work_8hpp.html" title=" " alt="" coords="2458,109,2619,151"/>
+<area shape="rect" href="detail_2recycling__allocator_8hpp.html" title=" " alt="" coords="5690,199,5843,240"/>
+<area shape="rect" href="throw__error_8hpp.html" title=" " alt="" coords="4029,295,4225,322"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="4277,295,4387,322"/>
+<area shape="rect" title=" " alt="" coords="5895,117,6070,143"/>
+<area shape="rect" title=" " alt="" coords="5761,616,5831,643"/>
+<area shape="rect" title=" " alt="" coords="2978,616,3107,643"/>
+<area shape="rect" title=" " alt="" coords="2815,616,2953,643"/>
+<area shape="rect" href="cancellation__signal_8hpp.html" title=" " alt="" coords="5178,295,5385,322"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="3753,295,3940,322"/>
+<area shape="rect" title=" " alt="" coords="5364,385,5433,411"/>
+<area shape="rect" title=" " alt="" coords="5458,385,5518,411"/>
+<area shape="rect" href="cancellation__type_8hpp.html" title=" " alt="" coords="4789,385,4985,411"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="5711,467,5881,493"/>
+<area shape="rect" title=" " alt="" coords="827,541,919,568"/>
+<area shape="rect" title=" " alt="" coords="3671,385,3758,411"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="1160,295,1363,322"/>
+<area shape="rect" href="outstanding__work_8hpp.html" title=" " alt="" coords="1599,199,1796,240"/>
+<area shape="rect" href="executor__work__guard_8hpp.html" title=" " alt="" coords="2381,288,2529,329"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="2476,385,2631,411"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="2858,295,3049,322"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="931,377,1114,419"/>
+<area shape="rect" href="equality__comparable_8hpp.html" title=" " alt="" coords="347,377,491,419"/>
+<area shape="rect" href="execute__member_8hpp.html" title=" " alt="" coords="1190,377,1333,419"/>
+<area shape="rect" href="is__applicable__property_8hpp.html" title=" " alt="" coords="515,377,653,419"/>
+<area shape="rect" href="query_8hpp.html" title=" " alt="" coords="1591,295,1707,322"/>
+<area shape="rect" href="query__member_8hpp.html" title=" " alt="" coords="1409,385,1626,411"/>
+<area shape="rect" href="query__free_8hpp.html" title=" " alt="" coords="1651,385,1840,411"/>
+<area shape="rect" href="static__query_8hpp.html" title=" " alt="" coords="1915,377,2042,419"/>
+<area shape="rect" href="query__static__constexpr__member_8hpp.html" title=" " alt="" coords="2066,377,2249,419"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="6007,385,6182,411"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="5405,467,5635,493"/>
+<area shape="rect" href="thread__context_8hpp.html" title=" " alt="" coords="5543,377,5679,419"/>
+<area shape="rect" href="thread__info__base_8hpp.html" title=" " alt="" coords="5956,288,6092,329"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="4037,385,4187,411"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="4263,385,4430,411"/>
+<area shape="rect" title=" " alt="" coords="4454,385,4517,411"/>
+<area shape="rect" title=" " alt="" coords="4541,385,4611,411"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2co__composed_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2co__composed_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2co__composed_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2co__composed_8hppdep">
+<area shape="rect" title=" " alt="" coords="9,5,203,61"/>
+<area shape="rect" href="co__composed_8hpp.html" title=" " alt="" coords="9,109,203,165"/>
+<area shape="rect" href="co__composed_8cpp.html" title=" " alt="" coords="5,213,207,269"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2co__composed_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__returns.html">asio::experimental::detail::co_composed_returns&lt; Signatures &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1co__composed__on__suspend.html">asio::experimental::detail::co_composed_on_suspend</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1co__composed__completion.html">asio::experimental::detail::co_composed_completion&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__state__return__overload_3_01Executors_00_01be32dc817aebbad03271ada67bf53369.html">asio::experimental::detail::co_composed_state_return_overload&lt; Executors, Handler, Return, R(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__state__return_3_01Executors_00_01Handler_00b1f5460bb983ddb27a9d459464291a0c.html">asio::experimental::detail::co_composed_state_return&lt; Executors, Handler, co_composed_returns&lt; Signatures... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1co__composed__state__default__cancellation__on__suspend_3592a11233d833010446b6703334a215.html">asio::experimental::detail::co_composed_state_default_cancellation_on_suspend_impl&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1co__composed__state__default__cancellation__on__suspend_245a63223455286eeb7f39f02d8fa0a8.html">asio::experimental::detail::co_composed_state_default_cancellation_on_suspend_impl&lt; Executors, Handler, Return, R(Args...), Signatures... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1co__composed__state__default__cancellation__on__suspend_8bf152fa0145a076ddfaede829c1d665.html">asio::experimental::detail::co_composed_state_default_cancellation_on_suspend_impl&lt; Executors, Handler, Return, R(asio::error_code, Args...), Signatures... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1co__composed__state__default__cancellation__on__suspend_133dfc822ca00d2e07b321aa28a814d7.html">asio::experimental::detail::co_composed_state_default_cancellation_on_suspend_impl&lt; Executors, Handler, Return, R(std::exception_ptr, Args...), Signatures... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1co__composed__state__default__cancellation__on__suspend_cacfc6a530b8782e78e36f98a0128a6b.html">asio::experimental::detail::co_composed_state_default_cancellation_on_suspend&lt; Executors, Handler, co_composed_returns&lt; Signatures... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__state__cancellation.html">asio::experimental::detail::co_composed_state_cancellation&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__state__cancellation_3_01Executors_00_01Handler_00_01Return_01_4.html">asio::experimental::detail::co_composed_state_cancellation&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__state.html">asio::experimental::detail::co_composed_state&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__handler__cancellation.html">asio::experimental::detail::co_composed_handler_cancellation&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__handler__cancellation_3_01Executors_00_01Handler_00_01Return_01_4.html">asio::experimental::detail::co_composed_handler_cancellation&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__handler__base.html">asio::experimental::detail::co_composed_handler_base&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__handler_3_01Executors_00_01Handler_00_01Return_00_01R_07Args_8_8_8_08_4.html">asio::experimental::detail::co_composed_handler&lt; Executors, Handler, Return, R(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__handler_3_01Executors_00_01Handler_00_01Ret0b12df7add388257c4602ba6fc2c8e47.html">asio::experimental::detail::co_composed_handler&lt; Executors, Handler, Return, R(asio::error_code, Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__handler_3_01Executors_00_01Handler_00_01Ret4c468a87d2eeda0706ff710775f05c1d.html">asio::experimental::detail::co_composed_handler&lt; Executors, Handler, Return, R(std::exception_ptr, Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__promise__return_3_01Executors_00_01Handler_0a224b854ca0d742883020236f0c0571.html">asio::experimental::detail::co_composed_promise_return&lt; Executors, Handler, co_composed_returns&lt;&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__promise__return__overload_3_01Executors_00_d13ca34c873aabf4831c688b305983e9.html">asio::experimental::detail::co_composed_promise_return_overload&lt; Executors, Handler, Return, R(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__promise__return_3_01Executors_00_01Handler_efd202690c246603e549fe96ff526188.html">asio::experimental::detail::co_composed_promise_return&lt; Executors, Handler, co_composed_returns&lt; Signatures... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1co__composed__promise.html">asio::experimental::detail::co_composed_promise&lt; Executors, Handler, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1experimental_1_1detail_1_1initiate__co__composed.html">asio::experimental::detail::initiate_co_composed&lt; Implementation, Executors, Signatures &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1associator_3_01Associator_00_01experimental_1_1detail_1_1co__composed__handler_3_0a338e5a6a8ccd00ac74b1b90a683b7ae.html">asio::associator&lt; Associator, experimental::detail::co_composed_handler&lt; Executors, Handler, Return, Signature &gt;, DefaultCandidate &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1experimental_1_1coroutine__traits_3_01void_00_01C_01_6_00_01asio_1_1experimental_1_2014de15b79657a550204ca13ad4ceb8.html">std::experimental::coroutine_traits&lt; void, C &amp;, asio::experimental::detail::co_composed_state&lt; Executors, Handler, Return &gt;, Args... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1experimental_1_1coroutine__traits_3_01void_00_01C_01_6_6_00_01asio_1_1experimental_0aab809cd5ded359b8b5d6ab4aa89a46.html">std::experimental::coroutine_traits&lt; void, C &amp;&amp;, asio::experimental::detail::co_composed_state&lt; Executors, Handler, Return &gt;, Args... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1experimental_1_1coroutine__traits_3_01void_00_01asio_1_1experimental_1_1detail_1_1cd193290c1f030236e6a1e2475d14d63f.html">std::experimental::coroutine_traits&lt; void, asio::experimental::detail::co_composed_state&lt; Executors, Handler, Return &gt;, Args... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1experimental"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental.html">asio::experimental</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1experimental_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">asio::experimental::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacestd_1_1experimental"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd_1_1experimental.html">std::experimental</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a2b9473110c5631ace69f2b7feab96eb6"><td class="memTemplParams" colspan="2">template&lt;typename... Signatures, typename Implementation , typename Executors &gt; </td></tr>
+<tr class="memitem:a2b9473110c5631ace69f2b7feab96eb6"><td class="memTemplItemLeft" align="right" valign="top">initiate_co_composed&lt; Implementation, Executors, Signatures... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a2b9473110c5631ace69f2b7feab96eb6">asio::experimental::detail::make_initiate_co_composed</a> (Implementation &amp;&amp;implementation, composed_io_executors&lt; Executors &gt; &amp;&amp;executors)</td></tr>
+<tr class="separator:a2b9473110c5631ace69f2b7feab96eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff7d9e99424546e76c794c60cb218f6"><td class="memTemplParams" colspan="2">template&lt;completion_signature... Signatures, typename Implementation , typename... IoObjectsOrExecutors&gt; </td></tr>
+<tr class="memitem:a4ff7d9e99424546e76c794c60cb218f6"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental.html#a4ff7d9e99424546e76c794c60cb218f6">asio::experimental::co_composed</a> (Implementation &amp;&amp;implementation, IoObjectsOrExecutors &amp;&amp;... io_objects_or_executors)</td></tr>
+<tr class="separator:a4ff7d9e99424546e76c794c60cb218f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

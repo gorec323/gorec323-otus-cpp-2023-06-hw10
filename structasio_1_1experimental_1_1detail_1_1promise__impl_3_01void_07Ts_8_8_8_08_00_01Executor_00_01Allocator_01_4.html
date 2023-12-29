@@ -1,0 +1,820 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::experimental::detail::promise_impl&lt; void(Ts...), Executor, Allocator &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html">promise_impl&lt; void(Ts...), Executor, Allocator &gt;</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::experimental::detail::promise_impl&lt; void(Ts...), Executor, Allocator &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2promise_8hpp_source.html">promise.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса asio::experimental::detail::promise_impl&lt; void(Ts...), Executor, Allocator &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4__coll__graph.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_coll__map" id="aasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="361,28,529,99"/>
+<area shape="rect" href="classasio_1_1cancellation__signal.html" title="A cancellation signal with a single slot." alt="" coords="39,5,175,47"/>
+<area shape="rect" href="structasio_1_1aligned__storage.html" title=" " alt="" coords="5,71,208,127"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01efb157b0c50e2d5a902f2ca1a45ee38b.html">completion_base</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01920b8dea43435645e628ada518970131.html">completion_impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ababa0cf9b3983607faeed5a960c3e5f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ababa0cf9b3983607faeed5a960c3e5f7">result_type</a> = std::tuple&lt; Ts... &gt;</td></tr>
+<tr class="separator:ababa0cf9b3983607faeed5a960c3e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57020dd828a7a6460a804c6ab8cb6de1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a57020dd828a7a6460a804c6ab8cb6de1">allocator_type</a> = Allocator</td></tr>
+<tr class="separator:a57020dd828a7a6460a804c6ab8cb6de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8c102cd84e71d817980c722aa1761c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aac8c102cd84e71d817980c722aa1761c">executor_type</a> = Executor</td></tr>
+<tr class="separator:aac8c102cd84e71d817980c722aa1761c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a10c9e8f9e71a25ed8f8e0cd260b8694d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a10c9e8f9e71a25ed8f8e0cd260b8694d">promise_impl</a> (Allocator <a class="el" href="classallocator.html">allocator</a>, Executor <a class="el" href="classasio_1_1executor.html">executor</a>)</td></tr>
+<tr class="separator:a10c9e8f9e71a25ed8f8e0cd260b8694d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc73f2bbc69aed008756a58e2d347693"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#afc73f2bbc69aed008756a58e2d347693">promise_impl</a> (const <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">promise_impl</a> &amp;)=delete</td></tr>
+<tr class="separator:afc73f2bbc69aed008756a58e2d347693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebca5cb7bdb8d22a05db6d9f1650cc63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aebca5cb7bdb8d22a05db6d9f1650cc63">~promise_impl</a> ()</td></tr>
+<tr class="separator:aebca5cb7bdb8d22a05db6d9f1650cc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb559f4f92ab50cd5111e89a2d78631"><td class="memTemplParams" colspan="2">template&lt;typename Func , std::size_t... Idx&gt; </td></tr>
+<tr class="memitem:a5eb559f4f92ab50cd5111e89a2d78631"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a5eb559f4f92ab50cd5111e89a2d78631">apply_impl</a> (Func <a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, <a class="el" href="structasio_1_1detail_1_1index__sequence.html">asio::detail::index_sequence</a>&lt; Idx... &gt;)</td></tr>
+<tr class="separator:a5eb559f4f92ab50cd5111e89a2d78631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bcd687648c01013a854510235079a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a57020dd828a7a6460a804c6ab8cb6de1">allocator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ad2bcd687648c01013a854510235079a8">get_allocator</a> ()</td></tr>
+<tr class="separator:ad2bcd687648c01013a854510235079a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a88edcc3d802594010950e3be1daf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aac8c102cd84e71d817980c722aa1761c">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aa3a88edcc3d802594010950e3be1daf8">get_executor</a> ()</td></tr>
+<tr class="separator:aa3a88edcc3d802594010950e3be1daf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd040576714abd2701d41f6f7e3d9a18"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
+<tr class="memitem:afd040576714abd2701d41f6f7e3d9a18"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#afd040576714abd2701d41f6f7e3d9a18">apply</a> (Func <a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</td></tr>
+<tr class="separator:afd040576714abd2701d41f6f7e3d9a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a9c19e34414fd38cad86ce6dcdc7f2"><td class="memTemplParams" colspan="2">template&lt;typename Alloc , typename Handler &gt; </td></tr>
+<tr class="memitem:a45a9c19e34414fd38cad86ce6dcdc7f2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a45a9c19e34414fd38cad86ce6dcdc7f2">set_completion</a> (Alloc &amp;&amp;alloc, Handler &amp;&amp;handler)</td></tr>
+<tr class="separator:a45a9c19e34414fd38cad86ce6dcdc7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00de0c770a1cc50e0bd8d97708f6a3f"><td class="memTemplParams" colspan="2">template&lt;typename... T_&gt; </td></tr>
+<tr class="memitem:af00de0c770a1cc50e0bd8d97708f6a3f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#af00de0c770a1cc50e0bd8d97708f6a3f">complete</a> (T_ &amp;&amp;... ts)</td></tr>
+<tr class="separator:af00de0c770a1cc50e0bd8d97708f6a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f9957e78b1961578711044520f194b"><td class="memTemplParams" colspan="2">template&lt;std::size_t... Idx&gt; </td></tr>
+<tr class="memitem:ad7f9957e78b1961578711044520f194b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ad7f9957e78b1961578711044520f194b">complete_with_result_impl</a> (<a class="el" href="structasio_1_1detail_1_1index__sequence.html">asio::detail::index_sequence</a>&lt; Idx... &gt;)</td></tr>
+<tr class="separator:ad7f9957e78b1961578711044520f194b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2033b621c6da6f71afe10f7096e282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a8f2033b621c6da6f71afe10f7096e282">complete_with_result</a> ()</td></tr>
+<tr class="separator:a8f2033b621c6da6f71afe10f7096e282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dcc7c9dc9832dbf61d1a16c89f8fc39"><td class="memTemplParams" colspan="2">template&lt;typename... T_&gt; </td></tr>
+<tr class="memitem:a5dcc7c9dc9832dbf61d1a16c89f8fc39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a5dcc7c9dc9832dbf61d1a16c89f8fc39">cancel_impl_</a> (std::exception_ptr *, T_ *...)</td></tr>
+<tr class="separator:a5dcc7c9dc9832dbf61d1a16c89f8fc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1999beae8126ba3da682018efa190666"><td class="memTemplParams" colspan="2">template&lt;typename... T_&gt; </td></tr>
+<tr class="memitem:a1999beae8126ba3da682018efa190666"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a1999beae8126ba3da682018efa190666">cancel_impl_</a> (<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> *, T_ *...)</td></tr>
+<tr class="separator:a1999beae8126ba3da682018efa190666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1742c83e4568ba446fbc2c9124073f38"><td class="memTemplParams" colspan="2">template&lt;typename... T_&gt; </td></tr>
+<tr class="memitem:a1742c83e4568ba446fbc2c9124073f38"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a1742c83e4568ba446fbc2c9124073f38">cancel_impl_</a> (T_ *...)</td></tr>
+<tr class="separator:a1742c83e4568ba446fbc2c9124073f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839655b409378da3ae6d3a6cf4429d2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a839655b409378da3ae6d3a6cf4429d2e">cancel_</a> ()</td></tr>
+<tr class="separator:a839655b409378da3ae6d3a6cf4429d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:af1dc849240bee74ed193352cbe83c6ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a6f2428214df6ad5b92cba3999fc6d25e">aligned_storage_t</a>&lt; sizeof(<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ababa0cf9b3983607faeed5a960c3e5f7">result_type</a>), alignof(<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ababa0cf9b3983607faeed5a960c3e5f7">result_type</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#af1dc849240bee74ed193352cbe83c6ab">result</a></td></tr>
+<tr class="separator:af1dc849240bee74ed193352cbe83c6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69fbe2a4fefd1b53640b13a079ad2d9c"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a69fbe2a4fefd1b53640b13a079ad2d9c">done</a> {false}</td></tr>
+<tr class="separator:a69fbe2a4fefd1b53640b13a079ad2d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ed4fd745e2a37e1e3eb48b80ec9bb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1cancellation__signal.html">cancellation_signal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aa5ed4fd745e2a37e1e3eb48b80ec9bb2">cancel</a></td></tr>
+<tr class="separator:aa5ed4fd745e2a37e1e3eb48b80ec9bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71ab0b73101d938deff22fa90db4e02"><td class="memItemLeft" align="right" valign="top">Allocator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#af71ab0b73101d938deff22fa90db4e02">allocator</a></td></tr>
+<tr class="separator:af71ab0b73101d938deff22fa90db4e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e836afd829e11df783aab478e3b4729"><td class="memItemLeft" align="right" valign="top">Executor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a7e836afd829e11df783aab478e3b4729">executor</a></td></tr>
+<tr class="separator:a7e836afd829e11df783aab478e3b4729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06e8bb57387798de65abc0348bf3d07"><td class="memItemLeft" align="right" valign="top">completion_base *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ae06e8bb57387798de65abc0348bf3d07">completion</a> = nullptr</td></tr>
+<tr class="separator:ae06e8bb57387798de65abc0348bf3d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b141b31fd4bde77203cc826fd51cde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1aligned__storage.html">asio::aligned_storage</a>&lt; sizeof(<a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> *) *4, alignof(completion_base)&gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a99b141b31fd4bde77203cc826fd51cde">completion_opt</a></td></tr>
+<tr class="separator:a99b141b31fd4bde77203cc826fd51cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a57020dd828a7a6460a804c6ab8cb6de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57020dd828a7a6460a804c6ab8cb6de1">&#9670;&nbsp;</a></span>allocator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a57020dd828a7a6460a804c6ab8cb6de1">allocator_type</a> =  Allocator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac8c102cd84e71d817980c722aa1761c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8c102cd84e71d817980c722aa1761c">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aac8c102cd84e71d817980c722aa1761c">executor_type</a> =  Executor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ababa0cf9b3983607faeed5a960c3e5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ababa0cf9b3983607faeed5a960c3e5f7">&#9670;&nbsp;</a></span>result_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ababa0cf9b3983607faeed5a960c3e5f7">result_type</a> =  std::tuple&lt;Ts...&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a10c9e8f9e71a25ed8f8e0cd260b8694d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c9e8f9e71a25ed8f8e0cd260b8694d">&#9670;&nbsp;</a></span>promise_impl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">promise_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype">Allocator&#160;</td>
+          <td class="paramname"><em>allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Executor&#160;</td>
+          <td class="paramname"><em>executor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc73f2bbc69aed008756a58e2d347693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc73f2bbc69aed008756a58e2d347693">&#9670;&nbsp;</a></span>promise_impl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">promise_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebca5cb7bdb8d22a05db6d9f1650cc63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebca5cb7bdb8d22a05db6d9f1650cc63">&#9670;&nbsp;</a></span>~promise_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::~<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">promise_impl</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="afd040576714abd2701d41f6f7e3d9a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd040576714abd2701d41f6f7e3d9a18">&#9670;&nbsp;</a></span>apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::apply </td>
+          <td>(</td>
+          <td class="paramtype">Func&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5eb559f4f92ab50cd5111e89a2d78631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb559f4f92ab50cd5111e89a2d78631">&#9670;&nbsp;</a></span>apply_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename Func , std::size_t... Idx&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::apply_impl </td>
+          <td>(</td>
+          <td class="paramtype">Func&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1detail_1_1index__sequence.html">asio::detail::index_sequence</a>&lt; Idx... &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a839655b409378da3ae6d3a6cf4429d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839655b409378da3ae6d3a6cf4429d2e">&#9670;&nbsp;</a></span>cancel_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::cancel_ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1999beae8126ba3da682018efa190666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1999beae8126ba3da682018efa190666">&#9670;&nbsp;</a></span>cancel_impl_() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename... T_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::cancel_impl_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T_ *&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dcc7c9dc9832dbf61d1a16c89f8fc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dcc7c9dc9832dbf61d1a16c89f8fc39">&#9670;&nbsp;</a></span>cancel_impl_() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename... T_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::cancel_impl_ </td>
+          <td>(</td>
+          <td class="paramtype">std::exception_ptr *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T_ *&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1742c83e4568ba446fbc2c9124073f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1742c83e4568ba446fbc2c9124073f38">&#9670;&nbsp;</a></span>cancel_impl_() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename... T_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::cancel_impl_ </td>
+          <td>(</td>
+          <td class="paramtype">T_ *&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af00de0c770a1cc50e0bd8d97708f6a3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00de0c770a1cc50e0bd8d97708f6a3f">&#9670;&nbsp;</a></span>complete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename... T_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::complete </td>
+          <td>(</td>
+          <td class="paramtype">T_ &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f2033b621c6da6f71afe10f7096e282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2033b621c6da6f71afe10f7096e282">&#9670;&nbsp;</a></span>complete_with_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::complete_with_result </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7f9957e78b1961578711044520f194b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f9957e78b1961578711044520f194b">&#9670;&nbsp;</a></span>complete_with_result_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;std::size_t... Idx&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::complete_with_result_impl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1detail_1_1index__sequence.html">asio::detail::index_sequence</a>&lt; Idx... &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2bcd687648c01013a854510235079a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bcd687648c01013a854510235079a8">&#9670;&nbsp;</a></span>get_allocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a57020dd828a7a6460a804c6ab8cb6de1">allocator_type</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::get_allocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3a88edcc3d802594010950e3be1daf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a88edcc3d802594010950e3be1daf8">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aac8c102cd84e71d817980c722aa1761c">executor_type</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45a9c19e34414fd38cad86ce6dcdc7f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a9c19e34414fd38cad86ce6dcdc7f2">&#9670;&nbsp;</a></span>set_completion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename Alloc , typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::set_completion </td>
+          <td>(</td>
+          <td class="paramtype">Alloc &amp;&amp;&#160;</td>
+          <td class="paramname"><em>alloc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af71ab0b73101d938deff22fa90db4e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af71ab0b73101d938deff22fa90db4e02">&#9670;&nbsp;</a></span>allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Allocator <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::<a class="el" href="classallocator.html">allocator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5ed4fd745e2a37e1e3eb48b80ec9bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ed4fd745e2a37e1e3eb48b80ec9bb2">&#9670;&nbsp;</a></span>cancel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1cancellation__signal.html">cancellation_signal</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::cancel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae06e8bb57387798de65abc0348bf3d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06e8bb57387798de65abc0348bf3d07">&#9670;&nbsp;</a></span>completion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">completion_base* <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::completion = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99b141b31fd4bde77203cc826fd51cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b141b31fd4bde77203cc826fd51cde">&#9670;&nbsp;</a></span>completion_opt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1aligned__storage.html">asio::aligned_storage</a>&lt;sizeof(<a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>*) * 4, alignof(completion_base)&gt;::type <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::completion_opt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69fbe2a4fefd1b53640b13a079ad2d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69fbe2a4fefd1b53640b13a079ad2d9c">&#9670;&nbsp;</a></span>done</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::done {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e836afd829e11df783aab478e3b4729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e836afd829e11df783aab478e3b4729">&#9670;&nbsp;</a></span>executor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Executor <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::<a class="el" href="classasio_1_1executor.html">executor</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1dc849240bee74ed193352cbe83c6ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dc849240bee74ed193352cbe83c6ab">&#9670;&nbsp;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a6f2428214df6ad5b92cba3999fc6d25e">aligned_storage_t</a>&lt;sizeof(<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ababa0cf9b3983607faeed5a960c3e5f7">result_type</a>), alignof(<a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ababa0cf9b3983607faeed5a960c3e5f7">result_type</a>)&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a>&lt; <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator &gt;::result</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/impl/<a class="el" href="impl_2promise_8hpp_source.html">promise.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

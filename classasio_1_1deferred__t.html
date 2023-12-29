@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::deferred_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1deferred__t.html">deferred_t</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classasio_1_1deferred__t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::deferred_t</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="deferred_8hpp_source.html">deferred.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1deferred__t_1_1executor__with__default.html">executor_with_default</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:aba3f625e28db131242e1d6c86647cae5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aba3f625e28db131242e1d6c86647cae5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__t.html#aba3f625e28db131242e1d6c86647cae5">as_default_on_t</a> = typename T::template rebind_executor&lt; <a class="el" href="structasio_1_1deferred__t_1_1executor__with__default.html">executor_with_default</a>&lt; typename T::executor_type &gt; &gt;::other</td></tr>
+<tr class="separator:aba3f625e28db131242e1d6c86647cae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1ff9ba8671eb5974fd71fe764a836285"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__t.html#a1ff9ba8671eb5974fd71fe764a836285">deferred_t</a> ()</td></tr>
+<tr class="memdesc:a1ff9ba8671eb5974fd71fe764a836285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classasio_1_1deferred__t.html#a1ff9ba8671eb5974fd71fe764a836285">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1ff9ba8671eb5974fd71fe764a836285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef5a96ce6f47deda1efec3db9c72ef0"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
+<tr class="memitem:a8ef5a96ce6f47deda1efec3db9c72ef0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; !<a class="el" href="structasio_1_1is__deferred.html">is_deferred</a>&lt; <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; Function &gt; &gt;::value, <a class="el" href="classasio_1_1deferred__function.html">deferred_function</a>&lt; <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; Function &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__t.html#a8ef5a96ce6f47deda1efec3db9c72ef0">operator()</a> (Function &amp;&amp;function) const</td></tr>
+<tr class="memdesc:a8ef5a96ce6f47deda1efec3db9c72ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new deferred from a function.  <a href="classasio_1_1deferred__t.html#a8ef5a96ce6f47deda1efec3db9c72ef0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8ef5a96ce6f47deda1efec3db9c72ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f598d6da313714e0d4ca3e3481005b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af0f598d6da313714e0d4ca3e3481005b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; <a class="el" href="structasio_1_1is__deferred.html">is_deferred</a>&lt; <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; T &gt; &gt;::value, <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__t.html#af0f598d6da313714e0d4ca3e3481005b">operator()</a> (T &amp;&amp;t) const</td></tr>
+<tr class="memdesc:af0f598d6da313714e0d4ca3e3481005b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes through anything that is already deferred.  <a href="classasio_1_1deferred__t.html#af0f598d6da313714e0d4ca3e3481005b">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0f598d6da313714e0d4ca3e3481005b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a528225731a98f7f5158126b66265aacf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a528225731a98f7f5158126b66265aacf"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; T &gt;::template rebind_executor&lt; <a class="el" href="structasio_1_1deferred__t_1_1executor__with__default.html">executor_with_default</a>&lt; typename <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; T &gt;::executor_type &gt; &gt;::other&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__t.html#a528225731a98f7f5158126b66265aacf">as_default_on</a> (T &amp;&amp;<a class="el" href="structobject.html">object</a>)</td></tr>
+<tr class="separator:a528225731a98f7f5158126b66265aacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623c7e54685fb4dae0d4786ba098c389"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a623c7e54685fb4dae0d4786ba098c389"><td class="memTemplItemLeft" align="right" valign="top">static constexpr <a class="el" href="classasio_1_1deferred__values.html">deferred_values</a>&lt; <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; Args &gt;... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__t.html#a623c7e54685fb4dae0d4786ba098c389">values</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a623c7e54685fb4dae0d4786ba098c389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deferred operation that returns the provided values.  <a href="classasio_1_1deferred__t.html#a623c7e54685fb4dae0d4786ba098c389">Подробнее...</a><br /></td></tr>
+<tr class="separator:a623c7e54685fb4dae0d4786ba098c389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49794fa75c2cd2070f06732381b4b3a"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classasio_1_1deferred__conditional.html">deferred_conditional</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__t.html#ab49794fa75c2cd2070f06732381b4b3a">when</a> (bool b)</td></tr>
+<tr class="memdesc:ab49794fa75c2cd2070f06732381b4b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a conditional object for branching deferred operations.  <a href="classasio_1_1deferred__t.html#ab49794fa75c2cd2070f06732381b4b3a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab49794fa75c2cd2070f06732381b4b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Class used to specify that an asynchronous operation should return a function object to lazily launch the operation. The <a class="el" href="classasio_1_1deferred__t.html">deferred_t</a> class is used to indicate that an asynchronous operation should return a function object which is itself an initiation function. A <a class="el" href="classasio_1_1deferred__t.html">deferred_t</a> object may be passed as a completion token to an asynchronous operation, typically using the special value <code><a class="el" href="namespaceasio.html#a3a930211f940077a2cd1fb88532f9a9d">asio::deferred</a></code>. For example:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> my_deferred_op</div>
+<div class="line"> = my_socket.async_read_some(my_buffer,</div>
+<div class="line">     <a class="code" href="namespaceasio.html#a3a930211f940077a2cd1fb88532f9a9d">asio::deferred</a>); </div>
+<div class="ttc" id="anamespaceasio_html_a3a930211f940077a2cd1fb88532f9a9d"><div class="ttname"><a href="namespaceasio.html#a3a930211f940077a2cd1fb88532f9a9d">asio::deferred</a></div><div class="ttdeci">constexpr deferred_t deferred</div><div class="ttdef"><b>Definition:</b> deferred.hpp:707</div></div>
+</div><!-- fragment --><p>The initiating function (async_read_some in the above example) returns a function object that will lazily initiate the operation. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="aba3f625e28db131242e1d6c86647cae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba3f625e28db131242e1d6c86647cae5">&#9670;&nbsp;</a></span>as_default_on_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classasio_1_1deferred__t.html#aba3f625e28db131242e1d6c86647cae5">asio::deferred_t::as_default_on_t</a> =  typename T::template rebind_executor&lt; <a class="el" href="structasio_1_1deferred__t_1_1executor__with__default.html">executor_with_default</a>&lt;typename T::executor_type&gt; &gt;::other</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type alias to adapt an I/O object to use <code><a class="el" href="classasio_1_1deferred__t.html">deferred_t</a></code> as its default completion token type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1ff9ba8671eb5974fd71fe764a836285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff9ba8671eb5974fd71fe764a836285">&#9670;&nbsp;</a></span>deferred_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr asio::deferred_t::deferred_t </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a528225731a98f7f5158126b66265aacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528225731a98f7f5158126b66265aacf">&#9670;&nbsp;</a></span>as_default_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;T&gt;::template rebind_executor&lt; <a class="el" href="structasio_1_1deferred__t_1_1executor__with__default.html">executor_with_default</a>&lt;typename <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;T&gt;::executor_type&gt; &gt;::other asio::deferred_t::as_default_on </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function helper to adapt an I/O object to use <code><a class="el" href="classasio_1_1deferred__t.html">deferred_t</a></code> as its default completion token type. </p>
+
+</div>
+</div>
+<a id="a8ef5a96ce6f47deda1efec3db9c72ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef5a96ce6f47deda1efec3db9c72ef0">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; !<a class="el" href="structasio_1_1is__deferred.html">is_deferred</a>&lt;<a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;Function&gt; &gt;::value, <a class="el" href="classasio_1_1deferred__function.html">deferred_function</a>&lt;<a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;Function&gt; &gt; &gt; asio::deferred_t::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new deferred from a function. </p>
+
+</div>
+</div>
+<a id="af0f598d6da313714e0d4ca3e3481005b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0f598d6da313714e0d4ca3e3481005b">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt; <a class="el" href="structasio_1_1is__deferred.html">is_deferred</a>&lt;<a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;T&gt; &gt;::value, <a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;T&gt; &gt; asio::deferred_t::operator() </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Passes through anything that is already deferred. </p>
+
+</div>
+</div>
+<a id="a623c7e54685fb4dae0d4786ba098c389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623c7e54685fb4dae0d4786ba098c389">&#9670;&nbsp;</a></span>values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="classasio_1_1deferred__values.html">deferred_values</a>&lt;<a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;Args&gt;...&gt; asio::deferred_t::values </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a deferred operation that returns the provided values. </p>
+
+</div>
+</div>
+<a id="ab49794fa75c2cd2070f06732381b4b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49794fa75c2cd2070f06732381b4b3a">&#9670;&nbsp;</a></span>when()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="classasio_1_1deferred__conditional.html">deferred_conditional</a> asio::deferred_t::when </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a conditional object for branching deferred operations. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="deferred_8hpp_source.html">deferred.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

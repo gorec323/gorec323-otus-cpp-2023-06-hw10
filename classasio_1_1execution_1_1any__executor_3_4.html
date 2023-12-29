@@ -1,0 +1,1031 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::execution::any_executor&lt;&gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1execution.html">execution</a></li><li class="navelem"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html">any_executor&lt;&gt;</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1execution_1_1any__executor_3_4-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::execution::any_executor&lt;&gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="any__executor_8hpp_source.html">any_executor.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::execution::any_executor&lt;&gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1execution_1_1any__executor_3_4__inherit__graph.png" border="0" usemap="#aasio_1_1execution_1_1any__executor_3_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1execution_1_1any__executor_3_4_inherit__map" id="aasio_1_1execution_1_1any__executor_3_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="12,95,164,136"/>
+<area shape="rect" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html" title=" " alt="" coords="5,5,171,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::execution::any_executor&lt;&gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1execution_1_1any__executor_3_4__coll__graph.png" border="0" usemap="#aasio_1_1execution_1_1any__executor_3_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1execution_1_1any__executor_3_4_coll__map" id="aasio_1_1execution_1_1any__executor_3_4_coll__map">
+<area shape="rect" title=" " alt="" coords="577,71,729,112"/>
+<area shape="rect" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html" title=" " alt="" coords="363,71,528,112"/>
+<area shape="rect" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1target__fns.html" title=" " alt="" coords="6,5,235,47"/>
+<area shape="rect" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1object__fns.html" title=" " alt="" coords="5,71,236,112"/>
+<area shape="rect" href="structasio_1_1aligned__storage.html" title=" " alt="" coords="23,136,218,236"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a2b63907aa74e4e3bb3be1faaafca45e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a2b63907aa74e4e3bb3be1faaafca45e7">any_executor</a> () noexcept</td></tr>
+<tr class="separator:a2b63907aa74e4e3bb3be1faaafca45e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249134bdaeda367db5d7cbaab5264600"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a249134bdaeda367db5d7cbaab5264600">any_executor</a> (nullptr_t) noexcept</td></tr>
+<tr class="separator:a249134bdaeda367db5d7cbaab5264600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b93734eba31ec1622e1786bb4ebd0bc"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:a9b93734eba31ec1622e1786bb4ebd0bc"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a9b93734eba31ec1622e1786bb4ebd0bc">any_executor</a> (Executor ex, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; !is_same&lt; Executor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &gt;::value &amp;&amp;!is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">detail::any_executor_base</a>, Executor &gt;::value, <a class="el" href="structasio_1_1execution_1_1is__executor.html">is_executor</a>&lt; Executor &gt;, false_type &gt;::value &gt; *=0)</td></tr>
+<tr class="separator:a9b93734eba31ec1622e1786bb4ebd0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0c7b20b6098da7203f1930c430c144"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:aec0c7b20b6098da7203f1930c430c144"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#aec0c7b20b6098da7203f1930c430c144">any_executor</a> (std::nothrow_t, Executor ex, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; !is_same&lt; Executor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &gt;::value &amp;&amp;!is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">detail::any_executor_base</a>, Executor &gt;::value, <a class="el" href="structasio_1_1execution_1_1is__executor.html">is_executor</a>&lt; Executor &gt;, false_type &gt;::value &gt; *=0) noexcept</td></tr>
+<tr class="separator:aec0c7b20b6098da7203f1930c430c144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e2ffe22d52a275e6bb87106f02827d"><td class="memTemplParams" colspan="2">template&lt;typename... OtherSupportableProperties&gt; </td></tr>
+<tr class="memitem:ad0e2ffe22d52a275e6bb87106f02827d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#ad0e2ffe22d52a275e6bb87106f02827d">any_executor</a> (<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt; OtherSupportableProperties... &gt; other)</td></tr>
+<tr class="separator:ad0e2ffe22d52a275e6bb87106f02827d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c431b5e7206ec63a6c4f3b709ce1301"><td class="memTemplParams" colspan="2">template&lt;typename... OtherSupportableProperties&gt; </td></tr>
+<tr class="memitem:a8c431b5e7206ec63a6c4f3b709ce1301"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a8c431b5e7206ec63a6c4f3b709ce1301">any_executor</a> (std::nothrow_t, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt; OtherSupportableProperties... &gt; other) noexcept</td></tr>
+<tr class="separator:a8c431b5e7206ec63a6c4f3b709ce1301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8012045d8bce4af2a493820c8af11a84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a8012045d8bce4af2a493820c8af11a84">any_executor</a> (const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;other) noexcept</td></tr>
+<tr class="separator:a8012045d8bce4af2a493820c8af11a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97b20d8e800745d222f5797c21108be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#af97b20d8e800745d222f5797c21108be">any_executor</a> (std::nothrow_t, const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;other) noexcept</td></tr>
+<tr class="separator:af97b20d8e800745d222f5797c21108be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c94026967833a5c007629d8b554477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#ad4c94026967833a5c007629d8b554477">operator=</a> (const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;other) noexcept</td></tr>
+<tr class="separator:ad4c94026967833a5c007629d8b554477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a81d14738d25344d6beb5b1a64b54f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a89a81d14738d25344d6beb5b1a64b54f">operator=</a> (nullptr_t p) noexcept</td></tr>
+<tr class="separator:a89a81d14738d25344d6beb5b1a64b54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f880a659565d7fec6173ef83469442"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#ab1f880a659565d7fec6173ef83469442">any_executor</a> (<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:ab1f880a659565d7fec6173ef83469442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d0dd495de98f09bbcd9d07c92dab1bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a7d0dd495de98f09bbcd9d07c92dab1bd">any_executor</a> (std::nothrow_t, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a7d0dd495de98f09bbcd9d07c92dab1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58952dd32e3f6b34ec8608c29db2c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#ac58952dd32e3f6b34ec8608c29db2c1a">operator=</a> (<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:ac58952dd32e3f6b34ec8608c29db2c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12880e1faecadcb0aefab2f78a7e9545"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a12880e1faecadcb0aefab2f78a7e9545">swap</a> (<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;other) noexcept</td></tr>
+<tr class="separator:a12880e1faecadcb0aefab2f78a7e9545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181b92ba462cd8e391012c8f5e5e484a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a181b92ba462cd8e391012c8f5e5e484a">equality_helper</a> (const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a181b92ba462cd8e391012c8f5e5e484a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">asio::execution::detail::any_executor_base</a></td></tr>
+<tr class="memitem:a6f400d22e723bb32c479b9fd91125c09 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a6f400d22e723bb32c479b9fd91125c09">any_executor_base</a> () noexcept</td></tr>
+<tr class="separator:a6f400d22e723bb32c479b9fd91125c09 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149d9f52d7764ce5cab959b18bed2f33 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;ASIO_EXECUTION_EXECUTOR Executor&gt; </td></tr>
+<tr class="memitem:a149d9f52d7764ce5cab959b18bed2f33 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a149d9f52d7764ce5cab959b18bed2f33">any_executor_base</a> (Executor ex, false_type)</td></tr>
+<tr class="separator:a149d9f52d7764ce5cab959b18bed2f33 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3db4fa2f9e3d90988924cf13d14fd2 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;ASIO_EXECUTION_EXECUTOR Executor&gt; </td></tr>
+<tr class="memitem:abd3db4fa2f9e3d90988924cf13d14fd2 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#abd3db4fa2f9e3d90988924cf13d14fd2">any_executor_base</a> (std::nothrow_t, Executor ex, false_type) noexcept</td></tr>
+<tr class="separator:abd3db4fa2f9e3d90988924cf13d14fd2 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf21671a02375ae2822e1c32bc61c2c inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;ASIO_EXECUTION_EXECUTOR Executor&gt; </td></tr>
+<tr class="memitem:a6bf21671a02375ae2822e1c32bc61c2c inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a6bf21671a02375ae2822e1c32bc61c2c">any_executor_base</a> (Executor other, true_type)</td></tr>
+<tr class="separator:a6bf21671a02375ae2822e1c32bc61c2c inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa35a14fb4f9ebabbaa533c8836a852 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;ASIO_EXECUTION_EXECUTOR Executor&gt; </td></tr>
+<tr class="memitem:aefa35a14fb4f9ebabbaa533c8836a852 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#aefa35a14fb4f9ebabbaa533c8836a852">any_executor_base</a> (std::nothrow_t, Executor other, true_type) noexcept</td></tr>
+<tr class="separator:aefa35a14fb4f9ebabbaa533c8836a852 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7090aea580b32aabb961420a62d2603e inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a7090aea580b32aabb961420a62d2603e">any_executor_base</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;other) noexcept</td></tr>
+<tr class="separator:a7090aea580b32aabb961420a62d2603e inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31155a3296e71a1d3f25ed54ad399224 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a31155a3296e71a1d3f25ed54ad399224">~any_executor_base</a> () noexcept</td></tr>
+<tr class="separator:a31155a3296e71a1d3f25ed54ad399224 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20221308f118ebd4345b83a409caec43 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a20221308f118ebd4345b83a409caec43">operator=</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;other) noexcept</td></tr>
+<tr class="separator:a20221308f118ebd4345b83a409caec43 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38b89e0b0a22e39c7c5f02f92c8bf29 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ab38b89e0b0a22e39c7c5f02f92c8bf29">operator=</a> (nullptr_t) noexcept</td></tr>
+<tr class="separator:ab38b89e0b0a22e39c7c5f02f92c8bf29 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4c56bd15ddb41c253f9d2a6fa7c064 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a6b4c56bd15ddb41c253f9d2a6fa7c064">any_executor_base</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a6b4c56bd15ddb41c253f9d2a6fa7c064 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ac6b7c92af1e832484d57c709db64f inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a24ac6b7c92af1e832484d57c709db64f">operator=</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a24ac6b7c92af1e832484d57c709db64f inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab92b0eadff5b0e84f71f8c1badb113cf inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ab92b0eadff5b0e84f71f8c1badb113cf">swap</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;other) noexcept</td></tr>
+<tr class="separator:ab92b0eadff5b0e84f71f8c1badb113cf inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55cbbddeed7f7e9ad552d02b492f0ed7 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a55cbbddeed7f7e9ad552d02b492f0ed7 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a55cbbddeed7f7e9ad552d02b492f0ed7">execute</a> (F &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>) const</td></tr>
+<tr class="separator:a55cbbddeed7f7e9ad552d02b492f0ed7 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa175437821946fd52004b983c2201f67 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:aa175437821946fd52004b983c2201f67 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">Executor *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#aa175437821946fd52004b983c2201f67">target</a> ()</td></tr>
+<tr class="separator:aa175437821946fd52004b983c2201f67 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae747ad40f6218b340525e423c3992c1 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:aae747ad40f6218b340525e423c3992c1 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">const Executor *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#aae747ad40f6218b340525e423c3992c1">target</a> () const</td></tr>
+<tr class="separator:aae747ad40f6218b340525e423c3992c1 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4592793eb10d5faba3467401f2bd6d5 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#aa4592793eb10d5faba3467401f2bd6d5">target_type</a> () const</td></tr>
+<tr class="separator:aa4592793eb10d5faba3467401f2bd6d5 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd9c6461cbc662aa97ff91b9b2b2717 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a9cd9c6461cbc662aa97ff91b9b2b2717">operator unspecified_bool_type</a> () const noexcept</td></tr>
+<tr class="separator:a9cd9c6461cbc662aa97ff91b9b2b2717 inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b59682921d79b6fc7186fb0e1117e0d inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a0b59682921d79b6fc7186fb0e1117e0d">operator!</a> () const noexcept</td></tr>
+<tr class="separator:a0b59682921d79b6fc7186fb0e1117e0d inherit pub_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:addb3b259789105e3b0f04bf000928995"><td class="memTemplParams" colspan="2">template&lt;typename AnyExecutor1 , typename AnyExecutor2 &gt; </td></tr>
+<tr class="memitem:addb3b259789105e3b0f04bf000928995"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor1 &gt;::value||is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor2 &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#addb3b259789105e3b0f04bf000928995">operator==</a> (const AnyExecutor1 &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const AnyExecutor2 &amp;b) noexcept</td></tr>
+<tr class="separator:addb3b259789105e3b0f04bf000928995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a336a16b725b866017a520ad4ebdbbf5e"><td class="memTemplParams" colspan="2">template&lt;typename AnyExecutor &gt; </td></tr>
+<tr class="memitem:a336a16b725b866017a520ad4ebdbbf5e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a336a16b725b866017a520ad4ebdbbf5e">operator==</a> (const AnyExecutor &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, nullptr_t) noexcept</td></tr>
+<tr class="separator:a336a16b725b866017a520ad4ebdbbf5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4429628af39d5a260a58d59681d3d5bb"><td class="memTemplParams" colspan="2">template&lt;typename AnyExecutor &gt; </td></tr>
+<tr class="memitem:a4429628af39d5a260a58d59681d3d5bb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a4429628af39d5a260a58d59681d3d5bb">operator==</a> (nullptr_t, const AnyExecutor &amp;b) noexcept</td></tr>
+<tr class="separator:a4429628af39d5a260a58d59681d3d5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b721cf3750a09c16db27d9ae2e4cbe"><td class="memTemplParams" colspan="2">template&lt;typename AnyExecutor1 , typename AnyExecutor2 &gt; </td></tr>
+<tr class="memitem:a62b721cf3750a09c16db27d9ae2e4cbe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor1 &gt;::value||is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor2 &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a62b721cf3750a09c16db27d9ae2e4cbe">operator!=</a> (const AnyExecutor1 &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const AnyExecutor2 &amp;b) noexcept</td></tr>
+<tr class="separator:a62b721cf3750a09c16db27d9ae2e4cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330233fb4ca630e2698b58ad2c525550"><td class="memTemplParams" colspan="2">template&lt;typename AnyExecutor &gt; </td></tr>
+<tr class="memitem:a330233fb4ca630e2698b58ad2c525550"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#a330233fb4ca630e2698b58ad2c525550">operator!=</a> (const AnyExecutor &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, nullptr_t) noexcept</td></tr>
+<tr class="separator:a330233fb4ca630e2698b58ad2c525550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d3b32230d2119f040e3646940738f1"><td class="memTemplParams" colspan="2">template&lt;typename AnyExecutor &gt; </td></tr>
+<tr class="memitem:ac4d3b32230d2119f040e3646940738f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1any__executor_3_4.html#ac4d3b32230d2119f040e3646940738f1">operator!=</a> (nullptr_t, const AnyExecutor &amp;b) noexcept</td></tr>
+<tr class="separator:ac4d3b32230d2119f040e3646940738f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classasio_1_1execution_1_1detail_1_1any__executor__base')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">asio::execution::detail::any_executor_base</a></td></tr>
+<tr class="memitem:aa73daab5ca09158dfc6cfec98aa710b1 inherit pub_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#aa73daab5ca09158dfc6cfec98aa710b1">unspecified_bool_type</a>) (<a class="el" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1unspecified__bool__type__t.html">unspecified_bool_type_t</a>)</td></tr>
+<tr class="separator:aa73daab5ca09158dfc6cfec98aa710b1 inherit pub_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644473afdab1f27e8a4976d8ae4c856c inherit pub_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1aligned__storage.html">aligned_storage</a>&lt; sizeof(asio::detail::shared_ptr&lt; <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;)+sizeof(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *), alignment_of&lt; asio::detail::shared_ptr&lt; <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt; &gt;::value &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a644473afdab1f27e8a4976d8ae4c856c">object_type</a></td></tr>
+<tr class="separator:a644473afdab1f27e8a4976d8ae4c856c inherit pub_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">asio::execution::detail::any_executor_base</a></td></tr>
+<tr class="memitem:a0f36f4804922e670e1f0903d2eea8ff0 inherit pub_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a0f36f4804922e670e1f0903d2eea8ff0">unspecified_bool_true</a> (<a class="el" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1unspecified__bool__type__t.html">unspecified_bool_type_t</a>)</td></tr>
+<tr class="separator:a0f36f4804922e670e1f0903d2eea8ff0 inherit pub_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base')"><img src="closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">asio::execution::detail::any_executor_base</a></td></tr>
+<tr class="memitem:ae1e8ad8887aae7a8085f97e7d48dceab inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a644473afdab1f27e8a4976d8ae4c856c">object_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ae1e8ad8887aae7a8085f97e7d48dceab">object_</a></td></tr>
+<tr class="separator:ae1e8ad8887aae7a8085f97e7d48dceab inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50078b13a501a90b31480e19ec984018 inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1object__fns.html">object_fns</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a50078b13a501a90b31480e19ec984018">object_fns_</a></td></tr>
+<tr class="separator:a50078b13a501a90b31480e19ec984018 inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af172151b8696afac6dc912ae1d66b2d9 inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#af172151b8696afac6dc912ae1d66b2d9">target_</a></td></tr>
+<tr class="separator:af172151b8696afac6dc912ae1d66b2d9 inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35a26837c82e4772122f35ed13f7f77 inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1target__fns.html">target_fns</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ac35a26837c82e4772122f35ed13f7f77">target_fns_</a></td></tr>
+<tr class="separator:ac35a26837c82e4772122f35ed13f7f77 inherit pub_attribs_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classasio_1_1execution_1_1detail_1_1any__executor__base')"><img src="closed.png" alt="-"/>&#160;Защищенные типы унаследованные от <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">asio::execution::detail::any_executor_base</a></td></tr>
+<tr class="memitem:acb51d4e0c72f14c2d2faddc6512e59d4 inherit pro_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1detail_1_1executor__function.html">asio::detail::executor_function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#acb51d4e0c72f14c2d2faddc6512e59d4">function</a></td></tr>
+<tr class="separator:acb51d4e0c72f14c2d2faddc6512e59d4 inherit pro_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4abd268ac07f4484457c65cd361c9bd1 inherit pro_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1detail_1_1executor__function__view.html">asio::detail::executor_function_view</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a4abd268ac07f4484457c65cd361c9bd1">function_view</a></td></tr>
+<tr class="separator:a4abd268ac07f4484457c65cd361c9bd1 inherit pro_types_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">asio::execution::detail::any_executor_base</a></td></tr>
+<tr class="memitem:a827ec9b2c139c9f7685acbf706fc7f5f inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a827ec9b2c139c9f7685acbf706fc7f5f">equality_helper</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a827ec9b2c139c9f7685acbf706fc7f5f inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2c19ab7051b875d1f8b8d79884e146 inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex &gt; </td></tr>
+<tr class="memitem:a8c2c19ab7051b875d1f8b8d79884e146 inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">Ex &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a8c2c19ab7051b875d1f8b8d79884e146">object</a> ()</td></tr>
+<tr class="separator:a8c2c19ab7051b875d1f8b8d79884e146 inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415d9e5973e08f197d760d536da5b697 inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex &gt; </td></tr>
+<tr class="memitem:a415d9e5973e08f197d760d536da5b697 inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">const Ex &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a415d9e5973e08f197d760d536da5b697">object</a> () const</td></tr>
+<tr class="separator:a415d9e5973e08f197d760d536da5b697 inherit pro_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base')"><img src="closed.png" alt="-"/>&#160;Защищенные статические члены унаследованные от <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">asio::execution::detail::any_executor_base</a></td></tr>
+<tr class="memitem:a58f4dbe879d72f1c5c8c29e912d26c44 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a58f4dbe879d72f1c5c8c29e912d26c44">destroy_shared</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex)</td></tr>
+<tr class="separator:a58f4dbe879d72f1c5c8c29e912d26c44 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab1fcb8d968c4989e030fff10928d7bf inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#aab1fcb8d968c4989e030fff10928d7bf">copy_shared</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex1, const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex2)</td></tr>
+<tr class="separator:aab1fcb8d968c4989e030fff10928d7bf inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb80b88b868881415edb5b4ab27c4af inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#abeb80b88b868881415edb5b4ab27c4af">move_shared</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex1, <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex2)</td></tr>
+<tr class="separator:abeb80b88b868881415edb5b4ab27c4af inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b793c6bb93d83d2274c1dbe38bfd5c1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a1b793c6bb93d83d2274c1dbe38bfd5c1">target_shared</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex)</td></tr>
+<tr class="separator:a1b793c6bb93d83d2274c1dbe38bfd5c1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16bcc7daaa012a8264f253ba36a9d47 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Obj &gt; </td></tr>
+<tr class="memitem:ae16bcc7daaa012a8264f253ba36a9d47 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static const <a class="el" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1object__fns.html">object_fns</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ae16bcc7daaa012a8264f253ba36a9d47">object_fns_table</a> (<a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; Obj, <a class="el" href="classasio_1_1execution_1_1detail_1_1shared__target__executor.html">shared_target_executor</a> &gt;::value &gt; *=0)</td></tr>
+<tr class="separator:ae16bcc7daaa012a8264f253ba36a9d47 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ad32e847a90557e6eaf1663fd2c35f inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Obj &gt; </td></tr>
+<tr class="memitem:a92ad32e847a90557e6eaf1663fd2c35f inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a92ad32e847a90557e6eaf1663fd2c35f">destroy_object</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex)</td></tr>
+<tr class="separator:a92ad32e847a90557e6eaf1663fd2c35f inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8270da033f08e090487b7837ebc0bf8d inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Obj &gt; </td></tr>
+<tr class="memitem:a8270da033f08e090487b7837ebc0bf8d inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a8270da033f08e090487b7837ebc0bf8d">copy_object</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex1, const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex2)</td></tr>
+<tr class="separator:a8270da033f08e090487b7837ebc0bf8d inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88144b62eb325a098413e526d6e1291 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Obj &gt; </td></tr>
+<tr class="memitem:ad88144b62eb325a098413e526d6e1291 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ad88144b62eb325a098413e526d6e1291">move_object</a> (<a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex1, <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex2)</td></tr>
+<tr class="separator:ad88144b62eb325a098413e526d6e1291 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776817793533e6606053f9e73b83db19 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Obj &gt; </td></tr>
+<tr class="memitem:a776817793533e6606053f9e73b83db19 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a776817793533e6606053f9e73b83db19">target_object</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex)</td></tr>
+<tr class="separator:a776817793533e6606053f9e73b83db19 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7256811cc3eeff6af6645a4ded87ddf3 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Obj &gt; </td></tr>
+<tr class="memitem:a7256811cc3eeff6af6645a4ded87ddf3 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static const <a class="el" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1object__fns.html">object_fns</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a7256811cc3eeff6af6645a4ded87ddf3">object_fns_table</a> (<a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !is_same&lt; Obj, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;!is_same&lt; Obj, <a class="el" href="classasio_1_1execution_1_1detail_1_1shared__target__executor.html">shared_target_executor</a> &gt;::value &gt; *=0)</td></tr>
+<tr class="separator:a7256811cc3eeff6af6645a4ded87ddf3 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cf35d963d507ef2ac25fd1734e9c37 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex &gt; </td></tr>
+<tr class="memitem:a88cf35d963d507ef2ac25fd1734e9c37 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static const std::type_info &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a88cf35d963d507ef2ac25fd1734e9c37">target_type_ex</a> ()</td></tr>
+<tr class="separator:a88cf35d963d507ef2ac25fd1734e9c37 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ca19e3031f8afd52f66ac8390d46d2 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex &gt; </td></tr>
+<tr class="memitem:ab9ca19e3031f8afd52f66ac8390d46d2 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ab9ca19e3031f8afd52f66ac8390d46d2">equal_ex</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex1, const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex2)</td></tr>
+<tr class="separator:ab9ca19e3031f8afd52f66ac8390d46d2 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa69d41643400431151e8712684448a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex &gt; </td></tr>
+<tr class="memitem:adfa69d41643400431151e8712684448a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#adfa69d41643400431151e8712684448a">execute_ex</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex, <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#acb51d4e0c72f14c2d2faddc6512e59d4">function</a> &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</td></tr>
+<tr class="separator:adfa69d41643400431151e8712684448a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3accc3bfedd0aaa41caea606307d07f3 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex &gt; </td></tr>
+<tr class="memitem:a3accc3bfedd0aaa41caea606307d07f3 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a3accc3bfedd0aaa41caea606307d07f3">blocking_execute_ex</a> (const <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">any_executor_base</a> &amp;ex, <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a4abd268ac07f4484457c65cd361c9bd1">function_view</a> <a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</td></tr>
+<tr class="separator:a3accc3bfedd0aaa41caea606307d07f3 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a2f6ab7236733634acaf37e8527639 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex &gt; </td></tr>
+<tr class="memitem:a96a2f6ab7236733634acaf37e8527639 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static const <a class="el" href="structasio_1_1execution_1_1detail_1_1any__executor__base_1_1target__fns.html">target_fns</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a96a2f6ab7236733634acaf37e8527639">target_fns_table</a> (bool is_always_blocking, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !is_same&lt; Ex, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &gt; *=0)</td></tr>
+<tr class="separator:a96a2f6ab7236733634acaf37e8527639 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab853e92e3b6357230000fe8a267d9932 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ab853e92e3b6357230000fe8a267d9932">query_fn_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *)</td></tr>
+<tr class="separator:ab853e92e3b6357230000fe8a267d9932 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1321606059af703f4d67250e99834658 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a1321606059af703f4d67250e99834658 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a1321606059af703f4d67250e99834658">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">asio::can_query</a>&lt; const Ex &amp;, const Prop &amp; &gt;::value &amp;&amp;is_same&lt; typename Prop::polymorphic_query_result_type, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &gt; *)</td></tr>
+<tr class="separator:a1321606059af703f4d67250e99834658 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54700746fb21904c3ce9e0794815cb61 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a54700746fb21904c3ce9e0794815cb61 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a54700746fb21904c3ce9e0794815cb61">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">asio::can_query</a>&lt; const Ex &amp;, const Prop &amp; &gt;::value &amp;&amp;is_same&lt; typename Prop::polymorphic_query_result_type, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &gt; *)</td></tr>
+<tr class="separator:a54700746fb21904c3ce9e0794815cb61 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5decb040f0dafc939c9df9d885312afa inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a5decb040f0dafc939c9df9d885312afa inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a5decb040f0dafc939c9df9d885312afa">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">asio::can_query</a>&lt; const Ex &amp;, const Prop &amp; &gt;::value &amp;&amp;!is_same&lt; typename Prop::polymorphic_query_result_type, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;is_reference&lt; typename Prop::polymorphic_query_result_type &gt;::value &gt; *)</td></tr>
+<tr class="separator:a5decb040f0dafc939c9df9d885312afa inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446e036f3ab6ef4c1378583d9273174a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a446e036f3ab6ef4c1378583d9273174a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a446e036f3ab6ef4c1378583d9273174a">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">asio::can_query</a>&lt; const Ex &amp;, const Prop &amp; &gt;::value &amp;&amp;!is_same&lt; typename Prop::polymorphic_query_result_type, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;is_reference&lt; typename Prop::polymorphic_query_result_type &gt;::value &gt; *)</td></tr>
+<tr class="separator:a446e036f3ab6ef4c1378583d9273174a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da70677423f178085a60a2f3002120c inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a4da70677423f178085a60a2f3002120c inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a4da70677423f178085a60a2f3002120c">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">asio::can_query</a>&lt; const Ex &amp;, const Prop &amp; &gt;::value &amp;&amp;!is_same&lt; typename Prop::polymorphic_query_result_type, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;is_scalar&lt; typename Prop::polymorphic_query_result_type &gt;::value &gt; *)</td></tr>
+<tr class="separator:a4da70677423f178085a60a2f3002120c inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a0c988ee7ee8b94e38b1c9b43b5cb4 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a77a0c988ee7ee8b94e38b1c9b43b5cb4 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a77a0c988ee7ee8b94e38b1c9b43b5cb4">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !<a class="el" href="structasio_1_1can__query.html">asio::can_query</a>&lt; const Ex &amp;, const Prop &amp; &gt;::value &amp;&amp;!is_same&lt; typename Prop::polymorphic_query_result_type, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;is_scalar&lt; typename Prop::polymorphic_query_result_type &gt;::value &gt; *)</td></tr>
+<tr class="separator:a77a0c988ee7ee8b94e38b1c9b43b5cb4 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3b601e1315bf154e7667f492f05cf1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a1d3b601e1315bf154e7667f492f05cf1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a1d3b601e1315bf154e7667f492f05cf1">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="structasio_1_1can__query.html">asio::can_query</a>&lt; const Ex &amp;, const Prop &amp; &gt;::value &amp;&amp;!is_same&lt; typename Prop::polymorphic_query_result_type, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;!is_reference&lt; typename Prop::polymorphic_query_result_type &gt;::value &amp;&amp;!is_scalar&lt; typename Prop::polymorphic_query_result_type &gt;::value &gt; *)</td></tr>
+<tr class="separator:a1d3b601e1315bf154e7667f492f05cf1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4d2df0deed75c674c8fa45d4ee24f1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a2b4d2df0deed75c674c8fa45d4ee24f1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a2b4d2df0deed75c674c8fa45d4ee24f1">query_fn_non_void</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *,...)</td></tr>
+<tr class="separator:a2b4d2df0deed75c674c8fa45d4ee24f1 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327dc3fb82bc637fcc3d2c3703459a76 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a327dc3fb82bc637fcc3d2c3703459a76 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a327dc3fb82bc637fcc3d2c3703459a76">query_fn_impl</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; Ex, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &gt; *)</td></tr>
+<tr class="separator:a327dc3fb82bc637fcc3d2c3703459a76 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3631fa7cd781714699045cca3e19c9a4 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a3631fa7cd781714699045cca3e19c9a4 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a3631fa7cd781714699045cca3e19c9a4">query_fn_impl</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !is_same&lt; Ex, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &gt; *)</td></tr>
+<tr class="separator:a3631fa7cd781714699045cca3e19c9a4 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9258a14100a243acdc7dcbf66d94dd inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a0e9258a14100a243acdc7dcbf66d94dd inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a0e9258a14100a243acdc7dcbf66d94dd">query_fn</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *result, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>)</td></tr>
+<tr class="separator:a0e9258a14100a243acdc7dcbf66d94dd inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f613f3625e739fce7dac7df600c053 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:ae4f613f3625e739fce7dac7df600c053 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ae4f613f3625e739fce7dac7df600c053">require_fn_impl</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; Ex, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &gt; *)</td></tr>
+<tr class="separator:ae4f613f3625e739fce7dac7df600c053 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe04962ff62878d5ffa3ce6515725c3a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:afe04962ff62878d5ffa3ce6515725c3a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#afe04962ff62878d5ffa3ce6515725c3a">require_fn_impl</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !is_same&lt; Ex, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;Prop::is_requirable &gt; *)</td></tr>
+<tr class="separator:afe04962ff62878d5ffa3ce6515725c3a inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190863c94ffcf387bf93d4fdbb64fb60 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a190863c94ffcf387bf93d4fdbb64fb60 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a190863c94ffcf387bf93d4fdbb64fb60">require_fn_impl</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *,...)</td></tr>
+<tr class="separator:a190863c94ffcf387bf93d4fdbb64fb60 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68861bb0de574441f4cf09e4d5688aa0 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a68861bb0de574441f4cf09e4d5688aa0 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a68861bb0de574441f4cf09e4d5688aa0">require_fn</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>)</td></tr>
+<tr class="separator:a68861bb0de574441f4cf09e4d5688aa0 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae140ffffcc430a6b1f7d6e8d13141fb7 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:ae140ffffcc430a6b1f7d6e8d13141fb7 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ae140ffffcc430a6b1f7d6e8d13141fb7">prefer_fn_impl</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt; Ex, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &gt; *)</td></tr>
+<tr class="separator:ae140ffffcc430a6b1f7d6e8d13141fb7 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e8635dc8967eff963f6c493d6911b8 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:af9e8635dc8967eff963f6c493d6911b8 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#af9e8635dc8967eff963f6c493d6911b8">prefer_fn_impl</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>, <a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; !is_same&lt; Ex, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;::value &amp;&amp;Prop::is_preferable &gt; *)</td></tr>
+<tr class="separator:af9e8635dc8967eff963f6c493d6911b8 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56b547c7f97f7d3f52690d0d103a271 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:ae56b547c7f97f7d3f52690d0d103a271 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#ae56b547c7f97f7d3f52690d0d103a271">prefer_fn_impl</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *,...)</td></tr>
+<tr class="separator:ae56b547c7f97f7d3f52690d0d103a271 inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338514f04bd60506c93f5dcb6ac6b27e inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplParams" colspan="2">template&lt;typename Poly , typename Ex , class Prop &gt; </td></tr>
+<tr class="memitem:a338514f04bd60506c93f5dcb6ac6b27e inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memTemplItemLeft" align="right" valign="top">static Poly&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a338514f04bd60506c93f5dcb6ac6b27e">prefer_fn</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *ex, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *<a class="el" href="structprop.html">prop</a>)</td></tr>
+<tr class="separator:a338514f04bd60506c93f5dcb6ac6b27e inherit pro_static_methods_classasio_1_1execution_1_1detail_1_1any__executor__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a2b63907aa74e4e3bb3be1faaafca45e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b63907aa74e4e3bb3be1faaafca45e7">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[1/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a249134bdaeda367db5d7cbaab5264600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249134bdaeda367db5d7cbaab5264600">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[2/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b93734eba31ec1622e1786bb4ebd0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b93734eba31ec1622e1786bb4ebd0bc">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[3/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">Executor&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; !is_same&lt; Executor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &gt;::value &amp;&amp;!is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">detail::any_executor_base</a>, Executor &gt;::value, <a class="el" href="structasio_1_1execution_1_1is__executor.html">is_executor</a>&lt; Executor &gt;, false_type &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec0c7b20b6098da7203f1930c430c144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0c7b20b6098da7203f1930c430c144">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::nothrow_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Executor&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; <a class="el" href="namespaceasio.html#a0332484df24f23affcc056f9085b8a92">conditional_t</a>&lt; !is_same&lt; Executor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &gt;::value &amp;&amp;!is_base_of&lt; <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html">detail::any_executor_base</a>, Executor &gt;::value, <a class="el" href="structasio_1_1execution_1_1is__executor.html">is_executor</a>&lt; Executor &gt;, false_type &gt;::value &gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0e2ffe22d52a275e6bb87106f02827d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e2ffe22d52a275e6bb87106f02827d">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[5/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... OtherSupportableProperties&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt; OtherSupportableProperties... &gt;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c431b5e7206ec63a6c4f3b709ce1301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c431b5e7206ec63a6c4f3b709ce1301">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[6/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... OtherSupportableProperties&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::nothrow_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt; OtherSupportableProperties... &gt;&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8012045d8bce4af2a493820c8af11a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8012045d8bce4af2a493820c8af11a84">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[7/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af97b20d8e800745d222f5797c21108be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97b20d8e800745d222f5797c21108be">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[8/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::nothrow_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1f880a659565d7fec6173ef83469442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f880a659565d7fec6173ef83469442">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[9/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d0dd495de98f09bbcd9d07c92dab1bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0dd495de98f09bbcd9d07c92dab1bd">&#9670;&nbsp;</a></span>any_executor() <span class="overload">[10/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::nothrow_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a181b92ba462cd8e391012c8f5e5e484a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181b92ba462cd8e391012c8f5e5e484a">&#9670;&nbsp;</a></span>equality_helper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::equality_helper </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac58952dd32e3f6b34ec8608c29db2c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58952dd32e3f6b34ec8608c29db2c1a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&amp; <a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4c94026967833a5c007629d8b554477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c94026967833a5c007629d8b554477">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&amp; <a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89a81d14738d25344d6beb5b1a64b54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a81d14738d25344d6beb5b1a64b54f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&amp; <a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12880e1faecadcb0aefab2f78a7e9545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12880e1faecadcb0aefab2f78a7e9545">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1execution_1_1any__executor.html">asio::execution::any_executor</a>&lt;&gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&lt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a330233fb4ca630e2698b58ad2c525550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330233fb4ca630e2698b58ad2c525550">&#9670;&nbsp;</a></span>operator!= <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AnyExecutor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt;AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&gt;::value, bool &gt; <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a0b59682921d79b6fc7186fb0e1117e0d">operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype">const AnyExecutor &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62b721cf3750a09c16db27d9ae2e4cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b721cf3750a09c16db27d9ae2e4cbe">&#9670;&nbsp;</a></span>operator!= <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AnyExecutor1 , typename AnyExecutor2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_base_of&lt;<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor1&gt;::value || is_base_of&lt;<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor2&gt;::value, bool &gt; <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a0b59682921d79b6fc7186fb0e1117e0d">operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype">const AnyExecutor1 &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AnyExecutor2 &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4d3b32230d2119f040e3646940738f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d3b32230d2119f040e3646940738f1">&#9670;&nbsp;</a></span>operator!= <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AnyExecutor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt;AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&gt;::value, bool &gt; <a class="el" href="classasio_1_1execution_1_1detail_1_1any__executor__base.html#a0b59682921d79b6fc7186fb0e1117e0d">operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AnyExecutor &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a336a16b725b866017a520ad4ebdbbf5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a336a16b725b866017a520ad4ebdbbf5e">&#9670;&nbsp;</a></span>operator== <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AnyExecutor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt;AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&gt;::value, bool &gt; operator== </td>
+          <td>(</td>
+          <td class="paramtype">const AnyExecutor &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addb3b259789105e3b0f04bf000928995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb3b259789105e3b0f04bf000928995">&#9670;&nbsp;</a></span>operator== <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AnyExecutor1 , typename AnyExecutor2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_base_of&lt;<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor1&gt;::value || is_base_of&lt;<a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>, AnyExecutor2&gt;::value, bool &gt; operator== </td>
+          <td>(</td>
+          <td class="paramtype">const AnyExecutor1 &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AnyExecutor2 &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4429628af39d5a260a58d59681d3d5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4429628af39d5a260a58d59681d3d5bb">&#9670;&nbsp;</a></span>operator== <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename AnyExecutor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt; is_same&lt;AnyExecutor, <a class="el" href="classasio_1_1execution_1_1any__executor.html">any_executor</a>&gt;::value, bool &gt; operator== </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AnyExecutor &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/execution/<a class="el" href="any__executor_8hpp_source.html">any_executor.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

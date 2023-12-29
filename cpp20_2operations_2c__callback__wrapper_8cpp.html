@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/examples/cpp20/operations/c_callback_wrapper.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_eaba9763643a80c36ebe7d5ffc852fae.html">cpp20</a></li><li class="navelem"><a class="el" href="dir_a88c2a2b10ccf7bc1bf546476dae769c.html">operations</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл c_callback_wrapper.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="asio_8hpp_source.html">asio.hpp</a>&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;new&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для c_callback_wrapper.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="cpp20_2operations_2c__callback__wrapper_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2examples_2cpp20_2operations_2c__callback__wrapper_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2examples_2cpp20_2operations_2c__callback__wrapper_8cpp" id="a__deps_2asio-src_2asio_2src_2examples_2cpp20_2operations_2c__callback__wrapper_8cpp">
+<area shape="rect" title=" " alt="" coords="1191,5,1358,76"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="2455,124,2532,151"/>
+<area shape="rect" title=" " alt="" coords="253,385,331,411"/>
+<area shape="rect" title=" " alt="" coords="283,474,333,501"/>
+<area shape="rect" title=" " alt="" coords="2556,124,2636,151"/>
+<area shape="rect" href="any__completion__executor_8hpp.html" title=" " alt="" coords="872,288,1029,329"/>
+<area shape="rect" href="any__completion__handler_8hpp.html" title=" " alt="" coords="1017,199,1175,240"/>
+<area shape="rect" href="any__io__executor_8hpp.html" title=" " alt="" coords="3724,556,3911,583"/>
+<area shape="rect" href="associated__allocator_8hpp.html" title=" " alt="" coords="195,295,410,322"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="651,385,797,411"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="537,288,746,329"/>
+<area shape="rect" href="cancellation__signal_8hpp.html" title=" " alt="" coords="355,385,562,411"/>
+<area shape="rect" href="associated__executor_8hpp.html" title=" " alt="" coords="1104,295,1317,322"/>
+<area shape="rect" href="associated__immediate__executor_8hpp.html" title=" " alt="" coords="1393,288,1594,329"/>
+<area shape="rect" href="append_8hpp.html" title=" " alt="" coords="2947,206,3077,233"/>
+<area shape="rect" href="as__tuple_8hpp.html" title=" " alt="" coords="3101,206,3237,233"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="1769,556,1932,583"/>
+<area shape="rect" href="awaitable_8hpp.html" title=" " alt="" coords="3262,206,3407,233"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="4975,377,5132,419"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="3481,474,3645,501"/>
+<area shape="rect" href="basic__deadline__timer_8hpp.html" title=" " alt="" coords="3431,199,3582,240"/>
+<area shape="rect" href="basic__file_8hpp.html" title=" " alt="" coords="3606,206,3749,233"/>
+<area shape="rect" href="basic__io__object_8hpp.html" title=" " alt="" coords="3773,206,3955,233"/>
+<area shape="rect" href="basic__random__access__file_8hpp.html" title=" " alt="" coords="3979,199,4173,240"/>
+<area shape="rect" href="basic__raw__socket_8hpp.html" title=" " alt="" coords="2235,295,2429,322"/>
+<area shape="rect" href="basic__readable__pipe_8hpp.html" title=" " alt="" coords="4198,199,4349,240"/>
+<area shape="rect" href="basic__seq__packet__socket_8hpp.html" title=" " alt="" coords="3479,377,3646,419"/>
+<area shape="rect" href="basic__serial__port_8hpp.html" title=" " alt="" coords="4373,206,4563,233"/>
+<area shape="rect" href="basic__signal__set_8hpp.html" title=" " alt="" coords="1822,474,2010,501"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="5156,385,5383,411"/>
+<area shape="rect" href="basic__socket__iostream_8hpp.html" title=" " alt="" coords="2024,206,2253,233"/>
+<area shape="rect" href="basic__socket__streambuf_8hpp.html" title=" " alt="" coords="1973,295,2211,322"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="1987,385,2205,411"/>
+<area shape="rect" href="basic__stream__file_8hpp.html" title=" " alt="" coords="4588,206,4783,233"/>
+<area shape="rect" href="basic__streambuf_8hpp.html" title=" " alt="" coords="2710,295,2898,322"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="2745,385,2863,411"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="4891,467,5042,508"/>
+<area shape="rect" href="basic__writable__pipe_8hpp.html" title=" " alt="" coords="4807,199,4953,240"/>
+<area shape="rect" href="bind__allocator_8hpp.html" title=" " alt="" coords="118,206,290,233"/>
+<area shape="rect" href="bind__cancellation__slot_8hpp.html" title=" " alt="" coords="726,199,893,240"/>
+<area shape="rect" href="bind__executor_8hpp.html" title=" " alt="" coords="1277,206,1448,233"/>
+<area shape="rect" href="bind__immediate__executor_8hpp.html" title=" " alt="" coords="1587,199,1746,240"/>
+<area shape="rect" href="buffer__registration_8hpp.html" title=" " alt="" coords="4978,206,5179,233"/>
+<area shape="rect" href="buffered__read__stream__fwd_8hpp.html" title=" " alt="" coords="3141,377,3283,419"/>
+<area shape="rect" href="buffered__read__stream_8hpp.html" title=" " alt="" coords="2922,288,3065,329"/>
+<area shape="rect" href="buffered__stream__fwd_8hpp.html" title=" " alt="" coords="3311,288,3471,329"/>
+<area shape="rect" href="buffered__stream_8hpp.html" title=" " alt="" coords="2531,206,2719,233"/>
+<area shape="rect" href="buffered__write__stream_8hpp.html" title=" " alt="" coords="3140,288,3287,329"/>
+<area shape="rect" href="buffered__write__stream__fwd_8hpp.html" title=" " alt="" coords="3308,377,3455,419"/>
+<area shape="rect" href="buffers__iterator_8hpp.html" title=" " alt="" coords="2454,295,2634,322"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classread__input__state.html">read_input_state&lt; Handler &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:abea847d324ec2062f4ce534e84e8373e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp20_2operations_2c__callback__wrapper_8cpp.html#abea847d324ec2062f4ce534e84e8373e">read_input</a> (const char *prompt, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(*cb)(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const char *), <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *arg)</td></tr>
+<tr class="separator:abea847d324ec2062f4ce534e84e8373e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf9f9a5091b347b8510d4cba4faea0a"><td class="memTemplParams" colspan="2">template&lt;asio::completion_token_for&lt; void(std::string)&gt; CompletionToken&gt; </td></tr>
+<tr class="memitem:a2cf9f9a5091b347b8510d4cba4faea0a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="cpp20_2operations_2c__callback__wrapper_8cpp.html#a2cf9f9a5091b347b8510d4cba4faea0a">async_read_input</a> (const std::string &amp;prompt, CompletionToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>)</td></tr>
+<tr class="separator:a2cf9f9a5091b347b8510d4cba4faea0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a579dd87a9c4cc4d3192e265164a10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp20_2operations_2c__callback__wrapper_8cpp.html#ad8a579dd87a9c4cc4d3192e265164a10">test_callback</a> ()</td></tr>
+<tr class="separator:ad8a579dd87a9c4cc4d3192e265164a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fe0ba5164908605403561c276bfb31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp20_2operations_2c__callback__wrapper_8cpp.html#a57fe0ba5164908605403561c276bfb31">test_deferred</a> ()</td></tr>
+<tr class="separator:a57fe0ba5164908605403561c276bfb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb063b303203edc0dc8ad2c68048a5cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp20_2operations_2c__callback__wrapper_8cpp.html#acb063b303203edc0dc8ad2c68048a5cb">test_future</a> ()</td></tr>
+<tr class="separator:acb063b303203edc0dc8ad2c68048a5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp20_2operations_2c__callback__wrapper_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a2cf9f9a5091b347b8510d4cba4faea0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf9f9a5091b347b8510d4cba4faea0a">&#9670;&nbsp;</a></span>async_read_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;asio::completion_token_for&lt; void(std::string)&gt; CompletionToken&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto async_read_input </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prompt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CompletionToken &amp;&amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abea847d324ec2062f4ce534e84e8373e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea847d324ec2062f4ce534e84e8373e">&#9670;&nbsp;</a></span>read_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> read_input </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>prompt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(*)(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *, const char *)&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8a579dd87a9c4cc4d3192e265164a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a579dd87a9c4cc4d3192e265164a10">&#9670;&nbsp;</a></span>test_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_callback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57fe0ba5164908605403561c276bfb31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57fe0ba5164908605403561c276bfb31">&#9670;&nbsp;</a></span>test_deferred()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_deferred </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb063b303203edc0dc8ad2c68048a5cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb063b303203edc0dc8ad2c68048a5cb">&#9670;&nbsp;</a></span>test_future()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_future </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

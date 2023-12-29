@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::recycling_allocator&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1recycling__allocator-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::recycling_allocator&lt; T &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>An allocator that caches memory blocks in thread-local storage for reuse.  
+ <a href="classasio_1_1recycling__allocator.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="recycling__allocator_8hpp_source.html">recycling_allocator.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1recycling__allocator_1_1rebind.html">rebind</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebind the allocator to another value_type.  <a href="structasio_1_1recycling__allocator_1_1rebind.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a5fbc465fc055f242c5502b9ec0311164"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1recycling__allocator.html#a5fbc465fc055f242c5502b9ec0311164">value_type</a></td></tr>
+<tr class="memdesc:a5fbc465fc055f242c5502b9ec0311164"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of object allocated by the recycling allocator.  <a href="classasio_1_1recycling__allocator.html#a5fbc465fc055f242c5502b9ec0311164">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5fbc465fc055f242c5502b9ec0311164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9aa9e4dd694015eb4b220bbcdb35b859"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1recycling__allocator.html#a9aa9e4dd694015eb4b220bbcdb35b859">recycling_allocator</a> () noexcept</td></tr>
+<tr class="memdesc:a9aa9e4dd694015eb4b220bbcdb35b859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classasio_1_1recycling__allocator.html#a9aa9e4dd694015eb4b220bbcdb35b859">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9aa9e4dd694015eb4b220bbcdb35b859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a564f3b260a8e22494089fce0a31c3e90"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a564f3b260a8e22494089fce0a31c3e90"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1recycling__allocator.html#a564f3b260a8e22494089fce0a31c3e90">recycling_allocator</a> (const <a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&lt; U &gt; &amp;) noexcept</td></tr>
+<tr class="memdesc:a564f3b260a8e22494089fce0a31c3e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converting constructor.  <a href="classasio_1_1recycling__allocator.html#a564f3b260a8e22494089fce0a31c3e90">Подробнее...</a><br /></td></tr>
+<tr class="separator:a564f3b260a8e22494089fce0a31c3e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae80449b77e1c109bbd63bd2557d279"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1recycling__allocator.html#aeae80449b77e1c109bbd63bd2557d279">operator==</a> (const <a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a> &amp;) const noexcept</td></tr>
+<tr class="memdesc:aeae80449b77e1c109bbd63bd2557d279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator. Always returns true.  <a href="classasio_1_1recycling__allocator.html#aeae80449b77e1c109bbd63bd2557d279">Подробнее...</a><br /></td></tr>
+<tr class="separator:aeae80449b77e1c109bbd63bd2557d279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb031b609c27afcea883abe622c12de9"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1recycling__allocator.html#acb031b609c27afcea883abe622c12de9">operator!=</a> (const <a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a> &amp;) const noexcept</td></tr>
+<tr class="memdesc:acb031b609c27afcea883abe622c12de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality operator. Always returns false.  <a href="classasio_1_1recycling__allocator.html#acb031b609c27afcea883abe622c12de9">Подробнее...</a><br /></td></tr>
+<tr class="separator:acb031b609c27afcea883abe622c12de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493b210fa5a2ffd4d9a5dcdcf28f4596"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1recycling__allocator.html#a493b210fa5a2ffd4d9a5dcdcf28f4596">allocate</a> (std::size_t n)</td></tr>
+<tr class="memdesc:a493b210fa5a2ffd4d9a5dcdcf28f4596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for the specified number of values.  <a href="classasio_1_1recycling__allocator.html#a493b210fa5a2ffd4d9a5dcdcf28f4596">Подробнее...</a><br /></td></tr>
+<tr class="separator:a493b210fa5a2ffd4d9a5dcdcf28f4596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade6c4be63b757e0262d27cd8fd996780"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1recycling__allocator.html#ade6c4be63b757e0262d27cd8fd996780">deallocate</a> (T *p, std::size_t n)</td></tr>
+<tr class="memdesc:ade6c4be63b757e0262d27cd8fd996780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate memory for the specified number of values.  <a href="classasio_1_1recycling__allocator.html#ade6c4be63b757e0262d27cd8fd996780">Подробнее...</a><br /></td></tr>
+<tr class="separator:ade6c4be63b757e0262d27cd8fd996780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class asio::recycling_allocator&lt; T &gt;</h3>
+
+<p>An allocator that caches memory blocks in thread-local storage for reuse. </p>
+<p>The @recycling_allocator uses a simple strategy where a limited number of small memory blocks are cached in thread-local storage, if the current thread is running an <code><a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a></code> or is part of a <code><a class="el" href="classasio_1_1thread__pool.html" title="A simple fixed-size thread pool.">thread_pool</a></code>. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a5fbc465fc055f242c5502b9ec0311164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fbc465fc055f242c5502b9ec0311164">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a>&lt; T &gt;::<a class="el" href="classasio_1_1recycling__allocator.html#a5fbc465fc055f242c5502b9ec0311164">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of object allocated by the recycling allocator. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9aa9e4dd694015eb4b220bbcdb35b859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa9e4dd694015eb4b220bbcdb35b859">&#9670;&nbsp;</a></span>recycling_allocator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a>&lt; T &gt;::<a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<a id="a564f3b260a8e22494089fce0a31c3e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a564f3b260a8e22494089fce0a31c3e90">&#9670;&nbsp;</a></span>recycling_allocator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a>&lt; T &gt;::<a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converting constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a493b210fa5a2ffd4d9a5dcdcf28f4596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a493b210fa5a2ffd4d9a5dcdcf28f4596">&#9670;&nbsp;</a></span>allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate memory for the specified number of values. </p>
+
+</div>
+</div>
+<a id="ade6c4be63b757e0262d27cd8fd996780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6c4be63b757e0262d27cd8fd996780">&#9670;&nbsp;</a></span>deallocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deallocate memory for the specified number of values. </p>
+
+</div>
+</div>
+<a id="acb031b609c27afcea883abe622c12de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb031b609c27afcea883abe622c12de9">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inequality operator. Always returns false. </p>
+
+</div>
+</div>
+<a id="aeae80449b77e1c109bbd63bd2557d279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae80449b77e1c109bbd63bd2557d279">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classasio_1_1recycling__allocator.html">asio::recycling_allocator</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1recycling__allocator.html">recycling_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Equality operator. Always returns true. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="recycling__allocator_8hpp_source.html">recycling_allocator.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

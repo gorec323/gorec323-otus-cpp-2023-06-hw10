@@ -1,0 +1,1028 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/detail/handler_type_requirements.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл handler_type_requirements.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2asio_2async__result_8hpp_source.html">asio/async_result.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для handler_type_requirements.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="handler__type__requirements_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__type__requirements_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__type__requirements_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__type__requirements_8hpp">
+<area shape="rect" title=" " alt="" coords="99,5,332,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="84,259,245,285"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="226,109,389,136"/>
+<area shape="rect" title=" " alt="" coords="5,333,76,360"/>
+<area shape="rect" title=" " alt="" coords="100,333,229,360"/>
+<area shape="rect" title=" " alt="" coords="254,333,393,360"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="211,184,403,211"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="427,184,635,211"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="660,184,861,211"/>
+<area shape="rect" title=" " alt="" coords="269,259,361,285"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="handler__type__requirements_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__type__requirements_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__type__requirements_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__type__requirements_8hppdep">
+<area shape="rect" title=" " alt="" coords="2320,5,2553,61"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="2143,421,2312,477"/>
+<area shape="rect" href="basic__raw__socket_8hpp.html" title=" " alt="" coords="2727,421,2874,477"/>
+<area shape="rect" href="basic__seq__packet__socket_8hpp.html" title=" " alt="" coords="3783,421,3962,477"/>
+<area shape="rect" href="basic__signal__set_8hpp.html" title=" " alt="" coords="381,317,527,373"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="1599,317,1746,373"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="1709,421,1871,477"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="917,421,1069,477"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="2969,317,3123,373"/>
+<area shape="rect" href="impl_2buffered__read__stream_8hpp.html" title=" " alt="" coords="2130,109,2325,165"/>
+<area shape="rect" href="impl_2buffered__write__stream_8hpp.html" title=" " alt="" coords="2474,109,2669,165"/>
+<area shape="rect" href="impl_2connect_8hpp.html" title=" " alt="" coords="337,221,557,262"/>
+<area shape="rect" href="impl_2execution__context_8hpp.html" title=" " alt="" coords="1688,109,1892,165"/>
+<area shape="rect" href="io__context__strand_8hpp.html" title=" " alt="" coords="1234,421,1410,477"/>
+<area shape="rect" href="basic__resolver_8hpp.html" title=" " alt="" coords="2379,421,2537,477"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="1284,213,1437,269"/>
+<area shape="rect" href="impl_2read_8hpp.html" title=" " alt="" coords="2844,117,3043,158"/>
+<area shape="rect" href="impl_2read__at_8hpp.html" title=" " alt="" coords="3067,109,3238,165"/>
+<area shape="rect" href="impl_2read__until_8hpp.html" title=" " alt="" coords="3262,109,3433,165"/>
+<area shape="rect" href="impl_2write_8hpp.html" title=" " alt="" coords="3457,117,3659,158"/>
+<area shape="rect" href="impl_2write__at_8hpp.html" title=" " alt="" coords="3684,109,3859,165"/>
+<area shape="rect" href="stream_8hpp.html" title=" " alt="" coords="3883,117,4087,158"/>
+<area shape="rect" href="generic_2datagram__protocol_8hpp.html" title=" " alt="" coords="2139,525,2316,581"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="2217,629,2363,671"/>
+<area shape="rect" href="udp_8hpp.html" title=" " alt="" coords="2391,533,2567,574"/>
+<area shape="rect" href="socket_8hpp.html" title=" " alt="" coords="735,629,930,671"/>
+<area shape="rect" href="basic__datagram__socket_8cpp.html" title=" " alt="" coords="1946,525,2114,581"/>
+<area shape="rect" href="raw__protocol_8hpp.html" title=" " alt="" coords="3073,525,3229,581"/>
+<area shape="rect" href="icmp_8hpp.html" title=" " alt="" coords="2693,533,2877,574"/>
+<area shape="rect" href="basic__raw__socket_8cpp.html" title=" " alt="" coords="2901,525,3049,581"/>
+<area shape="rect" href="generic_2seq__packet__protocol_8hpp.html" title=" " alt="" coords="3971,525,4158,581"/>
+<area shape="rect" href="basic__seq__packet__socket_8cpp.html" title=" " alt="" coords="3718,525,3897,581"/>
+<area shape="rect" href="signal__set_8hpp.html" title=" " alt="" coords="381,525,527,581"/>
+<area shape="rect" href="basic__signal__set_8cpp.html" title=" " alt="" coords="5,421,153,477"/>
+<area shape="rect" href="basic__socket__streambuf_8hpp.html" title=" " alt="" coords="1013,525,1185,581"/>
+<area shape="rect" href="connect_8hpp.html" title=" " alt="" coords="230,429,417,470"/>
+<area shape="rect" href="basic__socket_8cpp.html" title=" " alt="" coords="1485,421,1633,477"/>
+<area shape="rect" href="tcp_8hpp.html" title=" " alt="" coords="1413,533,1585,574"/>
+<area shape="rect" href="basic__socket__acceptor_8cpp.html" title=" " alt="" coords="1610,525,1770,581"/>
+<area shape="rect" href="generic_2stream__protocol_8hpp.html" title=" " alt="" coords="778,525,938,581"/>
+<area shape="rect" href="basic__stream__socket_8cpp.html" title=" " alt="" coords="603,525,753,581"/>
+<area shape="rect" href="high__resolution__timer_8hpp.html" title=" " alt="" coords="3141,421,3349,477"/>
+<area shape="rect" href="timer_8hpp.html" title=" " alt="" coords="3457,533,3643,574"/>
+<area shape="rect" href="steady__timer_8hpp.html" title=" " alt="" coords="2914,421,3066,477"/>
+<area shape="rect" href="system__timer_8hpp.html" title=" " alt="" coords="3603,421,3759,477"/>
+<area shape="rect" href="basic__waitable__timer_8cpp.html" title=" " alt="" coords="3373,421,3527,477"/>
+<area shape="rect" href="buffered__read__stream_8hpp.html" title=" " alt="" coords="2107,317,2270,373"/>
+<area shape="rect" href="buffered__write__stream_8hpp.html" title=" " alt="" coords="2498,213,2661,269"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="1645,213,1815,269"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="1220,325,1424,366"/>
+</map>
+</div>
+</div>
+<p><a href="handler__type__requirements_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements&lt; int &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:abc79f1e6d4fe863d5372c418de4def6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#abc79f1e6d4fe863d5372c418de4def6e">ASIO_ENABLE_HANDLER_TYPE_REQUIREMENTS</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:abc79f1e6d4fe863d5372c418de4def6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5021d6b3a1f83b79cde3c9c0f2e981b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>(expr,  msg)</td></tr>
+<tr class="separator:ae5021d6b3a1f83b79cde3c9c0f2e981b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6193557e450418b1b5113ab37773dde3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a6193557e450418b1b5113ab37773dde3">ASIO_LEGACY_COMPLETION_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:a6193557e450418b1b5113ab37773dde3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa448f8f50d3f3aea4849ea5af0c3f3ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#aa448f8f50d3f3aea4849ea5af0c3f3ea">ASIO_READ_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:aa448f8f50d3f3aea4849ea5af0c3f3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e034a3b434ab097b8d26251356f7f0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a0e034a3b434ab097b8d26251356f7f0e">ASIO_WRITE_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:a0e034a3b434ab097b8d26251356f7f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94458348b231cc1dbca9027fc7328730"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a94458348b231cc1dbca9027fc7328730">ASIO_ACCEPT_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:a94458348b231cc1dbca9027fc7328730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3fcd422c665392e827e75426f875853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#ad3fcd422c665392e827e75426f875853">ASIO_MOVE_ACCEPT_HANDLER_CHECK</a>(handler_type,  handler,  socket_type)</td></tr>
+<tr class="separator:ad3fcd422c665392e827e75426f875853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f903e259efd1dab79fd2de81b683ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#ac7f903e259efd1dab79fd2de81b683ac">ASIO_CONNECT_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:ac7f903e259efd1dab79fd2de81b683ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e5e9b7ccddf899cc6c377d7c9817cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a82e5e9b7ccddf899cc6c377d7c9817cf">ASIO_RANGE_CONNECT_HANDLER_CHECK</a>(handler_type,  handler,  endpoint_type)</td></tr>
+<tr class="separator:a82e5e9b7ccddf899cc6c377d7c9817cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf59be5fb3d02548ede2f712248823cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#adf59be5fb3d02548ede2f712248823cc">ASIO_ITERATOR_CONNECT_HANDLER_CHECK</a>(handler_type,  handler,  iter_type)</td></tr>
+<tr class="separator:adf59be5fb3d02548ede2f712248823cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b92817ac38d3118fa5d4d23b235d1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a95b92817ac38d3118fa5d4d23b235d1d">ASIO_RESOLVE_HANDLER_CHECK</a>(handler_type,  handler,  range_type)</td></tr>
+<tr class="separator:a95b92817ac38d3118fa5d4d23b235d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3a166a2459b67f37b1abb9417d5085"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#ace3a166a2459b67f37b1abb9417d5085">ASIO_WAIT_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:ace3a166a2459b67f37b1abb9417d5085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ddfff296c6def68b251980990bc58e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a48ddfff296c6def68b251980990bc58e">ASIO_SIGNAL_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:a48ddfff296c6def68b251980990bc58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857e4d300975380a4cc3829841160835"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a857e4d300975380a4cc3829841160835">ASIO_HANDSHAKE_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:a857e4d300975380a4cc3829841160835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5552a491a8c8ede98ae6b6fe69b9a00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#af5552a491a8c8ede98ae6b6fe69b9a00">ASIO_BUFFERED_HANDSHAKE_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:af5552a491a8c8ede98ae6b6fe69b9a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aae0c53a472a297d8d558294eec3f1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__type__requirements_8hpp.html#a3aae0c53a472a297d8d558294eec3f1f">ASIO_SHUTDOWN_HANDLER_CHECK</a>(handler_type,  handler)</td></tr>
+<tr class="separator:a3aae0c53a472a297d8d558294eec3f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a8e3a6211349494216e010cf5509c5ad3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8e3a6211349494216e010cf5509c5ad3"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a8e3a6211349494216e010cf5509c5ad3">asio::detail::lvref</a> ()</td></tr>
+<tr class="separator:a8e3a6211349494216e010cf5509c5ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ddc1087708cdbd63e57448412b3429"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a31ddc1087708cdbd63e57448412b3429"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a31ddc1087708cdbd63e57448412b3429">asio::detail::lvref</a> (T)</td></tr>
+<tr class="separator:a31ddc1087708cdbd63e57448412b3429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2895986e0d90fdc4b0b60c91713262b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab2895986e0d90fdc4b0b60c91713262b"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#ab2895986e0d90fdc4b0b60c91713262b">asio::detail::clvref</a> ()</td></tr>
+<tr class="separator:ab2895986e0d90fdc4b0b60c91713262b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc09e978c5f403bc76d6c74142b64e1e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acc09e978c5f403bc76d6c74142b64e1e"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#acc09e978c5f403bc76d6c74142b64e1e">asio::detail::clvref</a> (T)</td></tr>
+<tr class="separator:acc09e978c5f403bc76d6c74142b64e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0442b4f9af38b4cadc19cd9bae15ebf5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0442b4f9af38b4cadc19cd9bae15ebf5"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a> ()</td></tr>
+<tr class="separator:a0442b4f9af38b4cadc19cd9bae15ebf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf68f9c240606c2cc34d831f42dec0c9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abf68f9c240606c2cc34d831f42dec0c9"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#abf68f9c240606c2cc34d831f42dec0c9">asio::detail::rvref</a> (T)</td></tr>
+<tr class="separator:abf68f9c240606c2cc34d831f42dec0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7c41b71a8894f5e6d8d29654553fef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afe7c41b71a8894f5e6d8d29654553fef"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a> ()</td></tr>
+<tr class="separator:afe7c41b71a8894f5e6d8d29654553fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42f16c77967396f145c7c63ad1c39bb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab42f16c77967396f145c7c63ad1c39bb"><td class="memTemplItemLeft" align="right" valign="top">char&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a> (T)</td></tr>
+<tr class="separator:ab42f16c77967396f145c7c63ad1c39bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a94458348b231cc1dbca9027fc7328730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94458348b231cc1dbca9027fc7328730">&#9670;&nbsp;</a></span>ASIO_ACCEPT_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ACCEPT_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::one_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;AcceptHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+<div class="ttc" id="aconfig_8hpp_html_a1b3ac816a1c44e3c4c5cc683931f175d"><div class="ttname"><a href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div><div class="ttdeci">#define ASIO_UNUSED_TYPEDEF</div><div class="ttdef"><b>Definition:</b> config.hpp:1271</div></div>
+<div class="ttc" id="ahandler__type__requirements_8hpp_html_ae5021d6b3a1f83b79cde3c9c0f2e981b"><div class="ttname"><a href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a></div><div class="ttdeci">#define ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT(expr, msg)</div><div class="ttdef"><b>Definition:</b> handler_type_requirements.hpp:109</div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_aab943504f8bb20c337df83d39f083b2a"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a></div><div class="ttdeci">#define ASIO_HANDLER_TYPE(ct, sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:465</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a0442b4f9af38b4cadc19cd9bae15ebf5"><div class="ttname"><a href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a></div><div class="ttdeci">T rvref()</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_ab42f16c77967396f145c7c63ad1c39bb"><div class="ttname"><a href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a></div><div class="ttdeci">char argbyv(T)</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_afe7c41b71a8894f5e6d8d29654553fef"><div class="ttname"><a href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a></div><div class="ttdeci">T rorlvref()</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1handler__type__requirements_html"><div class="ttname"><a href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a></div><div class="ttdef"><b>Definition:</b> handler_type_requirements.hpp:124</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af5552a491a8c8ede98ae6b6fe69b9a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5552a491a8c8ede98ae6b6fe69b9a00">&#9670;&nbsp;</a></span>ASIO_BUFFERED_HANDSHAKE_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_BUFFERED_HANDSHAKE_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>std::size_t*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;BufferedHandshakeHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">          asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">          asio::detail::lvref&lt;const std::size_t&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac7f903e259efd1dab79fd2de81b683ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f903e259efd1dab79fd2de81b683ac">&#9670;&nbsp;</a></span>ASIO_CONNECT_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONNECT_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::one_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;ConnectHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abc79f1e6d4fe863d5372c418de4def6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc79f1e6d4fe863d5372c418de4def6e">&#9670;&nbsp;</a></span>ASIO_ENABLE_HANDLER_TYPE_REQUIREMENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ENABLE_HANDLER_TYPE_REQUIREMENTS&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5021d6b3a1f83b79cde3c9c0f2e981b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5021d6b3a1f83b79cde3c9c0f2e981b">&#9670;&nbsp;</a></span>ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a857e4d300975380a4cc3829841160835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a857e4d300975380a4cc3829841160835">&#9670;&nbsp;</a></span>ASIO_HANDSHAKE_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDSHAKE_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::one_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;HandshakeHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf59be5fb3d02548ede2f712248823cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf59be5fb3d02548ede2f712248823cc">&#9670;&nbsp;</a></span>ASIO_ITERATOR_CONNECT_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ITERATOR_CONNECT_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">iter_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, iter_type)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>iter_type*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;IteratorConnectHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">            asio::detail::lvref&lt;const iter_type&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6193557e450418b1b5113ab37773dde3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6193557e450418b1b5113ab37773dde3">&#9670;&nbsp;</a></span>ASIO_LEGACY_COMPLETION_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_LEGACY_COMPLETION_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>()) asio_true_handler_type; \</div>
+<div class="line">  \</div>
+<div class="line">  <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      sizeof(<a class="code" href="namespaceasio.html">asio</a>::detail::zero_arg_copyable_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio.html">asio</a>::detail::<a class="code" href="namespaceasio_1_1detail.html#acc09e978c5f403bc76d6c74142b64e1e">clvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), 0)) == 1, \</div>
+<div class="line">      &quot;CompletionHandler type requirements not met&quot;) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="namespaceasio.html">asio</a>::detail::handler_type_requirements&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio.html">asio</a>::detail::<a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio.html">asio</a>::detail::<a class="code" href="namespaceasio_1_1detail.html#acc09e978c5f403bc76d6c74142b64e1e">clvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio.html">asio</a>::detail::<a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()(), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_acc09e978c5f403bc76d6c74142b64e1e"><div class="ttname"><a href="namespaceasio_1_1detail.html#acc09e978c5f403bc76d6c74142b64e1e">asio::detail::clvref</a></div><div class="ttdeci">const T &amp; clvref(T)</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad3fcd422c665392e827e75426f875853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fcd422c665392e827e75426f875853">&#9670;&nbsp;</a></span>ASIO_MOVE_ACCEPT_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_MOVE_ACCEPT_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">socket_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, <a class="code" href="namespaceasio_1_1detail.html#a6798c771dd84b79798b1a08150706ea9">socket_type</a>)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_move_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><a class="code" href="namespaceasio_1_1detail.html#a6798c771dd84b79798b1a08150706ea9">socket_type</a>*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;MoveAcceptHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">            asio::detail::rvref&lt;socket_type&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a6798c771dd84b79798b1a08150706ea9"><div class="ttname"><a href="namespaceasio_1_1detail.html#a6798c771dd84b79798b1a08150706ea9">asio::detail::socket_type</a></div><div class="ttdeci">int socket_type</div><div class="ttdef"><b>Definition:</b> socket_types.hpp:296</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a82e5e9b7ccddf899cc6c377d7c9817cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e5e9b7ccddf899cc6c377d7c9817cf">&#9670;&nbsp;</a></span>ASIO_RANGE_CONNECT_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_RANGE_CONNECT_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">endpoint_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, endpoint_type)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>endpoint_type*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;RangeConnectHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">            asio::detail::lvref&lt;const endpoint_type&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa448f8f50d3f3aea4849ea5af0c3f3ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa448f8f50d3f3aea4849ea5af0c3f3ea">&#9670;&nbsp;</a></span>ASIO_READ_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_READ_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>std::size_t*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;ReadHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">            asio::detail::lvref&lt;const std::size_t&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a95b92817ac38d3118fa5d4d23b235d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b92817ac38d3118fa5d4d23b235d1d">&#9670;&nbsp;</a></span>ASIO_RESOLVE_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_RESOLVE_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">range_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, range_type)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>range_type*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;ResolveHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">            asio::detail::lvref&lt;const range_type&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3aae0c53a472a297d8d558294eec3f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aae0c53a472a297d8d558294eec3f1f">&#9670;&nbsp;</a></span>ASIO_SHUTDOWN_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_SHUTDOWN_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::one_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;ShutdownHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a48ddfff296c6def68b251980990bc58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ddfff296c6def68b251980990bc58e">&#9670;&nbsp;</a></span>ASIO_SIGNAL_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_SIGNAL_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, <span class="keywordtype">int</span>)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">int</span>*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;SignalHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">            asio::detail::lvref&lt;const int&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ace3a166a2459b67f37b1abb9417d5085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3a166a2459b67f37b1abb9417d5085">&#9670;&nbsp;</a></span>ASIO_WAIT_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_WAIT_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::one_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;WaitHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0e034a3b434ab097b8d26251356f7f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e034a3b434ab097b8d26251356f7f0e">&#9670;&nbsp;</a></span>ASIO_WRITE_HANDLER_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_WRITE_HANDLER_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handler&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(handler_type, \</div>
+<div class="line">      <span class="keywordtype">void</span>(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)) \</div>
+<div class="line">    asio_true_handler_type; <a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">\</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  \</a></div>
+<div class="line"><a class="code" href="handler__type__requirements_8hpp.html#ae5021d6b3a1f83b79cde3c9c0f2e981b">  ASIO_HANDLER_TYPE_REQUIREMENTS_ASSERT</a>( \</div>
+<div class="line">      <span class="keyword">sizeof</span>(asio::detail::two_arg_handler_test( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;(), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>*<span class="keyword">&gt;</span>(0), \</div>
+<div class="line">          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>std::size_t*<span class="keyword">&gt;</span>(0))) == 1, \</div>
+<div class="line">      <span class="stringliteral">&quot;WriteHandler type requirements not met&quot;</span>) \</div>
+<div class="line">  \</div>
+<div class="line">  typedef <a class="code" href="structasio_1_1detail_1_1handler__type__requirements.html">asio::detail::handler_type_requirements</a>&lt; \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#ab42f16c77967396f145c7c63ad1c39bb">asio::detail::argbyv</a>( \</div>
+<div class="line">          <a class="code" href="namespaceasio_1_1detail.html#a0442b4f9af38b4cadc19cd9bae15ebf5">asio::detail::rvref</a>&lt; \</div>
+<div class="line">            asio_true_handler_type&gt;())) + \</div>
+<div class="line">      sizeof( \</div>
+<div class="line">        <a class="code" href="namespaceasio_1_1detail.html#afe7c41b71a8894f5e6d8d29654553fef">asio::detail::rorlvref</a>&lt; \</div>
+<div class="line">          asio_true_handler_type&gt;()( \</div>
+<div class="line">            asio::detail::lvref&lt;const asio::error_code&gt;(), \</div>
+<div class="line">            asio::detail::lvref&lt;const std::size_t&gt;()), \</div>
+<div class="line">        <span class="keywordtype">char</span>(0))&gt; <a class="code" href="config_8hpp.html#a1b3ac816a1c44e3c4c5cc683931f175d">ASIO_UNUSED_TYPEDEF</a></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

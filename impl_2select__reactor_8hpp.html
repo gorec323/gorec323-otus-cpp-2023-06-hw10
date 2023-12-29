@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/detail/impl/select_reactor.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li><li class="navelem"><a class="el" href="dir_f467fadd7b42815e9d9ba4cf439fcda0.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл select_reactor.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scheduler_8hpp_source.html">asio/detail/scheduler.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для select_reactor.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2select__reactor_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2select__reactor_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2select__reactor_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2select__reactor_8hpp">
+<area shape="rect" title=" " alt="" coords="3925,5,4104,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="822,795,983,821"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="3048,109,3232,136"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="3985,795,4193,821"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2819,795,3021,821"/>
+<area shape="rect" title=" " alt="" coords="1013,869,1083,896"/>
+<area shape="rect" title=" " alt="" coords="685,869,814,896"/>
+<area shape="rect" title=" " alt="" coords="839,869,977,896"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="2071,713,2222,739"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="2308,191,2508,218"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="43,184,181,225"/>
+<area shape="rect" href="conditionally__enabled__event_8hpp.html" title=" " alt="" coords="3133,273,3312,315"/>
+<area shape="rect" href="conditionally__enabled__mutex_8hpp.html" title=" " alt="" coords="3007,363,3185,404"/>
+<area shape="rect" href="op__queue_8hpp.html" title=" " alt="" coords="3834,623,4019,650"/>
+<area shape="rect" href="scheduler__operation_8hpp.html" title=" " alt="" coords="4196,527,4353,568"/>
+<area shape="rect" href="scheduler__task_8hpp.html" title=" " alt="" coords="3724,527,3881,568"/>
+<area shape="rect" href="detail_2thread_8hpp.html" title=" " alt="" coords="395,452,559,479"/>
+<area shape="rect" href="thread__context_8hpp.html" title=" " alt="" coords="4629,363,4765,404"/>
+<area shape="rect" title=" " alt="" coords="1975,795,2083,821"/>
+<area shape="rect" title=" " alt="" coords="2166,281,2253,307"/>
+<area shape="rect" title=" " alt="" coords="2217,452,2293,479"/>
+<area shape="rect" href="noncopyable_8hpp.html" title=" " alt="" coords="2817,713,3023,739"/>
+<area shape="rect" href="impl_2execution__context_8hpp.html" title=" " alt="" coords="2277,273,2427,315"/>
+<area shape="rect" href="handler__type__requirements_8hpp.html" title=" " alt="" coords="597,527,777,568"/>
+<area shape="rect" href="scoped__ptr_8hpp.html" title=" " alt="" coords="2399,705,2539,747"/>
+<area shape="rect" href="service__registry_8hpp.html" title=" " alt="" coords="2380,363,2521,404"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="605,623,768,650"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="261,713,453,739"/>
+<area shape="rect" title=" " alt="" coords="311,795,403,821"/>
+<area shape="rect" href="mutex_8hpp.html" title=" " alt="" coords="2470,452,2634,479"/>
+<area shape="rect" href="impl_2service__registry_8hpp.html" title=" " alt="" coords="4229,705,4403,747"/>
+<area shape="rect" href="null__mutex_8hpp.html" title=" " alt="" coords="2592,534,2787,561"/>
+<area shape="rect" href="scoped__lock_8hpp.html" title=" " alt="" coords="2930,616,3070,657"/>
+<area shape="rect" href="event_8hpp.html" title=" " alt="" coords="2913,534,3071,561"/>
+<area shape="rect" href="null__event_8hpp.html" title=" " alt="" coords="3146,623,3337,650"/>
+<area shape="rect" href="handler__tracking_8hpp.html" title=" " alt="" coords="3453,705,3595,747"/>
+<area shape="rect" href="null__thread_8hpp.html" title=" " alt="" coords="1853,534,2048,561"/>
+<area shape="rect" href="throw__error_8hpp.html" title=" " alt="" coords="1853,623,2049,650"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="1718,623,1829,650"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="1471,713,1702,739"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="1829,713,1995,739"/>
+<area shape="rect" title=" " alt="" coords="1333,713,1395,739"/>
+<area shape="rect" title=" " alt="" coords="1238,713,1309,739"/>
+<area shape="rect" title=" " alt="" coords="4743,452,4809,479"/>
+<area shape="rect" href="call__stack_8hpp.html" title=" " alt="" coords="4011,452,4197,479"/>
+<area shape="rect" href="tss__ptr_8hpp.html" title=" " alt="" coords="3956,534,4121,561"/>
+<area shape="rect" href="null__tss__ptr_8hpp.html" title=" " alt="" coords="3513,616,3657,657"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2select__reactor_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2select__reactor_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2select__reactor_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2select__reactor_8hppdep">
+<area shape="rect" title=" " alt="" coords="359,5,538,61"/>
+<area shape="rect" href="select__reactor_8hpp.html" title=" " alt="" coords="375,109,522,165"/>
+<area shape="rect" href="select__reactor_8ipp.html" title=" " alt="" coords="71,213,245,269"/>
+<area shape="rect" href="reactor_8hpp.html" title=" " alt="" coords="375,213,522,269"/>
+<area shape="rect" href="timer__scheduler_8hpp.html" title=" " alt="" coords="757,213,916,269"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="75,562,263,603"/>
+<area shape="rect" href="asio_8cpp.html" title=" " alt="" coords="95,666,242,707"/>
+<area shape="rect" href="scheduler_8ipp.html" title=" " alt="" coords="26,325,173,381"/>
+<area shape="rect" href="signal__set__service_8ipp.html" title=" " alt="" coords="285,443,487,499"/>
+<area shape="rect" href="reactive__descriptor__service_8hpp.html" title=" " alt="" coords="197,317,348,388"/>
+<area shape="rect" href="reactive__socket__service_8hpp.html" title=" " alt="" coords="749,443,959,499"/>
+<area shape="rect" href="reactive__socket__service__base_8hpp.html" title=" " alt="" coords="623,317,805,388"/>
+<area shape="rect" href="signal__set__service_8hpp.html" title=" " alt="" coords="424,325,599,381"/>
+<area shape="rect" href="reactive__descriptor__service_8ipp.html" title=" " alt="" coords="77,436,261,507"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="1518,555,1665,611"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="1185,867,1347,923"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="1741,867,1911,923"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="2049,1089,2195,1131"/>
+<area shape="rect" href="socket_8hpp.html" title=" " alt="" coords="1421,978,1615,1019"/>
+<area shape="rect" href="basic__raw__socket_8hpp.html" title=" " alt="" coords="2527,867,2674,923"/>
+<area shape="rect" href="basic__seq__packet__socket_8hpp.html" title=" " alt="" coords="3011,867,3190,923"/>
+<area shape="rect" href="basic__socket__streambuf_8hpp.html" title=" " alt="" coords="1392,763,1564,819"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="1290,659,1442,715"/>
+<area shape="rect" href="connect_8hpp.html" title=" " alt="" coords="665,874,851,915"/>
+<area shape="rect" href="basic__socket_8cpp.html" title=" " alt="" coords="1517,659,1665,715"/>
+<area shape="rect" href="generic_2datagram__protocol_8hpp.html" title=" " alt="" coords="1933,971,2111,1027"/>
+<area shape="rect" href="udp_8hpp.html" title=" " alt="" coords="2135,978,2311,1019"/>
+<area shape="rect" href="basic__datagram__socket_8cpp.html" title=" " alt="" coords="1741,971,1909,1027"/>
+<area shape="rect" href="raw__protocol_8hpp.html" title=" " alt="" coords="2768,971,2924,1027"/>
+<area shape="rect" href="icmp_8hpp.html" title=" " alt="" coords="2509,978,2693,1019"/>
+<area shape="rect" href="basic__raw__socket_8cpp.html" title=" " alt="" coords="2336,971,2484,1027"/>
+<area shape="rect" href="generic_2seq__packet__protocol_8hpp.html" title=" " alt="" coords="3202,971,3389,1027"/>
+<area shape="rect" href="basic__seq__packet__socket_8cpp.html" title=" " alt="" coords="2949,971,3127,1027"/>
+<area shape="rect" href="tcp_8hpp.html" title=" " alt="" coords="888,978,1060,1019"/>
+<area shape="rect" href="basic__socket__acceptor_8cpp.html" title=" " alt="" coords="1186,971,1346,1027"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__tcp__client_8cpp.html" title=" " alt="" coords="599,1075,770,1145"/>
+<area shape="rect" href="basic__socket__iostream_8hpp.html" title=" " alt="" coords="997,867,1161,923"/>
+<area shape="rect" href="generic_2stream__protocol_8hpp.html" title=" " alt="" coords="703,971,863,1027"/>
+<area shape="rect" href="basic__stream__socket_8cpp.html" title=" " alt="" coords="1217,763,1368,819"/>
+<area shape="rect" href="reactive__socket__service__base_8ipp.html" title=" " alt="" coords="512,436,673,507"/>
+<area shape="rect" href="basic__signal__set_8hpp.html" title=" " alt="" coords="453,867,599,923"/>
+<area shape="rect" href="signal__set_8hpp.html" title=" " alt="" coords="431,971,578,1027"/>
+<area shape="rect" href="basic__signal__set_8cpp.html" title=" " alt="" coords="208,971,356,1027"/>
+<area shape="rect" href="deadline__timer__service_8hpp.html" title=" " alt="" coords="889,325,1096,381"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="3591,555,3746,611"/>
+<area shape="rect" href="high__resolution__timer_8hpp.html" title=" " alt="" coords="3565,659,3773,715"/>
+<area shape="rect" href="timer_8hpp.html" title=" " alt="" coords="3670,770,3857,811"/>
+<area shape="rect" href="steady__timer_8hpp.html" title=" " alt="" coords="3338,659,3490,715"/>
+<area shape="rect" href="system__timer_8hpp.html" title=" " alt="" coords="3848,659,4004,715"/>
+<area shape="rect" href="basic__waitable__timer_8cpp.html" title=" " alt="" coords="4028,659,4181,715"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2select__reactor_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/impl/system_context.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_8c6c10ebdd857c41e2ac833cd6d1f150.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл system_context.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="system__executor_8hpp_source.html">asio/system_executor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для system_context.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2system__context_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2impl_2system__context_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2impl_2system__context_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2impl_2system__context_8hpp">
+<area shape="rect" title=" " alt="" coords="4093,5,4283,61"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="4509,109,4699,136"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2552,765,2760,792"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="4093,765,4294,792"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3193,840,3354,867"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="5826,683,6001,710"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="2760,333,2904,360"/>
+<area shape="rect" href="impl_2system__executor_8hpp.html" title=" " alt="" coords="4492,184,4716,211"/>
+<area shape="rect" title=" " alt="" coords="6339,915,6410,941"/>
+<area shape="rect" title=" " alt="" coords="3289,915,3418,941"/>
+<area shape="rect" title=" " alt="" coords="3125,915,3264,941"/>
+<area shape="rect" title=" " alt="" coords="5927,765,5993,792"/>
+<area shape="rect" title=" " alt="" coords="6017,765,6095,792"/>
+<area shape="rect" title=" " alt="" coords="5802,765,5851,792"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="6170,765,6337,792"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="5547,765,5778,792"/>
+<area shape="rect" title=" " alt="" coords="6220,840,6287,867"/>
+<area shape="rect" href="include_2asio_2execution_2allocator_8hpp.html" title=" " alt="" coords="3637,505,3841,531"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="3296,594,3499,621"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="3054,676,3237,717"/>
+<area shape="rect" href="any__executor_8hpp.html" title=" " alt="" coords="4540,408,4684,449"/>
+<area shape="rect" href="bad__executor_8hpp.html" title=" " alt="" coords="5408,676,5552,717"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="2869,505,3072,531"/>
+<area shape="rect" href="blocking__adaptation_8hpp.html" title=" " alt="" coords="1255,497,1430,539"/>
+<area shape="rect" href="execution_2context_8hpp.html" title=" " alt="" coords="2017,505,2215,531"/>
+<area shape="rect" href="context__as_8hpp.html" title=" " alt="" coords="2167,408,2337,449"/>
+<area shape="rect" href="mapping_8hpp.html" title=" " alt="" coords="2589,505,2795,531"/>
+<area shape="rect" href="occupancy_8hpp.html" title=" " alt="" coords="1778,505,1993,531"/>
+<area shape="rect" href="outstanding__work_8hpp.html" title=" " alt="" coords="1556,497,1753,539"/>
+<area shape="rect" href="prefer__only_8hpp.html" title=" " alt="" coords="1021,497,1179,539"/>
+<area shape="rect" href="relationship_8hpp.html" title=" " alt="" coords="2339,505,2565,531"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1688,765,1880,792"/>
+<area shape="rect" href="is__applicable__property_8hpp.html" title=" " alt="" coords="1000,676,1139,717"/>
+<area shape="rect" href="query__static__constexpr__member_8hpp.html" title=" " alt="" coords="1974,587,2157,628"/>
+<area shape="rect" href="static__query_8hpp.html" title=" " alt="" coords="1721,676,1847,717"/>
+<area shape="rect" href="execute__member_8hpp.html" title=" " alt="" coords="2835,676,2978,717"/>
+<area shape="rect" title=" " alt="" coords="4574,505,4650,531"/>
+<area shape="rect" href="assert_8hpp.html" title=" " alt="" coords="4940,594,5103,621"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="5353,587,5492,628"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="6463,765,6633,792"/>
+<area shape="rect" href="executor__function_8hpp.html" title=" " alt="" coords="5178,587,5329,628"/>
+<area shape="rect" href="non__const__lvalue_8hpp.html" title=" " alt="" coords="3515,676,3675,717"/>
+<area shape="rect" href="scoped__ptr_8hpp.html" title=" " alt="" coords="4561,676,4701,717"/>
+<area shape="rect" href="prefer_8hpp.html" title=" " alt="" coords="1283,594,1402,621"/>
+<area shape="rect" href="query_8hpp.html" title=" " alt="" coords="1529,594,1645,621"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="2790,594,2917,621"/>
+<area shape="rect" title=" " alt="" coords="5385,765,5471,792"/>
+<area shape="rect" href="executor__op_8hpp.html" title=" " alt="" coords="4827,676,4978,717"/>
+<area shape="rect" href="global_8hpp.html" title=" " alt="" coords="4940,333,5103,360"/>
+<area shape="rect" href="system__context_8hpp.html" title=" " alt="" coords="4046,259,4231,285"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2system__context_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2impl_2system__context_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2impl_2system__context_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2impl_2system__context_8hppdep">
+<area shape="rect" title=" " alt="" coords="3097,5,3286,61"/>
+<area shape="rect" href="system__context_8hpp.html" title=" " alt="" coords="3280,109,3436,165"/>
+<area shape="rect" href="system__context_8ipp.html" title=" " alt="" coords="3514,213,3703,269"/>
+<area shape="rect" href="impl_2system__executor_8hpp.html" title=" " alt="" coords="3063,213,3253,269"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="3243,421,3390,463"/>
+<area shape="rect" href="system__context_8cpp.html" title=" " alt="" coords="3277,213,3439,269"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="3515,325,3703,366"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="3080,317,3236,373"/>
+<area shape="rect" href="examples_2cpp03_2allocation_2server_8cpp.html" title=" " alt="" coords="5,518,167,574"/>
+<area shape="rect" href="cpp03_2buffers_2reference__counted_8cpp.html" title=" " alt="" coords="191,518,413,574"/>
+<area shape="rect" href="cpp03_2chat_2chat__client_8cpp.html" title=" " alt="" coords="437,518,593,574"/>
+<area shape="rect" href="cpp03_2chat_2chat__server_8cpp.html" title=" " alt="" coords="618,518,778,574"/>
+<area shape="rect" href="posix__chat__client_8cpp.html" title=" " alt="" coords="803,518,1001,574"/>
+<area shape="rect" href="cpp03_2echo_2async__tcp__echo__server_8cpp.html" title=" " alt="" coords="1025,511,1189,581"/>
+<area shape="rect" href="cpp03_2echo_2async__udp__echo__server_8cpp.html" title=" " alt="" coords="1214,511,1382,581"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__client_8cpp.html" title=" " alt="" coords="1406,511,1587,581"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__server_8cpp.html" title=" " alt="" coords="1611,511,1793,581"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__client_8cpp.html" title=" " alt="" coords="1817,511,2003,581"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__server_8cpp.html" title=" " alt="" coords="2027,511,2212,581"/>
+<area shape="rect" href="async__client_8cpp.html" title=" " alt="" coords="2236,518,2440,574"/>
+<area shape="rect" href="cpp03_2http_2client_2sync__client_8cpp.html" title=" " alt="" coords="2464,518,2660,574"/>
+<area shape="rect" href="cpp03_2http_2server_2connection_8hpp.html" title=" " alt="" coords="2565,637,2765,693"/>
+<area shape="rect" href="cpp03_2http_2server_2server_8hpp.html" title=" " alt="" coords="2645,748,2815,804"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server_2main_8cpp.html" title=" " alt="" coords="2711,852,2872,908"/>
+<area shape="rect" href="cpp03_2http_2server_2reply_8hpp.html" title=" " alt="" coords="2735,518,2895,574"/>
+<area shape="rect" href="cpp03_2http_2server2_2connection_8hpp.html" title=" " alt="" coords="3143,637,3351,693"/>
+<area shape="rect" href="cpp03_2http_2server2_2server_8hpp.html" title=" " alt="" coords="3088,748,3265,804"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server2_2main_8cpp.html" title=" " alt="" coords="3233,852,3403,908"/>
+<area shape="rect" href="io__context__pool_8hpp.html" title=" " alt="" coords="2891,629,3068,700"/>
+<area shape="rect" href="cpp03_2http_2server2_2reply_8hpp.html" title=" " alt="" coords="3173,518,3341,574"/>
+<area shape="rect" href="cpp03_2http_2server3_2connection_8hpp.html" title=" " alt="" coords="3426,637,3634,693"/>
+<area shape="rect" href="cpp03_2http_2server3_2server_8hpp.html" title=" " alt="" coords="3507,748,3684,804"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server3_2main_8cpp.html" title=" " alt="" coords="3573,852,3743,908"/>
+<area shape="rect" href="cpp03_2http_2server3_2reply_8hpp.html" title=" " alt="" coords="3466,518,3634,574"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server4_2main_8cpp.html" title=" " alt="" coords="3884,637,4053,693"/>
+<area shape="rect" href="cpp03_2http_2server4_2reply_8hpp.html" title=" " alt="" coords="3810,518,3978,574"/>
+<area shape="rect" href="cpp03_2http_2server4_2server_8hpp.html" title=" " alt="" coords="4003,518,4180,574"/>
+<area shape="rect" href="ping_8cpp.html" title=" " alt="" coords="4204,518,4360,574"/>
+<area shape="rect" href="cpp03_2invocation_2prioritised__handlers_8cpp.html" title=" " alt="" coords="4384,511,4548,581"/>
+<area shape="rect" href="cpp03_2iostreams_2daytime__client_8cpp.html" title=" " alt="" coords="4573,518,4791,574"/>
+<area shape="rect" href="daytime__server_8cpp.html" title=" " alt="" coords="4816,518,5039,574"/>
+<area shape="rect" href="examples_2cpp03_2local_2connect__pair_8cpp.html" title=" " alt="" coords="5063,518,5234,574"/>
+<area shape="rect" href="cpp03_2local_2iostream__client_8cpp.html" title=" " alt="" coords="5258,518,5447,574"/>
+<area shape="rect" href="cpp03_2local_2stream__client_8cpp.html" title=" " alt="" coords="5472,518,5649,574"/>
+<area shape="rect" href="cpp03_2local_2stream__server_8cpp.html" title=" " alt="" coords="5674,518,5855,574"/>
+<area shape="rect" href="cpp03_2multicast_2receiver_8cpp.html" title=" " alt="" coords="5879,518,6050,574"/>
+<area shape="rect" href="cpp03_2multicast_2sender_8cpp.html" title=" " alt="" coords="6075,518,6236,574"/>
+<area shape="rect" href="cpp03_2nonblocking_2third__party__lib_8cpp.html" title=" " alt="" coords="6260,511,6440,581"/>
+<area shape="rect" href="examples_2cpp03_2porthopper_2client_8cpp.html" title=" " alt="" coords="6460,637,6624,693"/>
+<area shape="rect" href="protocol_8hpp.html" title=" " alt="" coords="6516,518,6699,574"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2system__context_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

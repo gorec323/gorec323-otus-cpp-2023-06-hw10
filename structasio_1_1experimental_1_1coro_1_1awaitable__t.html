@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура asio::experimental::coro&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1coro.html">coro</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1coro_1_1awaitable__t.html">awaitable_t</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasio_1_1experimental_1_1coro_1_1awaitable__t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура asio::experimental::coro&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2coro_8hpp_source.html">coro.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса asio::experimental::coro&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1experimental_1_1coro_1_1awaitable__t__coll__graph.png" border="0" usemap="#aasio_1_1experimental_1_1coro_3_01Yield_00_01Return_00_01Executor_00_01Allocator_01_4_1_1awaitable__t_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1experimental_1_1coro_3_01Yield_00_01Return_00_01Executor_00_01Allocator_01_4_1_1awaitable__t_coll__map" id="aasio_1_1experimental_1_1coro_3_01Yield_00_01Return_00_01Executor_00_01Allocator_01_4_1_1awaitable__t_coll__map">
+<area shape="rect" title=" " alt="" coords="5,124,168,195"/>
+<area shape="rect" href="structasio_1_1experimental_1_1coro.html" title="The main type of a resumable coroutine." alt="" coords="5,5,168,61"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a29938e52eff13256c97b9ae3f59abfaf"><td class="memTemplParams" colspan="2">template&lt;typename Y , typename R , typename E , typename A &gt; </td></tr>
+<tr class="memitem:a29938e52eff13256c97b9ae3f59abfaf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1awaitable__t.html#a29938e52eff13256c97b9ae3f59abfaf">await_suspend</a> (detail::coroutine_handle&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise.html">detail::coro_promise</a>&lt; Y, R, E, A &gt;&gt; h) -&gt; detail::coroutine_handle&lt;&gt;</td></tr>
+<tr class="separator:a29938e52eff13256c97b9ae3f59abfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac54d19516dc692473e31fd8e8c4616"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1awaitable__t.html#a8ac54d19516dc692473e31fd8e8c4616">await_resume</a> () -&gt; <a class="el" href="structasio_1_1experimental_1_1coro.html#a27bbdb7a925fb835ec69133615f5f0c9">result_type</a></td></tr>
+<tr class="separator:a8ac54d19516dc692473e31fd8e8c4616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a388b4e41c3a6e5c52a6aef94e2bf3e69"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1awaitable__t.html#a388b4e41c3a6e5c52a6aef94e2bf3e69">await_ready</a> ()</td></tr>
+<tr class="separator:a388b4e41c3a6e5c52a6aef94e2bf3e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a415974b821b04d0d548d6842ff24d4e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1coro.html">coro</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1awaitable__t.html#a415974b821b04d0d548d6842ff24d4e5">coro_</a></td></tr>
+<tr class="separator:a415974b821b04d0d548d6842ff24d4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Методы</h2>
+<a id="a388b4e41c3a6e5c52a6aef94e2bf3e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388b4e41c3a6e5c52a6aef94e2bf3e69">&#9670;&nbsp;</a></span>await_ready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static bool <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t::await_ready </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ac54d19516dc692473e31fd8e8c4616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac54d19516dc692473e31fd8e8c4616">&#9670;&nbsp;</a></span>await_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t::await_resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="structasio_1_1experimental_1_1coro.html#a27bbdb7a925fb835ec69133615f5f0c9">result_type</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29938e52eff13256c97b9ae3f59abfaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29938e52eff13256c97b9ae3f59abfaf">&#9670;&nbsp;</a></span>await_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename Y , typename R , typename E , typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t::await_suspend </td>
+          <td>(</td>
+          <td class="paramtype">detail::coroutine_handle&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise.html">detail::coro_promise</a>&lt; Y, R, E, A &gt;&gt;&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td> -&gt; detail::coroutine_handle&lt;&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a415974b821b04d0d548d6842ff24d4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a415974b821b04d0d548d6842ff24d4e5">&#9670;&nbsp;</a></span>coro_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1coro.html">coro</a>&amp; <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t::coro_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/impl/<a class="el" href="impl_2coro_8hpp_source.html">coro.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

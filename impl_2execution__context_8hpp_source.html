@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/impl/execution_context.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_8c6c10ebdd857c41e2ac833cd6d1f150.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">execution_context.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="impl_2execution__context_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// impl/execution_context.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_IMPL_EXECUTION_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_IMPL_EXECUTION_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="handler__type__requirements_8hpp.html">asio/detail/handler_type_requirements.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="scoped__ptr_8hpp.html">asio/detail/scoped_ptr.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="service__registry_8hpp.html">asio/detail/service_registry.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classasio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f">   29</a></span>&#160;<span class="keyword">inline</span> Service&amp; <a class="code" href="namespaceasio.html#a1810b2cc34a2ed373b761420a3d3a729">use_service</a>(<a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp; e)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// Check that Service meets the necessary type requirements.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  (<a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1execution__context_1_1service.html">execution_context::service</a>*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>Service*<span class="keyword">&gt;</span>(0));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">return</span> e.service_registry_-&gt;template use_service&lt;Service&gt;();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classasio_1_1execution__context.html#aa1c4c4dcb463b6ca8b3eb6f0fca9d0af">   38</a></span>&#160;Service&amp; <a class="code" href="namespaceasio.html#a9e72dd23c9362d084e639acace1d23c7">make_service</a>(<a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp; e, Args&amp;&amp;... <a class="code" href="namespaceasio_1_1experimental_1_1detail.html#ab175239b1fe47ff8bb64b26833d8f62a">args</a>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classasio_1_1detail_1_1scoped__ptr.html">detail::scoped_ptr&lt;Service&gt;</a> svc(</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">new</span> Service(e, <span class="keyword">static_cast&lt;</span>Args&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio_1_1experimental_1_1detail.html#ab175239b1fe47ff8bb64b26833d8f62a">args</a>)...));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  e.service_registry_-&gt;template add_service&lt;Service&gt;(svc.<a class="code" href="classasio_1_1detail_1_1scoped__ptr.html#a11a649c902e6c1cbbd826946f16a280a">get</a>());</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  Service&amp; result = *svc;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  svc.<a class="code" href="classasio_1_1detail_1_1scoped__ptr.html#a4d28a58a549babf6d154dce591a833c7">release</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classasio_1_1execution__context.html#a3014a17a4b521b57a7fdbd8c2c41f312">   49</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespaceasio.html#adf08702b1a8a7a6af573ca3ff6c402be">add_service</a>(<a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp; e, Service* svc)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// Check that Service meets the necessary type requirements.</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  (<a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1execution__context_1_1service.html">execution_context::service</a>*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>Service*<span class="keyword">&gt;</span>(0));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  e.service_registry_-&gt;template add_service&lt;Service&gt;(svc);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classasio_1_1execution__context.html#aed1173384b9ee24ce9f1633f6e772583">   58</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceasio.html#a2e34e09c0ef0fc9a740fc96a62c4d2d5">has_service</a>(<a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp; e)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// Check that Service meets the necessary type requirements.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  (<a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1execution__context_1_1service.html">execution_context::service</a>*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>Service*<span class="keyword">&gt;</span>(0));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">return</span> e.service_registry_-&gt;template has_service&lt;Service&gt;();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classasio_1_1execution__context_1_1service.html#a36dd203dfa1cac89d04488ccac1e34c6">   68</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp; <a class="code" href="classasio_1_1execution__context_1_1service.html#a36dd203dfa1cac89d04488ccac1e34c6">execution_context::service::context</a>()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> owner_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_IMPL_EXECUTION_CONTEXT_HPP</span></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1scoped__ptr_html"><div class="ttname"><a href="classasio_1_1detail_1_1scoped__ptr.html">asio::detail::scoped_ptr</a></div><div class="ttdef"><b>Definition:</b> scoped_ptr.hpp:27</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1scoped__ptr_html_a11a649c902e6c1cbbd826946f16a280a"><div class="ttname"><a href="classasio_1_1detail_1_1scoped__ptr.html#a11a649c902e6c1cbbd826946f16a280a">asio::detail::scoped_ptr::get</a></div><div class="ttdeci">T * get()</div><div class="ttdef"><b>Definition:</b> scoped_ptr.hpp:42</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1scoped__ptr_html_a4d28a58a549babf6d154dce591a833c7"><div class="ttname"><a href="classasio_1_1detail_1_1scoped__ptr.html#a4d28a58a549babf6d154dce591a833c7">asio::detail::scoped_ptr::release</a></div><div class="ttdeci">T * release()</div><div class="ttdef"><b>Definition:</b> scoped_ptr.hpp:67</div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_1_1service_html"><div class="ttname"><a href="classasio_1_1execution__context_1_1service.html">asio::execution_context::service</a></div><div class="ttdoc">Base class for all io_context services.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:293</div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_1_1service_html_a36dd203dfa1cac89d04488ccac1e34c6"><div class="ttname"><a href="classasio_1_1execution__context_1_1service.html#a36dd203dfa1cac89d04488ccac1e34c6">asio::execution_context::service::context</a></div><div class="ttdeci">execution_context &amp; context()</div><div class="ttdoc">Get the context object that owns the service.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:68</div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_html"><div class="ttname"><a href="classasio_1_1execution__context.html">asio::execution_context</a></div><div class="ttdoc">A context for function object execution.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:106</div></div>
+<div class="ttc" id="ahandler__type__requirements_8hpp_html"><div class="ttname"><a href="handler__type__requirements_8hpp.html">handler_type_requirements.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_1_1detail_html_ab175239b1fe47ff8bb64b26833d8f62a"><div class="ttname"><a href="namespaceasio_1_1experimental_1_1detail.html#ab175239b1fe47ff8bb64b26833d8f62a">asio::experimental::detail::args</a></div><div class="ttdeci">Args &amp;&amp; args</div><div class="ttdef"><b>Definition:</b> coro_promise_allocator.hpp:80</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a1810b2cc34a2ed373b761420a3d3a729"><div class="ttname"><a href="namespaceasio.html#a1810b2cc34a2ed373b761420a3d3a729">asio::use_service</a></div><div class="ttdeci">Service &amp; use_service(execution_context &amp;)</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:29</div></div>
+<div class="ttc" id="anamespaceasio_html_a2e34e09c0ef0fc9a740fc96a62c4d2d5"><div class="ttname"><a href="namespaceasio.html#a2e34e09c0ef0fc9a740fc96a62c4d2d5">asio::has_service</a></div><div class="ttdeci">bool has_service(execution_context &amp;)</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:58</div></div>
+<div class="ttc" id="anamespaceasio_html_a9e72dd23c9362d084e639acace1d23c7"><div class="ttname"><a href="namespaceasio.html#a9e72dd23c9362d084e639acace1d23c7">asio::make_service</a></div><div class="ttdeci">Service &amp; make_service(execution_context &amp;e, Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:38</div></div>
+<div class="ttc" id="anamespaceasio_html_adf08702b1a8a7a6af573ca3ff6c402be"><div class="ttname"><a href="namespaceasio.html#adf08702b1a8a7a6af573ca3ff6c402be">asio::add_service</a></div><div class="ttdeci">void add_service(execution_context &amp;, Service *)</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:49</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="ascoped__ptr_8hpp_html"><div class="ttname"><a href="scoped__ptr_8hpp.html">scoped_ptr.hpp</a></div></div>
+<div class="ttc" id="aservice__registry_8hpp_html"><div class="ttname"><a href="service__registry_8hpp.html">service_registry.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

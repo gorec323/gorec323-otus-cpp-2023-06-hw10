@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/execution/relationship.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_2ece2bf9f58055817be69ff96c69f1b8.html">execution</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл relationship.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">asio/detail/type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="execution_2executor_8hpp_source.html">asio/execution/executor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="is__applicable__property_8hpp_source.html">asio/is_applicable_property.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="query_8hpp_source.html">asio/query.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="query__free_8hpp_source.html">asio/traits/query_free.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="query__member_8hpp_source.html">asio/traits/query_member.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="query__static__constexpr__member_8hpp_source.html">asio/traits/query_static_constexpr_member.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="static__query_8hpp_source.html">asio/traits/static_query.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="static__require_8hpp_source.html">asio/traits/static_require.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для relationship.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="relationship_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2execution_2relationship_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2execution_2relationship_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2execution_2relationship_8hpp">
+<area shape="rect" title=" " alt="" coords="1288,5,1458,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="1014,363,1175,389"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="536,288,728,315"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="626,117,829,143"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="1666,288,1874,315"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="1242,288,1443,315"/>
+<area shape="rect" href="is__applicable__property_8hpp.html" title=" " alt="" coords="245,199,384,240"/>
+<area shape="rect" href="query_8hpp.html" title=" " alt="" coords="1188,117,1304,143"/>
+<area shape="rect" href="query__member_8hpp.html" title=" " alt="" coords="986,206,1203,233"/>
+<area shape="rect" href="query__free_8hpp.html" title=" " alt="" coords="1380,206,1569,233"/>
+<area shape="rect" href="static__query_8hpp.html" title=" " alt="" coords="1954,199,2080,240"/>
+<area shape="rect" href="query__static__constexpr__member_8hpp.html" title=" " alt="" coords="1644,199,1827,240"/>
+<area shape="rect" href="static__require_8hpp.html" title=" " alt="" coords="1583,109,1710,151"/>
+<area shape="rect" title=" " alt="" coords="935,437,1006,464"/>
+<area shape="rect" title=" " alt="" coords="1030,437,1159,464"/>
+<area shape="rect" title=" " alt="" coords="1184,437,1322,464"/>
+<area shape="rect" title=" " alt="" coords="586,363,678,389"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="727,199,910,240"/>
+<area shape="rect" href="equality__comparable_8hpp.html" title=" " alt="" coords="26,199,170,240"/>
+<area shape="rect" href="execute__member_8hpp.html" title=" " alt="" coords="560,199,703,240"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="relationship_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2execution_2relationship_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2execution_2relationship_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2execution_2relationship_8hppdep">
+<area shape="rect" title=" " alt="" coords="4053,5,4223,61"/>
+<area shape="rect" href="initiate__defer_8hpp.html" title=" " alt="" coords="3795,109,3942,165"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="3427,325,3574,366"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="4219,109,4366,165"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="2029,117,2228,158"/>
+<area shape="rect" href="netfwd_8hpp.html" title=" " alt="" coords="4415,117,4611,158"/>
+<area shape="rect" href="relationship_8cpp.html" title=" " alt="" coords="4635,109,4812,165"/>
+<area shape="rect" href="defer_8hpp.html" title=" " alt="" coords="3777,221,3947,262"/>
+<area shape="rect" href="examples_2cpp03_2allocation_2server_8cpp.html" title=" " alt="" coords="1596,429,1757,485"/>
+<area shape="rect" href="cpp03_2buffers_2reference__counted_8cpp.html" title=" " alt="" coords="1781,429,2004,485"/>
+<area shape="rect" href="cpp03_2chat_2chat__client_8cpp.html" title=" " alt="" coords="2028,429,2184,485"/>
+<area shape="rect" href="cpp03_2chat_2chat__server_8cpp.html" title=" " alt="" coords="2209,429,2369,485"/>
+<area shape="rect" href="posix__chat__client_8cpp.html" title=" " alt="" coords="2393,429,2592,485"/>
+<area shape="rect" href="cpp03_2echo_2async__tcp__echo__server_8cpp.html" title=" " alt="" coords="2616,421,2780,492"/>
+<area shape="rect" href="cpp03_2echo_2async__udp__echo__server_8cpp.html" title=" " alt="" coords="2805,421,2973,492"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__client_8cpp.html" title=" " alt="" coords="2997,421,3178,492"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__server_8cpp.html" title=" " alt="" coords="3202,421,3383,492"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__client_8cpp.html" title=" " alt="" coords="3408,421,3593,492"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__server_8cpp.html" title=" " alt="" coords="3617,421,3803,492"/>
+<area shape="rect" href="async__client_8cpp.html" title=" " alt="" coords="3827,429,4031,485"/>
+<area shape="rect" href="cpp03_2http_2client_2sync__client_8cpp.html" title=" " alt="" coords="4055,429,4251,485"/>
+<area shape="rect" href="cpp03_2http_2server_2connection_8hpp.html" title=" " alt="" coords="4286,540,4486,596"/>
+<area shape="rect" href="cpp03_2http_2server_2server_8hpp.html" title=" " alt="" coords="4367,644,4536,700"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server_2main_8cpp.html" title=" " alt="" coords="4432,748,4593,804"/>
+<area shape="rect" href="cpp03_2http_2server_2reply_8hpp.html" title=" " alt="" coords="4275,429,4435,485"/>
+<area shape="rect" href="cpp03_2http_2server2_2connection_8hpp.html" title=" " alt="" coords="4611,429,4819,485"/>
+<area shape="rect" href="io__context__pool_8hpp.html" title=" " alt="" coords="4844,421,5021,492"/>
+<area shape="rect" href="channel__operation_8hpp.html" title=" " alt="" coords="4097,317,4312,373"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="4211,221,4375,262"/>
+<area shape="rect" href="any__completion__executor_8hpp.html" title=" " alt="" coords="2784,213,2996,269"/>
+<area shape="rect" href="any__io__executor_8hpp.html" title=" " alt="" coords="3020,213,3171,269"/>
+<area shape="rect" href="strand__executor__service_8hpp.html" title=" " alt="" coords="2499,213,2711,269"/>
+<area shape="rect" href="executor__work__guard_8hpp.html" title=" " alt="" coords="4023,213,4187,269"/>
+<area shape="rect" href="impl_2use__future_8hpp.html" title=" " alt="" coords="5,317,169,373"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="3195,221,3399,262"/>
+<area shape="rect" href="system__context_8hpp.html" title=" " alt="" coords="3423,213,3579,269"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="67,213,223,269"/>
+<area shape="rect" href="thread__pool_8hpp.html" title=" " alt="" coords="3603,213,3753,269"/>
+<area shape="rect" href="cpp11_2executors_2bank__account__1_8cpp.html" title=" " alt="" coords="247,213,472,269"/>
+<area shape="rect" href="cpp11_2executors_2bank__account__2_8cpp.html" title=" " alt="" coords="496,213,721,269"/>
+<area shape="rect" href="cpp11_2executors_2fork__join_8cpp.html" title=" " alt="" coords="745,213,923,269"/>
+<area shape="rect" href="async__1_8cpp.html" title=" " alt="" coords="947,213,1121,269"/>
+<area shape="rect" href="async__2_8cpp.html" title=" " alt="" coords="1145,213,1318,269"/>
+<area shape="rect" href="cpp14_2executors_2bank__account__1_8cpp.html" title=" " alt="" coords="1343,213,1568,269"/>
+<area shape="rect" href="cpp14_2executors_2bank__account__2_8cpp.html" title=" " alt="" coords="1592,213,1817,269"/>
+<area shape="rect" href="cpp14_2executors_2fork__join_8cpp.html" title=" " alt="" coords="1841,213,2019,269"/>
+<area shape="rect" href="cpp14_2executors_2pipeline_8cpp.html" title=" " alt="" coords="2043,213,2215,269"/>
+<area shape="rect" href="cpp14_2executors_2priority__scheduler_8cpp.html" title=" " alt="" coords="2239,213,2475,269"/>
+<area shape="rect" href="net_8hpp.html" title=" " alt="" coords="4450,221,4623,262"/>
+<area shape="rect" href="netfwd_8cpp.html" title=" " alt="" coords="4497,325,4699,366"/>
+</map>
+</div>
+</div>
+<p><a href="relationship_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship__t.html">asio::execution::detail::relationship_t&lt; I &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship__t_1_1proxy.html">asio::execution::detail::relationship_t&lt; I &gt;::proxy&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship__t_1_1static__proxy.html">asio::execution::detail::relationship_t&lt; I &gt;::static_proxy&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship__t_1_1query__member.html">asio::execution::detail::relationship_t&lt; I &gt;::query_member&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship__t_1_1query__static__constexpr__member.html">asio::execution::detail::relationship_t&lt; I &gt;::query_static_constexpr_member&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship__t_1_1convertible__from__relationship__t.html">asio::execution::detail::relationship_t&lt; I &gt;::convertible_from_relationship_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship_1_1fork__t.html">asio::execution::detail::relationship::fork_t&lt; I &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship_1_1fork__t_1_1query__member.html">asio::execution::detail::relationship::fork_t&lt; I &gt;::query_member&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship_1_1fork__t_1_1query__static__constexpr__member.html">asio::execution::detail::relationship::fork_t&lt; I &gt;::query_static_constexpr_member&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship_1_1continuation__t.html">asio::execution::detail::relationship::continuation_t&lt; I &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship_1_1continuation__t_1_1query__member.html">asio::execution::detail::relationship::continuation_t&lt; I &gt;::query_member&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1execution_1_1detail_1_1relationship_1_1continuation__t_1_1query__static__constexpr__member.html">asio::execution::detail::relationship::continuation_t&lt; I &gt;::query_static_constexpr_member&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1is__applicable__property_3_01T_00_01execution_1_1relationship__t_01_4.html">asio::is_applicable_property&lt; T, execution::relationship_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1is__applicable__property_3_01T_00_01execution_1_1relationship__t_1_1fork__t_01_4.html">asio::is_applicable_property&lt; T, execution::relationship_t::fork_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1is__applicable__property_3_01T_00_01execution_1_1relationship__t_1_1continuation__t_01_4.html">asio::is_applicable_property&lt; T, execution::relationship_t::continuation_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1query__free__default_3_01T_00_01execution_1_1relationship__t_00_01enableb653879d3ae77f3bb0ab08a816d241da.html">asio::traits::query_free_default&lt; T, execution::relationship_t, enable_if_t&lt; can_query&lt; T, execution::relationship_t::fork_t &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1query__free__default_3_01T_00_01execution_1_1relationship__t_00_01enablef410cc0579078ed7cd50a11c32c03a71.html">asio::traits::query_free_default&lt; T, execution::relationship_t, enable_if_t&lt; !can_query&lt; T, execution::relationship_t::fork_t &gt;::value &amp;&amp;can_query&lt; T, execution::relationship_t::continuation_t &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1static__query_3_01T_00_01execution_1_1relationship__t_00_01enable__if__tef8151ea8a40b8eda5ac210260ff05c3.html">asio::traits::static_query&lt; T, execution::relationship_t, enable_if_t&lt; execution::detail::relationship_t&lt; 0 &gt;::query_static_constexpr_member&lt; T &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1static__query_3_01T_00_01execution_1_1relationship__t_00_01enable__if__td1aec37397fe4b4d94d445a979e2b201.html">asio::traits::static_query&lt; T, execution::relationship_t, enable_if_t&lt; !execution::detail::relationship_t&lt; 0 &gt;::query_static_constexpr_member&lt; T &gt;::is_valid &amp;&amp;!execution::detail::relationship_t&lt; 0 &gt;::query_member&lt; T &gt;::is_valid &amp;&amp;traits::static_query&lt; T, execution::relationship_t::fork_t &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1static__query_3_01T_00_01execution_1_1relationship__t_00_01enable__if__tbcd2f2dc71679ca515a387332b865ef6.html">asio::traits::static_query&lt; T, execution::relationship_t, enable_if_t&lt; !execution::detail::relationship_t&lt; 0 &gt;::query_static_constexpr_member&lt; T &gt;::is_valid &amp;&amp;!execution::detail::relationship_t&lt; 0 &gt;::query_member&lt; T &gt;::is_valid &amp;&amp;!traits::static_query&lt; T, execution::relationship_t::fork_t &gt;::is_valid &amp;&amp;traits::static_query&lt; T, execution::relationship_t::continuation_t &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1static__query_3_01T_00_01execution_1_1relationship__t_1_1fork__t_00_01enf07d1480634c93e45156cd41b4a8fcb9.html">asio::traits::static_query&lt; T, execution::relationship_t::fork_t, enable_if_t&lt; execution::detail::relationship::fork_t&lt; 0 &gt;::query_static_constexpr_member&lt; T &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1static__query_3_01T_00_01execution_1_1relationship__t_1_1fork__t_00_01en2777cb89fbdec1227b76d42f89c42de1.html">asio::traits::static_query&lt; T, execution::relationship_t::fork_t, enable_if_t&lt; !execution::detail::relationship::fork_t&lt; 0 &gt;::query_static_constexpr_member&lt; T &gt;::is_valid &amp;&amp;!execution::detail::relationship::fork_t&lt; 0 &gt;::query_member&lt; T &gt;::is_valid &amp;&amp;!traits::query_free&lt; T, execution::relationship_t::fork_t &gt;::is_valid &amp;&amp;!can_query&lt; T, execution::relationship_t::continuation_t &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1static__query_3_01T_00_01execution_1_1relationship__t_1_1continuation__tafed02fc1078860131ffa3c4a729b5c9.html">asio::traits::static_query&lt; T, execution::relationship_t::continuation_t, enable_if_t&lt; execution::detail::relationship::continuation_t&lt; 0 &gt;::query_static_constexpr_member&lt; T &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1execution"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1execution.html">asio::execution</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1execution_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1execution_1_1detail.html">asio::execution::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1execution_1_1detail_1_1relationship"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1execution_1_1detail_1_1relationship.html">asio::execution::detail::relationship</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1traits"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1traits.html">asio::traits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:acce9ec91eb7adb50b776297d07947365"><td class="memItemLeft" align="right" valign="top">typedef detail::relationship_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1execution.html#acce9ec91eb7adb50b776297d07947365">asio::execution::relationship_t</a></td></tr>
+<tr class="separator:acce9ec91eb7adb50b776297d07947365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a52c60ce77fc6ec92c640afc33e47641d"><td class="memItemLeft" align="right" valign="top">constexpr relationship_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1execution.html#a52c60ce77fc6ec92c640afc33e47641d">asio::execution::relationship</a></td></tr>
+<tr class="separator:a52c60ce77fc6ec92c640afc33e47641d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

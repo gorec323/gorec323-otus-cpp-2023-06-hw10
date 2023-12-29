@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура http::server4::request</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehttp.html">http</a></li><li class="navelem"><a class="el" href="namespacehttp_1_1server4.html">server4</a></li><li class="navelem"><a class="el" href="structhttp_1_1server4_1_1request.html">request</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structhttp_1_1server4_1_1request-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура http::server4::request</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A request received from a client.  
+ <a href="structhttp_1_1server4_1_1request.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cpp03_2http_2server4_2request_8hpp_source.html">request.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aec6e3fbf9f264581734378ff4ed6c286"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server4_1_1request.html#aec6e3fbf9f264581734378ff4ed6c286">method</a></td></tr>
+<tr class="memdesc:aec6e3fbf9f264581734378ff4ed6c286"><td class="mdescLeft">&#160;</td><td class="mdescRight">The request method, e.g. "GET", "POST".  <a href="structhttp_1_1server4_1_1request.html#aec6e3fbf9f264581734378ff4ed6c286">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec6e3fbf9f264581734378ff4ed6c286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd9cfb210209403c8ddd66147c2b786"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server4_1_1request.html#a5fd9cfb210209403c8ddd66147c2b786">uri</a></td></tr>
+<tr class="memdesc:a5fd9cfb210209403c8ddd66147c2b786"><td class="mdescLeft">&#160;</td><td class="mdescRight">The requested URI, such as a path to a file.  <a href="structhttp_1_1server4_1_1request.html#a5fd9cfb210209403c8ddd66147c2b786">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5fd9cfb210209403c8ddd66147c2b786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f15ba996b83f754c252aa5ea4c237e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server4_1_1request.html#a86f15ba996b83f754c252aa5ea4c237e">http_version_major</a></td></tr>
+<tr class="memdesc:a86f15ba996b83f754c252aa5ea4c237e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major version number, usually 1.  <a href="structhttp_1_1server4_1_1request.html#a86f15ba996b83f754c252aa5ea4c237e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a86f15ba996b83f754c252aa5ea4c237e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d57422a013454960d0f6212d613b55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server4_1_1request.html#a31d57422a013454960d0f6212d613b55">http_version_minor</a></td></tr>
+<tr class="memdesc:a31d57422a013454960d0f6212d613b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor version number, usually 0 or 1.  <a href="structhttp_1_1server4_1_1request.html#a31d57422a013454960d0f6212d613b55">Подробнее...</a><br /></td></tr>
+<tr class="separator:a31d57422a013454960d0f6212d613b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6c0d985150f40c428861532b0ed13e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structhttp_1_1server4_1_1header.html">header</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server4_1_1request.html#afa6c0d985150f40c428861532b0ed13e">headers</a></td></tr>
+<tr class="memdesc:afa6c0d985150f40c428861532b0ed13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The headers included with the request.  <a href="structhttp_1_1server4_1_1request.html#afa6c0d985150f40c428861532b0ed13e">Подробнее...</a><br /></td></tr>
+<tr class="separator:afa6c0d985150f40c428861532b0ed13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15d8a69448d570062bbbc7ca20187e1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server4_1_1request.html#ad15d8a69448d570062bbbc7ca20187e1">content</a></td></tr>
+<tr class="memdesc:ad15d8a69448d570062bbbc7ca20187e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The optional content sent with the request.  <a href="structhttp_1_1server4_1_1request.html#ad15d8a69448d570062bbbc7ca20187e1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad15d8a69448d570062bbbc7ca20187e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A request received from a client. </p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="ad15d8a69448d570062bbbc7ca20187e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad15d8a69448d570062bbbc7ca20187e1">&#9670;&nbsp;</a></span>content</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string http::server4::request::content</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The optional content sent with the request. </p>
+
+</div>
+</div>
+<a id="afa6c0d985150f40c428861532b0ed13e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6c0d985150f40c428861532b0ed13e">&#9670;&nbsp;</a></span>headers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structhttp_1_1server4_1_1header.html">header</a>&gt; http::server4::request::headers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The headers included with the request. </p>
+
+</div>
+</div>
+<a id="a86f15ba996b83f754c252aa5ea4c237e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f15ba996b83f754c252aa5ea4c237e">&#9670;&nbsp;</a></span>http_version_major</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int http::server4::request::http_version_major</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Major version number, usually 1. </p>
+
+</div>
+</div>
+<a id="a31d57422a013454960d0f6212d613b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d57422a013454960d0f6212d613b55">&#9670;&nbsp;</a></span>http_version_minor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int http::server4::request::http_version_minor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minor version number, usually 0 or 1. </p>
+
+</div>
+</div>
+<a id="aec6e3fbf9f264581734378ff4ed6c286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6e3fbf9f264581734378ff4ed6c286">&#9670;&nbsp;</a></span>method</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string http::server4::request::method</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The request method, e.g. "GET", "POST". </p>
+
+</div>
+</div>
+<a id="a5fd9cfb210209403c8ddd66147c2b786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd9cfb210209403c8ddd66147c2b786">&#9670;&nbsp;</a></span>uri</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string http::server4::request::uri</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The requested URI, such as a path to a file. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/src/examples/cpp03/http/server4/<a class="el" href="cpp03_2http_2server4_2request_8hpp_source.html">request.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

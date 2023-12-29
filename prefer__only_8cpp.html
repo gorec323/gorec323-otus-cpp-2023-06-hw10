@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/execution/prefer_only.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li><li class="navelem"><a class="el" href="dir_8a208c96a74cfdc70bfb246fdc6c8602.html">execution</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл prefer_only.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="prefer__only_8hpp_source.html">asio/execution/prefer_only.hpp</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="any__executor_8hpp_source.html">asio/execution/any_executor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">../unit_test.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для prefer_only.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="prefer__only_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2execution_2prefer__only_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2execution_2prefer__only_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2execution_2prefer__only_8cpp">
+<area shape="rect" title=" " alt="" coords="5260,5,5437,61"/>
+<area shape="rect" href="prefer__only_8hpp.html" title=" " alt="" coords="5311,199,5469,240"/>
+<area shape="rect" title=" " alt="" coords="5265,117,5352,143"/>
+<area shape="rect" href="any__executor_8hpp.html" title=" " alt="" coords="2431,109,2575,151"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="5964,117,6083,143"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3515,631,3676,657"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="4529,556,4721,583"/>
+<area shape="rect" href="is__applicable__property_8hpp.html" title=" " alt="" coords="5391,467,5530,508"/>
+<area shape="rect" href="prefer_8hpp.html" title=" " alt="" coords="4205,295,4324,322"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2999,556,3207,583"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2140,556,2341,583"/>
+<area shape="rect" href="static__query_8hpp.html" title=" " alt="" coords="4357,467,4484,508"/>
+<area shape="rect" href="query_8hpp.html" title=" " alt="" coords="4100,385,4216,411"/>
+<area shape="rect" title=" " alt="" coords="505,705,576,732"/>
+<area shape="rect" title=" " alt="" coords="3609,705,3739,732"/>
+<area shape="rect" title=" " alt="" coords="3446,705,3585,732"/>
+<area shape="rect" title=" " alt="" coords="4579,631,4671,657"/>
+<area shape="rect" href="prefer__free_8hpp.html" title=" " alt="" coords="4509,467,4639,508"/>
+<area shape="rect" href="prefer__member_8hpp.html" title=" " alt="" coords="4663,467,4794,508"/>
+<area shape="rect" href="require__free_8hpp.html" title=" " alt="" coords="4196,467,4333,508"/>
+<area shape="rect" href="require__member_8hpp.html" title=" " alt="" coords="3527,467,3664,508"/>
+<area shape="rect" href="static__require_8hpp.html" title=" " alt="" coords="2913,377,3040,419"/>
+<area shape="rect" href="query__member_8hpp.html" title=" " alt="" coords="3903,474,4120,501"/>
+<area shape="rect" href="query__free_8hpp.html" title=" " alt="" coords="3689,474,3878,501"/>
+<area shape="rect" title=" " alt="" coords="199,556,248,583"/>
+<area shape="rect" title=" " alt="" coords="1200,206,1276,233"/>
+<area shape="rect" href="assert_8hpp.html" title=" " alt="" coords="5663,206,5826,233"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="5901,199,6039,240"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="5,556,175,583"/>
+<area shape="rect" href="executor__function_8hpp.html" title=" " alt="" coords="1375,288,1525,329"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="716,474,891,501"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="272,556,503,583"/>
+<area shape="rect" href="non__const__lvalue_8hpp.html" title=" " alt="" coords="2354,467,2514,508"/>
+<area shape="rect" href="scoped__ptr_8hpp.html" title=" " alt="" coords="1733,467,1873,508"/>
+<area shape="rect" href="bad__executor_8hpp.html" title=" " alt="" coords="1082,467,1226,508"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="3205,206,3407,233"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="3166,385,3369,411"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="3489,295,3616,322"/>
+<area shape="rect" title=" " alt="" coords="5706,295,5775,322"/>
+<area shape="rect" href="handler__alloc__helpers_8hpp.html" title=" " alt="" coords="1403,377,1545,419"/>
+<area shape="rect" href="noncopyable_8hpp.html" title=" " alt="" coords="1453,474,1658,501"/>
+<area shape="rect" title=" " alt="" coords="821,556,887,583"/>
+<area shape="rect" title=" " alt="" coords="911,556,989,583"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="579,556,745,583"/>
+<area shape="rect" title=" " alt="" coords="1165,556,1252,583"/>
+<area shape="rect" href="execute__member_8hpp.html" title=" " alt="" coords="2796,467,2939,508"/>
+<area shape="rect" href="query__static__constexpr__member_8hpp.html" title=" " alt="" coords="2589,467,2772,508"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="3167,467,3349,508"/>
+<area shape="rect" href="equality__comparable_8hpp.html" title=" " alt="" coords="5021,467,5165,508"/>
+<area shape="rect" title=" " alt="" coords="6114,206,6194,233"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpossibly__blocking__executor.html">possibly_blocking_executor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1execute__member_3_01possibly__blocking__executor_00_01F_01_4.html">asio::traits::execute_member&lt; possibly_blocking_executor, F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1equality__comparable_3_01possibly__blocking__executor_01_4.html">asio::traits::equality_comparable&lt; possibly_blocking_executor &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnever__blocking__executor.html">never_blocking_executor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1execute__member_3_01never__blocking__executor_00_01F_01_4.html">asio::traits::execute_member&lt; never_blocking_executor, F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1equality__comparable_3_01never__blocking__executor_01_4.html">asio::traits::equality_comparable&lt; never_blocking_executor &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1query__static__constexpr__member_3_01never__blocking__executor_00_01Para12cca66d5326d6e39e9dfc3138a9cd07.html">asio::traits::query_static_constexpr_member&lt; never_blocking_executor, Param, typename asio::enable_if&lt; asio::is_convertible&lt; Param, execution::blocking_t &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeither__blocking__executor.html">either_blocking_executor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1execute__member_3_01either__blocking__executor_00_01F_01_4.html">asio::traits::execute_member&lt; either_blocking_executor, F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1equality__comparable_3_01either__blocking__executor_01_4.html">asio::traits::equality_comparable&lt; either_blocking_executor &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1query__member_3_01either__blocking__executor_00_01Param_00_01typename_01d2df2d51c802e1f35fd7e83814a7d509.html">asio::traits::query_member&lt; either_blocking_executor, Param, typename asio::enable_if&lt; asio::is_convertible&lt; Param, execution::blocking_t &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1require__member_3_01either__blocking__executor_00_01Param_00_01typename_1c064d5dc8d56c8ed734283eb94b62a5.html">asio::traits::require_member&lt; either_blocking_executor, Param, typename asio::enable_if&lt; asio::is_convertible&lt; Param, execution::blocking_t &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1traits"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1traits.html">asio::traits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prefer__only_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a420e3bbc0fc9d97975dd5dcc4fa81dbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prefer__only_8cpp.html#a420e3bbc0fc9d97975dd5dcc4fa81dbc">prefer_only_executor_query_test</a> ()</td></tr>
+<tr class="separator:a420e3bbc0fc9d97975dd5dcc4fa81dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15196b401013e8f2274566f6432b4ba4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prefer__only_8cpp.html#a15196b401013e8f2274566f6432b4ba4">do_nothing</a> ()</td></tr>
+<tr class="separator:a15196b401013e8f2274566f6432b4ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cac1bce43c0d25fb1449a96f0c724e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prefer__only_8cpp.html#a9cac1bce43c0d25fb1449a96f0c724e1">prefer_only_executor_execute_test</a> ()</td></tr>
+<tr class="separator:a9cac1bce43c0d25fb1449a96f0c724e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a15196b401013e8f2274566f6432b4ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15196b401013e8f2274566f6432b4ba4">&#9670;&nbsp;</a></span>do_nothing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> do_nothing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cac1bce43c0d25fb1449a96f0c724e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cac1bce43c0d25fb1449a96f0c724e1">&#9670;&nbsp;</a></span>prefer_only_executor_execute_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> prefer_only_executor_execute_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a420e3bbc0fc9d97975dd5dcc4fa81dbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420e3bbc0fc9d97975dd5dcc4fa81dbc">&#9670;&nbsp;</a></span>prefer_only_executor_query_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> prefer_only_executor_query_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

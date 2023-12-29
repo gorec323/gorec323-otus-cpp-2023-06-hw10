@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/basic_deadline_timer.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">basic_deadline_timer.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="basic__deadline__timer_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// basic_deadline_timer.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_BASIC_DEADLINE_TIMER_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_BASIC_DEADLINE_TIMER_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_DATE_TIME) \</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="any__io__executor_8hpp.html">asio/any_io_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="deadline__timer__service_8hpp.html">asio/detail/deadline_timer_service.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="handler__type__requirements_8hpp.html">asio/detail/handler_type_requirements.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="io__object__impl_8hpp.html">asio/detail/io_object_impl.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="non__const__lvalue_8hpp.html">asio/detail/non_const_lvalue.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="throw__error_8hpp.html">asio/detail/throw_error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">asio/error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="execution__context_8hpp.html">asio/execution_context.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="time__traits_8hpp.html">asio/time_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Time,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typename</span> TimeTraits = asio::time_traits&lt;Time&gt;,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">typename</span> Executor = any_io_executor&gt;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">class </span>basic_deadline_timer</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">class </span>initiate_async_wait;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keyword">typedef</span> Executor executor_type;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor1&gt;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keyword">struct </span>rebind_executor</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">typedef</span> basic_deadline_timer&lt;Time, TimeTraits, Executor1&gt; other;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  };</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keyword">typedef</span> TimeTraits traits_type;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> traits_type::time_type time_type;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> traits_type::duration_type duration_type;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">explicit</span> basic_deadline_timer(<span class="keyword">const</span> executor_type&amp; ex)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    : impl_(0, ex)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">explicit</span> basic_deadline_timer(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    : impl_(0, 0, <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  basic_deadline_timer(<span class="keyword">const</span> executor_type&amp; ex, <span class="keyword">const</span> time_type&amp; expiry_time)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    : impl_(0, ex)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    impl_.get_service().expires_at(impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;expires_at&quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  basic_deadline_timer(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>, <span class="keyword">const</span> time_type&amp; expiry_time,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    : impl_(0, 0, <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    impl_.get_service().expires_at(impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;expires_at&quot;</span>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  basic_deadline_timer(<span class="keyword">const</span> executor_type&amp; ex,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="keyword">const</span> duration_type&amp; expiry_time)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    : impl_(0, ex)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    impl_.get_service().expires_from_now(</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;expires_from_now&quot;</span>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  basic_deadline_timer(ExecutionContext&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keyword">const</span> duration_type&amp; expiry_time,</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        is_convertible&lt;ExecutionContext&amp;, execution_context&amp;&gt;::value</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      &gt; = 0)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    : impl_(0, 0, <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    impl_.get_service().expires_from_now(</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;expires_from_now&quot;</span>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  basic_deadline_timer(basic_deadline_timer&amp;&amp; other)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    : impl_(<a class="code" href="namespacestd.html">std</a>::move(other.impl_))</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  basic_deadline_timer&amp; operator=(basic_deadline_timer&amp;&amp; other)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    impl_ = std::move(other.impl_);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  ~basic_deadline_timer()</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keyword">const</span> executor_type&amp; get_executor() noexcept</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">return</span> impl_.get_executor();</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  std::size_t cancel()</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    std::size_t <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = impl_.get_service().cancel(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;cancel&quot;</span>);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  std::size_t cancel(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().cancel(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  std::size_t cancel_one()</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    std::size_t <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = impl_.get_service().cancel_one(</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;cancel_one&quot;</span>);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  std::size_t cancel_one(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().cancel_one(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  time_type expires_at()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().expires_at(impl_.get_implementation());</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  std::size_t expires_at(<span class="keyword">const</span> time_type&amp; expiry_time)</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;  {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    std::size_t <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = impl_.get_service().expires_at(</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;expires_at&quot;</span>);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;  }</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160; </div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  std::size_t expires_at(<span class="keyword">const</span> time_type&amp; expiry_time,</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;  {</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().expires_at(</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  }</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160; </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160; </div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;  duration_type expires_from_now()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().expires_from_now(impl_.get_implementation());</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;  }</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; </div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160; </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;  std::size_t expires_from_now(<span class="keyword">const</span> duration_type&amp; expiry_time)</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;  {</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    std::size_t <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a> = impl_.get_service().expires_from_now(</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;expires_from_now&quot;</span>);</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;  }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160; </div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; </div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;  std::size_t expires_from_now(<span class="keyword">const</span> duration_type&amp; expiry_time,</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;  {</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="keywordflow">return</span> impl_.get_service().expires_from_now(</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        impl_.get_implementation(), expiry_time, ec);</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;  }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160; </div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160; </div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;  <span class="keywordtype">void</span> wait()</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;  {</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    impl_.get_service().wait(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a>(ec, <span class="stringliteral">&quot;wait&quot;</span>);</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  }</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160; </div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  <span class="keywordtype">void</span> wait(<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec)</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  {</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    impl_.get_service().wait(impl_.get_implementation(), ec);</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;  }</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;  <span class="keyword">template</span> &lt;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;      <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>))</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        WaitToken = default_completion_token_t&lt;executor_type&gt;&gt;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;  <span class="keyword">auto</span> async_wait(</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;      WaitToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = default_completion_token_t&lt;executor_type&gt;())</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    -&gt; decltype(</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;      <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;WaitToken, <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>)&gt;(</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        declval&lt;initiate_async_wait&gt;(), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>))</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;  {</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <span class="keywordflow">return</span> async_initiate&lt;WaitToken, void (asio::error_code)&gt;(</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        initiate_async_wait(<span class="keyword">this</span>), <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>);</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;  }</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160; </div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  <span class="comment">// Disallow copying and assignment.</span></div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;  basic_deadline_timer(<span class="keyword">const</span> basic_deadline_timer&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;  basic_deadline_timer&amp; operator=(</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;      <span class="keyword">const</span> basic_deadline_timer&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160; </div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;  <span class="keyword">class </span>initiate_async_wait</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  {</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keyword">typedef</span> Executor executor_type;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160; </div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keyword">explicit</span> initiate_async_wait(basic_deadline_timer* <span class="keyword">self</span>)</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;      : self_(self)</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    {</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    }</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160; </div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    <span class="keyword">const</span> executor_type&amp; get_executor() const noexcept</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    {</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;      <span class="keywordflow">return</span> self_-&gt;get_executor();</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    }</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WaitHandler&gt;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keywordtype">void</span> operator()(WaitHandler&amp;&amp; handler)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;      <span class="comment">// If you get an error on the following line it means that your handler</span></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;      <span class="comment">// does not meet the documented type requirements for a WaitHandler.</span></div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;      <a class="code" href="handler__type__requirements_8hpp.html#ace3a166a2459b67f37b1abb9417d5085">ASIO_WAIT_HANDLER_CHECK</a>(WaitHandler, handler) type_check;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;      detail::non_const_lvalue&lt;WaitHandler&gt; handler2(handler);</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;      self_-&gt;impl_.get_service().async_wait(</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;          self_-&gt;impl_.get_implementation(),</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;          handler2.value, self_-&gt;impl_.get_executor());</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    }</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160; </div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    basic_deadline_timer* self_;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  };</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160; </div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;  detail::io_object_impl&lt;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    detail::deadline_timer_service&lt;TimeTraits&gt;, Executor&gt; impl_;</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;};</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160; </div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160; </div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_DATE_TIME)</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;       <span class="comment">// || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160; </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_BASIC_DEADLINE_TIMER_HPP</span></div>
+<div class="ttc" id="aany__io__executor_8hpp_html"><div class="ttname"><a href="any__io__executor_8hpp.html">any_io_executor.hpp</a></div></div>
+<div class="ttc" id="ablocking_8cpp_html_a0337bda4434eac48c7c441ec80725e39"><div class="ttname"><a href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a></div><div class="ttdeci">exec::blocking_t s</div><div class="ttdef"><b>Definition:</b> blocking.cpp:26</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="adeadline__timer__service_8hpp_html"><div class="ttname"><a href="deadline__timer__service_8hpp.html">deadline_timer_service.hpp</a></div></div>
+<div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="aexecution__context_8hpp_html"><div class="ttname"><a href="execution__context_8hpp.html">execution_context.hpp</a></div></div>
+<div class="ttc" id="ahandler__type__requirements_8hpp_html"><div class="ttname"><a href="handler__type__requirements_8hpp.html">handler_type_requirements.hpp</a></div></div>
+<div class="ttc" id="ahandler__type__requirements_8hpp_html_ace3a166a2459b67f37b1abb9417d5085"><div class="ttname"><a href="handler__type__requirements_8hpp.html#ace3a166a2459b67f37b1abb9417d5085">ASIO_WAIT_HANDLER_CHECK</a></div><div class="ttdeci">#define ASIO_WAIT_HANDLER_CHECK(handler_type, handler)</div><div class="ttdef"><b>Definition:</b> handler_type_requirements.hpp:361</div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="aio__object__impl_8hpp_html"><div class="ttname"><a href="io__object__impl_8hpp.html">io_object_impl.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_ac16aa46e6a6a3c19ea8ff34ae3e77633"><div class="ttname"><a href="namespaceasio_1_1detail.html#ac16aa46e6a6a3c19ea8ff34ae3e77633">asio::detail::throw_error</a></div><div class="ttdeci">void throw_error(const asio::error_code &amp;err ASIO_SOURCE_LOCATION_DEFAULTED_PARAM)</div><div class="ttdef"><b>Definition:</b> throw_error.hpp:36</div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html_adebdf38d8a61e5145c9d6b51730e6a74"><div class="ttname"><a href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">asio::execution::context</a></div><div class="ttdeci">constexpr context_t context</div><div class="ttdef"><b>Definition:</b> context.hpp:141</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="anamespaceasio_html_acbf600e256af39d8a0c65fb6e3eb988d"><div class="ttname"><a href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a></div><div class="ttdeci">auto async_initiate(Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;token, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(token), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</div><div class="ttdef"><b>Definition:</b> async_result.hpp:558</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="anamespaceasio_html_adff1e9f7bb336026f18afa2221c9df07"><div class="ttname"><a href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">asio::token</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> error.hpp:307</div></div>
+<div class="ttc" id="anon__const__lvalue_8hpp_html"><div class="ttname"><a href="non__const__lvalue_8hpp.html">non_const_lvalue.hpp</a></div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1execution_1_1detail_1_1blocking__t_html"><div class="ttname"><a href="structasio_1_1execution_1_1detail_1_1blocking__t.html">asio::execution::detail::blocking_t</a></div><div class="ttdef"><b>Definition:</b> blocking.hpp:200</div></div>
+<div class="ttc" id="athrow__error_8hpp_html"><div class="ttname"><a href="throw__error_8hpp.html">throw_error.hpp</a></div></div>
+<div class="ttc" id="atime__traits_8hpp_html"><div class="ttname"><a href="time__traits_8hpp.html">time_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

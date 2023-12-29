@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/detail/concurrency_hint.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл concurrency_hint.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="noncopyable_8hpp_source.html">asio/detail/noncopyable.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для concurrency_hint.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="concurrency__hint_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2concurrency__hint_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2concurrency__hint_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2concurrency__hint_8hpp">
+<area shape="rect" title=" " alt="" coords="186,5,351,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="84,184,245,211"/>
+<area shape="rect" href="noncopyable_8hpp.html" title=" " alt="" coords="254,109,459,136"/>
+<area shape="rect" title=" " alt="" coords="5,259,76,285"/>
+<area shape="rect" title=" " alt="" coords="100,259,229,285"/>
+<area shape="rect" title=" " alt="" coords="254,259,393,285"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="270,184,478,211"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="503,184,704,211"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="concurrency__hint_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2concurrency__hint_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2concurrency__hint_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2concurrency__hint_8hppdep">
+<area shape="rect" title=" " alt="" coords="3349,5,3514,61"/>
+<area shape="rect" href="scheduler_8ipp.html" title=" " alt="" coords="1063,109,1210,165"/>
+<area shape="rect" href="resolver__service_8hpp.html" title=" " alt="" coords="6521,109,6683,165"/>
+<area shape="rect" href="io__context_8ipp.html" title=" " alt="" coords="80,221,233,277"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="4421,117,4625,158"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="5,339,193,381"/>
+<area shape="rect" href="basic__resolver_8hpp.html" title=" " alt="" coords="8403,332,8561,388"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="7649,436,7795,477"/>
+<area shape="rect" href="basic__io__object_8hpp.html" title=" " alt="" coords="7829,332,7975,388"/>
+<area shape="rect" href="basic__socket__streambuf_8hpp.html" title=" " alt="" coords="3715,332,3887,388"/>
+<area shape="rect" href="io__object__impl_8hpp.html" title=" " alt="" coords="8279,221,8429,277"/>
+<area shape="rect" href="strand__service_8hpp.html" title=" " alt="" coords="309,221,458,277"/>
+<area shape="rect" href="io__context__strand_8hpp.html" title=" " alt="" coords="7351,332,7527,388"/>
+<area shape="rect" href="io__service_8hpp.html" title=" " alt="" coords="7551,339,7754,381"/>
+<area shape="rect" href="spawn_8hpp.html" title=" " alt="" coords="7999,228,8178,269"/>
+<area shape="rect" href="cpp03_2spawn_2echo__server_8cpp.html" title=" " alt="" coords="8000,332,8177,388"/>
+<area shape="rect" href="cpp11_2spawn_2echo__server_8cpp.html" title=" " alt="" coords="8201,332,8379,388"/>
+<area shape="rect" href="ssl_2context_8hpp.html" title=" " alt="" coords="483,228,689,269"/>
+<area shape="rect" href="ts_2io__context_8hpp.html" title=" " alt="" coords="714,221,861,277"/>
+<area shape="rect" href="cpp03_2fork_2daemon_8cpp.html" title=" " alt="" coords="885,221,1041,277"/>
+<area shape="rect" href="cpp03_2fork_2process__per__connection_8cpp.html" title=" " alt="" coords="1065,221,1304,277"/>
+<area shape="rect" href="cpp03_2timeouts_2async__tcp__client_8cpp.html" title=" " alt="" coords="1328,221,1551,277"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__tcp__client_8cpp.html" title=" " alt="" coords="1575,213,1746,284"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__token__tcp__client_8cpp.html" title=" " alt="" coords="1770,213,1957,284"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__udp__client_8cpp.html" title=" " alt="" coords="1981,213,2156,284"/>
+<area shape="rect" href="examples_2cpp03_2timeouts_2server_8cpp.html" title=" " alt="" coords="2180,221,2336,277"/>
+<area shape="rect" href="cpp11_2fork_2daemon_8cpp.html" title=" " alt="" coords="2360,221,2516,277"/>
+<area shape="rect" href="cpp11_2fork_2process__per__connection_8cpp.html" title=" " alt="" coords="2540,221,2779,277"/>
+<area shape="rect" href="cpp11_2futures_2daytime__client_8cpp.html" title=" " alt="" coords="2803,221,3003,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__1_8cpp.html" title=" " alt="" coords="3027,221,3235,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__2_8cpp.html" title=" " alt="" coords="3259,221,3467,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__3_8cpp.html" title=" " alt="" coords="3491,221,3699,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__4_8cpp.html" title=" " alt="" coords="3723,221,3931,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__5_8cpp.html" title=" " alt="" coords="3955,221,4163,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__6_8cpp.html" title=" " alt="" coords="4187,221,4395,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__7_8cpp.html" title=" " alt="" coords="4419,221,4627,277"/>
+<area shape="rect" href="cpp11_2operations_2composed__8_8cpp.html" title=" " alt="" coords="4651,221,4859,277"/>
+<area shape="rect" href="cpp11_2timeouts_2async__tcp__client_8cpp.html" title=" " alt="" coords="4884,221,5107,277"/>
+<area shape="rect" href="cpp11_2timeouts_2blocking__tcp__client_8cpp.html" title=" " alt="" coords="5131,213,5302,284"/>
+<area shape="rect" href="cpp11_2timeouts_2blocking__token__tcp__client_8cpp.html" title=" " alt="" coords="5326,213,5513,284"/>
+<area shape="rect" href="cpp11_2timeouts_2blocking__udp__client_8cpp.html" title=" " alt="" coords="5537,213,5712,284"/>
+<area shape="rect" href="examples_2cpp11_2timeouts_2server_8cpp.html" title=" " alt="" coords="5736,221,5892,277"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp11_2type__erasure_2main_8cpp.html" title=" " alt="" coords="5916,221,6091,277"/>
+<area shape="rect" href="cpp14_2operations_2composed__1_8cpp.html" title=" " alt="" coords="6115,221,6323,277"/>
+<area shape="rect" href="cpp14_2operations_2composed__2_8cpp.html" title=" " alt="" coords="6347,221,6555,277"/>
+<area shape="rect" href="cpp14_2operations_2composed__3_8cpp.html" title=" " alt="" coords="6579,221,6787,277"/>
+<area shape="rect" href="cpp14_2operations_2composed__4_8cpp.html" title=" " alt="" coords="6811,221,7019,277"/>
+<area shape="rect" href="cpp14_2operations_2composed__5_8cpp.html" title=" " alt="" coords="7043,221,7251,277"/>
+<area shape="rect" href="cpp14_2operations_2composed__6_8cpp.html" title=" " alt="" coords="7275,221,7483,277"/>
+<area shape="rect" href="cpp14_2operations_2composed__7_8cpp.html" title=" " alt="" coords="7507,221,7715,277"/>
+</map>
+</div>
+</div>
+<p><a href="concurrency__hint_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a2f532a7846712665564bd62215f71375"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a>&#160;&#160;&#160;0xA5100000u</td></tr>
+<tr class="separator:a2f532a7846712665564bd62215f71375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbe7460104eefcfb50c61d152d8ab9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a5cbe7460104eefcfb50c61d152d8ab9c">ASIO_CONCURRENCY_HINT_ID_MASK</a>&#160;&#160;&#160;0xFFFF0000u</td></tr>
+<tr class="separator:a5cbe7460104eefcfb50c61d152d8ab9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb71314ba4dc453e77c165c0390db7a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#acb71314ba4dc453e77c165c0390db7a6">ASIO_CONCURRENCY_HINT_LOCKING_SCHEDULER</a>&#160;&#160;&#160;0x1u</td></tr>
+<tr class="separator:acb71314ba4dc453e77c165c0390db7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dcc5623ec84a32105deff61f999b069"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a7dcc5623ec84a32105deff61f999b069">ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_REGISTRATION</a>&#160;&#160;&#160;0x2u</td></tr>
+<tr class="separator:a7dcc5623ec84a32105deff61f999b069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52b2907e23d647a4f416d39c946b465"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#aa52b2907e23d647a4f416d39c946b465">ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_IO</a>&#160;&#160;&#160;0x4u</td></tr>
+<tr class="separator:aa52b2907e23d647a4f416d39c946b465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c16fad8c6c0c2aa981867b605cb721f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a7c16fad8c6c0c2aa981867b605cb721f">ASIO_CONCURRENCY_HINT_IS_SPECIAL</a>(hint)</td></tr>
+<tr class="separator:a7c16fad8c6c0c2aa981867b605cb721f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad178af7b62a4edd3f859d59f6780a7d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#ad178af7b62a4edd3f859d59f6780a7d3">ASIO_CONCURRENCY_HINT_IS_LOCKING</a>(facility,  hint)</td></tr>
+<tr class="separator:ad178af7b62a4edd3f859d59f6780a7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4f8c7246dbcac0e369cfce8c04f6d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a2e4f8c7246dbcac0e369cfce8c04f6d5">ASIO_CONCURRENCY_HINT_UNSAFE</a>&#160;&#160;&#160;  static_cast&lt;int&gt;(<a class="el" href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a>)</td></tr>
+<tr class="separator:a2e4f8c7246dbcac0e369cfce8c04f6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68c0082517a4a0dbbac3486855417cd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a68c0082517a4a0dbbac3486855417cd1">ASIO_CONCURRENCY_HINT_UNSAFE_IO</a></td></tr>
+<tr class="separator:a68c0082517a4a0dbbac3486855417cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ddee0c30e5676ae3646f265f5ecee1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a3ddee0c30e5676ae3646f265f5ecee1e">ASIO_CONCURRENCY_HINT_SAFE</a></td></tr>
+<tr class="separator:a3ddee0c30e5676ae3646f265f5ecee1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8eab2582298652de66d6a854edf0ed4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#aa8eab2582298652de66d6a854edf0ed4">ASIO_CONCURRENCY_HINT_DEFAULT</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:aa8eab2582298652de66d6a854edf0ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44371cb9602e0c2ec78bb112776a8157"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concurrency__hint_8hpp.html#a44371cb9602e0c2ec78bb112776a8157">ASIO_CONCURRENCY_HINT_1</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a44371cb9602e0c2ec78bb112776a8157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a44371cb9602e0c2ec78bb112776a8157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44371cb9602e0c2ec78bb112776a8157">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_1&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8eab2582298652de66d6a854edf0ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8eab2582298652de66d6a854edf0ed4">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_DEFAULT&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f532a7846712665564bd62215f71375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f532a7846712665564bd62215f71375">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_ID&#160;&#160;&#160;0xA5100000u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cbe7460104eefcfb50c61d152d8ab9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cbe7460104eefcfb50c61d152d8ab9c">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_ID_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_ID_MASK&#160;&#160;&#160;0xFFFF0000u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad178af7b62a4edd3f859d59f6780a7d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad178af7b62a4edd3f859d59f6780a7d3">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_IS_LOCKING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_IS_LOCKING</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">facility, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">hint&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  (((<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(hint) \</div>
+<div class="line">    &amp; (<a class="code" href="concurrency__hint_8hpp.html#a5cbe7460104eefcfb50c61d152d8ab9c">ASIO_CONCURRENCY_HINT_ID_MASK</a> \</div>
+<div class="line">      | ASIO_CONCURRENCY_HINT_LOCKING_ ## facility)) \</div>
+<div class="line">        ^ <a class="code" href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a>) != 0)</div>
+<div class="ttc" id="aconcurrency__hint_8hpp_html_a2f532a7846712665564bd62215f71375"><div class="ttname"><a href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a></div><div class="ttdeci">#define ASIO_CONCURRENCY_HINT_ID</div><div class="ttdef"><b>Definition:</b> concurrency_hint.hpp:23</div></div>
+<div class="ttc" id="aconcurrency__hint_8hpp_html_a5cbe7460104eefcfb50c61d152d8ab9c"><div class="ttname"><a href="concurrency__hint_8hpp.html#a5cbe7460104eefcfb50c61d152d8ab9c">ASIO_CONCURRENCY_HINT_ID_MASK</a></div><div class="ttdeci">#define ASIO_CONCURRENCY_HINT_ID_MASK</div><div class="ttdef"><b>Definition:</b> concurrency_hint.hpp:24</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7c16fad8c6c0c2aa981867b605cb721f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c16fad8c6c0c2aa981867b605cb721f">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_IS_SPECIAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_IS_SPECIAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">hint</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  ((<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(hint) \</div>
+<div class="line">    &amp; <a class="code" href="concurrency__hint_8hpp.html#a5cbe7460104eefcfb50c61d152d8ab9c">ASIO_CONCURRENCY_HINT_ID_MASK</a>) \</div>
+<div class="line">      == <a class="code" href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa52b2907e23d647a4f416d39c946b465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52b2907e23d647a4f416d39c946b465">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_IO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_IO&#160;&#160;&#160;0x4u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dcc5623ec84a32105deff61f999b069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dcc5623ec84a32105deff61f999b069">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_REGISTRATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_REGISTRATION&#160;&#160;&#160;0x2u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb71314ba4dc453e77c165c0390db7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb71314ba4dc453e77c165c0390db7a6">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_LOCKING_SCHEDULER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_LOCKING_SCHEDULER&#160;&#160;&#160;0x1u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ddee0c30e5676ae3646f265f5ecee1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddee0c30e5676ae3646f265f5ecee1e">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_SAFE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_SAFE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a> \</div>
+<div class="line">      | <a class="code" href="concurrency__hint_8hpp.html#acb71314ba4dc453e77c165c0390db7a6">ASIO_CONCURRENCY_HINT_LOCKING_SCHEDULER</a> \</div>
+<div class="line">      | <a class="code" href="concurrency__hint_8hpp.html#a7dcc5623ec84a32105deff61f999b069">ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_REGISTRATION</a> \</div>
+<div class="line">      | <a class="code" href="concurrency__hint_8hpp.html#aa52b2907e23d647a4f416d39c946b465">ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_IO</a>)</div>
+<div class="ttc" id="aconcurrency__hint_8hpp_html_a7dcc5623ec84a32105deff61f999b069"><div class="ttname"><a href="concurrency__hint_8hpp.html#a7dcc5623ec84a32105deff61f999b069">ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_REGISTRATION</a></div><div class="ttdeci">#define ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_REGISTRATION</div><div class="ttdef"><b>Definition:</b> concurrency_hint.hpp:31</div></div>
+<div class="ttc" id="aconcurrency__hint_8hpp_html_aa52b2907e23d647a4f416d39c946b465"><div class="ttname"><a href="concurrency__hint_8hpp.html#aa52b2907e23d647a4f416d39c946b465">ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_IO</a></div><div class="ttdeci">#define ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_IO</div><div class="ttdef"><b>Definition:</b> concurrency_hint.hpp:34</div></div>
+<div class="ttc" id="aconcurrency__hint_8hpp_html_acb71314ba4dc453e77c165c0390db7a6"><div class="ttname"><a href="concurrency__hint_8hpp.html#acb71314ba4dc453e77c165c0390db7a6">ASIO_CONCURRENCY_HINT_LOCKING_SCHEDULER</a></div><div class="ttdeci">#define ASIO_CONCURRENCY_HINT_LOCKING_SCHEDULER</div><div class="ttdef"><b>Definition:</b> concurrency_hint.hpp:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2e4f8c7246dbcac0e369cfce8c04f6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4f8c7246dbcac0e369cfce8c04f6d5">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_UNSAFE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_UNSAFE&#160;&#160;&#160;  static_cast&lt;int&gt;(<a class="el" href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68c0082517a4a0dbbac3486855417cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68c0082517a4a0dbbac3486855417cd1">&#9670;&nbsp;</a></span>ASIO_CONCURRENCY_HINT_UNSAFE_IO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CONCURRENCY_HINT_UNSAFE_IO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="concurrency__hint_8hpp.html#a2f532a7846712665564bd62215f71375">ASIO_CONCURRENCY_HINT_ID</a> \</div>
+<div class="line">      | <a class="code" href="concurrency__hint_8hpp.html#acb71314ba4dc453e77c165c0390db7a6">ASIO_CONCURRENCY_HINT_LOCKING_SCHEDULER</a> \</div>
+<div class="line">      | <a class="code" href="concurrency__hint_8hpp.html#a7dcc5623ec84a32105deff61f999b069">ASIO_CONCURRENCY_HINT_LOCKING_REACTOR_REGISTRATION</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

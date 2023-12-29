@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/experimental/impl/coro.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_4b7ec68c1dc10d9fd423a12bdfeaade0.html">experimental</a></li><li class="navelem"><a class="el" href="dir_b91b1f1de8941ff14ee4666f3c87af55.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл coro.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="append_8hpp_source.html">asio/append.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="associated__cancellation__slot_8hpp_source.html">asio/associated_cancellation_slot.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bind__allocator_8hpp_source.html">asio/bind_allocator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="deferred_8hpp_source.html">asio/deferred.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="coro__completion__handler_8hpp_source.html">asio/experimental/detail/coro_completion_handler.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для coro.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2coro_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2coro_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2coro_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2coro_8hpp">
+<area shape="rect" title=" " alt="" coords="2789,5,2984,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="4523,720,4685,747"/>
+<area shape="rect" href="append_8hpp.html" title=" " alt="" coords="2822,370,2951,397"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="653,720,861,747"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3075,720,3277,747"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="1310,452,1519,493"/>
+<area shape="rect" href="bind__allocator_8hpp.html" title=" " alt="" coords="2107,459,2279,486"/>
+<area shape="rect" href="deferred_8hpp.html" title=" " alt="" coords="2316,459,2452,486"/>
+<area shape="rect" href="coro__completion__handler_8hpp.html" title=" " alt="" coords="2983,109,3201,151"/>
+<area shape="rect" title=" " alt="" coords="2662,795,2733,821"/>
+<area shape="rect" title=" " alt="" coords="4618,795,4747,821"/>
+<area shape="rect" title=" " alt="" coords="4455,795,4593,821"/>
+<area shape="rect" title=" " alt="" coords="1697,549,1751,575"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1531,638,1723,665"/>
+<area shape="rect" href="impl_2append_8hpp.html" title=" " alt="" coords="2805,459,2968,486"/>
+<area shape="rect" title=" " alt="" coords="1581,720,1673,747"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="2573,638,2720,665"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2421,549,2584,575"/>
+<area shape="rect" href="handler__cont__helpers_8hpp.html" title=" " alt="" coords="2995,541,3138,583"/>
+<area shape="rect" href="utility_8hpp.html" title=" " alt="" coords="2609,549,2767,575"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="1950,638,2125,665"/>
+<area shape="rect" href="handler__continuation__hook_8hpp.html" title=" " alt="" coords="2897,631,3087,672"/>
+<area shape="rect" title=" " alt="" coords="1885,720,1963,747"/>
+<area shape="rect" title=" " alt="" coords="1022,720,1071,747"/>
+<area shape="rect" title=" " alt="" coords="1446,638,1506,665"/>
+<area shape="rect" href="cancellation__signal_8hpp.html" title=" " alt="" coords="1262,549,1469,575"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="1235,638,1421,665"/>
+<area shape="rect" title=" " alt="" coords="651,638,720,665"/>
+<area shape="rect" href="cancellation__type_8hpp.html" title=" " alt="" coords="2201,638,2397,665"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="1041,638,1210,665"/>
+<area shape="rect" title=" " alt="" coords="1285,720,1371,747"/>
+<area shape="rect" href="associated__allocator_8hpp.html" title=" " alt="" coords="1929,549,2143,575"/>
+<area shape="rect" href="impl_2deferred_8hpp.html" title=" " alt="" coords="795,638,965,665"/>
+<area shape="rect" href="coro_8hpp.html" title=" " alt="" coords="4205,199,4405,225"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="3568,370,3704,397"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="4233,549,4343,575"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="4213,638,4363,665"/>
+<area shape="rect" href="coro__traits_8hpp.html" title=" " alt="" coords="5286,363,5458,404"/>
+<area shape="rect" href="coro__promise__allocator_8hpp.html" title=" " alt="" coords="5304,273,5509,315"/>
+<area shape="rect" href="partial__promise_8hpp.html" title=" " alt="" coords="4708,273,4889,315"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="3551,459,3660,486"/>
+<area shape="rect" href="initiate__dispatch_8hpp.html" title=" " alt="" coords="3315,452,3455,493"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="3696,638,3896,665"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="3365,549,3568,575"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="3467,638,3621,665"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="4022,638,4189,665"/>
+<area shape="rect" title=" " alt="" coords="4693,638,4755,665"/>
+<area shape="rect" title=" " alt="" coords="4779,638,4850,665"/>
+<area shape="rect" title=" " alt="" coords="4143,720,4251,747"/>
+<area shape="rect" title=" " alt="" coords="5333,459,5408,486"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2coro_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2coro_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2coro_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2experimental_2impl_2coro_8hppdep">
+<area shape="rect" title=" " alt="" coords="472,5,667,61"/>
+<area shape="rect" href="coro_8hpp.html" title=" " alt="" coords="828,109,1023,165"/>
+<area shape="rect" href="experimental_2co__spawn_8hpp.html" title=" " alt="" coords="224,221,419,277"/>
+<area shape="rect" href="coro__completion__handler_8hpp.html" title=" " alt="" coords="5,213,200,284"/>
+<area shape="rect" href="impl_2use__coro_8hpp.html" title=" " alt="" coords="443,221,637,277"/>
+<area shape="rect" href="use__coro_8hpp.html" title=" " alt="" coords="512,332,707,388"/>
+<area shape="rect" href="allocator_8cpp.html" title=" " alt="" coords="713,221,914,277"/>
+<area shape="rect" href="cancel_8cpp.html" title=" " alt="" coords="938,221,1139,277"/>
+<area shape="rect" href="exception_8cpp.html" title=" " alt="" coords="1163,221,1365,277"/>
+<area shape="rect" href="experimental_2coro_2executor_8cpp.html" title=" " alt="" coords="1389,221,1590,277"/>
+<area shape="rect" href="partial_8cpp.html" title=" " alt="" coords="1614,221,1815,277"/>
+<area shape="rect" href="simple__test_8cpp.html" title=" " alt="" coords="1839,221,2041,277"/>
+<area shape="rect" href="stack__test_8cpp.html" title=" " alt="" coords="2065,221,2266,277"/>
+<area shape="rect" href="experimental_2coro_2co__spawn_8cpp.html" title=" " alt="" coords="221,332,422,388"/>
+<area shape="rect" href="use__coro_8cpp.html" title=" " alt="" coords="509,436,710,492"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2coro_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__cancellation__source.html">asio::experimental::detail::coro_cancellation_source</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1is__noexcept.html">asio::experimental::detail::is_noexcept&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1is__noexcept_3_01Return_07Args_8_8_8_08_4.html">asio::experimental::detail::is_noexcept&lt; Return(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1is__noexcept_3_01Return_07Args_8_8_8_08_01noexcept_01_4.html">asio::experimental::detail::is_noexcept&lt; Return(Args...) noexcept &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__error_3_01asio_1_1error__code_01_4.html">asio::experimental::detail::coro_error&lt; asio::error_code &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__error_3_01std_1_1exception__ptr_01_4.html">asio::experimental::detail::coro_error&lt; std::exception_ptr &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__with__arg.html">asio::experimental::detail::coro_with_arg&lt; T, Coroutine &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__with__arg_1_1awaitable__t.html">asio::experimental::detail::coro_with_arg&lt; T, Coroutine &gt;::awaitable_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__error_3_01false_01_4.html">asio::experimental::detail::coro_promise_error&lt; false &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__error_3_01true_01_4.html">asio::experimental::detail::coro_promise_error&lt; true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1yield__input.html">asio::experimental::detail::yield_input&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1yield__input_3_01void_01_4.html">asio::experimental::detail::yield_input&lt; void &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__awaited__from.html">asio::experimental::detail::coro_awaited_from</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__exchange.html">asio::experimental::detail::coro_promise_exchange&lt; Yield, Input, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__exchange_3_01YieldReturn_00_01void_00_01YieldReturn_01_4.html">asio::experimental::detail::coro_promise_exchange&lt; YieldReturn, void, YieldReturn &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__exchange_3_01Yield_00_01void_00_01Return_01_4.html">asio::experimental::detail::coro_promise_exchange&lt; Yield, void, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__exchange_3_01Yield_00_01Input_00_01void_01_4.html">asio::experimental::detail::coro_promise_exchange&lt; Yield, Input, void &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__exchange_3_01void_00_01void_00_01Return_01_4.html">asio::experimental::detail::coro_promise_exchange&lt; void, void, Return &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__exchange_3_01void_00_01void_00_01void_01_4.html">asio::experimental::detail::coro_promise_exchange&lt; void, void, void &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise__exchange_3_01Yield_00_01void_00_01void_01_4.html">asio::experimental::detail::coro_promise_exchange&lt; Yield, void, void &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1coro__promise.html">asio::experimental::detail::coro_promise&lt; Yield, Return, Executor, Allocator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1awaitable__t.html">asio::experimental::coro&lt; Yield, Return, Executor, Allocator &gt;::awaitable_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html">asio::experimental::coro&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1experimental"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental.html">asio::experimental</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1experimental_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">asio::experimental::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a7e38cf312fcd96f1a14fef7550d97723"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7e38cf312fcd96f1a14fef7550d97723"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a7e38cf312fcd96f1a14fef7550d97723">asio::experimental::detail::is_noexcept_v</a> = is_noexcept&lt;T&gt;::value</td></tr>
+<tr class="separator:a7e38cf312fcd96f1a14fef7550d97723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

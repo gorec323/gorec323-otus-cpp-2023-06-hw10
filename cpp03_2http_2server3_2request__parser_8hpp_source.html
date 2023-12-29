@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/src/examples/cpp03/http/server3/request_parser.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_97d4d118eba55c3b8cfaf2639dfa73b6.html">http</a></li><li class="navelem"><a class="el" href="dir_68a4252a8eabb1b18146ed8ac5feed3e.html">server3</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">request_parser.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cpp03_2http_2server3_2request__parser_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// request_parser.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef HTTP_SERVER3_REQUEST_PARSER_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define HTTP_SERVER3_REQUEST_PARSER_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;boost/logic/tribool.hpp&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;boost/tuple/tuple.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacehttp.html">http</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>server3 {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">struct </span>request;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classhttp_1_1server3_1_1request__parser.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classhttp_1_1server3_1_1request__parser.html">request_parser</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classhttp_1_1server3_1_1request__parser.html#a70639d209c991996a7e94a30a6d95df1">request_parser</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classhttp_1_1server3_1_1request__parser.html#a7eee30545abd9f989a667d937563717d">reset</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> InputIterator&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classhttp_1_1server3_1_1request__parser.html#afc3dc1dc5a078b078c853656b0678869">   37</a></span>&#160;  boost::tuple&lt;boost::tribool, InputIterator&gt; <a class="code" href="classhttp_1_1server3_1_1request__parser.html#afc3dc1dc5a078b078c853656b0678869">parse</a>(<a class="code" href="structhttp_1_1server3_1_1request.html">request</a>&amp; req,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      InputIterator begin, InputIterator end)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">while</span> (begin != end)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      boost::tribool result = consume(req, *begin++);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">if</span> (result || !result)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> boost::make_tuple(result, begin);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    boost::tribool result = boost::indeterminate;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> boost::make_tuple(result, begin);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  boost::tribool consume(<a class="code" href="structhttp_1_1server3_1_1request.html">request</a>&amp; req, <span class="keywordtype">char</span> input);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_char(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_ctl(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_tspecial(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_digit(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">enum</span> state</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    method_start,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    method,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    uri,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    http_version_h,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    http_version_t_1,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    http_version_t_2,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    http_version_p,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    http_version_slash,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    http_version_major_start,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    http_version_major,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    http_version_minor_start,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    http_version_minor,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    expecting_newline_1,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    header_line_start,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    header_lws,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    header_name,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    space_before_header_value,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    header_value,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    expecting_newline_2,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    expecting_newline_3</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  } state_;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace server3</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace http</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// HTTP_SERVER3_REQUEST_PARSER_HPP</span></div>
+<div class="ttc" id="aclasshttp_1_1server3_1_1request__parser_html"><div class="ttname"><a href="classhttp_1_1server3_1_1request__parser.html">http::server3::request_parser</a></div><div class="ttdoc">Parser for incoming requests.</div><div class="ttdef"><b>Definition:</b> request_parser.hpp:24</div></div>
+<div class="ttc" id="aclasshttp_1_1server3_1_1request__parser_html_a70639d209c991996a7e94a30a6d95df1"><div class="ttname"><a href="classhttp_1_1server3_1_1request__parser.html#a70639d209c991996a7e94a30a6d95df1">http::server3::request_parser::request_parser</a></div><div class="ttdeci">request_parser()</div><div class="ttdoc">Construct ready to parse the request method.</div><div class="ttdef"><b>Definition:</b> request_parser.cpp:17</div></div>
+<div class="ttc" id="aclasshttp_1_1server3_1_1request__parser_html_a7eee30545abd9f989a667d937563717d"><div class="ttname"><a href="classhttp_1_1server3_1_1request__parser.html#a7eee30545abd9f989a667d937563717d">http::server3::request_parser::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset to initial parser state.</div><div class="ttdef"><b>Definition:</b> request_parser.cpp:22</div></div>
+<div class="ttc" id="aclasshttp_1_1server3_1_1request__parser_html_afc3dc1dc5a078b078c853656b0678869"><div class="ttname"><a href="classhttp_1_1server3_1_1request__parser.html#afc3dc1dc5a078b078c853656b0678869">http::server3::request_parser::parse</a></div><div class="ttdeci">boost::tuple&lt; boost::tribool, InputIterator &gt; parse(request &amp;req, InputIterator begin, InputIterator end)</div><div class="ttdef"><b>Definition:</b> request_parser.hpp:37</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a4607a9754bf2707c054f0ff16b958b82"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">asio::experimental::c</a></div><div class="ttdeci">Executor c</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespacehttp_html"><div class="ttname"><a href="namespacehttp.html">http</a></div><div class="ttdef"><b>Definition:</b> connection.cpp:17</div></div>
+<div class="ttc" id="astructhttp_1_1server3_1_1request_html"><div class="ttname"><a href="structhttp_1_1server3_1_1request.html">http::server3::request</a></div><div class="ttdoc">A request received from a client.</div><div class="ttdef"><b>Definition:</b> request.hpp:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

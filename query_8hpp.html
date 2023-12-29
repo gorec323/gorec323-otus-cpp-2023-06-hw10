@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/query.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл query.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">asio/detail/type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="is__applicable__property_8hpp_source.html">asio/is_applicable_property.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="query__member_8hpp_source.html">asio/traits/query_member.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="query__free_8hpp_source.html">asio/traits/query_free.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="static__query_8hpp_source.html">asio/traits/static_query.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для query.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="query_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2query_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2query_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2query_8hpp">
+<area shape="rect" title=" " alt="" coords="272,5,443,47"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="462,259,623,285"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="613,184,805,211"/>
+<area shape="rect" href="is__applicable__property_8hpp.html" title=" " alt="" coords="765,95,904,136"/>
+<area shape="rect" href="query__member_8hpp.html" title=" " alt="" coords="322,102,539,129"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="53,184,261,211"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="286,184,487,211"/>
+<area shape="rect" href="query__free_8hpp.html" title=" " alt="" coords="57,102,247,129"/>
+<area shape="rect" href="static__query_8hpp.html" title=" " alt="" coords="563,95,690,136"/>
+<area shape="rect" title=" " alt="" coords="383,333,454,360"/>
+<area shape="rect" title=" " alt="" coords="478,333,607,360"/>
+<area shape="rect" title=" " alt="" coords="632,333,771,360"/>
+<area shape="rect" title=" " alt="" coords="663,259,755,285"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="query_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2query_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2query_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2query_8hppdep">
+<area shape="rect" title=" " alt="" coords="3871,5,4041,47"/>
+<area shape="rect" href="buffer__registration_8hpp.html" title=" " alt="" coords="5,213,152,269"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="781,317,928,359"/>
+<area shape="rect" href="io__object__impl_8hpp.html" title=" " alt="" coords="252,102,401,158"/>
+<area shape="rect" href="any__executor_8hpp.html" title=" " alt="" coords="227,213,397,269"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="476,102,647,158"/>
+<area shape="rect" href="blocking_8cpp.html" title=" " alt="" coords="473,213,650,269"/>
+<area shape="rect" href="blocking__adaptation_8hpp.html" title=" " alt="" coords="725,102,912,158"/>
+<area shape="rect" href="blocking__adaptation_8cpp.html" title=" " alt="" coords="726,213,911,269"/>
+<area shape="rect" href="context__as_8hpp.html" title=" " alt="" coords="936,213,1107,269"/>
+<area shape="rect" href="mapping_8hpp.html" title=" " alt="" coords="1059,102,1229,158"/>
+<area shape="rect" href="mapping_8cpp.html" title=" " alt="" coords="1182,213,1359,269"/>
+<area shape="rect" href="outstanding__work_8hpp.html" title=" " alt="" coords="1304,102,1475,158"/>
+<area shape="rect" href="outstanding__work_8cpp.html" title=" " alt="" coords="1435,213,1613,269"/>
+<area shape="rect" href="prefer__only_8hpp.html" title=" " alt="" coords="1637,213,1808,269"/>
+<area shape="rect" href="relationship_8hpp.html" title=" " alt="" coords="1600,102,1771,158"/>
+<area shape="rect" href="relationship_8cpp.html" title=" " alt="" coords="1883,213,2061,269"/>
+<area shape="rect" href="cpp03_2can__query__free_8cpp.html" title=" " alt="" coords="1846,102,2042,158"/>
+<area shape="rect" href="cpp03_2can__query__member_8cpp.html" title=" " alt="" coords="2067,102,2291,158"/>
+<area shape="rect" href="cpp03_2can__query__not__applicable__free_8cpp.html" title=" " alt="" coords="2315,95,2554,165"/>
+<area shape="rect" href="cpp03_2can__query__not__applicable__member_8cpp.html" title=" " alt="" coords="2578,95,2817,165"/>
+<area shape="rect" href="cpp03_2can__query__not__applicable__static_8cpp.html" title=" " alt="" coords="2841,95,3079,165"/>
+<area shape="rect" href="cpp03_2can__query__not__applicable__unsupported_8cpp.html" title=" " alt="" coords="3103,95,3342,165"/>
+<area shape="rect" href="cpp03_2can__query__static_8cpp.html" title=" " alt="" coords="3366,102,3573,158"/>
+<area shape="rect" href="cpp03_2can__query__unsupported_8cpp.html" title=" " alt="" coords="3597,102,3848,158"/>
+<area shape="rect" href="cpp03_2query__free_8cpp.html" title=" " alt="" coords="3873,102,4039,158"/>
+<area shape="rect" href="cpp03_2query__member_8cpp.html" title=" " alt="" coords="4064,102,4259,158"/>
+<area shape="rect" href="cpp03_2query__static_8cpp.html" title=" " alt="" coords="4283,102,4459,158"/>
+<area shape="rect" href="cpp11_2can__query__free_8cpp.html" title=" " alt="" coords="4483,102,4679,158"/>
+<area shape="rect" href="cpp11_2can__query__member_8cpp.html" title=" " alt="" coords="4704,102,4928,158"/>
+<area shape="rect" href="cpp11_2can__query__not__applicable__free_8cpp.html" title=" " alt="" coords="4953,95,5191,165"/>
+<area shape="rect" href="cpp11_2can__query__not__applicable__member_8cpp.html" title=" " alt="" coords="5215,95,5454,165"/>
+<area shape="rect" href="cpp11_2can__query__not__applicable__static_8cpp.html" title=" " alt="" coords="5478,95,5717,165"/>
+<area shape="rect" href="cpp11_2can__query__not__applicable__unsupported_8cpp.html" title=" " alt="" coords="5741,95,5979,165"/>
+<area shape="rect" href="cpp11_2can__query__static_8cpp.html" title=" " alt="" coords="6003,102,6210,158"/>
+<area shape="rect" href="cpp11_2can__query__unsupported_8cpp.html" title=" " alt="" coords="6235,102,6485,158"/>
+<area shape="rect" href="cpp11_2query__free_8cpp.html" title=" " alt="" coords="6510,102,6677,158"/>
+<area shape="rect" href="cpp11_2query__member_8cpp.html" title=" " alt="" coords="6701,102,6896,158"/>
+<area shape="rect" href="cpp11_2query__static_8cpp.html" title=" " alt="" coords="6920,102,7096,158"/>
+<area shape="rect" href="cpp14_2can__query__free_8cpp.html" title=" " alt="" coords="7121,102,7317,158"/>
+<area shape="rect" href="cpp14_2can__query__member_8cpp.html" title=" " alt="" coords="7341,102,7565,158"/>
+<area shape="rect" href="cpp14_2can__query__not__applicable__free_8cpp.html" title=" " alt="" coords="7590,95,7829,165"/>
+<area shape="rect" href="cpp14_2can__query__not__applicable__member_8cpp.html" title=" " alt="" coords="7853,95,8091,165"/>
+<area shape="rect" href="cpp14_2can__query__not__applicable__static_8cpp.html" title=" " alt="" coords="8115,95,8354,165"/>
+<area shape="rect" href="cpp14_2can__query__not__applicable__unsupported_8cpp.html" title=" " alt="" coords="8378,95,8617,165"/>
+<area shape="rect" href="cpp14_2can__query__static_8cpp.html" title=" " alt="" coords="8641,102,8847,158"/>
+<area shape="rect" href="cpp14_2can__query__unsupported_8cpp.html" title=" " alt="" coords="8872,102,9123,158"/>
+<area shape="rect" href="cpp14_2query__free_8cpp.html" title=" " alt="" coords="9147,102,9314,158"/>
+<area shape="rect" href="cpp14_2query__member_8cpp.html" title=" " alt="" coords="9339,102,9533,158"/>
+<area shape="rect" href="cpp14_2query__static_8cpp.html" title=" " alt="" coords="9557,102,9733,158"/>
+</map>
+</div>
+</div>
+<p><a href="query_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio__query__fn_1_1call__traits.html">asio_query_fn::call_traits&lt; Impl, T, Properties, typename, typename, typename, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio__query__fn_1_1call__traits_3_01Impl_00_01T_00_01void_07Property_08_00_01enable__if__t9e986d877f9f8af709d1476f5753a7c0.html">asio_query_fn::call_traits&lt; Impl, T, void(Property), enable_if_t&lt; is_applicable_property&lt; decay_t&lt; T &gt;, decay_t&lt; Property &gt; &gt;::value &gt;, enable_if_t&lt; static_query&lt; T, Property &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio__query__fn_1_1call__traits_3_01Impl_00_01T_00_01void_07Property_08_00_01enable__if__td301049638d3fdc6037182bb0e9d1631.html">asio_query_fn::call_traits&lt; Impl, T, void(Property), enable_if_t&lt; is_applicable_property&lt; decay_t&lt; T &gt;, decay_t&lt; Property &gt; &gt;::value &gt;, enable_if_t&lt; !static_query&lt; T, Property &gt;::is_valid &gt;, enable_if_t&lt; query_member&lt; typename Impl::template proxy&lt; T &gt;::type, Property &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio__query__fn_1_1call__traits_3_01Impl_00_01T_00_01void_07Property_08_00_01enable__if__tb181378e470e5b1027028892ffa66a8c.html">asio_query_fn::call_traits&lt; Impl, T, void(Property), enable_if_t&lt; is_applicable_property&lt; decay_t&lt; T &gt;, decay_t&lt; Property &gt; &gt;::value &gt;, enable_if_t&lt; !static_query&lt; T, Property &gt;::is_valid &gt;, enable_if_t&lt; !query_member&lt; typename Impl::template proxy&lt; T &gt;::type, Property &gt;::is_valid &gt;, enable_if_t&lt; query_free&lt; T, Property &gt;::is_valid &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio__query__fn_1_1impl.html">asio_query_fn::impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio__query__fn_1_1impl_1_1proxy.html">asio_query_fn::impl::proxy&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio__query__fn_1_1static__instance.html">asio_query_fn::static_instance&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1can__query.html">asio::can_query&lt; T, Property &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1is__nothrow__query.html">asio::is_nothrow_query&lt; T, Property &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1query__result.html">asio::query_result&lt; T, Property &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio__query__fn"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio__query__fn.html">asio_query_fn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:aecee0160ad9fd66180683316b4846d4b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio__query__fn_1_1impl.html">asio_query_fn::impl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aecee0160ad9fd66180683316b4846d4b">asio::query_t</a></td></tr>
+<tr class="separator:aecee0160ad9fd66180683316b4846d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91495cbc0319a786cc883e78f1f463d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Property &gt; </td></tr>
+<tr class="memitem:aa91495cbc0319a786cc883e78f1f463d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aa91495cbc0319a786cc883e78f1f463d">asio::query_result_t</a> = typename query_result&lt; T, Property &gt;::type</td></tr>
+<tr class="separator:aa91495cbc0319a786cc883e78f1f463d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a2eaea83f59a12f8385172f3b04dfea93"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio__query__fn.html#a2eaea83f59a12f8385172f3b04dfea93">asio_query_fn::overload_type</a> { <a class="el" href="namespaceasio__query__fn.html#a2eaea83f59a12f8385172f3b04dfea93a9c75288648ebd17ccf4bfb21640e600f">asio_query_fn::static_value</a>
+, <a class="el" href="namespaceasio__query__fn.html#a2eaea83f59a12f8385172f3b04dfea93ac8ffff0eb2f730edc0f3ad37501bcd58">asio_query_fn::call_member</a>
+, <a class="el" href="namespaceasio__query__fn.html#a2eaea83f59a12f8385172f3b04dfea93a042ac2e40fd5f3d665abcb5efb15d73e">asio_query_fn::call_free</a>
+, <a class="el" href="namespaceasio__query__fn.html#a2eaea83f59a12f8385172f3b04dfea93ad489cd8c843cdefe752bdaf0bd1df8c4">asio_query_fn::ill_formed</a>
+ }</td></tr>
+<tr class="separator:a2eaea83f59a12f8385172f3b04dfea93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3d6e4aae3743b6a687ef4d0ecad4a29c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio__query__fn.html#a3d6e4aae3743b6a687ef4d0ecad4a29c">asio_query_fn::query</a> ()</td></tr>
+<tr class="separator:a3d6e4aae3743b6a687ef4d0ecad4a29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

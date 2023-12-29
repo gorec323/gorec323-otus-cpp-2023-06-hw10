@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура http::server2::reply</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehttp.html">http</a></li><li class="navelem"><a class="el" href="namespacehttp_1_1server2.html">server2</a></li><li class="navelem"><a class="el" href="structhttp_1_1server2_1_1reply.html">reply</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structhttp_1_1server2_1_1reply-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура http::server2::reply</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A reply to be sent to a client.  
+ <a href="structhttp_1_1server2_1_1reply.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cpp03_2http_2server2_2reply_8hpp_source.html">reply.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a3fa790dc50a0fe3158fea8014395f37f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37f">status_type</a> { <br />
+&#160;&#160;<a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa4eb29f5b8602d4c6cc7404d9cf5e1db1">ok</a> = 200
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fad36b0e06095431bbaddec50c3945aa89">created</a> = 201
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa6b6aa281d2cd145e95de528a4dd29d91">accepted</a> = 202
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fae56393a525f4dcf0637060562aa9a92f">no_content</a> = 204
+, <br />
+&#160;&#160;<a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37faf6e84de4b9c4bbf7cc9752a4be99c6e2">multiple_choices</a> = 300
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa40d5ac717e48e972b85e5eb8692894d4">moved_permanently</a> = 301
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fac970c54aecd32a362375b39752a1d350">moved_temporarily</a> = 302
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa710e23d03f19dc125ab7f3e459bcf6ec">not_modified</a> = 304
+, <br />
+&#160;&#160;<a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fabede413d880c0c339dfffbcca1e89ecb">bad_request</a> = 400
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa223ca3aaff1b29900d87bbcb85517447">unauthorized</a> = 401
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fad374278fb11dcda30f7d19a60fc85593">forbidden</a> = 403
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa3fe42b1c6aab74fda3a6e17a8f0c2faa">not_found</a> = 404
+, <br />
+&#160;&#160;<a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37faffedfb65f8ee9ee47665572a4cb4660b">internal_server_error</a> = 500
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa8f325bfea826cb1546bcb6a7c5edf3e6">not_implemented</a> = 501
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37faa1f9da8eced1f623973ff83e562a4453">bad_gateway</a> = 502
+, <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37fa62d1045cfe7a8e99041885dedf919646">service_unavailable</a> = 503
+<br />
+ }</td></tr>
+<tr class="memdesc:a3fa790dc50a0fe3158fea8014395f37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of the reply.  <a href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3fa790dc50a0fe3158fea8014395f37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a00c98704289be2836034778a204dc09c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classasio_1_1const__buffer.html">asio::const_buffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server2_1_1reply.html#a00c98704289be2836034778a204dc09c">to_buffers</a> ()</td></tr>
+<tr class="separator:a00c98704289be2836034778a204dc09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aea8502b4497f863923c79b702a93bd52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structhttp_1_1server2_1_1reply.html">reply</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server2_1_1reply.html#aea8502b4497f863923c79b702a93bd52">stock_reply</a> (<a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37f">status_type</a> <a class="el" href="structhttp_1_1server2_1_1reply.html#a9e2a8ac085023b5a71a0e08defb2e4e8">status</a>)</td></tr>
+<tr class="memdesc:aea8502b4497f863923c79b702a93bd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a stock reply.  <a href="structhttp_1_1server2_1_1reply.html#aea8502b4497f863923c79b702a93bd52">Подробнее...</a><br /></td></tr>
+<tr class="separator:aea8502b4497f863923c79b702a93bd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a9e2a8ac085023b5a71a0e08defb2e4e8"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37f">http::server2::reply::status_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server2_1_1reply.html#a9e2a8ac085023b5a71a0e08defb2e4e8">status</a></td></tr>
+<tr class="separator:a9e2a8ac085023b5a71a0e08defb2e4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a09d435e5cb23ab32da3d992526fb4d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structhttp_1_1server2_1_1header.html">header</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server2_1_1reply.html#a9a09d435e5cb23ab32da3d992526fb4d">headers</a></td></tr>
+<tr class="memdesc:a9a09d435e5cb23ab32da3d992526fb4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The headers to be included in the reply.  <a href="structhttp_1_1server2_1_1reply.html#a9a09d435e5cb23ab32da3d992526fb4d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9a09d435e5cb23ab32da3d992526fb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acbdcbd0551f075a09ffaf7a8e030ed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_1_1server2_1_1reply.html#a5acbdcbd0551f075a09ffaf7a8e030ed">content</a></td></tr>
+<tr class="memdesc:a5acbdcbd0551f075a09ffaf7a8e030ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The content to be sent in the reply.  <a href="structhttp_1_1server2_1_1reply.html#a5acbdcbd0551f075a09ffaf7a8e030ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5acbdcbd0551f075a09ffaf7a8e030ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A reply to be sent to a client. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a3fa790dc50a0fe3158fea8014395f37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa790dc50a0fe3158fea8014395f37f">&#9670;&nbsp;</a></span>status_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37f">http::server2::reply::status_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The status of the reply. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa4eb29f5b8602d4c6cc7404d9cf5e1db1"></a>ok&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fad36b0e06095431bbaddec50c3945aa89"></a>created&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa6b6aa281d2cd145e95de528a4dd29d91"></a>accepted&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fae56393a525f4dcf0637060562aa9a92f"></a>no_content&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37faf6e84de4b9c4bbf7cc9752a4be99c6e2"></a>multiple_choices&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa40d5ac717e48e972b85e5eb8692894d4"></a>moved_permanently&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fac970c54aecd32a362375b39752a1d350"></a>moved_temporarily&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa710e23d03f19dc125ab7f3e459bcf6ec"></a>not_modified&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fabede413d880c0c339dfffbcca1e89ecb"></a>bad_request&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa223ca3aaff1b29900d87bbcb85517447"></a>unauthorized&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fad374278fb11dcda30f7d19a60fc85593"></a>forbidden&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa3fe42b1c6aab74fda3a6e17a8f0c2faa"></a>not_found&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37faffedfb65f8ee9ee47665572a4cb4660b"></a>internal_server_error&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa8f325bfea826cb1546bcb6a7c5edf3e6"></a>not_implemented&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37faa1f9da8eced1f623973ff83e562a4453"></a>bad_gateway&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3fa790dc50a0fe3158fea8014395f37fa62d1045cfe7a8e99041885dedf919646"></a>service_unavailable&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aea8502b4497f863923c79b702a93bd52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8502b4497f863923c79b702a93bd52">&#9670;&nbsp;</a></span>stock_reply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhttp_1_1server2_1_1reply.html">reply</a> http::server2::reply::stock_reply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37f">reply::status_type</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a stock reply. </p>
+
+</div>
+</div>
+<a id="a00c98704289be2836034778a204dc09c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c98704289be2836034778a204dc09c">&#9670;&nbsp;</a></span>to_buffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classasio_1_1const__buffer.html">asio::const_buffer</a> &gt; http::server2::reply::to_buffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert the reply into a vector of buffers. The buffers do not own the underlying memory blocks, therefore the reply object must remain valid and not be changed until the write operation has completed. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a5acbdcbd0551f075a09ffaf7a8e030ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acbdcbd0551f075a09ffaf7a8e030ed">&#9670;&nbsp;</a></span>content</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string http::server2::reply::content</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The content to be sent in the reply. </p>
+
+</div>
+</div>
+<a id="a9a09d435e5cb23ab32da3d992526fb4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a09d435e5cb23ab32da3d992526fb4d">&#9670;&nbsp;</a></span>headers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structhttp_1_1server2_1_1header.html">header</a>&gt; http::server2::reply::headers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The headers to be included in the reply. </p>
+
+</div>
+</div>
+<a id="a9e2a8ac085023b5a71a0e08defb2e4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2a8ac085023b5a71a0e08defb2e4e8">&#9670;&nbsp;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structhttp_1_1server2_1_1reply.html#a3fa790dc50a0fe3158fea8014395f37f">http::server2::reply::status_type</a> http::server2::reply::status</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>_deps/asio-src/asio/src/examples/cpp03/http/server2/<a class="el" href="cpp03_2http_2server2_2reply_8hpp_source.html">reply.hpp</a></li>
+<li>_deps/asio-src/asio/src/examples/cpp03/http/server2/<a class="el" href="cpp03_2http_2server2_2reply_8cpp.html">reply.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

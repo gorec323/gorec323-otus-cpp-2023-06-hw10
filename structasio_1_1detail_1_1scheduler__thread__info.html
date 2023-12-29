@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура asio::detail::scheduler_thread_info</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structasio_1_1detail_1_1scheduler__thread__info.html">scheduler_thread_info</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasio_1_1detail_1_1scheduler__thread__info-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура asio::detail::scheduler_thread_info</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="scheduler__thread__info_8hpp_source.html">scheduler_thread_info.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::scheduler_thread_info:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1detail_1_1scheduler__thread__info__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1scheduler__thread__info_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1scheduler__thread__info_inherit__map" id="aasio_1_1detail_1_1scheduler__thread__info_inherit__map">
+<area shape="rect" title=" " alt="" coords="15,169,181,211"/>
+<area shape="rect" href="classasio_1_1detail_1_1thread__info__base.html" title=" " alt="" coords="26,80,170,121"/>
+<area shape="rect" href="classasio_1_1detail_1_1noncopyable.html" title=" " alt="" coords="5,5,191,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::detail::scheduler_thread_info:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1detail_1_1scheduler__thread__info__coll__graph.png" border="0" usemap="#aasio_1_1detail_1_1scheduler__thread__info_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1detail_1_1scheduler__thread__info_coll__map" id="aasio_1_1detail_1_1scheduler__thread__info_coll__map">
+<area shape="rect" title=" " alt="" coords="88,185,253,227"/>
+<area shape="rect" href="classasio_1_1detail_1_1thread__info__base.html" title=" " alt="" coords="5,81,149,123"/>
+<area shape="rect" href="classasio_1_1detail_1_1noncopyable.html" title=" " alt="" coords="78,5,263,32"/>
+<area shape="rect" href="classasio_1_1detail_1_1op__queue.html" title=" " alt="" coords="173,81,357,123"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:af360d229b51721c7ea393a93cfe5c418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1op__queue.html">op_queue</a>&lt; scheduler_operation &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1scheduler__thread__info.html#af360d229b51721c7ea393a93cfe5c418">private_op_queue</a></td></tr>
+<tr class="separator:af360d229b51721c7ea393a93cfe5c418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941639acaa25de25c5faffa81858ceee"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1scheduler__thread__info.html#a941639acaa25de25c5faffa81858ceee">private_outstanding_work</a></td></tr>
+<tr class="separator:a941639acaa25de25c5faffa81858ceee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_types_classasio_1_1detail_1_1thread__info__base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classasio_1_1detail_1_1thread__info__base')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="classasio_1_1detail_1_1thread__info__base.html">asio::detail::thread_info_base</a></td></tr>
+<tr class="memitem:ad2756a7dd6fc4403818de367b67a1041 inherit pub_types_classasio_1_1detail_1_1thread__info__base"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classasio_1_1detail_1_1thread__info__base.html#ad2756a7dd6fc4403818de367b67a1041a52590f020fe44093b6658ba66fa7eb8a">max_mem_index</a> = parallel_group_tag::end_mem_index
+ }</td></tr>
+<tr class="separator:ad2756a7dd6fc4403818de367b67a1041 inherit pub_types_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classasio_1_1detail_1_1thread__info__base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classasio_1_1detail_1_1thread__info__base')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classasio_1_1detail_1_1thread__info__base.html">asio::detail::thread_info_base</a></td></tr>
+<tr class="memitem:ae90db13f4b48a761a8a76701297e5902 inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#ae90db13f4b48a761a8a76701297e5902">thread_info_base</a> ()</td></tr>
+<tr class="separator:ae90db13f4b48a761a8a76701297e5902 inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec30066279a8b188f26e0b71e3c6a6e inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#adec30066279a8b188f26e0b71e3c6a6e">~thread_info_base</a> ()</td></tr>
+<tr class="separator:adec30066279a8b188f26e0b71e3c6a6e inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5ef9f31ce9d4c3fc4c5bd0f5976853 inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#ada5ef9f31ce9d4c3fc4c5bd0f5976853">capture_current_exception</a> ()</td></tr>
+<tr class="separator:ada5ef9f31ce9d4c3fc4c5bd0f5976853 inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6af895f02d3efef4688260676d2e37f inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#aa6af895f02d3efef4688260676d2e37f">rethrow_pending_exception</a> ()</td></tr>
+<tr class="separator:aa6af895f02d3efef4688260676d2e37f inherit pub_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classasio_1_1detail_1_1thread__info__base')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="classasio_1_1detail_1_1thread__info__base.html">asio::detail::thread_info_base</a></td></tr>
+<tr class="memitem:a67d64185fbcc9107fe9d3341cdf2d58f inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#a67d64185fbcc9107fe9d3341cdf2d58f">allocate</a> (<a class="el" href="classasio_1_1detail_1_1thread__info__base.html">thread_info_base</a> *this_thread, std::size_t size, std::size_t <a class="el" href="namespaceasio_1_1detail.html#a77704278b7ff68519f98ba817c0a1ac8">align</a>=<a class="el" href="config_8hpp.html#a9b611586329f27a6c756cfb8fec732f8">ASIO_DEFAULT_ALIGN</a>)</td></tr>
+<tr class="separator:a67d64185fbcc9107fe9d3341cdf2d58f inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565e3430cbcb313243df1bcfb4ab8d7b inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#a565e3430cbcb313243df1bcfb4ab8d7b">deallocate</a> (<a class="el" href="classasio_1_1detail_1_1thread__info__base.html">thread_info_base</a> *this_thread, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *pointer, std::size_t size)</td></tr>
+<tr class="separator:a565e3430cbcb313243df1bcfb4ab8d7b inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99879f235253ba7e4609564daeb14b42 inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memTemplParams" colspan="2">template&lt;typename Purpose &gt; </td></tr>
+<tr class="memitem:a99879f235253ba7e4609564daeb14b42 inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#a99879f235253ba7e4609564daeb14b42">allocate</a> (Purpose, <a class="el" href="classasio_1_1detail_1_1thread__info__base.html">thread_info_base</a> *this_thread, std::size_t size, std::size_t <a class="el" href="namespaceasio_1_1detail.html#a77704278b7ff68519f98ba817c0a1ac8">align</a>=<a class="el" href="config_8hpp.html#a9b611586329f27a6c756cfb8fec732f8">ASIO_DEFAULT_ALIGN</a>)</td></tr>
+<tr class="separator:a99879f235253ba7e4609564daeb14b42 inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59fd8ca563fa0dde53389a06e25aefa inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memTemplParams" colspan="2">template&lt;typename Purpose &gt; </td></tr>
+<tr class="memitem:af59fd8ca563fa0dde53389a06e25aefa inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1thread__info__base.html#af59fd8ca563fa0dde53389a06e25aefa">deallocate</a> (Purpose, <a class="el" href="classasio_1_1detail_1_1thread__info__base.html">thread_info_base</a> *this_thread, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *pointer, std::size_t size)</td></tr>
+<tr class="separator:af59fd8ca563fa0dde53389a06e25aefa inherit pub_static_methods_classasio_1_1detail_1_1thread__info__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af360d229b51721c7ea393a93cfe5c418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af360d229b51721c7ea393a93cfe5c418">&#9670;&nbsp;</a></span>private_op_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1op__queue.html">op_queue</a>&lt;scheduler_operation&gt; asio::detail::scheduler_thread_info::private_op_queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a941639acaa25de25c5faffa81858ceee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941639acaa25de25c5faffa81858ceee">&#9670;&nbsp;</a></span>private_outstanding_work</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long asio::detail::scheduler_thread_info::private_outstanding_work</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="scheduler__thread__info_8hpp_source.html">scheduler_thread_info.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

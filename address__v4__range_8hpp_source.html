@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/ip/address_v4_range.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_e4188af73cfb387d5873b6aad4743301.html">ip</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">address_v4_range.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="address__v4__range_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ip/address_v4_range.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_IP_ADDRESS_V4_RANGE_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_IP_ADDRESS_V4_RANGE_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="address__v4__iterator_8hpp.html">asio/ip/address_v4_iterator.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>ip {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range.html">   26</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span><a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html">   34</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span><a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>&lt;<a class="code" href="classasio_1_1ip_1_1address__v4.html">address_v4</a>&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ad35268ef217c4b5e394130103db95f19">   38</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">basic_address_iterator&lt;address_v4&gt;</a> <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ad35268ef217c4b5e394130103db95f19">iterator</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#acec1b489c0721e1becc9c972154446cf">   41</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#acec1b489c0721e1becc9c972154446cf">basic_address_range</a>() noexcept</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    : begin_(<a class="code" href="classasio_1_1ip_1_1address__v4.html">address_v4</a>()),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      end_(<a class="code" href="classasio_1_1ip_1_1address__v4.html">address_v4</a>())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a8022734bb0762ceffdf5f17fc331f706">   48</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a8022734bb0762ceffdf5f17fc331f706">basic_address_range</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a>&amp; first,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a>&amp; last) noexcept</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    : begin_(first),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      end_(last)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#aeb7e294dcf1f6e9ec18e8c91791a0f15">   56</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#aeb7e294dcf1f6e9ec18e8c91791a0f15">basic_address_range</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>&amp; other) noexcept</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    : begin_(other.begin_),</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      end_(other.end_)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#aa1817ed55ff3fa0f89e5ee1f69ede7a0">   63</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#aa1817ed55ff3fa0f89e5ee1f69ede7a0">basic_address_range</a>(<a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>&amp;&amp; other) noexcept</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    : begin_(<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a>&amp;&amp;<span class="keyword">&gt;</span>(other.begin_)),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      end_(<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a>&amp;&amp;<span class="keyword">&gt;</span>(other.end_))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a4201e9e90978e00119fa078f283da0e4">   70</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>&amp; <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a4201e9e90978e00119fa078f283da0e4">operator=</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>&amp; other) noexcept</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    begin_ = other.begin_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    end_ = other.end_;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#adf81e8b869b6a81371a857181fa9e201">   78</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>&amp; <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#adf81e8b869b6a81371a857181fa9e201">operator=</a>(<a class="code" href="classasio_1_1ip_1_1basic__address__range.html">basic_address_range</a>&amp;&amp; other) noexcept</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    begin_ = <span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a>&amp;&amp;<span class="keyword">&gt;</span>(other.begin_);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    end_ = <span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a>&amp;&amp;<span class="keyword">&gt;</span>(other.end_);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ad42e596264bd724419e4cffbb9df1358">   86</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a> <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ad42e596264bd724419e4cffbb9df1358">begin</a>() const noexcept</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> begin_;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a6a018d21963d42e5bfd94356ff8b4524">   92</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a> <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a6a018d21963d42e5bfd94356ff8b4524">end</a>() const noexcept</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> end_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a27c4386e6877bd99ed01f63684f57b83">   98</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a27c4386e6877bd99ed01f63684f57b83">empty</a>() const noexcept</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> size() == 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ab51e0809c7145d034b5127796c43cf60">  104</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ab51e0809c7145d034b5127796c43cf60">size</a>() const noexcept</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> end_-&gt;to_uint() - begin_-&gt;to_uint();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a98cc59cddbd1a245ba5b623bac9ccce8">  110</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a> <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a98cc59cddbd1a245ba5b623bac9ccce8">find</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1address__v4.html">address_v4</a>&amp; addr) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> addr &gt;= *begin_ &amp;&amp; addr &lt; *end_ ? <a class="code" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">iterator</a>(addr) : end_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  iterator begin_;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  iterator end_;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="namespaceasio_1_1ip.html#a523f6b08a197a93214b9059966764daa">  121</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html">basic_address_range&lt;address_v4&gt;</a> <a class="code" href="namespaceasio_1_1ip.html#a523f6b08a197a93214b9059966764daa">address_v4_range</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace ip</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_IP_ADDRESS_V4_RANGE_HPP</span></div>
+<div class="ttc" id="aaddress__v4__iterator_8hpp_html"><div class="ttname"><a href="address__v4__iterator_8hpp.html">address_v4_iterator.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1address__v4_html"><div class="ttname"><a href="classasio_1_1ip_1_1address__v4.html">asio::ip::address_v4</a></div><div class="ttdoc">Implements IP version 4 style addresses.</div><div class="ttdef"><b>Definition:</b> address_v4.hpp:47</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4_html"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v4_01_4.html">asio::ip::basic_address_iterator&lt; address_v4 &gt;</a></div><div class="ttdoc">An input iterator that can be used for traversing IPv4 addresses.</div><div class="ttdef"><b>Definition:</b> address_v4_iterator.hpp:38</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html">asio::ip::basic_address_range&lt; address_v4 &gt;</a></div><div class="ttdoc">Represents a range of IPv4 addresses.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:35</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_a27c4386e6877bd99ed01f63684f57b83"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a27c4386e6877bd99ed01f63684f57b83">asio::ip::basic_address_range&lt; address_v4 &gt;::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdoc">Determine whether the range is empty.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:98</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_a4201e9e90978e00119fa078f283da0e4"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a4201e9e90978e00119fa078f283da0e4">asio::ip::basic_address_range&lt; address_v4 &gt;::operator=</a></div><div class="ttdeci">basic_address_range &amp; operator=(const basic_address_range &amp;other) noexcept</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:70</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_a6a018d21963d42e5bfd94356ff8b4524"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a6a018d21963d42e5bfd94356ff8b4524">asio::ip::basic_address_range&lt; address_v4 &gt;::end</a></div><div class="ttdeci">iterator end() const noexcept</div><div class="ttdoc">Obtain an iterator that points to the end of the range.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:92</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_a8022734bb0762ceffdf5f17fc331f706"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a8022734bb0762ceffdf5f17fc331f706">asio::ip::basic_address_range&lt; address_v4 &gt;::basic_address_range</a></div><div class="ttdeci">basic_address_range(const iterator &amp;first, const iterator &amp;last) noexcept</div><div class="ttdoc">Construct an range that represents the given range of addresses.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:48</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_a98cc59cddbd1a245ba5b623bac9ccce8"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#a98cc59cddbd1a245ba5b623bac9ccce8">asio::ip::basic_address_range&lt; address_v4 &gt;::find</a></div><div class="ttdeci">iterator find(const address_v4 &amp;addr) const noexcept</div><div class="ttdoc">Find an address in the range.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:110</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_aa1817ed55ff3fa0f89e5ee1f69ede7a0"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#aa1817ed55ff3fa0f89e5ee1f69ede7a0">asio::ip::basic_address_range&lt; address_v4 &gt;::basic_address_range</a></div><div class="ttdeci">basic_address_range(basic_address_range &amp;&amp;other) noexcept</div><div class="ttdoc">Move constructor.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:63</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_ab51e0809c7145d034b5127796c43cf60"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ab51e0809c7145d034b5127796c43cf60">asio::ip::basic_address_range&lt; address_v4 &gt;::size</a></div><div class="ttdeci">std::size_t size() const noexcept</div><div class="ttdoc">Return the size of the range.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:104</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_acec1b489c0721e1becc9c972154446cf"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#acec1b489c0721e1becc9c972154446cf">asio::ip::basic_address_range&lt; address_v4 &gt;::basic_address_range</a></div><div class="ttdeci">basic_address_range() noexcept</div><div class="ttdoc">Construct an empty range.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:41</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_ad35268ef217c4b5e394130103db95f19"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ad35268ef217c4b5e394130103db95f19">asio::ip::basic_address_range&lt; address_v4 &gt;::iterator</a></div><div class="ttdeci">basic_address_iterator&lt; address_v4 &gt; iterator</div><div class="ttdoc">The type of an iterator that points into the range.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:38</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_ad42e596264bd724419e4cffbb9df1358"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#ad42e596264bd724419e4cffbb9df1358">asio::ip::basic_address_range&lt; address_v4 &gt;::begin</a></div><div class="ttdeci">iterator begin() const noexcept</div><div class="ttdoc">Obtain an iterator that points to the start of the range.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:86</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_adf81e8b869b6a81371a857181fa9e201"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#adf81e8b869b6a81371a857181fa9e201">asio::ip::basic_address_range&lt; address_v4 &gt;::operator=</a></div><div class="ttdeci">basic_address_range &amp; operator=(basic_address_range &amp;&amp;other) noexcept</div><div class="ttdoc">Move assignment operator.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:78</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4_html_aeb7e294dcf1f6e9ec18e8c91791a0f15"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range_3_01address__v4_01_4.html#aeb7e294dcf1f6e9ec18e8c91791a0f15">asio::ip::basic_address_range&lt; address_v4 &gt;::basic_address_range</a></div><div class="ttdeci">basic_address_range(const basic_address_range &amp;other) noexcept</div><div class="ttdoc">Copy constructor.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:56</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__address__range_html"><div class="ttname"><a href="classasio_1_1ip_1_1basic__address__range.html">asio::ip::basic_address_range</a></div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:26</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1ip_html_a523f6b08a197a93214b9059966764daa"><div class="ttname"><a href="namespaceasio_1_1ip.html#a523f6b08a197a93214b9059966764daa">asio::ip::address_v4_range</a></div><div class="ttdeci">basic_address_range&lt; address_v4 &gt; address_v4_range</div><div class="ttdoc">Represents a range of IPv4 addresses.</div><div class="ttdef"><b>Definition:</b> address_v4_range.hpp:121</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

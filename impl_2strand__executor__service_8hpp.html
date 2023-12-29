@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/detail/impl/strand_executor_service.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li><li class="navelem"><a class="el" href="dir_f467fadd7b42815e9d9ba4cf439fcda0.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл strand_executor_service.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="fenced__block_8hpp_source.html">asio/detail/fenced_block.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="detail_2recycling__allocator_8hpp_source.html">asio/detail/recycling_allocator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="executor__work__guard_8hpp_source.html">asio/executor_work_guard.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="defer_8hpp_source.html">asio/defer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dispatch_8hpp_source.html">asio/dispatch.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="post_8hpp_source.html">asio/post.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для strand_executor_service.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2strand__executor__service_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2strand__executor__service_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2strand__executor__service_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2strand__executor__service_8hpp">
+<area shape="rect" title=" " alt="" coords="4015,5,4177,76"/>
+<area shape="rect" href="fenced__block_8hpp.html" title=" " alt="" coords="5033,601,5172,643"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="3745,869,3953,896"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2194,869,2395,896"/>
+<area shape="rect" href="detail_2recycling__allocator_8hpp.html" title=" " alt="" coords="5394,512,5547,553"/>
+<area shape="rect" href="executor__work__guard_8hpp.html" title=" " alt="" coords="1851,199,1999,240"/>
+<area shape="rect" href="defer_8hpp.html" title=" " alt="" coords="1652,124,1767,151"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="3825,124,3961,151"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="3201,124,3311,151"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3515,944,3677,971"/>
+<area shape="rect" href="null__fenced__block_8hpp.html" title=" " alt="" coords="4282,691,4451,732"/>
+<area shape="rect" title=" " alt="" coords="6322,1019,6393,1045"/>
+<area shape="rect" title=" " alt="" coords="3451,1019,3581,1045"/>
+<area shape="rect" title=" " alt="" coords="3605,1019,3744,1045"/>
+<area shape="rect" href="noncopyable_8hpp.html" title=" " alt="" coords="4479,787,4684,814"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="5949,787,6123,814"/>
+<area shape="rect" href="thread__context_8hpp.html" title=" " alt="" coords="5196,601,5332,643"/>
+<area shape="rect" href="thread__info__base_8hpp.html" title=" " alt="" coords="5487,691,5623,732"/>
+<area shape="rect" title=" " alt="" coords="6254,869,6319,896"/>
+<area shape="rect" title=" " alt="" coords="6152,869,6229,896"/>
+<area shape="rect" title=" " alt="" coords="5837,869,5886,896"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="5910,869,6077,896"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="5429,869,5659,896"/>
+<area shape="rect" title=" " alt="" coords="5265,787,5332,814"/>
+<area shape="rect" href="call__stack_8hpp.html" title=" " alt="" coords="4700,698,4887,725"/>
+<area shape="rect" title=" " alt="" coords="5266,869,5353,896"/>
+<area shape="rect" href="multiple__exceptions_8hpp.html" title=" " alt="" coords="5457,787,5671,814"/>
+<area shape="rect" href="associated__executor_8hpp.html" title=" " alt="" coords="2507,288,2720,315"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="489,869,681,896"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="1957,363,2112,389"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="1536,437,1680,464"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="2839,787,2985,814"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="3416,437,3603,464"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="1704,698,1907,725"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="3049,363,3239,389"/>
+<area shape="rect" title=" " alt="" coords="539,944,631,971"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="1466,780,1649,821"/>
+<area shape="rect" href="include_2asio_2execution_2allocator_8hpp.html" title=" " alt="" coords="2110,609,2314,635"/>
+<area shape="rect" href="any__executor_8hpp.html" title=" " alt="" coords="2116,512,2260,553"/>
+<area shape="rect" href="bad__executor_8hpp.html" title=" " alt="" coords="3364,780,3508,821"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="701,609,904,635"/>
+<area shape="rect" href="blocking__adaptation_8hpp.html" title=" " alt="" coords="1182,601,1357,643"/>
+<area shape="rect" href="execution_2context_8hpp.html" title=" " alt="" coords="1432,609,1629,635"/>
+<area shape="rect" href="context__as_8hpp.html" title=" " alt="" coords="1561,512,1730,553"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="655,698,782,725"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="3988,787,4151,814"/>
+<area shape="rect" href="initiate__defer_8hpp.html" title=" " alt="" coords="1538,199,1678,240"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="4476,698,4676,725"/>
+<area shape="rect" href="initiate__dispatch_8hpp.html" title=" " alt="" coords="3147,199,3287,240"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="2691,199,2831,240"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2strand__executor__service_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2strand__executor__service_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2strand__executor__service_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2impl_2strand__executor__service_8hppdep">
+<area shape="rect" title=" " alt="" coords="776,5,939,76"/>
+<area shape="rect" href="strand__executor__service_8hpp.html" title=" " alt="" coords="751,124,963,180"/>
+<area shape="rect" href="strand__executor__service_8ipp.html" title=" " alt="" coords="679,228,841,299"/>
+<area shape="rect" href="strand_8hpp.html" title=" " alt="" coords="1102,243,1279,284"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="70,354,258,395"/>
+<area shape="rect" href="asio_8cpp.html" title=" " alt="" coords="5,465,152,507"/>
+<area shape="rect" href="spawn_8hpp.html" title=" " alt="" coords="585,354,764,395"/>
+<area shape="rect" href="cpp03_2spawn_2parallel__grep_8cpp.html" title=" " alt="" coords="176,458,360,514"/>
+<area shape="rect" href="cpp11_2spawn_2parallel__grep_8cpp.html" title=" " alt="" coords="788,458,972,514"/>
+<area shape="rect" href="ts_2executor_8hpp.html" title=" " alt="" coords="1087,354,1294,395"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="4075,354,4221,395"/>
+<area shape="rect" href="cpp11_2executors_2actor_8cpp.html" title=" " alt="" coords="4246,347,4402,403"/>
+<area shape="rect" href="cpp14_2executors_2actor_8cpp.html" title=" " alt="" coords="4426,347,4582,403"/>
+<area shape="rect" href="strand_8cpp.html" title=" " alt="" coords="4606,354,4789,395"/>
+<area shape="rect" href="cpp03_2spawn_2echo__server_8cpp.html" title=" " alt="" coords="385,458,562,514"/>
+<area shape="rect" href="cpp11_2spawn_2echo__server_8cpp.html" title=" " alt="" coords="586,458,763,514"/>
+<area shape="rect" href="net_8hpp.html" title=" " alt="" coords="996,465,1169,507"/>
+<area shape="rect" href="ts_2executor_8cpp.html" title=" " alt="" coords="1194,465,1406,507"/>
+<area shape="rect" href="examples_2cpp03_2allocation_2server_8cpp.html" title=" " alt="" coords="1430,458,1591,514"/>
+<area shape="rect" href="cpp03_2buffers_2reference__counted_8cpp.html" title=" " alt="" coords="1615,458,1838,514"/>
+<area shape="rect" href="cpp03_2chat_2chat__client_8cpp.html" title=" " alt="" coords="1862,458,2018,514"/>
+<area shape="rect" href="cpp03_2chat_2chat__server_8cpp.html" title=" " alt="" coords="2043,458,2203,514"/>
+<area shape="rect" href="posix__chat__client_8cpp.html" title=" " alt="" coords="2227,458,2426,514"/>
+<area shape="rect" href="cpp03_2echo_2async__tcp__echo__server_8cpp.html" title=" " alt="" coords="2450,451,2614,521"/>
+<area shape="rect" href="cpp03_2echo_2async__udp__echo__server_8cpp.html" title=" " alt="" coords="2639,451,2807,521"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__client_8cpp.html" title=" " alt="" coords="2831,451,3012,521"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__server_8cpp.html" title=" " alt="" coords="3036,451,3217,521"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__client_8cpp.html" title=" " alt="" coords="3242,451,3427,521"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__server_8cpp.html" title=" " alt="" coords="3451,451,3637,521"/>
+<area shape="rect" href="async__client_8cpp.html" title=" " alt="" coords="3661,458,3865,514"/>
+<area shape="rect" href="cpp03_2http_2client_2sync__client_8cpp.html" title=" " alt="" coords="3889,458,4085,514"/>
+<area shape="rect" href="cpp03_2http_2server_2connection_8hpp.html" title=" " alt="" coords="4211,577,4411,633"/>
+<area shape="rect" href="cpp03_2http_2server_2server_8hpp.html" title=" " alt="" coords="4161,688,4330,744"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server_2main_8cpp.html" title=" " alt="" coords="4103,792,4265,848"/>
+<area shape="rect" href="cpp03_2http_2server_2reply_8hpp.html" title=" " alt="" coords="4261,458,4421,514"/>
+<area shape="rect" href="cpp03_2http_2server2_2connection_8hpp.html" title=" " alt="" coords="4536,577,4744,633"/>
+<area shape="rect" href="cpp03_2http_2server2_2server_8hpp.html" title=" " alt="" coords="4519,688,4697,744"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server2_2main_8cpp.html" title=" " alt="" coords="4443,792,4613,848"/>
+<area shape="rect" href="io__context__pool_8hpp.html" title=" " alt="" coords="4769,569,4946,640"/>
+<area shape="rect" href="cpp03_2http_2server2_2reply_8hpp.html" title=" " alt="" coords="4597,458,4765,514"/>
+<area shape="rect" href="cpp03_2http_2server3_2connection_8hpp.html" title=" " alt="" coords="5072,577,5280,633"/>
+<area shape="rect" href="cpp03_2http_2server3_2server_8hpp.html" title=" " alt="" coords="5022,688,5199,744"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server3_2main_8cpp.html" title=" " alt="" coords="4962,792,5131,848"/>
+<area shape="rect" href="cpp03_2http_2server3_2reply_8hpp.html" title=" " alt="" coords="5083,458,5251,514"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server4_2main_8cpp.html" title=" " alt="" coords="5322,577,5491,633"/>
+<area shape="rect" href="cpp03_2http_2server4_2reply_8hpp.html" title=" " alt="" coords="5528,458,5696,514"/>
+<area shape="rect" href="cpp03_2http_2server4_2server_8hpp.html" title=" " alt="" coords="5326,458,5503,514"/>
+<area shape="rect" href="ping_8cpp.html" title=" " alt="" coords="5721,458,5877,514"/>
+<area shape="rect" href="cpp03_2invocation_2prioritised__handlers_8cpp.html" title=" " alt="" coords="5901,451,6065,521"/>
+<area shape="rect" href="cpp03_2iostreams_2daytime__client_8cpp.html" title=" " alt="" coords="6089,458,6308,514"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2strand__executor__service_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1strand__executor__service_1_1allocator__binder.html">asio::detail::strand_executor_service::allocator_binder&lt; F, Allocator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1strand__executor__service_1_1invoker_3_01Executor_00_01enable__if__t_3_014caeb6c3c90beee8b1a9f12f1630c04d.html">asio::detail::strand_executor_service::invoker&lt; Executor, enable_if_t&lt; execution::is_executor&lt; Executor &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1strand__executor__service_1_1invoker_3_01Executor_00_01enable__if__t_3_07f91b171bc5876b99087b84f580c1bb8.html">asio::detail::strand_executor_service::invoker&lt; Executor, enable_if_t&lt; execution::is_executor&lt; Executor &gt;::value &gt; &gt;::on_invoker_exit</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1strand__executor__service_1_1invoker_3_01Executor_00_01enable__if__t_3_01f87782174b19f41b0b778f0e121a81e9.html">asio::detail::strand_executor_service::invoker&lt; Executor, enable_if_t&lt; !execution::is_executor&lt; Executor &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1strand__executor__service_1_1invoker_3_01Executor_00_01enable__if__t_3_029bd79dd61c01354aa8fc00e4dc1a478.html">asio::detail::strand_executor_service::invoker&lt; Executor, enable_if_t&lt; !execution::is_executor&lt; Executor &gt;::value &gt; &gt;::on_invoker_exit</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

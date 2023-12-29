@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/ssl/detail/handshake_op.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_e872c7a9c28230c9190c76f5690636af.html">ssl</a></li><li class="navelem"><a class="el" href="dir_079859586084bdac99f523f8e7159d99.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">handshake_op.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="handshake__op_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ssl/detail/handshake_op.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_SSL_DETAIL_HANDSHAKE_OP_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_SSL_DETAIL_HANDSHAKE_OP_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="engine_8hpp.html">asio/ssl/detail/engine.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>ssl {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html">handshake_op</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a182acf9d176a24ba6022b2177fd3ef57">   31</a></span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a182acf9d176a24ba6022b2177fd3ef57">tracking_name</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;ssl::stream&lt;&gt;::async_handshake&quot;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a800c0bb3764e5422affa8d402de86adc">   36</a></span>&#160;  <a class="code" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a800c0bb3764e5422affa8d402de86adc">handshake_op</a>(<a class="code" href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320">stream_base::handshake_type</a> type)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    : type_(type)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a4d28c8b5944eb709c03ef1c1da01e018">   41</a></span>&#160;  <a class="code" href="classasio_1_1ssl_1_1detail_1_1engine.html#ab9812153941a6a93c9095f4e5ca8f915">engine::want</a> <a class="code" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a4d28c8b5944eb709c03ef1c1da01e018">operator()</a>(<a class="code" href="classasio_1_1ssl_1_1detail_1_1engine.html">engine</a>&amp; eng,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      std::size_t&amp; bytes_transferred)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    bytes_transferred = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> eng.<a class="code" href="classasio_1_1ssl_1_1detail_1_1engine.html#ac31b70e92ff614d173c7c9111dcc1d8c">handshake</a>(type_, ec);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Handler&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a30583a23ae4cc6c5e74122120fce27a3">   50</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a30583a23ae4cc6c5e74122120fce27a3">call_handler</a>(Handler&amp; handler,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">const</span> <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">const</span> std::size_t&amp;)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static_cast&lt;</span>Handler&amp;&amp;<span class="keyword">&gt;</span>(handler)(ec);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320">stream_base::handshake_type</a> type_;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// namespace ssl</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_SSL_DETAIL_HANDSHAKE_OP_HPP</span></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1engine_html"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1engine.html">asio::ssl::detail::engine</a></div><div class="ttdef"><b>Definition:</b> engine.hpp:34</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1engine_html_ab9812153941a6a93c9095f4e5ca8f915"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1engine.html#ab9812153941a6a93c9095f4e5ca8f915">asio::ssl::detail::engine::want</a></div><div class="ttdeci">want</div><div class="ttdef"><b>Definition:</b> engine.hpp:37</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1engine_html_ac31b70e92ff614d173c7c9111dcc1d8c"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1engine.html#ac31b70e92ff614d173c7c9111dcc1d8c">asio::ssl::detail::engine::handshake</a></div><div class="ttdeci">ASIO_DECL want handshake(stream_base::handshake_type type, asio::error_code &amp;ec)</div><div class="ttdef"><b>Definition:</b> engine.ipp:172</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1handshake__op_html"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1handshake__op.html">asio::ssl::detail::handshake_op</a></div><div class="ttdef"><b>Definition:</b> handshake_op.hpp:29</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1handshake__op_html_a182acf9d176a24ba6022b2177fd3ef57"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a182acf9d176a24ba6022b2177fd3ef57">asio::ssl::detail::handshake_op::tracking_name</a></div><div class="ttdeci">static constexpr const char * tracking_name()</div><div class="ttdef"><b>Definition:</b> handshake_op.hpp:31</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1handshake__op_html_a30583a23ae4cc6c5e74122120fce27a3"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a30583a23ae4cc6c5e74122120fce27a3">asio::ssl::detail::handshake_op::call_handler</a></div><div class="ttdeci">void call_handler(Handler &amp;handler, const asio::error_code &amp;ec, const std::size_t &amp;) const</div><div class="ttdef"><b>Definition:</b> handshake_op.hpp:50</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1handshake__op_html_a4d28c8b5944eb709c03ef1c1da01e018"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a4d28c8b5944eb709c03ef1c1da01e018">asio::ssl::detail::handshake_op::operator()</a></div><div class="ttdeci">engine::want operator()(engine &amp;eng, asio::error_code &amp;ec, std::size_t &amp;bytes_transferred) const</div><div class="ttdef"><b>Definition:</b> handshake_op.hpp:41</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1handshake__op_html_a800c0bb3764e5422affa8d402de86adc"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1handshake__op.html#a800c0bb3764e5422affa8d402de86adc">asio::ssl::detail::handshake_op::handshake_op</a></div><div class="ttdeci">handshake_op(stream_base::handshake_type type)</div><div class="ttdef"><b>Definition:</b> handshake_op.hpp:36</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1stream__base_html_a2f18813d3860bc8aee99249834d7c320"><div class="ttname"><a href="classasio_1_1ssl_1_1stream__base.html#a2f18813d3860bc8aee99249834d7c320">asio::ssl::stream_base::handshake_type</a></div><div class="ttdeci">handshake_type</div><div class="ttdoc">Different handshake types.</div><div class="ttdef"><b>Definition:</b> stream_base.hpp:32</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aengine_8hpp_html"><div class="ttname"><a href="engine_8hpp.html">engine.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

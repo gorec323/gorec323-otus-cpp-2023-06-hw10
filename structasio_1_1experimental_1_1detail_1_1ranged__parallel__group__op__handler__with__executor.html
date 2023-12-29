@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::experimental::detail::ranged_parallel_group_op_handler_with_executor&lt; Executor, Condition, Handler, Op, Allocator &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">ranged_parallel_group_op_handler_with_executor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::experimental::detail::ranged_parallel_group_op_handler_with_executor&lt; Executor, Condition, Handler, Op, Allocator &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2parallel__group_8hpp_source.html">parallel_group.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::experimental::detail::ranged_parallel_group_op_handler_with_executor&lt; Executor, Condition, Handler, Op, Allocator &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor__inherit__graph.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_3_01Executor_00_01Condition_00_01Handler_00_01Op_00_01Allocator_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_3_01Executor_00_01Condition_00_01Handler_00_01Op_00_01Allocator_01_4_inherit__map" id="aasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_3_01Executor_00_01Condition_00_01Handler_00_01Op_00_01Allocator_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="280,5,523,91"/>
+<area shape="rect" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html" title=" " alt="" coords="5,13,232,83"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::experimental::detail::ranged_parallel_group_op_handler_with_executor&lt; Executor, Condition, Handler, Op, Allocator &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor__coll__graph.png" border="0" usemap="#aasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_3_01Executor_00_01Condition_00_01Handler_00_01Op_00_01Allocator_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_3_01Executor_00_01Condition_00_01Handler_00_01Op_00_01Allocator_01_4_coll__map" id="aasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_3_01Executor_00_01Condition_00_01Handler_00_01Op_00_01Allocator_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="628,49,871,134"/>
+<area shape="rect" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html" title=" " alt="" coords="248,5,475,76"/>
+<area shape="rect" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_1_1cancel__proxy.html" title=" " alt="" coords="240,101,483,186"/>
+<area shape="rect" href="classasio_1_1cancellation__signal.html" title="A cancellation signal with a single slot." alt="" coords="5,123,141,164"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_1_1cancel__proxy.html">cancel_proxy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ac9f45ec721d88652f65281e19c1a3ca4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html">ranged_parallel_group_op_handler</a>&lt; Condition, Handler, Op, Allocator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#ac9f45ec721d88652f65281e19c1a3ca4">base_type</a></td></tr>
+<tr class="separator:ac9f45ec721d88652f65281e19c1a3ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d52a14655ecb1fbdb37d97d9e173b1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1cancellation__slot.html">asio::cancellation_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a32d52a14655ecb1fbdb37d97d9e173b1">cancellation_slot_type</a></td></tr>
+<tr class="separator:a32d52a14655ecb1fbdb37d97d9e173b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c98b820650c66038daeb432a73ac477"><td class="memItemLeft" align="right" valign="top">typedef Executor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a3c98b820650c66038daeb432a73ac477">executor_type</a></td></tr>
+<tr class="separator:a3c98b820650c66038daeb432a73ac477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html">asio::experimental::detail::ranged_parallel_group_op_handler&lt; Condition, Handler, Op, Allocator &gt;</a></td></tr>
+<tr class="memitem:abfbd7790c165f93cc77b1b400c45c470 inherit pub_types_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1cancellation__slot.html">asio::cancellation_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#abfbd7790c165f93cc77b1b400c45c470">cancellation_slot_type</a></td></tr>
+<tr class="separator:abfbd7790c165f93cc77b1b400c45c470 inherit pub_types_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0f9b226e0cd793d139f893280ef2c773"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a0f9b226e0cd793d139f893280ef2c773">ranged_parallel_group_op_handler_with_executor</a> (std::shared_ptr&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;&gt; state, <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a3c98b820650c66038daeb432a73ac477">executor_type</a> ex, std::size_t idx)</td></tr>
+<tr class="separator:a0f9b226e0cd793d139f893280ef2c773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7eec71edee344482fcbb59c7545e912"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#abfbd7790c165f93cc77b1b400c45c470">cancellation_slot_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#ac7eec71edee344482fcbb59c7545e912">get_cancellation_slot</a> () const noexcept</td></tr>
+<tr class="separator:ac7eec71edee344482fcbb59c7545e912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0322a9d1adb8267adcd5ba7ad0ffa14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a3c98b820650c66038daeb432a73ac477">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#ad0322a9d1adb8267adcd5ba7ad0ffa14">get_executor</a> () const noexcept</td></tr>
+<tr class="separator:ad0322a9d1adb8267adcd5ba7ad0ffa14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html">asio::experimental::detail::ranged_parallel_group_op_handler&lt; Condition, Handler, Op, Allocator &gt;</a></td></tr>
+<tr class="memitem:aef582f21f6092c19da4fb538a5478c83 inherit pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#aef582f21f6092c19da4fb538a5478c83">ranged_parallel_group_op_handler</a> (std::shared_ptr&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;&gt; state, std::size_t idx)</td></tr>
+<tr class="separator:aef582f21f6092c19da4fb538a5478c83 inherit pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29bfcc493e6608024284894721b98329 inherit pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#abfbd7790c165f93cc77b1b400c45c470">cancellation_slot_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#a29bfcc493e6608024284894721b98329">get_cancellation_slot</a> () const noexcept</td></tr>
+<tr class="separator:a29bfcc493e6608024284894721b98329 inherit pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d72bfda44590f5e9c3cfdeab086de3 inherit pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a83d72bfda44590f5e9c3cfdeab086de3 inherit pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#a83d72bfda44590f5e9c3cfdeab086de3">operator()</a> (Args... <a class="el" href="namespaceasio_1_1experimental_1_1detail.html#ab175239b1fe47ff8bb64b26833d8f62a">args</a>)</td></tr>
+<tr class="separator:a83d72bfda44590f5e9c3cfdeab086de3 inherit pub_methods_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a90883f71a27e3abfa155442d142f3b09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_1_1cancel__proxy.html">cancel_proxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a90883f71a27e3abfa155442d142f3b09">cancel_proxy_</a></td></tr>
+<tr class="separator:a90883f71a27e3abfa155442d142f3b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler')"><img src="closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html">asio::experimental::detail::ranged_parallel_group_op_handler&lt; Condition, Handler, Op, Allocator &gt;</a></td></tr>
+<tr class="memitem:a111bb3e022c926841e6414ea7b3c6eb0 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#a111bb3e022c926841e6414ea7b3c6eb0">state_</a></td></tr>
+<tr class="separator:a111bb3e022c926841e6414ea7b3c6eb0 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f931b0d590a11869e326613739c7ee3 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#a8f931b0d590a11869e326613739c7ee3">idx_</a></td></tr>
+<tr class="separator:a8f931b0d590a11869e326613739c7ee3 inherit pub_attribs_structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="ac9f45ec721d88652f65281e19c1a3ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f45ec721d88652f65281e19c1a3ca4">&#9670;&nbsp;</a></span>base_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html">ranged_parallel_group_op_handler</a>&lt; Condition, Handler, Op, Allocator&gt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">asio::experimental::detail::ranged_parallel_group_op_handler_with_executor</a>&lt; Executor, Condition, Handler, Op, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#ac9f45ec721d88652f65281e19c1a3ca4">base_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32d52a14655ecb1fbdb37d97d9e173b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d52a14655ecb1fbdb37d97d9e173b1">&#9670;&nbsp;</a></span>cancellation_slot_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1cancellation__slot.html">asio::cancellation_slot</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">asio::experimental::detail::ranged_parallel_group_op_handler_with_executor</a>&lt; Executor, Condition, Handler, Op, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#abfbd7790c165f93cc77b1b400c45c470">cancellation_slot_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c98b820650c66038daeb432a73ac477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c98b820650c66038daeb432a73ac477">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Executor <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">asio::experimental::detail::ranged_parallel_group_op_handler_with_executor</a>&lt; Executor, Condition, Handler, Op, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a3c98b820650c66038daeb432a73ac477">executor_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a0f9b226e0cd793d139f893280ef2c773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9b226e0cd793d139f893280ef2c773">&#9670;&nbsp;</a></span>ranged_parallel_group_op_handler_with_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">asio::experimental::detail::ranged_parallel_group_op_handler_with_executor</a>&lt; Executor, Condition, Handler, Op, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">ranged_parallel_group_op_handler_with_executor</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__state.html">ranged_parallel_group_state</a>&lt; Condition, Handler, Op, Allocator &gt;&gt;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a3c98b820650c66038daeb432a73ac477">executor_type</a>&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ac7eec71edee344482fcbb59c7545e912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7eec71edee344482fcbb59c7545e912">&#9670;&nbsp;</a></span>get_cancellation_slot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler.html#abfbd7790c165f93cc77b1b400c45c470">cancellation_slot_type</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">asio::experimental::detail::ranged_parallel_group_op_handler_with_executor</a>&lt; Executor, Condition, Handler, Op, Allocator &gt;::get_cancellation_slot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0322a9d1adb8267adcd5ba7ad0ffa14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0322a9d1adb8267adcd5ba7ad0ffa14">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html#a3c98b820650c66038daeb432a73ac477">executor_type</a> <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">asio::experimental::detail::ranged_parallel_group_op_handler_with_executor</a>&lt; Executor, Condition, Handler, Op, Allocator &gt;::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a90883f71a27e3abfa155442d142f3b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90883f71a27e3abfa155442d142f3b09">&#9670;&nbsp;</a></span>cancel_proxy_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Condition , typename Handler , typename Op , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor_1_1cancel__proxy.html">cancel_proxy</a>* <a class="el" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__op__handler__with__executor.html">asio::experimental::detail::ranged_parallel_group_op_handler_with_executor</a>&lt; Executor, Condition, Handler, Op, Allocator &gt;::cancel_proxy_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/impl/<a class="el" href="impl_2parallel__group_8hpp_source.html">parallel_group.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

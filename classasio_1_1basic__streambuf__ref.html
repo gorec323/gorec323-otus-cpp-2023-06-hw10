@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::basic_streambuf_ref&lt; Allocator &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1basic__streambuf__ref-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::basic_streambuf_ref&lt; Allocator &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Adapts <a class="el" href="classasio_1_1basic__streambuf.html" title="Automatically resizable buffer class based on std::streambuf.">basic_streambuf</a> to the dynamic buffer sequence type requirements.  
+ <a href="classasio_1_1basic__streambuf__ref.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="basic__streambuf_8hpp_source.html">basic_streambuf.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a0c7b3968c18c6707e56b307ebb2b3214"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1basic__streambuf.html">basic_streambuf</a>&lt; Allocator &gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a></td></tr>
+<tr class="memdesc:a0c7b3968c18c6707e56b307ebb2b3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type used to represent the input sequence as a list of buffers.  <a href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0c7b3968c18c6707e56b307ebb2b3214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282ca19ec4038b1a78330b550def7bb7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1basic__streambuf.html">basic_streambuf</a>&lt; Allocator &gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a></td></tr>
+<tr class="memdesc:a282ca19ec4038b1a78330b550def7bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type used to represent the output sequence as a list of buffers.  <a href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a282ca19ec4038b1a78330b550def7bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:acdcaf7be686c6674c86b0a04ce4a5edd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#acdcaf7be686c6674c86b0a04ce4a5edd">basic_streambuf_ref</a> (<a class="el" href="classasio_1_1basic__streambuf.html">basic_streambuf</a>&lt; Allocator &gt; &amp;sb)</td></tr>
+<tr class="memdesc:acdcaf7be686c6674c86b0a04ce4a5edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classasio_1_1basic__streambuf__ref.html" title="Adapts basic_streambuf to the dynamic buffer sequence type requirements.">basic_streambuf_ref</a> for the given <a class="el" href="classasio_1_1basic__streambuf.html" title="Automatically resizable buffer class based on std::streambuf.">basic_streambuf</a> object.  <a href="classasio_1_1basic__streambuf__ref.html#acdcaf7be686c6674c86b0a04ce4a5edd">Подробнее...</a><br /></td></tr>
+<tr class="separator:acdcaf7be686c6674c86b0a04ce4a5edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dcba8416d7139c58464b819a18c41b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a78dcba8416d7139c58464b819a18c41b">basic_streambuf_ref</a> (const <a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a78dcba8416d7139c58464b819a18c41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy construct a <a class="el" href="classasio_1_1basic__streambuf__ref.html" title="Adapts basic_streambuf to the dynamic buffer sequence type requirements.">basic_streambuf_ref</a>.  <a href="classasio_1_1basic__streambuf__ref.html#a78dcba8416d7139c58464b819a18c41b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a78dcba8416d7139c58464b819a18c41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd77ab02a8a0d1feade877d5a6db118d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#abd77ab02a8a0d1feade877d5a6db118d">basic_streambuf_ref</a> (<a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:abd77ab02a8a0d1feade877d5a6db118d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move construct a <a class="el" href="classasio_1_1basic__streambuf__ref.html" title="Adapts basic_streambuf to the dynamic buffer sequence type requirements.">basic_streambuf_ref</a>.  <a href="classasio_1_1basic__streambuf__ref.html#abd77ab02a8a0d1feade877d5a6db118d">Подробнее...</a><br /></td></tr>
+<tr class="separator:abd77ab02a8a0d1feade877d5a6db118d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b39a8f72b5f08dab729f7fc28bf7b9"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#ad5b39a8f72b5f08dab729f7fc28bf7b9">size</a> () const noexcept</td></tr>
+<tr class="memdesc:ad5b39a8f72b5f08dab729f7fc28bf7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the input sequence.  <a href="classasio_1_1basic__streambuf__ref.html#ad5b39a8f72b5f08dab729f7fc28bf7b9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad5b39a8f72b5f08dab729f7fc28bf7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4350f8c4241a20945657bba39cd5ec91"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a4350f8c4241a20945657bba39cd5ec91">max_size</a> () const noexcept</td></tr>
+<tr class="memdesc:a4350f8c4241a20945657bba39cd5ec91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum size of the dynamic buffer.  <a href="classasio_1_1basic__streambuf__ref.html#a4350f8c4241a20945657bba39cd5ec91">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4350f8c4241a20945657bba39cd5ec91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5784c540141c37f436487432c5046537"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a5784c540141c37f436487432c5046537">capacity</a> () const noexcept</td></tr>
+<tr class="memdesc:a5784c540141c37f436487432c5046537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current capacity of the dynamic buffer.  <a href="classasio_1_1basic__streambuf__ref.html#a5784c540141c37f436487432c5046537">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5784c540141c37f436487432c5046537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3b7cb5b0c9feb639bd1c22656f3798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#aed3b7cb5b0c9feb639bd1c22656f3798">data</a> () const noexcept</td></tr>
+<tr class="memdesc:aed3b7cb5b0c9feb639bd1c22656f3798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of buffers that represents the input sequence.  <a href="classasio_1_1basic__streambuf__ref.html#aed3b7cb5b0c9feb639bd1c22656f3798">Подробнее...</a><br /></td></tr>
+<tr class="separator:aed3b7cb5b0c9feb639bd1c22656f3798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688a8763c3df8f42c736dadb08ed622c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a688a8763c3df8f42c736dadb08ed622c">prepare</a> (std::size_t n)</td></tr>
+<tr class="separator:a688a8763c3df8f42c736dadb08ed622c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fea0506affe2c0b9b4276825ab4d1d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a4fea0506affe2c0b9b4276825ab4d1d8">commit</a> (std::size_t n)</td></tr>
+<tr class="memdesc:a4fea0506affe2c0b9b4276825ab4d1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move bytes from the output sequence to the input sequence.  <a href="classasio_1_1basic__streambuf__ref.html#a4fea0506affe2c0b9b4276825ab4d1d8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4fea0506affe2c0b9b4276825ab4d1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74662ed4cd5a80f4b387fb93e798bacd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a74662ed4cd5a80f4b387fb93e798bacd">consume</a> (std::size_t n)</td></tr>
+<tr class="memdesc:a74662ed4cd5a80f4b387fb93e798bacd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove characters from the input sequence.  <a href="classasio_1_1basic__streambuf__ref.html#a74662ed4cd5a80f4b387fb93e798bacd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a74662ed4cd5a80f4b387fb93e798bacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename Allocator&gt;<br />
+class asio::basic_streambuf_ref&lt; Allocator &gt;</h3>
+
+<p>Adapts <a class="el" href="classasio_1_1basic__streambuf.html" title="Automatically resizable buffer class based on std::streambuf.">basic_streambuf</a> to the dynamic buffer sequence type requirements. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a0c7b3968c18c6707e56b307ebb2b3214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7b3968c18c6707e56b307ebb2b3214">&#9670;&nbsp;</a></span>const_buffers_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1basic__streambuf.html">basic_streambuf</a>&lt;Allocator&gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a> <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type used to represent the input sequence as a list of buffers. </p>
+
+</div>
+</div>
+<a id="a282ca19ec4038b1a78330b550def7bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282ca19ec4038b1a78330b550def7bb7">&#9670;&nbsp;</a></span>mutable_buffers_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1basic__streambuf.html">basic_streambuf</a>&lt;Allocator&gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a> <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type used to represent the output sequence as a list of buffers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="acdcaf7be686c6674c86b0a04ce4a5edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcaf7be686c6674c86b0a04ce4a5edd">&#9670;&nbsp;</a></span>basic_streambuf_ref() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1basic__streambuf.html">basic_streambuf</a>&lt; Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classasio_1_1basic__streambuf__ref.html" title="Adapts basic_streambuf to the dynamic buffer sequence type requirements.">basic_streambuf_ref</a> for the given <a class="el" href="classasio_1_1basic__streambuf.html" title="Automatically resizable buffer class based on std::streambuf.">basic_streambuf</a> object. </p>
+
+</div>
+</div>
+<a id="a78dcba8416d7139c58464b819a18c41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78dcba8416d7139c58464b819a18c41b">&#9670;&nbsp;</a></span>basic_streambuf_ref() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a>&lt; Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy construct a <a class="el" href="classasio_1_1basic__streambuf__ref.html" title="Adapts basic_streambuf to the dynamic buffer sequence type requirements.">basic_streambuf_ref</a>. </p>
+
+</div>
+</div>
+<a id="abd77ab02a8a0d1feade877d5a6db118d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd77ab02a8a0d1feade877d5a6db118d">&#9670;&nbsp;</a></span>basic_streambuf_ref() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::<a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref</a>&lt; Allocator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move construct a <a class="el" href="classasio_1_1basic__streambuf__ref.html" title="Adapts basic_streambuf to the dynamic buffer sequence type requirements.">basic_streambuf_ref</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a5784c540141c37f436487432c5046537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5784c540141c37f436487432c5046537">&#9670;&nbsp;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current capacity of the dynamic buffer. </p>
+
+</div>
+</div>
+<a id="a4fea0506affe2c0b9b4276825ab4d1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fea0506affe2c0b9b4276825ab4d1d8">&#9670;&nbsp;</a></span>commit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::commit </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move bytes from the output sequence to the input sequence. </p>
+
+</div>
+</div>
+<a id="a74662ed4cd5a80f4b387fb93e798bacd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74662ed4cd5a80f4b387fb93e798bacd">&#9670;&nbsp;</a></span>consume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::consume </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove characters from the input sequence. </p>
+
+</div>
+</div>
+<a id="aed3b7cb5b0c9feb639bd1c22656f3798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3b7cb5b0c9feb639bd1c22656f3798">&#9670;&nbsp;</a></span>data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a0c7b3968c18c6707e56b307ebb2b3214">const_buffers_type</a> <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a list of buffers that represents the input sequence. </p>
+
+</div>
+</div>
+<a id="a4350f8c4241a20945657bba39cd5ec91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4350f8c4241a20945657bba39cd5ec91">&#9670;&nbsp;</a></span>max_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::max_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the maximum size of the dynamic buffer. </p>
+
+</div>
+</div>
+<a id="a688a8763c3df8f42c736dadb08ed622c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688a8763c3df8f42c736dadb08ed622c">&#9670;&nbsp;</a></span>prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__streambuf__ref.html#a282ca19ec4038b1a78330b550def7bb7">mutable_buffers_type</a> <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::prepare </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a list of buffers that represents the output sequence, with the given size. </p>
+
+</div>
+</div>
+<a id="ad5b39a8f72b5f08dab729f7fc28bf7b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b39a8f72b5f08dab729f7fc28bf7b9">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a>&lt; Allocator &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the size of the input sequence. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="basic__streambuf_8hpp_source.html">basic_streambuf.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

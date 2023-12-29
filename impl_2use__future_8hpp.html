@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/impl/use_future.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_8c6c10ebdd857c41e2ac833cd6d1f150.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл use_future.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &quot;<a class="el" href="include_2asio_2async__result_8hpp_source.html">asio/async_result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory_8hpp_source.html">asio/detail/memory.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dispatch_8hpp_source.html">asio/dispatch.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error__code_8hpp_source.html">asio/error_code.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="execution_8hpp_source.html">asio/execution.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="packaged__task_8hpp_source.html">asio/packaged_task.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="system__error_8hpp_source.html">asio/system_error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="system__executor_8hpp_source.html">asio/system_executor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для use_future.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2use__future_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2impl_2use__future_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2impl_2use__future_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2impl_2use__future_8hpp">
+<area shape="rect" title=" " alt="" coords="4675,5,4839,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3952,1004,4113,1031"/>
+<area shape="rect" title=" " alt="" coords="5263,109,5317,136"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="3834,847,3997,874"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2406,929,2614,956"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3519,929,3720,956"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="5212,847,5387,874"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="4385,109,4521,136"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="3731,423,3921,449"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="1883,497,2027,524"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="4795,847,4945,874"/>
+<area shape="rect" href="packaged__task_8hpp.html" title=" " alt="" coords="6162,847,6341,874"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="4969,847,5136,874"/>
+<area shape="rect" title=" " alt="" coords="5835,1079,5905,1105"/>
+<area shape="rect" title=" " alt="" coords="4047,1079,4176,1105"/>
+<area shape="rect" title=" " alt="" coords="3883,1079,4022,1105"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="855,929,1047,956"/>
+<area shape="rect" title=" " alt="" coords="905,1004,997,1031"/>
+<area shape="rect" title=" " alt="" coords="5275,929,5340,956"/>
+<area shape="rect" title=" " alt="" coords="4413,929,4490,956"/>
+<area shape="rect" title=" " alt="" coords="5149,929,5199,956"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="5665,929,5832,956"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="4784,929,5015,956"/>
+<area shape="rect" title=" " alt="" coords="5715,1004,5782,1031"/>
+<area shape="rect" href="initiate__dispatch_8hpp.html" title=" " alt="" coords="3283,184,3423,225"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="1106,758,1309,785"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="4413,847,4567,874"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="5614,847,5814,874"/>
+<area shape="rect" href="associated__allocator_8hpp.html" title=" " alt="" coords="4072,847,4287,874"/>
+<area shape="rect" href="associated__executor_8hpp.html" title=" " alt="" coords="3485,348,3698,375"/>
+<area shape="rect" href="include_2asio_2execution_2allocator_8hpp.html" title=" " alt="" coords="2912,669,3116,695"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="2431,669,2634,695"/>
+<area shape="rect" href="prefer_8hpp.html" title=" " alt="" coords="2008,847,2127,874"/>
+<area shape="rect" href="work__dispatcher_8hpp.html" title=" " alt="" coords="3083,273,3311,300"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="1192,840,1375,881"/>
+<area shape="rect" href="impl_2system__executor_8hpp.html" title=" " alt="" coords="2826,847,3050,874"/>
+<area shape="rect" href="any__executor_8hpp.html" title=" " alt="" coords="2642,572,2786,613"/>
+<area shape="rect" href="bad__executor_8hpp.html" title=" " alt="" coords="2202,840,2346,881"/>
+<area shape="rect" href="blocking__adaptation_8hpp.html" title=" " alt="" coords="1749,661,1924,703"/>
+<area shape="rect" href="execution_2context_8hpp.html" title=" " alt="" coords="1122,669,1319,695"/>
+<area shape="rect" href="context__as_8hpp.html" title=" " alt="" coords="1200,572,1369,613"/>
+<area shape="rect" href="mapping_8hpp.html" title=" " alt="" coords="1949,669,2154,695"/>
+<area shape="rect" href="occupancy_8hpp.html" title=" " alt="" coords="883,669,1097,695"/>
+<area shape="rect" href="outstanding__work_8hpp.html" title=" " alt="" coords="3141,661,3338,703"/>
+<area shape="rect" href="prefer__only_8hpp.html" title=" " alt="" coords="1891,751,2049,792"/>
+<area shape="rect" href="relationship_8hpp.html" title=" " alt="" coords="633,669,859,695"/>
+<area shape="rect" title=" " alt="" coords="6071,929,6147,956"/>
+<area shape="rect" title=" " alt="" coords="5908,929,5995,956"/>
+<area shape="rect" title=" " alt="" coords="4652,929,4760,956"/>
+<area shape="rect" href="future_8hpp.html" title=" " alt="" coords="6171,929,6332,956"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2use__future_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__invoker.html">asio::detail::promise_invoker&lt; T, F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__executor.html">asio::detail::promise_executor&lt; T, Blocking &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__creator.html">asio::detail::promise_creator&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__0.html">asio::detail::promise_handler_0</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__ec__0.html">asio::detail::promise_handler_ec_0</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__ex__0.html">asio::detail::promise_handler_ex_0</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__1.html">asio::detail::promise_handler_1&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__ec__1.html">asio::detail::promise_handler_ec_1&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__ex__1.html">asio::detail::promise_handler_ex_1&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__n.html">asio::detail::promise_handler_n&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__ec__n.html">asio::detail::promise_handler_ec_n&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__ex__n.html">asio::detail::promise_handler_ex_n&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07asio_1_1error__code_08_4.html">asio::detail::promise_handler_selector&lt; void(asio::error_code)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07std_1_1exception__ptr_08_4.html">asio::detail::promise_handler_selector&lt; void(std::exception_ptr)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07Arg_08_4.html">asio::detail::promise_handler_selector&lt; void(Arg)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07asio_1_1error__code_00_01Arg_08_4.html">asio::detail::promise_handler_selector&lt; void(asio::error_code, Arg)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07std_1_1exception__ptr_00_01Arg_08_4.html">asio::detail::promise_handler_selector&lt; void(std::exception_ptr, Arg)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07Arg_8_8_8_08_4.html">asio::detail::promise_handler_selector&lt; void(Arg...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07asio_1_1error__code_00_01Arg_8_8_8_08_4.html">asio::detail::promise_handler_selector&lt; void(asio::error_code, Arg...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler__selector_3_01void_07std_1_1exception__ptr_00_01Arg_8_8_8_08_4.html">asio::detail::promise_handler_selector&lt; void(std::exception_ptr, Arg...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__handler.html">asio::detail::promise_handler&lt; Signature, Allocator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1promise__function__wrapper.html">asio::detail::promise_function_wrapper&lt; Function &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1promise__async__result.html">asio::detail::promise_async_result&lt; Signature, Allocator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1packaged__token.html">asio::detail::packaged_token&lt; Function, Allocator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1packaged__handler.html">asio::detail::packaged_handler&lt; Function, Allocator, Result &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1packaged__async__result.html">asio::detail::packaged_async_result&lt; Function, Allocator, Result &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result_3_01use__future__t_3_01Allocator_01_4_00_01Result_07Args_8_8_8_08_4.html">asio::async_result&lt; use_future_t&lt; Allocator &gt;, Result(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result_3_01detail_1_1packaged__token_3_01Function_00_01Allocator_01_4_00_01Result_07Args_8_8_8_08_4.html">asio::async_result&lt; detail::packaged_token&lt; Function, Allocator &gt;, Result(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1equality__comparable_3_01asio_1_1detail_1_1promise__executor_3_01T_00_01Blocking_01_4_01_4.html">asio::traits::equality_comparable&lt; asio::detail::promise_executor&lt; T, Blocking &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1execute__member_3_01asio_1_1detail_1_1promise__executor_3_01T_00_01Blocking_01_4_00_01Function_01_4.html">asio::traits::execute_member&lt; asio::detail::promise_executor&lt; T, Blocking &gt;, Function &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1query__static__constexpr__member_3_01asio_1_1detail_1_1promise__executorbd6b399baa0ea788ee6d8ff9d1f2cc96.html">asio::traits::query_static_constexpr_member&lt; asio::detail::promise_executor&lt; T, Blocking &gt;, Property, typename asio::enable_if&lt; asio::is_convertible&lt; Property, asio::execution::blocking_t &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1query__member_3_01asio_1_1detail_1_1promise__executor_3_01T_00_01Blockin6149346b35255a0679e034dc9b38f8a8.html">asio::traits::query_member&lt; asio::detail::promise_executor&lt; T, Blocking &gt;, execution::context_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1require__member_3_01asio_1_1detail_1_1promise__executor_3_01T_00_01Blockf4d6f026a72d871685b9d66fa7262abf.html">asio::traits::require_member&lt; asio::detail::promise_executor&lt; T, Blocking &gt;, execution::blocking_t::possibly_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1traits_1_1require__member_3_01asio_1_1detail_1_1promise__executor_3_01T_00_01Block238ba8257581754c314fa26b4f89662b.html">asio::traits::require_member&lt; asio::detail::promise_executor&lt; T, Blocking &gt;, execution::blocking_t::never_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1traits"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1traits.html">asio::traits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aa4aab77419fc7e4a8684b85274235bd5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F , typename... Args&gt; </td></tr>
+<tr class="memitem:aa4aab77419fc7e4a8684b85274235bd5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#aa4aab77419fc7e4a8684b85274235bd5">asio::detail::promise_invoke_and_set</a> (std::promise&lt; T &gt; &amp;p, F &amp;f, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:aa4aab77419fc7e4a8684b85274235bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e5433b0765adb8d6876bf4a54eec23"><td class="memTemplParams" colspan="2">template&lt;typename F , typename... Args&gt; </td></tr>
+<tr class="memitem:ab8e5433b0765adb8d6876bf4a54eec23"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#ab8e5433b0765adb8d6876bf4a54eec23">asio::detail::promise_invoke_and_set</a> (std::promise&lt; <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt; &amp;p, F &amp;f, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:ab8e5433b0765adb8d6876bf4a54eec23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

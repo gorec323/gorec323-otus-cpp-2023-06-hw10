@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/experimental/co_spawn.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_4b7ec68c1dc10d9fd423a12bdfeaade0.html">experimental</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">co_spawn.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="experimental_2co__spawn_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// experimental/co_spawn.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2021-2023 Klemens D. Morgenstern</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//                         (klemens dot morgenstern at gmx dot net)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_EXPERIMENTAL_CO_SPAWN_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_EXPERIMENTAL_CO_SPAWN_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="compose_8hpp.html">asio/compose.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coro_8hpp.html">asio/experimental/coro.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="experimental_2deferred_8hpp.html">asio/experimental/deferred.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="experimental_2prepend_8hpp.html">asio/experimental/prepend.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="redirect__error_8hpp.html">asio/redirect_error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>experimental {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U, <span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">   34</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">coro_spawn_op</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a98871bc8cdb33eaae8ac92976c466f1a">   36</a></span>&#160;  <a class="code" href="structasio_1_1experimental_1_1coro.html">coro&lt;T, U, Executor&gt;</a> <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a98871bc8cdb33eaae8ac92976c466f1a">c</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a120ae990e5e3542cc96ef345d8cae75d">   38</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a120ae990e5e3542cc96ef345d8cae75d">operator()</a>(<span class="keyword">auto</span>&amp; <span class="keyword">self</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">auto</span> op = <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a98871bc8cdb33eaae8ac92976c466f1a">c</a>.<a class="code" href="structasio_1_1experimental_1_1coro.html#a9498096302cfc50e8171db393460841e">async_resume</a>(<a class="code" href="namespaceasio.html#a3a930211f940077a2cd1fb88532f9a9d">deferred</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::move(op)((<a class="code" href="namespaceasio.html#a316656e80eb9e91ec172ae49f001df9e">prepend</a>)(std::move(<span class="keyword">self</span>), 0));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a471403717eb1aa05e37937928ad196e2">   44</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a471403717eb1aa05e37937928ad196e2">operator()</a>(<span class="keyword">auto</span>&amp; <span class="keyword">self</span>, <span class="keywordtype">int</span>, <span class="keyword">auto</span>... res)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">self</span>.complete(std::move(res)...);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">   64</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">ASIO_INITFN_AUTO_RESULT_TYPE</a>(</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    CompletionToken, <span class="keywordtype">void</span>(std::exception_ptr, <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>))</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">   66</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">co_spawn</a>(<a class="code" href="namespacecoro.html">coro</a>&lt;<span class="keywordtype">void</span>, <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, Executor&gt; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">auto</span> <a class="code" href="namespaceasio_1_1execution.html">exec</a> = <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>.get_executor();</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a1558c3d3b0c140ab3bc99d78d8372ed8">   69</a></span>&#160;  <span class="keywordflow">return</span> async_compose&lt;CompletionToken, void(std::exception_ptr, T)&gt;(</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">detail::coro_spawn_op&lt;void, T, Executor&gt;</a>{std::move(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>)},</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>, <a class="code" href="namespaceasio_1_1execution.html">exec</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">ASIO_INITFN_AUTO_RESULT_TYPE</a>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    CompletionToken, <span class="keywordtype">void</span>(std::exception_ptr, <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>))</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">co_spawn</a>(<a class="code" href="namespacecoro.html">coro</a>&lt;<span class="keywordtype">void</span>(), <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, Executor&gt; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">auto</span> <a class="code" href="namespaceasio_1_1execution.html">exec</a> = <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>.get_executor();</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#ac7dd4cdae510a6353182475976cb8594">   91</a></span>&#160;  <span class="keywordflow">return</span> async_compose&lt;CompletionToken, void(std::exception_ptr, T)&gt;(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">detail::coro_spawn_op</a>&lt;<span class="keywordtype">void</span>(), <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, Executor&gt;{std::move(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>)},</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>, <a class="code" href="namespaceasio_1_1execution.html">exec</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor, <span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">ASIO_INITFN_AUTO_RESULT_TYPE</a>(CompletionToken, <span class="keywordtype">void</span>(<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>))</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">  109</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">co_spawn</a>(<a class="code" href="namespacecoro.html">coro</a>&lt;<span class="keywordtype">void</span>() noexcept, <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, Executor&gt; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">auto</span> <a class="code" href="namespaceasio_1_1execution.html">exec</a> = <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>.get_executor();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span> async_compose&lt;CompletionToken, void(T)&gt;(</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">detail::coro_spawn_op</a>&lt;<span class="keywordtype">void</span>() noexcept, <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, Executor&gt;{std::move(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>)},</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>, <a class="code" href="namespaceasio_1_1execution.html">exec</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor, <span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#ad88bbac9488527afe4a8e0055fcbf6d3">  129</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">ASIO_INITFN_AUTO_RESULT_TYPE</a>(</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    CompletionToken, <span class="keywordtype">void</span>(std::exception_ptr))</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">  131</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">co_spawn</a>(<a class="code" href="namespacecoro.html">coro</a>&lt;<span class="keywordtype">void</span>, <span class="keywordtype">void</span>, Executor&gt; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">auto</span> <a class="code" href="namespaceasio_1_1execution.html">exec</a> = <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>.get_executor();</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a0b3e8c93a15f335b266e14235f20291b">  134</a></span>&#160;  <span class="keywordflow">return</span> async_compose&lt;CompletionToken, void(std::exception_ptr)&gt;(</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">detail::coro_spawn_op&lt;void, void, Executor&gt;</a>{std::move(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>)},</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>, <a class="code" href="namespaceasio_1_1execution.html">exec</a>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor, <span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">ASIO_INITFN_AUTO_RESULT_TYPE</a>(</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    CompletionToken, <span class="keywordtype">void</span>(std::exception_ptr))</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">co_spawn</a>(<a class="code" href="namespacecoro.html">coro</a>&lt;<span class="keywordtype">void</span>(), <span class="keywordtype">void</span>, Executor&gt; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">auto</span> <a class="code" href="namespaceasio_1_1execution.html">exec</a> = <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>.get_executor();</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a89249a63579083cae4bab8a2513e4a49">  156</a></span>&#160;  <span class="keywordflow">return</span> async_compose&lt;CompletionToken, void(std::exception_ptr)&gt;(</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">detail::coro_spawn_op</a>&lt;<span class="keywordtype">void</span>(), <span class="keywordtype">void</span>, Executor&gt;{std::move(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>)},</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>, <a class="code" href="namespaceasio_1_1execution.html">exec</a>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor, <span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">ASIO_INITFN_AUTO_RESULT_TYPE</a>(CompletionToken, <span class="keywordtype">void</span>())</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a157a82d35a5d4826c5151c7e8f146607">  174</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">co_spawn</a>(<a class="code" href="namespacecoro.html">coro</a>&lt;<span class="keywordtype">void</span>() noexcept, <span class="keywordtype">void</span>, Executor&gt; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keyword">auto</span> <a class="code" href="namespaceasio_1_1execution.html">exec</a> = <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>.get_executor();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordflow">return</span> async_compose&lt;CompletionToken, void()&gt;(</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">detail::coro_spawn_op</a>&lt;<span class="keywordtype">void</span>() noexcept, <span class="keywordtype">void</span>, Executor&gt;{std::move(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>)},</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>, <a class="code" href="namespaceasio_1_1execution.html">exec</a>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ASIO_EXPERIMENTAL_CO_SPAWN_HPP</span></div>
+<div class="ttc" id="acompose_8hpp_html"><div class="ttname"><a href="compose_8hpp.html">compose.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="acoro_8hpp_html"><div class="ttname"><a href="coro_8hpp.html">coro.hpp</a></div></div>
+<div class="ttc" id="aexperimental_2deferred_8hpp_html"><div class="ttname"><a href="experimental_2deferred_8hpp.html">deferred.hpp</a></div></div>
+<div class="ttc" id="aexperimental_2prepend_8hpp_html"><div class="ttname"><a href="experimental_2prepend_8hpp.html">prepend.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html"><div class="ttname"><a href="namespaceasio_1_1execution.html">asio::execution</a></div><div class="ttdef"><b>Definition:</b> handler_work.hpp:46</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a4607a9754bf2707c054f0ff16b958b82"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">asio::experimental::c</a></div><div class="ttdeci">Executor c</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a9975daab69c7b93e79ce807410ffb9d9"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">asio::experimental::token</a></div><div class="ttdeci">Executor CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:67</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_aac83b8b49276d49470c7a45cdb5eb2bf"><div class="ttname"><a href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">asio::experimental::ASIO_INITFN_AUTO_RESULT_TYPE</a></div><div class="ttdeci">ASIO_INITFN_AUTO_RESULT_TYPE(CompletionToken, void(std::exception_ptr, T)) co_spawn(coro&lt; void</div><div class="ttdoc">Spawn a resumable coroutine.</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_af580e11a7608adfd35588421fbc592b3"><div class="ttname"><a href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">asio::experimental::co_spawn</a></div><div class="ttdeci">co_spawn(coro&lt; void() noexcept, T, Executor &gt; c, CompletionToken &amp;&amp;token)</div><div class="ttdoc">Spawn a resumable coroutine.</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:109</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a316656e80eb9e91ec172ae49f001df9e"><div class="ttname"><a href="namespaceasio.html#a316656e80eb9e91ec172ae49f001df9e">asio::prepend</a></div><div class="ttdeci">constexpr ASIO_NODISCARD prepend_t&lt; decay_t&lt; CompletionToken &gt;, decay_t&lt; Values &gt;... &gt; prepend(CompletionToken &amp;&amp;completion_token, Values &amp;&amp;... values)</div><div class="ttdef"><b>Definition:</b> prepend.hpp:52</div></div>
+<div class="ttc" id="anamespaceasio_html_a3a930211f940077a2cd1fb88532f9a9d"><div class="ttname"><a href="namespaceasio.html#a3a930211f940077a2cd1fb88532f9a9d">asio::deferred</a></div><div class="ttdeci">constexpr deferred_t deferred</div><div class="ttdef"><b>Definition:</b> deferred.hpp:707</div></div>
+<div class="ttc" id="anamespacecoro_html"><div class="ttname"><a href="namespacecoro.html">coro</a></div><div class="ttdef"><b>Definition:</b> allocator.cpp:26</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="aredirect__error_8hpp_html"><div class="ttname"><a href="redirect__error_8hpp.html">redirect_error.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1coro_html"><div class="ttname"><a href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro&lt; T, U, Executor &gt;</a></div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1coro_html_a9498096302cfc50e8171db393460841e"><div class="ttname"><a href="structasio_1_1experimental_1_1coro.html#a9498096302cfc50e8171db393460841e">asio::experimental::coro::async_resume</a></div><div class="ttdeci">requires std::is_void_v&lt; input_type &gt; auto async_resume(CompletionToken &amp;&amp;token) &amp;</div><div class="ttdoc">Resume the coroutine.</div><div class="ttdef"><b>Definition:</b> coro.hpp:200</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1coro__spawn__op_html"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html">asio::experimental::detail::coro_spawn_op</a></div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:35</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1coro__spawn__op_html_a120ae990e5e3542cc96ef345d8cae75d"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a120ae990e5e3542cc96ef345d8cae75d">asio::experimental::detail::coro_spawn_op::operator()</a></div><div class="ttdeci">void operator()(auto &amp;self)</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:38</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1coro__spawn__op_html_a471403717eb1aa05e37937928ad196e2"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a471403717eb1aa05e37937928ad196e2">asio::experimental::detail::coro_spawn_op::operator()</a></div><div class="ttdeci">void operator()(auto &amp;self, int, auto... res)</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:44</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1coro__spawn__op_html_a98871bc8cdb33eaae8ac92976c466f1a"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1coro__spawn__op.html#a98871bc8cdb33eaae8ac92976c466f1a">asio::experimental::detail::coro_spawn_op::c</a></div><div class="ttdeci">coro&lt; T, U, Executor &gt; c</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:36</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

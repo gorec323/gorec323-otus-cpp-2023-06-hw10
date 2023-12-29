@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/associated_executor.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">associated_executor.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="associated__executor_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// associated_executor.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_ASSOCIATED_EXECUTOR_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_ASSOCIATED_EXECUTOR_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="associator_8hpp.html">asio/associator.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="functional_8hpp.html">asio/detail/functional.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="execution_2executor_8hpp.html">asio/execution/executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="is__executor_8hpp.html">asio/is_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="system__executor_8hpp.html">asio/system_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">struct </span>associated_executor;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__executor__type.html">   36</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1has__executor__type.html">has_executor_type</a> : false_type</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__executor__type_3_01T_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1has__executor__type.html">has_executor_type</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, <a class="code" href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">void_t</a>&lt;typename <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>::executor_type&gt;&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    : true_type</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E, <span class="keyword">typename</span> = <span class="keywordtype">void</span>, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl.html">   47</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html">associated_executor_impl</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl.html#af4db345240082838a749bfc8a6503237">   49</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#af4db345240082838a749bfc8a6503237">asio_associated_executor_is_unspecialised</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl.html#a8841e5d05ee6ff876d351144594acafe">   51</a></span>&#160;  <span class="keyword">typedef</span> E <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8841e5d05ee6ff876d351144594acafe">type</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">   53</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8841e5d05ee6ff876d351144594acafe">type</a> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;) noexcept</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8841e5d05ee6ff876d351144594acafe">type</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl.html#a754eee0f00ef9fb838b9ed4eb90c0fc6">   58</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8841e5d05ee6ff876d351144594acafe">type</a>&amp; <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a754eee0f00ef9fb838b9ed4eb90c0fc6">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;, <span class="keyword">const</span> E&amp; e) noexcept</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> e;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html">   65</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html">associated_executor_impl</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, E, <a class="code" href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">void_t</a>&lt;typename <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>::executor_type&gt;&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a3b9b7dd9839061d816990ab0d2bf3a5e">   67</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> T::executor_type <a class="code" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a3b9b7dd9839061d816990ab0d2bf3a5e">type</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a76556c616fc575b0f0a4ce1109659806">   69</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a76556c616fc575b0f0a4ce1109659806">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t) noexcept</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    -&gt; decltype(t.get_executor())</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> t.get_executor();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a5541f8cbae192a9eac43884b68bdc8e6">   75</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a5541f8cbae192a9eac43884b68bdc8e6">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, <span class="keyword">const</span> E&amp;) noexcept</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    -&gt; decltype(t.get_executor())</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> t.get_executor();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E&gt;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01enable__if__t_3_01_9has__ex4645c28d27c946d3df881ed422070dae.html">   83</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html">associated_executor_impl</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, E,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    !<a class="code" href="structasio_1_1detail_1_1has__executor__type.html">has_executor_type</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&gt;::value</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  &gt;,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">void_t</a>&lt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    typename associator&lt;associated_executor, T, E&gt;::type</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  &gt;&gt; : <a class="code" href="structasio_1_1associator.html">associator</a>&lt;associated_executor, T, E&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor = system_executor&gt;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="structasio_1_1associated__executor.html">  117</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1associated__executor.html">associated_executor</a></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;#if !defined(GENERATING_DOCUMENTATION)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  : <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html">detail::associated_executor_impl</a>&lt;T, Executor&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keyword">typedef</span> see_below <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8841e5d05ee6ff876d351144594acafe">type</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keyword">static</span> decltype(<span class="keyword">auto</span>) <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t) noexcept;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">static</span> decltype(<span class="keyword">auto</span>) <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">get</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, <span class="keyword">const</span> Executor&amp; ex) noexcept;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> <span class="keyword">typename</span> <a class="code" href="classasio_1_1basic__system__executor.html">associated_executor&lt;T&gt;::type</a></div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="namespaceasio.html#ababee4f6241fcc45f5d49b89085e6a62">  143</a></span>&#160;<a class="code" href="namespaceasio.html#ababee4f6241fcc45f5d49b89085e6a62">get_associated_executor</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t) noexcept</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">associated_executor&lt;T&gt;::get</a>(t);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="namespaceasio.html#ad0f3ac3ddba1f3274b26dcb8f4b8c6f6">  153</a></span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespaceasio.html#ababee4f6241fcc45f5d49b89085e6a62">get_associated_executor</a>(</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, <span class="keyword">const</span> Executor&amp; ex,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <a class="code" href="structasio_1_1is__executor.html">is_executor&lt;Executor&gt;::value</a> || <a class="code" href="structasio_1_1execution_1_1is__executor.html">execution::is_executor&lt;Executor&gt;::value</a></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    &gt; = 0) noexcept</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  -&gt; decltype(<a class="code" href="structasio_1_1associated__executor.html">associated_executor</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, Executor&gt;::get(t, ex))</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">associated_executor&lt;T, Executor&gt;::get</a>(t, ex);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ExecutionContext&gt;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> <span class="keyword">typename</span> associated_executor&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">typename</span> ExecutionContext::executor_type&gt;::type</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="namespaceasio.html#afa0760a87f5f3fd90c84bd107449be00">  171</a></span>&#160;<a class="code" href="namespaceasio.html#ababee4f6241fcc45f5d49b89085e6a62">get_associated_executor</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, ExecutionContext&amp; ctx,</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;is_convertible&lt;ExecutionContext&amp;,</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp;&gt;::value&gt; = 0) noexcept</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structasio_1_1associated__executor.html">associated_executor</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">typename</span> ExecutionContext::executor_type&gt;::get(t, ctx.get_executor());</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor = system_executor&gt;</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="namespaceasio.html#a947971ca8e87d2d9d7791b50b7fed58d">  180</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceasio.html#a947971ca8e87d2d9d7791b50b7fed58d">associated_executor_t</a> = <span class="keyword">typename</span> <a class="code" href="classasio_1_1basic__system__executor.html">associated_executor&lt;T, Executor&gt;::type</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__forwarding__base.html">  185</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__executor__forwarding__base.html">associated_executor_forwarding_base</a></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;};</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E&gt;</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__forwarding__base_3_01T_00_01E_00_01enable__if__t_325b47c7c9bc509f00b733b79155bc118.html">  190</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1associated__executor__forwarding__base.html">associated_executor_forwarding_base</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>, E,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">enable_if_t</a>&lt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      is_same&lt;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        typename <a class="code" href="structasio_1_1associated__executor.html">associated_executor</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;          E&gt;::<a class="code" href="structasio_1_1detail_1_1associated__executor__forwarding__base_3_01T_00_01E_00_01enable__if__t_325b47c7c9bc509f00b733b79155bc118.html#af289286e56cd356aa5ef9fd4d0295546">asio_associated_executor_is_unspecialised</a>,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      &gt;::value</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    &gt;&gt;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1associated__executor__forwarding__base_3_01T_00_01E_00_01enable__if__t_325b47c7c9bc509f00b733b79155bc118.html#af289286e56cd356aa5ef9fd4d0295546">  199</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__forwarding__base_3_01T_00_01E_00_01enable__if__t_325b47c7c9bc509f00b733b79155bc118.html#af289286e56cd356aa5ef9fd4d0295546">asio_associated_executor_is_unspecialised</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;};</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html">  206</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1associated__executor.html">associated_executor</a>&lt;reference_wrapper&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&gt;, Executor&gt;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;#if !defined(GENERATING_DOCUMENTATION)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  : <a class="code" href="structasio_1_1detail_1_1associated__executor__forwarding__base.html">detail::associated_executor_forwarding_base</a>&lt;T, Executor&gt;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#a0e4f5adf144cd0d0f29f129b18d640b7">  213</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classasio_1_1basic__system__executor.html">associated_executor&lt;T, Executor&gt;::type</a> <a class="code" href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#a0e4f5adf144cd0d0f29f129b18d640b7">type</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#af0c9569092c12e53ec7af08be836eb06">  217</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classasio_1_1basic__system__executor.html">type</a> <a class="code" href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#af0c9569092c12e53ec7af08be836eb06">get</a>(reference_wrapper&lt;T&gt; t) noexcept</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">associated_executor&lt;T, Executor&gt;::get</a>(t.get());</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#ad94918313f9cdba9e38a87b38441930d">  224</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#ad94918313f9cdba9e38a87b38441930d">get</a>(reference_wrapper&lt;T&gt; t, <span class="keyword">const</span> Executor&amp; ex) noexcept</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    -&gt; decltype(<a class="code" href="structasio_1_1associated__executor.html">associated_executor&lt;T, Executor&gt;::get</a>(t.get(), ex))</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">associated_executor&lt;T, Executor&gt;::get</a>(t.get(), ex);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;};</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_ASSOCIATED_EXECUTOR_HPP</span></div>
+<div class="ttc" id="aassociator_8hpp_html"><div class="ttname"><a href="associator_8hpp.html">associator.hpp</a></div></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="aclassasio_1_1basic__system__executor_html"><div class="ttname"><a href="classasio_1_1basic__system__executor.html">asio::basic_system_executor&lt; execution::blocking_t::possibly_t, execution::relationship_t::fork_t, std::allocator&lt; void &gt; &gt;</a></div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_html"><div class="ttname"><a href="classasio_1_1execution__context.html">asio::execution_context</a></div><div class="ttdoc">A context for function object execution.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:106</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_ae9be9d972e87a686de9e5bd8bd93b39d"><div class="ttname"><a href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a></div><div class="ttdeci">#define ASIO_NODISCARD</div><div class="ttdef"><b>Definition:</b> config.hpp:1375</div></div>
+<div class="ttc" id="aexecution_2executor_8hpp_html"><div class="ttname"><a href="execution_2executor_8hpp.html">executor.hpp</a></div></div>
+<div class="ttc" id="afunctional_8hpp_html"><div class="ttname"><a href="functional_8hpp.html">functional.hpp</a></div></div>
+<div class="ttc" id="ais__executor_8hpp_html"><div class="ttname"><a href="is__executor_8hpp.html">is_executor.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a05e34b80842ec318c893ca4eb6316c42"><div class="ttname"><a href="namespaceasio.html#a05e34b80842ec318c893ca4eb6316c42">asio::void_t</a></div><div class="ttdeci">typename void_type&lt; T &gt;::type void_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:149</div></div>
+<div class="ttc" id="anamespaceasio_html_a847109104af3016e3bb18a8ab5b2123c"><div class="ttname"><a href="namespaceasio.html#a847109104af3016e3bb18a8ab5b2123c">asio::enable_if_t</a></div><div class="ttdeci">typename std::enable_if&lt; C, T &gt;::type enable_if_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:62</div></div>
+<div class="ttc" id="anamespaceasio_html_a947971ca8e87d2d9d7791b50b7fed58d"><div class="ttname"><a href="namespaceasio.html#a947971ca8e87d2d9d7791b50b7fed58d">asio::associated_executor_t</a></div><div class="ttdeci">typename associated_executor&lt; T, Executor &gt;::type associated_executor_t</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:180</div></div>
+<div class="ttc" id="anamespaceasio_html_ababee4f6241fcc45f5d49b89085e6a62"><div class="ttname"><a href="namespaceasio.html#ababee4f6241fcc45f5d49b89085e6a62">asio::get_associated_executor</a></div><div class="ttdeci">ASIO_NODISCARD associated_executor&lt; T &gt;::type get_associated_executor(const T &amp;t) noexcept</div><div class="ttdoc">Helper function to obtain an object's associated executor.</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:143</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4_html_a0e4f5adf144cd0d0f29f129b18d640b7"><div class="ttname"><a href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#a0e4f5adf144cd0d0f29f129b18d640b7">asio::associated_executor&lt; reference_wrapper&lt; T &gt;, Executor &gt;::type</a></div><div class="ttdeci">associated_executor&lt; T, Executor &gt;::type type</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:213</div></div>
+<div class="ttc" id="astructasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4_html_ad94918313f9cdba9e38a87b38441930d"><div class="ttname"><a href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#ad94918313f9cdba9e38a87b38441930d">asio::associated_executor&lt; reference_wrapper&lt; T &gt;, Executor &gt;::get</a></div><div class="ttdeci">static auto get(reference_wrapper&lt; T &gt; t, const Executor &amp;ex) noexcept -&gt; decltype(associated_executor&lt; T, Executor &gt;::get(t.get(), ex))</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:224</div></div>
+<div class="ttc" id="astructasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4_html_af0c9569092c12e53ec7af08be836eb06"><div class="ttname"><a href="structasio_1_1associated__executor_3_01reference__wrapper_3_01T_01_4_00_01Executor_01_4.html#af0c9569092c12e53ec7af08be836eb06">asio::associated_executor&lt; reference_wrapper&lt; T &gt;, Executor &gt;::get</a></div><div class="ttdeci">static type get(reference_wrapper&lt; T &gt; t) noexcept</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:217</div></div>
+<div class="ttc" id="astructasio_1_1associated__executor_html"><div class="ttname"><a href="structasio_1_1associated__executor.html">asio::associated_executor</a></div><div class="ttdoc">Traits type used to obtain the executor associated with an object.</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:121</div></div>
+<div class="ttc" id="astructasio_1_1associator_html"><div class="ttname"><a href="structasio_1_1associator.html">asio::associator</a></div><div class="ttdoc">Used to generically specialise associators for a type.</div><div class="ttdef"><b>Definition:</b> associator.hpp:28</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__forwarding__base_3_01T_00_01E_00_01enable__if__t_325b47c7c9bc509f00b733b79155bc118_html_af289286e56cd356aa5ef9fd4d0295546"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__forwarding__base_3_01T_00_01E_00_01enable__if__t_325b47c7c9bc509f00b733b79155bc118.html#af289286e56cd356aa5ef9fd4d0295546">asio::detail::associated_executor_forwarding_base&lt; T, E, enable_if_t&lt; is_same&lt; typename associated_executor&lt; T, E &gt;::asio_associated_executor_is_unspecialised, void &gt;::value &gt; &gt;::asio_associated_executor_is_unspecialised</a></div><div class="ttdeci">void asio_associated_executor_is_unspecialised</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:199</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__forwarding__base_html"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__forwarding__base.html">asio::detail::associated_executor_forwarding_base</a></div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:186</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4_html_a3b9b7dd9839061d816990ab0d2bf3a5e"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a3b9b7dd9839061d816990ab0d2bf3a5e">asio::detail::associated_executor_impl&lt; T, E, void_t&lt; typename T::executor_type &gt; &gt;::type</a></div><div class="ttdeci">T::executor_type type</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:67</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4_html_a5541f8cbae192a9eac43884b68bdc8e6"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a5541f8cbae192a9eac43884b68bdc8e6">asio::detail::associated_executor_impl&lt; T, E, void_t&lt; typename T::executor_type &gt; &gt;::get</a></div><div class="ttdeci">static auto get(const T &amp;t, const E &amp;) noexcept -&gt; decltype(t.get_executor())</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:75</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4_html_a76556c616fc575b0f0a4ce1109659806"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl_3_01T_00_01E_00_01void__t_3_01typename_01T_1_1executor__type_01_4_01_4.html#a76556c616fc575b0f0a4ce1109659806">asio::detail::associated_executor_impl&lt; T, E, void_t&lt; typename T::executor_type &gt; &gt;::get</a></div><div class="ttdeci">static auto get(const T &amp;t) noexcept -&gt; decltype(t.get_executor())</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:69</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_html"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl.html">asio::detail::associated_executor_impl</a></div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:48</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_html_a754eee0f00ef9fb838b9ed4eb90c0fc6"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl.html#a754eee0f00ef9fb838b9ed4eb90c0fc6">asio::detail::associated_executor_impl::get</a></div><div class="ttdeci">static const type &amp; get(const T &amp;, const E &amp;e) noexcept</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:58</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_html_a8841e5d05ee6ff876d351144594acafe"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl.html#a8841e5d05ee6ff876d351144594acafe">asio::detail::associated_executor_impl::type</a></div><div class="ttdeci">E type</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:51</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_html_a8908056efbea945823ad2c6b9c235dc4"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl.html#a8908056efbea945823ad2c6b9c235dc4">asio::detail::associated_executor_impl::get</a></div><div class="ttdeci">static type get(const T &amp;) noexcept</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:53</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1associated__executor__impl_html_af4db345240082838a749bfc8a6503237"><div class="ttname"><a href="structasio_1_1detail_1_1associated__executor__impl.html#af4db345240082838a749bfc8a6503237">asio::detail::associated_executor_impl::asio_associated_executor_is_unspecialised</a></div><div class="ttdeci">void asio_associated_executor_is_unspecialised</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:49</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1has__executor__type_html"><div class="ttname"><a href="structasio_1_1detail_1_1has__executor__type.html">asio::detail::has_executor_type</a></div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:37</div></div>
+<div class="ttc" id="astructasio_1_1execution_1_1is__executor_html"><div class="ttname"><a href="structasio_1_1execution_1_1is__executor.html">asio::execution::is_executor</a></div><div class="ttdef"><b>Definition:</b> executor.hpp:88</div></div>
+<div class="ttc" id="astructasio_1_1is__executor_html"><div class="ttname"><a href="structasio_1_1is__executor.html">asio::is_executor</a></div><div class="ttdef"><b>Definition:</b> is_executor.hpp:39</div></div>
+<div class="ttc" id="asystem__executor_8hpp_html"><div class="ttname"><a href="system__executor_8hpp.html">system_executor.hpp</a></div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

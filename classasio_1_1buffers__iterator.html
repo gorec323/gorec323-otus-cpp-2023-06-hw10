@@ -1,0 +1,1035 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::buffers_iterator&lt; BufferSequence, ByteType &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1buffers__iterator-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::buffers_iterator&lt; BufferSequence, ByteType &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A random access iterator over the bytes in a buffer sequence.  
+ <a href="classasio_1_1buffers__iterator.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="buffers__iterator_8hpp_source.html">buffers_iterator.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a959fca11c49c2ecb423eb22ccad8062b"><td class="memItemLeft" align="right" valign="top">typedef std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a959fca11c49c2ecb423eb22ccad8062b">difference_type</a></td></tr>
+<tr class="memdesc:a959fca11c49c2ecb423eb22ccad8062b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type used for the distance between two iterators.  <a href="classasio_1_1buffers__iterator.html#a959fca11c49c2ecb423eb22ccad8062b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a959fca11c49c2ecb423eb22ccad8062b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa350a7aa5afa6fbf17ecd4f8cc349821"><td class="memItemLeft" align="right" valign="top">typedef ByteType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#aa350a7aa5afa6fbf17ecd4f8cc349821">value_type</a></td></tr>
+<tr class="memdesc:aa350a7aa5afa6fbf17ecd4f8cc349821"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the value pointed to by the iterator.  <a href="classasio_1_1buffers__iterator.html#aa350a7aa5afa6fbf17ecd4f8cc349821">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa350a7aa5afa6fbf17ecd4f8cc349821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f732e586b13d7b0d23b5b2ea3b3cb9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1detail_1_1buffers__iterator__types.html">detail::buffers_iterator_types</a>&lt; BufferSequence, ByteType &gt;::byte_type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a15f732e586b13d7b0d23b5b2ea3b3cb9">pointer</a></td></tr>
+<tr class="separator:a15f732e586b13d7b0d23b5b2ea3b3cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa57e1b880d781aa295f143cb4f5db61d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structasio_1_1detail_1_1buffers__iterator__types.html">detail::buffers_iterator_types</a>&lt; BufferSequence, ByteType &gt;::byte_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#aa57e1b880d781aa295f143cb4f5db61d">reference</a></td></tr>
+<tr class="separator:aa57e1b880d781aa295f143cb4f5db61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259930bc88ee38a9e9bf9e65aa06dd8c"><td class="memItemLeft" align="right" valign="top">typedef std::random_access_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a259930bc88ee38a9e9bf9e65aa06dd8c">iterator_category</a></td></tr>
+<tr class="memdesc:a259930bc88ee38a9e9bf9e65aa06dd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The iterator category.  <a href="classasio_1_1buffers__iterator.html#a259930bc88ee38a9e9bf9e65aa06dd8c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a259930bc88ee38a9e9bf9e65aa06dd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a2b7db145f92fa5ff7afda660897e0e5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a2b7db145f92fa5ff7afda660897e0e5f">buffers_iterator</a> ()</td></tr>
+<tr class="memdesc:a2b7db145f92fa5ff7afda660897e0e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Creates an iterator in an undefined state.  <a href="classasio_1_1buffers__iterator.html#a2b7db145f92fa5ff7afda660897e0e5f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2b7db145f92fa5ff7afda660897e0e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ea228073d7fa4e5b9109b0308fd00a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html#aa57e1b880d781aa295f143cb4f5db61d">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a48ea228073d7fa4e5b9109b0308fd00a">operator*</a> () const</td></tr>
+<tr class="memdesc:a48ea228073d7fa4e5b9109b0308fd00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference an iterator.  <a href="classasio_1_1buffers__iterator.html#a48ea228073d7fa4e5b9109b0308fd00a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a48ea228073d7fa4e5b9109b0308fd00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458a5839ef12ace6f1774c886ea431db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html#a15f732e586b13d7b0d23b5b2ea3b3cb9">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a458a5839ef12ace6f1774c886ea431db">operator-&gt;</a> () const</td></tr>
+<tr class="memdesc:a458a5839ef12ace6f1774c886ea431db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference an iterator.  <a href="classasio_1_1buffers__iterator.html#a458a5839ef12ace6f1774c886ea431db">Подробнее...</a><br /></td></tr>
+<tr class="separator:a458a5839ef12ace6f1774c886ea431db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3c14123a12109af099c5c99a0042a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html#aa57e1b880d781aa295f143cb4f5db61d">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a9e3c14123a12109af099c5c99a0042a6">operator[]</a> (std::ptrdiff_t difference) const</td></tr>
+<tr class="memdesc:a9e3c14123a12109af099c5c99a0042a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access an individual element.  <a href="classasio_1_1buffers__iterator.html#a9e3c14123a12109af099c5c99a0042a6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9e3c14123a12109af099c5c99a0042a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74729bf795967bc402ad2623fbff1017"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a74729bf795967bc402ad2623fbff1017">operator++</a> ()</td></tr>
+<tr class="memdesc:a74729bf795967bc402ad2623fbff1017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment operator (prefix).  <a href="classasio_1_1buffers__iterator.html#a74729bf795967bc402ad2623fbff1017">Подробнее...</a><br /></td></tr>
+<tr class="separator:a74729bf795967bc402ad2623fbff1017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebce55aaa8c6e999085ef090b46cc17c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#aebce55aaa8c6e999085ef090b46cc17c">operator++</a> (int)</td></tr>
+<tr class="memdesc:aebce55aaa8c6e999085ef090b46cc17c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment operator (postfix).  <a href="classasio_1_1buffers__iterator.html#aebce55aaa8c6e999085ef090b46cc17c">Подробнее...</a><br /></td></tr>
+<tr class="separator:aebce55aaa8c6e999085ef090b46cc17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3462226c0206c1faf34cd5d2fe3d8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#afb3462226c0206c1faf34cd5d2fe3d8c">operator--</a> ()</td></tr>
+<tr class="memdesc:afb3462226c0206c1faf34cd5d2fe3d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement operator (prefix).  <a href="classasio_1_1buffers__iterator.html#afb3462226c0206c1faf34cd5d2fe3d8c">Подробнее...</a><br /></td></tr>
+<tr class="separator:afb3462226c0206c1faf34cd5d2fe3d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132650032bfd3d9f8920fe7bafdf9bf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a132650032bfd3d9f8920fe7bafdf9bf1">operator--</a> (int)</td></tr>
+<tr class="memdesc:a132650032bfd3d9f8920fe7bafdf9bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement operator (postfix).  <a href="classasio_1_1buffers__iterator.html#a132650032bfd3d9f8920fe7bafdf9bf1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a132650032bfd3d9f8920fe7bafdf9bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf6a1cad1a5286fbf8945330a482111"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#adaf6a1cad1a5286fbf8945330a482111">operator+=</a> (std::ptrdiff_t difference)</td></tr>
+<tr class="memdesc:adaf6a1cad1a5286fbf8945330a482111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition operator.  <a href="classasio_1_1buffers__iterator.html#adaf6a1cad1a5286fbf8945330a482111">Подробнее...</a><br /></td></tr>
+<tr class="separator:adaf6a1cad1a5286fbf8945330a482111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f822a929823b3f7e4a71c5261a290cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a1f822a929823b3f7e4a71c5261a290cf">operator-=</a> (std::ptrdiff_t difference)</td></tr>
+<tr class="memdesc:a1f822a929823b3f7e4a71c5261a290cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtraction operator.  <a href="classasio_1_1buffers__iterator.html#a1f822a929823b3f7e4a71c5261a290cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f822a929823b3f7e4a71c5261a290cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aecff0dd2b24d9eba7b8e7daca055f4f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#aecff0dd2b24d9eba7b8e7daca055f4f2">begin</a> (const BufferSequence &amp;buffers)</td></tr>
+<tr class="memdesc:aecff0dd2b24d9eba7b8e7daca055f4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an iterator representing the beginning of the buffers' data.  <a href="classasio_1_1buffers__iterator.html#aecff0dd2b24d9eba7b8e7daca055f4f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aecff0dd2b24d9eba7b8e7daca055f4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3469da42115389186d5a2efd4634d187"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a3469da42115389186d5a2efd4634d187">end</a> (const BufferSequence &amp;buffers)</td></tr>
+<tr class="memdesc:a3469da42115389186d5a2efd4634d187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an iterator representing the end of the buffers' data.  <a href="classasio_1_1buffers__iterator.html#a3469da42115389186d5a2efd4634d187">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3469da42115389186d5a2efd4634d187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:acea56d9ae172fdd6066e6a131b484f45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#acea56d9ae172fdd6066e6a131b484f45">operator+</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;iter, std::ptrdiff_t difference)</td></tr>
+<tr class="memdesc:acea56d9ae172fdd6066e6a131b484f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition operator.  <a href="classasio_1_1buffers__iterator.html#acea56d9ae172fdd6066e6a131b484f45">Подробнее...</a><br /></td></tr>
+<tr class="separator:acea56d9ae172fdd6066e6a131b484f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6bde833b69433827c6e639f61265f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#aad6bde833b69433827c6e639f61265f6">operator+</a> (std::ptrdiff_t difference, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;iter)</td></tr>
+<tr class="memdesc:aad6bde833b69433827c6e639f61265f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition operator.  <a href="classasio_1_1buffers__iterator.html#aad6bde833b69433827c6e639f61265f6">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad6bde833b69433827c6e639f61265f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ab5a1933a2203b60e8e700ee66dd47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a97ab5a1933a2203b60e8e700ee66dd47">operator-</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;iter, std::ptrdiff_t difference)</td></tr>
+<tr class="memdesc:a97ab5a1933a2203b60e8e700ee66dd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtraction operator.  <a href="classasio_1_1buffers__iterator.html#a97ab5a1933a2203b60e8e700ee66dd47">Подробнее...</a><br /></td></tr>
+<tr class="separator:a97ab5a1933a2203b60e8e700ee66dd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8823a26d52ca449f27ed25ad2e9121dd"><td class="memItemLeft" align="right" valign="top">std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a8823a26d52ca449f27ed25ad2e9121dd">operator-</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:a8823a26d52ca449f27ed25ad2e9121dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtraction operator.  <a href="classasio_1_1buffers__iterator.html#a8823a26d52ca449f27ed25ad2e9121dd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8823a26d52ca449f27ed25ad2e9121dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9fddd43f422d93bde4629b8d93008b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#aa9fddd43f422d93bde4629b8d93008b7">operator==</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:aa9fddd43f422d93bde4629b8d93008b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test two iterators for equality.  <a href="classasio_1_1buffers__iterator.html#aa9fddd43f422d93bde4629b8d93008b7">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa9fddd43f422d93bde4629b8d93008b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e494facc3c9cf73fa4db438fc6781c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a7e494facc3c9cf73fa4db438fc6781c6">operator!=</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:a7e494facc3c9cf73fa4db438fc6781c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test two iterators for inequality.  <a href="classasio_1_1buffers__iterator.html#a7e494facc3c9cf73fa4db438fc6781c6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7e494facc3c9cf73fa4db438fc6781c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d8938d217257a1610627fd1cb22aa3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a38d8938d217257a1610627fd1cb22aa3">operator&lt;</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:a38d8938d217257a1610627fd1cb22aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two iterators.  <a href="classasio_1_1buffers__iterator.html#a38d8938d217257a1610627fd1cb22aa3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38d8938d217257a1610627fd1cb22aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d47ec26d99d33280146bd0137cddc8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a3d47ec26d99d33280146bd0137cddc8f">operator&lt;=</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:a3d47ec26d99d33280146bd0137cddc8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two iterators.  <a href="classasio_1_1buffers__iterator.html#a3d47ec26d99d33280146bd0137cddc8f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d47ec26d99d33280146bd0137cddc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1113e04661a66959d1358b6d1cb9db1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#a1113e04661a66959d1358b6d1cb9db1d">operator&gt;</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:a1113e04661a66959d1358b6d1cb9db1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two iterators.  <a href="classasio_1_1buffers__iterator.html#a1113e04661a66959d1358b6d1cb9db1d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1113e04661a66959d1358b6d1cb9db1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a2ced531e09474d4ab930225dd92ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1buffers__iterator.html#ab8a2ced531e09474d4ab930225dd92ff">operator&gt;=</a> (const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:ab8a2ced531e09474d4ab930225dd92ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two iterators.  <a href="classasio_1_1buffers__iterator.html#ab8a2ced531e09474d4ab930225dd92ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab8a2ced531e09474d4ab930225dd92ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename BufferSequence, typename ByteType = char&gt;<br />
+class asio::buffers_iterator&lt; BufferSequence, ByteType &gt;</h3>
+
+<p>A random access iterator over the bytes in a buffer sequence. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a959fca11c49c2ecb423eb22ccad8062b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959fca11c49c2ecb423eb22ccad8062b">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::ptrdiff_t <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::<a class="el" href="classasio_1_1buffers__iterator.html#a959fca11c49c2ecb423eb22ccad8062b">difference_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type used for the distance between two iterators. </p>
+
+</div>
+</div>
+<a id="a259930bc88ee38a9e9bf9e65aa06dd8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259930bc88ee38a9e9bf9e65aa06dd8c">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::random_access_iterator_tag <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::<a class="el" href="classasio_1_1buffers__iterator.html#a259930bc88ee38a9e9bf9e65aa06dd8c">iterator_category</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The iterator category. </p>
+
+</div>
+</div>
+<a id="a15f732e586b13d7b0d23b5b2ea3b3cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f732e586b13d7b0d23b5b2ea3b3cb9">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1detail_1_1buffers__iterator__types.html">detail::buffers_iterator_types</a>&lt; BufferSequence, ByteType&gt;::byte_type* <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::<a class="el" href="classasio_1_1buffers__iterator.html#a15f732e586b13d7b0d23b5b2ea3b3cb9">pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa57e1b880d781aa295f143cb4f5db61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa57e1b880d781aa295f143cb4f5db61d">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structasio_1_1detail_1_1buffers__iterator__types.html">detail::buffers_iterator_types</a>&lt; BufferSequence, ByteType&gt;::byte_type&amp; <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::<a class="el" href="classasio_1_1buffers__iterator.html#aa57e1b880d781aa295f143cb4f5db61d">reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa350a7aa5afa6fbf17ecd4f8cc349821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa350a7aa5afa6fbf17ecd4f8cc349821">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ByteType <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::<a class="el" href="classasio_1_1buffers__iterator.html#aa350a7aa5afa6fbf17ecd4f8cc349821">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of the value pointed to by the iterator. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a2b7db145f92fa5ff7afda660897e0e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b7db145f92fa5ff7afda660897e0e5f">&#9670;&nbsp;</a></span>buffers_iterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::<a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. Creates an iterator in an undefined state. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aecff0dd2b24d9eba7b8e7daca055f4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecff0dd2b24d9eba7b8e7daca055f4f2">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::begin </td>
+          <td>(</td>
+          <td class="paramtype">const BufferSequence &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an iterator representing the beginning of the buffers' data. </p>
+
+</div>
+</div>
+<a id="a3469da42115389186d5a2efd4634d187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3469da42115389186d5a2efd4634d187">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::end </td>
+          <td>(</td>
+          <td class="paramtype">const BufferSequence &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an iterator representing the end of the buffers' data. </p>
+
+</div>
+</div>
+<a id="a48ea228073d7fa4e5b9109b0308fd00a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ea228073d7fa4e5b9109b0308fd00a">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html#aa57e1b880d781aa295f143cb4f5db61d">reference</a> <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dereference an iterator. </p>
+
+</div>
+</div>
+<a id="a74729bf795967bc402ad2623fbff1017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74729bf795967bc402ad2623fbff1017">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&amp; <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increment operator (prefix). </p>
+
+</div>
+</div>
+<a id="aebce55aaa8c6e999085ef090b46cc17c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebce55aaa8c6e999085ef090b46cc17c">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increment operator (postfix). </p>
+
+</div>
+</div>
+<a id="adaf6a1cad1a5286fbf8945330a482111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf6a1cad1a5286fbf8945330a482111">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&amp; <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">std::ptrdiff_t&#160;</td>
+          <td class="paramname"><em>difference</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Addition operator. </p>
+
+</div>
+</div>
+<a id="afb3462226c0206c1faf34cd5d2fe3d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb3462226c0206c1faf34cd5d2fe3d8c">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&amp; <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrement operator (prefix). </p>
+
+</div>
+</div>
+<a id="a132650032bfd3d9f8920fe7bafdf9bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132650032bfd3d9f8920fe7bafdf9bf1">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrement operator (postfix). </p>
+
+</div>
+</div>
+<a id="a1f822a929823b3f7e4a71c5261a290cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f822a929823b3f7e4a71c5261a290cf">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&amp; <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">std::ptrdiff_t&#160;</td>
+          <td class="paramname"><em>difference</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtraction operator. </p>
+
+</div>
+</div>
+<a id="a458a5839ef12ace6f1774c886ea431db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458a5839ef12ace6f1774c886ea431db">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html#a15f732e586b13d7b0d23b5b2ea3b3cb9">pointer</a> <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dereference an iterator. </p>
+
+</div>
+</div>
+<a id="a9e3c14123a12109af099c5c99a0042a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3c14123a12109af099c5c99a0042a6">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html#aa57e1b880d781aa295f143cb4f5db61d">reference</a> <a class="el" href="classasio_1_1buffers__iterator.html">asio::buffers_iterator</a>&lt; BufferSequence, ByteType &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::ptrdiff_t&#160;</td>
+          <td class="paramname"><em>difference</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access an individual element. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a7e494facc3c9cf73fa4db438fc6781c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e494facc3c9cf73fa4db438fc6781c6">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test two iterators for inequality. </p>
+
+</div>
+</div>
+<a id="acea56d9ae172fdd6066e6a131b484f45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea56d9ae172fdd6066e6a131b484f45">&#9670;&nbsp;</a></span>operator+ <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ptrdiff_t&#160;</td>
+          <td class="paramname"><em>difference</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Addition operator. </p>
+
+</div>
+</div>
+<a id="aad6bde833b69433827c6e639f61265f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6bde833b69433827c6e639f61265f6">&#9670;&nbsp;</a></span>operator+ <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">std::ptrdiff_t&#160;</td>
+          <td class="paramname"><em>difference</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>iter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Addition operator. </p>
+
+</div>
+</div>
+<a id="a8823a26d52ca449f27ed25ad2e9121dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8823a26d52ca449f27ed25ad2e9121dd">&#9670;&nbsp;</a></span>operator- <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ptrdiff_t operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtraction operator. </p>
+
+</div>
+</div>
+<a id="a97ab5a1933a2203b60e8e700ee66dd47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ab5a1933a2203b60e8e700ee66dd47">&#9670;&nbsp;</a></span>operator- <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ptrdiff_t&#160;</td>
+          <td class="paramname"><em>difference</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtraction operator. </p>
+
+</div>
+</div>
+<a id="a38d8938d217257a1610627fd1cb22aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d8938d217257a1610627fd1cb22aa3">&#9670;&nbsp;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two iterators. </p>
+
+</div>
+</div>
+<a id="a3d47ec26d99d33280146bd0137cddc8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d47ec26d99d33280146bd0137cddc8f">&#9670;&nbsp;</a></span>operator&lt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two iterators. </p>
+
+</div>
+</div>
+<a id="aa9fddd43f422d93bde4629b8d93008b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9fddd43f422d93bde4629b8d93008b7">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test two iterators for equality. </p>
+
+</div>
+</div>
+<a id="a1113e04661a66959d1358b6d1cb9db1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1113e04661a66959d1358b6d1cb9db1d">&#9670;&nbsp;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two iterators. </p>
+
+</div>
+</div>
+<a id="ab8a2ced531e09474d4ab930225dd92ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8a2ced531e09474d4ab930225dd92ff">&#9670;&nbsp;</a></span>operator&gt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferSequence , typename ByteType  = char&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1buffers__iterator.html">buffers_iterator</a>&lt; BufferSequence, ByteType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two iterators. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="buffers__iterator_8hpp_source.html">buffers_iterator.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

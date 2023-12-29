@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/examples/cpp03/timers/time_t_timer.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_9e92b034db1dabda87d5f21e7152af9a.html">timers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл time_t_timer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="asio_8hpp_source.html">asio.hpp</a>&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для time_t_timer.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="cpp03_2timers_2time__t__timer_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2examples_2cpp03_2timers_2time__t__timer_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2examples_2cpp03_2timers_2time__t__timer_8cpp" id="a__deps_2asio-src_2asio_2src_2examples_2cpp03_2timers_2time__t__timer_8cpp">
+<area shape="rect" title=" " alt="" coords="2964,5,3147,61"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="2925,109,3002,136"/>
+<area shape="rect" title=" " alt="" coords="3026,109,3085,136"/>
+<area shape="rect" title=" " alt="" coords="3109,109,3189,136"/>
+<area shape="rect" href="any__completion__executor_8hpp.html" title=" " alt="" coords="1949,273,2106,315"/>
+<area shape="rect" href="any__completion__handler_8hpp.html" title=" " alt="" coords="2087,184,2245,225"/>
+<area shape="rect" href="any__io__executor_8hpp.html" title=" " alt="" coords="327,541,514,568"/>
+<area shape="rect" href="associated__allocator_8hpp.html" title=" " alt="" coords="2181,281,2396,307"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="2215,370,2362,397"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="2797,273,3007,315"/>
+<area shape="rect" href="cancellation__signal_8hpp.html" title=" " alt="" coords="2799,370,3005,397"/>
+<area shape="rect" href="associated__executor_8hpp.html" title=" " alt="" coords="1711,281,1925,307"/>
+<area shape="rect" href="associated__immediate__executor_8hpp.html" title=" " alt="" coords="1384,273,1585,315"/>
+<area shape="rect" href="cancellation__state_8hpp.html" title=" " alt="" coords="2573,281,2773,307"/>
+<area shape="rect" href="append_8hpp.html" title=" " alt="" coords="3803,191,3932,218"/>
+<area shape="rect" href="as__tuple_8hpp.html" title=" " alt="" coords="3957,191,4093,218"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="1497,541,1659,568"/>
+<area shape="rect" href="awaitable_8hpp.html" title=" " alt="" coords="4117,191,4263,218"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="775,363,933,404"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="772,459,936,486"/>
+<area shape="rect" href="basic__deadline__timer_8hpp.html" title=" " alt="" coords="4287,184,4437,225"/>
+<area shape="rect" href="basic__file_8hpp.html" title=" " alt="" coords="4461,191,4604,218"/>
+<area shape="rect" href="basic__io__object_8hpp.html" title=" " alt="" coords="4629,191,4810,218"/>
+<area shape="rect" href="basic__random__access__file_8hpp.html" title=" " alt="" coords="4834,184,5029,225"/>
+<area shape="rect" href="basic__raw__socket_8hpp.html" title=" " alt="" coords="1007,370,1202,397"/>
+<area shape="rect" href="basic__readable__pipe_8hpp.html" title=" " alt="" coords="5053,184,5204,225"/>
+<area shape="rect" href="basic__seq__packet__socket_8hpp.html" title=" " alt="" coords="533,363,700,404"/>
+<area shape="rect" href="basic__serial__port_8hpp.html" title=" " alt="" coords="5228,191,5419,218"/>
+<area shape="rect" href="basic__signal__set_8hpp.html" title=" " alt="" coords="401,459,589,486"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="231,370,458,397"/>
+<area shape="rect" href="basic__socket__iostream_8hpp.html" title=" " alt="" coords="826,191,1055,218"/>
+<area shape="rect" href="basic__socket__streambuf_8hpp.html" title=" " alt="" coords="859,281,1097,307"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="1227,370,1444,397"/>
+<area shape="rect" href="basic__stream__file_8hpp.html" title=" " alt="" coords="5443,191,5638,218"/>
+<area shape="rect" href="basic__streambuf_8hpp.html" title=" " alt="" coords="3688,281,3876,307"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="3723,370,3841,397"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="5,452,156,493"/>
+<area shape="rect" href="basic__writable__pipe_8hpp.html" title=" " alt="" coords="5662,184,5809,225"/>
+<area shape="rect" href="bind__allocator_8hpp.html" title=" " alt="" coords="2327,191,2499,218"/>
+<area shape="rect" href="bind__cancellation__slot_8hpp.html" title=" " alt="" coords="2941,184,3108,225"/>
+<area shape="rect" href="bind__executor_8hpp.html" title=" " alt="" coords="1635,191,1806,218"/>
+<area shape="rect" href="bind__immediate__executor_8hpp.html" title=" " alt="" coords="1348,184,1507,225"/>
+<area shape="rect" href="buffer__registration_8hpp.html" title=" " alt="" coords="5833,191,6035,218"/>
+<area shape="rect" href="buffered__read__stream__fwd_8hpp.html" title=" " alt="" coords="3465,363,3608,404"/>
+<area shape="rect" href="buffered__read__stream_8hpp.html" title=" " alt="" coords="3184,273,3327,315"/>
+<area shape="rect" href="buffered__stream__fwd_8hpp.html" title=" " alt="" coords="3402,273,3562,315"/>
+<area shape="rect" href="buffered__stream_8hpp.html" title=" " alt="" coords="3235,191,3423,218"/>
+<area shape="rect" href="buffered__write__stream_8hpp.html" title=" " alt="" coords="3901,273,4047,315"/>
+<area shape="rect" href="buffered__write__stream__fwd_8hpp.html" title=" " alt="" coords="4058,363,4205,404"/>
+<area shape="rect" href="buffers__iterator_8hpp.html" title=" " alt="" coords="4072,281,4252,307"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtime__t__clock.html">time_t_clock</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtime__t__wait__traits.html">time_t_wait_traits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ae81e7b7af097e157841ca5aaf3ca668b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1basic__waitable__timer.html">asio::basic_waitable_timer</a>&lt; <a class="el" href="structtime__t__clock.html">time_t_clock</a>, <a class="el" href="structtime__t__wait__traits.html">time_t_wait_traits</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp03_2timers_2time__t__timer_8cpp.html#ae81e7b7af097e157841ca5aaf3ca668b">time_t_timer</a></td></tr>
+<tr class="separator:ae81e7b7af097e157841ca5aaf3ca668b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5da6c30292c5effe26b8aa3c1aa04e04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp03_2timers_2time__t__timer_8cpp.html#a5da6c30292c5effe26b8aa3c1aa04e04">handle_timeout</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;)</td></tr>
+<tr class="separator:a5da6c30292c5effe26b8aa3c1aa04e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpp03_2timers_2time__t__timer_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="ae81e7b7af097e157841ca5aaf3ca668b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81e7b7af097e157841ca5aaf3ca668b">&#9670;&nbsp;</a></span>time_t_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1basic__waitable__timer.html">asio::basic_waitable_timer</a>&lt; <a class="el" href="structtime__t__clock.html">time_t_clock</a>, <a class="el" href="structtime__t__wait__traits.html">time_t_wait_traits</a>&gt; <a class="el" href="cpp03_2timers_2time__t__timer_8cpp.html#ae81e7b7af097e157841ca5aaf3ca668b">time_t_timer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a5da6c30292c5effe26b8aa3c1aa04e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da6c30292c5effe26b8aa3c1aa04e04">&#9670;&nbsp;</a></span>handle_timeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> handle_timeout </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

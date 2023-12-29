@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/impl/executor.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_8c6c10ebdd857c41e2ac833cd6d1f150.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">executor.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="impl_2executor_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// impl/executor.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_IMPL_EXECUTOR_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_IMPL_EXECUTOR_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_TS_EXECUTORS)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="atomic__count_8hpp.html">asio/detail/atomic_count.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="global_8hpp.html">asio/detail/global.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="memory_8hpp.html">asio/detail/memory.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="executor_8hpp.html">asio/executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="system__executor_8hpp.html">asio/system_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#if !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// Default polymorphic executor implementation.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span>executor::impl</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  : <span class="keyword">public</span> executor::impl_base</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a>(Allocator, impl) allocator_type;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">static</span> impl_base* create(<span class="keyword">const</span> Executor&amp; e, Allocator <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a> = Allocator())</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    raw_mem mem(<a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    impl* p = <span class="keyword">new</span> (mem.ptr_) impl(e, <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mem.ptr_ = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  impl(<span class="keyword">const</span> Executor&amp; e, <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) noexcept</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    : impl_base(<span class="keyword">false</span>),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      ref_count_(1),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      executor_(e),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      allocator_(<a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  impl_base* clone() const noexcept</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#a1894344f088a1819ee9255c8d08c4630">detail::ref_count_up</a>(ref_count_);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>impl_base*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>impl_base*<span class="keyword">&gt;</span>(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> destroy() noexcept</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceasio_1_1detail.html#a22c507dddf7798544396d9e84138f828">detail::ref_count_down</a>(ref_count_))</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      allocator_type alloc(allocator_);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      impl* p = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      p-&gt;~impl();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      alloc.deallocate(p, 1);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#aae432d5667a83070f6c44943adeda10c">on_work_started</a>() noexcept</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    executor_.on_work_started();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#aaad0c4b8c5df8cd3401e766651568c57">on_work_finished</a>() noexcept</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    executor_.on_work_finished();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="namespaceasio_1_1experimental_1_1detail.html#ae7ce5ebbc37b6208fa1dda639ffa4c34">execution_context</a>&amp; <a class="code" href="classasio_1_1executor.html#a6bb7cae4b5aeaec10f33daf521c34b6a">context</a>() noexcept</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> executor_.context();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#a44147d4825139146869de05ae549cacf">dispatch</a>(<span class="keyword">function</span>&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    executor_.dispatch(<span class="keyword">static_cast&lt;</span>function&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>), allocator_);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#a62334b7c9b5c9fb2a62ead984271c15d">post</a>(<span class="keyword">function</span>&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    executor_.post(<span class="keyword">static_cast&lt;</span>function&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>), allocator_);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#a474e34f28c103edf37bc958a4d2891a8">defer</a>(<span class="keyword">function</span>&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    executor_.defer(<span class="keyword">static_cast&lt;</span>function&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>), allocator_);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  type_id_result_type <a class="code" href="classasio_1_1executor.html#abb33f8378aed27b354d1bd66b1ec25d2">target_type</a>() const noexcept</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> type_id&lt;Executor&gt;();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span>* <a class="code" href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">target</a>() noexcept</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> &amp;executor_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">target</a>() const noexcept</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> &amp;executor_;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">bool</span> equals(<span class="keyword">const</span> impl_base* e) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">this</span> == e)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classasio_1_1executor.html#abb33f8378aed27b354d1bd66b1ec25d2">target_type</a>() != e-&gt;target_type())</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> executor_ == *<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>Executor*<span class="keyword">&gt;</span>(e-&gt;target());</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keyword">mutable</span> <a class="code" href="namespaceasio_1_1detail.html#a75f94bf579dec2f59a0c4af6c4c3606e">detail::atomic_count</a> ref_count_;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  Executor executor_;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  Allocator allocator_;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">struct </span>raw_mem</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    allocator_type allocator_;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    impl* ptr_;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">explicit</span> raw_mem(<span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      : allocator_(<a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>),</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        ptr_(allocator_.allocate(1))</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    ~raw_mem()</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordflow">if</span> (ptr_)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        allocator_.deallocate(ptr_, 1);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// Disallow copying and assignment.</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    raw_mem(<span class="keyword">const</span> raw_mem&amp;);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    raw_mem <a class="code" href="classasio_1_1executor.html#a6f1f779d6c36f2b7eccc25ee940745c2">operator=</a>(<span class="keyword">const</span> raw_mem&amp;);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  };</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;};</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">// Polymorphic executor specialisation for system_executor.</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html">  160</a></span>&#160;<span class="keyword">class </span>executor::impl&lt;<a class="code" href="classasio_1_1basic__system__executor.html">system_executor</a>, Allocator&gt;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  : <span class="keyword">public</span> executor::impl_base</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a5d04ad6b12048a3979001d736f5231fb">  164</a></span>&#160;  <span class="keyword">static</span> impl_base* <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a5d04ad6b12048a3979001d736f5231fb">create</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1basic__system__executor.html">system_executor</a>&amp;,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keyword">const</span> Allocator&amp; = Allocator())</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> &amp;detail::global&lt;impl&lt;system_executor, std::allocator&lt;void&gt;&gt; &gt;();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a55bcf180b7c44f1dfcf63625bf5372e3">  170</a></span>&#160;  <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a55bcf180b7c44f1dfcf63625bf5372e3">impl</a>()</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    : impl_base(true)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a61114a4bb257e543d54da68d32485c52">  175</a></span>&#160;  impl_base* <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a61114a4bb257e543d54da68d32485c52">clone</a>() const noexcept</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>impl_base*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>impl_base*<span class="keyword">&gt;</span>(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#acfb0b9c9a5ffda05e29af4903d542f8a">  180</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#acfb0b9c9a5ffda05e29af4903d542f8a">destroy</a>() noexcept</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a8c25e395bf9cfb505f3089cbd2d42f87">  184</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a8c25e395bf9cfb505f3089cbd2d42f87">on_work_started</a>() noexcept</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    executor_.on_work_started();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a5a7d3e063c35418b6967801bbcf7bf2a">  189</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a5a7d3e063c35418b6967801bbcf7bf2a">on_work_finished</a>() noexcept</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    executor_.on_work_finished();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a38bf9f11bc48fafe1616b5c9bfa4276a">  194</a></span>&#160;  <a class="code" href="classasio_1_1execution__context.html">execution_context</a>&amp; <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a38bf9f11bc48fafe1616b5c9bfa4276a">context</a>() noexcept</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> executor_.context();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a940d4278a69e4d287e7e440e7890e6da">  199</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a940d4278a69e4d287e7e440e7890e6da">dispatch</a>(<span class="keyword">function</span>&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    executor_.dispatch(<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1detail_1_1executor__function.html">function</a>&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>),</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::allocator&lt;void&gt;());</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#ae4b848ec9ee3af4296d8c43c081675a1">  205</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#ae4b848ec9ee3af4296d8c43c081675a1">post</a>(<span class="keyword">function</span>&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    executor_.post(<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1detail_1_1executor__function.html">function</a>&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>),</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        std::allocator&lt;void&gt;());</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a6d4e11303d207499c6dd45349d853d57">  211</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a6d4e11303d207499c6dd45349d853d57">defer</a>(<span class="keyword">function</span>&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    executor_.defer(<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1detail_1_1executor__function.html">function</a>&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>),</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        std::allocator&lt;void&gt;());</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#afdb35c319df9a81897ce925177a09ceb">  217</a></span>&#160;  type_id_result_type <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#afdb35c319df9a81897ce925177a09ceb">target_type</a>() const noexcept</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">return</span> type_id&lt;system_executor&gt;();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a19708888670c32d5e099ef30cba7fb55">  222</a></span>&#160;  <span class="keywordtype">void</span>* <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a19708888670c32d5e099ef30cba7fb55">target</a>() noexcept</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">return</span> &amp;executor_;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a8c537f39f33a7cf23bb318f9500662e7">  227</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a8c537f39f33a7cf23bb318f9500662e7">target</a>() const noexcept</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">return</span> &amp;executor_;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a575c5d7c945180d914bc4f25087142ac">  232</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a575c5d7c945180d914bc4f25087142ac">equals</a>(<span class="keyword">const</span> impl_base* e) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">this</span> == e;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <a class="code" href="classasio_1_1basic__system__executor.html">system_executor</a> executor_;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;};</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="classasio_1_1executor.html#aaf0577af32d65fabb8ff06d41ab80521">  242</a></span>&#160;<a class="code" href="classasio_1_1executor.html#a722d8982ccc82fc3e3eb0cf6318b39dc">executor::executor</a>(Executor e)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  : impl_(impl&lt;Executor, <a class="code" href="namespacestd.html">std</a>::<a class="code" href="classallocator.html">allocator</a>&lt;<a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&gt;&gt;::create(e))</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="classasio_1_1executor.html#ac733db8a740dc216c47a961847737e10">  248</a></span>&#160;<a class="code" href="classasio_1_1executor.html#a722d8982ccc82fc3e3eb0cf6318b39dc">executor::executor</a>(allocator_arg_t, <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, Executor e)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  : impl_(impl&lt;Executor, Allocator&gt;::create(e, <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>))</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="classasio_1_1executor.html#a44147d4825139146869de05ae549cacf">  254</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#a44147d4825139146869de05ae549cacf">executor::dispatch</a>(Function&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  impl_base* i = get_impl();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordflow">if</span> (i-&gt;fast_dispatch_)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="namespaceasio.html#a9afc37336b3232b8b291ab23e98a9201">system_executor</a>().<a class="code" href="classasio_1_1basic__system__executor.html#a7220cf6936134071c9cdfaf09d0329a6">dispatch</a>(<span class="keyword">static_cast&lt;</span>Function&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>), <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    i-&gt;dispatch(<span class="keyword">function</span>(<span class="keyword">static_cast&lt;</span>Function&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>), <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>));</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="classasio_1_1executor.html#a62334b7c9b5c9fb2a62ead984271c15d">  265</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#a62334b7c9b5c9fb2a62ead984271c15d">executor::post</a>(Function&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  get_impl()-&gt;post(<span class="keyword">function</span>(<span class="keyword">static_cast&lt;</span>Function&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>), <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>));</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classasio_1_1executor.html#a474e34f28c103edf37bc958a4d2891a8">  272</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classasio_1_1executor.html#a474e34f28c103edf37bc958a4d2891a8">executor::defer</a>(Function&amp;&amp; <a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">const</span> Allocator&amp; <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  get_impl()-&gt;defer(<span class="keyword">function</span>(<span class="keyword">static_cast&lt;</span>Function&amp;&amp;<span class="keyword">&gt;</span>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>), <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">  279</a></span>&#160;Executor* <a class="code" href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">executor::target</a>() noexcept</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">return</span> impl_ &amp;&amp; impl_-&gt;target_type() == type_id&lt;Executor&gt;()</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    ? <span class="keyword">static_cast&lt;</span>Executor*<span class="keyword">&gt;</span>(impl_-&gt;target()) : 0;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Executor&gt;</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classasio_1_1executor.html#a3eb854a0785d0698fdc04e92b6db29ae">  286</a></span>&#160;<span class="keyword">const</span> Executor* <a class="code" href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">executor::target</a>() const noexcept</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keywordflow">return</span> impl_ &amp;&amp; impl_-&gt;target_type() == type_id&lt;Executor&gt;()</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    ? <span class="keyword">static_cast&lt;</span>Executor*<span class="keyword">&gt;</span>(impl_-&gt;target()) : 0;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_TS_EXECUTORS)</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_IMPL_EXECUTOR_HPP</span></div>
+<div class="ttc" id="aatomic__count_8hpp_html"><div class="ttname"><a href="atomic__count_8hpp.html">atomic_count.hpp</a></div></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="aclassallocator_html"><div class="ttname"><a href="classallocator.html">allocator</a></div><div class="ttdef"><b>Definition:</b> allocator.hpp:18</div></div>
+<div class="ttc" id="aclassasio_1_1basic__system__executor_html"><div class="ttname"><a href="classasio_1_1basic__system__executor.html">asio::basic_system_executor&lt; execution::blocking_t::possibly_t, execution::relationship_t::fork_t, std::allocator&lt; void &gt; &gt;</a></div></div>
+<div class="ttc" id="aclassasio_1_1basic__system__executor_html_a7220cf6936134071c9cdfaf09d0329a6"><div class="ttname"><a href="classasio_1_1basic__system__executor.html#a7220cf6936134071c9cdfaf09d0329a6">asio::basic_system_executor::dispatch</a></div><div class="ttdeci">void dispatch(Function &amp;&amp;f, const OtherAllocator &amp;a) const</div><div class="ttdoc">Request the system executor to invoke the given function object.</div><div class="ttdef"><b>Definition:</b> system_executor.hpp:130</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1executor__function_html"><div class="ttname"><a href="classasio_1_1detail_1_1executor__function.html">asio::detail::executor_function</a></div><div class="ttdef"><b>Definition:</b> executor_function.hpp:29</div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_html"><div class="ttname"><a href="classasio_1_1execution__context.html">asio::execution_context</a></div><div class="ttdoc">A context for function object execution.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:106</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a19708888670c32d5e099ef30cba7fb55"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a19708888670c32d5e099ef30cba7fb55">asio::executor::impl&lt; system_executor, Allocator &gt;::target</a></div><div class="ttdeci">void * target() noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:222</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a38bf9f11bc48fafe1616b5c9bfa4276a"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a38bf9f11bc48fafe1616b5c9bfa4276a">asio::executor::impl&lt; system_executor, Allocator &gt;::context</a></div><div class="ttdeci">execution_context &amp; context() noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:194</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a55bcf180b7c44f1dfcf63625bf5372e3"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a55bcf180b7c44f1dfcf63625bf5372e3">asio::executor::impl&lt; system_executor, Allocator &gt;::impl</a></div><div class="ttdeci">impl()</div><div class="ttdef"><b>Definition:</b> executor.hpp:170</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a575c5d7c945180d914bc4f25087142ac"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a575c5d7c945180d914bc4f25087142ac">asio::executor::impl&lt; system_executor, Allocator &gt;::equals</a></div><div class="ttdeci">bool equals(const impl_base *e) const noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:232</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a5a7d3e063c35418b6967801bbcf7bf2a"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a5a7d3e063c35418b6967801bbcf7bf2a">asio::executor::impl&lt; system_executor, Allocator &gt;::on_work_finished</a></div><div class="ttdeci">void on_work_finished() noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:189</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a5d04ad6b12048a3979001d736f5231fb"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a5d04ad6b12048a3979001d736f5231fb">asio::executor::impl&lt; system_executor, Allocator &gt;::create</a></div><div class="ttdeci">static impl_base * create(const system_executor &amp;, const Allocator &amp;=Allocator())</div><div class="ttdef"><b>Definition:</b> executor.hpp:164</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a61114a4bb257e543d54da68d32485c52"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a61114a4bb257e543d54da68d32485c52">asio::executor::impl&lt; system_executor, Allocator &gt;::clone</a></div><div class="ttdeci">impl_base * clone() const noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:175</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a6d4e11303d207499c6dd45349d853d57"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a6d4e11303d207499c6dd45349d853d57">asio::executor::impl&lt; system_executor, Allocator &gt;::defer</a></div><div class="ttdeci">void defer(function &amp;&amp;f)</div><div class="ttdef"><b>Definition:</b> executor.hpp:211</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a8c25e395bf9cfb505f3089cbd2d42f87"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a8c25e395bf9cfb505f3089cbd2d42f87">asio::executor::impl&lt; system_executor, Allocator &gt;::on_work_started</a></div><div class="ttdeci">void on_work_started() noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:184</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a8c537f39f33a7cf23bb318f9500662e7"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a8c537f39f33a7cf23bb318f9500662e7">asio::executor::impl&lt; system_executor, Allocator &gt;::target</a></div><div class="ttdeci">const void * target() const noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:227</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_a940d4278a69e4d287e7e440e7890e6da"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#a940d4278a69e4d287e7e440e7890e6da">asio::executor::impl&lt; system_executor, Allocator &gt;::dispatch</a></div><div class="ttdeci">void dispatch(function &amp;&amp;f)</div><div class="ttdef"><b>Definition:</b> executor.hpp:199</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_acfb0b9c9a5ffda05e29af4903d542f8a"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#acfb0b9c9a5ffda05e29af4903d542f8a">asio::executor::impl&lt; system_executor, Allocator &gt;::destroy</a></div><div class="ttdeci">void destroy() noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:180</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_ae4b848ec9ee3af4296d8c43c081675a1"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#ae4b848ec9ee3af4296d8c43c081675a1">asio::executor::impl&lt; system_executor, Allocator &gt;::post</a></div><div class="ttdeci">void post(function &amp;&amp;f)</div><div class="ttdef"><b>Definition:</b> executor.hpp:205</div></div>
+<div class="ttc" id="aclassasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4_html_afdb35c319df9a81897ce925177a09ceb"><div class="ttname"><a href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html#afdb35c319df9a81897ce925177a09ceb">asio::executor::impl&lt; system_executor, Allocator &gt;::target_type</a></div><div class="ttdeci">type_id_result_type target_type() const noexcept</div><div class="ttdef"><b>Definition:</b> executor.hpp:217</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_a44147d4825139146869de05ae549cacf"><div class="ttname"><a href="classasio_1_1executor.html#a44147d4825139146869de05ae549cacf">asio::executor::dispatch</a></div><div class="ttdeci">void dispatch(Function &amp;&amp;f, const Allocator &amp;a) const</div><div class="ttdoc">Request the executor to invoke the given function object.</div><div class="ttdef"><b>Definition:</b> executor.hpp:254</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_a474e34f28c103edf37bc958a4d2891a8"><div class="ttname"><a href="classasio_1_1executor.html#a474e34f28c103edf37bc958a4d2891a8">asio::executor::defer</a></div><div class="ttdeci">void defer(Function &amp;&amp;f, const Allocator &amp;a) const</div><div class="ttdoc">Request the executor to invoke the given function object.</div><div class="ttdef"><b>Definition:</b> executor.hpp:272</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_a58e3a779cbb08714f728ec3d400e6660"><div class="ttname"><a href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">asio::executor::target</a></div><div class="ttdeci">Executor * target() noexcept</div><div class="ttdoc">Obtain a pointer to the target executor object.</div><div class="ttdef"><b>Definition:</b> executor.hpp:279</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_a62334b7c9b5c9fb2a62ead984271c15d"><div class="ttname"><a href="classasio_1_1executor.html#a62334b7c9b5c9fb2a62ead984271c15d">asio::executor::post</a></div><div class="ttdeci">void post(Function &amp;&amp;f, const Allocator &amp;a) const</div><div class="ttdoc">Request the executor to invoke the given function object.</div><div class="ttdef"><b>Definition:</b> executor.hpp:265</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_a6bb7cae4b5aeaec10f33daf521c34b6a"><div class="ttname"><a href="classasio_1_1executor.html#a6bb7cae4b5aeaec10f33daf521c34b6a">asio::executor::context</a></div><div class="ttdeci">execution_context &amp; context() const noexcept</div><div class="ttdoc">Obtain the underlying execution context.</div><div class="ttdef"><b>Definition:</b> executor.hpp:128</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_a6f1f779d6c36f2b7eccc25ee940745c2"><div class="ttname"><a href="classasio_1_1executor.html#a6f1f779d6c36f2b7eccc25ee940745c2">asio::executor::operator=</a></div><div class="ttdeci">executor &amp; operator=(const executor &amp;other) noexcept</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> executor.hpp:91</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_a722d8982ccc82fc3e3eb0cf6318b39dc"><div class="ttname"><a href="classasio_1_1executor.html#a722d8982ccc82fc3e3eb0cf6318b39dc">asio::executor::executor</a></div><div class="ttdeci">executor() noexcept</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> executor.hpp:51</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_aaad0c4b8c5df8cd3401e766651568c57"><div class="ttname"><a href="classasio_1_1executor.html#aaad0c4b8c5df8cd3401e766651568c57">asio::executor::on_work_finished</a></div><div class="ttdeci">void on_work_finished() const noexcept</div><div class="ttdoc">Inform the executor that some work is no longer outstanding.</div><div class="ttdef"><b>Definition:</b> executor.hpp:140</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_aae432d5667a83070f6c44943adeda10c"><div class="ttname"><a href="classasio_1_1executor.html#aae432d5667a83070f6c44943adeda10c">asio::executor::on_work_started</a></div><div class="ttdeci">void on_work_started() const noexcept</div><div class="ttdoc">Inform the executor that it has some outstanding work to do.</div><div class="ttdef"><b>Definition:</b> executor.hpp:134</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html_abb33f8378aed27b354d1bd66b1ec25d2"><div class="ttname"><a href="classasio_1_1executor.html#abb33f8378aed27b354d1bd66b1ec25d2">asio::executor::target_type</a></div><div class="ttdeci">const std::type_info &amp; target_type() const noexcept</div><div class="ttdoc">Obtain type information for the target executor object.</div><div class="ttdef"><b>Definition:</b> executor.hpp:209</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aexecutor_8hpp_html"><div class="ttname"><a href="executor_8hpp.html">executor.hpp</a></div></div>
+<div class="ttc" id="aglobal_8hpp_html"><div class="ttname"><a href="global_8hpp.html">global.hpp</a></div></div>
+<div class="ttc" id="amemory_8hpp_html"><div class="ttname"><a href="memory_8hpp.html">memory.hpp</a></div></div>
+<div class="ttc" id="amemory_8hpp_html_a7ddefb6d1995ae157f8738ed1f14b224"><div class="ttname"><a href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a></div><div class="ttdeci">#define ASIO_REBIND_ALLOC(alloc, t)</div><div class="ttdef"><b>Definition:</b> memory.hpp:69</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a1894344f088a1819ee9255c8d08c4630"><div class="ttname"><a href="namespaceasio_1_1detail.html#a1894344f088a1819ee9255c8d08c4630">asio::detail::ref_count_up</a></div><div class="ttdeci">void ref_count_up(atomic_count &amp;a)</div><div class="ttdef"><b>Definition:</b> atomic_count.hpp:33</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a22c507dddf7798544396d9e84138f828"><div class="ttname"><a href="namespaceasio_1_1detail.html#a22c507dddf7798544396d9e84138f828">asio::detail::ref_count_down</a></div><div class="ttdeci">bool ref_count_down(atomic_count &amp;a)</div><div class="ttdef"><b>Definition:</b> atomic_count.hpp:34</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a75f94bf579dec2f59a0c4af6c4c3606e"><div class="ttname"><a href="namespaceasio_1_1detail.html#a75f94bf579dec2f59a0c4af6c4c3606e">asio::detail::atomic_count</a></div><div class="ttdeci">long atomic_count</div><div class="ttdef"><b>Definition:</b> atomic_count.hpp:30</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_1_1detail_html_ae7ce5ebbc37b6208fa1dda639ffa4c34"><div class="ttname"><a href="namespaceasio_1_1experimental_1_1detail.html#ae7ce5ebbc37b6208fa1dda639ffa4c34">asio::experimental::detail::execution_context</a></div><div class="ttdeci">concept execution_context</div><div class="ttdef"><b>Definition:</b> coro_traits.hpp:35</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a9afc37336b3232b8b291ab23e98a9201"><div class="ttname"><a href="namespaceasio.html#a9afc37336b3232b8b291ab23e98a9201">asio::system_executor</a></div><div class="ttdeci">basic_system_executor&lt; execution::blocking_t::possibly_t, execution::relationship_t::fork_t, std::allocator&lt; void &gt; &gt; system_executor</div><div class="ttdoc">An executor that uses arbitrary threads.</div><div class="ttdef"><b>Definition:</b> system_executor.hpp:432</div></div>
+<div class="ttc" id="anamespaceasio_html_aa80c4033469ae5aaa092c0d49852403c"><div class="ttname"><a href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">asio::a</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; a</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="anamespaceasio_html_ac172b717c13db01d7f99af7e42edcb68"><div class="ttname"><a href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">asio::f</a></div><div class="ttdeci">F &amp;&amp; f</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:410</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> error.hpp:307</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="asystem__executor_8hpp_html"><div class="ttname"><a href="system__executor_8hpp.html">system_executor.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

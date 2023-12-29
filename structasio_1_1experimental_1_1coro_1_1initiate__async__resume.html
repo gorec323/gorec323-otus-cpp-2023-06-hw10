@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура asio::experimental::coro&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1coro.html">coro</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html">initiate_async_resume</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура asio::experimental::coro&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="impl_2coro_8hpp_source.html">coro.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a7fef673f41f4b71d467fd73a955d4af1"><td class="memItemLeft" align="right" valign="top">typedef Executor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a7fef673f41f4b71d467fd73a955d4af1">executor_type</a></td></tr>
+<tr class="separator:a7fef673f41f4b71d467fd73a955d4af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641b3e9d46dc56c23d719edb17965dd2"><td class="memItemLeft" align="right" valign="top">typedef Allocator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a641b3e9d46dc56c23d719edb17965dd2">allocator_type</a></td></tr>
+<tr class="separator:a641b3e9d46dc56c23d719edb17965dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7af5cb981097617474ad36e62bc09e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1cancellation__slot.html">asio::cancellation_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a5d7af5cb981097617474ad36e62bc09e">cancellation_slot_type</a></td></tr>
+<tr class="separator:a5d7af5cb981097617474ad36e62bc09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a91904c99bf5c9c3e9b1352be4bd88be9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a91904c99bf5c9c3e9b1352be4bd88be9">initiate_async_resume</a> (<a class="el" href="structasio_1_1experimental_1_1coro.html">coro</a> *self)</td></tr>
+<tr class="separator:a91904c99bf5c9c3e9b1352be4bd88be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb25315d37cbb5f3e43140ef44b6a7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a7fef673f41f4b71d467fd73a955d4af1">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#accb25315d37cbb5f3e43140ef44b6a7c">get_executor</a> () const noexcept</td></tr>
+<tr class="separator:accb25315d37cbb5f3e43140ef44b6a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47aeb8e22bf5a373c9905af3f6551e76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a641b3e9d46dc56c23d719edb17965dd2">allocator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a47aeb8e22bf5a373c9905af3f6551e76">get_allocator</a> () const noexcept</td></tr>
+<tr class="separator:a47aeb8e22bf5a373c9905af3f6551e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a776389b3959ebec73ba34a0740835"><td class="memTemplParams" colspan="2">template&lt;typename E , typename WaitHandler &gt; </td></tr>
+<tr class="memitem:a75a776389b3959ebec73ba34a0740835"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a75a776389b3959ebec73ba34a0740835">handle</a> (E exec, WaitHandler &amp;&amp;<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a9a2d7e21f5b0738a741a7b51a496f83f">handler</a>, std::true_type, std::true_type)</td></tr>
+<tr class="separator:a75a776389b3959ebec73ba34a0740835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef6d8f90373c8ced03fd373032b4b07"><td class="memTemplParams" colspan="2">template&lt;typename E , typename WaitHandler &gt; </td></tr>
+<tr class="memitem:a0ef6d8f90373c8ced03fd373032b4b07"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a0ef6d8f90373c8ced03fd373032b4b07">requires</a> (!std::is_void_v&lt; <a class="el" href="structasio_1_1experimental_1_1coro.html#a27bbdb7a925fb835ec69133615f5f0c9">result_type</a> &gt;) auto <a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a75a776389b3959ebec73ba34a0740835">handle</a>(E exec</td></tr>
+<tr class="separator:a0ef6d8f90373c8ced03fd373032b4b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af43960aa11c8fcc8006d580936bf6682"><td class="memTemplParams" colspan="2">template&lt;typename E , typename WaitHandler &gt; </td></tr>
+<tr class="memitem:af43960aa11c8fcc8006d580936bf6682"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#af43960aa11c8fcc8006d580936bf6682">handle</a> (E exec, WaitHandler &amp;&amp;<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a9a2d7e21f5b0738a741a7b51a496f83f">handler</a>, std::false_type, std::true_type)</td></tr>
+<tr class="separator:af43960aa11c8fcc8006d580936bf6682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e9d13993d63b39d6b8ba0498647243"><td class="memTemplParams" colspan="2">template&lt;typename E , typename WaitHandler &gt; </td></tr>
+<tr class="memitem:ac4e9d13993d63b39d6b8ba0498647243"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#ac4e9d13993d63b39d6b8ba0498647243">handle</a> (E exec, WaitHandler &amp;&amp;<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a9a2d7e21f5b0738a741a7b51a496f83f">handler</a>, std::false_type, std::false_type)</td></tr>
+<tr class="separator:ac4e9d13993d63b39d6b8ba0498647243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd599f723458529baa4f762d6135be3"><td class="memTemplParams" colspan="2">template&lt;typename WaitHandler &gt; </td></tr>
+<tr class="memitem:afcd599f723458529baa4f762d6135be3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#afcd599f723458529baa4f762d6135be3">operator()</a> (WaitHandler &amp;&amp;<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a9a2d7e21f5b0738a741a7b51a496f83f">handler</a>)</td></tr>
+<tr class="separator:afcd599f723458529baa4f762d6135be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e9ae09e696c26f72d0546facca97ab"><td class="memTemplParams" colspan="2">template&lt;typename WaitHandler , typename Input &gt; </td></tr>
+<tr class="memitem:af6e9ae09e696c26f72d0546facca97ab"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#af6e9ae09e696c26f72d0546facca97ab">operator()</a> (WaitHandler &amp;&amp;<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a9a2d7e21f5b0738a741a7b51a496f83f">handler</a>, Input &amp;&amp;input)</td></tr>
+<tr class="separator:af6e9ae09e696c26f72d0546facca97ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a9a2d7e21f5b0738a741a7b51a496f83f"><td class="memItemLeft" align="right" valign="top">WaitHandler &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a9a2d7e21f5b0738a741a7b51a496f83f">handler</a></td></tr>
+<tr class="separator:a9a2d7e21f5b0738a741a7b51a496f83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a641b3e9d46dc56c23d719edb17965dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a641b3e9d46dc56c23d719edb17965dd2">&#9670;&nbsp;</a></span>allocator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Allocator <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a641b3e9d46dc56c23d719edb17965dd2">initiate_async_resume::allocator_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d7af5cb981097617474ad36e62bc09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7af5cb981097617474ad36e62bc09e">&#9670;&nbsp;</a></span>cancellation_slot_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1cancellation__slot.html">asio::cancellation_slot</a> <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a5d7af5cb981097617474ad36e62bc09e">initiate_async_resume::cancellation_slot_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fef673f41f4b71d467fd73a955d4af1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fef673f41f4b71d467fd73a955d4af1">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Executor <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::<a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a7fef673f41f4b71d467fd73a955d4af1">initiate_async_resume::executor_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a91904c99bf5c9c3e9b1352be4bd88be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91904c99bf5c9c3e9b1352be4bd88be9">&#9670;&nbsp;</a></span>initiate_async_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::initiate_async_resume </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1experimental_1_1coro.html">coro</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a47aeb8e22bf5a373c9905af3f6551e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47aeb8e22bf5a373c9905af3f6551e76">&#9670;&nbsp;</a></span>get_allocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a641b3e9d46dc56c23d719edb17965dd2">allocator_type</a> <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::get_allocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accb25315d37cbb5f3e43140ef44b6a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb25315d37cbb5f3e43140ef44b6a7c">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1coro_1_1initiate__async__resume.html#a7fef673f41f4b71d467fd73a955d4af1">executor_type</a> <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4e9d13993d63b39d6b8ba0498647243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e9d13993d63b39d6b8ba0498647243">&#9670;&nbsp;</a></span>handle() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename E , typename WaitHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::handle </td>
+          <td>(</td>
+          <td class="paramtype">E&#160;</td>
+          <td class="paramname"><em>exec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WaitHandler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::false_type&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::false_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af43960aa11c8fcc8006d580936bf6682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af43960aa11c8fcc8006d580936bf6682">&#9670;&nbsp;</a></span>handle() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename E , typename WaitHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::handle </td>
+          <td>(</td>
+          <td class="paramtype">E&#160;</td>
+          <td class="paramname"><em>exec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WaitHandler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::false_type&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::true_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75a776389b3959ebec73ba34a0740835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a776389b3959ebec73ba34a0740835">&#9670;&nbsp;</a></span>handle() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename E , typename WaitHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::handle </td>
+          <td>(</td>
+          <td class="paramtype">E&#160;</td>
+          <td class="paramname"><em>exec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WaitHandler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::true_type&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::true_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcd599f723458529baa4f762d6135be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd599f723458529baa4f762d6135be3">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename WaitHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::operator() </td>
+          <td>(</td>
+          <td class="paramtype">WaitHandler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6e9ae09e696c26f72d0546facca97ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e9ae09e696c26f72d0546facca97ab">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename WaitHandler , typename Input &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a> <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::operator() </td>
+          <td>(</td>
+          <td class="paramtype">WaitHandler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Input &amp;&amp;&#160;</td>
+          <td class="paramname"><em>input</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ef6d8f90373c8ced03fd373032b4b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef6d8f90373c8ced03fd373032b4b07">&#9670;&nbsp;</a></span>requires()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename E , typename WaitHandler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::requires </td>
+          <td>(</td>
+          <td class="paramtype">!std::is_void_v&lt; <a class="el" href="structasio_1_1experimental_1_1coro.html#a27bbdb7a925fb835ec69133615f5f0c9">result_type</a> &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a9a2d7e21f5b0738a741a7b51a496f83f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a2d7e21f5b0738a741a7b51a496f83f">&#9670;&nbsp;</a></span>handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield  = void, typename Return  = void, typename Executor  = any_io_executor, typename Allocator  = std::allocator&lt;void&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">WaitHandler&amp;&amp; <a class="el" href="structasio_1_1experimental_1_1coro.html">asio::experimental::coro</a>&lt; Yield, Return, Executor, Allocator &gt;::initiate_async_resume::handler</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/impl/<a class="el" href="impl_2coro_8hpp_source.html">coro.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

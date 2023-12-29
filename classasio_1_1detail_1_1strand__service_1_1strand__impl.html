@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::detail::strand_service::strand_impl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1strand__service.html">strand_service</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1strand__service_1_1strand__impl.html">strand_impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1detail_1_1strand__service_1_1strand__impl-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::detail::strand_service::strand_impl</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="strand__service_8hpp_source.html">strand_service.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::strand_service::strand_impl:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1strand__service_1_1strand__impl__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1strand__service_1_1strand__impl_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1strand__service_1_1strand__impl_inherit__map" id="aasio_1_1detail_1_1strand__service_1_1strand__impl_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,167,121"/>
+<area shape="rect" title=" " alt="" coords="44,5,128,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::detail::strand_service::strand_impl:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1strand__service_1_1strand__impl__coll__graph.png" border="0" usemap="#aasio_1_1detail_1_1strand__service_1_1strand__impl_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1detail_1_1strand__service_1_1strand__impl_coll__map" id="aasio_1_1detail_1_1strand__service_1_1strand__impl_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,167,121"/>
+<area shape="rect" title=" " alt="" coords="44,5,128,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a705fd5ec30f603a563caff35fb90936c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1strand__service_1_1strand__impl.html#a705fd5ec30f603a563caff35fb90936c">strand_impl</a> ()</td></tr>
+<tr class="separator:a705fd5ec30f603a563caff35fb90936c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a1277f3ace68e6c0bc027b130c8885364"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1strand__service_1_1strand__impl.html#a1277f3ace68e6c0bc027b130c8885364">strand_service</a></td></tr>
+<tr class="separator:a1277f3ace68e6c0bc027b130c8885364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c4b404800934e49953061db0c7cbb3"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1strand__service_1_1strand__impl.html#ae2c4b404800934e49953061db0c7cbb3">on_do_complete_exit</a></td></tr>
+<tr class="separator:ae2c4b404800934e49953061db0c7cbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac356aaab6ba72db1ed853286c2afee93"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1strand__service_1_1strand__impl.html#ac356aaab6ba72db1ed853286c2afee93">on_dispatch_exit</a></td></tr>
+<tr class="separator:ac356aaab6ba72db1ed853286c2afee93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a705fd5ec30f603a563caff35fb90936c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705fd5ec30f603a563caff35fb90936c">&#9670;&nbsp;</a></span>strand_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::detail::strand_service::strand_impl::strand_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="ac356aaab6ba72db1ed853286c2afee93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac356aaab6ba72db1ed853286c2afee93">&#9670;&nbsp;</a></span>on_dispatch_exit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="structasio_1_1detail_1_1strand__service_1_1on__dispatch__exit.html">on_dispatch_exit</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2c4b404800934e49953061db0c7cbb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c4b404800934e49953061db0c7cbb3">&#9670;&nbsp;</a></span>on_do_complete_exit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="structasio_1_1detail_1_1strand__service_1_1on__do__complete__exit.html">on_do_complete_exit</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1277f3ace68e6c0bc027b130c8885364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1277f3ace68e6c0bc027b130c8885364">&#9670;&nbsp;</a></span>strand_service</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1detail_1_1strand__service.html">strand_service</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="strand__service_8hpp_source.html">strand_service.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::detail::buffer_sequence_adapter&lt; Buffer, asio::mutable_registered_buffer &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html">buffer_sequence_adapter&lt; Buffer, asio::mutable_registered_buffer &gt;</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::detail::buffer_sequence_adapter&lt; Buffer, asio::mutable_registered_buffer &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="buffer__sequence__adapter_8hpp_source.html">buffer_sequence_adapter.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::buffer_sequence_adapter&lt; Buffer, asio::mutable_registered_buffer &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4_inherit__map" id="aasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,95,212,165"/>
+<area shape="rect" href="classasio_1_1detail_1_1buffer__sequence__adapter__base.html" title=" " alt="" coords="15,5,202,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::detail::buffer_sequence_adapter&lt; Buffer, asio::mutable_registered_buffer &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4__coll__graph.png" border="0" usemap="#aasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4_coll__map" id="aasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,95,212,165"/>
+<area shape="rect" href="classasio_1_1detail_1_1buffer__sequence__adapter__base.html" title=" " alt="" coords="15,5,202,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a683ced266d97b03afc957dd8f3f03b5a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a683ced266d97b03afc957dd8f3f03b5aac7ca173f3ed4e8eac6f7a1d754e3f7e8">is_single_buffer</a> = true
+ }</td></tr>
+<tr class="separator:a683ced266d97b03afc957dd8f3f03b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ea5f2c860ad67bdcf202d525235e75"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a73ea5f2c860ad67bdcf202d525235e75a53a1dfeadc2739deee2e7e933aa87827">is_registered_buffer</a> = true
+ }</td></tr>
+<tr class="separator:a73ea5f2c860ad67bdcf202d525235e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96c484fb9d3cadd776a3227d592bbe0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#ae96c484fb9d3cadd776a3227d592bbe0a68255e5b6e52db0f5900ca9fae808e7b">linearisation_storage_size</a> = 1
+ }</td></tr>
+<tr class="separator:ae96c484fb9d3cadd776a3227d592bbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:acf2785387c7e038d1ede6fd86ff646f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#acf2785387c7e038d1ede6fd86ff646f8">buffer_sequence_adapter</a> (const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;buffer_sequence)</td></tr>
+<tr class="separator:acf2785387c7e038d1ede6fd86ff646f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0175963464976c3ac73b8fce4e4b2177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter__base.html#a91d037bd052777b8df514e6b94ec9e71">native_buffer_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a0175963464976c3ac73b8fce4e4b2177">buffers</a> ()</td></tr>
+<tr class="separator:a0175963464976c3ac73b8fce4e4b2177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867014f3ee08df48e08500893245d274"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a867014f3ee08df48e08500893245d274">count</a> () const</td></tr>
+<tr class="separator:a867014f3ee08df48e08500893245d274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea528fdb9dbae7ecbf81df12f50abdd0"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#aea528fdb9dbae7ecbf81df12f50abdd0">total_size</a> () const</td></tr>
+<tr class="separator:aea528fdb9dbae7ecbf81df12f50abdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9894eeb7a988b45a7018af375d4151e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1registered__buffer__id.html">registered_buffer_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a9894eeb7a988b45a7018af375d4151e3">registered_id</a> () const</td></tr>
+<tr class="separator:a9894eeb7a988b45a7018af375d4151e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c86319245269b9eb3e9f24d3cd5c214"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a5c86319245269b9eb3e9f24d3cd5c214">all_empty</a> () const</td></tr>
+<tr class="separator:a5c86319245269b9eb3e9f24d3cd5c214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a1cdcfb7af91f2e7a60229e12e967d428"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a1cdcfb7af91f2e7a60229e12e967d428">all_empty</a> (const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;buffer_sequence)</td></tr>
+<tr class="separator:a1cdcfb7af91f2e7a60229e12e967d428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7031c45432e25cda451584e1b59b8a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#a5a7031c45432e25cda451584e1b59b8a">validate</a> (const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;buffer_sequence)</td></tr>
+<tr class="separator:a5a7031c45432e25cda451584e1b59b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30318de456b3cd9f7b822d6624f1402"><td class="memItemLeft" align="right" valign="top">static Buffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#ac30318de456b3cd9f7b822d6624f1402">first</a> (const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;buffer_sequence)</td></tr>
+<tr class="separator:ac30318de456b3cd9f7b822d6624f1402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8e34adaca51617282674725788cd802"><td class="memItemLeft" align="right" valign="top">static Buffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter_3_01Buffer_00_01asio_1_1mutable__registered__buffer_01_4.html#af8e34adaca51617282674725788cd802">linearise</a> (const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;buffer_sequence, const Buffer &amp;)</td></tr>
+<tr class="separator:af8e34adaca51617282674725788cd802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a683ced266d97b03afc957dd8f3f03b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683ced266d97b03afc957dd8f3f03b5a">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a683ced266d97b03afc957dd8f3f03b5aac7ca173f3ed4e8eac6f7a1d754e3f7e8"></a>is_single_buffer&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a73ea5f2c860ad67bdcf202d525235e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ea5f2c860ad67bdcf202d525235e75">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a73ea5f2c860ad67bdcf202d525235e75a53a1dfeadc2739deee2e7e933aa87827"></a>is_registered_buffer&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae96c484fb9d3cadd776a3227d592bbe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae96c484fb9d3cadd776a3227d592bbe0">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ae96c484fb9d3cadd776a3227d592bbe0a68255e5b6e52db0f5900ca9fae808e7b"></a>linearisation_storage_size&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="acf2785387c7e038d1ede6fd86ff646f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2785387c7e038d1ede6fd86ff646f8">&#9670;&nbsp;</a></span>buffer_sequence_adapter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::<a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">buffer_sequence_adapter</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a5c86319245269b9eb3e9f24d3cd5c214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c86319245269b9eb3e9f24d3cd5c214">&#9670;&nbsp;</a></span>all_empty() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::all_empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cdcfb7af91f2e7a60229e12e967d428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cdcfb7af91f2e7a60229e12e967d428">&#9670;&nbsp;</a></span>all_empty() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::all_empty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0175963464976c3ac73b8fce4e4b2177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0175963464976c3ac73b8fce4e4b2177">&#9670;&nbsp;</a></span>buffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter__base.html#a91d037bd052777b8df514e6b94ec9e71">native_buffer_type</a>* <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::buffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a867014f3ee08df48e08500893245d274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a867014f3ee08df48e08500893245d274">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac30318de456b3cd9f7b822d6624f1402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30318de456b3cd9f7b822d6624f1402">&#9670;&nbsp;</a></span>first()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Buffer <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::first </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8e34adaca51617282674725788cd802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e34adaca51617282674725788cd802">&#9670;&nbsp;</a></span>linearise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Buffer <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::linearise </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sequence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Buffer &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9894eeb7a988b45a7018af375d4151e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9894eeb7a988b45a7018af375d4151e3">&#9670;&nbsp;</a></span>registered_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1registered__buffer__id.html">registered_buffer_id</a> <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::registered_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea528fdb9dbae7ecbf81df12f50abdd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea528fdb9dbae7ecbf81df12f50abdd0">&#9670;&nbsp;</a></span>total_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::total_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a7031c45432e25cda451584e1b59b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7031c45432e25cda451584e1b59b8a">&#9670;&nbsp;</a></span>validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Buffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1buffer__sequence__adapter.html">asio::detail::buffer_sequence_adapter</a>&lt; Buffer, <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &gt;::validate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1mutable__registered__buffer.html">asio::mutable_registered_buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>buffer_sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="buffer__sequence__adapter_8hpp_source.html">buffer_sequence_adapter.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

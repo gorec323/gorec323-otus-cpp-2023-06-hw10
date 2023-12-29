@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::deferred_function&lt; Function &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1deferred__function.html">deferred_function</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classasio_1_1deferred__function-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::deferred_function&lt; Function &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="deferred_8hpp_source.html">deferred.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6d80a327c94534d6657f400eaaeb2f5d"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a6d80a327c94534d6657f400eaaeb2f5d"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__function.html#a6d80a327c94534d6657f400eaaeb2f5d">deferred_function</a> (<a class="el" href="structasio_1_1deferred__init__tag.html">deferred_init_tag</a>, F &amp;&amp;function)</td></tr>
+<tr class="memdesc:a6d80a327c94534d6657f400eaaeb2f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classasio_1_1deferred__function.html#a6d80a327c94534d6657f400eaaeb2f5d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d80a327c94534d6657f400eaaeb2f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b13c9ab4628ff6c0cbd48b16bf9df2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a67b13c9ab4628ff6c0cbd48b16bf9df2"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__function.html#a67b13c9ab4628ff6c0cbd48b16bf9df2">operator()</a> (Args &amp;&amp;... args) &amp;&amp;-&gt; decltype(static_cast&lt; Function &amp;&amp; &gt;(this-&gt;<a class="el" href="classasio_1_1deferred__function.html#aa52cef9afa62de0985cf2b96dc5f75b5">function_</a>)(static_cast&lt; Args &amp;&amp; &gt;(args)...))</td></tr>
+<tr class="separator:a67b13c9ab4628ff6c0cbd48b16bf9df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f74f1accd80dee436ded2304e124fc"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a73f74f1accd80dee436ded2304e124fc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__function.html#a73f74f1accd80dee436ded2304e124fc">operator()</a> (Args &amp;&amp;... args) const &amp;-&gt; decltype(Function(<a class="el" href="classasio_1_1deferred__function.html#aa52cef9afa62de0985cf2b96dc5f75b5">function_</a>)(static_cast&lt; Args &amp;&amp; &gt;(args)...))</td></tr>
+<tr class="separator:a73f74f1accd80dee436ded2304e124fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aa52cef9afa62de0985cf2b96dc5f75b5"><td class="memItemLeft" align="right" valign="top">Function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1deferred__function.html#aa52cef9afa62de0985cf2b96dc5f75b5">function_</a></td></tr>
+<tr class="separator:aa52cef9afa62de0985cf2b96dc5f75b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename Function&gt;<br />
+class asio::deferred_function&lt; Function &gt;</h3>
+
+<p>Wraps a function object so that it may be used as an element in a deferred composition. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a6d80a327c94534d6657f400eaaeb2f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d80a327c94534d6657f400eaaeb2f5d">&#9670;&nbsp;</a></span>deferred_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function &gt; </div>
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classasio_1_1deferred__function.html">asio::deferred_function</a>&lt; Function &gt;::<a class="el" href="classasio_1_1deferred__function.html">deferred_function</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1deferred__init__tag.html">deferred_init_tag</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a67b13c9ab4628ff6c0cbd48b16bf9df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b13c9ab4628ff6c0cbd48b16bf9df2">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classasio_1_1deferred__function.html">asio::deferred_function</a>&lt; Function &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td> &amp;&amp; -&gt; decltype(
+      static_cast&lt;Function&amp;&amp;&gt;(this-&gt;<a class="el" href="classasio_1_1deferred__function.html#aa52cef9afa62de0985cf2b96dc5f75b5">function_</a>)(static_cast&lt;Args&amp;&amp;&gt;(args)...))
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73f74f1accd80dee436ded2304e124fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f74f1accd80dee436ded2304e124fc">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classasio_1_1deferred__function.html">asio::deferred_function</a>&lt; Function &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td> const &amp; -&gt; decltype(Function(<a class="el" href="classasio_1_1deferred__function.html#aa52cef9afa62de0985cf2b96dc5f75b5">function_</a>)(static_cast&lt;Args&amp;&amp;&gt;(args)...))
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aa52cef9afa62de0985cf2b96dc5f75b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52cef9afa62de0985cf2b96dc5f75b5">&#9670;&nbsp;</a></span>function_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Function <a class="el" href="classasio_1_1deferred__function.html">asio::deferred_function</a>&lt; Function &gt;::function_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="deferred_8hpp_source.html">deferred.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

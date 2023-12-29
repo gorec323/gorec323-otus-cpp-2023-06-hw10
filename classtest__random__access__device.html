@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс test_random_access_device</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classtest__random__access__device-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс test_random_access_device</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a333fc84741dfa4be82a2e4be5f49053c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1io__context.html#a8c4cfd4b53a8763b0a1217bd66644b6b">asio::io_context::executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">executor_type</a></td></tr>
+<tr class="separator:a333fc84741dfa4be82a2e4be5f49053c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333fc84741dfa4be82a2e4be5f49053c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1io__context.html#a8c4cfd4b53a8763b0a1217bd66644b6b">asio::io_context::executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">executor_type</a></td></tr>
+<tr class="separator:a333fc84741dfa4be82a2e4be5f49053c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad1c2ec8af80334e5ca92af16a43bb359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#ad1c2ec8af80334e5ca92af16a43bb359">test_random_access_device</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;io_context)</td></tr>
+<tr class="separator:ad1c2ec8af80334e5ca92af16a43bb359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725056ad85cebe436712a81774b198fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a725056ad85cebe436712a81774b198fd">get_executor</a> () noexcept</td></tr>
+<tr class="separator:a725056ad85cebe436712a81774b198fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7a77bebc102838f70b1afa1bf67b97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a4a7a77bebc102838f70b1afa1bf67b97">reset</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t length)</td></tr>
+<tr class="separator:a4a7a77bebc102838f70b1afa1bf67b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2cccdd2b8e093f6e6aa93079027b06d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#ad2cccdd2b8e093f6e6aa93079027b06d">next_read_length</a> (size_t length)</td></tr>
+<tr class="separator:ad2cccdd2b8e093f6e6aa93079027b06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf68e6f4fafdf6fc9cbd40a5283a33e1"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:aaf68e6f4fafdf6fc9cbd40a5283a33e1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#aaf68e6f4fafdf6fc9cbd40a5283a33e1">check_buffers</a> (asio::uint64_t offset, Iterator begin, Iterator end, size_t length)</td></tr>
+<tr class="separator:aaf68e6f4fafdf6fc9cbd40a5283a33e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec26ae5cd7e2e2603a65f32d32acb5f"><td class="memTemplParams" colspan="2">template&lt;typename Const_Buffers &gt; </td></tr>
+<tr class="memitem:a7ec26ae5cd7e2e2603a65f32d32acb5f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a7ec26ae5cd7e2e2603a65f32d32acb5f">check_buffers</a> (asio::uint64_t offset, const Const_Buffers &amp;buffers, size_t length)</td></tr>
+<tr class="separator:a7ec26ae5cd7e2e2603a65f32d32acb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf5ab219797d19e67b41a314547d3ce"><td class="memTemplParams" colspan="2">template&lt;typename Mutable_Buffers &gt; </td></tr>
+<tr class="memitem:aeaf5ab219797d19e67b41a314547d3ce"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#aeaf5ab219797d19e67b41a314547d3ce">read_some_at</a> (asio::uint64_t offset, const Mutable_Buffers &amp;buffers)</td></tr>
+<tr class="separator:aeaf5ab219797d19e67b41a314547d3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88f397ac4f88ac4178c106128e634f8"><td class="memTemplParams" colspan="2">template&lt;typename Mutable_Buffers &gt; </td></tr>
+<tr class="memitem:af88f397ac4f88ac4178c106128e634f8"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#af88f397ac4f88ac4178c106128e634f8">read_some_at</a> (asio::uint64_t offset, const Mutable_Buffers &amp;buffers, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:af88f397ac4f88ac4178c106128e634f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c17ae933cada73a8ee8076643553e0"><td class="memTemplParams" colspan="2">template&lt;typename Mutable_Buffers , typename Handler &gt; </td></tr>
+<tr class="memitem:a08c17ae933cada73a8ee8076643553e0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a08c17ae933cada73a8ee8076643553e0">async_read_some_at</a> (asio::uint64_t offset, const Mutable_Buffers &amp;buffers, Handler &amp;&amp;handler)</td></tr>
+<tr class="separator:a08c17ae933cada73a8ee8076643553e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c2ec8af80334e5ca92af16a43bb359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#ad1c2ec8af80334e5ca92af16a43bb359">test_random_access_device</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;io_context)</td></tr>
+<tr class="separator:ad1c2ec8af80334e5ca92af16a43bb359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725056ad85cebe436712a81774b198fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a725056ad85cebe436712a81774b198fd">get_executor</a> () noexcept</td></tr>
+<tr class="separator:a725056ad85cebe436712a81774b198fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9e6fc1495df44472edc9a350324937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a5e9e6fc1495df44472edc9a350324937">reset</a> ()</td></tr>
+<tr class="separator:a5e9e6fc1495df44472edc9a350324937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3d2bb4c3d35ac52c7861c1b1b86767"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#aee3d2bb4c3d35ac52c7861c1b1b86767">next_write_length</a> (size_t length)</td></tr>
+<tr class="separator:aee3d2bb4c3d35ac52c7861c1b1b86767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf68e6f4fafdf6fc9cbd40a5283a33e1"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:aaf68e6f4fafdf6fc9cbd40a5283a33e1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#aaf68e6f4fafdf6fc9cbd40a5283a33e1">check_buffers</a> (asio::uint64_t offset, Iterator begin, Iterator end, size_t length)</td></tr>
+<tr class="separator:aaf68e6f4fafdf6fc9cbd40a5283a33e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec26ae5cd7e2e2603a65f32d32acb5f"><td class="memTemplParams" colspan="2">template&lt;typename Const_Buffers &gt; </td></tr>
+<tr class="memitem:a7ec26ae5cd7e2e2603a65f32d32acb5f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a7ec26ae5cd7e2e2603a65f32d32acb5f">check_buffers</a> (asio::uint64_t offset, const Const_Buffers &amp;buffers, size_t length)</td></tr>
+<tr class="separator:a7ec26ae5cd7e2e2603a65f32d32acb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3f78037eb7c65d752fdccbb798b7e1"><td class="memTemplParams" colspan="2">template&lt;typename Const_Buffers &gt; </td></tr>
+<tr class="memitem:a9b3f78037eb7c65d752fdccbb798b7e1"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a9b3f78037eb7c65d752fdccbb798b7e1">write_some_at</a> (asio::uint64_t offset, const Const_Buffers &amp;buffers)</td></tr>
+<tr class="separator:a9b3f78037eb7c65d752fdccbb798b7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f365620bec12ed05785b237eedb244e"><td class="memTemplParams" colspan="2">template&lt;typename Const_Buffers &gt; </td></tr>
+<tr class="memitem:a5f365620bec12ed05785b237eedb244e"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#a5f365620bec12ed05785b237eedb244e">write_some_at</a> (asio::uint64_t offset, const Const_Buffers &amp;buffers, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a5f365620bec12ed05785b237eedb244e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86dfc916085d28ee6a0731faa6eff87"><td class="memTemplParams" colspan="2">template&lt;typename Const_Buffers , typename Handler &gt; </td></tr>
+<tr class="memitem:aa86dfc916085d28ee6a0731faa6eff87"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html#aa86dfc916085d28ee6a0731faa6eff87">async_write_some_at</a> (asio::uint64_t offset, const Const_Buffers &amp;buffers, Handler &amp;&amp;handler)</td></tr>
+<tr class="separator:aa86dfc916085d28ee6a0731faa6eff87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a333fc84741dfa4be82a2e4be5f49053c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333fc84741dfa4be82a2e4be5f49053c">&#9670;&nbsp;</a></span>executor_type <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1io__context.html#a8c4cfd4b53a8763b0a1217bd66644b6b">asio::io_context::executor_type</a> <a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">test_random_access_device::executor_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a333fc84741dfa4be82a2e4be5f49053c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333fc84741dfa4be82a2e4be5f49053c">&#9670;&nbsp;</a></span>executor_type <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1io__context.html#a8c4cfd4b53a8763b0a1217bd66644b6b">asio::io_context::executor_type</a> <a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">test_random_access_device::executor_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ad1c2ec8af80334e5ca92af16a43bb359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c2ec8af80334e5ca92af16a43bb359">&#9670;&nbsp;</a></span>test_random_access_device() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">test_random_access_device::test_random_access_device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>io_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1c2ec8af80334e5ca92af16a43bb359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c2ec8af80334e5ca92af16a43bb359">&#9670;&nbsp;</a></span>test_random_access_device() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">test_random_access_device::test_random_access_device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>io_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a08c17ae933cada73a8ee8076643553e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08c17ae933cada73a8ee8076643553e0">&#9670;&nbsp;</a></span>async_read_some_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutable_Buffers , typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_random_access_device::async_read_some_at </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Mutable_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa86dfc916085d28ee6a0731faa6eff87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86dfc916085d28ee6a0731faa6eff87">&#9670;&nbsp;</a></span>async_write_some_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Const_Buffers , typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_random_access_device::async_write_some_at </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Const_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ec26ae5cd7e2e2603a65f32d32acb5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec26ae5cd7e2e2603a65f32d32acb5f">&#9670;&nbsp;</a></span>check_buffers() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Const_Buffers &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_random_access_device::check_buffers </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Const_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ec26ae5cd7e2e2603a65f32d32acb5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec26ae5cd7e2e2603a65f32d32acb5f">&#9670;&nbsp;</a></span>check_buffers() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Const_Buffers &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_random_access_device::check_buffers </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Const_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf68e6f4fafdf6fc9cbd40a5283a33e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf68e6f4fafdf6fc9cbd40a5283a33e1">&#9670;&nbsp;</a></span>check_buffers() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_random_access_device::check_buffers </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf68e6f4fafdf6fc9cbd40a5283a33e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf68e6f4fafdf6fc9cbd40a5283a33e1">&#9670;&nbsp;</a></span>check_buffers() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_random_access_device::check_buffers </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a725056ad85cebe436712a81774b198fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725056ad85cebe436712a81774b198fd">&#9670;&nbsp;</a></span>get_executor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">executor_type</a> test_random_access_device::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a725056ad85cebe436712a81774b198fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725056ad85cebe436712a81774b198fd">&#9670;&nbsp;</a></span>get_executor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtest__random__access__device.html#a333fc84741dfa4be82a2e4be5f49053c">executor_type</a> test_random_access_device::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2cccdd2b8e093f6e6aa93079027b06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2cccdd2b8e093f6e6aa93079027b06d">&#9670;&nbsp;</a></span>next_read_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_random_access_device::next_read_length </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee3d2bb4c3d35ac52c7861c1b1b86767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3d2bb4c3d35ac52c7861c1b1b86767">&#9670;&nbsp;</a></span>next_write_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_random_access_device::next_write_length </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaf5ab219797d19e67b41a314547d3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf5ab219797d19e67b41a314547d3ce">&#9670;&nbsp;</a></span>read_some_at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutable_Buffers &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t test_random_access_device::read_some_at </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Mutable_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af88f397ac4f88ac4178c106128e634f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88f397ac4f88ac4178c106128e634f8">&#9670;&nbsp;</a></span>read_some_at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Mutable_Buffers &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t test_random_access_device::read_some_at </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Mutable_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;&#160;</td>
+          <td class="paramname"><em>ec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e9e6fc1495df44472edc9a350324937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9e6fc1495df44472edc9a350324937">&#9670;&nbsp;</a></span>reset() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_random_access_device::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a7a77bebc102838f70b1afa1bf67b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7a77bebc102838f70b1afa1bf67b97">&#9670;&nbsp;</a></span>reset() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_random_access_device::reset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b3f78037eb7c65d752fdccbb798b7e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b3f78037eb7c65d752fdccbb798b7e1">&#9670;&nbsp;</a></span>write_some_at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Const_Buffers &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t test_random_access_device::write_some_at </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Const_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f365620bec12ed05785b237eedb244e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f365620bec12ed05785b237eedb244e">&#9670;&nbsp;</a></span>write_some_at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Const_Buffers &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t test_random_access_device::write_some_at </td>
+          <td>(</td>
+          <td class="paramtype">asio::uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Const_Buffers &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;&#160;</td>
+          <td class="paramname"><em>ec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>_deps/asio-src/asio/src/tests/unit/<a class="el" href="read__at_8cpp.html">read_at.cpp</a></li>
+<li>_deps/asio-src/asio/src/tests/unit/<a class="el" href="write__at_8cpp.html">write_at.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

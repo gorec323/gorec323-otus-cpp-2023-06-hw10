@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/ip/tcp.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li><li class="navelem"><a class="el" href="dir_a93cc0b688d3b7b177edf24c783d51c9.html">ip</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл tcp.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="tcp_8hpp_source.html">asio/ip/tcp.hpp</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8hpp_source.html">asio/io_context.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="read_8hpp_source.html">asio/read.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="write_8hpp_source.html">asio/write.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">../unit_test.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2tests_2unit_2archetypes_2async__result_8hpp_source.html">../archetypes/async_result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gettable__socket__option_8hpp_source.html">../archetypes/gettable_socket_option.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__control__command_8hpp_source.html">../archetypes/io_control_command.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="settable__socket__option_8hpp_source.html">../archetypes/settable_socket_option.hpp</a>&quot;</code><br />
+<code>#include &lt;array&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для tcp.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="tcp_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2tcp_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2tcp_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2ip_2tcp_8cpp">
+<area shape="rect" title=" " alt="" coords="4047,5,4224,47"/>
+<area shape="rect" href="tcp_8hpp.html" title=" " alt="" coords="3606,102,3723,129"/>
+<area shape="rect" title=" " alt="" coords="3912,370,3999,397"/>
+<area shape="rect" title=" " alt="" coords="5250,452,5317,479"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="1526,191,1675,218"/>
+<area shape="rect" href="read_8hpp.html" title=" " alt="" coords="2781,102,2892,129"/>
+<area shape="rect" href="write_8hpp.html" title=" " alt="" coords="3802,191,3917,218"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="5,281,124,307"/>
+<area shape="rect" href="src_2tests_2unit_2archetypes_2async__result_8hpp.html" title=" " alt="" coords="1700,184,1848,225"/>
+<area shape="rect" href="gettable__socket__option_8hpp.html" title=" " alt="" coords="5337,95,5501,136"/>
+<area shape="rect" href="io__control__command_8hpp.html" title=" " alt="" coords="5713,95,5888,136"/>
+<area shape="rect" href="settable__socket__option_8hpp.html" title=" " alt="" coords="5526,95,5689,136"/>
+<area shape="rect" title=" " alt="" coords="5913,102,5969,129"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="1069,452,1231,479"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="3551,191,3778,218"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="3983,452,4191,479"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3035,452,3236,479"/>
+<area shape="rect" href="basic__socket__iostream_8hpp.html" title=" " alt="" coords="2631,370,2861,397"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="3259,191,3476,218"/>
+<area shape="rect" href="detail_2socket__option_8hpp.html" title=" " alt="" coords="4663,273,4799,315"/>
+<area shape="rect" href="socket__types_8hpp.html" title=" " alt="" coords="4327,363,4463,404"/>
+<area shape="rect" href="ip_2basic__endpoint_8hpp.html" title=" " alt="" coords="2435,281,2630,307"/>
+<area shape="rect" href="basic__resolver_8hpp.html" title=" " alt="" coords="3044,191,3235,218"/>
+<area shape="rect" href="basic__resolver__iterator_8hpp.html" title=" " alt="" coords="4375,273,4538,315"/>
+<area shape="rect" href="basic__resolver__query_8hpp.html" title=" " alt="" coords="2885,363,3047,404"/>
+<area shape="rect" title=" " alt="" coords="4868,527,4939,553"/>
+<area shape="rect" title=" " alt="" coords="1164,527,1293,553"/>
+<area shape="rect" title=" " alt="" coords="1001,527,1139,553"/>
+<area shape="rect" title=" " alt="" coords="3196,281,3256,307"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="3332,281,3443,307"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="2306,370,2506,397"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="2131,370,2281,397"/>
+<area shape="rect" title=" " alt="" coords="4888,452,4975,479"/>
+<area shape="rect" title=" " alt="" coords="2221,452,2297,479"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="2755,281,2918,307"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="768,370,935,397"/>
+<area shape="rect" href="chrono_8hpp.html" title=" " alt="" coords="712,281,879,307"/>
+<area shape="rect" href="concurrency__hint_8hpp.html" title=" " alt="" coords="463,273,637,315"/>
+<area shape="rect" href="wrapped__handler_8hpp.html" title=" " alt="" coords="3533,363,3684,404"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="1385,452,1529,479"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="2025,281,2209,307"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="3224,370,3407,397"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="199,363,338,404"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="5096,370,5215,397"/>
+<area shape="rect" href="completion__condition_8hpp.html" title=" " alt="" coords="1783,370,2005,397"/>
+<area shape="rect" href="basic__streambuf__fwd_8hpp.html" title=" " alt="" coords="903,273,1064,315"/>
+<area shape="rect" href="impl_2read_8hpp.html" title=" " alt="" coords="4008,191,4151,218"/>
+<area shape="rect" href="impl_2write_8hpp.html" title=" " alt="" coords="4874,281,5021,307"/>
+<area shape="rect" title=" " alt="" coords="45,370,125,397"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="1517,370,1708,397"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__socket__compile_1_1connect__handler.html">ip_tcp_socket_compile::connect_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__socket__compile_1_1wait__handler.html">ip_tcp_socket_compile::wait_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__socket__compile_1_1send__handler.html">ip_tcp_socket_compile::send_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__socket__compile_1_1receive__handler.html">ip_tcp_socket_compile::receive_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__socket__compile_1_1write__some__handler.html">ip_tcp_socket_compile::write_some_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__socket__compile_1_1read__some__handler.html">ip_tcp_socket_compile::read_some_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__acceptor__compile_1_1wait__handler.html">ip_tcp_acceptor_compile::wait_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__acceptor__compile_1_1accept__handler.html">ip_tcp_acceptor_compile::accept_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__acceptor__compile_1_1move__accept__handler.html">ip_tcp_acceptor_compile::move_accept_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__acceptor__compile_1_1move__accept__ioc__handler.html">ip_tcp_acceptor_compile::move_accept_ioc_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__resolver__compile_1_1resolve__handler.html">ip_tcp_resolver_compile::resolve_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structip__tcp__resolver__compile_1_1legacy__resolve__handler.html">ip_tcp_resolver_compile::legacy_resolve_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceip__tcp__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__compile.html">ip_tcp_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__runtime"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__runtime.html">ip_tcp_runtime</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__socket__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__compile.html">ip_tcp_socket_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__socket__runtime"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html">ip_tcp_socket_runtime</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__acceptor__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__acceptor__compile.html">ip_tcp_acceptor_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__acceptor__runtime"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__acceptor__runtime.html">ip_tcp_acceptor_runtime</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__resolver__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__resolver__compile.html">ip_tcp_resolver_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__resolver__entry__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__resolver__entry__compile.html">ip_tcp_resolver_entry_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceip__tcp__iostream__compile"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__iostream__compile.html">ip_tcp_iostream_compile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf02cc0df9db7cca1a36de7cb4d5344"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp_8cpp.html#adcf02cc0df9db7cca1a36de7cb4d5344">ASIO_ENABLE_CANCELIO</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:adcf02cc0df9db7cca1a36de7cb4d5344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a39ed95b9f9324eae299d2dbcdd13a067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__compile.html#a39ed95b9f9324eae299d2dbcdd13a067">ip_tcp_compile::test</a> ()</td></tr>
+<tr class="separator:a39ed95b9f9324eae299d2dbcdd13a067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecee6ea6ec26c2e2999f7580e0a00dd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__runtime.html#aecee6ea6ec26c2e2999f7580e0a00dd0">ip_tcp_runtime::test</a> ()</td></tr>
+<tr class="separator:aecee6ea6ec26c2e2999f7580e0a00dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536752deca99dd2ca7a496587df81f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__compile.html#a536752deca99dd2ca7a496587df81f83">ip_tcp_socket_compile::test</a> ()</td></tr>
+<tr class="separator:a536752deca99dd2ca7a496587df81f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061d9c40e661ba881507665dcf295dcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html#a061d9c40e661ba881507665dcf295dcb">ip_tcp_socket_runtime::handle_read_noop</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_transferred, bool *called)</td></tr>
+<tr class="separator:a061d9c40e661ba881507665dcf295dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c3ef142663ee457cf61c8358469c47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html#ac7c3ef142663ee457cf61c8358469c47">ip_tcp_socket_runtime::handle_write_noop</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_transferred, bool *called)</td></tr>
+<tr class="separator:ac7c3ef142663ee457cf61c8358469c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9209cf32aa0acc00f72f9f2f4005174"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html#ab9209cf32aa0acc00f72f9f2f4005174">ip_tcp_socket_runtime::handle_read</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_transferred, bool *called)</td></tr>
+<tr class="separator:ab9209cf32aa0acc00f72f9f2f4005174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e545491407a52667592ebd1c9ee94ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html#a0e545491407a52667592ebd1c9ee94ed">ip_tcp_socket_runtime::handle_write</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_transferred, bool *called)</td></tr>
+<tr class="separator:a0e545491407a52667592ebd1c9ee94ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9488a7e0af21c87658bd1c2e67584e4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html#a9488a7e0af21c87658bd1c2e67584e4b">ip_tcp_socket_runtime::handle_read_cancel</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_transferred, bool *called)</td></tr>
+<tr class="separator:a9488a7e0af21c87658bd1c2e67584e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e4e5211a92098f5a2e1cd06727a05a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html#a90e4e5211a92098f5a2e1cd06727a05a">ip_tcp_socket_runtime::handle_read_eof</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err, size_t bytes_transferred, bool *called)</td></tr>
+<tr class="separator:a90e4e5211a92098f5a2e1cd06727a05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2b0530a40eee33bc055474e351772c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__socket__runtime.html#a6f2b0530a40eee33bc055474e351772c">ip_tcp_socket_runtime::test</a> ()</td></tr>
+<tr class="separator:a6f2b0530a40eee33bc055474e351772c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641b2f98bcfd1ab7038166a236a16982"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__acceptor__compile.html#a641b2f98bcfd1ab7038166a236a16982">ip_tcp_acceptor_compile::test</a> ()</td></tr>
+<tr class="separator:a641b2f98bcfd1ab7038166a236a16982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e9629c86a6f3a51a4b2bb0ec2f8c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__acceptor__runtime.html#a63e9629c86a6f3a51a4b2bb0ec2f8c2e">ip_tcp_acceptor_runtime::handle_accept</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err)</td></tr>
+<tr class="separator:a63e9629c86a6f3a51a4b2bb0ec2f8c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb0071db5b6c5262fc3e128291d1f01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__acceptor__runtime.html#a6cb0071db5b6c5262fc3e128291d1f01">ip_tcp_acceptor_runtime::handle_connect</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;err)</td></tr>
+<tr class="separator:a6cb0071db5b6c5262fc3e128291d1f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda744baa39520c0c01036a79579915c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__acceptor__runtime.html#afda744baa39520c0c01036a79579915c">ip_tcp_acceptor_runtime::test</a> ()</td></tr>
+<tr class="separator:afda744baa39520c0c01036a79579915c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93c8721d21dc4ab2371b4842ee4e289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__resolver__compile.html#ae93c8721d21dc4ab2371b4842ee4e289">ip_tcp_resolver_compile::test</a> ()</td></tr>
+<tr class="separator:ae93c8721d21dc4ab2371b4842ee4e289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375b2df2d5dbe914f8bc6bea7a4dc713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__resolver__entry__compile.html#a375b2df2d5dbe914f8bc6bea7a4dc713">ip_tcp_resolver_entry_compile::test</a> ()</td></tr>
+<tr class="separator:a375b2df2d5dbe914f8bc6bea7a4dc713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81efe8d5dd94a1b7c47ab17210e3a45c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceip__tcp__iostream__compile.html#a81efe8d5dd94a1b7c47ab17210e3a45c">ip_tcp_iostream_compile::test</a> ()</td></tr>
+<tr class="separator:a81efe8d5dd94a1b7c47ab17210e3a45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="adcf02cc0df9db7cca1a36de7cb4d5344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf02cc0df9db7cca1a36de7cb4d5344">&#9670;&nbsp;</a></span>ASIO_ENABLE_CANCELIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ENABLE_CANCELIO&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

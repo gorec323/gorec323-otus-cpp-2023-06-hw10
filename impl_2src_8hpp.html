@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/impl/src.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_8c6c10ebdd857c41e2ac833cd6d1f150.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл src.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="any__completion__executor_8ipp.html">asio/impl/any_completion_executor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="any__io__executor_8ipp.html">asio/impl/any_io_executor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cancellation__signal_8ipp.html">asio/impl/cancellation_signal.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="connect__pipe_8ipp.html">asio/impl/connect_pipe.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="impl_2error_8ipp.html">asio/impl/error.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error__code_8ipp.html">asio/impl/error_code.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="execution__context_8ipp.html">asio/impl/execution_context.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="executor_8ipp.html">asio/impl/executor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8ipp.html">asio/impl/io_context.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multiple__exceptions_8ipp.html">asio/impl/multiple_exceptions.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="serial__port__base_8ipp.html">asio/impl/serial_port_base.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="system__context_8ipp.html">asio/impl/system_context.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="thread__pool_8ipp.html">asio/impl/thread_pool.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="buffer__sequence__adapter_8ipp.html">asio/detail/impl/buffer_sequence_adapter.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="descriptor__ops_8ipp.html">asio/detail/impl/descriptor_ops.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dev__poll__reactor_8ipp.html">asio/detail/impl/dev_poll_reactor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="epoll__reactor_8ipp.html">asio/detail/impl/epoll_reactor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eventfd__select__interrupter_8ipp.html">asio/detail/impl/eventfd_select_interrupter.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="handler__tracking_8ipp.html">asio/detail/impl/handler_tracking.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__uring__descriptor__service_8ipp.html">asio/detail/impl/io_uring_descriptor_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__uring__file__service_8ipp.html">asio/detail/impl/io_uring_file_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__uring__socket__service__base_8ipp.html">asio/detail/impl/io_uring_socket_service_base.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__uring__service_8ipp.html">asio/detail/impl/io_uring_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="kqueue__reactor_8ipp.html">asio/detail/impl/kqueue_reactor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="null__event_8ipp.html">asio/detail/impl/null_event.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pipe__select__interrupter_8ipp.html">asio/detail/impl/pipe_select_interrupter.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="posix__event_8ipp.html">asio/detail/impl/posix_event.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="posix__mutex_8ipp.html">asio/detail/impl/posix_mutex.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="posix__serial__port__service_8ipp.html">asio/detail/impl/posix_serial_port_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="posix__thread_8ipp.html">asio/detail/impl/posix_thread.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="posix__tss__ptr_8ipp.html">asio/detail/impl/posix_tss_ptr.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="reactive__descriptor__service_8ipp.html">asio/detail/impl/reactive_descriptor_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="reactive__socket__service__base_8ipp.html">asio/detail/impl/reactive_socket_service_base.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="resolver__service__base_8ipp.html">asio/detail/impl/resolver_service_base.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scheduler_8ipp.html">asio/detail/impl/scheduler.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="select__reactor_8ipp.html">asio/detail/impl/select_reactor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="service__registry_8ipp.html">asio/detail/impl/service_registry.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="signal__set__service_8ipp.html">asio/detail/impl/signal_set_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="socket__ops_8ipp.html">asio/detail/impl/socket_ops.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="socket__select__interrupter_8ipp.html">asio/detail/impl/socket_select_interrupter.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="strand__executor__service_8ipp.html">asio/detail/impl/strand_executor_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="strand__service_8ipp.html">asio/detail/impl/strand_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="thread__context_8ipp.html">asio/detail/impl/thread_context.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="throw__error_8ipp.html">asio/detail/impl/throw_error.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__queue__ptime_8ipp.html">asio/detail/impl/timer_queue_ptime.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__queue__set_8ipp.html">asio/detail/impl/timer_queue_set.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__iocp__file__service_8ipp.html">asio/detail/impl/win_iocp_file_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__iocp__handle__service_8ipp.html">asio/detail/impl/win_iocp_handle_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__iocp__io__context_8ipp.html">asio/detail/impl/win_iocp_io_context.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__iocp__serial__port__service_8ipp.html">asio/detail/impl/win_iocp_serial_port_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__iocp__socket__service__base_8ipp.html">asio/detail/impl/win_iocp_socket_service_base.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__event_8ipp.html">asio/detail/impl/win_event.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__mutex_8ipp.html">asio/detail/impl/win_mutex.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__object__handle__service_8ipp.html">asio/detail/impl/win_object_handle_service.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__static__mutex_8ipp.html">asio/detail/impl/win_static_mutex.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__thread_8ipp.html">asio/detail/impl/win_thread.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="win__tss__ptr_8ipp.html">asio/detail/impl/win_tss_ptr.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="winrt__ssocket__service__base_8ipp.html">asio/detail/impl/winrt_ssocket_service_base.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="winrt__timer__scheduler_8ipp.html">asio/detail/impl/winrt_timer_scheduler.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="winsock__init_8ipp.html">asio/detail/impl/winsock_init.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bad__executor_8ipp.html">asio/execution/impl/bad_executor.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="channel__error_8ipp.html">asio/experimental/impl/channel_error.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="generic_2detail_2impl_2endpoint_8ipp.html">asio/generic/detail/impl/endpoint.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address_8ipp.html">asio/ip/impl/address.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__v4_8ipp.html">asio/ip/impl/address_v4.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__v6_8ipp.html">asio/ip/impl/address_v6.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="host__name_8ipp.html">asio/ip/impl/host_name.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="network__v4_8ipp.html">asio/ip/impl/network_v4.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="network__v6_8ipp.html">asio/ip/impl/network_v6.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ip_2detail_2impl_2endpoint_8ipp.html">asio/ip/detail/impl/endpoint.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="local_2detail_2impl_2endpoint_8ipp.html">asio/local/detail/impl/endpoint.ipp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2src_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2impl_2src_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2impl_2src_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2impl_2src_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,193,47"/>
+<area shape="rect" href="asio_8cpp.html" title=" " alt="" coords="26,95,173,136"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2src_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a41201237c54e1bbbc23efe19b9310e9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="impl_2src_8hpp.html#a41201237c54e1bbbc23efe19b9310e9b">ASIO_SOURCE</a></td></tr>
+<tr class="separator:a41201237c54e1bbbc23efe19b9310e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a41201237c54e1bbbc23efe19b9310e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41201237c54e1bbbc23efe19b9310e9b">&#9670;&nbsp;</a></span>ASIO_SOURCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_SOURCE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/experimental/promise.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_4b7ec68c1dc10d9fd423a12bdfeaade0.html">experimental</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">promise.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="promise_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// experimental/promise.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2021-2023 Klemens D. Morgenstern</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//                         (klemens dot morgenstern at gmx dot net)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ASIO_EXPERIMENTAL_PROMISE_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ASIO_EXPERIMENTAL_PROMISE_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="any__io__executor_8hpp.html">asio/any_io_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="associated__cancellation__slot_8hpp.html">asio/associated_cancellation_slot.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="associated__executor_8hpp.html">asio/associated_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bind__executor_8hpp.html">asio/bind_executor.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cancellation__signal_8hpp.html">asio/cancellation_signal.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dispatch_8hpp.html">asio/dispatch.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="impl_2promise_8hpp.html">asio/experimental/impl/promise.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="post_8hpp.html">asio/post.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>experimental {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1is__promise.html">   38</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1is__promise.html">is_promise</a> : std::false_type {};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ... Ts&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1is__promise_3_01promise_3_01Ts_8_8_8_01_4_01_4.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1is__promise.html">is_promise</a>&lt;<a class="code" href="namespacepromise.html">promise</a>&lt;Ts...&gt;&gt; : std::true_type {};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a7b6a92f119223e8ce2c565c4c9fa5983">   44</a></span>&#160;constexpr <span class="keywordtype">bool</span> <a class="code" href="namespaceasio_1_1experimental.html#a7b6a92f119223e8ce2c565c4c9fa5983">is_promise_v</a> = <a class="code" href="structasio_1_1experimental_1_1is__promise.html">is_promise&lt;T&gt;::value</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ... Ts&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise__value__type.html">   47</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1promise__value__type.html">promise_value_type</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise__value__type.html#a17e879b6398a39d9312214badb0fa35b">   49</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="structasio_1_1experimental_1_1promise__value__type.html#a17e879b6398a39d9312214badb0fa35b">type</a> = std::tuple&lt;Ts...&gt;;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise__value__type_3_01T_01_4.html">   53</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1promise__value__type.html">promise_value_type</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise__value__type_3_01T_01_4.html#a086998f53f902b57e2238fdc3e3b5dc8">   55</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="structasio_1_1experimental_1_1promise__value__type_3_01T_01_4.html#a086998f53f902b57e2238fdc3e3b5dc8">type</a> = <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise__value__type_3_4.html">   59</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1promise__value__type.html">promise_value_type</a>&lt;&gt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise__value__type_3_4.html#a4e0ec26e2162b8cdeac54d61d783116f">   61</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="structasio_1_1experimental_1_1promise__value__type_3_4.html#a4e0ec26e2162b8cdeac54d61d783116f">type</a> = std::tuple&lt;&gt;;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Signature = <a class="code" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(),</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typename</span> Executor = <a class="code" href="classasio_1_1any__io__executor.html">asio::any_io_executor</a>,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">typename</span> Allocator = std::allocator&lt;void&gt;&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">struct </span><a class="code" href="namespacepromise.html">promise</a></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;#else</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;template &lt;typename ... Ts, typename Executor, typename Allocator&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html">   99</a></span>&#160;struct <a class="code" href="namespacepromise.html">promise</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor,  Allocator&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;#endif <span class="comment">// defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a7f1cb16f89f7482de3c4e95b6f02f07e">  103</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a7f1cb16f89f7482de3c4e95b6f02f07e">value_type</a> = <span class="keyword">typename</span> <a class="code" href="structasio_1_1experimental_1_1promise__value__type.html">promise_value_type</a>&lt;Ts...&gt;::type;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a35432f4f75f71cc95fe133255f0a8fc0">  106</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a35432f4f75f71cc95fe133255f0a8fc0">cancel</a>(<a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type</a> level = <a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6aa181a603769c1f98ad927e7367c7aa51">cancellation_type::all</a>)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (impl_ &amp;&amp; !impl_-&gt;done)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <a class="code" href="namespaceasio.html#a0b53f4ff238fefdfbaf52153b89e6abd">asio::dispatch</a>(impl_-&gt;executor,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          [level, impl = impl_]{ impl-&gt;cancel.emit(level); });</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a1cbf0c7e34775644facc6c964b352e8f">  116</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a1cbf0c7e34775644facc6c964b352e8f">completed</a>() const noexcept</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> impl_ &amp;&amp; impl_-&gt;done;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">template</span> &lt;<a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span>(Ts...)) CompletionToken&gt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ac3c1a9c4dbbeae664c0b759a345f6a79">  123</a></span>&#160;  inline <a class="code" href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">ASIO_INITFN_AUTO_RESULT_TYPE</a>(CompletionToken, <span class="keywordtype">void</span>(Ts...))</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  operator()(CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    assert(impl_);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;CompletionToken, <a class="code" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...)&gt;(</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        initiate_async_wait{impl_}, <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a9b4bbdb024aec7c9ff3c420553ea8e61">  132</a></span>&#160;  <a class="code" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a9b4bbdb024aec7c9ff3c420553ea8e61">promise</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a960006f2ccbad2fe0bb800108165d5db">  133</a></span>&#160;  <a class="code" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a960006f2ccbad2fe0bb800108165d5db">promise</a>(<span class="keyword">const</span> <a class="code" href="namespacepromise.html">promise</a>&amp; ) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ad864ccfdc9c8d432617f086a73d1fd18">  134</a></span>&#160;  <a class="code" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ad864ccfdc9c8d432617f086a73d1fd18">promise</a>(<a class="code" href="namespacepromise.html">promise</a>&amp;&amp; ) noexcept = default;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#abf90418081ae4e041d59a0e0c70714a4">  140</a></span>&#160;  ~<a class="code" href="namespacepromise.html">promise</a>() { cancel(); }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#if !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#aa831a9225fb082088c4aeebc63a7b274">  145</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>, <span class="keyword">typename</span>&gt; <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="namespacepromise.html">promise</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1promise__handler.html">detail::promise_handler</a>&lt;<a class="code" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator&gt;;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  std::shared_ptr&lt;<a class="code" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">detail::promise_impl</a>&lt;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator&gt;&gt; impl_;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="namespacepromise.html">promise</a>(</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      std::shared_ptr&lt;<a class="code" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">detail::promise_impl</a>&lt;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">void</span>(Ts...), Executor, Allocator&gt;&gt; impl)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    : impl_(impl)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keyword">struct </span>initiate_async_wait</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    std::shared_ptr&lt;<a class="code" href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">detail::promise_impl</a>&lt;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator&gt;&gt; self_;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> WaitHandler&gt;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> operator()(WaitHandler&amp;&amp; handler)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> alloc = <a class="code" href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">get_associated_allocator</a>(</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;          handler, self_-&gt;get_allocator());</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keyword">auto</span> cancel = <a class="code" href="namespaceasio.html#a3b51cb1d32c89024cf7768bcce6f649e">get_associated_cancellation_slot</a>(handler);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordflow">if</span> (self_-&gt;done)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">auto</span> <a class="code" href="namespaceasio_1_1execution.html">exec</a> = <a class="code" href="namespaceasio.html#ababee4f6241fcc45f5d49b89085e6a62">asio::get_associated_executor</a>(</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            handler, self_-&gt;get_executor());</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="namespaceasio.html#ab96ddebcabf9c7f1524f803bc063a62b">asio::post</a>(<a class="code" href="namespaceasio_1_1execution.html">exec</a>,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            [<span class="keyword">self</span> = std::move(self_),</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;              handler = std::forward&lt;WaitHandler&gt;(handler)]() <span class="keyword">mutable</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;              <span class="keyword">self</span>-&gt;apply(std::move(handler));</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            });</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> (cancel.is_connected())</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;          <span class="keyword">struct </span><a class="code" href="classcancel__handler.html">cancel_handler</a></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;          {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            std::weak_ptr&lt;detail::promise_impl&lt;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;              <a class="code" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>(Ts...), Executor, Allocator&gt;&gt; <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <a class="code" href="classcancel__handler.html">cancel_handler</a>(</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                std::weak_ptr&lt;detail::promise_impl&lt;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                  <span class="keywordtype">void</span>(Ts...), Executor, Allocator&gt;&gt; <span class="keyword">self</span>)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;              : self(<a class="code" href="namespacestd.html">std</a>::move(self))</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordtype">void</span> operator()(<a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type</a> level)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;              <span class="keywordflow">if</span> (<span class="keyword">auto</span> p = <span class="keyword">self</span>.lock())</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;              {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                p-&gt;cancel.emit(level);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                p-&gt;cancel_();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;              }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;          };</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          cancel.template emplace&lt;cancel_handler&gt;(self_);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        self_-&gt;set_completion(alloc, std::forward&lt;WaitHandler&gt;(handler));</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  };</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;};</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;} <span class="comment">// namespace experimental</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_EXPERIMENTAL_PROMISE_HPP</span></div>
+<div class="ttc" id="aany__io__executor_8hpp_html"><div class="ttname"><a href="any__io__executor_8hpp.html">any_io_executor.hpp</a></div></div>
+<div class="ttc" id="aassociated__cancellation__slot_8hpp_html"><div class="ttname"><a href="associated__cancellation__slot_8hpp.html">associated_cancellation_slot.hpp</a></div></div>
+<div class="ttc" id="aassociated__executor_8hpp_html"><div class="ttname"><a href="associated__executor_8hpp.html">associated_executor.hpp</a></div></div>
+<div class="ttc" id="abind__executor_8hpp_html"><div class="ttname"><a href="bind__executor_8hpp.html">bind_executor.hpp</a></div></div>
+<div class="ttc" id="acancellation__signal_8hpp_html"><div class="ttname"><a href="cancellation__signal_8hpp.html">cancellation_signal.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1any__io__executor_html"><div class="ttname"><a href="classasio_1_1any__io__executor.html">asio::any_io_executor</a></div><div class="ttdoc">Polymorphic executor type for use with I/O objects.</div><div class="ttdef"><b>Definition:</b> any_io_executor.hpp:65</div></div>
+<div class="ttc" id="aclasscancel__handler_html"><div class="ttname"><a href="classcancel__handler.html">cancel_handler</a></div><div class="ttdef"><b>Definition:</b> any_completion_handler.cpp:153</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="adispatch_8hpp_html"><div class="ttname"><a href="dispatch_8hpp.html">dispatch.hpp</a></div></div>
+<div class="ttc" id="aimpl_2promise_8hpp_html"><div class="ttname"><a href="impl_2promise_8hpp.html">promise.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html"><div class="ttname"><a href="namespaceasio_1_1execution.html">asio::execution</a></div><div class="ttdef"><b>Definition:</b> handler_work.hpp:46</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a7b6a92f119223e8ce2c565c4c9fa5983"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a7b6a92f119223e8ce2c565c4c9fa5983">asio::experimental::is_promise_v</a></div><div class="ttdeci">constexpr bool is_promise_v</div><div class="ttdef"><b>Definition:</b> promise.hpp:44</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a9975daab69c7b93e79ce807410ffb9d9"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">asio::experimental::token</a></div><div class="ttdeci">Executor CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:67</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_aac83b8b49276d49470c7a45cdb5eb2bf"><div class="ttname"><a href="namespaceasio_1_1experimental.html#aac83b8b49276d49470c7a45cdb5eb2bf">asio::experimental::ASIO_INITFN_AUTO_RESULT_TYPE</a></div><div class="ttdeci">ASIO_INITFN_AUTO_RESULT_TYPE(CompletionToken, void(std::exception_ptr, T)) co_spawn(coro&lt; void</div><div class="ttdoc">Spawn a resumable coroutine.</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_ac04f505f291ec3b9eb3018fea6835fea"><div class="ttname"><a href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">asio::experimental::void</a></div><div class="ttdeci">void</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:131</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a0b53f4ff238fefdfbaf52153b89e6abd"><div class="ttname"><a href="namespaceasio.html#a0b53f4ff238fefdfbaf52153b89e6abd">asio::dispatch</a></div><div class="ttdeci">auto dispatch(NullaryToken &amp;&amp;token) -&gt; decltype(async_initiate&lt; NullaryToken, void()&gt;(declval&lt; detail::initiate_dispatch &gt;(), token))</div><div class="ttdoc">Submits a completion token or function object for execution.</div><div class="ttdef"><b>Definition:</b> dispatch.hpp:72</div></div>
+<div class="ttc" id="anamespaceasio_html_a3b51cb1d32c89024cf7768bcce6f649e"><div class="ttname"><a href="namespaceasio.html#a3b51cb1d32c89024cf7768bcce6f649e">asio::get_associated_cancellation_slot</a></div><div class="ttdeci">ASIO_NODISCARD associated_cancellation_slot&lt; T &gt;::type get_associated_cancellation_slot(const T &amp;t) noexcept</div><div class="ttdoc">Helper function to obtain an object's associated cancellation_slot.</div><div class="ttdef"><b>Definition:</b> associated_cancellation_slot.hpp:144</div></div>
+<div class="ttc" id="anamespaceasio_html_a713d72690f79a12548b3d3199b6d2a16"><div class="ttname"><a href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">asio::get_associated_allocator</a></div><div class="ttdeci">ASIO_NODISCARD associated_allocator&lt; T &gt;::type get_associated_allocator(const T &amp;t) noexcept</div><div class="ttdoc">Helper function to obtain an object's associated allocator.</div><div class="ttdef"><b>Definition:</b> associated_allocator.hpp:140</div></div>
+<div class="ttc" id="anamespaceasio_html_ab96ddebcabf9c7f1524f803bc063a62b"><div class="ttname"><a href="namespaceasio.html#ab96ddebcabf9c7f1524f803bc063a62b">asio::post</a></div><div class="ttdeci">auto post(NullaryToken &amp;&amp;token) -&gt; decltype(async_initiate&lt; NullaryToken, void()&gt;(declval&lt; detail::initiate_post &gt;(), token))</div><div class="ttdoc">Submits a completion token or function object for execution.</div><div class="ttdef"><b>Definition:</b> post.hpp:80</div></div>
+<div class="ttc" id="anamespaceasio_html_ababee4f6241fcc45f5d49b89085e6a62"><div class="ttname"><a href="namespaceasio.html#ababee4f6241fcc45f5d49b89085e6a62">asio::get_associated_executor</a></div><div class="ttdeci">ASIO_NODISCARD associated_executor&lt; T &gt;::type get_associated_executor(const T &amp;t) noexcept</div><div class="ttdoc">Helper function to obtain an object's associated executor.</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:143</div></div>
+<div class="ttc" id="anamespaceasio_html_acbf600e256af39d8a0c65fb6e3eb988d"><div class="ttname"><a href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a></div><div class="ttdeci">auto async_initiate(Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;token, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(token), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</div><div class="ttdef"><b>Definition:</b> async_result.hpp:558</div></div>
+<div class="ttc" id="anamespaceasio_html_ae02aa651224af4b25dc476fc01ce29f6"><div class="ttname"><a href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type</a></div><div class="ttdeci">cancellation_type</div><div class="ttdef"><b>Definition:</b> cancellation_type.hpp:57</div></div>
+<div class="ttc" id="anamespaceasio_html_ae02aa651224af4b25dc476fc01ce29f6aa181a603769c1f98ad927e7367c7aa51"><div class="ttname"><a href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6aa181a603769c1f98ad927e7367c7aa51">asio::cancellation_type::all</a></div><div class="ttdeci">@ all</div></div>
+<div class="ttc" id="anamespacepromise_html"><div class="ttname"><a href="namespacepromise.html">promise</a></div><div class="ttdef"><b>Definition:</b> promise.cpp:28</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> error.hpp:307</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apost_8hpp_html"><div class="ttname"><a href="post_8hpp.html">post.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1promise__handler_html"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1promise__handler.html">asio::experimental::detail::promise_handler</a></div><div class="ttdef"><b>Definition:</b> promise.hpp:191</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1promise__impl_html"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1promise__impl.html">asio::experimental::detail::promise_impl</a></div><div class="ttdef"><b>Definition:</b> promise.hpp:38</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1is__promise_html"><div class="ttname"><a href="structasio_1_1experimental_1_1is__promise.html">asio::experimental::is_promise</a></div><div class="ttdef"><b>Definition:</b> promise.hpp:38</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_html_a1cbf0c7e34775644facc6c964b352e8f"><div class="ttname"><a href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a1cbf0c7e34775644facc6c964b352e8f">asio::experimental::promise&lt; void(Ts...), Executor, Allocator &gt;::completed</a></div><div class="ttdeci">bool completed() const noexcept</div><div class="ttdoc">Check if the promise is completed already.</div><div class="ttdef"><b>Definition:</b> promise.hpp:116</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_html_a35432f4f75f71cc95fe133255f0a8fc0"><div class="ttname"><a href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a35432f4f75f71cc95fe133255f0a8fc0">asio::experimental::promise&lt; void(Ts...), Executor, Allocator &gt;::cancel</a></div><div class="ttdeci">void cancel(cancellation_type level=cancellation_type::all)</div><div class="ttdoc">Cancel the promise. Usually done through the destructor.</div><div class="ttdef"><b>Definition:</b> promise.hpp:106</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_html_a7f1cb16f89f7482de3c4e95b6f02f07e"><div class="ttname"><a href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a7f1cb16f89f7482de3c4e95b6f02f07e">asio::experimental::promise&lt; void(Ts...), Executor, Allocator &gt;::value_type</a></div><div class="ttdeci">typename promise_value_type&lt; Ts... &gt;::type value_type</div><div class="ttdoc">The value that's returned by the promise.</div><div class="ttdef"><b>Definition:</b> promise.hpp:103</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_html_a960006f2ccbad2fe0bb800108165d5db"><div class="ttname"><a href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a960006f2ccbad2fe0bb800108165d5db">asio::experimental::promise&lt; void(Ts...), Executor, Allocator &gt;::promise</a></div><div class="ttdeci">promise(const promise &amp;)=delete</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_html_a9b4bbdb024aec7c9ff3c420553ea8e61"><div class="ttname"><a href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#a9b4bbdb024aec7c9ff3c420553ea8e61">asio::experimental::promise&lt; void(Ts...), Executor, Allocator &gt;::promise</a></div><div class="ttdeci">promise()=delete</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4_html_ad864ccfdc9c8d432617f086a73d1fd18"><div class="ttname"><a href="structasio_1_1experimental_1_1promise_3_01void_07Ts_8_8_8_08_00_01Executor_00_01Allocator_01_4.html#ad864ccfdc9c8d432617f086a73d1fd18">asio::experimental::promise&lt; void(Ts...), Executor, Allocator &gt;::promise</a></div><div class="ttdeci">promise(promise &amp;&amp;) noexcept=default</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise__value__type_3_01T_01_4_html_a086998f53f902b57e2238fdc3e3b5dc8"><div class="ttname"><a href="structasio_1_1experimental_1_1promise__value__type_3_01T_01_4.html#a086998f53f902b57e2238fdc3e3b5dc8">asio::experimental::promise_value_type&lt; T &gt;::type</a></div><div class="ttdeci">T type</div><div class="ttdef"><b>Definition:</b> promise.hpp:55</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise__value__type_3_4_html_a4e0ec26e2162b8cdeac54d61d783116f"><div class="ttname"><a href="structasio_1_1experimental_1_1promise__value__type_3_4.html#a4e0ec26e2162b8cdeac54d61d783116f">asio::experimental::promise_value_type&lt;&gt;::type</a></div><div class="ttdeci">std::tuple&lt;&gt; type</div><div class="ttdef"><b>Definition:</b> promise.hpp:61</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise__value__type_html"><div class="ttname"><a href="structasio_1_1experimental_1_1promise__value__type.html">asio::experimental::promise_value_type</a></div><div class="ttdef"><b>Definition:</b> promise.hpp:48</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1promise__value__type_html_a17e879b6398a39d9312214badb0fa35b"><div class="ttname"><a href="structasio_1_1experimental_1_1promise__value__type.html#a17e879b6398a39d9312214badb0fa35b">asio::experimental::promise_value_type::type</a></div><div class="ttdeci">std::tuple&lt; Ts... &gt; type</div><div class="ttdef"><b>Definition:</b> promise.hpp:49</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

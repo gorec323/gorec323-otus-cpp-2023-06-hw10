@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/generic/detail/impl/endpoint.ipp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_558717c4b65fad76fe543b245d644e3e.html">generic</a></li><li class="navelem"><a class="el" href="dir_affed8a3335ec0aa42e00f2fff8f9e3e.html">detail</a></li><li class="navelem"><a class="el" href="dir_fc1e5be1c0c4ec0106efc8bf5aef9244.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл endpoint.ipp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;typeinfo&gt;</code><br />
+<code>#include &quot;<a class="el" href="socket__ops_8hpp_source.html">asio/detail/socket_ops.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="throw__error_8hpp_source.html">asio/detail/throw_error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="throw__exception_8hpp_source.html">asio/detail/throw_exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error_8hpp_source.html">asio/error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="generic_2detail_2endpoint_8hpp_source.html">asio/generic/detail/endpoint.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для endpoint.ipp:</div>
+<div class="dyncontent">
+<div class="center"><img src="generic_2detail_2impl_2endpoint_8ipp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2generic_2detail_2impl_2endpoint_8ipp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2generic_2detail_2impl_2endpoint_8ipp" id="a__deps_2asio-src_2asio_2include_2asio_2generic_2detail_2impl_2endpoint_8ipp">
+<area shape="rect" title=" " alt="" coords="854,5,1035,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="876,363,1037,389"/>
+<area shape="rect" title=" " alt="" coords="1397,117,1463,143"/>
+<area shape="rect" title=" " alt="" coords="1488,117,1564,143"/>
+<area shape="rect" href="socket__ops_8hpp.html" title=" " alt="" coords="1069,109,1205,151"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="389,288,597,315"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="856,288,1057,315"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="83,288,313,315"/>
+<area shape="rect" href="throw__error_8hpp.html" title=" " alt="" coords="228,117,424,143"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="744,117,855,143"/>
+<area shape="rect" href="generic_2detail_2endpoint_8hpp.html" title=" " alt="" coords="1229,109,1372,151"/>
+<area shape="rect" title=" " alt="" coords="1620,437,1691,464"/>
+<area shape="rect" title=" " alt="" coords="813,437,943,464"/>
+<area shape="rect" title=" " alt="" coords="967,437,1106,464"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="820,206,971,233"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="1199,206,1373,233"/>
+<area shape="rect" href="socket__types_8hpp.html" title=" " alt="" coords="2254,199,2390,240"/>
+<area shape="rect" title=" " alt="" coords="672,288,780,315"/>
+<area shape="rect" title=" " alt="" coords="1133,288,1199,315"/>
+<area shape="rect" title=" " alt="" coords="1223,288,1301,315"/>
+<area shape="rect" title=" " alt="" coords="1325,288,1375,315"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="1451,288,1617,315"/>
+<area shape="rect" title=" " alt="" coords="1501,363,1567,389"/>
+<area shape="rect" title=" " alt="" coords="1938,288,2026,315"/>
+<area shape="rect" title=" " alt="" coords="2051,288,2135,315"/>
+<area shape="rect" title=" " alt="" coords="2159,288,2255,315"/>
+<area shape="rect" title=" " alt="" coords="2279,288,2365,315"/>
+<area shape="rect" title=" " alt="" coords="2389,288,2452,315"/>
+<area shape="rect" title=" " alt="" coords="2477,288,2575,315"/>
+<area shape="rect" title=" " alt="" coords="2600,288,2703,315"/>
+<area shape="rect" title=" " alt="" coords="2727,288,2807,315"/>
+<area shape="rect" title=" " alt="" coords="2832,288,2908,315"/>
+<area shape="rect" title=" " alt="" coords="2933,288,3029,315"/>
+<area shape="rect" title=" " alt="" coords="3053,288,3157,315"/>
+<area shape="rect" title=" " alt="" coords="3181,288,3273,315"/>
+<area shape="rect" title=" " alt="" coords="1693,288,1764,315"/>
+<area shape="rect" title=" " alt="" coords="3298,288,3365,315"/>
+<area shape="rect" title=" " alt="" coords="3389,288,3460,315"/>
+<area shape="rect" title=" " alt="" coords="1840,288,1913,315"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="629,206,796,233"/>
+<area shape="rect" title=" " alt="" coords="440,206,503,233"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="generic_2detail_2impl_2endpoint_8ipp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2generic_2detail_2impl_2endpoint_8ippdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2generic_2detail_2impl_2endpoint_8ippdep" id="a__deps_2asio-src_2asio_2include_2asio_2generic_2detail_2impl_2endpoint_8ippdep">
+<area shape="rect" title=" " alt="" coords="9,5,190,61"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="5,109,193,151"/>
+<area shape="rect" href="asio_8cpp.html" title=" " alt="" coords="26,199,173,240"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1generic"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1generic.html">asio::generic</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1generic_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1generic_1_1detail.html">asio::generic::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:af488dcaa0974297e644c0345fc94112e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generic_2detail_2impl_2endpoint_8ipp.html#af488dcaa0974297e644c0345fc94112e">ASIO_GENERIC_DETAIL_IMPL_ENDPOINT_IPP</a></td></tr>
+<tr class="separator:af488dcaa0974297e644c0345fc94112e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a74739b613ca93792e00c667d26f2b04c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1generic_1_1detail.html#a74739b613ca93792e00c667d26f2b04c">asio::generic::detail::operator==</a> (const endpoint &amp;e1, const endpoint &amp;e2)</td></tr>
+<tr class="separator:a74739b613ca93792e00c667d26f2b04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d290eb5d0b8b0ecfe2604643749ffc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1generic_1_1detail.html#ab3d290eb5d0b8b0ecfe2604643749ffc">asio::generic::detail::operator&lt;</a> (const endpoint &amp;e1, const endpoint &amp;e2)</td></tr>
+<tr class="separator:ab3d290eb5d0b8b0ecfe2604643749ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="af488dcaa0974297e644c0345fc94112e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af488dcaa0974297e644c0345fc94112e">&#9670;&nbsp;</a></span>ASIO_GENERIC_DETAIL_IMPL_ENDPOINT_IPP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_GENERIC_DETAIL_IMPL_ENDPOINT_IPP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

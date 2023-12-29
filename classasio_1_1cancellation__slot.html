@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::cancellation_slot</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1cancellation__slot-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::cancellation_slot</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A slot associated with a cancellation signal.  
+ <a href="classasio_1_1cancellation__slot.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cancellation__signal_8hpp_source.html">cancellation_signal.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac3363c429b9b103c9c4dd80597fea00e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#ac3363c429b9b103c9c4dd80597fea00e">cancellation_slot</a> ()</td></tr>
+<tr class="memdesc:ac3363c429b9b103c9c4dd80597fea00e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a slot that is not connected to any cancellation signal.  <a href="classasio_1_1cancellation__slot.html#ac3363c429b9b103c9c4dd80597fea00e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac3363c429b9b103c9c4dd80597fea00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c798eb9617aa8c1ba559f0ec9fe7af"><td class="memTemplParams" colspan="2">template&lt;typename CancellationHandler , typename... Args&gt; </td></tr>
+<tr class="memitem:af6c798eb9617aa8c1ba559f0ec9fe7af"><td class="memTemplItemLeft" align="right" valign="top">CancellationHandler &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#af6c798eb9617aa8c1ba559f0ec9fe7af">emplace</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:af6c798eb9617aa8c1ba559f0ec9fe7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs a handler into the slot, constructing the new object directly.  <a href="classasio_1_1cancellation__slot.html#af6c798eb9617aa8c1ba559f0ec9fe7af">Подробнее...</a><br /></td></tr>
+<tr class="separator:af6c798eb9617aa8c1ba559f0ec9fe7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a7cfd1ec616e2d97981366a6cd0b96"><td class="memTemplParams" colspan="2">template&lt;typename CancellationHandler &gt; </td></tr>
+<tr class="memitem:a79a7cfd1ec616e2d97981366a6cd0b96"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt; CancellationHandler &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#a79a7cfd1ec616e2d97981366a6cd0b96">assign</a> (CancellationHandler &amp;&amp;handler)</td></tr>
+<tr class="memdesc:a79a7cfd1ec616e2d97981366a6cd0b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs a handler into the slot.  <a href="classasio_1_1cancellation__slot.html#a79a7cfd1ec616e2d97981366a6cd0b96">Подробнее...</a><br /></td></tr>
+<tr class="separator:a79a7cfd1ec616e2d97981366a6cd0b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bae9ce17ccfdc46c516f4ad28bde154"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#a1bae9ce17ccfdc46c516f4ad28bde154">clear</a> ()</td></tr>
+<tr class="memdesc:a1bae9ce17ccfdc46c516f4ad28bde154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the slot.  <a href="classasio_1_1cancellation__slot.html#a1bae9ce17ccfdc46c516f4ad28bde154">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1bae9ce17ccfdc46c516f4ad28bde154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99098c013d627aef737d4302e6a0fd3e"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#a99098c013d627aef737d4302e6a0fd3e">is_connected</a> () const noexcept</td></tr>
+<tr class="memdesc:a99098c013d627aef737d4302e6a0fd3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the slot is connected to a signal.  <a href="classasio_1_1cancellation__slot.html#a99098c013d627aef737d4302e6a0fd3e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a99098c013d627aef737d4302e6a0fd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a671f5af47f50fc26b0b582346aaf0"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#ae4a671f5af47f50fc26b0b582346aaf0">has_handler</a> () const noexcept</td></tr>
+<tr class="memdesc:ae4a671f5af47f50fc26b0b582346aaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the slot is connected and has an installed handler.  <a href="classasio_1_1cancellation__slot.html#ae4a671f5af47f50fc26b0b582346aaf0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae4a671f5af47f50fc26b0b582346aaf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a87a8dc3692ef2eb017d1071fc3d035a3"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#a87a8dc3692ef2eb017d1071fc3d035a3">cancellation_signal</a></td></tr>
+<tr class="separator:a87a8dc3692ef2eb017d1071fc3d035a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1cd4169dc865510b13a964ed6caad1e"><td class="memItemLeft" align="right" valign="top">constexpr friend bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#af1cd4169dc865510b13a964ed6caad1e">operator==</a> (const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;lhs, const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:af1cd4169dc865510b13a964ed6caad1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two slots for equality.  <a href="classasio_1_1cancellation__slot.html#af1cd4169dc865510b13a964ed6caad1e">Подробнее...</a><br /></td></tr>
+<tr class="separator:af1cd4169dc865510b13a964ed6caad1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0c5270586c4445ceb62d690716409f"><td class="memItemLeft" align="right" valign="top">constexpr friend bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__slot.html#acb0c5270586c4445ceb62d690716409f">operator!=</a> (const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;lhs, const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:acb0c5270586c4445ceb62d690716409f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two slots for inequality.  <a href="classasio_1_1cancellation__slot.html#acb0c5270586c4445ceb62d690716409f">Подробнее...</a><br /></td></tr>
+<tr class="separator:acb0c5270586c4445ceb62d690716409f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A slot associated with a cancellation signal. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac3363c429b9b103c9c4dd80597fea00e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3363c429b9b103c9c4dd80597fea00e">&#9670;&nbsp;</a></span>cancellation_slot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr asio::cancellation_slot::cancellation_slot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a slot that is not connected to any cancellation signal. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a79a7cfd1ec616e2d97981366a6cd0b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79a7cfd1ec616e2d97981366a6cd0b96">&#9670;&nbsp;</a></span>assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CancellationHandler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t</a>&lt;CancellationHandler&gt;&amp; asio::cancellation_slot::assign </td>
+          <td>(</td>
+          <td class="paramtype">CancellationHandler &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Installs a handler into the slot. </p>
+<p>Destroys any existing handler in the slot, then installs the new handler, constructing it as a decay-copy of the supplied handler.</p>
+<p>The handler is a function object to be called when the signal is emitted. The signature of the handler must be </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> handler(<a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a>); </div>
+<div class="ttc" id="anamespaceasio_html_ae02aa651224af4b25dc476fc01ce29f6"><div class="ttname"><a href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type</a></div><div class="ttdeci">cancellation_type</div><div class="ttdef"><b>Definition:</b> cancellation_type.hpp:57</div></div>
+</div><!-- fragment --><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>The handler to be installed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A reference to the newly installed handler. </dd></dl>
+
+</div>
+</div>
+<a id="a1bae9ce17ccfdc46c516f4ad28bde154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bae9ce17ccfdc46c516f4ad28bde154">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::cancellation_slot::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the slot. </p>
+<p>Destroys any existing handler in the slot. </p>
+
+</div>
+</div>
+<a id="af6c798eb9617aa8c1ba559f0ec9fe7af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c798eb9617aa8c1ba559f0ec9fe7af">&#9670;&nbsp;</a></span>emplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CancellationHandler , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CancellationHandler&amp; asio::cancellation_slot::emplace </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Installs a handler into the slot, constructing the new object directly. </p>
+<p>Destroys any existing handler in the slot, then installs the new handler, constructing it with the supplied <code>args</code>.</p>
+<p>The handler is a function object to be called when the signal is emitted. The signature of the handler must be </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> handler(<a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a>); </div>
+</div><!-- fragment --><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Arguments to be passed to the <code>CancellationHandler</code> object's constructor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A reference to the newly installed handler.</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Handlers installed into the slot via <code>emplace</code> are not required to be copy constructible or move constructible. </dd></dl>
+
+</div>
+</div>
+<a id="ae4a671f5af47f50fc26b0b582346aaf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a671f5af47f50fc26b0b582346aaf0">&#9670;&nbsp;</a></span>has_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool asio::cancellation_slot::has_handler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the slot is connected and has an installed handler. </p>
+
+</div>
+</div>
+<a id="a99098c013d627aef737d4302e6a0fd3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99098c013d627aef737d4302e6a0fd3e">&#9670;&nbsp;</a></span>is_connected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool asio::cancellation_slot::is_connected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the slot is connected to a signal. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a87a8dc3692ef2eb017d1071fc3d035a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a8dc3692ef2eb017d1071fc3d035a3">&#9670;&nbsp;</a></span>cancellation_signal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classasio_1_1cancellation__signal.html">cancellation_signal</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb0c5270586c4445ceb62d690716409f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0c5270586c4445ceb62d690716409f">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two slots for inequality. </p>
+
+</div>
+</div>
+<a id="af1cd4169dc865510b13a964ed6caad1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1cd4169dc865510b13a964ed6caad1e">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two slots for equality. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="cancellation__signal_8hpp_source.html">cancellation_signal.hpp</a></li>
+<li>_deps/asio-src/asio/include/asio/impl/<a class="el" href="cancellation__signal_8ipp.html">cancellation_signal.ipp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

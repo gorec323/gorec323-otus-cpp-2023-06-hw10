@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/src/examples/cpp11/http/server/request_parser.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_d46c25caae7ef9e73c73947bfdf12925.html">cpp11</a></li><li class="navelem"><a class="el" href="dir_8fc617682e41b3f28e70642504dae997.html">http</a></li><li class="navelem"><a class="el" href="dir_befc555eae2d9af8282e0208d5e0fbc9.html">server</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">request_parser.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cpp11_2http_2server_2request__parser_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// request_parser.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef HTTP_REQUEST_PARSER_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define HTTP_REQUEST_PARSER_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacehttp.html">http</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="classserver.html">server</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">struct </span>request;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span>request_parser</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classhttp_1_1server_1_1request__parser.html#a30bfbef18ce9872c363be0a2a0658c8c">   26</a></span>&#160;  <a class="code" href="classhttp_1_1server_1_1request__parser.html#a30bfbef18ce9872c363be0a2a0658c8c">request_parser</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classhttp_1_1server_1_1request__parser.html#aebfbf1f893ab516dd913caa6e112c1d5">   29</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classhttp_1_1server_1_1request__parser.html#aebfbf1f893ab516dd913caa6e112c1d5">reset</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557afcd82697a5cc002d881dcb063e8a239c">   32</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557">result_type</a> { <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557a23c265125197b2298e17edff011ae5b3">good</a>, <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557afcd82697a5cc002d881dcb063e8a239c">bad</a>, <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557a8404c6cce3259e55ede26dc3df441466">indeterminate</a> };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> InputIterator&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classhttp_1_1server_1_1request__parser.html#a5f8da3cd60067de00336097134670367">   39</a></span>&#160;  std::tuple&lt;result_type, InputIterator&gt; <a class="code" href="classhttp_1_1server_1_1request__parser.html#a5f8da3cd60067de00336097134670367">parse</a>(<a class="code" href="structhttp_1_1server_1_1request.html">request</a>&amp; req,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      InputIterator begin, InputIterator end)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">while</span> (begin != end)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557">result_type</a> result = consume(req, *begin++);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">if</span> (result == <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557a23c265125197b2298e17edff011ae5b3">good</a> || result == <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557afcd82697a5cc002d881dcb063e8a239c">bad</a>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> std::make_tuple(result, begin);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> std::make_tuple(<a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557a8404c6cce3259e55ede26dc3df441466">indeterminate</a>, begin);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557">result_type</a> consume(<a class="code" href="structhttp_1_1server_1_1request.html">request</a>&amp; req, <span class="keywordtype">char</span> input);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_char(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_ctl(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_tspecial(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_digit(<span class="keywordtype">int</span> <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">enum</span> state</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    method_start,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    method,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    uri,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    http_version_h,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    http_version_t_1,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    http_version_t_2,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    http_version_p,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    http_version_slash,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    http_version_major_start,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    http_version_major,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    http_version_minor_start,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    http_version_minor,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    expecting_newline_1,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    header_line_start,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    header_lws,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    header_name,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    space_before_header_value,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    header_value,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    expecting_newline_2,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    expecting_newline_3</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  } state_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace server</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// namespace http</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// HTTP_REQUEST_PARSER_HPP</span></div>
+<div class="ttc" id="aclasshttp_1_1server_1_1request__parser_html_a30bfbef18ce9872c363be0a2a0658c8c"><div class="ttname"><a href="classhttp_1_1server_1_1request__parser.html#a30bfbef18ce9872c363be0a2a0658c8c">http::server::request_parser::request_parser</a></div><div class="ttdeci">request_parser()</div><div class="ttdoc">Construct ready to parse the request method.</div></div>
+<div class="ttc" id="aclasshttp_1_1server_1_1request__parser_html_a5f8da3cd60067de00336097134670367"><div class="ttname"><a href="classhttp_1_1server_1_1request__parser.html#a5f8da3cd60067de00336097134670367">http::server::request_parser::parse</a></div><div class="ttdeci">std::tuple&lt; result_type, InputIterator &gt; parse(request &amp;req, InputIterator begin, InputIterator end)</div><div class="ttdef"><b>Definition:</b> request_parser.hpp:39</div></div>
+<div class="ttc" id="aclasshttp_1_1server_1_1request__parser_html_a897aa59ceb3aaa58ef319f265cd41557"><div class="ttname"><a href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557">http::server::request_parser::result_type</a></div><div class="ttdeci">result_type</div><div class="ttdoc">Result of parse.</div><div class="ttdef"><b>Definition:</b> request_parser.hpp:32</div></div>
+<div class="ttc" id="aclasshttp_1_1server_1_1request__parser_html_a897aa59ceb3aaa58ef319f265cd41557a23c265125197b2298e17edff011ae5b3"><div class="ttname"><a href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557a23c265125197b2298e17edff011ae5b3">http::server::request_parser::good</a></div><div class="ttdeci">@ good</div><div class="ttdef"><b>Definition:</b> request_parser.hpp:32</div></div>
+<div class="ttc" id="aclasshttp_1_1server_1_1request__parser_html_a897aa59ceb3aaa58ef319f265cd41557a8404c6cce3259e55ede26dc3df441466"><div class="ttname"><a href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557a8404c6cce3259e55ede26dc3df441466">http::server::request_parser::indeterminate</a></div><div class="ttdeci">@ indeterminate</div><div class="ttdef"><b>Definition:</b> request_parser.hpp:32</div></div>
+<div class="ttc" id="aclasshttp_1_1server_1_1request__parser_html_a897aa59ceb3aaa58ef319f265cd41557afcd82697a5cc002d881dcb063e8a239c"><div class="ttname"><a href="classhttp_1_1server_1_1request__parser.html#a897aa59ceb3aaa58ef319f265cd41557afcd82697a5cc002d881dcb063e8a239c">http::server::request_parser::bad</a></div><div class="ttdeci">@ bad</div><div class="ttdef"><b>Definition:</b> request_parser.hpp:32</div></div>
+<div class="ttc" id="aclasshttp_1_1server_1_1request__parser_html_aebfbf1f893ab516dd913caa6e112c1d5"><div class="ttname"><a href="classhttp_1_1server_1_1request__parser.html#aebfbf1f893ab516dd913caa6e112c1d5">http::server::request_parser::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset to initial parser state.</div></div>
+<div class="ttc" id="aclassserver_html"><div class="ttname"><a href="classserver.html">server</a></div><div class="ttdef"><b>Definition:</b> server.cpp:188</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a4607a9754bf2707c054f0ff16b958b82"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">asio::experimental::c</a></div><div class="ttdeci">Executor c</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespacehttp_html"><div class="ttname"><a href="namespacehttp.html">http</a></div><div class="ttdef"><b>Definition:</b> connection.cpp:17</div></div>
+<div class="ttc" id="astructhttp_1_1server_1_1request_html"><div class="ttname"><a href="structhttp_1_1server_1_1request.html">http::server::request</a></div><div class="ttdoc">A request received from a client.</div><div class="ttdef"><b>Definition:</b> request.hpp:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

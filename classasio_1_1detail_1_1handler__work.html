@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::detail::handler_work&lt; Handler, IoExecutor, typename &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1handler__work.html">handler_work</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1detail_1_1handler__work-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::detail::handler_work&lt; Handler, IoExecutor, typename &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="handler__work_8hpp_source.html">handler_work.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::handler_work&lt; Handler, IoExecutor, typename &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1handler__work__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1handler__work_3_01Handler_00_01IoExecutor_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1handler__work_3_01Handler_00_01IoExecutor_00_01typename_01_4_inherit__map" id="aasio_1_1detail_1_1handler__work_3_01Handler_00_01IoExecutor_00_01typename_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="292,38,499,94"/>
+<area shape="rect" href="classasio_1_1detail_1_1handler__work__base.html" title=" " alt="" coords="26,5,223,47"/>
+<area shape="rect" href="classasio_1_1detail_1_1handler__work__base.html" title=" " alt="" coords="5,71,244,141"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::detail::handler_work&lt; Handler, IoExecutor, typename &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1handler__work__coll__graph.png" border="0" usemap="#aasio_1_1detail_1_1handler__work_3_01Handler_00_01IoExecutor_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1detail_1_1handler__work_3_01Handler_00_01IoExecutor_00_01typename_01_4_coll__map" id="aasio_1_1detail_1_1handler__work_3_01Handler_00_01IoExecutor_00_01typename_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="292,38,499,94"/>
+<area shape="rect" href="classasio_1_1detail_1_1handler__work__base.html" title=" " alt="" coords="26,5,223,47"/>
+<area shape="rect" href="classasio_1_1detail_1_1handler__work__base.html" title=" " alt="" coords="5,71,244,141"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a9beeae99b9d47bce72e1acf1b207aea6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1detail_1_1handler__work__base.html">handler_work_base</a>&lt; IoExecutor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1handler__work.html#a9beeae99b9d47bce72e1acf1b207aea6">base1_type</a></td></tr>
+<tr class="separator:a9beeae99b9d47bce72e1acf1b207aea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ffce4c45e5a87fef372009f4eca503c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1detail_1_1handler__work__base.html">handler_work_base</a>&lt; <a class="el" href="namespaceasio.html#a947971ca8e87d2d9d7791b50b7fed58d">associated_executor_t</a>&lt; Handler, IoExecutor &gt;, IoExecutor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1handler__work.html#a2ffce4c45e5a87fef372009f4eca503c">base2_type</a></td></tr>
+<tr class="separator:a2ffce4c45e5a87fef372009f4eca503c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa87f54683f15fa3c0a4fe34bfeb7b84b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1handler__work.html#aa87f54683f15fa3c0a4fe34bfeb7b84b">handler_work</a> (Handler &amp;handler, const IoExecutor &amp;io_ex) noexcept</td></tr>
+<tr class="separator:aa87f54683f15fa3c0a4fe34bfeb7b84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86dd6376a68fb4c1b5802e6b3eab66fa"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
+<tr class="memitem:a86dd6376a68fb4c1b5802e6b3eab66fa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1handler__work.html#a86dd6376a68fb4c1b5802e6b3eab66fa">complete</a> (Function &amp;function, Handler &amp;handler)</td></tr>
+<tr class="separator:a86dd6376a68fb4c1b5802e6b3eab66fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a9beeae99b9d47bce72e1acf1b207aea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9beeae99b9d47bce72e1acf1b207aea6">&#9670;&nbsp;</a></span>base1_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Handler , typename IoExecutor , typename  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1detail_1_1handler__work__base.html">handler_work_base</a>&lt;IoExecutor&gt; <a class="el" href="classasio_1_1detail_1_1handler__work.html">asio::detail::handler_work</a>&lt; Handler, IoExecutor, typename &gt;::<a class="el" href="classasio_1_1detail_1_1handler__work.html#a9beeae99b9d47bce72e1acf1b207aea6">base1_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ffce4c45e5a87fef372009f4eca503c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffce4c45e5a87fef372009f4eca503c">&#9670;&nbsp;</a></span>base2_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Handler , typename IoExecutor , typename  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1detail_1_1handler__work__base.html">handler_work_base</a>&lt;<a class="el" href="namespaceasio.html#a947971ca8e87d2d9d7791b50b7fed58d">associated_executor_t</a>&lt;Handler, IoExecutor&gt;, IoExecutor&gt; <a class="el" href="classasio_1_1detail_1_1handler__work.html">asio::detail::handler_work</a>&lt; Handler, IoExecutor, typename &gt;::<a class="el" href="classasio_1_1detail_1_1handler__work.html#a2ffce4c45e5a87fef372009f4eca503c">base2_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa87f54683f15fa3c0a4fe34bfeb7b84b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa87f54683f15fa3c0a4fe34bfeb7b84b">&#9670;&nbsp;</a></span>handler_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Handler , typename IoExecutor , typename  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1handler__work.html">asio::detail::handler_work</a>&lt; Handler, IoExecutor, typename &gt;::<a class="el" href="classasio_1_1detail_1_1handler__work.html">handler_work</a> </td>
+          <td>(</td>
+          <td class="paramtype">Handler &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IoExecutor &amp;&#160;</td>
+          <td class="paramname"><em>io_ex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a86dd6376a68fb4c1b5802e6b3eab66fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86dd6376a68fb4c1b5802e6b3eab66fa">&#9670;&nbsp;</a></span>complete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Handler , typename IoExecutor , typename  = void&gt; </div>
+<div class="memtemplate">
+template&lt;typename Function &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1detail_1_1handler__work.html">asio::detail::handler_work</a>&lt; Handler, IoExecutor, typename &gt;::complete </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="handler__work_8hpp_source.html">handler_work.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

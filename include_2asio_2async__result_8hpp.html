@@ -1,0 +1,1221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/async_result.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл async_result.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">asio/detail/type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для async_result.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="include_2asio_2async__result_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2async__result_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2async__result_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2async__result_8hpp">
+<area shape="rect" title=" " alt="" coords="337,5,483,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="84,184,245,211"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="202,109,394,136"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="418,109,626,136"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="651,109,852,136"/>
+<area shape="rect" title=" " alt="" coords="5,259,76,285"/>
+<area shape="rect" title=" " alt="" coords="100,259,229,285"/>
+<area shape="rect" title=" " alt="" coords="254,259,393,285"/>
+<area shape="rect" title=" " alt="" coords="269,184,361,211"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="include_2asio_2async__result_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2async__result_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2async__result_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2async__result_8hppdep">
+<area shape="rect" title=" " alt="" coords="2822,5,2969,61"/>
+<area shape="rect" href="basic__signal__set_8hpp.html" title=" " alt="" coords="1711,213,1858,269"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="1605,421,1751,463"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="1541,213,1687,269"/>
+<area shape="rect" href="basic__stream__socket_8hpp.html" title=" " alt="" coords="1937,317,2089,373"/>
+<area shape="rect" href="connect_8hpp.html" title=" " alt="" coords="1454,325,1641,366"/>
+<area shape="rect" href="bind__allocator_8hpp.html" title=" " alt="" coords="29,325,255,366"/>
+<area shape="rect" href="bind__cancellation__slot_8hpp.html" title=" " alt="" coords="280,317,503,373"/>
+<area shape="rect" href="bind__executor_8hpp.html" title=" " alt="" coords="566,117,793,158"/>
+<area shape="rect" href="impl_2spawn_8hpp.html" title=" " alt="" coords="523,221,734,262"/>
+<area shape="rect" href="ts_2executor_8hpp.html" title=" " alt="" coords="1208,221,1415,262"/>
+<area shape="rect" href="bind__immediate__executor_8hpp.html" title=" " alt="" coords="527,317,741,373"/>
+<area shape="rect" href="buffered__read__stream_8hpp.html" title=" " alt="" coords="817,109,979,165"/>
+<area shape="rect" href="buffered__stream_8hpp.html" title=" " alt="" coords="867,213,1030,269"/>
+<area shape="rect" href="compose_8hpp.html" title=" " alt="" coords="918,325,1113,366"/>
+<area shape="rect" href="defer_8hpp.html" title=" " alt="" coords="1156,117,1325,158"/>
+<area shape="rect" href="deferred_8hpp.html" title=" " alt="" coords="1137,325,1328,366"/>
+<area shape="rect" href="handler__type__requirements_8hpp.html" title=" " alt="" coords="1793,109,2027,165"/>
+<area shape="rect" href="io__context__strand_8hpp.html" title=" " alt="" coords="2395,213,2571,269"/>
+<area shape="rect" href="basic__resolver_8hpp.html" title=" " alt="" coords="1984,213,2143,269"/>
+<area shape="rect" href="stream_8hpp.html" title=" " alt="" coords="2167,221,2371,262"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="2432,117,2623,158"/>
+<area shape="rect" href="impl_2use__future_8hpp.html" title=" " alt="" coords="2885,213,3049,269"/>
+<area shape="rect" href="co__composed_8hpp.html" title=" " alt="" coords="4895,213,5090,269"/>
+<area shape="rect" href="channel__send__functions_8hpp.html" title=" " alt="" coords="2647,109,2898,165"/>
+<area shape="rect" href="impl_2as__single_8hpp.html" title=" " alt="" coords="2922,109,3117,165"/>
+<area shape="rect" href="impl_2co__composed_8hpp.html" title=" " alt="" coords="5030,109,5225,165"/>
+<area shape="rect" href="impl_2use__promise_8hpp.html" title=" " alt="" coords="3191,109,3386,165"/>
+<area shape="rect" href="impl_2append_8hpp.html" title=" " alt="" coords="3411,117,3628,158"/>
+<area shape="rect" href="impl_2as__tuple_8hpp.html" title=" " alt="" coords="3652,109,3808,165"/>
+<area shape="rect" href="impl_2consign_8hpp.html" title=" " alt="" coords="3833,117,4051,158"/>
+<area shape="rect" href="impl_2detached_8hpp.html" title=" " alt="" coords="4075,117,4305,158"/>
+<area shape="rect" href="impl_2prepend_8hpp.html" title=" " alt="" coords="4329,117,4552,158"/>
+<area shape="rect" href="impl_2redirect__error_8hpp.html" title=" " alt="" coords="4576,109,4767,165"/>
+<area shape="rect" href="impl_2use__awaitable_8hpp.html" title=" " alt="" coords="4791,109,4955,165"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="2204,117,2408,158"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="1401,117,1565,158"/>
+<area shape="rect" href="read_8hpp.html" title=" " alt="" coords="3795,325,3961,366"/>
+<area shape="rect" href="read__at_8hpp.html" title=" " alt="" coords="4535,325,4720,366"/>
+<area shape="rect" href="read__until_8hpp.html" title=" " alt="" coords="5216,221,5417,262"/>
+<area shape="rect" href="write_8hpp.html" title=" " alt="" coords="5216,325,5385,366"/>
+<area shape="rect" href="write__at_8hpp.html" title=" " alt="" coords="5493,213,5639,269"/>
+<area shape="rect" href="cpp11_2type__erasure_2line__reader_8hpp.html" title=" " alt="" coords="5503,109,5717,165"/>
+<area shape="rect" href="cpp11_2type__erasure_2sleep_8hpp.html" title=" " alt="" coords="5742,109,5921,165"/>
+<area shape="rect" href="cpp20_2type__erasure_2line__reader_8hpp.html" title=" " alt="" coords="5945,109,6160,165"/>
+<area shape="rect" href="cpp20_2type__erasure_2sleep_8hpp.html" title=" " alt="" coords="6185,109,6363,165"/>
+<area shape="rect" href="async__ops_8hpp.html" title=" " alt="" coords="6387,109,6574,165"/>
+<area shape="rect" href="src_2tests_2unit_2archetypes_2async__result_8hpp.html" title=" " alt="" coords="6598,109,6785,165"/>
+<area shape="rect" href="async__result_8cpp.html" title=" " alt="" coords="6809,109,6961,165"/>
+<area shape="rect" href="signal__set_8hpp.html" title=" " alt="" coords="1715,317,1862,373"/>
+</map>
+</div>
+</div>
+<p><a href="include_2asio_2async__result_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1is__simple__completion__signature.html">asio::detail::is_simple_completion_signature&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1is__simple__completion__signature_3_01R_07Args_8_8_8_08_4.html">asio::detail::is_simple_completion_signature&lt; R(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1are__simple__completion__signatures.html">asio::detail::are_simple_completion_signatures&lt; Signatures &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1are__simple__completion__signatures_3_01Sig0_01_4.html">asio::detail::are_simple_completion_signatures&lt; Sig0 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1are__simple__completion__signatures_3_01Sig0_00_01SigN_8_8_8_01_4.html">asio::detail::are_simple_completion_signatures&lt; Sig0, SigN... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1simple__completion__signature_3_01R_07Args_8_8_8_08_4.html">asio::detail::simple_completion_signature&lt; R(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1simple__completion__signature_3_01R_07Args_8_8_8_08_01_6_01_4.html">asio::detail::simple_completion_signature&lt; R(Args...) &amp; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1simple__completion__signature_3_01R_07Args_8_8_8_08_01_6_6_01_4.html">asio::detail::simple_completion_signature&lt; R(Args...) &amp;&amp; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1completion__handler__async__result.html">asio::detail::completion_handler_async_result&lt; CompletionToken, Signatures &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result.html">asio::async_result&lt; CompletionToken, Signatures &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result_3_01void_00_01Signatures_8_8_8_01_4.html">asio::async_result&lt; void, Signatures... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1async__completion.html">asio::async_completion&lt; CompletionToken, Signatures &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1async__result__memfns__base.html">asio::detail::async_result_memfns_base</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1async__result__memfns__derived.html">asio::detail::async_result_memfns_derived&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1async__result__memfns__check.html">asio::detail::async_result_memfns_check&lt; T, T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1async__result__has__initiate__memfn.html">asio::detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1async__operation__probe.html">asio::detail::async_operation_probe</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1async__operation__probe__result.html">asio::detail::async_operation_probe_result</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1is__async__operation__call.html">asio::detail::is_async_operation_call&lt; Call, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1is__async__operation__call_3_01Call_00_01void__t_3_01enable__if__t_3_01ibe2c80084bb596dbd8ad659bf9d6ffdf.html">asio::detail::is_async_operation_call&lt; Call, void_t&lt; enable_if_t&lt; is_same&lt; result_of_t&lt; Call &gt;, async_operation_probe_result &gt;::value &gt; &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result_3_01detail_1_1async__operation__probe_00_01Signatures_8_8_8_01_4.html">asio::async_result&lt; detail::async_operation_probe, Signatures... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1is__async__operation.html">asio::is_async_operation&lt; T, Args &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1completion__signature__probe.html">asio::detail::completion_signature_probe</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1completion__signature__probe__result.html">asio::detail::completion_signature_probe_result&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1completion__signature__probe__result_1_1apply.html">asio::detail::completion_signature_probe_result&lt; T &gt;::apply&lt; Op &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1completion__signature__probe__result_3_01T_01_4.html">asio::detail::completion_signature_probe_result&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1completion__signature__probe__result_3_01T_01_4_1_1apply.html">asio::detail::completion_signature_probe_result&lt; T &gt;::apply&lt; Op &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1completion__signature__probe__result_3_01void_01_4.html">asio::detail::completion_signature_probe_result&lt; void &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1completion__signature__probe__result_3_01void_01_4_1_1apply.html">asio::detail::completion_signature_probe_result&lt; void &gt;::apply</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result_3_01detail_1_1completion__signature__probe_00_01Signatures_8_8_8_01_4.html">asio::async_result&lt; detail::completion_signature_probe, Signatures... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1async__result_3_01detail_1_1completion__signature__probe_00_01Signature_01_4.html">asio::async_result&lt; detail::completion_signature_probe, Signature &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1completion__signature__of.html">asio::completion_signature_of&lt; T, Args &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1default__completion__token__impl.html">asio::detail::default_completion_token_impl&lt; T, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1default__completion__token__impl_3_01T_00_01void__t_3_01typename_01T_1_1f1bd05290e20f1586944b6c2ade2e14c.html">asio::detail::default_completion_token_impl&lt; T, void_t&lt; typename T::default_completion_token_type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1default__completion__token.html">asio::default_completion_token&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ab3add42e6bf0b1c0307d0cfb49c3c257"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#ab3add42e6bf0b1c0307d0cfb49c3c257">ASIO_COMPLETION_SIGNATURE</a>&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:ab3add42e6bf0b1c0307d0cfb49c3c257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6245fce5ca42887ed5ce973a7df77658"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a6245fce5ca42887ed5ce973a7df77658">ASIO_COMPLETION_HANDLER_FOR</a>(sig)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a6245fce5ca42887ed5ce973a7df77658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436d4a91da91b34c72331444f41e663b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a436d4a91da91b34c72331444f41e663b">ASIO_COMPLETION_HANDLER_FOR2</a>(sig0,  sig1)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a436d4a91da91b34c72331444f41e663b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902493d50d5731e486f5fc005dd959c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a902493d50d5731e486f5fc005dd959c1">ASIO_COMPLETION_HANDLER_FOR3</a>(sig0,  sig1,  sig2)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a902493d50d5731e486f5fc005dd959c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4b747fd0a7aacf0e5272eff208ce0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a1a4b747fd0a7aacf0e5272eff208ce0a">ASIO_INITFN_RESULT_TYPE</a>(ct,  sig)</td></tr>
+<tr class="separator:a1a4b747fd0a7aacf0e5272eff208ce0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303f86d7608973804a729bc8634eb55e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a303f86d7608973804a729bc8634eb55e">ASIO_INITFN_RESULT_TYPE2</a>(ct,  sig0,  sig1)</td></tr>
+<tr class="separator:a303f86d7608973804a729bc8634eb55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665e19ff129ee3ba94cafc4ebb6de156"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a665e19ff129ee3ba94cafc4ebb6de156">ASIO_INITFN_RESULT_TYPE3</a>(ct,  sig0,  sig1,  sig2)</td></tr>
+<tr class="separator:a665e19ff129ee3ba94cafc4ebb6de156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab943504f8bb20c337df83d39f083b2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#aab943504f8bb20c337df83d39f083b2a">ASIO_HANDLER_TYPE</a>(ct,  sig)</td></tr>
+<tr class="separator:aab943504f8bb20c337df83d39f083b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f3568c546f9354a3314ed400284f35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a41f3568c546f9354a3314ed400284f35">ASIO_HANDLER_TYPE2</a>(ct,  sig0,  sig1)</td></tr>
+<tr class="separator:a41f3568c546f9354a3314ed400284f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db6209f105397ec914c666fdacbe0b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a7db6209f105397ec914c666fdacbe0b3">ASIO_HANDLER_TYPE3</a>(ct,  sig0,  sig1,  sig2)</td></tr>
+<tr class="separator:a7db6209f105397ec914c666fdacbe0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fbea3a3f6030af94d0592449edd14e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#ae5fbea3a3f6030af94d0592449edd14e">ASIO_INITFN_AUTO_RESULT_TYPE</a>(ct,  sig)&#160;&#160;&#160;  <a class="el" href="include_2asio_2async__result_8hpp.html#a1a4b747fd0a7aacf0e5272eff208ce0a">ASIO_INITFN_RESULT_TYPE</a>(ct, sig)</td></tr>
+<tr class="separator:ae5fbea3a3f6030af94d0592449edd14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93950bd36c2a04aa845278814180cdc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a93950bd36c2a04aa845278814180cdc8">ASIO_INITFN_AUTO_RESULT_TYPE2</a>(ct,  sig0,  sig1)&#160;&#160;&#160;  <a class="el" href="include_2asio_2async__result_8hpp.html#a303f86d7608973804a729bc8634eb55e">ASIO_INITFN_RESULT_TYPE2</a>(ct, sig0, sig1)</td></tr>
+<tr class="separator:a93950bd36c2a04aa845278814180cdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397de1b00bb1a687a757dec45144f1dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a397de1b00bb1a687a757dec45144f1dc">ASIO_INITFN_AUTO_RESULT_TYPE3</a>(ct,  sig0,  sig1,  sig2)&#160;&#160;&#160;  <a class="el" href="include_2asio_2async__result_8hpp.html#a665e19ff129ee3ba94cafc4ebb6de156">ASIO_INITFN_RESULT_TYPE3</a>(ct, sig0, sig1, sig2)</td></tr>
+<tr class="separator:a397de1b00bb1a687a757dec45144f1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1750c6218b1c1a187668dc93e9fda7dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a1750c6218b1c1a187668dc93e9fda7dc">ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX</a>(ct,  sig)&#160;&#160;&#160;  auto</td></tr>
+<tr class="separator:a1750c6218b1c1a187668dc93e9fda7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2768c4f4a4824c844f357f2d774b0c0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a2768c4f4a4824c844f357f2d774b0c0f">ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX2</a>(ct,  sig0,  sig1)&#160;&#160;&#160;  auto</td></tr>
+<tr class="separator:a2768c4f4a4824c844f357f2d774b0c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408697291c2fba1623eaec1f279d5799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a408697291c2fba1623eaec1f279d5799">ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX3</a>(ct,  sig0,  sig1,  sig2)&#160;&#160;&#160;  auto</td></tr>
+<tr class="separator:a408697291c2fba1623eaec1f279d5799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316b29d917d4ffb5d95daf42c722322c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a316b29d917d4ffb5d95daf42c722322c">ASIO_INITFN_AUTO_RESULT_TYPE_SUFFIX</a>(expr)&#160;&#160;&#160;-&gt; decltype expr</td></tr>
+<tr class="separator:a316b29d917d4ffb5d95daf42c722322c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd741d4d7324c3367158725348abb76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a3bd741d4d7324c3367158725348abb76">ASIO_INITFN_DEDUCED_RESULT_TYPE</a>(ct,  sig,  expr)&#160;&#160;&#160;  decltype expr</td></tr>
+<tr class="separator:a3bd741d4d7324c3367158725348abb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0408c90bab499462cbd1b72abcb6fb8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a0408c90bab499462cbd1b72abcb6fb8d">ASIO_INITFN_DEDUCED_RESULT_TYPE2</a>(ct,  sig0,  sig1,  expr)&#160;&#160;&#160;  decltype expr</td></tr>
+<tr class="separator:a0408c90bab499462cbd1b72abcb6fb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f89519ee43d7d196d7d097be40861fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a1f89519ee43d7d196d7d097be40861fe">ASIO_INITFN_DEDUCED_RESULT_TYPE3</a>(ct,  sig0,  sig1,  sig2,  expr)&#160;&#160;&#160;  decltype expr</td></tr>
+<tr class="separator:a1f89519ee43d7d196d7d097be40861fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e288a45eb3f7eaf2b331aee6814fb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(sig)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a23e288a45eb3f7eaf2b331aee6814fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66cdc0a2a28f0b93750fb51d18a25d87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a66cdc0a2a28f0b93750fb51d18a25d87">ASIO_COMPLETION_TOKEN_FOR2</a>(sig0,  sig1)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a66cdc0a2a28f0b93750fb51d18a25d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a144ae9af6856ef89611f3c23fa8de455"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a144ae9af6856ef89611f3c23fa8de455">ASIO_COMPLETION_TOKEN_FOR3</a>(sig0,  sig1,  sig2)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a144ae9af6856ef89611f3c23fa8de455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e35829ef86e74d3f523d56ca923accc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a6e35829ef86e74d3f523d56ca923accc">ASIO_ASYNC_OPERATION</a>(t)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a6e35829ef86e74d3f523d56ca923accc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976de1512c7d991daf7f674778a22628"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a976de1512c7d991daf7f674778a22628">ASIO_ASYNC_OPERATION1</a>(t,  a0)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a976de1512c7d991daf7f674778a22628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14d04746c29e5d8402daeb345021a7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#ac14d04746c29e5d8402daeb345021a7f">ASIO_ASYNC_OPERATION2</a>(t,  a0,  a1)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:ac14d04746c29e5d8402daeb345021a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aad9876607d442ce0ff057fabec840b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#a7aad9876607d442ce0ff057fabec840b">ASIO_ASYNC_OPERATION3</a>(t,  a0,  a1,  a2)&#160;&#160;&#160;typename</td></tr>
+<tr class="separator:a7aad9876607d442ce0ff057fabec840b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f2bab4cfa967a4e6e7de92f03e6981"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#ad5f2bab4cfa967a4e6e7de92f03e6981">ASIO_DEFAULT_COMPLETION_TOKEN_TYPE</a>(e)&#160;&#160;&#160;  = typename ::<a class="el" href="structasio_1_1default__completion__token.html">asio::default_completion_token</a>&lt;e&gt;::type</td></tr>
+<tr class="separator:ad5f2bab4cfa967a4e6e7de92f03e6981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af222a79cb09333ff6a83f461d2443356"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2asio_2async__result_8hpp.html#af222a79cb09333ff6a83f461d2443356">ASIO_DEFAULT_COMPLETION_TOKEN</a>(e)&#160;&#160;&#160;  = typename ::<a class="el" href="structasio_1_1default__completion__token.html">asio::default_completion_token</a>&lt;e&gt;::type()</td></tr>
+<tr class="separator:af222a79cb09333ff6a83f461d2443356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a7335867dac5c662e8386346c9669d710"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:a7335867dac5c662e8386346c9669d710"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a7335867dac5c662e8386346c9669d710">asio::completion_signature_of_t</a> = typename completion_signature_of&lt; T, Args... &gt;::type</td></tr>
+<tr class="separator:a7335867dac5c662e8386346c9669d710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84bbc083cf9153b28ce2d86c3ea16458"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a84bbc083cf9153b28ce2d86c3ea16458"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">asio::default_completion_token_t</a> = typename default_completion_token&lt; T &gt;::type</td></tr>
+<tr class="separator:a84bbc083cf9153b28ce2d86c3ea16458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a933856c53dffcf486d981043622b992c"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
+<tr class="memitem:a933856c53dffcf486d981043622b992c"><td class="memTemplItemLeft" align="right" valign="top">char(&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a933856c53dffcf486d981043622b992c">asio::detail::async_result_initiate_memfn_helper</a> (...))[2]</td></tr>
+<tr class="separator:a933856c53dffcf486d981043622b992c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c41f4d6429a40bc1b0fe0cdbe666397"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6c41f4d6429a40bc1b0fe0cdbe666397"><td class="memTemplItemLeft" align="right" valign="top">char&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a6c41f4d6429a40bc1b0fe0cdbe666397">asio::detail::async_result_initiate_memfn_helper</a> (async_result_memfns_check&lt; <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(async_result_memfns_base::*)(), &amp;async_result_memfns_derived&lt; T &gt;::initiate &gt; *)</td></tr>
+<tr class="separator:a6c41f4d6429a40bc1b0fe0cdbe666397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf600e256af39d8a0c65fb6e3eb988d"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken , ASIO_COMPLETION_SIGNATURE... Signatures, typename Initiation , typename... Args&gt; </td></tr>
+<tr class="memitem:acbf600e256af39d8a0c65fb6e3eb988d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a> (Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</td></tr>
+<tr class="separator:acbf600e256af39d8a0c65fb6e3eb988d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f784a1c5604d9cdb7ead506e6b7ebe"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken , ASIO_COMPLETION_SIGNATURE... Signatures, typename Initiation , typename... Args&gt; </td></tr>
+<tr class="memitem:a26f784a1c5604d9cdb7ead506e6b7ebe"><td class="memTemplItemLeft" align="right" valign="top">constraint_t&lt; !detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, typename async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::return_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a26f784a1c5604d9cdb7ead506e6b7ebe">asio::async_initiate</a> (Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a26f784a1c5604d9cdb7ead506e6b7ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a6e35829ef86e74d3f523d56ca923accc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e35829ef86e74d3f523d56ca923accc">&#9670;&nbsp;</a></span>ASIO_ASYNC_OPERATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ASYNC_OPERATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t</td><td>)</td>
+          <td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a976de1512c7d991daf7f674778a22628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a976de1512c7d991daf7f674778a22628">&#9670;&nbsp;</a></span>ASIO_ASYNC_OPERATION1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ASYNC_OPERATION1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac14d04746c29e5d8402daeb345021a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14d04746c29e5d8402daeb345021a7f">&#9670;&nbsp;</a></span>ASIO_ASYNC_OPERATION2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ASYNC_OPERATION2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aad9876607d442ce0ff057fabec840b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aad9876607d442ce0ff057fabec840b">&#9670;&nbsp;</a></span>ASIO_ASYNC_OPERATION3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ASYNC_OPERATION3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6245fce5ca42887ed5ce973a7df77658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6245fce5ca42887ed5ce973a7df77658">&#9670;&nbsp;</a></span>ASIO_COMPLETION_HANDLER_FOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPLETION_HANDLER_FOR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig</td><td>)</td>
+          <td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a436d4a91da91b34c72331444f41e663b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a436d4a91da91b34c72331444f41e663b">&#9670;&nbsp;</a></span>ASIO_COMPLETION_HANDLER_FOR2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPLETION_HANDLER_FOR2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a902493d50d5731e486f5fc005dd959c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902493d50d5731e486f5fc005dd959c1">&#9670;&nbsp;</a></span>ASIO_COMPLETION_HANDLER_FOR3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPLETION_HANDLER_FOR3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3add42e6bf0b1c0307d0cfb49c3c257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3add42e6bf0b1c0307d0cfb49c3c257">&#9670;&nbsp;</a></span>ASIO_COMPLETION_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPLETION_SIGNATURE&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23e288a45eb3f7eaf2b331aee6814fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e288a45eb3f7eaf2b331aee6814fb8">&#9670;&nbsp;</a></span>ASIO_COMPLETION_TOKEN_FOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPLETION_TOKEN_FOR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig</td><td>)</td>
+          <td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66cdc0a2a28f0b93750fb51d18a25d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66cdc0a2a28f0b93750fb51d18a25d87">&#9670;&nbsp;</a></span>ASIO_COMPLETION_TOKEN_FOR2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPLETION_TOKEN_FOR2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a144ae9af6856ef89611f3c23fa8de455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144ae9af6856ef89611f3c23fa8de455">&#9670;&nbsp;</a></span>ASIO_COMPLETION_TOKEN_FOR3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPLETION_TOKEN_FOR3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af222a79cb09333ff6a83f461d2443356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af222a79cb09333ff6a83f461d2443356">&#9670;&nbsp;</a></span>ASIO_DEFAULT_COMPLETION_TOKEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_DEFAULT_COMPLETION_TOKEN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">e</td><td>)</td>
+          <td>&#160;&#160;&#160;  = typename ::<a class="el" href="structasio_1_1default__completion__token.html">asio::default_completion_token</a>&lt;e&gt;::type()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5f2bab4cfa967a4e6e7de92f03e6981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f2bab4cfa967a4e6e7de92f03e6981">&#9670;&nbsp;</a></span>ASIO_DEFAULT_COMPLETION_TOKEN_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_DEFAULT_COMPLETION_TOKEN_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">e</td><td>)</td>
+          <td>&#160;&#160;&#160;  = typename ::<a class="el" href="structasio_1_1default__completion__token.html">asio::default_completion_token</a>&lt;e&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab943504f8bb20c337df83d39f083b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab943504f8bb20c337df83d39f083b2a">&#9670;&nbsp;</a></span>ASIO_HANDLER_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  typename ::asio::async_result&lt; \</div>
+<div class="line">    typename ::asio::decay&lt;ct&gt;::type, sig&gt;::completion_handler_type</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a41f3568c546f9354a3314ed400284f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41f3568c546f9354a3314ed400284f35">&#9670;&nbsp;</a></span>ASIO_HANDLER_TYPE2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_TYPE2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  typename ::asio::async_result&lt; \</div>
+<div class="line">    typename ::asio::decay&lt;ct&gt;::type, \</div>
+<div class="line">      sig0, sig1&gt;::completion_handler_type</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7db6209f105397ec914c666fdacbe0b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db6209f105397ec914c666fdacbe0b3">&#9670;&nbsp;</a></span>ASIO_HANDLER_TYPE3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_TYPE3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  typename ::asio::async_result&lt; \</div>
+<div class="line">    typename ::asio::decay&lt;ct&gt;::type, \</div>
+<div class="line">      sig0, sig1, sig2&gt;::completion_handler_type</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae5fbea3a3f6030af94d0592449edd14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fbea3a3f6030af94d0592449edd14e">&#9670;&nbsp;</a></span>ASIO_INITFN_AUTO_RESULT_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_AUTO_RESULT_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="include_2asio_2async__result_8hpp.html#a1a4b747fd0a7aacf0e5272eff208ce0a">ASIO_INITFN_RESULT_TYPE</a>(ct, sig)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93950bd36c2a04aa845278814180cdc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93950bd36c2a04aa845278814180cdc8">&#9670;&nbsp;</a></span>ASIO_INITFN_AUTO_RESULT_TYPE2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_AUTO_RESULT_TYPE2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="include_2asio_2async__result_8hpp.html#a303f86d7608973804a729bc8634eb55e">ASIO_INITFN_RESULT_TYPE2</a>(ct, sig0, sig1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a397de1b00bb1a687a757dec45144f1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397de1b00bb1a687a757dec45144f1dc">&#9670;&nbsp;</a></span>ASIO_INITFN_AUTO_RESULT_TYPE3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_AUTO_RESULT_TYPE3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="include_2asio_2async__result_8hpp.html#a665e19ff129ee3ba94cafc4ebb6de156">ASIO_INITFN_RESULT_TYPE3</a>(ct, sig0, sig1, sig2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1750c6218b1c1a187668dc93e9fda7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1750c6218b1c1a187668dc93e9fda7dc">&#9670;&nbsp;</a></span>ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  auto</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2768c4f4a4824c844f357f2d774b0c0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2768c4f4a4824c844f357f2d774b0c0f">&#9670;&nbsp;</a></span>ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  auto</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a408697291c2fba1623eaec1f279d5799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a408697291c2fba1623eaec1f279d5799">&#9670;&nbsp;</a></span>ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_AUTO_RESULT_TYPE_PREFIX3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  auto</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a316b29d917d4ffb5d95daf42c722322c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a316b29d917d4ffb5d95daf42c722322c">&#9670;&nbsp;</a></span>ASIO_INITFN_AUTO_RESULT_TYPE_SUFFIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_AUTO_RESULT_TYPE_SUFFIX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr</td><td>)</td>
+          <td>&#160;&#160;&#160;-&gt; decltype expr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bd741d4d7324c3367158725348abb76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd741d4d7324c3367158725348abb76">&#9670;&nbsp;</a></span>ASIO_INITFN_DEDUCED_RESULT_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_DEDUCED_RESULT_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  decltype expr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0408c90bab499462cbd1b72abcb6fb8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0408c90bab499462cbd1b72abcb6fb8d">&#9670;&nbsp;</a></span>ASIO_INITFN_DEDUCED_RESULT_TYPE2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_DEDUCED_RESULT_TYPE2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  decltype expr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f89519ee43d7d196d7d097be40861fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f89519ee43d7d196d7d097be40861fe">&#9670;&nbsp;</a></span>ASIO_INITFN_DEDUCED_RESULT_TYPE3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_DEDUCED_RESULT_TYPE3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  decltype expr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a4b747fd0a7aacf0e5272eff208ce0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4b747fd0a7aacf0e5272eff208ce0a">&#9670;&nbsp;</a></span>ASIO_INITFN_RESULT_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_RESULT_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  typename ::asio::async_result&lt; \</div>
+<div class="line">    typename ::asio::decay&lt;ct&gt;::type, sig&gt;::return_type</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a303f86d7608973804a729bc8634eb55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303f86d7608973804a729bc8634eb55e">&#9670;&nbsp;</a></span>ASIO_INITFN_RESULT_TYPE2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_RESULT_TYPE2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  typename ::asio::async_result&lt; \</div>
+<div class="line">    typename ::asio::decay&lt;ct&gt;::type, sig0, sig1&gt;::return_type</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a665e19ff129ee3ba94cafc4ebb6de156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665e19ff129ee3ba94cafc4ebb6de156">&#9670;&nbsp;</a></span>ASIO_INITFN_RESULT_TYPE3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INITFN_RESULT_TYPE3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ct, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sig2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  typename ::asio::async_result&lt; \</div>
+<div class="line">    typename ::asio::decay&lt;ct&gt;::type, sig0, sig1, sig2&gt;::return_type</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::cancellation_state</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1cancellation__state.html">cancellation_state</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classasio_1_1cancellation__state-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::cancellation_state</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A cancellation state is used for chaining signals and slots in compositions.  
+ <a href="classasio_1_1cancellation__state.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cancellation__state_8hpp_source.html">cancellation_state.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a32838286ff790657be0029cc18c03212"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__state.html#a32838286ff790657be0029cc18c03212">cancellation_state</a> () noexcept</td></tr>
+<tr class="memdesc:a32838286ff790657be0029cc18c03212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a disconnected cancellation state.  <a href="classasio_1_1cancellation__state.html#a32838286ff790657be0029cc18c03212">Подробнее...</a><br /></td></tr>
+<tr class="separator:a32838286ff790657be0029cc18c03212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae484f68288a8618de03abf0b6807d176"><td class="memTemplParams" colspan="2">template&lt;typename CancellationSlot &gt; </td></tr>
+<tr class="memitem:ae484f68288a8618de03abf0b6807d176"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__state.html#ae484f68288a8618de03abf0b6807d176">cancellation_state</a> (CancellationSlot <a class="el" href="classasio_1_1cancellation__state.html#a28a3c6686aacf885413c569c4af788e0">slot</a>)</td></tr>
+<tr class="memdesc:ae484f68288a8618de03abf0b6807d176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and attach to a parent slot to create a new child slot.  <a href="classasio_1_1cancellation__state.html#ae484f68288a8618de03abf0b6807d176">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae484f68288a8618de03abf0b6807d176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedf3c52f4d5e0f7bd91377ac113aff6d"><td class="memTemplParams" colspan="2">template&lt;typename CancellationSlot , typename Filter &gt; </td></tr>
+<tr class="memitem:aedf3c52f4d5e0f7bd91377ac113aff6d"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__state.html#aedf3c52f4d5e0f7bd91377ac113aff6d">cancellation_state</a> (CancellationSlot <a class="el" href="classasio_1_1cancellation__state.html#a28a3c6686aacf885413c569c4af788e0">slot</a>, Filter <a class="el" href="cpp14_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a>)</td></tr>
+<tr class="memdesc:aedf3c52f4d5e0f7bd91377ac113aff6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and attach to a parent slot to create a new child slot.  <a href="classasio_1_1cancellation__state.html#aedf3c52f4d5e0f7bd91377ac113aff6d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aedf3c52f4d5e0f7bd91377ac113aff6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3298af28cc2a4efba9f9fb20ba540e6f"><td class="memTemplParams" colspan="2">template&lt;typename CancellationSlot , typename InFilter , typename OutFilter &gt; </td></tr>
+<tr class="memitem:a3298af28cc2a4efba9f9fb20ba540e6f"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__state.html#a3298af28cc2a4efba9f9fb20ba540e6f">cancellation_state</a> (CancellationSlot <a class="el" href="classasio_1_1cancellation__state.html#a28a3c6686aacf885413c569c4af788e0">slot</a>, InFilter in_filter, OutFilter out_filter)</td></tr>
+<tr class="memdesc:a3298af28cc2a4efba9f9fb20ba540e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and attach to a parent slot to create a new child slot.  <a href="classasio_1_1cancellation__state.html#a3298af28cc2a4efba9f9fb20ba540e6f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3298af28cc2a4efba9f9fb20ba540e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a3c6686aacf885413c569c4af788e0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__state.html#a28a3c6686aacf885413c569c4af788e0">slot</a> () const noexcept</td></tr>
+<tr class="memdesc:a28a3c6686aacf885413c569c4af788e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the single child slot associated with the state.  <a href="classasio_1_1cancellation__state.html#a28a3c6686aacf885413c569c4af788e0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a28a3c6686aacf885413c569c4af788e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e30c8d69bfc76a478536a2b9e6030eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__state.html#a7e30c8d69bfc76a478536a2b9e6030eb">cancelled</a> () const noexcept</td></tr>
+<tr class="memdesc:a7e30c8d69bfc76a478536a2b9e6030eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cancellation types that have been triggered.  <a href="classasio_1_1cancellation__state.html#a7e30c8d69bfc76a478536a2b9e6030eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7e30c8d69bfc76a478536a2b9e6030eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae22f2377e20d69cd9290eec52d04ec1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1cancellation__state.html#ae22f2377e20d69cd9290eec52d04ec1e">clear</a> (<a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a> mask=<a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6aa181a603769c1f98ad927e7367c7aa51">cancellation_type::all</a>) noexcept</td></tr>
+<tr class="memdesc:ae22f2377e20d69cd9290eec52d04ec1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the specified cancellation types, if they have been triggered.  <a href="classasio_1_1cancellation__state.html#ae22f2377e20d69cd9290eec52d04ec1e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae22f2377e20d69cd9290eec52d04ec1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A cancellation state is used for chaining signals and slots in compositions. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a32838286ff790657be0029cc18c03212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32838286ff790657be0029cc18c03212">&#9670;&nbsp;</a></span>cancellation_state() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr asio::cancellation_state::cancellation_state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a disconnected cancellation state. </p>
+
+</div>
+</div>
+<a id="ae484f68288a8618de03abf0b6807d176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae484f68288a8618de03abf0b6807d176">&#9670;&nbsp;</a></span>cancellation_state() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CancellationSlot &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr asio::cancellation_state::cancellation_state </td>
+          <td>(</td>
+          <td class="paramtype">CancellationSlot&#160;</td>
+          <td class="paramname"><em>slot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct and attach to a parent slot to create a new child slot. </p>
+<p>Initialises the cancellation state so that it allows terminal cancellation only. Equivalent to <code><a class="el" href="classasio_1_1cancellation__state.html" title="A cancellation state is used for chaining signals and slots in compositions.">cancellation_state</a>(slot, <a class="el" href="namespaceasio.html#a8bbee6470702e960e05ea7d244173a53" title="A cancellation filter that enables terminal cancellation only.">enable_terminal_cancellation()</a>)</code>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slot</td><td>The parent cancellation slot to which the state will be attached. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aedf3c52f4d5e0f7bd91377ac113aff6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf3c52f4d5e0f7bd91377ac113aff6d">&#9670;&nbsp;</a></span>cancellation_state() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CancellationSlot , typename Filter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr asio::cancellation_state::cancellation_state </td>
+          <td>(</td>
+          <td class="paramtype">CancellationSlot&#160;</td>
+          <td class="paramname"><em>slot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Filter&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct and attach to a parent slot to create a new child slot. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slot</td><td>The parent cancellation slot to which the state will be attached.</td></tr>
+    <tr><td class="paramname">filter</td><td>A function object that is used to transform incoming cancellation signals as they are received from the parent slot. This function object must have the signature: <div class="fragment"><div class="line"><a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a> <a class="code" href="cpp11_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a>(</div>
+<div class="line">   <a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a>); </div>
+<div class="ttc" id="acpp11_2executors_2pipeline_8cpp_html_aaa1fa6715b746a411a160c620898c48c"><div class="ttname"><a href="cpp11_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a></div><div class="ttdeci">void filter(queue_back&lt; std::string &gt; in, queue_front&lt; std::string &gt; out)</div><div class="ttdef"><b>Definition:</b> pipeline.cpp:254</div></div>
+<div class="ttc" id="anamespaceasio_html_ae02aa651224af4b25dc476fc01ce29f6"><div class="ttname"><a href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type</a></div><div class="ttdeci">cancellation_type</div><div class="ttdef"><b>Definition:</b> cancellation_type.hpp:57</div></div>
+</div><!-- fragment --></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The library provides the following pre-defined cancellation filters:</p>
+<ul>
+<li><a class="el" href="namespaceasio.html#a8c7be67c717fae6f2e1b186573b74b44" title="A cancellation filter that disables cancellation.">asio::disable_cancellation</a> </li>
+<li><a class="el" href="namespaceasio.html#a8bbee6470702e960e05ea7d244173a53" title="A cancellation filter that enables terminal cancellation only.">asio::enable_terminal_cancellation</a> </li>
+<li><a class="el" href="namespaceasio.html#a29d149df79dc30ac3e926e1ec85e5849">asio::enable_partial_cancellation</a> </li>
+<li><a class="el" href="namespaceasio.html#aed9b0c348b4e739128d5bf18fb87a0e3">asio::enable_total_cancellation</a> </li>
+</ul>
+
+</div>
+</div>
+<a id="a3298af28cc2a4efba9f9fb20ba540e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3298af28cc2a4efba9f9fb20ba540e6f">&#9670;&nbsp;</a></span>cancellation_state() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CancellationSlot , typename InFilter , typename OutFilter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr asio::cancellation_state::cancellation_state </td>
+          <td>(</td>
+          <td class="paramtype">CancellationSlot&#160;</td>
+          <td class="paramname"><em>slot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InFilter&#160;</td>
+          <td class="paramname"><em>in_filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutFilter&#160;</td>
+          <td class="paramname"><em>out_filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct and attach to a parent slot to create a new child slot. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slot</td><td>The parent cancellation slot to which the state will be attached.</td></tr>
+    <tr><td class="paramname">in_filter</td><td>A function object that is used to transform incoming cancellation signals as they are received from the parent slot. This function object must have the signature: <div class="fragment"><div class="line"><a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a> in_filter(</div>
+<div class="line">   <a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a>); </div>
+</div><!-- fragment --></td></tr>
+    <tr><td class="paramname">out_filter</td><td>A function object that is used to transform outcoming cancellation signals as they are relayed to the child slot. This function object must have the signature: <div class="fragment"><div class="line"><a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a> out_filter(</div>
+<div class="line">   <a class="code" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">asio::cancellation_type_t</a>); </div>
+</div><!-- fragment --></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The library provides the following pre-defined cancellation filters:</p>
+<ul>
+<li><a class="el" href="namespaceasio.html#a8c7be67c717fae6f2e1b186573b74b44" title="A cancellation filter that disables cancellation.">asio::disable_cancellation</a> </li>
+<li><a class="el" href="namespaceasio.html#a8bbee6470702e960e05ea7d244173a53" title="A cancellation filter that enables terminal cancellation only.">asio::enable_terminal_cancellation</a> </li>
+<li><a class="el" href="namespaceasio.html#a29d149df79dc30ac3e926e1ec85e5849">asio::enable_partial_cancellation</a> </li>
+<li><a class="el" href="namespaceasio.html#aed9b0c348b4e739128d5bf18fb87a0e3">asio::enable_total_cancellation</a> </li>
+</ul>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7e30c8d69bfc76a478536a2b9e6030eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e30c8d69bfc76a478536a2b9e6030eb">&#9670;&nbsp;</a></span>cancelled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a> asio::cancellation_state::cancelled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the cancellation types that have been triggered. </p>
+
+</div>
+</div>
+<a id="ae22f2377e20d69cd9290eec52d04ec1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae22f2377e20d69cd9290eec52d04ec1e">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::cancellation_state::clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em> = <code><a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6aa181a603769c1f98ad927e7367c7aa51">cancellation_type::all</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clears the specified cancellation types, if they have been triggered. </p>
+
+</div>
+</div>
+<a id="a28a3c6686aacf885413c569c4af788e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a3c6686aacf885413c569c4af788e0">&#9670;&nbsp;</a></span>slot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a> asio::cancellation_state::slot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the single child slot associated with the state. </p>
+<p>This sub-slot is used with the operations that are being composed. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="cancellation__state_8hpp_source.html">cancellation_state.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

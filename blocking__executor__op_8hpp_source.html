@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/detail/blocking_executor_op.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">blocking_executor_op.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="blocking__executor__op_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// detail/blocking_executor_op.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_DETAIL_BLOCKING_EXECUTOR_OP_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_DETAIL_BLOCKING_EXECUTOR_OP_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event_8hpp.html">asio/detail/event.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fenced__block_8hpp.html">asio/detail/fenced_block.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mutex_8hpp.html">asio/detail/mutex.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="scheduler__operation_8hpp.html">asio/detail/scheduler_operation.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Operation = scheduler_operation&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classasio_1_1detail_1_1blocking__executor__op__base.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1detail_1_1blocking__executor__op__base.html">blocking_executor_op_base</a> : <span class="keyword">public</span> Operation</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classasio_1_1detail_1_1blocking__executor__op__base.html#a63458b768733127d283bf8b7aaba3850">   33</a></span>&#160;  <a class="code" href="classasio_1_1detail_1_1blocking__executor__op__base.html#a63458b768733127d283bf8b7aaba3850">blocking_executor_op_base</a>(<span class="keyword">typename</span> Operation::func_type complete_func)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    : Operation(complete_func),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      is_complete_(false)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classasio_1_1detail_1_1blocking__executor__op__base.html#ab183a158ffcbb2771606763911047666">   39</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1detail_1_1blocking__executor__op__base.html#ab183a158ffcbb2771606763911047666">wait</a>()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classasio_1_1detail_1_1scoped__lock.html">asio::detail::mutex::scoped_lock</a> lock(mutex_);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">while</span> (!is_complete_)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      event_.<a class="code" href="classasio_1_1detail_1_1null__event.html#a1283b11b26d09def9d828760903ed74f">wait</a>(lock);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html">   47</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html">do_complete_cleanup</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#a075a967aff060db3bdb088c8d37610ab">   49</a></span>&#160;    <a class="code" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#a075a967aff060db3bdb088c8d37610ab">~do_complete_cleanup</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <a class="code" href="classasio_1_1detail_1_1scoped__lock.html">asio::detail::mutex::scoped_lock</a> lock(<a class="code" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#ac81866f8a84b3b71b437500327dda106">op_</a>-&gt;mutex_);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#ac81866f8a84b3b71b437500327dda106">op_</a>-&gt;is_complete_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#ac81866f8a84b3b71b437500327dda106">op_</a>-&gt;event_.<a class="code" href="classasio_1_1detail_1_1null__event.html#afdedcb2a9d4bddd617172a22f668bb73">unlock_and_signal_one_for_destruction</a>(lock);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#ac81866f8a84b3b71b437500327dda106">   56</a></span>&#160;    <a class="code" href="classasio_1_1detail_1_1blocking__executor__op__base.html">blocking_executor_op_base</a>* <a class="code" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#ac81866f8a84b3b71b437500327dda106">op_</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classasio_1_1detail_1_1null__mutex.html">asio::detail::mutex</a> mutex_;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classasio_1_1detail_1_1null__event.html">asio::detail::event</a> event_;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">bool</span> is_complete_;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Handler, <span class="keyword">typename</span> Operation = scheduler_operation&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classasio_1_1detail_1_1blocking__executor__op.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1detail_1_1blocking__executor__op.html">blocking_executor_op</a> : <span class="keyword">public</span> <a class="code" href="classasio_1_1detail_1_1blocking__executor__op__base.html">blocking_executor_op_base</a>&lt;Operation&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classasio_1_1detail_1_1blocking__executor__op.html#a5d907cdc8e3329b5d731673a5038d6e5">   69</a></span>&#160;  <a class="code" href="classasio_1_1detail_1_1blocking__executor__op.html#a5d907cdc8e3329b5d731673a5038d6e5">blocking_executor_op</a>(Handler&amp; h)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    : <a class="code" href="classasio_1_1detail_1_1blocking__executor__op__base.html">blocking_executor_op_base</a>&lt;Operation&gt;(&amp;<a class="code" href="classasio_1_1detail_1_1blocking__executor__op.html">blocking_executor_op</a>::<a class="code" href="classasio_1_1detail_1_1blocking__executor__op.html#aabdbeb07287651d77737346f6c120598">do_complete</a>),</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      handler_(h)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classasio_1_1detail_1_1blocking__executor__op.html#aabdbeb07287651d77737346f6c120598">   75</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1detail_1_1blocking__executor__op.html#aabdbeb07287651d77737346f6c120598">do_complete</a>(<span class="keywordtype">void</span>* owner, Operation* base,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keyword">const</span> <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; <span class="comment">/*ec*/</span>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      std::size_t <span class="comment">/*bytes_transferred*/</span>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="config_8hpp.html#a0b8f03561f6b6643ac00b87aafba02c0">ASIO_ASSUME</a>(base != 0);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classasio_1_1detail_1_1blocking__executor__op.html">blocking_executor_op</a>* o(<span class="keyword">static_cast&lt;</span><a class="code" href="classasio_1_1detail_1_1blocking__executor__op.html">blocking_executor_op</a>*<span class="keyword">&gt;</span>(base));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typename</span> <a class="code" href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html">blocking_executor_op_base&lt;Operation&gt;::do_complete_cleanup</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      on_exit = { o };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    (<a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)on_exit;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="handler__tracking_8hpp.html#acd006ace2145f1adc4b598bbd0e73b83">ASIO_HANDLER_COMPLETION</a>((*o));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// Make the upcall if required.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (owner)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <a class="code" href="classasio_1_1detail_1_1null__fenced__block.html">fenced_block</a> b(<a class="code" href="classasio_1_1detail_1_1null__fenced__block.html#a21c66218b4c10beb58f227cc40b655dfa29ffa18b5d61c64e079ea16805204313">fenced_block::half</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <a class="code" href="handler__tracking_8hpp.html#a40898fadadf6eee5fe0b54f9fba8d022">ASIO_HANDLER_INVOCATION_BEGIN</a>(());</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keyword">static_cast&lt;</span>Handler&amp;&amp;<span class="keyword">&gt;</span>(o-&gt;handler_)();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="handler__tracking_8hpp.html#a190b5ee3bba7d92c73f79359fd79d037">ASIO_HANDLER_INVOCATION_END</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  Handler&amp; handler_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_DETAIL_BLOCKING_EXECUTOR_OP_HPP</span></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1blocking__executor__op__base_html"><div class="ttname"><a href="classasio_1_1detail_1_1blocking__executor__op__base.html">asio::detail::blocking_executor_op_base</a></div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:31</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1blocking__executor__op__base_html_a63458b768733127d283bf8b7aaba3850"><div class="ttname"><a href="classasio_1_1detail_1_1blocking__executor__op__base.html#a63458b768733127d283bf8b7aaba3850">asio::detail::blocking_executor_op_base::blocking_executor_op_base</a></div><div class="ttdeci">blocking_executor_op_base(typename Operation::func_type complete_func)</div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:33</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1blocking__executor__op__base_html_ab183a158ffcbb2771606763911047666"><div class="ttname"><a href="classasio_1_1detail_1_1blocking__executor__op__base.html#ab183a158ffcbb2771606763911047666">asio::detail::blocking_executor_op_base::wait</a></div><div class="ttdeci">void wait()</div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:39</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1blocking__executor__op_html"><div class="ttname"><a href="classasio_1_1detail_1_1blocking__executor__op.html">asio::detail::blocking_executor_op</a></div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:67</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1blocking__executor__op_html_a5d907cdc8e3329b5d731673a5038d6e5"><div class="ttname"><a href="classasio_1_1detail_1_1blocking__executor__op.html#a5d907cdc8e3329b5d731673a5038d6e5">asio::detail::blocking_executor_op::blocking_executor_op</a></div><div class="ttdeci">blocking_executor_op(Handler &amp;h)</div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:69</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1blocking__executor__op_html_aabdbeb07287651d77737346f6c120598"><div class="ttname"><a href="classasio_1_1detail_1_1blocking__executor__op.html#aabdbeb07287651d77737346f6c120598">asio::detail::blocking_executor_op::do_complete</a></div><div class="ttdeci">static void do_complete(void *owner, Operation *base, const asio::error_code &amp;, std::size_t)</div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:75</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1null__event_html"><div class="ttname"><a href="classasio_1_1detail_1_1null__event.html">asio::detail::null_event</a></div><div class="ttdef"><b>Definition:</b> null_event.hpp:28</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1null__event_html_a1283b11b26d09def9d828760903ed74f"><div class="ttname"><a href="classasio_1_1detail_1_1null__event.html#a1283b11b26d09def9d828760903ed74f">asio::detail::null_event::wait</a></div><div class="ttdeci">void wait(Lock &amp;)</div><div class="ttdef"><b>Definition:</b> null_event.hpp:79</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1null__event_html_afdedcb2a9d4bddd617172a22f668bb73"><div class="ttname"><a href="classasio_1_1detail_1_1null__event.html#afdedcb2a9d4bddd617172a22f668bb73">asio::detail::null_event::unlock_and_signal_one_for_destruction</a></div><div class="ttdeci">void unlock_and_signal_one_for_destruction(Lock &amp;)</div><div class="ttdef"><b>Definition:</b> null_event.hpp:60</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1null__fenced__block_html"><div class="ttname"><a href="classasio_1_1detail_1_1null__fenced__block.html">asio::detail::null_fenced_block</a></div><div class="ttdef"><b>Definition:</b> null_fenced_block.hpp:27</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1null__fenced__block_html_a21c66218b4c10beb58f227cc40b655dfa29ffa18b5d61c64e079ea16805204313"><div class="ttname"><a href="classasio_1_1detail_1_1null__fenced__block.html#a21c66218b4c10beb58f227cc40b655dfa29ffa18b5d61c64e079ea16805204313">asio::detail::null_fenced_block::half</a></div><div class="ttdeci">@ half</div><div class="ttdef"><b>Definition:</b> null_fenced_block.hpp:29</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1null__mutex_html"><div class="ttname"><a href="classasio_1_1detail_1_1null__mutex.html">asio::detail::null_mutex</a></div><div class="ttdef"><b>Definition:</b> null_mutex.hpp:30</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1scoped__lock_html"><div class="ttname"><a href="classasio_1_1detail_1_1scoped__lock.html">asio::detail::scoped_lock</a></div><div class="ttdef"><b>Definition:</b> scoped_lock.hpp:29</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_a0b8f03561f6b6643ac00b87aafba02c0"><div class="ttname"><a href="config_8hpp.html#a0b8f03561f6b6643ac00b87aafba02c0">ASIO_ASSUME</a></div><div class="ttdeci">#define ASIO_ASSUME(expr)</div><div class="ttdef"><b>Definition:</b> config.hpp:1297</div></div>
+<div class="ttc" id="aevent_8hpp_html"><div class="ttname"><a href="event_8hpp.html">event.hpp</a></div></div>
+<div class="ttc" id="afenced__block_8hpp_html"><div class="ttname"><a href="fenced__block_8hpp.html">fenced_block.hpp</a></div></div>
+<div class="ttc" id="ahandler__tracking_8hpp_html_a190b5ee3bba7d92c73f79359fd79d037"><div class="ttname"><a href="handler__tracking_8hpp.html#a190b5ee3bba7d92c73f79359fd79d037">ASIO_HANDLER_INVOCATION_END</a></div><div class="ttdeci">#define ASIO_HANDLER_INVOCATION_END</div><div class="ttdef"><b>Definition:</b> handler_tracking.hpp:243</div></div>
+<div class="ttc" id="ahandler__tracking_8hpp_html_a40898fadadf6eee5fe0b54f9fba8d022"><div class="ttname"><a href="handler__tracking_8hpp.html#a40898fadadf6eee5fe0b54f9fba8d022">ASIO_HANDLER_INVOCATION_BEGIN</a></div><div class="ttdeci">#define ASIO_HANDLER_INVOCATION_BEGIN(args)</div><div class="ttdef"><b>Definition:</b> handler_tracking.hpp:242</div></div>
+<div class="ttc" id="ahandler__tracking_8hpp_html_acd006ace2145f1adc4b598bbd0e73b83"><div class="ttname"><a href="handler__tracking_8hpp.html#acd006ace2145f1adc4b598bbd0e73b83">ASIO_HANDLER_COMPLETION</a></div><div class="ttdeci">#define ASIO_HANDLER_COMPLETION(args)</div><div class="ttdef"><b>Definition:</b> handler_tracking.hpp:241</div></div>
+<div class="ttc" id="amutex_8hpp_html"><div class="ttname"><a href="mutex_8hpp.html">mutex.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="ascheduler__operation_8hpp_html"><div class="ttname"><a href="scheduler__operation_8hpp.html">scheduler_operation.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup_html"><div class="ttname"><a href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html">asio::detail::blocking_executor_op_base::do_complete_cleanup</a></div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:48</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup_html_a075a967aff060db3bdb088c8d37610ab"><div class="ttname"><a href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#a075a967aff060db3bdb088c8d37610ab">asio::detail::blocking_executor_op_base::do_complete_cleanup::~do_complete_cleanup</a></div><div class="ttdeci">~do_complete_cleanup()</div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:49</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup_html_ac81866f8a84b3b71b437500327dda106"><div class="ttname"><a href="structasio_1_1detail_1_1blocking__executor__op__base_1_1do__complete__cleanup.html#ac81866f8a84b3b71b437500327dda106">asio::detail::blocking_executor_op_base::do_complete_cleanup::op_</a></div><div class="ttdeci">blocking_executor_op_base * op_</div><div class="ttdef"><b>Definition:</b> blocking_executor_op.hpp:56</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

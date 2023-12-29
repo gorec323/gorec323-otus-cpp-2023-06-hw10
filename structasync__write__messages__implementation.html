@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура async_write_messages_implementation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structasync__write__messages__implementation-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура async_write_messages_implementation</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф связей класса async_write_messages_implementation:</div>
+<div class="dyncontent">
+<div class="center"><img src="structasync__write__messages__implementation__coll__graph.png" border="0" usemap="#aasync__write__messages__implementation_coll__map" alt="Collaboration graph"/></div>
+<map name="aasync__write__messages__implementation_coll__map" id="aasync__write__messages__implementation_coll__map">
+<area shape="rect" title=" " alt="" coords="5,95,179,136"/>
+<area shape="rect" href="classasio_1_1coroutine.html" title="Provides support for implementing stackless coroutines." alt="" coords="33,5,151,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a850a23ad34c8d003c4dec38034a0f687"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="structasync__write__messages__implementation.html#a850a23ad34c8d003c4dec38034a0f687a5018c8fea499d52f5b0742c2472e9dd4">starting</a>
+, <a class="el" href="structasync__write__messages__implementation.html#a850a23ad34c8d003c4dec38034a0f687af11c1ef91de3d85eaef715109d0bc688">waiting</a>
+, <a class="el" href="structasync__write__messages__implementation.html#a850a23ad34c8d003c4dec38034a0f687a75c4b3840504d1e272dc843417ed5189">writing</a>
+ }</td></tr>
+<tr class="separator:a850a23ad34c8d003c4dec38034a0f687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a47321d7d90d598983dd5253270269c25"><td class="memTemplParams" colspan="2">template&lt;typename Self &gt; </td></tr>
+<tr class="memitem:a47321d7d90d598983dd5253270269c25"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#a47321d7d90d598983dd5253270269c25">operator()</a> (Self &amp;self, const std::error_code &amp;error=std::error_code(), std::size_t=0)</td></tr>
+<tr class="separator:a47321d7d90d598983dd5253270269c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47321d7d90d598983dd5253270269c25"><td class="memTemplParams" colspan="2">template&lt;typename Self &gt; </td></tr>
+<tr class="memitem:a47321d7d90d598983dd5253270269c25"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#a47321d7d90d598983dd5253270269c25">operator()</a> (Self &amp;self, const std::error_code &amp;error=std::error_code(), std::size_t=0)</td></tr>
+<tr class="separator:a47321d7d90d598983dd5253270269c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aeb56071515aa5ac7c7bdb79fb716e547"><td class="memItemLeft" align="right" valign="top">tcp::socket &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#aeb56071515aa5ac7c7bdb79fb716e547">socket_</a></td></tr>
+<tr class="separator:aeb56071515aa5ac7c7bdb79fb716e547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7534189d17807f682422dc595c2beada"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#a7534189d17807f682422dc595c2beada">encoded_message_</a></td></tr>
+<tr class="separator:a7534189d17807f682422dc595c2beada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e8d1059b9924744a1bb3f29eff3731"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#a69e8d1059b9924744a1bb3f29eff3731">repeat_count_</a></td></tr>
+<tr class="separator:a69e8d1059b9924744a1bb3f29eff3731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c28d65bc3811184133e939b390b357"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="namespaceasio.html#a627a7abd2bc87969838f17e46b8dc20d">asio::steady_timer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#af6c28d65bc3811184133e939b390b357">delay_timer_</a></td></tr>
+<tr class="separator:af6c28d65bc3811184133e939b390b357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc439319c8532c4e0c4a7491b4a10079"><td class="memItemLeft" align="right" valign="top">enum async_write_messages_implementation:: { ... } &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#abc439319c8532c4e0c4a7491b4a10079">state_</a></td></tr>
+<tr class="separator:abc439319c8532c4e0c4a7491b4a10079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc411ca54a2072f4551fcae0f87a60a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1coroutine.html">asio::coroutine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasync__write__messages__implementation.html#abc411ca54a2072f4551fcae0f87a60a8">coro_</a></td></tr>
+<tr class="separator:abc411ca54a2072f4551fcae0f87a60a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a850a23ad34c8d003c4dec38034a0f687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850a23ad34c8d003c4dec38034a0f687">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a850a23ad34c8d003c4dec38034a0f687a5018c8fea499d52f5b0742c2472e9dd4"></a>starting&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a850a23ad34c8d003c4dec38034a0f687af11c1ef91de3d85eaef715109d0bc688"></a>waiting&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a850a23ad34c8d003c4dec38034a0f687a75c4b3840504d1e272dc843417ed5189"></a>writing&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a47321d7d90d598983dd5253270269c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47321d7d90d598983dd5253270269c25">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Self &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> async_write_messages_implementation::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Self &amp;&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::error_code &amp;&#160;</td>
+          <td class="paramname"><em>error</em> = <code>std::error_code()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47321d7d90d598983dd5253270269c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47321d7d90d598983dd5253270269c25">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Self &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> async_write_messages_implementation::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Self &amp;&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::error_code &amp;&#160;</td>
+          <td class="paramname"><em>error</em> = <code>std::error_code()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="abc411ca54a2072f4551fcae0f87a60a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc411ca54a2072f4551fcae0f87a60a8">&#9670;&nbsp;</a></span>coro_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1coroutine.html">asio::coroutine</a> async_write_messages_implementation::coro_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6c28d65bc3811184133e939b390b357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c28d65bc3811184133e939b390b357">&#9670;&nbsp;</a></span>delay_timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="namespaceasio.html#a627a7abd2bc87969838f17e46b8dc20d">asio::steady_timer</a> &gt; async_write_messages_implementation::delay_timer_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7534189d17807f682422dc595c2beada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7534189d17807f682422dc595c2beada">&#9670;&nbsp;</a></span>encoded_message_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; std::string &gt; async_write_messages_implementation::encoded_message_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69e8d1059b9924744a1bb3f29eff3731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e8d1059b9924744a1bb3f29eff3731">&#9670;&nbsp;</a></span>repeat_count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t async_write_messages_implementation::repeat_count_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb56071515aa5ac7c7bdb79fb716e547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb56071515aa5ac7c7bdb79fb716e547">&#9670;&nbsp;</a></span>socket_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tcp::socket &amp; async_write_messages_implementation::socket_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc439319c8532c4e0c4a7491b4a10079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc439319c8532c4e0c4a7491b4a10079">&#9670;&nbsp;</a></span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum { ... }  async_write_messages_implementation::state_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>_deps/asio-src/asio/src/examples/cpp11/operations/<a class="el" href="cpp11_2operations_2composed__7_8cpp.html">composed_7.cpp</a></li>
+<li>_deps/asio-src/asio/src/examples/cpp11/operations/<a class="el" href="cpp11_2operations_2composed__8_8cpp.html">composed_8.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

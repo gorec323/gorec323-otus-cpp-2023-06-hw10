@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::basic_io_object&lt; IoObjectService, Movable &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1basic__io__object.html">basic_io_object</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="classasio_1_1basic__io__object-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::basic_io_object&lt; IoObjectService, Movable &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Base class for all I/O objects.  
+ <a href="classasio_1_1basic__io__object.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="basic__io__object_8hpp_source.html">basic_io_object.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a7100a005a827b48d595bafa91eb2225b"><td class="memItemLeft" align="right" valign="top">typedef IoObjectService&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a7100a005a827b48d595bafa91eb2225b">service_type</a></td></tr>
+<tr class="memdesc:a7100a005a827b48d595bafa91eb2225b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the service that will be used to provide I/O operations.  <a href="classasio_1_1basic__io__object.html#a7100a005a827b48d595bafa91eb2225b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7100a005a827b48d595bafa91eb2225b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba0cf9411c84e2f2fbd1420cd554777"><td class="memItemLeft" align="right" valign="top">typedef service_type::implementation_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#abba0cf9411c84e2f2fbd1420cd554777">implementation_type</a></td></tr>
+<tr class="memdesc:abba0cf9411c84e2f2fbd1420cd554777"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying implementation type of I/O object.  <a href="classasio_1_1basic__io__object.html#abba0cf9411c84e2f2fbd1420cd554777">Подробнее...</a><br /></td></tr>
+<tr class="separator:abba0cf9411c84e2f2fbd1420cd554777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e9b3a695487c71b47143745503c400"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1io__context.html#a8c4cfd4b53a8763b0a1217bd66644b6b">asio::io_context::executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#ac8e9b3a695487c71b47143745503c400">executor_type</a></td></tr>
+<tr class="memdesc:ac8e9b3a695487c71b47143745503c400"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the executor associated with the object.  <a href="classasio_1_1basic__io__object.html#ac8e9b3a695487c71b47143745503c400">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac8e9b3a695487c71b47143745503c400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af44836b9665dcd444252bc4afc698353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#af44836b9665dcd444252bc4afc698353">get_io_context</a> ()</td></tr>
+<tr class="separator:af44836b9665dcd444252bc4afc698353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33a01ddd92bc2b8dd338a37c21c9febd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a33a01ddd92bc2b8dd338a37c21c9febd">get_io_service</a> ()</td></tr>
+<tr class="separator:a33a01ddd92bc2b8dd338a37c21c9febd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4afc56fc83baecd17116be8300372a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1basic__io__object.html#ac8e9b3a695487c71b47143745503c400">executor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#ab4afc56fc83baecd17116be8300372a0">get_executor</a> () noexcept</td></tr>
+<tr class="memdesc:ab4afc56fc83baecd17116be8300372a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the executor associated with the object.  <a href="classasio_1_1basic__io__object.html#ab4afc56fc83baecd17116be8300372a0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab4afc56fc83baecd17116be8300372a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a64cd330ef176623a1509a901f8a1a269"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a64cd330ef176623a1509a901f8a1a269">basic_io_object</a> (<a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;<a class="el" href="classasio_1_1io__context.html">io_context</a>)</td></tr>
+<tr class="memdesc:a64cd330ef176623a1509a901f8a1a269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classasio_1_1basic__io__object.html" title="Base class for all I/O objects.">basic_io_object</a>.  <a href="classasio_1_1basic__io__object.html#a64cd330ef176623a1509a901f8a1a269">Подробнее...</a><br /></td></tr>
+<tr class="separator:a64cd330ef176623a1509a901f8a1a269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe52e00f42020b5a0fe5619926803a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a1fe52e00f42020b5a0fe5619926803a7">~basic_io_object</a> ()</td></tr>
+<tr class="memdesc:a1fe52e00f42020b5a0fe5619926803a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected destructor to prevent deletion through this type.  <a href="classasio_1_1basic__io__object.html#a1fe52e00f42020b5a0fe5619926803a7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1fe52e00f42020b5a0fe5619926803a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ca9a07af58777107c780fcbf38cb60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1basic__io__object.html#a7100a005a827b48d595bafa91eb2225b">service_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a96ca9a07af58777107c780fcbf38cb60">get_service</a> ()</td></tr>
+<tr class="memdesc:a96ca9a07af58777107c780fcbf38cb60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the service associated with the I/O object.  <a href="classasio_1_1basic__io__object.html#a96ca9a07af58777107c780fcbf38cb60">Подробнее...</a><br /></td></tr>
+<tr class="separator:a96ca9a07af58777107c780fcbf38cb60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b405b6e9160d172675bf9bf07ad69b8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1basic__io__object.html#a7100a005a827b48d595bafa91eb2225b">service_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a5b405b6e9160d172675bf9bf07ad69b8">get_service</a> () const</td></tr>
+<tr class="memdesc:a5b405b6e9160d172675bf9bf07ad69b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the service associated with the I/O object.  <a href="classasio_1_1basic__io__object.html#a5b405b6e9160d172675bf9bf07ad69b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5b405b6e9160d172675bf9bf07ad69b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9576e46c89c352bdf3c1eb2a9edcf7dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1basic__io__object.html#abba0cf9411c84e2f2fbd1420cd554777">implementation_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a9576e46c89c352bdf3c1eb2a9edcf7dc">get_implementation</a> ()</td></tr>
+<tr class="memdesc:a9576e46c89c352bdf3c1eb2a9edcf7dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the underlying implementation of the I/O object.  <a href="classasio_1_1basic__io__object.html#a9576e46c89c352bdf3c1eb2a9edcf7dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9576e46c89c352bdf3c1eb2a9edcf7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ea91bbc449d582f080cfe5a0303352"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1basic__io__object.html#abba0cf9411c84e2f2fbd1420cd554777">implementation_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1basic__io__object.html#a38ea91bbc449d582f080cfe5a0303352">get_implementation</a> () const</td></tr>
+<tr class="memdesc:a38ea91bbc449d582f080cfe5a0303352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the underlying implementation of the I/O object.  <a href="classasio_1_1basic__io__object.html#a38ea91bbc449d582f080cfe5a0303352">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38ea91bbc449d582f080cfe5a0303352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename IoObjectService, bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt;<br />
+class asio::basic_io_object&lt; IoObjectService, Movable &gt;</h3>
+
+<p>Base class for all I/O objects. </p>
+<dl class="section note"><dt>Заметки</dt><dd>All I/O objects are non-copyable. However, when using C++0x, certain I/O objects do support move construction and move assignment. </dd></dl>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="ac8e9b3a695487c71b47143745503c400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e9b3a695487c71b47143745503c400">&#9670;&nbsp;</a></span>executor_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1io__context.html#a8c4cfd4b53a8763b0a1217bd66644b6b">asio::io_context::executor_type</a> <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::<a class="el" href="classasio_1_1basic__io__object.html#ac8e9b3a695487c71b47143745503c400">executor_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of the executor associated with the object. </p>
+
+</div>
+</div>
+<a id="abba0cf9411c84e2f2fbd1420cd554777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba0cf9411c84e2f2fbd1420cd554777">&#9670;&nbsp;</a></span>implementation_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef service_type::implementation_type <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::<a class="el" href="classasio_1_1basic__io__object.html#abba0cf9411c84e2f2fbd1420cd554777">implementation_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The underlying implementation type of I/O object. </p>
+
+</div>
+</div>
+<a id="a7100a005a827b48d595bafa91eb2225b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7100a005a827b48d595bafa91eb2225b">&#9670;&nbsp;</a></span>service_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef IoObjectService <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::<a class="el" href="classasio_1_1basic__io__object.html#a7100a005a827b48d595bafa91eb2225b">service_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of the service that will be used to provide I/O operations. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a64cd330ef176623a1509a901f8a1a269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64cd330ef176623a1509a901f8a1a269">&#9670;&nbsp;</a></span>basic_io_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::<a class="el" href="classasio_1_1basic__io__object.html">basic_io_object</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>io_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classasio_1_1basic__io__object.html" title="Base class for all I/O objects.">basic_io_object</a>. </p>
+<p>Performs: </p><div class="fragment"><div class="line"><a class="code" href="classasio_1_1basic__io__object.html#a96ca9a07af58777107c780fcbf38cb60">get_service</a>().construct(<a class="code" href="classasio_1_1basic__io__object.html#a9576e46c89c352bdf3c1eb2a9edcf7dc">get_implementation</a>()); </div>
+<div class="ttc" id="aclassasio_1_1basic__io__object_html_a9576e46c89c352bdf3c1eb2a9edcf7dc"><div class="ttname"><a href="classasio_1_1basic__io__object.html#a9576e46c89c352bdf3c1eb2a9edcf7dc">asio::basic_io_object::get_implementation</a></div><div class="ttdeci">implementation_type &amp; get_implementation()</div><div class="ttdoc">Get the underlying implementation of the I/O object.</div><div class="ttdef"><b>Definition:</b> basic_io_object.hpp:169</div></div>
+<div class="ttc" id="aclassasio_1_1basic__io__object_html_a96ca9a07af58777107c780fcbf38cb60"><div class="ttname"><a href="classasio_1_1basic__io__object.html#a96ca9a07af58777107c780fcbf38cb60">asio::basic_io_object::get_service</a></div><div class="ttdeci">service_type &amp; get_service()</div><div class="ttdoc">Get the service associated with the I/O object.</div><div class="ttdef"><b>Definition:</b> basic_io_object.hpp:157</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a1fe52e00f42020b5a0fe5619926803a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe52e00f42020b5a0fe5619926803a7">&#9670;&nbsp;</a></span>~basic_io_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::~<a class="el" href="classasio_1_1basic__io__object.html">basic_io_object</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Protected destructor to prevent deletion through this type. </p>
+<p>Performs: </p><div class="fragment"><div class="line"><a class="code" href="classasio_1_1basic__io__object.html#a96ca9a07af58777107c780fcbf38cb60">get_service</a>().destroy(<a class="code" href="classasio_1_1basic__io__object.html#a9576e46c89c352bdf3c1eb2a9edcf7dc">get_implementation</a>()); </div>
+</div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab4afc56fc83baecd17116be8300372a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4afc56fc83baecd17116be8300372a0">&#9670;&nbsp;</a></span>get_executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__io__object.html#ac8e9b3a695487c71b47143745503c400">executor_type</a> <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::get_executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the executor associated with the object. </p>
+
+</div>
+</div>
+<a id="a9576e46c89c352bdf3c1eb2a9edcf7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9576e46c89c352bdf3c1eb2a9edcf7dc">&#9670;&nbsp;</a></span>get_implementation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__io__object.html#abba0cf9411c84e2f2fbd1420cd554777">implementation_type</a>&amp; <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::get_implementation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the underlying implementation of the I/O object. </p>
+
+</div>
+</div>
+<a id="a38ea91bbc449d582f080cfe5a0303352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ea91bbc449d582f080cfe5a0303352">&#9670;&nbsp;</a></span>get_implementation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1basic__io__object.html#abba0cf9411c84e2f2fbd1420cd554777">implementation_type</a>&amp; <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::get_implementation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the underlying implementation of the I/O object. </p>
+
+</div>
+</div>
+<a id="af44836b9665dcd444252bc4afc698353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af44836b9665dcd444252bc4afc698353">&#9670;&nbsp;</a></span>get_io_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a>&amp; <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::get_io_context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>(Deprecated: Use <a class="el" href="classasio_1_1basic__io__object.html#ab4afc56fc83baecd17116be8300372a0" title="Get the executor associated with the object.">get_executor()</a>.) Get the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> associated with the object. This function may be used to obtain the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> object that the I/O object uses to dispatch handlers for asynchronous operations.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>A reference to the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> object that the I/O object will use to dispatch handlers. Ownership is not transferred to the caller. </dd></dl>
+
+</div>
+</div>
+<a id="a33a01ddd92bc2b8dd338a37c21c9febd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a01ddd92bc2b8dd338a37c21c9febd">&#9670;&nbsp;</a></span>get_io_service()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a>&amp; <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::get_io_service </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>(Deprecated: Use <a class="el" href="classasio_1_1basic__io__object.html#ab4afc56fc83baecd17116be8300372a0" title="Get the executor associated with the object.">get_executor()</a>.) Get the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> associated with the object. This function may be used to obtain the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> object that the I/O object uses to dispatch handlers for asynchronous operations.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>A reference to the <a class="el" href="classasio_1_1io__context.html" title="Provides core I/O functionality.">io_context</a> object that the I/O object will use to dispatch handlers. Ownership is not transferred to the caller. </dd></dl>
+
+</div>
+</div>
+<a id="a96ca9a07af58777107c780fcbf38cb60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ca9a07af58777107c780fcbf38cb60">&#9670;&nbsp;</a></span>get_service() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1basic__io__object.html#a7100a005a827b48d595bafa91eb2225b">service_type</a>&amp; <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::get_service </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the service associated with the I/O object. </p>
+
+</div>
+</div>
+<a id="a5b405b6e9160d172675bf9bf07ad69b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b405b6e9160d172675bf9bf07ad69b8">&#9670;&nbsp;</a></span>get_service() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IoObjectService , bool Movable = detail::service_has_move&lt;IoObjectService&gt;::value&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1basic__io__object.html#a7100a005a827b48d595bafa91eb2225b">service_type</a>&amp; <a class="el" href="classasio_1_1basic__io__object.html">asio::basic_io_object</a>&lt; IoObjectService, Movable &gt;::get_service </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the service associated with the I/O object. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="basic__io__object_8hpp_source.html">basic_io_object.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

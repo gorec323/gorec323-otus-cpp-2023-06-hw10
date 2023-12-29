@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::ssl::detail::io_op&lt; Stream, Operation, Handler &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ssl.html">ssl</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ssl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classasio_1_1ssl_1_1detail_1_1io__op-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::ssl::detail::io_op&lt; Stream, Operation, Handler &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="io_8hpp_source.html">io.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::ssl::detail::io_op&lt; Stream, Operation, Handler &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1ssl_1_1detail_1_1io__op__inherit__graph.png" border="0" usemap="#aasio_1_1ssl_1_1detail_1_1io__op_3_01Stream_00_01Operation_00_01Handler_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1ssl_1_1detail_1_1io__op_3_01Stream_00_01Operation_00_01Handler_01_4_inherit__map" id="aasio_1_1ssl_1_1detail_1_1io__op_3_01Stream_00_01Operation_00_01Handler_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,109,200,165"/>
+<area shape="rect" href="classasio_1_1detail_1_1base__from__cancellation__state.html" title=" " alt="" coords="9,5,196,61"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса asio::ssl::detail::io_op&lt; Stream, Operation, Handler &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1ssl_1_1detail_1_1io__op__coll__graph.png" border="0" usemap="#aasio_1_1ssl_1_1detail_1_1io__op_3_01Stream_00_01Operation_00_01Handler_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aasio_1_1ssl_1_1detail_1_1io__op_3_01Stream_00_01Operation_00_01Handler_01_4_coll__map" id="aasio_1_1ssl_1_1detail_1_1io__op_3_01Stream_00_01Operation_00_01Handler_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="603,49,797,105"/>
+<area shape="rect" href="classasio_1_1detail_1_1base__from__cancellation__state.html" title=" " alt="" coords="328,13,515,69"/>
+<area shape="rect" href="structasio_1_1ssl_1_1detail_1_1stream__core.html" title=" " alt="" coords="357,94,485,135"/>
+<area shape="rect" href="classasio_1_1mutable__buffer.html" title="Holds a buffer that can be modified." alt="" coords="15,5,171,32"/>
+<area shape="rect" href="classasio_1_1ssl_1_1detail_1_1engine.html" title=" " alt="" coords="29,57,157,98"/>
+<area shape="rect" href="classasio_1_1basic__waitable__timer.html" title=" " alt="" coords="5,123,180,179"/>
+<area shape="rect" href="classasio_1_1const__buffer.html" title="Holds a buffer that cannot be modified." alt="" coords="24,203,161,229"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6265a418e64a89feeb031b0eec0c66f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a6265a418e64a89feeb031b0eec0c66f7">io_op</a> (Stream &amp;next_layer, <a class="el" href="structasio_1_1ssl_1_1detail_1_1stream__core.html">stream_core</a> &amp;core, const Operation &amp;op, Handler &amp;handler)</td></tr>
+<tr class="separator:a6265a418e64a89feeb031b0eec0c66f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5ddefdff02fff3a575efcfa0194806"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#afa5ddefdff02fff3a575efcfa0194806">io_op</a> (const <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a> &amp;other)</td></tr>
+<tr class="separator:afa5ddefdff02fff3a575efcfa0194806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc1de6779db4872c091a16720080dfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a6fc1de6779db4872c091a16720080dfa">io_op</a> (<a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a6fc1de6779db4872c091a16720080dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b5b98bcadd08853ff37bfcac72ea35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a23b5b98bcadd08853ff37bfcac72ea35">operator()</a> (<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> ec, std::size_t bytes_transferred=~std::size_t(0), int start=0)</td></tr>
+<tr class="separator:a23b5b98bcadd08853ff37bfcac72ea35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classasio_1_1detail_1_1base__from__cancellation__state')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html">asio::detail::base_from_cancellation_state&lt; Handler, typename &gt;</a></td></tr>
+<tr class="memitem:ad2e564c1e3a82be18c28c33eb4161153 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a19bc22d7feba7c1dc051a1a71953fac6">cancellation_slot_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#ad2e564c1e3a82be18c28c33eb4161153">get_cancellation_slot</a> () const noexcept</td></tr>
+<tr class="separator:ad2e564c1e3a82be18c28c33eb4161153 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4987b3b34941cd3d221296f49b7615 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1cancellation__state.html">cancellation_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a3f4987b3b34941cd3d221296f49b7615">get_cancellation_state</a> () const noexcept</td></tr>
+<tr class="separator:a3f4987b3b34941cd3d221296f49b7615 inherit pub_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ac9a971480ecb8df84bedc0d891172c63"><td class="memItemLeft" align="right" valign="top">Stream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#ac9a971480ecb8df84bedc0d891172c63">next_layer_</a></td></tr>
+<tr class="separator:ac9a971480ecb8df84bedc0d891172c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfc4ec7786e88fb893239e3afa0d73a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structasio_1_1ssl_1_1detail_1_1stream__core.html">stream_core</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a8cfc4ec7786e88fb893239e3afa0d73a">core_</a></td></tr>
+<tr class="separator:a8cfc4ec7786e88fb893239e3afa0d73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fa2b3e3ad0ee8aa4724a9f1dc9a307"><td class="memItemLeft" align="right" valign="top">Operation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#aa3fa2b3e3ad0ee8aa4724a9f1dc9a307">op_</a></td></tr>
+<tr class="separator:aa3fa2b3e3ad0ee8aa4724a9f1dc9a307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447be685fcda22c40259253c5c276543"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a447be685fcda22c40259253c5c276543">start_</a></td></tr>
+<tr class="separator:a447be685fcda22c40259253c5c276543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8046c9964a8fd25d82af1c7008c10aed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ssl_1_1detail_1_1engine.html#ab9812153941a6a93c9095f4e5ca8f915">engine::want</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a8046c9964a8fd25d82af1c7008c10aed">want_</a></td></tr>
+<tr class="separator:a8046c9964a8fd25d82af1c7008c10aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6a192d0f0e5e3af719212a21f0d221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a3b6a192d0f0e5e3af719212a21f0d221">ec_</a></td></tr>
+<tr class="separator:a3b6a192d0f0e5e3af719212a21f0d221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae68a9ff5e4002202fcffa1feca8f46"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a6ae68a9ff5e4002202fcffa1feca8f46">bytes_transferred_</a></td></tr>
+<tr class="separator:a6ae68a9ff5e4002202fcffa1feca8f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554b84344ad9c6b4d15ac03cc296a2d9"><td class="memItemLeft" align="right" valign="top">Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html#a554b84344ad9c6b4d15ac03cc296a2d9">handler_</a></td></tr>
+<tr class="separator:a554b84344ad9c6b4d15ac03cc296a2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_types_classasio_1_1detail_1_1base__from__cancellation__state"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classasio_1_1detail_1_1base__from__cancellation__state')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html">asio::detail::base_from_cancellation_state&lt; Handler, typename &gt;</a></td></tr>
+<tr class="memitem:a19bc22d7feba7c1dc051a1a71953fac6 inherit pub_types_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1cancellation__slot.html">cancellation_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a19bc22d7feba7c1dc051a1a71953fac6">cancellation_slot_type</a></td></tr>
+<tr class="separator:a19bc22d7feba7c1dc051a1a71953fac6 inherit pub_types_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classasio_1_1detail_1_1base__from__cancellation__state')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html">asio::detail::base_from_cancellation_state&lt; Handler, typename &gt;</a></td></tr>
+<tr class="memitem:aa4120bfb49238435a99c6392934236ee inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#aa4120bfb49238435a99c6392934236ee">base_from_cancellation_state</a> (const Handler &amp;handler)</td></tr>
+<tr class="separator:aa4120bfb49238435a99c6392934236ee inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180261083ee1af1248c3957fb3453a63 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplParams" colspan="2">template&lt;typename Filter &gt; </td></tr>
+<tr class="memitem:a180261083ee1af1248c3957fb3453a63 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a180261083ee1af1248c3957fb3453a63">base_from_cancellation_state</a> (const Handler &amp;handler, Filter <a class="el" href="cpp14_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a>)</td></tr>
+<tr class="separator:a180261083ee1af1248c3957fb3453a63 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af622e9c9e3431aa8b103a43081e4465f inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplParams" colspan="2">template&lt;typename InFilter , typename OutFilter &gt; </td></tr>
+<tr class="memitem:af622e9c9e3431aa8b103a43081e4465f inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#af622e9c9e3431aa8b103a43081e4465f">base_from_cancellation_state</a> (const Handler &amp;handler, InFilter &amp;&amp;in_filter, OutFilter &amp;&amp;out_filter)</td></tr>
+<tr class="separator:af622e9c9e3431aa8b103a43081e4465f inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c68b45ad46896182ef0bf51bde72c32 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a9c68b45ad46896182ef0bf51bde72c32">reset_cancellation_state</a> (const Handler &amp;handler)</td></tr>
+<tr class="separator:a9c68b45ad46896182ef0bf51bde72c32 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab064a75415f8bd5054a7be7b854579aa inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplParams" colspan="2">template&lt;typename Filter &gt; </td></tr>
+<tr class="memitem:ab064a75415f8bd5054a7be7b854579aa inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#ab064a75415f8bd5054a7be7b854579aa">reset_cancellation_state</a> (const Handler &amp;handler, Filter <a class="el" href="cpp14_2executors_2pipeline_8cpp.html#aaa1fa6715b746a411a160c620898c48c">filter</a>)</td></tr>
+<tr class="separator:ab064a75415f8bd5054a7be7b854579aa inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e8360c42d8377329e0d20d70c7d652 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplParams" colspan="2">template&lt;typename InFilter , typename OutFilter &gt; </td></tr>
+<tr class="memitem:a08e8360c42d8377329e0d20d70c7d652 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#a08e8360c42d8377329e0d20d70c7d652">reset_cancellation_state</a> (const Handler &amp;handler, InFilter &amp;&amp;in_filter, OutFilter &amp;&amp;out_filter)</td></tr>
+<tr class="separator:a08e8360c42d8377329e0d20d70c7d652 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb691098884feae1251f3d16c0ea75f5 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ae02aa651224af4b25dc476fc01ce29f6">cancellation_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__cancellation__state.html#afb691098884feae1251f3d16c0ea75f5">cancelled</a> () const noexcept</td></tr>
+<tr class="separator:afb691098884feae1251f3d16c0ea75f5 inherit pro_methods_classasio_1_1detail_1_1base__from__cancellation__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a6265a418e64a89feeb031b0eec0c66f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6265a418e64a89feeb031b0eec0c66f7">&#9670;&nbsp;</a></span>io_op() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::<a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a> </td>
+          <td>(</td>
+          <td class="paramtype">Stream &amp;&#160;</td>
+          <td class="paramname"><em>next_layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structasio_1_1ssl_1_1detail_1_1stream__core.html">stream_core</a> &amp;&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Operation &amp;&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa5ddefdff02fff3a575efcfa0194806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa5ddefdff02fff3a575efcfa0194806">&#9670;&nbsp;</a></span>io_op() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::<a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a>&lt; Stream, Operation, Handler &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fc1de6779db4872c091a16720080dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc1de6779db4872c091a16720080dfa">&#9670;&nbsp;</a></span>io_op() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::<a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">io_op</a>&lt; Stream, Operation, Handler &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a23b5b98bcadd08853ff37bfcac72ea35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b5b98bcadd08853ff37bfcac72ea35">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>bytes_transferred</em> = <code>~std::size_t(0)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a6ae68a9ff5e4002202fcffa1feca8f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae68a9ff5e4002202fcffa1feca8f46">&#9670;&nbsp;</a></span>bytes_transferred_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::bytes_transferred_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cfc4ec7786e88fb893239e3afa0d73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cfc4ec7786e88fb893239e3afa0d73a">&#9670;&nbsp;</a></span>core_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structasio_1_1ssl_1_1detail_1_1stream__core.html">stream_core</a>&amp; <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::core_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b6a192d0f0e5e3af719212a21f0d221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6a192d0f0e5e3af719212a21f0d221">&#9670;&nbsp;</a></span>ec_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::ec_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a554b84344ad9c6b4d15ac03cc296a2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a554b84344ad9c6b4d15ac03cc296a2d9">&#9670;&nbsp;</a></span>handler_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Handler <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::handler_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9a971480ecb8df84bedc0d891172c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a971480ecb8df84bedc0d891172c63">&#9670;&nbsp;</a></span>next_layer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Stream&amp; <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::next_layer_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3fa2b3e3ad0ee8aa4724a9f1dc9a307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fa2b3e3ad0ee8aa4724a9f1dc9a307">&#9670;&nbsp;</a></span>op_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::op_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a447be685fcda22c40259253c5c276543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447be685fcda22c40259253c5c276543">&#9670;&nbsp;</a></span>start_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::start_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8046c9964a8fd25d82af1c7008c10aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8046c9964a8fd25d82af1c7008c10aed">&#9670;&nbsp;</a></span>want_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream , typename Operation , typename Handler &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ssl_1_1detail_1_1engine.html#ab9812153941a6a93c9095f4e5ca8f915">engine::want</a> <a class="el" href="classasio_1_1ssl_1_1detail_1_1io__op.html">asio::ssl::detail::io_op</a>&lt; Stream, Operation, Handler &gt;::want_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/ssl/detail/<a class="el" href="io_8hpp_source.html">io.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

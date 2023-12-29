@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл /home/runner/work/otus-cpp-2023-06-hw10/otus-cpp-2023-06-hw10/bulkserver.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/runner/work/otus-cpp-2023-06-hw10/otus-cpp-2023-06-hw10/bulkserver.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bulkserver_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="asio_8hpp.html">asio.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="async_8h.html">async.h</a>&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="classasio_1_1ip_1_1tcp.html">asio::ip::tcp</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classAsyncHelper.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAsyncHelper.html">AsyncHelper</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classAsyncHelper.html#a4b57a8d44ded30c80ad68f03eba3eca1">   20</a></span>&#160;    <a class="code" href="classAsyncHelper.html#a4b57a8d44ded30c80ad68f03eba3eca1">AsyncHelper</a>(std::size_t bulkCommandsLimit): m_handler {<a class="code" href="namespaceasync.html">async</a>::<a class="code" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">connect</a>(bulkCommandsLimit)} {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classAsyncHelper.html#a03d4a899cf03d508a92b0088ce09e1d7">   25</a></span>&#160;    <a class="code" href="classAsyncHelper.html#a03d4a899cf03d508a92b0088ce09e1d7">AsyncHelper</a>(<span class="keyword">const</span> <a class="code" href="classAsyncHelper.html">AsyncHelper</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classAsyncHelper.html#a6c747857ff348880ea07394438963c21">   30</a></span>&#160;    <a class="code" href="classAsyncHelper.html#a6c747857ff348880ea07394438963c21">AsyncHelper</a>(<a class="code" href="classAsyncHelper.html">AsyncHelper</a> &amp;&amp;) noexcept = default;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classAsyncHelper.html#ad8f42c83cf94afcf9b0787aeda46078a">   35</a></span>&#160;    ~<a class="code" href="classAsyncHelper.html">AsyncHelper</a>() { <a class="code" href="namespaceasync.html#a3687cc5bf5f4763651ee5c1db9a3d372">async::disconnect</a>(m_handler); }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classAsyncHelper.html#a1183d82266ab65058507b494800a6dff">   37</a></span>&#160;    <a class="code" href="classAsyncHelper.html">AsyncHelper</a> &amp;<a class="code" href="classAsyncHelper.html#a1183d82266ab65058507b494800a6dff">operator=</a>(<span class="keyword">const</span> <a class="code" href="classAsyncHelper.html">AsyncHelper</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classAsyncHelper.html#aa2a02167c375c7e505a20986ce4d1454">   38</a></span>&#160;    <a class="code" href="classAsyncHelper.html">AsyncHelper</a> &amp;<a class="code" href="classAsyncHelper.html#aa2a02167c375c7e505a20986ce4d1454">operator=</a>(<a class="code" href="classAsyncHelper.html">AsyncHelper</a> &amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAsyncHelper.html#a8e78d148c2294326989204ffc35fb22b">receive</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> data, std::size_t size) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespaceasync.html#afb9500e3c25ed709731a0c5b9aaf74aa">async::print_handler_t</a> m_handler;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="bulkserver_8hpp.html#a9b4f9e28e0293a0964ed85d4bc25079e">   57</a></span>&#160;asio::awaitable&lt;void&gt; <a class="code" href="bulkserver_8hpp.html#a9b4f9e28e0293a0964ed85d4bc25079e">session_reader</a>(<a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">tcp::socket</a> <a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">socket</a>, std::size_t bulkCommandsLimit)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">auto</span> clientSocket = std::move(<a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">socket</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">auto</span> asyncHandler = <a class="code" href="classAsyncHelper.html">AsyncHelper</a> {bulkCommandsLimit};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (std::string read_msg;;) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            std::size_t n = co_await <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">asio::async_read_until</a>(clientSocket,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                            <a class="code" href="namespaceasio.html#ace6f6adc11c370728371137c6b88fded">asio::dynamic_buffer</a>(read_msg, 1024), <span class="stringliteral">&quot;\n&quot;</span>, asio::use_awaitable);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            asyncHandler.receive(read_msg.c_str(), n - 1);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            read_msg.erase(0, n);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    } <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;session_reader exception&quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="bulkserver_8hpp.html#a912c6235caaf8823c23ae6a88ec81b55">   81</a></span>&#160;asio::awaitable&lt;void&gt; <a class="code" href="bulkserver_8hpp.html#a912c6235caaf8823c23ae6a88ec81b55">listener</a>(<a class="code" href="classasio_1_1io__context.html">asio::io_context</a> &amp;<a class="code" href="structexecutor.html">executor</a>, std::uint16_t serverPort, std::size_t bulkCommandsLimit)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    tcp::acceptor acceptor(<a class="code" href="structexecutor.html">executor</a>, {tcp::v6(), serverPort});</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">tcp::socket</a> <a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">socket</a> = co_await acceptor.async_accept(asio::use_awaitable);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">asio::co_spawn</a>(<a class="code" href="structexecutor.html">executor</a>, <a class="code" href="bulkserver_8hpp.html#a9b4f9e28e0293a0964ed85d4bc25079e">session_reader</a>(std::move(<a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">socket</a>), bulkCommandsLimit), <a class="code" href="namespaceasio.html#adc282e2ffff99631f6d194d893c12bc0">asio::detached</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classAsyncHelper.html#a8e78d148c2294326989204ffc35fb22b">   90</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classAsyncHelper.html#a8e78d148c2294326989204ffc35fb22b">AsyncHelper::receive</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> data, std::size_t size)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="namespaceasync.html#ad7f05f529706a7089d3a54baa9369a49">async::receive</a>(m_handler, data, size);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="aasio_8hpp_html"><div class="ttname"><a href="asio_8hpp.html">asio.hpp</a></div></div>
+<div class="ttc" id="aasync_8h_html"><div class="ttname"><a href="async_8h.html">async.h</a></div></div>
+<div class="ttc" id="abulkserver_8hpp_html_a912c6235caaf8823c23ae6a88ec81b55"><div class="ttname"><a href="bulkserver_8hpp.html#a912c6235caaf8823c23ae6a88ec81b55">listener</a></div><div class="ttdeci">asio::awaitable&lt; void &gt; listener(asio::io_context &amp;executor, std::uint16_t serverPort, std::size_t bulkCommandsLimit)</div><div class="ttdoc">listener Корутина ассинхроной обработки входящих tcp-соединений</div><div class="ttdef"><b>Definition:</b> bulkserver.hpp:81</div></div>
+<div class="ttc" id="abulkserver_8hpp_html_a9b4f9e28e0293a0964ed85d4bc25079e"><div class="ttname"><a href="bulkserver_8hpp.html#a9b4f9e28e0293a0964ed85d4bc25079e">session_reader</a></div><div class="ttdeci">asio::awaitable&lt; void &gt; session_reader(tcp::socket socket, std::size_t bulkCommandsLimit)</div><div class="ttdoc">session_reader корутина для чтения из сокета</div><div class="ttdef"><b>Definition:</b> bulkserver.hpp:57</div></div>
+<div class="ttc" id="aclassAsyncHelper_html"><div class="ttname"><a href="classAsyncHelper.html">AsyncHelper</a></div><div class="ttdoc">The RaiiHelper class RAII - хэлпер для упрощения работы с функциями библиотеки async.</div><div class="ttdef"><b>Definition:</b> bulkserver.hpp:14</div></div>
+<div class="ttc" id="aclassAsyncHelper_html_a03d4a899cf03d508a92b0088ce09e1d7"><div class="ttname"><a href="classAsyncHelper.html#a03d4a899cf03d508a92b0088ce09e1d7">AsyncHelper::AsyncHelper</a></div><div class="ttdeci">AsyncHelper(const AsyncHelper &amp;)=delete</div><div class="ttdoc">AsyncHelper Удалённый конструктор копирования</div></div>
+<div class="ttc" id="aclassAsyncHelper_html_a1183d82266ab65058507b494800a6dff"><div class="ttname"><a href="classAsyncHelper.html#a1183d82266ab65058507b494800a6dff">AsyncHelper::operator=</a></div><div class="ttdeci">AsyncHelper &amp; operator=(const AsyncHelper &amp;)=delete</div></div>
+<div class="ttc" id="aclassAsyncHelper_html_a4b57a8d44ded30c80ad68f03eba3eca1"><div class="ttname"><a href="classAsyncHelper.html#a4b57a8d44ded30c80ad68f03eba3eca1">AsyncHelper::AsyncHelper</a></div><div class="ttdeci">AsyncHelper(std::size_t bulkCommandsLimit)</div><div class="ttdoc">AsyncHelper Коснструктор</div><div class="ttdef"><b>Definition:</b> bulkserver.hpp:20</div></div>
+<div class="ttc" id="aclassAsyncHelper_html_a6c747857ff348880ea07394438963c21"><div class="ttname"><a href="classAsyncHelper.html#a6c747857ff348880ea07394438963c21">AsyncHelper::AsyncHelper</a></div><div class="ttdeci">AsyncHelper(AsyncHelper &amp;&amp;) noexcept=default</div><div class="ttdoc">AsyncHelper Конструктор перемещения</div></div>
+<div class="ttc" id="aclassAsyncHelper_html_a8e78d148c2294326989204ffc35fb22b"><div class="ttname"><a href="classAsyncHelper.html#a8e78d148c2294326989204ffc35fb22b">AsyncHelper::receive</a></div><div class="ttdeci">void receive(const char *const data, std::size_t size) const</div><div class="ttdoc">receive Вызывает метод async::receive для своего хэндлера</div><div class="ttdef"><b>Definition:</b> bulkserver.hpp:90</div></div>
+<div class="ttc" id="aclassAsyncHelper_html_aa2a02167c375c7e505a20986ce4d1454"><div class="ttname"><a href="classAsyncHelper.html#aa2a02167c375c7e505a20986ce4d1454">AsyncHelper::operator=</a></div><div class="ttdeci">AsyncHelper &amp; operator=(AsyncHelper &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclassasio_1_1io__context_html"><div class="ttname"><a href="classasio_1_1io__context.html">asio::io_context</a></div><div class="ttdoc">Provides core I/O functionality.</div><div class="ttdef"><b>Definition:</b> io_context.hpp:193</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1tcp_html"><div class="ttname"><a href="classasio_1_1ip_1_1tcp.html">asio::ip::tcp</a></div><div class="ttdoc">Encapsulates the flags needed for TCP.</div><div class="ttdef"><b>Definition:</b> tcp.hpp:46</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_1_1socket__ops_html_a90aa9a854148c26da8232e25988623d8"><div class="ttname"><a href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">asio::detail::socket_ops::socket</a></div><div class="ttdeci">socket_type socket(int af, int type, int protocol, asio::error_code &amp;ec)</div><div class="ttdef"><b>Definition:</b> socket_ops.ipp:1808</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_af580e11a7608adfd35588421fbc592b3"><div class="ttname"><a href="namespaceasio_1_1experimental.html#af580e11a7608adfd35588421fbc592b3">asio::experimental::co_spawn</a></div><div class="ttdeci">co_spawn(coro&lt; void() noexcept, T, Executor &gt; c, CompletionToken &amp;&amp;token)</div><div class="ttdoc">Spawn a resumable coroutine.</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:109</div></div>
+<div class="ttc" id="anamespaceasio_html_a3ad1e914adbdf6f6114f6b339929e567"><div class="ttname"><a href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">asio::async_read_until</a></div><div class="ttdeci">auto async_read_until(AsyncReadStream &amp;s, DynamicBuffer_v1 &amp;&amp;buffers, char delim, ReadToken &amp;&amp;token, constraint_t&lt; is_dynamic_buffer_v1&lt; decay_t&lt; DynamicBuffer_v1 &gt;&gt;::value &gt;, constraint_t&lt; !is_dynamic_buffer_v2&lt; decay_t&lt; DynamicBuffer_v1 &gt;&gt;::value &gt;) -&gt; decltype(async_initiate&lt; ReadToken, void(asio::error_code, std::size_t)&gt;(declval&lt; detail::initiate_async_read_until_delim_v1&lt; AsyncReadStream &gt;&gt;(), token, static_cast&lt; DynamicBuffer_v1 &amp;&amp; &gt;(buffers), delim))</div><div class="ttdef"><b>Definition:</b> read_until.hpp:1034</div></div>
+<div class="ttc" id="anamespaceasio_html_ace6f6adc11c370728371137c6b88fded"><div class="ttname"><a href="namespaceasio.html#ace6f6adc11c370728371137c6b88fded">asio::dynamic_buffer</a></div><div class="ttdeci">ASIO_NODISCARD dynamic_string_buffer&lt; Elem, Traits, Allocator &gt; dynamic_buffer(std::basic_string&lt; Elem, Traits, Allocator &gt; &amp;data) noexcept</div><div class="ttdoc">Create a new dynamic buffer that represents the given string.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:2194</div></div>
+<div class="ttc" id="anamespaceasio_html_ad9722498362a99a18c1daabb554ac3f7"><div class="ttname"><a href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">asio::connect</a></div><div class="ttdeci">Protocol::endpoint connect(basic_socket&lt; Protocol, Executor &gt; &amp;s, const EndpointSequence &amp;endpoints, constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0)</div><div class="ttdoc">Establishes a socket connection by trying each endpoint in a sequence.</div><div class="ttdef"><b>Definition:</b> connect.hpp:105</div></div>
+<div class="ttc" id="anamespaceasio_html_adc282e2ffff99631f6d194d893c12bc0"><div class="ttname"><a href="namespaceasio.html#adc282e2ffff99631f6d194d893c12bc0">asio::detached</a></div><div class="ttdeci">constexpr detached_t detached</div><div class="ttdef"><b>Definition:</b> detached.hpp:97</div></div>
+<div class="ttc" id="anamespaceasync_html"><div class="ttname"><a href="namespaceasync.html">async</a></div><div class="ttdef"><b>Definition:</b> async.h:5</div></div>
+<div class="ttc" id="anamespaceasync_html_a3687cc5bf5f4763651ee5c1db9a3d372"><div class="ttname"><a href="namespaceasync.html#a3687cc5bf5f4763651ee5c1db9a3d372">async::disconnect</a></div><div class="ttdeci">void disconnect(print_handler_t handler)</div><div class="ttdoc">Завершение обработки команд</div><div class="ttdef"><b>Definition:</b> async.cpp:21</div></div>
+<div class="ttc" id="anamespaceasync_html_ad7f05f529706a7089d3a54baa9369a49"><div class="ttname"><a href="namespaceasync.html#ad7f05f529706a7089d3a54baa9369a49">async::receive</a></div><div class="ttdeci">void receive(print_handler_t const handler, const char *const data, std::size_t dataSize)</div><div class="ttdoc">Передача команды в рамках контекста, полученного вызовом команды connect.</div><div class="ttdef"><b>Definition:</b> async.cpp:12</div></div>
+<div class="ttc" id="anamespaceasync_html_afb9500e3c25ed709731a0c5b9aaf74aa"><div class="ttname"><a href="namespaceasync.html#afb9500e3c25ed709731a0c5b9aaf74aa">async::print_handler_t</a></div><div class="ttdeci">void * print_handler_t</div><div class="ttdoc">Тип контекста обработки команд</div><div class="ttdef"><b>Definition:</b> async.h:8</div></div>
+<div class="ttc" id="astructexecutor_html"><div class="ttname"><a href="structexecutor.html">executor</a></div><div class="ttdef"><b>Definition:</b> executor.cpp:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/thread_pool.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл thread_pool.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="thread__pool_8hpp_source.html">asio/thread_pool.hpp</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="dispatch_8hpp_source.html">asio/dispatch.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="post_8hpp_source.html">asio/post.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">unit_test.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для thread_pool.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="thread__pool_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2thread__pool_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2thread__pool_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2thread__pool_8cpp">
+<area shape="rect" title=" " alt="" coords="4641,5,4797,61"/>
+<area shape="rect" href="thread__pool_8hpp.html" title=" " alt="" coords="2683,109,2842,136"/>
+<area shape="rect" title=" " alt="" coords="4807,109,4894,136"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="5173,184,5309,211"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="5032,184,5141,211"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="105,355,212,382"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3990,691,4151,717"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="160,437,299,479"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="1509,355,1693,382"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2439,616,2647,643"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3395,616,3597,643"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="5836,534,6036,561"/>
+<area shape="rect" href="thread__group_8hpp.html" title=" " alt="" coords="779,437,915,479"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="3827,184,3971,211"/>
+<area shape="rect" href="impl_2thread__pool_8hpp.html" title=" " alt="" coords="3610,445,3801,471"/>
+<area shape="rect" title=" " alt="" coords="3906,765,3977,792"/>
+<area shape="rect" title=" " alt="" coords="4165,765,4294,792"/>
+<area shape="rect" title=" " alt="" coords="4001,765,4140,792"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="1535,534,1686,561"/>
+<area shape="rect" href="conditionally__enabled__event_8hpp.html" title=" " alt="" coords="989,437,1168,479"/>
+<area shape="rect" href="conditionally__enabled__mutex_8hpp.html" title=" " alt="" coords="907,527,1085,568"/>
+<area shape="rect" href="op__queue_8hpp.html" title=" " alt="" coords="1965,534,2150,561"/>
+<area shape="rect" href="scheduler__operation_8hpp.html" title=" " alt="" coords="1748,437,1905,479"/>
+<area shape="rect" href="scheduler__task_8hpp.html" title=" " alt="" coords="2043,437,2200,479"/>
+<area shape="rect" href="detail_2thread_8hpp.html" title=" " alt="" coords="313,534,477,561"/>
+<area shape="rect" href="thread__context_8hpp.html" title=" " alt="" coords="1211,527,1347,568"/>
+<area shape="rect" title=" " alt="" coords="5811,616,5898,643"/>
+<area shape="rect" title=" " alt="" coords="6061,616,6137,643"/>
+<area shape="rect" href="scoped__ptr_8hpp.html" title=" " alt="" coords="1371,527,1511,568"/>
+<area shape="rect" href="include_2asio_2execution_2allocator_8hpp.html" title=" " alt="" coords="4862,355,5066,382"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="4376,445,4579,471"/>
+<area shape="rect" href="invocable__archetype_8hpp.html" title=" " alt="" coords="4277,527,4459,568"/>
+<area shape="rect" href="any__executor_8hpp.html" title=" " alt="" coords="3987,259,4131,300"/>
+<area shape="rect" href="bad__executor_8hpp.html" title=" " alt="" coords="2833,527,2977,568"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="5293,355,5496,382"/>
+<area shape="rect" href="blocking__adaptation_8hpp.html" title=" " alt="" coords="5521,348,5695,389"/>
+<area shape="rect" href="execution_2context_8hpp.html" title=" " alt="" coords="2469,355,2667,382"/>
+<area shape="rect" href="context__as_8hpp.html" title=" " alt="" coords="2847,259,3017,300"/>
+<area shape="rect" href="mapping_8hpp.html" title=" " alt="" coords="3092,355,3297,382"/>
+<area shape="rect" href="occupancy_8hpp.html" title=" " alt="" coords="3322,355,3537,382"/>
+<area shape="rect" href="outstanding__work_8hpp.html" title=" " alt="" coords="3885,348,4083,389"/>
+<area shape="rect" href="prefer__only_8hpp.html" title=" " alt="" coords="3991,527,4150,568"/>
+<area shape="rect" href="relationship_8hpp.html" title=" " alt="" coords="4461,355,4686,382"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="5297,616,5489,643"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="5381,445,5507,471"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="4940,534,5103,561"/>
+<area shape="rect" href="initiate__dispatch_8hpp.html" title=" " alt="" coords="5175,259,5315,300"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="3812,534,3967,561"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="5011,259,5151,300"/>
+<area shape="rect" title=" " alt="" coords="5,445,85,471"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__service.html">test_service</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a116a1f3cc4c9a2072cb4cd9445682d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#a116a1f3cc4c9a2072cb4cd9445682d53">increment</a> (int *count)</td></tr>
+<tr class="separator:a116a1f3cc4c9a2072cb4cd9445682d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f57b19aed65396fe8485da94d3793d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#a0f57b19aed65396fe8485da94d3793d6">decrement_to_zero</a> (<a class="el" href="classasio_1_1thread__pool.html">thread_pool</a> *<a class="el" href="cpp14_2executors_2fork__join_8cpp.html#a16730dcd238769cd69a222849873e070">pool</a>, int *count)</td></tr>
+<tr class="separator:a0f57b19aed65396fe8485da94d3793d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd380c03c933019c5dc0050103feead2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#acd380c03c933019c5dc0050103feead2">nested_decrement_to_zero</a> (<a class="el" href="classasio_1_1thread__pool.html">thread_pool</a> *<a class="el" href="cpp14_2executors_2fork__join_8cpp.html#a16730dcd238769cd69a222849873e070">pool</a>, int *count)</td></tr>
+<tr class="separator:acd380c03c933019c5dc0050103feead2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc74aaedb17ebb6b0e3c87e85cd79b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#aebc74aaedb17ebb6b0e3c87e85cd79b6">thread_pool_test</a> ()</td></tr>
+<tr class="separator:aebc74aaedb17ebb6b0e3c87e85cd79b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b271fb7cd599eff39219ddad54693c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#a45b271fb7cd599eff39219ddad54693c">thread_pool_service_test</a> ()</td></tr>
+<tr class="separator:a45b271fb7cd599eff39219ddad54693c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65907f071faf3070e2053be23b54ae89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#a65907f071faf3070e2053be23b54ae89">thread_pool_executor_query_test</a> ()</td></tr>
+<tr class="separator:a65907f071faf3070e2053be23b54ae89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13de0ab4cf9f75745b76c180037a37bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__pool_8cpp.html#a13de0ab4cf9f75745b76c180037a37bf">thread_pool_executor_execute_test</a> ()</td></tr>
+<tr class="separator:a13de0ab4cf9f75745b76c180037a37bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a0f57b19aed65396fe8485da94d3793d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f57b19aed65396fe8485da94d3793d6">&#9670;&nbsp;</a></span>decrement_to_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> decrement_to_zero </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1thread__pool.html">thread_pool</a> *&#160;</td>
+          <td class="paramname"><em>pool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a116a1f3cc4c9a2072cb4cd9445682d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116a1f3cc4c9a2072cb4cd9445682d53">&#9670;&nbsp;</a></span>increment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd380c03c933019c5dc0050103feead2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd380c03c933019c5dc0050103feead2">&#9670;&nbsp;</a></span>nested_decrement_to_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> nested_decrement_to_zero </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1thread__pool.html">thread_pool</a> *&#160;</td>
+          <td class="paramname"><em>pool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13de0ab4cf9f75745b76c180037a37bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13de0ab4cf9f75745b76c180037a37bf">&#9670;&nbsp;</a></span>thread_pool_executor_execute_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> thread_pool_executor_execute_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65907f071faf3070e2053be23b54ae89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65907f071faf3070e2053be23b54ae89">&#9670;&nbsp;</a></span>thread_pool_executor_query_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> thread_pool_executor_query_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45b271fb7cd599eff39219ddad54693c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45b271fb7cd599eff39219ddad54693c">&#9670;&nbsp;</a></span>thread_pool_service_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> thread_pool_service_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebc74aaedb17ebb6b0e3c87e85cd79b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc74aaedb17ebb6b0e3c87e85cd79b6">&#9670;&nbsp;</a></span>thread_pool_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> thread_pool_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса asio::generic::basic_endpoint&lt; Protocol &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1generic.html">generic</a></li><li class="navelem"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1generic_1_1basic__endpoint-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса asio::generic::basic_endpoint&lt; Protocol &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Describes an endpoint for any socket type.  
+ <a href="classasio_1_1generic_1_1basic__endpoint.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="generic_2basic__endpoint_8hpp_source.html">basic_endpoint.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:adbb1d24211763cf405138afcc29330da"><td class="memItemLeft" align="right" valign="top">typedef Protocol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#adbb1d24211763cf405138afcc29330da">protocol_type</a></td></tr>
+<tr class="memdesc:adbb1d24211763cf405138afcc29330da"><td class="mdescLeft">&#160;</td><td class="mdescRight">The protocol type associated with the endpoint.  <a href="classasio_1_1generic_1_1basic__endpoint.html#adbb1d24211763cf405138afcc29330da">Подробнее...</a><br /></td></tr>
+<tr class="separator:adbb1d24211763cf405138afcc29330da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8fe7c173ad82680b104c83000eab645"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#af8fe7c173ad82680b104c83000eab645">data_type</a></td></tr>
+<tr class="separator:af8fe7c173ad82680b104c83000eab645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a3d522f448c3672eda9de0a0919399a65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a3d522f448c3672eda9de0a0919399a65">basic_endpoint</a> () noexcept</td></tr>
+<tr class="memdesc:a3d522f448c3672eda9de0a0919399a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a3d522f448c3672eda9de0a0919399a65">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d522f448c3672eda9de0a0919399a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657baa993f97965191eb0a46f4932a00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a657baa993f97965191eb0a46f4932a00">basic_endpoint</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *socket_address, std::size_t socket_address_size, int socket_protocol=0)</td></tr>
+<tr class="memdesc:a657baa993f97965191eb0a46f4932a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an endpoint from the specified socket address.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a657baa993f97965191eb0a46f4932a00">Подробнее...</a><br /></td></tr>
+<tr class="separator:a657baa993f97965191eb0a46f4932a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7"><td class="memTemplParams" colspan="2">template&lt;typename Endpoint &gt; </td></tr>
+<tr class="memitem:a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7">basic_endpoint</a> (const Endpoint &amp;endpoint)</td></tr>
+<tr class="memdesc:a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an endpoint from the specific endpoint type.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabeef6b7a53e3c072f07b4a7929a2149"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#aabeef6b7a53e3c072f07b4a7929a2149">basic_endpoint</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> &amp;other)</td></tr>
+<tr class="memdesc:aabeef6b7a53e3c072f07b4a7929a2149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="classasio_1_1generic_1_1basic__endpoint.html#aabeef6b7a53e3c072f07b4a7929a2149">Подробнее...</a><br /></td></tr>
+<tr class="separator:aabeef6b7a53e3c072f07b4a7929a2149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebfae8341ef0025f2cbe36cd7af9825d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#aebfae8341ef0025f2cbe36cd7af9825d">basic_endpoint</a> (<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:aebfae8341ef0025f2cbe36cd7af9825d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <a href="classasio_1_1generic_1_1basic__endpoint.html#aebfae8341ef0025f2cbe36cd7af9825d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aebfae8341ef0025f2cbe36cd7af9825d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06062afad26ce2cedbc97483bfa77ef3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a06062afad26ce2cedbc97483bfa77ef3">operator=</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> &amp;other)</td></tr>
+<tr class="memdesc:a06062afad26ce2cedbc97483bfa77ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another endpoint.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a06062afad26ce2cedbc97483bfa77ef3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a06062afad26ce2cedbc97483bfa77ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8cab9d3c7f08bb006adef789098089c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#ac8cab9d3c7f08bb006adef789098089c">operator=</a> (<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:ac8cab9d3c7f08bb006adef789098089c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move-assign from another endpoint.  <a href="classasio_1_1generic_1_1basic__endpoint.html#ac8cab9d3c7f08bb006adef789098089c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac8cab9d3c7f08bb006adef789098089c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c20ca3fbdc666cbc54287a75d83eb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#adbb1d24211763cf405138afcc29330da">protocol_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#ac5c20ca3fbdc666cbc54287a75d83eb8">protocol</a> () const</td></tr>
+<tr class="memdesc:ac5c20ca3fbdc666cbc54287a75d83eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The protocol associated with the endpoint.  <a href="classasio_1_1generic_1_1basic__endpoint.html#ac5c20ca3fbdc666cbc54287a75d83eb8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac5c20ca3fbdc666cbc54287a75d83eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719b41a4bac9b9e359fe4d8a774ed902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#af8fe7c173ad82680b104c83000eab645">data_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a719b41a4bac9b9e359fe4d8a774ed902">data</a> ()</td></tr>
+<tr class="memdesc:a719b41a4bac9b9e359fe4d8a774ed902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the underlying endpoint in the native type.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a719b41a4bac9b9e359fe4d8a774ed902">Подробнее...</a><br /></td></tr>
+<tr class="separator:a719b41a4bac9b9e359fe4d8a774ed902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea2b78c7ee0b63b3833816ed7837485"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#af8fe7c173ad82680b104c83000eab645">data_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#abea2b78c7ee0b63b3833816ed7837485">data</a> () const</td></tr>
+<tr class="memdesc:abea2b78c7ee0b63b3833816ed7837485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the underlying endpoint in the native type.  <a href="classasio_1_1generic_1_1basic__endpoint.html#abea2b78c7ee0b63b3833816ed7837485">Подробнее...</a><br /></td></tr>
+<tr class="separator:abea2b78c7ee0b63b3833816ed7837485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bd8f67844aa8538a7e6cbe31238144"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a16bd8f67844aa8538a7e6cbe31238144">size</a> () const</td></tr>
+<tr class="memdesc:a16bd8f67844aa8538a7e6cbe31238144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the underlying size of the endpoint in the native type.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a16bd8f67844aa8538a7e6cbe31238144">Подробнее...</a><br /></td></tr>
+<tr class="separator:a16bd8f67844aa8538a7e6cbe31238144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bcf7a95cad0e221c78804dc371c4a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a08bcf7a95cad0e221c78804dc371c4a9">resize</a> (std::size_t new_size)</td></tr>
+<tr class="memdesc:a08bcf7a95cad0e221c78804dc371c4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the underlying size of the endpoint in the native type.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a08bcf7a95cad0e221c78804dc371c4a9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a08bcf7a95cad0e221c78804dc371c4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfcfe541ea6138653ec21510d3bf275"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a0cfcfe541ea6138653ec21510d3bf275">capacity</a> () const</td></tr>
+<tr class="memdesc:a0cfcfe541ea6138653ec21510d3bf275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the capacity of the endpoint in the native type.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a0cfcfe541ea6138653ec21510d3bf275">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0cfcfe541ea6138653ec21510d3bf275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a9cf7a143935a3668c2278728be5a1f67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a9cf7a143935a3668c2278728be5a1f67">operator==</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e1, const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e2)</td></tr>
+<tr class="memdesc:a9cf7a143935a3668c2278728be5a1f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two endpoints for equality.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a9cf7a143935a3668c2278728be5a1f67">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9cf7a143935a3668c2278728be5a1f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35b46a86fa2bb95bb86758639669f61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#af35b46a86fa2bb95bb86758639669f61">operator!=</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e1, const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e2)</td></tr>
+<tr class="memdesc:af35b46a86fa2bb95bb86758639669f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two endpoints for inequality.  <a href="classasio_1_1generic_1_1basic__endpoint.html#af35b46a86fa2bb95bb86758639669f61">Подробнее...</a><br /></td></tr>
+<tr class="separator:af35b46a86fa2bb95bb86758639669f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a1520cd511680ca56b6b854895e948"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#aa8a1520cd511680ca56b6b854895e948">operator&lt;</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e1, const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e2)</td></tr>
+<tr class="memdesc:aa8a1520cd511680ca56b6b854895e948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare endpoints for ordering.  <a href="classasio_1_1generic_1_1basic__endpoint.html#aa8a1520cd511680ca56b6b854895e948">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa8a1520cd511680ca56b6b854895e948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab687ef803d3b3007e477f760665730"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#acab687ef803d3b3007e477f760665730">operator&gt;</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e1, const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e2)</td></tr>
+<tr class="memdesc:acab687ef803d3b3007e477f760665730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare endpoints for ordering.  <a href="classasio_1_1generic_1_1basic__endpoint.html#acab687ef803d3b3007e477f760665730">Подробнее...</a><br /></td></tr>
+<tr class="separator:acab687ef803d3b3007e477f760665730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad884b094ce89f7a0c4e525d4f0762513"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#ad884b094ce89f7a0c4e525d4f0762513">operator&lt;=</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e1, const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e2)</td></tr>
+<tr class="memdesc:ad884b094ce89f7a0c4e525d4f0762513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare endpoints for ordering.  <a href="classasio_1_1generic_1_1basic__endpoint.html#ad884b094ce89f7a0c4e525d4f0762513">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad884b094ce89f7a0c4e525d4f0762513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282ed225bbac8ae22df1b23f0e86d3a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#a282ed225bbac8ae22df1b23f0e86d3a6">operator&gt;=</a> (const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e1, const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;e2)</td></tr>
+<tr class="memdesc:a282ed225bbac8ae22df1b23f0e86d3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare endpoints for ordering.  <a href="classasio_1_1generic_1_1basic__endpoint.html#a282ed225bbac8ae22df1b23f0e86d3a6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a282ed225bbac8ae22df1b23f0e86d3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename Protocol&gt;<br />
+class asio::generic::basic_endpoint&lt; Protocol &gt;</h3>
+
+<p>Describes an endpoint for any socket type. </p>
+<p>The <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html" title="Describes an endpoint for any socket type.">asio::generic::basic_endpoint</a> class template describes an endpoint that may be associated with any socket type.</p>
+<dl class="section note"><dt>Заметки</dt><dd>The socket types sockaddr type must be able to fit into a <code>sockaddr_storage</code> structure.</dd></dl>
+<dl class="section user"><dt>Thread Safety</dt><dd><em>Distinct</em> <em>objects:</em> Safe.<br  />
+<em>Shared</em> <em>objects:</em> Unsafe.</dd></dl>
+<dl class="section user"><dt>Concepts:</dt><dd>Endpoint. </dd></dl>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="af8fe7c173ad82680b104c83000eab645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8fe7c173ad82680b104c83000eab645">&#9670;&nbsp;</a></span>data_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a> <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#af8fe7c173ad82680b104c83000eab645">data_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The type of the endpoint structure. This type is dependent on the underlying implementation of the socket layer. </p>
+
+</div>
+</div>
+<a id="adbb1d24211763cf405138afcc29330da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb1d24211763cf405138afcc29330da">&#9670;&nbsp;</a></span>protocol_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Protocol <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#adbb1d24211763cf405138afcc29330da">protocol_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The protocol type associated with the endpoint. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a3d522f448c3672eda9de0a0919399a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d522f448c3672eda9de0a0919399a65">&#9670;&nbsp;</a></span>basic_endpoint() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<a id="a657baa993f97965191eb0a46f4932a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657baa993f97965191eb0a46f4932a00">&#9670;&nbsp;</a></span>basic_endpoint() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td>
+          <td class="paramname"><em>socket_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>socket_address_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>socket_protocol</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an endpoint from the specified socket address. </p>
+
+</div>
+</div>
+<a id="a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8ee2d3caf0c8a7b9d17dc3af5ed0d7">&#9670;&nbsp;</a></span>basic_endpoint() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<div class="memtemplate">
+template&lt;typename Endpoint &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Endpoint &amp;&#160;</td>
+          <td class="paramname"><em>endpoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an endpoint from the specific endpoint type. </p>
+
+</div>
+</div>
+<a id="aabeef6b7a53e3c072f07b4a7929a2149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabeef6b7a53e3c072f07b4a7929a2149">&#9670;&nbsp;</a></span>basic_endpoint() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+</div>
+</div>
+<a id="aebfae8341ef0025f2cbe36cd7af9825d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfae8341ef0025f2cbe36cd7af9825d">&#9670;&nbsp;</a></span>basic_endpoint() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::<a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a0cfcfe541ea6138653ec21510d3bf275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfcfe541ea6138653ec21510d3bf275">&#9670;&nbsp;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the capacity of the endpoint in the native type. </p>
+
+</div>
+</div>
+<a id="a719b41a4bac9b9e359fe4d8a774ed902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719b41a4bac9b9e359fe4d8a774ed902">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#af8fe7c173ad82680b104c83000eab645">data_type</a>* <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the underlying endpoint in the native type. </p>
+
+</div>
+</div>
+<a id="abea2b78c7ee0b63b3833816ed7837485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea2b78c7ee0b63b3833816ed7837485">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#af8fe7c173ad82680b104c83000eab645">data_type</a>* <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the underlying endpoint in the native type. </p>
+
+</div>
+</div>
+<a id="ac8cab9d3c7f08bb006adef789098089c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8cab9d3c7f08bb006adef789098089c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&amp; <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move-assign from another endpoint. </p>
+
+</div>
+</div>
+<a id="a06062afad26ce2cedbc97483bfa77ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06062afad26ce2cedbc97483bfa77ef3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&amp; <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign from another endpoint. </p>
+
+</div>
+</div>
+<a id="ac5c20ca3fbdc666cbc54287a75d83eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c20ca3fbdc666cbc54287a75d83eb8">&#9670;&nbsp;</a></span>protocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1generic_1_1basic__endpoint.html#adbb1d24211763cf405138afcc29330da">protocol_type</a> <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::protocol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The protocol associated with the endpoint. </p>
+
+</div>
+</div>
+<a id="a08bcf7a95cad0e221c78804dc371c4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08bcf7a95cad0e221c78804dc371c4a9">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>new_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the underlying size of the endpoint in the native type. </p>
+
+</div>
+</div>
+<a id="a16bd8f67844aa8538a7e6cbe31238144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16bd8f67844aa8538a7e6cbe31238144">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">asio::generic::basic_endpoint</a>&lt; Protocol &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the underlying size of the endpoint in the native type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="af35b46a86fa2bb95bb86758639669f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35b46a86fa2bb95bb86758639669f61">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two endpoints for inequality. </p>
+
+</div>
+</div>
+<a id="aa8a1520cd511680ca56b6b854895e948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a1520cd511680ca56b6b854895e948">&#9670;&nbsp;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare endpoints for ordering. </p>
+
+</div>
+</div>
+<a id="ad884b094ce89f7a0c4e525d4f0762513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad884b094ce89f7a0c4e525d4f0762513">&#9670;&nbsp;</a></span>operator&lt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare endpoints for ordering. </p>
+
+</div>
+</div>
+<a id="a9cf7a143935a3668c2278728be5a1f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf7a143935a3668c2278728be5a1f67">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two endpoints for equality. </p>
+
+</div>
+</div>
+<a id="acab687ef803d3b3007e477f760665730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acab687ef803d3b3007e477f760665730">&#9670;&nbsp;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare endpoints for ordering. </p>
+
+</div>
+</div>
+<a id="a282ed225bbac8ae22df1b23f0e86d3a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282ed225bbac8ae22df1b23f0e86d3a6">&#9670;&nbsp;</a></span>operator&gt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; Protocol &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare endpoints for ordering. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/generic/<a class="el" href="generic_2basic__endpoint_8hpp_source.html">basic_endpoint.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

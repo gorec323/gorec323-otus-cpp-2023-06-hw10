@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::detail::resolver_service_base</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html">resolver_service_base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-types">Защищенные типы</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classasio_1_1detail_1_1resolver__service__base-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::detail::resolver_service_base</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="resolver__service__base_8hpp_source.html">resolver_service_base.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::detail::resolver_service_base:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1detail_1_1resolver__service__base__inherit__graph.png" border="0" usemap="#aasio_1_1detail_1_1resolver__service__base_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1detail_1_1resolver__service__base_inherit__map" id="aasio_1_1detail_1_1resolver__service__base_inherit__map">
+<area shape="rect" title=" " alt="" coords="7,5,162,47"/>
+<area shape="rect" href="classasio_1_1detail_1_1resolver__service.html" title=" " alt="" coords="5,95,164,136"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base_1_1auto__addrinfo.html">auto_addrinfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base_1_1work__scheduler__runner.html">work_scheduler_runner</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ab07ff8adc9e2f3d5841021e99e190c16"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a6f7dec33c65c050a3ee96d6b17dafc9c">socket_ops::shared_cancel_token_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a></td></tr>
+<tr class="separator:ab07ff8adc9e2f3d5841021e99e190c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa4a53c3a8e5bb9ef82ccc96bf1db911f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#aa4a53c3a8e5bb9ef82ccc96bf1db911f">resolver_service_base</a> (<a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;context)</td></tr>
+<tr class="separator:aa4a53c3a8e5bb9ef82ccc96bf1db911f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b361e11ef6e16fe8d2c2e6e05099186"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a4b361e11ef6e16fe8d2c2e6e05099186">~resolver_service_base</a> ()</td></tr>
+<tr class="separator:a4b361e11ef6e16fe8d2c2e6e05099186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c41597e00fde9e8387083786d47428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ae1c41597e00fde9e8387083786d47428">base_shutdown</a> ()</td></tr>
+<tr class="separator:ae1c41597e00fde9e8387083786d47428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7a027ed949b3131d33a93d39ceb4ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a1d7a027ed949b3131d33a93d39ceb4ee">base_notify_fork</a> (<a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535">execution_context::fork_event</a> fork_ev)</td></tr>
+<tr class="separator:a1d7a027ed949b3131d33a93d39ceb4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef7ed77af2484c8b235edb8c85ba6e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a8ef7ed77af2484c8b235edb8c85ba6e7">construct</a> (<a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;impl)</td></tr>
+<tr class="separator:a8ef7ed77af2484c8b235edb8c85ba6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6304acb1fe29ca8fff3df2fd81bd6b29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a6304acb1fe29ca8fff3df2fd81bd6b29">destroy</a> (<a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;)</td></tr>
+<tr class="separator:a6304acb1fe29ca8fff3df2fd81bd6b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec64a3aaef7ad5582920c2374007cd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#afec64a3aaef7ad5582920c2374007cd1">move_construct</a> (<a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;impl, <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;other_impl)</td></tr>
+<tr class="separator:afec64a3aaef7ad5582920c2374007cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e58c85458cf3d428af359f21a2bee5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a40e58c85458cf3d428af359f21a2bee5">move_assign</a> (<a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;impl, <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html">resolver_service_base</a> &amp;other_service, <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;other_impl)</td></tr>
+<tr class="separator:a40e58c85458cf3d428af359f21a2bee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf68280bbc28bd7e44c9cab3544400c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#acf68280bbc28bd7e44c9cab3544400c4">converting_move_construct</a> (<a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;impl, <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html">resolver_service_base</a> &amp;, <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;other_impl)</td></tr>
+<tr class="separator:acf68280bbc28bd7e44c9cab3544400c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9380e28419178a5b2813bdfece4cfaa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a9380e28419178a5b2813bdfece4cfaa5">converting_move_assign</a> (<a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;impl, <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html">resolver_service_base</a> &amp;other_service, <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;other_impl)</td></tr>
+<tr class="separator:a9380e28419178a5b2813bdfece4cfaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88e105b499b702a2f7d49e7a6a5418b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ad88e105b499b702a2f7d49e7a6a5418b">cancel</a> (<a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;impl)</td></tr>
+<tr class="separator:ad88e105b499b702a2f7d49e7a6a5418b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Защищенные типы</h2></td></tr>
+<tr class="memitem:af2abab5913d7e049fd4a2f5e86b0630a"><td class="memItemLeft" align="right" valign="top">typedef class <a class="el" href="classasio_1_1detail_1_1scheduler.html">scheduler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#af2abab5913d7e049fd4a2f5e86b0630a">scheduler_impl</a></td></tr>
+<tr class="separator:af2abab5913d7e049fd4a2f5e86b0630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a5ec20b6699d468bbba3ece010de967ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a5ec20b6699d468bbba3ece010de967ca">start_resolve_op</a> (<a class="el" href="classasio_1_1detail_1_1resolve__op.html">resolve_op</a> *op)</td></tr>
+<tr class="separator:a5ec20b6699d468bbba3ece010de967ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0949651534e4c18edebfbfeae93df8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab0949651534e4c18edebfbfeae93df8d">start_work_thread</a> ()</td></tr>
+<tr class="separator:ab0949651534e4c18edebfbfeae93df8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a501bb83126386ad78d39954baa92c86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#af2abab5913d7e049fd4a2f5e86b0630a">scheduler_impl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#a501bb83126386ad78d39954baa92c86c">scheduler_</a></td></tr>
+<tr class="separator:a501bb83126386ad78d39954baa92c86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="ab07ff8adc9e2f3d5841021e99e190c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07ff8adc9e2f3d5841021e99e190c16">&#9670;&nbsp;</a></span>implementation_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a6f7dec33c65c050a3ee96d6b17dafc9c">socket_ops::shared_cancel_token_type</a> <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">asio::detail::resolver_service_base::implementation_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2abab5913d7e049fd4a2f5e86b0630a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2abab5913d7e049fd4a2f5e86b0630a">&#9670;&nbsp;</a></span>scheduler_impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef class <a class="el" href="classasio_1_1detail_1_1scheduler.html">scheduler</a> <a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#af2abab5913d7e049fd4a2f5e86b0630a">asio::detail::resolver_service_base::scheduler_impl</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa4a53c3a8e5bb9ef82ccc96bf1db911f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a53c3a8e5bb9ef82ccc96bf1db911f">&#9670;&nbsp;</a></span>resolver_service_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::detail::resolver_service_base::resolver_service_base </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b361e11ef6e16fe8d2c2e6e05099186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b361e11ef6e16fe8d2c2e6e05099186">&#9670;&nbsp;</a></span>~resolver_service_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::detail::resolver_service_base::~resolver_service_base </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1d7a027ed949b3131d33a93d39ceb4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7a027ed949b3131d33a93d39ceb4ee">&#9670;&nbsp;</a></span>base_notify_fork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::base_notify_fork </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1execution__context.html#abf68ec520a046bce977a2d1d62051535">execution_context::fork_event</a>&#160;</td>
+          <td class="paramname"><em>fork_ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1c41597e00fde9e8387083786d47428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c41597e00fde9e8387083786d47428">&#9670;&nbsp;</a></span>base_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::base_shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad88e105b499b702a2f7d49e7a6a5418b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88e105b499b702a2f7d49e7a6a5418b">&#9670;&nbsp;</a></span>cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::cancel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">resolver_service_base::implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ef7ed77af2484c8b235edb8c85ba6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef7ed77af2484c8b235edb8c85ba6e7">&#9670;&nbsp;</a></span>construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::construct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">resolver_service_base::implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9380e28419178a5b2813bdfece4cfaa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9380e28419178a5b2813bdfece4cfaa5">&#9670;&nbsp;</a></span>converting_move_assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::converting_move_assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html">resolver_service_base</a> &amp;&#160;</td>
+          <td class="paramname"><em>other_service</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>other_impl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf68280bbc28bd7e44c9cab3544400c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf68280bbc28bd7e44c9cab3544400c4">&#9670;&nbsp;</a></span>converting_move_construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::converting_move_construct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html">resolver_service_base</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>other_impl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6304acb1fe29ca8fff3df2fd81bd6b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6304acb1fe29ca8fff3df2fd81bd6b29">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">resolver_service_base::implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40e58c85458cf3d428af359f21a2bee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e58c85458cf3d428af359f21a2bee5">&#9670;&nbsp;</a></span>move_assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::move_assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html">resolver_service_base</a> &amp;&#160;</td>
+          <td class="paramname"><em>other_service</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>other_impl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afec64a3aaef7ad5582920c2374007cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec64a3aaef7ad5582920c2374007cd1">&#9670;&nbsp;</a></span>move_construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::move_construct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#ab07ff8adc9e2f3d5841021e99e190c16">implementation_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>other_impl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ec20b6699d468bbba3ece010de967ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec20b6699d468bbba3ece010de967ca">&#9670;&nbsp;</a></span>start_resolve_op()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::start_resolve_op </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1detail_1_1resolve__op.html">resolve_op</a> *&#160;</td>
+          <td class="paramname"><em>op</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0949651534e4c18edebfbfeae93df8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0949651534e4c18edebfbfeae93df8d">&#9670;&nbsp;</a></span>start_work_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::detail::resolver_service_base::start_work_thread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a501bb83126386ad78d39954baa92c86c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a501bb83126386ad78d39954baa92c86c">&#9670;&nbsp;</a></span>scheduler_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1detail_1_1resolver__service__base.html#af2abab5913d7e049fd4a2f5e86b0630a">scheduler_impl</a>&amp; asio::detail::resolver_service_base::scheduler_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>_deps/asio-src/asio/include/asio/detail/<a class="el" href="resolver__service__base_8hpp_source.html">resolver_service_base.hpp</a></li>
+<li>_deps/asio-src/asio/include/asio/detail/impl/<a class="el" href="resolver__service__base_8ipp.html">resolver_service_base.ipp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

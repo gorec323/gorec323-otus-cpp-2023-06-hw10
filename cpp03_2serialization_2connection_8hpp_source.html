@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/src/examples/cpp03/serialization/connection.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_51595207d4d06ca5211c6e6a3f7ff7a8.html">serialization</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">connection.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cpp03_2serialization_2connection_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// connection.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef SERIALIZATION_CONNECTION_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define SERIALIZATION_CONNECTION_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="asio_8hpp.html">asio.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;boost/archive/text_iarchive.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;boost/archive/text_oarchive.hpp&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;boost/bind/bind.hpp&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;boost/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;boost/tuple/tuple.hpp&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaces11n__example.html">s11n_example</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classs11n__example_1_1connection.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classs11n__example_1_1connection.html">connection</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classs11n__example_1_1connection.html#a4b3d3546c6b77587f9ecc12617be2dc8">   38</a></span>&#160;  <a class="code" href="classs11n__example_1_1connection.html#a4b3d3546c6b77587f9ecc12617be2dc8">connection</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1executor.html">asio::executor</a>&amp; ex)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    : socket_(ex)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classs11n__example_1_1connection.html#a4f780d2241a94b6f90fca4ddc60d6e4c">   45</a></span>&#160;  <a class="code" href="classasio_1_1basic__stream__socket.html">asio::ip::tcp::socket</a>&amp; <a class="code" href="classs11n__example_1_1connection.html#a4f780d2241a94b6f90fca4ddc60d6e4c">socket</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> socket_;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Handler&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classs11n__example_1_1connection.html#a935c9ae4b3d91aa4ce2f8ccd4e1ceb99">   52</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classs11n__example_1_1connection.html#a935c9ae4b3d91aa4ce2f8ccd4e1ceb99">async_write</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, Handler handler)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Serialize the data first so we know how large it is.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::ostringstream archive_stream;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    boost::archive::text_oarchive archive(archive_stream);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    archive &lt;&lt; t;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    outbound_data_ = archive_stream.str();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// Format the header.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::ostringstream header_stream;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    header_stream &lt;&lt; std::setw(header_length)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      &lt;&lt; std::hex &lt;&lt; outbound_data_.size();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (!header_stream || header_stream.str().size() != header_length)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="comment">// Something went wrong, inform the caller.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> error(<a class="code" href="namespaceasio_1_1error.html#a2a69445eee784059ac2f4a6c4f5fe90da30cedfce8621ca9c21dddce0ac27cd09">asio::error::invalid_argument</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="namespaceasio.html#ab96ddebcabf9c7f1524f803bc063a62b">asio::post</a>(socket_.<a class="code" href="classasio_1_1basic__socket.html#a62c3d3a495fabefeba5fb676b62c9add">get_executor</a>(), <a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#ab28429160143fefb5326d65d320e08cd">boost::bind</a>(handler, error));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    outbound_header_ = header_stream.str();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// Write the serialized data to the socket. We use &quot;gather-write&quot; to send</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// both the header and the data in a single write operation.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::vector&lt;asio::const_buffer&gt; buffers;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    buffers.push_back(<a class="code" href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a>(outbound_header_));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    buffers.push_back(<a class="code" href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a>(outbound_data_));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="namespaceasio.html#a505e7a885317c073053fb7f252cc7b04">asio::async_write</a>(socket_, buffers, handler);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Handler&gt;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classs11n__example_1_1connection.html#a99b2b4dcaaf6ee4a2fd9e2c045791468">   83</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classs11n__example_1_1connection.html#a99b2b4dcaaf6ee4a2fd9e2c045791468">async_read</a>(<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, Handler handler)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Issue a read operation to read exactly the number of bytes in a header.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> (<a class="code" href="classs11n__example_1_1connection.html">connection</a>::*<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">const</span> <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp;,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;, boost::tuple&lt;Handler&gt;)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      = &amp;connection::handle_read_header&lt;T, Handler&gt;;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="namespaceasio.html#ad686d881d915fd25eb761add24af9e75">asio::async_read</a>(socket_, <a class="code" href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a>(inbound_header_),</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#ab28429160143fefb5326d65d320e08cd">boost::bind</a>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keyword">this</span>, asio::placeholders::error, boost::ref(t),</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          boost::make_tuple(handler)));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Handler&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classs11n__example_1_1connection.html#aa13c8dcd7ad397f5060866ea27ab85d4">  100</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classs11n__example_1_1connection.html#aa13c8dcd7ad397f5060866ea27ab85d4">handle_read_header</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; e,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, boost::tuple&lt;Handler&gt; handler)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (e)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      boost::get&lt;0&gt;(handler)(e);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="comment">// Determine the length of the serialized data.</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      std::istringstream is(std::string(inbound_header_, header_length));</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      std::size_t inbound_data_size = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">if</span> (!(is &gt;&gt; std::hex &gt;&gt; inbound_data_size))</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">// Header doesn&#39;t seem to be valid. Inform the caller.</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> error(<a class="code" href="namespaceasio_1_1error.html#a2a69445eee784059ac2f4a6c4f5fe90da30cedfce8621ca9c21dddce0ac27cd09">asio::error::invalid_argument</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        boost::get&lt;0&gt;(handler)(error);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="comment">// Start an asynchronous call to receive the data.</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      inbound_data_.resize(inbound_data_size);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <a class="code" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> (<a class="code" href="classs11n__example_1_1connection.html">connection</a>::*<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>)(</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;          <span class="keyword">const</span> <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp;,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;          <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;, boost::tuple&lt;Handler&gt;)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        = &amp;connection::handle_read_data&lt;T, Handler&gt;;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <a class="code" href="namespaceasio.html#ad686d881d915fd25eb761add24af9e75">asio::async_read</a>(socket_, <a class="code" href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a>(inbound_data_),</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="namespaceasio_1_1detail_1_1socket__ops.html#ab28429160143fefb5326d65d320e08cd">boost::bind</a>(<a class="code" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, <span class="keyword">this</span>,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;          asio::placeholders::error, boost::ref(t), handler));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Handler&gt;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classs11n__example_1_1connection.html#afef5db71027b54beb8a53f284485121b">  134</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classs11n__example_1_1connection.html#afef5db71027b54beb8a53f284485121b">handle_read_data</a>(<span class="keyword">const</span> <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; e,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp; t, boost::tuple&lt;Handler&gt; handler)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">if</span> (e)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      boost::get&lt;0&gt;(handler)(e);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="comment">// Extract the data structure from the data just received.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        std::string archive_data(&amp;inbound_data_[0], inbound_data_.size());</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        std::istringstream archive_stream(archive_data);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        boost::archive::text_iarchive archive(archive_stream);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        archive &gt;&gt; t;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordflow">catch</span> (std::exception&amp; e)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// Unable to decode data.</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> error(<a class="code" href="namespaceasio_1_1error.html#a2a69445eee784059ac2f4a6c4f5fe90da30cedfce8621ca9c21dddce0ac27cd09">asio::error::invalid_argument</a>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        boost::get&lt;0&gt;(handler)(error);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="comment">// Inform caller that data has been received ok.</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      boost::get&lt;0&gt;(handler)(e);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="classasio_1_1basic__stream__socket.html">asio::ip::tcp::socket</a> socket_;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keyword">enum</span> { header_length = 8 };</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  std::string outbound_header_;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  std::string outbound_data_;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">char</span> inbound_header_[header_length];</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  std::vector&lt;char&gt; inbound_data_;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="namespaces11n__example.html#a8f27c91c3977736ad0e7f0cfff623c6a">  184</a></span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;connection&gt; <a class="code" href="namespaces11n__example.html#a8f27c91c3977736ad0e7f0cfff623c6a">connection_ptr</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;} <span class="comment">// namespace s11n_example</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SERIALIZATION_CONNECTION_HPP</span></div>
+<div class="ttc" id="aasio_8hpp_html"><div class="ttname"><a href="asio_8hpp.html">asio.hpp</a></div></div>
+<div class="ttc" id="abind__immediate__executor_8cpp_html_a59a5a6248bbe8018ef97e7c0490d1508"><div class="ttname"><a href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a></div><div class="ttdeci">void()&gt;(declval&lt; initiate_immediate &gt;()</div></div>
+<div class="ttc" id="aclassasio_1_1basic__socket_html_a62c3d3a495fabefeba5fb676b62c9add"><div class="ttname"><a href="classasio_1_1basic__socket.html#a62c3d3a495fabefeba5fb676b62c9add">asio::basic_socket::get_executor</a></div><div class="ttdeci">const executor_type &amp; get_executor() noexcept</div><div class="ttdoc">Get the executor associated with the object.</div><div class="ttdef"><b>Definition:</b> basic_socket.hpp:371</div></div>
+<div class="ttc" id="aclassasio_1_1basic__stream__socket_html"><div class="ttname"><a href="classasio_1_1basic__stream__socket.html">asio::basic_stream_socket</a></div><div class="ttdoc">Provides stream-oriented socket functionality.</div><div class="ttdef"><b>Definition:</b> basic_stream_socket.hpp:62</div></div>
+<div class="ttc" id="aclassasio_1_1executor_html"><div class="ttname"><a href="classasio_1_1executor.html">asio::executor</a></div><div class="ttdoc">Polymorphic wrapper for executors.</div><div class="ttdef"><b>Definition:</b> executor.hpp:48</div></div>
+<div class="ttc" id="aclasss11n__example_1_1connection_html"><div class="ttname"><a href="classs11n__example_1_1connection.html">s11n_example::connection</a></div><div class="ttdoc">The connection class provides serialization primitives on top of a socket.</div><div class="ttdef"><b>Definition:</b> connection.hpp:35</div></div>
+<div class="ttc" id="aclasss11n__example_1_1connection_html_a4b3d3546c6b77587f9ecc12617be2dc8"><div class="ttname"><a href="classs11n__example_1_1connection.html#a4b3d3546c6b77587f9ecc12617be2dc8">s11n_example::connection::connection</a></div><div class="ttdeci">connection(const asio::executor &amp;ex)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> connection.hpp:38</div></div>
+<div class="ttc" id="aclasss11n__example_1_1connection_html_a4f780d2241a94b6f90fca4ddc60d6e4c"><div class="ttname"><a href="classs11n__example_1_1connection.html#a4f780d2241a94b6f90fca4ddc60d6e4c">s11n_example::connection::socket</a></div><div class="ttdeci">asio::ip::tcp::socket &amp; socket()</div><div class="ttdef"><b>Definition:</b> connection.hpp:45</div></div>
+<div class="ttc" id="aclasss11n__example_1_1connection_html_a935c9ae4b3d91aa4ce2f8ccd4e1ceb99"><div class="ttname"><a href="classs11n__example_1_1connection.html#a935c9ae4b3d91aa4ce2f8ccd4e1ceb99">s11n_example::connection::async_write</a></div><div class="ttdeci">void async_write(const T &amp;t, Handler handler)</div><div class="ttdoc">Asynchronously write a data structure to the socket.</div><div class="ttdef"><b>Definition:</b> connection.hpp:52</div></div>
+<div class="ttc" id="aclasss11n__example_1_1connection_html_a99b2b4dcaaf6ee4a2fd9e2c045791468"><div class="ttname"><a href="classs11n__example_1_1connection.html#a99b2b4dcaaf6ee4a2fd9e2c045791468">s11n_example::connection::async_read</a></div><div class="ttdeci">void async_read(T &amp;t, Handler handler)</div><div class="ttdoc">Asynchronously read a data structure from the socket.</div><div class="ttdef"><b>Definition:</b> connection.hpp:83</div></div>
+<div class="ttc" id="aclasss11n__example_1_1connection_html_aa13c8dcd7ad397f5060866ea27ab85d4"><div class="ttname"><a href="classs11n__example_1_1connection.html#aa13c8dcd7ad397f5060866ea27ab85d4">s11n_example::connection::handle_read_header</a></div><div class="ttdeci">void handle_read_header(const asio::error_code &amp;e, T &amp;t, boost::tuple&lt; Handler &gt; handler)</div><div class="ttdef"><b>Definition:</b> connection.hpp:100</div></div>
+<div class="ttc" id="aclasss11n__example_1_1connection_html_afef5db71027b54beb8a53f284485121b"><div class="ttname"><a href="classs11n__example_1_1connection.html#afef5db71027b54beb8a53f284485121b">s11n_example::connection::handle_read_data</a></div><div class="ttdeci">void handle_read_data(const asio::error_code &amp;e, T &amp;t, boost::tuple&lt; Handler &gt; handler)</div><div class="ttdoc">Handle a completed read of message data.</div><div class="ttdef"><b>Definition:</b> connection.hpp:134</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_1_1socket__ops_html_ab28429160143fefb5326d65d320e08cd"><div class="ttname"><a href="namespaceasio_1_1detail_1_1socket__ops.html#ab28429160143fefb5326d65d320e08cd">asio::detail::socket_ops::bind</a></div><div class="ttdeci">int bind(socket_type s, const void *addr, std::size_t addrlen, asio::error_code &amp;ec)</div><div class="ttdef"><b>Definition:</b> socket_ops.ipp:282</div></div>
+<div class="ttc" id="anamespaceasio_1_1error_html_a2a69445eee784059ac2f4a6c4f5fe90da30cedfce8621ca9c21dddce0ac27cd09"><div class="ttname"><a href="namespaceasio_1_1error.html#a2a69445eee784059ac2f4a6c4f5fe90da30cedfce8621ca9c21dddce0ac27cd09">asio::error::invalid_argument</a></div><div class="ttdeci">@ invalid_argument</div><div class="ttdoc">Invalid argument.</div><div class="ttdef"><b>Definition:</b> error.hpp:113</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_html_a505e7a885317c073053fb7f252cc7b04"><div class="ttname"><a href="namespaceasio.html#a505e7a885317c073053fb7f252cc7b04">asio::async_write</a></div><div class="ttdeci">auto async_write(AsyncWriteStream &amp;s, const ConstBufferSequence &amp;buffers, CompletionCondition completion_condition, WriteToken &amp;&amp;token, constraint_t&lt; is_const_buffer_sequence&lt; ConstBufferSequence &gt;::value &gt;) -&gt; decltype(async_initiate&lt; WriteToken, void(asio::error_code, std::size_t)&gt;(declval&lt; detail::initiate_async_write&lt; AsyncWriteStream &gt;&gt;(), token, buffers, static_cast&lt; CompletionCondition &amp;&amp; &gt;(completion_condition)))</div><div class="ttdef"><b>Definition:</b> write.hpp:469</div></div>
+<div class="ttc" id="anamespaceasio_html_ab96ddebcabf9c7f1524f803bc063a62b"><div class="ttname"><a href="namespaceasio.html#ab96ddebcabf9c7f1524f803bc063a62b">asio::post</a></div><div class="ttdeci">auto post(NullaryToken &amp;&amp;token) -&gt; decltype(async_initiate&lt; NullaryToken, void()&gt;(declval&lt; detail::initiate_post &gt;(), token))</div><div class="ttdoc">Submits a completion token or function object for execution.</div><div class="ttdef"><b>Definition:</b> post.hpp:80</div></div>
+<div class="ttc" id="anamespaceasio_html_ac172b717c13db01d7f99af7e42edcb68"><div class="ttname"><a href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">asio::f</a></div><div class="ttdeci">F &amp;&amp; f</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:410</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="anamespaceasio_html_ad686d881d915fd25eb761add24af9e75"><div class="ttname"><a href="namespaceasio.html#ad686d881d915fd25eb761add24af9e75">asio::async_read</a></div><div class="ttdeci">auto async_read(AsyncReadStream &amp;s, const MutableBufferSequence &amp;buffers, CompletionCondition completion_condition, ReadToken &amp;&amp;token, constraint_t&lt; is_mutable_buffer_sequence&lt; MutableBufferSequence &gt;::value &gt;) -&gt; decltype(async_initiate&lt; ReadToken, void(asio::error_code, std::size_t)&gt;(declval&lt; detail::initiate_async_read&lt; AsyncReadStream &gt;&gt;(), token, buffers, static_cast&lt; CompletionCondition &amp;&amp; &gt;(completion_condition)))</div><div class="ttdef"><b>Definition:</b> read.hpp:504</div></div>
+<div class="ttc" id="anamespaceasio_html_af691d016b23fd6c2da9ac91ce00c2e7e"><div class="ttname"><a href="namespaceasio.html#af691d016b23fd6c2da9ac91ce00c2e7e">asio::buffer</a></div><div class="ttdeci">ASIO_NODISCARD ASIO_MUTABLE_BUFFER buffer(const mutable_buffer &amp;b) noexcept</div><div class="ttdoc">Create a new modifiable buffer from an existing buffer.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:862</div></div>
+<div class="ttc" id="anamespaces11n__example_html"><div class="ttname"><a href="namespaces11n__example.html">s11n_example</a></div><div class="ttdef"><b>Definition:</b> client.cpp:19</div></div>
+<div class="ttc" id="anamespaces11n__example_html_a8f27c91c3977736ad0e7f0cfff623c6a"><div class="ttname"><a href="namespaces11n__example.html#a8f27c91c3977736ad0e7f0cfff623c6a">s11n_example::connection_ptr</a></div><div class="ttdeci">boost::shared_ptr&lt; connection &gt; connection_ptr</div><div class="ttdef"><b>Definition:</b> connection.hpp:184</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

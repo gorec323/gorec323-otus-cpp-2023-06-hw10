@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/write_at.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл write_at.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="write__at_8hpp_source.html">asio/write_at.hpp</a>&quot;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="src_2tests_2unit_2archetypes_2async__result_8hpp_source.html">archetypes/async_result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8hpp_source.html">asio/io_context.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="post_8hpp_source.html">asio/post.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="streambuf_8hpp_source.html">asio/streambuf.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">unit_test.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для write_at.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="write__at_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2write__at_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2write__at_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2write__at_8cpp">
+<area shape="rect" title=" " alt="" coords="3556,5,3703,61"/>
+<area shape="rect" href="write__at_8hpp.html" title=" " alt="" coords="3389,266,3523,293"/>
+<area shape="rect" title=" " alt="" coords="4801,512,4868,539"/>
+<area shape="rect" title=" " alt="" coords="4759,587,4815,613"/>
+<area shape="rect" title=" " alt="" coords="3505,109,3591,136"/>
+<area shape="rect" href="src_2tests_2unit_2archetypes_2async__result_8hpp.html" title=" " alt="" coords="1189,109,1397,136"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="2631,184,2780,211"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="817,184,927,211"/>
+<area shape="rect" href="streambuf_8hpp.html" title=" " alt="" coords="4127,266,4273,293"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="4937,348,5044,375"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3189,587,3350,613"/>
+<area shape="rect" title=" " alt="" coords="4163,661,4234,688"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="1208,348,1371,375"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="1503,512,1711,539"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2383,512,2585,539"/>
+<area shape="rect" href="completion__condition_8hpp.html" title=" " alt="" coords="3591,430,3812,457"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="2947,348,3114,375"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="3153,348,3263,375"/>
+<area shape="rect" href="basic__streambuf__fwd_8hpp.html" title=" " alt="" coords="4650,423,4811,464"/>
+<area shape="rect" href="impl_2write__at_8hpp.html" title=" " alt="" coords="3349,348,3515,375"/>
+<area shape="rect" title=" " alt="" coords="3285,661,3414,688"/>
+<area shape="rect" title=" " alt="" coords="3121,661,3260,688"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="459,512,651,539"/>
+<area shape="rect" title=" " alt="" coords="2872,430,2939,457"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="1670,430,1821,457"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="3065,430,3231,457"/>
+<area shape="rect" title=" " alt="" coords="3402,430,3465,457"/>
+<area shape="rect" title=" " alt="" coords="3307,430,3378,457"/>
+<area shape="rect" title=" " alt="" coords="4700,512,4777,539"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="2123,430,2269,457"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="4141,430,4259,457"/>
+<area shape="rect" href="array__fwd_8hpp.html" title=" " alt="" coords="4337,512,4524,539"/>
+<area shape="rect" title=" " alt="" coords="3973,512,4059,539"/>
+<area shape="rect" href="system__executor_8hpp.html" title=" " alt="" coords="1065,184,1255,211"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="551,266,695,293"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="492,348,695,375"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="245,430,448,457"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="523,430,650,457"/>
+<area shape="rect" title=" " alt="" coords="1791,512,1867,539"/>
+<area shape="rect" href="chrono_8hpp.html" title=" " alt="" coords="3797,266,3963,293"/>
+<area shape="rect" href="concurrency__hint_8hpp.html" title=" " alt="" coords="3599,259,3772,300"/>
+<area shape="rect" href="wrapped__handler_8hpp.html" title=" " alt="" coords="1947,423,2098,464"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="2597,430,2797,457"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="2281,348,2465,375"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="1310,430,1493,457"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="4284,423,4423,464"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="749,259,889,300"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="979,430,1133,457"/>
+<area shape="rect" href="basic__streambuf_8hpp.html" title=" " alt="" coords="4106,348,4294,375"/>
+<area shape="rect" title=" " alt="" coords="4988,430,5068,457"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__random__access__device.html">test_random_access_device</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structshort__transfer.html">short_transfer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad17dacb5ae22a8224408b833efa2d56a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#ad17dacb5ae22a8224408b833efa2d56a">test_3_arg_const_buffer_write_at</a> ()</td></tr>
+<tr class="separator:ad17dacb5ae22a8224408b833efa2d56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dfcfda14f0e9168f33f57d1b373d34e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a6dfcfda14f0e9168f33f57d1b373d34e">test_3_arg_mutable_buffer_write_at</a> ()</td></tr>
+<tr class="separator:a6dfcfda14f0e9168f33f57d1b373d34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcc0dd78a478792d404a2e8810ccad7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a8dcc0dd78a478792d404a2e8810ccad7">test_3_arg_vector_buffers_write_at</a> ()</td></tr>
+<tr class="separator:a8dcc0dd78a478792d404a2e8810ccad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e8664f4081bf4ff6d0e1be139df7e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a73e8664f4081bf4ff6d0e1be139df7e0">test_4_arg_nothrow_const_buffer_write_at</a> ()</td></tr>
+<tr class="separator:a73e8664f4081bf4ff6d0e1be139df7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f33a38738df90242bfc87d11b86fe40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a9f33a38738df90242bfc87d11b86fe40">test_4_arg_nothrow_mutable_buffer_write_at</a> ()</td></tr>
+<tr class="separator:a9f33a38738df90242bfc87d11b86fe40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35571daa12310d47d7e656fa85f230c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a35571daa12310d47d7e656fa85f230c9">test_4_arg_nothrow_vector_buffers_write_at</a> ()</td></tr>
+<tr class="separator:a35571daa12310d47d7e656fa85f230c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf837c80218737858e657449dad2a356"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#acf837c80218737858e657449dad2a356">old_style_transfer_all</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t)</td></tr>
+<tr class="separator:acf837c80218737858e657449dad2a356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb18262ab52757a55f8254b8eac7262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a3eb18262ab52757a55f8254b8eac7262">test_4_arg_const_buffer_write_at</a> ()</td></tr>
+<tr class="separator:a3eb18262ab52757a55f8254b8eac7262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace53f8da0333cbf46ed8b549ffe7c61f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#ace53f8da0333cbf46ed8b549ffe7c61f">test_4_arg_mutable_buffer_write_at</a> ()</td></tr>
+<tr class="separator:ace53f8da0333cbf46ed8b549ffe7c61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f65b20dd57c278e676883988b7b369b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a5f65b20dd57c278e676883988b7b369b">test_4_arg_vector_buffers_write_at</a> ()</td></tr>
+<tr class="separator:a5f65b20dd57c278e676883988b7b369b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72103f9c3f742154a48e7d292edac998"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a72103f9c3f742154a48e7d292edac998">test_5_arg_const_buffer_write_at</a> ()</td></tr>
+<tr class="separator:a72103f9c3f742154a48e7d292edac998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06047bb6caa95e8239c8d22ed066fc37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a06047bb6caa95e8239c8d22ed066fc37">test_5_arg_mutable_buffer_write_at</a> ()</td></tr>
+<tr class="separator:a06047bb6caa95e8239c8d22ed066fc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d6e5c0013ffec6ceeab14c9bfb4c1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a86d6e5c0013ffec6ceeab14c9bfb4c1e">test_5_arg_vector_buffers_write_at</a> ()</td></tr>
+<tr class="separator:a86d6e5c0013ffec6ceeab14c9bfb4c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f63596f0def1be4c5dad6dab5bc8604"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a6f63596f0def1be4c5dad6dab5bc8604">async_write_handler</a> (const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;e, size_t bytes_transferred, size_t expected_bytes_transferred, bool *called)</td></tr>
+<tr class="separator:a6f63596f0def1be4c5dad6dab5bc8604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a299b6883e07b43bbebbe19e56717791c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a299b6883e07b43bbebbe19e56717791c">test_4_arg_const_buffer_async_write_at</a> ()</td></tr>
+<tr class="separator:a299b6883e07b43bbebbe19e56717791c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e82c8e63960bef9d5baa5084f4fa77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#aa3e82c8e63960bef9d5baa5084f4fa77">test_4_arg_mutable_buffer_async_write_at</a> ()</td></tr>
+<tr class="separator:aa3e82c8e63960bef9d5baa5084f4fa77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1385853b84aefbd4cfac4eda9515e38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#ae1385853b84aefbd4cfac4eda9515e38">test_4_arg_boost_array_buffers_async_write_at</a> ()</td></tr>
+<tr class="separator:ae1385853b84aefbd4cfac4eda9515e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965b8cc813d75ada18b5422cbae7d9c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a965b8cc813d75ada18b5422cbae7d9c6">test_4_arg_std_array_buffers_async_write_at</a> ()</td></tr>
+<tr class="separator:a965b8cc813d75ada18b5422cbae7d9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47eb7391abb975004a02709f434dc66e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a47eb7391abb975004a02709f434dc66e">test_4_arg_vector_buffers_async_write_at</a> ()</td></tr>
+<tr class="separator:a47eb7391abb975004a02709f434dc66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f81f7c9219302c0a4176910ea7c6cc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a6f81f7c9219302c0a4176910ea7c6cc8">test_4_arg_streambuf_async_write_at</a> ()</td></tr>
+<tr class="separator:a6f81f7c9219302c0a4176910ea7c6cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5532478dbc0fea4243d1717393d1ad64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a5532478dbc0fea4243d1717393d1ad64">test_5_arg_const_buffer_async_write_at</a> ()</td></tr>
+<tr class="separator:a5532478dbc0fea4243d1717393d1ad64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120e824ba8c8431c735f01f9366a47cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a120e824ba8c8431c735f01f9366a47cb">test_5_arg_mutable_buffer_async_write_at</a> ()</td></tr>
+<tr class="separator:a120e824ba8c8431c735f01f9366a47cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec4a72127b39b5ea381eaab314688115"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#aec4a72127b39b5ea381eaab314688115">test_5_arg_boost_array_buffers_async_write_at</a> ()</td></tr>
+<tr class="separator:aec4a72127b39b5ea381eaab314688115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a8a82013e86710168e63074c57d1f29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a9a8a82013e86710168e63074c57d1f29">test_5_arg_std_array_buffers_async_write_at</a> ()</td></tr>
+<tr class="separator:a9a8a82013e86710168e63074c57d1f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51cde02fb1bcef46730ad4acc81db5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#ad51cde02fb1bcef46730ad4acc81db5e">test_5_arg_vector_buffers_async_write_at</a> ()</td></tr>
+<tr class="separator:ad51cde02fb1bcef46730ad4acc81db5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a91ca4c1be4f7984278a6877896a81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__at_8cpp.html#a37a91ca4c1be4f7984278a6877896a81">test_5_arg_streambuf_async_write_at</a> ()</td></tr>
+<tr class="separator:a37a91ca4c1be4f7984278a6877896a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a6f63596f0def1be4c5dad6dab5bc8604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f63596f0def1be4c5dad6dab5bc8604">&#9670;&nbsp;</a></span>async_write_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> async_write_handler </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bytes_transferred</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>expected_bytes_transferred</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>called</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf837c80218737858e657449dad2a356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf837c80218737858e657449dad2a356">&#9670;&nbsp;</a></span>old_style_transfer_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool old_style_transfer_all </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad17dacb5ae22a8224408b833efa2d56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17dacb5ae22a8224408b833efa2d56a">&#9670;&nbsp;</a></span>test_3_arg_const_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_3_arg_const_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6dfcfda14f0e9168f33f57d1b373d34e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dfcfda14f0e9168f33f57d1b373d34e">&#9670;&nbsp;</a></span>test_3_arg_mutable_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_3_arg_mutable_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dcc0dd78a478792d404a2e8810ccad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dcc0dd78a478792d404a2e8810ccad7">&#9670;&nbsp;</a></span>test_3_arg_vector_buffers_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_3_arg_vector_buffers_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1385853b84aefbd4cfac4eda9515e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1385853b84aefbd4cfac4eda9515e38">&#9670;&nbsp;</a></span>test_4_arg_boost_array_buffers_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_boost_array_buffers_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a299b6883e07b43bbebbe19e56717791c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299b6883e07b43bbebbe19e56717791c">&#9670;&nbsp;</a></span>test_4_arg_const_buffer_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_const_buffer_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3eb18262ab52757a55f8254b8eac7262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb18262ab52757a55f8254b8eac7262">&#9670;&nbsp;</a></span>test_4_arg_const_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_const_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3e82c8e63960bef9d5baa5084f4fa77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e82c8e63960bef9d5baa5084f4fa77">&#9670;&nbsp;</a></span>test_4_arg_mutable_buffer_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_mutable_buffer_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace53f8da0333cbf46ed8b549ffe7c61f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace53f8da0333cbf46ed8b549ffe7c61f">&#9670;&nbsp;</a></span>test_4_arg_mutable_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_mutable_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73e8664f4081bf4ff6d0e1be139df7e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e8664f4081bf4ff6d0e1be139df7e0">&#9670;&nbsp;</a></span>test_4_arg_nothrow_const_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_nothrow_const_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f33a38738df90242bfc87d11b86fe40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f33a38738df90242bfc87d11b86fe40">&#9670;&nbsp;</a></span>test_4_arg_nothrow_mutable_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_nothrow_mutable_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35571daa12310d47d7e656fa85f230c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35571daa12310d47d7e656fa85f230c9">&#9670;&nbsp;</a></span>test_4_arg_nothrow_vector_buffers_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_nothrow_vector_buffers_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a965b8cc813d75ada18b5422cbae7d9c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965b8cc813d75ada18b5422cbae7d9c6">&#9670;&nbsp;</a></span>test_4_arg_std_array_buffers_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_std_array_buffers_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f81f7c9219302c0a4176910ea7c6cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f81f7c9219302c0a4176910ea7c6cc8">&#9670;&nbsp;</a></span>test_4_arg_streambuf_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_streambuf_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47eb7391abb975004a02709f434dc66e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47eb7391abb975004a02709f434dc66e">&#9670;&nbsp;</a></span>test_4_arg_vector_buffers_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_vector_buffers_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f65b20dd57c278e676883988b7b369b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f65b20dd57c278e676883988b7b369b">&#9670;&nbsp;</a></span>test_4_arg_vector_buffers_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_4_arg_vector_buffers_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec4a72127b39b5ea381eaab314688115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec4a72127b39b5ea381eaab314688115">&#9670;&nbsp;</a></span>test_5_arg_boost_array_buffers_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_boost_array_buffers_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5532478dbc0fea4243d1717393d1ad64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5532478dbc0fea4243d1717393d1ad64">&#9670;&nbsp;</a></span>test_5_arg_const_buffer_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_const_buffer_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72103f9c3f742154a48e7d292edac998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72103f9c3f742154a48e7d292edac998">&#9670;&nbsp;</a></span>test_5_arg_const_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_const_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a120e824ba8c8431c735f01f9366a47cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120e824ba8c8431c735f01f9366a47cb">&#9670;&nbsp;</a></span>test_5_arg_mutable_buffer_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_mutable_buffer_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06047bb6caa95e8239c8d22ed066fc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06047bb6caa95e8239c8d22ed066fc37">&#9670;&nbsp;</a></span>test_5_arg_mutable_buffer_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_mutable_buffer_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a8a82013e86710168e63074c57d1f29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a8a82013e86710168e63074c57d1f29">&#9670;&nbsp;</a></span>test_5_arg_std_array_buffers_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_std_array_buffers_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37a91ca4c1be4f7984278a6877896a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a91ca4c1be4f7984278a6877896a81">&#9670;&nbsp;</a></span>test_5_arg_streambuf_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_streambuf_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad51cde02fb1bcef46730ad4acc81db5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51cde02fb1bcef46730ad4acc81db5e">&#9670;&nbsp;</a></span>test_5_arg_vector_buffers_async_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_vector_buffers_async_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86d6e5c0013ffec6ceeab14c9bfb4c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d6e5c0013ffec6ceeab14c9bfb4c1e">&#9670;&nbsp;</a></span>test_5_arg_vector_buffers_write_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> test_5_arg_vector_buffers_write_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

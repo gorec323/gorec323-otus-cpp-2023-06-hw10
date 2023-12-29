@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/ip/detail/endpoint.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_e4188af73cfb387d5873b6aad4743301.html">ip</a></li><li class="navelem"><a class="el" href="dir_e6a3f7d752a8e0a96910ea35bb80dab5.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">endpoint.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ip_2detail_2endpoint_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ip/detail/endpoint.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_IP_DETAIL_ENDPOINT_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_IP_DETAIL_ENDPOINT_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="socket__types_8hpp.html">asio/detail/socket_types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="winsock__init_8hpp.html">asio/detail/winsock_init.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error__code_8hpp.html">asio/error_code.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="address_8hpp.html">asio/ip/address.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>ip {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespaceasio_1_1ip_1_1detail.html">   29</a></span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Helper class for implementating an IP endpoint.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// Default constructor.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#acf826f1e969adb7c769e38d4de1212a0">endpoint</a>() noexcept;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// Construct an endpoint using a family and port number.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#acf826f1e969adb7c769e38d4de1212a0">endpoint</a>(<span class="keywordtype">int</span> family,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port_num) noexcept;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// Construct an endpoint using an address and port number.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#acf826f1e969adb7c769e38d4de1212a0">endpoint</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1address.html">asio::ip::address</a>&amp; addr,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port_num) noexcept;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="comment">// Copy constructor.</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a7d1c1f37747b16e0eefe2880e02da3ec">   47</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a7d1c1f37747b16e0eefe2880e02da3ec">endpoint</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; other) noexcept</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    : data_(other.data_)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// Assign from another endpoint.</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a67162e9e1c9c52cd24f99ccd70a94bc7">   53</a></span>&#160;  <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a67162e9e1c9c52cd24f99ccd70a94bc7">operator=</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; other) noexcept</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    data_ = other.data_;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">// Get the underlying endpoint in the native type.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a81390152151c98b21d1b637761949c84">   60</a></span>&#160;  <a class="code" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a>* <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a81390152151c98b21d1b637761949c84">data</a>() noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> &amp;data_.base;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// Get the underlying endpoint in the native type.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a24b7f29dbc46dcfbb59cd89f2d316918">   66</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a>* <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a24b7f29dbc46dcfbb59cd89f2d316918">data</a>() const noexcept</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> &amp;data_.base;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="comment">// Get the underlying size of the endpoint in the native type.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a66fec9c2f69a90d0d357897f8aecd70e">   72</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a66fec9c2f69a90d0d357897f8aecd70e">size</a>() const noexcept</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6baaafc63573c01e94d4e31286d4eb56">is_v4</a>())</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(<a class="code" href="namespaceasio_1_1detail.html#a80851db41f97eb12822e2f409d444aa6">asio::detail::sockaddr_in4_type</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(<a class="code" href="namespaceasio_1_1detail.html#a57768e6ae10076201e58c76fe4e8495d">asio::detail::sockaddr_in6_type</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// Set the underlying size of the endpoint in the native type.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a351151a62463d6f3c5bc3dbbdcb407e5">resize</a>(std::size_t new_size);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// Get the capacity of the endpoint in the native type.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a35bf5cfd9033d120edeaa4342b251c94">   84</a></span>&#160;  std::size_t <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a35bf5cfd9033d120edeaa4342b251c94">capacity</a>() const noexcept</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(data_);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// Get the port associated with the endpoint.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6022bfaada105309b199c8fb06fe6bb0">port</a>() const noexcept;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">// Set the port associated with the endpoint.</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6022bfaada105309b199c8fb06fe6bb0">port</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port_num) noexcept;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// Get the IP address associated with the endpoint.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="namespaceasio.html">asio</a>::ip::<a class="code" href="classasio_1_1ip_1_1address.html">address</a> <a class="code" href="classasio_1_1ip_1_1address.html">address</a>() const noexcept;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// Set the IP address associated with the endpoint.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ip_1_1address.html">address</a>(</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      const <a class="code" href="namespaceasio.html">asio</a>::ip::<a class="code" href="classasio_1_1ip_1_1address.html">address</a>&amp; addr) noexcept;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// Compare two endpoints for equality.</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> friend <span class="keywordtype">bool</span> operator==(const <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; e1,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      const <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; e2) noexcept;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">// Compare endpoints for ordering.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> friend <span class="keywordtype">bool</span> operator&lt;(const <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; e1,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      const <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; e2) noexcept;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="comment">// Determine whether the endpoint is IPv4.</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6baaafc63573c01e94d4e31286d4eb56">  111</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6baaafc63573c01e94d4e31286d4eb56">is_v4</a>() const noexcept</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> data_.base.sa_family == <a class="code" href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a>(AF_INET);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="comment">// Convert to a string.</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> std::string <a class="code" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a80f9208b3fd9749e11d29b35ec4d7ef1">to_string</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="comment">// The underlying IP socket address.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">union </span>data_union</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a> base;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#a80851db41f97eb12822e2f409d444aa6">asio::detail::sockaddr_in4_type</a> v4;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="namespaceasio_1_1detail.html#a57768e6ae10076201e58c76fe4e8495d">asio::detail::sockaddr_in6_type</a> v6;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  } data_;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;} <span class="comment">// namespace ip</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#if defined(ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="ip_2detail_2impl_2endpoint_8ipp.html">asio/ip/detail/impl/endpoint.ipp</a>&quot;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_IP_DETAIL_ENDPOINT_HPP</span></div>
+<div class="ttc" id="aaddress_8hpp_html"><div class="ttname"><a href="address_8hpp.html">address.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1address_html"><div class="ttname"><a href="classasio_1_1ip_1_1address.html">asio::ip::address</a></div><div class="ttdoc">Implements version-independent IP addresses.</div><div class="ttdef"><b>Definition:</b> address.hpp:48</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html">asio::ip::detail::endpoint</a></div><div class="ttdef"><b>Definition:</b> endpoint.hpp:33</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a24b7f29dbc46dcfbb59cd89f2d316918"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a24b7f29dbc46dcfbb59cd89f2d316918">asio::ip::detail::endpoint::data</a></div><div class="ttdeci">const asio::detail::socket_addr_type * data() const noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.hpp:66</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a351151a62463d6f3c5bc3dbbdcb407e5"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a351151a62463d6f3c5bc3dbbdcb407e5">asio::ip::detail::endpoint::resize</a></div><div class="ttdeci">ASIO_DECL void resize(std::size_t new_size)</div><div class="ttdef"><b>Definition:</b> endpoint.ipp:100</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a35bf5cfd9033d120edeaa4342b251c94"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a35bf5cfd9033d120edeaa4342b251c94">asio::ip::detail::endpoint::capacity</a></div><div class="ttdeci">std::size_t capacity() const noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.hpp:84</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a6022bfaada105309b199c8fb06fe6bb0"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6022bfaada105309b199c8fb06fe6bb0">asio::ip::detail::endpoint::port</a></div><div class="ttdeci">ASIO_DECL unsigned short port() const noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.ipp:109</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a66fec9c2f69a90d0d357897f8aecd70e"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a66fec9c2f69a90d0d357897f8aecd70e">asio::ip::detail::endpoint::size</a></div><div class="ttdeci">std::size_t size() const noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.hpp:72</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a67162e9e1c9c52cd24f99ccd70a94bc7"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a67162e9e1c9c52cd24f99ccd70a94bc7">asio::ip::detail::endpoint::operator=</a></div><div class="ttdeci">endpoint &amp; operator=(const endpoint &amp;other) noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.hpp:53</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a6baaafc63573c01e94d4e31286d4eb56"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6baaafc63573c01e94d4e31286d4eb56">asio::ip::detail::endpoint::is_v4</a></div><div class="ttdeci">bool is_v4() const noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.hpp:111</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a7d1c1f37747b16e0eefe2880e02da3ec"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a7d1c1f37747b16e0eefe2880e02da3ec">asio::ip::detail::endpoint::endpoint</a></div><div class="ttdeci">endpoint(const endpoint &amp;other) noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.hpp:47</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a80f9208b3fd9749e11d29b35ec4d7ef1"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a80f9208b3fd9749e11d29b35ec4d7ef1">asio::ip::detail::endpoint::to_string</a></div><div class="ttdeci">ASIO_DECL std::string to_string() const</div><div class="ttdef"><b>Definition:</b> endpoint.ipp:175</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_a81390152151c98b21d1b637761949c84"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#a81390152151c98b21d1b637761949c84">asio::ip::detail::endpoint::data</a></div><div class="ttdeci">asio::detail::socket_addr_type * data() noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.hpp:60</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1detail_1_1endpoint_html_acf826f1e969adb7c769e38d4de1212a0"><div class="ttname"><a href="classasio_1_1ip_1_1detail_1_1endpoint.html#acf826f1e969adb7c769e38d4de1212a0">asio::ip::detail::endpoint::endpoint</a></div><div class="ttdeci">ASIO_DECL endpoint() noexcept</div><div class="ttdef"><b>Definition:</b> endpoint.ipp:34</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_ab54d01ea04afeb9a8b39cfac467656b7"><div class="ttname"><a href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a></div><div class="ttdeci">#define ASIO_DECL</div><div class="ttdef"><b>Definition:</b> config.hpp:70</div></div>
+<div class="ttc" id="aerror__code_8hpp_html"><div class="ttname"><a href="error__code_8hpp.html">error_code.hpp</a></div></div>
+<div class="ttc" id="aip_2detail_2impl_2endpoint_8ipp_html"><div class="ttname"><a href="ip_2detail_2impl_2endpoint_8ipp.html">endpoint.ipp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a40a7b0385a38f87815ffbb8df5e34d05"><div class="ttname"><a href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a></div><div class="ttdeci">sockaddr socket_addr_type</div><div class="ttdef"><b>Definition:</b> socket_types.hpp:305</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a57768e6ae10076201e58c76fe4e8495d"><div class="ttname"><a href="namespaceasio_1_1detail.html#a57768e6ae10076201e58c76fe4e8495d">asio::detail::sockaddr_in6_type</a></div><div class="ttdeci">sockaddr_in6 sockaddr_in6_type</div><div class="ttdef"><b>Definition:</b> socket_types.hpp:320</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a80851db41f97eb12822e2f409d444aa6"><div class="ttname"><a href="namespaceasio_1_1detail.html#a80851db41f97eb12822e2f409d444aa6">asio::detail::sockaddr_in4_type</a></div><div class="ttdeci">sockaddr_in sockaddr_in4_type</div><div class="ttdef"><b>Definition:</b> socket_types.hpp:317</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="asocket__types_8hpp_html"><div class="ttname"><a href="socket__types_8hpp.html">socket_types.hpp</a></div></div>
+<div class="ttc" id="asocket__types_8hpp_html_a26e0208fa086ac48cf5af1b2a521c74a"><div class="ttname"><a href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a></div><div class="ttdeci">#define ASIO_OS_DEF(c)</div><div class="ttdef"><b>Definition:</b> socket_types.hpp:333</div></div>
+<div class="ttc" id="awinsock__init_8hpp_html"><div class="ttname"><a href="winsock__init_8hpp.html">winsock_init.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

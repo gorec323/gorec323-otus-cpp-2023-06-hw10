@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/src/examples/cpp03/icmp/icmp_header.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_e5c02afa3792a27ac86a89f1743ac235.html">icmp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">icmp_header.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="icmp__header_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// icmp_header.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ICMP_HEADER_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ICMP_HEADER_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;istream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// ICMP header for both IPv4 and IPv6.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// The wire format of an ICMP header is:</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// 0               8               16                             31</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// +---------------+---------------+------------------------------+      ---</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// |               |               |                              |       ^</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// |     type      |     code      |          checksum            |       |</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// |               |               |                              |       |</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// +---------------+---------------+------------------------------+    8 bytes</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// |                               |                              |       |</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// |          identifier           |       sequence number        |       |</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// |                               |                              |       v</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// +-------------------------------+------------------------------+      ---</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classicmp__header.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classicmp__header.html">icmp_header</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a2df70928abce2f4c7c6be5b52370f405">   36</a></span>&#160;  <span class="keyword">enum</span> { <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1afe613e4fd9b2673488ab341d04e467ba">echo_reply</a> = 0, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a2df70928abce2f4c7c6be5b52370f405">destination_unreachable</a> = 3, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1aa9f7575da433e0cceb16393ddd34f664">source_quench</a> = 4,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1afe7aa8be042808ff82529ea9201a638c">   37</a></span>&#160;    <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a79484ba871e5efba55d67a442f405642">redirect</a> = 5, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1afe7aa8be042808ff82529ea9201a638c">echo_request</a> = 8, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a691f2a58a89c193ced3d6cf83c829042">time_exceeded</a> = 11, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a732917175b266fbed0704f0c094298a9">parameter_problem</a> = 12,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a24e2cc22ee712369192ad564388a9beb">   38</a></span>&#160;    <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a1a67af286c9ee6cbf83ef0dd3170694b">timestamp_request</a> = 13, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1aadc9cdd16e93db6a9627dd86f1a5635c">timestamp_reply</a> = 14, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a24e2cc22ee712369192ad564388a9beb">info_request</a> = 15,</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1ad94209ec6573ce211fa199d339f0a1c9">   39</a></span>&#160;    <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a8f532c6f0f9ad85e422e44f7880b1588">info_reply</a> = 16, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a763b71e49f5429afe0f910e48b91f0dd">address_request</a> = 17, <a class="code" href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1ad94209ec6573ce211fa199d339f0a1c9">address_reply</a> = 18 };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classicmp__header.html#aaa73258729271811939b673d99a319fa">   41</a></span>&#160;  <a class="code" href="classicmp__header.html#aaa73258729271811939b673d99a319fa">icmp_header</a>() { std::fill(rep_, rep_ + <span class="keyword">sizeof</span>(rep_), 0); }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classicmp__header.html#a97e2fc3551e8dc546d0373f471584ce4">   43</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classicmp__header.html#a97e2fc3551e8dc546d0373f471584ce4">type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rep_[0]; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classicmp__header.html#a6a49917ec6b3f285b4b947264c518b32">   44</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classicmp__header.html#a6a49917ec6b3f285b4b947264c518b32">code</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rep_[1]; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classicmp__header.html#a6e5df63073257b6ae45d23d31b1f8e5f">   45</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classicmp__header.html#a6e5df63073257b6ae45d23d31b1f8e5f">checksum</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decode(2, 3); }</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classicmp__header.html#ac99acca4f696366e139239727a277372">   46</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classicmp__header.html#ac99acca4f696366e139239727a277372">identifier</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decode(4, 5); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classicmp__header.html#afe17a3ca722ec5c8cf63a58d1fd6eb7e">   47</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="classicmp__header.html#afe17a3ca722ec5c8cf63a58d1fd6eb7e">sequence_number</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decode(6, 7); }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classicmp__header.html#ad899733236c0179ddd4abf81a8360865">   49</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classicmp__header.html#ad899733236c0179ddd4abf81a8360865">type</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> n) { rep_[0] = n; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classicmp__header.html#ac7ed769aaae8bd069f256e5e381d4412">   50</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classicmp__header.html#ac7ed769aaae8bd069f256e5e381d4412">code</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> n) { rep_[1] = n; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classicmp__header.html#adab5fb1c91da3fd74f891ec363c37e42">   51</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classicmp__header.html#adab5fb1c91da3fd74f891ec363c37e42">checksum</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n) { encode(2, 3, n); }</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classicmp__header.html#a973926994136520a0c0ea92c9734fb17">   52</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classicmp__header.html#a973926994136520a0c0ea92c9734fb17">identifier</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n) { encode(4, 5, n); }</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classicmp__header.html#a8201060143857f888eebc81cc5333826">   53</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classicmp__header.html#a8201060143857f888eebc81cc5333826">sequence_number</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n) { encode(6, 7, n); }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classicmp__header.html#a0cbdee69c2e777f976b21ab73e7acba6">   55</a></span>&#160;  <span class="keyword">friend</span> std::istream&amp; <a class="code" href="classicmp__header.html#a0cbdee69c2e777f976b21ab73e7acba6">operator&gt;&gt;</a>(std::istream&amp; is, <a class="code" href="classicmp__header.html">icmp_header</a>&amp; header)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    { <span class="keywordflow">return</span> is.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(header.rep_), 8); }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classicmp__header.html#a47d15db3a448120341f7f4d6a1f80aa5">   58</a></span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classicmp__header.html#a47d15db3a448120341f7f4d6a1f80aa5">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classicmp__header.html">icmp_header</a>&amp; header)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    { <span class="keywordflow">return</span> os.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(header.rep_), 8); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> decode(<span class="keywordtype">int</span> <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, <span class="keywordtype">int</span> b)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> (rep_[<a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>] &lt;&lt; 8) + rep_[b]; }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> encode(<span class="keywordtype">int</span> <a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, <span class="keywordtype">int</span> b, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    rep_[<a class="code" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(n &gt;&gt; 8);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    rep_[b] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(n &amp; 0xFF);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> rep_[8];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="icmp__header_8hpp.html#a8bdff88af42df68f429fbae1f8eaacaa">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="icmp__header_8hpp.html#a8bdff88af42df68f429fbae1f8eaacaa">compute_checksum</a>(<a class="code" href="classicmp__header.html">icmp_header</a>&amp; header,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Iterator body_begin, Iterator body_end)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sum = (header.<a class="code" href="classicmp__header.html#a97e2fc3551e8dc546d0373f471584ce4">type</a>() &lt;&lt; 8) + header.<a class="code" href="classicmp__header.html#a6a49917ec6b3f285b4b947264c518b32">code</a>()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    + header.<a class="code" href="classicmp__header.html#ac99acca4f696366e139239727a277372">identifier</a>() + header.<a class="code" href="classicmp__header.html#afe17a3ca722ec5c8cf63a58d1fd6eb7e">sequence_number</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  Iterator body_iter = body_begin;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">while</span> (body_iter != body_end)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    sum += (<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(*body_iter++) &lt;&lt; 8);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (body_iter != body_end)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      sum += <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(*body_iter++);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  sum = (sum &gt;&gt; 16) + (sum &amp; 0xFFFF);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  sum += (sum &gt;&gt; 16);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  header.<a class="code" href="classicmp__header.html#a6e5df63073257b6ae45d23d31b1f8e5f">checksum</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(~sum));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ICMP_HEADER_HPP</span></div>
+<div class="ttc" id="aclassicmp__header_html"><div class="ttname"><a href="classicmp__header.html">icmp_header</a></div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:34</div></div>
+<div class="ttc" id="aclassicmp__header_html_a0cbdee69c2e777f976b21ab73e7acba6"><div class="ttname"><a href="classicmp__header.html#a0cbdee69c2e777f976b21ab73e7acba6">icmp_header::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;is, icmp_header &amp;header)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:55</div></div>
+<div class="ttc" id="aclassicmp__header_html_a47d15db3a448120341f7f4d6a1f80aa5"><div class="ttname"><a href="classicmp__header.html#a47d15db3a448120341f7f4d6a1f80aa5">icmp_header::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const icmp_header &amp;header)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:58</div></div>
+<div class="ttc" id="aclassicmp__header_html_a6a49917ec6b3f285b4b947264c518b32"><div class="ttname"><a href="classicmp__header.html#a6a49917ec6b3f285b4b947264c518b32">icmp_header::code</a></div><div class="ttdeci">unsigned char code() const</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:44</div></div>
+<div class="ttc" id="aclassicmp__header_html_a6e5df63073257b6ae45d23d31b1f8e5f"><div class="ttname"><a href="classicmp__header.html#a6e5df63073257b6ae45d23d31b1f8e5f">icmp_header::checksum</a></div><div class="ttdeci">unsigned short checksum() const</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:45</div></div>
+<div class="ttc" id="aclassicmp__header_html_a8201060143857f888eebc81cc5333826"><div class="ttname"><a href="classicmp__header.html#a8201060143857f888eebc81cc5333826">icmp_header::sequence_number</a></div><div class="ttdeci">void sequence_number(unsigned short n)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:53</div></div>
+<div class="ttc" id="aclassicmp__header_html_a973926994136520a0c0ea92c9734fb17"><div class="ttname"><a href="classicmp__header.html#a973926994136520a0c0ea92c9734fb17">icmp_header::identifier</a></div><div class="ttdeci">void identifier(unsigned short n)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:52</div></div>
+<div class="ttc" id="aclassicmp__header_html_a97e2fc3551e8dc546d0373f471584ce4"><div class="ttname"><a href="classicmp__header.html#a97e2fc3551e8dc546d0373f471584ce4">icmp_header::type</a></div><div class="ttdeci">unsigned char type() const</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:43</div></div>
+<div class="ttc" id="aclassicmp__header_html_aaa73258729271811939b673d99a319fa"><div class="ttname"><a href="classicmp__header.html#aaa73258729271811939b673d99a319fa">icmp_header::icmp_header</a></div><div class="ttdeci">icmp_header()</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:41</div></div>
+<div class="ttc" id="aclassicmp__header_html_ac7ed769aaae8bd069f256e5e381d4412"><div class="ttname"><a href="classicmp__header.html#ac7ed769aaae8bd069f256e5e381d4412">icmp_header::code</a></div><div class="ttdeci">void code(unsigned char n)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:50</div></div>
+<div class="ttc" id="aclassicmp__header_html_ac99acca4f696366e139239727a277372"><div class="ttname"><a href="classicmp__header.html#ac99acca4f696366e139239727a277372">icmp_header::identifier</a></div><div class="ttdeci">unsigned short identifier() const</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:46</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a1a67af286c9ee6cbf83ef0dd3170694b"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a1a67af286c9ee6cbf83ef0dd3170694b">icmp_header::timestamp_request</a></div><div class="ttdeci">@ timestamp_request</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:38</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a24e2cc22ee712369192ad564388a9beb"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a24e2cc22ee712369192ad564388a9beb">icmp_header::info_request</a></div><div class="ttdeci">@ info_request</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:38</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a2df70928abce2f4c7c6be5b52370f405"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a2df70928abce2f4c7c6be5b52370f405">icmp_header::destination_unreachable</a></div><div class="ttdeci">@ destination_unreachable</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:36</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a691f2a58a89c193ced3d6cf83c829042"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a691f2a58a89c193ced3d6cf83c829042">icmp_header::time_exceeded</a></div><div class="ttdeci">@ time_exceeded</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:37</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a732917175b266fbed0704f0c094298a9"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a732917175b266fbed0704f0c094298a9">icmp_header::parameter_problem</a></div><div class="ttdeci">@ parameter_problem</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:37</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a763b71e49f5429afe0f910e48b91f0dd"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a763b71e49f5429afe0f910e48b91f0dd">icmp_header::address_request</a></div><div class="ttdeci">@ address_request</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:39</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a79484ba871e5efba55d67a442f405642"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a79484ba871e5efba55d67a442f405642">icmp_header::redirect</a></div><div class="ttdeci">@ redirect</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:37</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1a8f532c6f0f9ad85e422e44f7880b1588"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1a8f532c6f0f9ad85e422e44f7880b1588">icmp_header::info_reply</a></div><div class="ttdeci">@ info_reply</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:39</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1aa9f7575da433e0cceb16393ddd34f664"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1aa9f7575da433e0cceb16393ddd34f664">icmp_header::source_quench</a></div><div class="ttdeci">@ source_quench</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:36</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1aadc9cdd16e93db6a9627dd86f1a5635c"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1aadc9cdd16e93db6a9627dd86f1a5635c">icmp_header::timestamp_reply</a></div><div class="ttdeci">@ timestamp_reply</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:38</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1ad94209ec6573ce211fa199d339f0a1c9"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1ad94209ec6573ce211fa199d339f0a1c9">icmp_header::address_reply</a></div><div class="ttdeci">@ address_reply</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:39</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1afe613e4fd9b2673488ab341d04e467ba"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1afe613e4fd9b2673488ab341d04e467ba">icmp_header::echo_reply</a></div><div class="ttdeci">@ echo_reply</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:36</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad423d6287257d704aac94358700dcbc1afe7aa8be042808ff82529ea9201a638c"><div class="ttname"><a href="classicmp__header.html#ad423d6287257d704aac94358700dcbc1afe7aa8be042808ff82529ea9201a638c">icmp_header::echo_request</a></div><div class="ttdeci">@ echo_request</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:37</div></div>
+<div class="ttc" id="aclassicmp__header_html_ad899733236c0179ddd4abf81a8360865"><div class="ttname"><a href="classicmp__header.html#ad899733236c0179ddd4abf81a8360865">icmp_header::type</a></div><div class="ttdeci">void type(unsigned char n)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:49</div></div>
+<div class="ttc" id="aclassicmp__header_html_adab5fb1c91da3fd74f891ec363c37e42"><div class="ttname"><a href="classicmp__header.html#adab5fb1c91da3fd74f891ec363c37e42">icmp_header::checksum</a></div><div class="ttdeci">void checksum(unsigned short n)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:51</div></div>
+<div class="ttc" id="aclassicmp__header_html_afe17a3ca722ec5c8cf63a58d1fd6eb7e"><div class="ttname"><a href="classicmp__header.html#afe17a3ca722ec5c8cf63a58d1fd6eb7e">icmp_header::sequence_number</a></div><div class="ttdeci">unsigned short sequence_number() const</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:47</div></div>
+<div class="ttc" id="aicmp__header_8hpp_html_a8bdff88af42df68f429fbae1f8eaacaa"><div class="ttname"><a href="icmp__header_8hpp.html#a8bdff88af42df68f429fbae1f8eaacaa">compute_checksum</a></div><div class="ttdeci">void compute_checksum(icmp_header &amp;header, Iterator body_begin, Iterator body_end)</div><div class="ttdef"><b>Definition:</b> icmp_header.hpp:75</div></div>
+<div class="ttc" id="anamespaceasio_html_aa80c4033469ae5aaa092c0d49852403c"><div class="ttname"><a href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">asio::a</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; a</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

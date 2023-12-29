@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/ssl/context.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_e872c7a9c28230c9190c76f5690636af.html">ssl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл context.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="buffer_8hpp_source.html">asio/buffer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8hpp_source.html">asio/io_context.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="context__base_8hpp_source.html">asio/ssl/context_base.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="openssl__types_8hpp_source.html">asio/ssl/detail/openssl_types.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="openssl__init_8hpp_source.html">asio/ssl/detail/openssl_init.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="password__callback_8hpp_source.html">asio/ssl/detail/password_callback.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="verify__callback_8hpp_source.html">asio/ssl/detail/verify_callback.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="verify__mode_8hpp_source.html">asio/ssl/verify_mode.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ssl_2impl_2context_8hpp_source.html">asio/ssl/impl/context.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для context.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="ssl_2context_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2ssl_2context_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2ssl_2context_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2ssl_2context_8hpp">
+<area shape="rect" title=" " alt="" coords="3801,5,4007,47"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="1830,452,1991,479"/>
+<area shape="rect" title=" " alt="" coords="3472,281,3531,307"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="787,191,906,218"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="3053,452,3261,479"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3555,452,3757,479"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="2633,102,2783,129"/>
+<area shape="rect" href="context__base_8hpp.html" title=" " alt="" coords="3809,191,3999,218"/>
+<area shape="rect" href="openssl__types_8hpp.html" title=" " alt="" coords="4270,273,4437,315"/>
+<area shape="rect" href="openssl__init_8hpp.html" title=" " alt="" coords="2075,184,2242,225"/>
+<area shape="rect" href="password__callback_8hpp.html" title=" " alt="" coords="3412,95,3591,136"/>
+<area shape="rect" href="verify__callback_8hpp.html" title=" " alt="" coords="5338,95,5491,136"/>
+<area shape="rect" href="verify__mode_8hpp.html" title=" " alt="" coords="4024,191,4208,218"/>
+<area shape="rect" href="ssl_2impl_2context_8hpp.html" title=" " alt="" coords="5469,370,5654,397"/>
+<area shape="rect" title=" " alt="" coords="2299,527,2370,553"/>
+<area shape="rect" title=" " alt="" coords="1925,527,2054,553"/>
+<area shape="rect" title=" " alt="" coords="1761,527,1900,553"/>
+<area shape="rect" title=" " alt="" coords="1528,281,1595,307"/>
+<area shape="rect" title=" " alt="" coords="355,281,413,307"/>
+<area shape="rect" title=" " alt="" coords="2177,370,2263,397"/>
+<area shape="rect" title=" " alt="" coords="438,281,501,307"/>
+<area shape="rect" href="array__fwd_8hpp.html" title=" " alt="" coords="93,281,280,307"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="731,281,906,307"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="449,370,679,397"/>
+<area shape="rect" href="string__view_8hpp.html" title=" " alt="" coords="576,273,707,315"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1149,370,1341,397"/>
+<area shape="rect" href="is__contiguous__iterator_8hpp.html" title=" " alt="" coords="982,273,1125,315"/>
+<area shape="rect" href="is__buffer__sequence_8hpp.html" title=" " alt="" coords="1201,273,1351,315"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="806,370,973,397"/>
+<area shape="rect" title=" " alt="" coords="2771,370,2847,397"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="1821,281,1984,307"/>
+<area shape="rect" href="chrono_8hpp.html" title=" " alt="" coords="1742,191,1909,218"/>
+<area shape="rect" href="concurrency__hint_8hpp.html" title=" " alt="" coords="2317,273,2491,315"/>
+<area shape="rect" href="wrapped__handler_8hpp.html" title=" " alt="" coords="3665,363,3815,404"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="3025,370,3175,397"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="2824,191,2968,218"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="2616,281,2816,307"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="2616,191,2800,218"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="2009,281,2191,307"/>
+<area shape="rect" href="noncopyable_8hpp.html" title=" " alt="" coords="2389,370,2595,397"/>
+<area shape="rect" href="socket__types_8hpp.html" title=" " alt="" coords="3504,363,3640,404"/>
+<area shape="rect" title=" " alt="" coords="4996,370,5111,397"/>
+<area shape="rect" title=" " alt="" coords="5135,370,5241,397"/>
+<area shape="rect" title=" " alt="" coords="4145,370,4277,397"/>
+<area shape="rect" title=" " alt="" coords="4301,370,4405,397"/>
+<area shape="rect" title=" " alt="" coords="4430,370,4535,397"/>
+<area shape="rect" title=" " alt="" coords="4559,370,4667,397"/>
+<area shape="rect" title=" " alt="" coords="4692,370,4812,397"/>
+<area shape="rect" title=" " alt="" coords="4836,370,4972,397"/>
+<area shape="rect" href="verify__context_8hpp.html" title=" " alt="" coords="5317,191,5513,218"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="ssl_2context_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2ssl_2context_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2ssl_2context_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2ssl_2context_8hppdep">
+<area shape="rect" title=" " alt="" coords="493,5,699,47"/>
+<area shape="rect" href="context_8ipp.html" title=" " alt="" coords="321,95,479,151"/>
+<area shape="rect" href="stream_8hpp.html" title=" " alt="" coords="565,102,769,143"/>
+<area shape="rect" href="ssl_8hpp.html" title=" " alt="" coords="537,206,692,247"/>
+<area shape="rect" href="context_8cpp.html" title=" " alt="" coords="793,95,940,151"/>
+<area shape="rect" href="ssl_2impl_2src_8hpp.html" title=" " alt="" coords="302,199,461,255"/>
+<area shape="rect" href="asio__ssl_8cpp.html" title=" " alt="" coords="5,310,152,351"/>
+<area shape="rect" href="stream_8cpp.html" title=" " alt="" coords="897,303,1044,359"/>
+<area shape="rect" href="examples_2cpp03_2ssl_2client_8cpp.html" title=" " alt="" coords="177,303,333,359"/>
+<area shape="rect" href="examples_2cpp03_2ssl_2server_8cpp.html" title=" " alt="" coords="357,303,513,359"/>
+<area shape="rect" href="examples_2cpp11_2ssl_2client_8cpp.html" title=" " alt="" coords="537,303,693,359"/>
+<area shape="rect" href="examples_2cpp11_2ssl_2server_8cpp.html" title=" " alt="" coords="717,303,873,359"/>
+</map>
+</div>
+</div>
+<p><a href="ssl_2context_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ssl_1_1context.html">asio::ssl::context</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1ssl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1ssl.html">asio::ssl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

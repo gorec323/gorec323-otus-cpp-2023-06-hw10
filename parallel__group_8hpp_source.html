@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/experimental/parallel_group.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_4b7ec68c1dc10d9fd423a12bdfeaade0.html">experimental</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">parallel_group.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="parallel__group_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// experimental/parallel_group.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_EXPERIMENTAL_PARALLEL_GROUP_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_EXPERIMENTAL_PARALLEL_GROUP_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="array_8hpp.html">asio/detail/array.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="memory_8hpp.html">asio/detail/memory.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utility_8hpp.html">asio/detail/utility.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cancellation__condition_8hpp.html">asio/experimental/cancellation_condition.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>experimental {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// Helper trait for getting a tuple from a completion signature.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Signature&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple.html">parallel_op_signature_as_tuple</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple_3_01R_07Args_8_8_8_08_4.html">   38</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple.html">parallel_op_signature_as_tuple</a>&lt;R(Args...)&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple_3_01R_07Args_8_8_8_08_4.html#a1077b426b5fd08a53f3a5ce63bd4e708">   40</a></span>&#160;  <span class="keyword">typedef</span> std::tuple&lt;decay_t&lt;Args&gt;...&gt; <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple_3_01R_07Args_8_8_8_08_4.html#a1077b426b5fd08a53f3a5ce63bd4e708">type</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// Helper trait for concatenating completion signatures.</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">template</span> &lt;std::size_t N, <span class="keyword">typename</span> Offsets, <span class="keyword">typename</span>... Signatures&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">   46</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;std::size_t N, <span class="keyword">typename</span> R0, <span class="keyword">typename</span>... Args0&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html">   49</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature</a>&lt;N, R0(Args0...)&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a405c31d04c8b95cd73246257a5f54397">   51</a></span>&#160;  <span class="keyword">typedef</span> asio::detail::array&lt;std::size_t, N&gt; <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a405c31d04c8b95cd73246257a5f54397">order_type</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a21f857d790fe25b12b8e7d2d2dfc11a5">   52</a></span>&#160;  <span class="keyword">typedef</span> R0 <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a21f857d790fe25b12b8e7d2d2dfc11a5">raw_type</a>(Args0...);</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a57b1eb1212ebebb254ecfced105710c3">   53</a></span>&#160;  <span class="keyword">typedef</span> R0 <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a57b1eb1212ebebb254ecfced105710c3">type</a>(<a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a405c31d04c8b95cd73246257a5f54397">order_type</a>, Args0...);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span> &lt;std::size_t N,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">typename</span> R0, <span class="keyword">typename</span>... Args0,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typename</span> R1, <span class="keyword">typename</span>... Args1&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html">   59</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature</a>&lt;N, R0(Args0...), R1(Args1...)&gt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#a00d89412d10fad24df952e5ac6dc90a7">   61</a></span>&#160;  <span class="keyword">typedef</span> asio::detail::array&lt;std::size_t, N&gt; <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#a00d89412d10fad24df952e5ac6dc90a7">order_type</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#ad190bc1a8c1a208f16b8a1464b365d4b">   62</a></span>&#160;  <span class="keyword">typedef</span> R0 <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#ad190bc1a8c1a208f16b8a1464b365d4b">raw_type</a>(Args0..., Args1...);</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#a68c7936c83c4b2add4d9a6b22c407240">   63</a></span>&#160;  <span class="keyword">typedef</span> R0 <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#a68c7936c83c4b2add4d9a6b22c407240">type</a>(<a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#a00d89412d10fad24df952e5ac6dc90a7">order_type</a>, Args0..., Args1...);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span> &lt;std::size_t N, <span class="keyword">typename</span> Sig0,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typename</span> Sig1, <span class="keyword">typename</span>... SigN&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html">   68</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature</a>&lt;N, Sig0, Sig1, SigN...&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#ad02cac6c665d7b95fabfbdc983a96ac2">   70</a></span>&#160;  <span class="keyword">typedef</span> asio::detail::array&lt;std::size_t, N&gt; <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#ad02cac6c665d7b95fabfbdc983a96ac2">order_type</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature</a>&lt;N,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">typename</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature&lt;N, Sig0, Sig1&gt;::raw_type</a>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#ac209c190bf027829684f95c11a858fb0">   73</a></span>&#160;      SigN...&gt;<a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#ac209c190bf027829684f95c11a858fb0">::raw_type</a> <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#ac209c190bf027829684f95c11a858fb0">raw_type</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature</a>&lt;N,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">typename</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">parallel_group_signature&lt;N, Sig0, Sig1&gt;::raw_type</a>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#a96f553801acf81e5fa8bdc89a517de00">   76</a></span>&#160;      SigN...&gt;<a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#a96f553801acf81e5fa8bdc89a517de00">::type</a> <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#a96f553801acf81e5fa8bdc89a517de00">type</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Condition, <span class="keyword">typename</span> Handler,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">typename</span>... Ops, std::size_t... I&gt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceasio_1_1experimental_1_1detail.html#a5155da6b31e45aa31cc8eba8573bd33b">parallel_group_launch</a>(Condition cancellation_condition, Handler handler,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::tuple&lt;Ops...&gt;&amp; ops, <a class="code" href="structasio_1_1detail_1_1index__sequence.html">asio::detail::index_sequence&lt;I...&gt;</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// Helper trait for determining ranged parallel group completion signatures.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Signature, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature.html">   87</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature.html">ranged_parallel_group_signature</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span>... Args, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html">   90</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature.html">ranged_parallel_group_signature</a>&lt;R(Args...), Allocator&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">typedef</span> std::vector&lt;std::size_t,</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#a603f7ce007993dd4f64888acfe6d9fcb">   93</a></span>&#160;    <a class="code" href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a>(Allocator, std::size_t)&gt; <a class="code" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#a603f7ce007993dd4f64888acfe6d9fcb">order_type</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#aa1945f9bbc090940129b0221d9932ee5">   94</a></span>&#160;  <span class="keyword">typedef</span> R <a class="code" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#aa1945f9bbc090940129b0221d9932ee5">raw_type</a>(</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      std::vector&lt;Args, <a class="code" href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a>(Allocator, Args)&gt;...);</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#aaf2fe958bdcf34e5609f9feccaadd4c4">   96</a></span>&#160;  <span class="keyword">typedef</span> R <a class="code" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#aaf2fe958bdcf34e5609f9feccaadd4c4">type</a>(<a class="code" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#a603f7ce007993dd4f64888acfe6d9fcb">order_type</a>,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      std::vector&lt;Args, <a class="code" href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a>(Allocator, Args)&gt;...);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Condition, <span class="keyword">typename</span> Handler,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typename</span> Range, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceasio_1_1experimental_1_1detail.html#a2f2e4ee1b1dd77b4c6f88ae7e7c6102e">ranged_parallel_group_launch</a>(Condition cancellation_condition,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    Handler handler, Range&amp;&amp; range, <span class="keyword">const</span> Allocator&amp; <a class="code" href="classallocator.html">allocator</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental_1_1detail.html#a9896ced11a4b3f59775e5c50e3eff5bd">  105</a></span>&#160;char (&amp;<a class="code" href="namespaceasio_1_1experimental_1_1detail.html#a9896ced11a4b3f59775e5c50e3eff5bd">parallel_group_has_iterator_helper</a>(...))[2];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental_1_1detail.html#afbc804164fc1ab318df3c3f4c4c08f4d">  108</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="namespaceasio_1_1experimental_1_1detail.html#a9896ced11a4b3f59775e5c50e3eff5bd">parallel_group_has_iterator_helper</a>(<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>*, <span class="keyword">typename</span> T::iterator* = 0);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef.html">  111</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef.html">parallel_group_has_iterator_typedef</a></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef.html#a255d201c9d3dcfa3fd9e4db417f29be1a82bfd999a56a9724143804e26fa7c31a">  113</a></span>&#160;  <span class="keyword">enum</span> { <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef.html#a255d201c9d3dcfa3fd9e4db417f29be1a82bfd999a56a9724143804e26fa7c31a">value</a> = (<span class="keyword">sizeof</span>((<a class="code" href="namespaceasio_1_1experimental_1_1detail.html#a9896ced11a4b3f59775e5c50e3eff5bd">parallel_group_has_iterator_helper</a>)((<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>*)(0))) == 1) };</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1is__async__operation__range.html">  121</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1is__async__operation__range.html">is_async_operation_range</a></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structasio_1_1experimental_1_1is__async__operation__range.html#a34629cb770e1974b51c5282121bef8c1a3d751dfa35a41b9df95224dfe037db60">value</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">enum</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="structasio_1_1experimental_1_1is__async__operation__range.html#a34629cb770e1974b51c5282121bef8c1a3d751dfa35a41b9df95224dfe037db60">value</a> = <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef.html">detail::parallel_group_has_iterator_typedef&lt;T&gt;::value</a></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1is__async__operation__range.html#a34629cb770e1974b51c5282121bef8c1a3d751dfa35a41b9df95224dfe037db60">  131</a></span>&#160;  };</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ops&gt;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1parallel__group.html">  141</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1experimental_1_1parallel__group.html">parallel_group</a></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keyword">struct </span>initiate_async_wait</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Handler, <span class="keyword">typename</span> Condition&gt;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">void</span> operator()(Handler&amp;&amp; h, Condition&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>, std::tuple&lt;Ops...&gt;&amp;&amp; ops)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <a class="code" href="namespaceasio_1_1experimental_1_1detail.html#a5155da6b31e45aa31cc8eba8573bd33b">detail::parallel_group_launch</a>(</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;          std::forward&lt;Condition&gt;(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>), std::forward&lt;Handler&gt;(h),</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;          ops, <a class="code" href="namespaceasio_1_1detail.html#a77aafd11960ce22354929e856123b0cb">asio::detail::index_sequence_for&lt;Ops...&gt;</a>());</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  };</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  std::tuple&lt;Ops...&gt; ops_;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1parallel__group.html#a5b0e87742c0a15534a45f451aad5cada">  159</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1experimental_1_1parallel__group.html#a5b0e87742c0a15534a45f451aad5cada">parallel_group</a>(Ops... ops)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    : ops_(<a class="code" href="namespacestd.html">std</a>::move(ops)...)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">detail::parallel_group_signature</a>&lt;<span class="keyword">sizeof</span>...(Ops),</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1parallel__group.html#aebac73ff4aa56fca3974e446344ecff1">  166</a></span>&#160;      <a class="code" href="namespaceasio.html#a7335867dac5c662e8386346c9669d710">completion_signature_of_t&lt;Ops&gt;</a>...&gt;::type <a class="code" href="classasio_1_1experimental_1_1parallel__group.html#aebac73ff4aa56fca3974e446344ecff1">signature</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> CancellationCondition,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<a class="code" href="classasio_1_1experimental_1_1parallel__group.html#aebac73ff4aa56fca3974e446344ecff1">signature</a>) CompletionToken&gt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1parallel__group.html#a917ee7cb355f1b3d4f120284831add00">  192</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classasio_1_1experimental_1_1parallel__group.html#a917ee7cb355f1b3d4f120284831add00">async_wait</a>(CancellationCondition cancellation_condition,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    -&gt; decltype(</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      asio::async_initiate&lt;CompletionToken, signature&gt;(</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        declval&lt;initiate_async_wait&gt;(), <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>,</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        std::move(cancellation_condition), std::move(ops_)))</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> asio::async_initiate&lt;CompletionToken, signature&gt;(</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        initiate_async_wait(), <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>,</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        std::move(cancellation_condition), std::move(ops_));</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;};</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ops&gt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> parallel_group&lt;Ops...&gt;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a22debae745bb0fa45a824d9b5e601498">  244</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#a22debae745bb0fa45a824d9b5e601498">make_parallel_group</a>(Ops... ops)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classasio_1_1experimental_1_1parallel__group.html">parallel_group</a>&lt;Ops...&gt;(std::move(ops)...);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Range, <span class="keyword">typename</span> Allocator = std::allocator&lt;<span class="keywordtype">void</span>&gt;&gt;</div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1ranged__parallel__group.html">  256</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1experimental_1_1ranged__parallel__group.html">ranged_parallel_group</a></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keyword">struct </span>initiate_async_wait</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Handler, <span class="keyword">typename</span> Condition&gt;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> operator()(Handler&amp;&amp; h, Condition&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>,</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        Range&amp;&amp; range, <span class="keyword">const</span> Allocator&amp; <a class="code" href="classallocator.html">allocator</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <a class="code" href="namespaceasio_1_1experimental_1_1detail.html#a2f2e4ee1b1dd77b4c6f88ae7e7c6102e">detail::ranged_parallel_group_launch</a>(std::move(<a class="code" href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">c</a>),</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          std::move(h), std::forward&lt;Range&gt;(range), <a class="code" href="classallocator.html">allocator</a>);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  };</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  Range range_;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  Allocator allocator_;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a6aa7f170a9679ef4e94dae5873eb23de">  275</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a6aa7f170a9679ef4e94dae5873eb23de">ranged_parallel_group</a>(Range range,</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keyword">const</span> Allocator&amp; <a class="code" href="classallocator.html">allocator</a> = Allocator())</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    : range_(<a class="code" href="namespacestd.html">std</a>::move(range)),</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      allocator_(<a class="code" href="classallocator.html">allocator</a>)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature.html">detail::ranged_parallel_group_signature</a>&lt;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <a class="code" href="namespaceasio.html#a7335867dac5c662e8386346c9669d710">completion_signature_of_t</a>&lt;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;decltype(*std::declval&lt;typename Range::iterator&gt;</a>())&gt;&gt;,</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">  286</a></span>&#160;      Allocator&gt;::type <a class="code" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">signature</a>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> CancellationCondition,</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<a class="code" href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">signature</a>) CompletionToken&gt;</div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1ranged__parallel__group.html#ae8e45f442502b7baf294899cb19419f0">  313</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classasio_1_1experimental_1_1ranged__parallel__group.html#ae8e45f442502b7baf294899cb19419f0">async_wait</a>(CancellationCondition cancellation_condition,</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      CompletionToken&amp;&amp; <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    -&gt; decltype(</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      asio::async_initiate&lt;CompletionToken, signature&gt;(</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        declval&lt;initiate_async_wait&gt;(), <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>,</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        std::move(cancellation_condition),</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        std::move(range_), allocator_))</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> asio::async_initiate&lt;CompletionToken, signature&gt;(</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        initiate_async_wait(), <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>,</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        std::move(cancellation_condition),</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        std::move(range_), allocator_);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;};</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Range&gt;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> ranged_parallel_group&lt;decay_t&lt;Range&gt;&gt;</div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#aa01364ed6f4cb4ae67b63e43a0808e56">  377</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#a22debae745bb0fa45a824d9b5e601498">make_parallel_group</a>(Range&amp;&amp; range,</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1is__async__operation__range.html">is_async_operation_range</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;Range&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;{</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classasio_1_1experimental_1_1ranged__parallel__group.html">ranged_parallel_group&lt;decay_t&lt;Range&gt;</a>&gt;(std::forward&lt;Range&gt;(range));</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> Range&gt;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span> ranged_parallel_group&lt;decay_t&lt;Range&gt;, Allocator&gt;</div>
+<div class="line"><a name="l00440"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#a8d46c0113e7168ad74b6ca8b11776f93">  440</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#a22debae745bb0fa45a824d9b5e601498">make_parallel_group</a>(allocator_arg_t, <span class="keyword">const</span> Allocator&amp; <a class="code" href="classallocator.html">allocator</a>, Range&amp;&amp; range,</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1is__async__operation__range.html">is_async_operation_range</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;Range&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;{</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classasio_1_1experimental_1_1ranged__parallel__group.html">ranged_parallel_group&lt;decay_t&lt;Range&gt;</a>, Allocator&gt;(</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;      std::forward&lt;Range&gt;(range), <a class="code" href="namespaceasio_1_1execution.html#a926bc4243fb20fcef1eab6ec71a9cd2c">allocator</a>);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;}</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;} <span class="comment">// namespace experimental</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="impl_2parallel__group_8hpp.html">asio/experimental/impl/parallel_group.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_EXPERIMENTAL_PARALLEL_GROUP_HPP</span></div>
+<div class="ttc" id="aarray_8hpp_html"><div class="ttname"><a href="array_8hpp.html">array.hpp</a></div></div>
+<div class="ttc" id="acancellation__condition_8hpp_html"><div class="ttname"><a href="cancellation__condition_8hpp.html">cancellation_condition.hpp</a></div></div>
+<div class="ttc" id="aclassallocator_html"><div class="ttname"><a href="classallocator.html">allocator</a></div><div class="ttdef"><b>Definition:</b> allocator.hpp:18</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1parallel__group_html"><div class="ttname"><a href="classasio_1_1experimental_1_1parallel__group.html">asio::experimental::parallel_group</a></div><div class="ttdoc">A group of asynchronous operations that may be launched in parallel.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:142</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1parallel__group_html_a5b0e87742c0a15534a45f451aad5cada"><div class="ttname"><a href="classasio_1_1experimental_1_1parallel__group.html#a5b0e87742c0a15534a45f451aad5cada">asio::experimental::parallel_group::parallel_group</a></div><div class="ttdeci">parallel_group(Ops... ops)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:159</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1parallel__group_html_a917ee7cb355f1b3d4f120284831add00"><div class="ttname"><a href="classasio_1_1experimental_1_1parallel__group.html#a917ee7cb355f1b3d4f120284831add00">asio::experimental::parallel_group::async_wait</a></div><div class="ttdeci">auto async_wait(CancellationCondition cancellation_condition, CompletionToken &amp;&amp;token) -&gt; decltype(asio::async_initiate&lt; CompletionToken, signature &gt;(declval&lt; initiate_async_wait &gt;(), token, std::move(cancellation_condition), std::move(ops_)))</div><div class="ttdoc">Initiate an asynchronous wait for the group of operations.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:192</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1parallel__group_html_aebac73ff4aa56fca3974e446344ecff1"><div class="ttname"><a href="classasio_1_1experimental_1_1parallel__group.html#aebac73ff4aa56fca3974e446344ecff1">asio::experimental::parallel_group::signature</a></div><div class="ttdeci">detail::parallel_group_signature&lt; sizeof...(Ops), completion_signature_of_t&lt; Ops &gt;... &gt;::type signature</div><div class="ttdoc">The completion signature for the group of operations.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:166</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1ranged__parallel__group_html"><div class="ttname"><a href="classasio_1_1experimental_1_1ranged__parallel__group.html">asio::experimental::ranged_parallel_group</a></div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:257</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1ranged__parallel__group_html_a4095370b77a7ce0857991d26725e2f49"><div class="ttname"><a href="classasio_1_1experimental_1_1ranged__parallel__group.html#a4095370b77a7ce0857991d26725e2f49">asio::experimental::ranged_parallel_group::signature</a></div><div class="ttdeci">detail::ranged_parallel_group_signature&lt; completion_signature_of_t&lt; decay_t&lt; decltype(*std::declval&lt; typename Range::iterator &gt;))&gt; &gt;, Allocator &gt;::type signature</div><div class="ttdoc">The completion signature for the group of operations.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:286</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1ranged__parallel__group_html_a6aa7f170a9679ef4e94dae5873eb23de"><div class="ttname"><a href="classasio_1_1experimental_1_1ranged__parallel__group.html#a6aa7f170a9679ef4e94dae5873eb23de">asio::experimental::ranged_parallel_group::ranged_parallel_group</a></div><div class="ttdeci">ranged_parallel_group(Range range, const Allocator &amp;allocator=Allocator())</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:275</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1ranged__parallel__group_html_ae8e45f442502b7baf294899cb19419f0"><div class="ttname"><a href="classasio_1_1experimental_1_1ranged__parallel__group.html#ae8e45f442502b7baf294899cb19419f0">asio::experimental::ranged_parallel_group::async_wait</a></div><div class="ttdeci">auto async_wait(CancellationCondition cancellation_condition, CompletionToken &amp;&amp;token) -&gt; decltype(asio::async_initiate&lt; CompletionToken, signature &gt;(declval&lt; initiate_async_wait &gt;(), token, std::move(cancellation_condition), std::move(range_), allocator_))</div><div class="ttdoc">Initiate an asynchronous wait for the group of operations.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:313</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_ae9be9d972e87a686de9e5bd8bd93b39d"><div class="ttname"><a href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a></div><div class="ttdeci">#define ASIO_NODISCARD</div><div class="ttdef"><b>Definition:</b> config.hpp:1375</div></div>
+<div class="ttc" id="aimpl_2parallel__group_8hpp_html"><div class="ttname"><a href="impl_2parallel__group_8hpp.html">parallel_group.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="amemory_8hpp_html"><div class="ttname"><a href="memory_8hpp.html">memory.hpp</a></div></div>
+<div class="ttc" id="amemory_8hpp_html_a7ddefb6d1995ae157f8738ed1f14b224"><div class="ttname"><a href="memory_8hpp.html#a7ddefb6d1995ae157f8738ed1f14b224">ASIO_REBIND_ALLOC</a></div><div class="ttdeci">#define ASIO_REBIND_ALLOC(alloc, t)</div><div class="ttdef"><b>Definition:</b> memory.hpp:69</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a77aafd11960ce22354929e856123b0cb"><div class="ttname"><a href="namespaceasio_1_1detail.html#a77aafd11960ce22354929e856123b0cb">asio::detail::index_sequence_for</a></div><div class="ttdeci">typename index_range&lt; 0, sizeof...(T)&gt;::type index_sequence_for</div><div class="ttdef"><b>Definition:</b> utility.hpp:73</div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html_a926bc4243fb20fcef1eab6ec71a9cd2c"><div class="ttname"><a href="namespaceasio_1_1execution.html#a926bc4243fb20fcef1eab6ec71a9cd2c">asio::execution::allocator</a></div><div class="ttdeci">constexpr allocator_t&lt; void &gt; allocator</div><div class="ttdef"><b>Definition:</b> allocator.hpp:228</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_1_1detail_html_a2f2e4ee1b1dd77b4c6f88ae7e7c6102e"><div class="ttname"><a href="namespaceasio_1_1experimental_1_1detail.html#a2f2e4ee1b1dd77b4c6f88ae7e7c6102e">asio::experimental::detail::ranged_parallel_group_launch</a></div><div class="ttdeci">void ranged_parallel_group_launch(Condition cancellation_condition, Handler handler, Range &amp;&amp;range, const Allocator &amp;allocator)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:687</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_1_1detail_html_a5155da6b31e45aa31cc8eba8573bd33b"><div class="ttname"><a href="namespaceasio_1_1experimental_1_1detail.html#a5155da6b31e45aa31cc8eba8573bd33b">asio::experimental::detail::parallel_group_launch</a></div><div class="ttdeci">void parallel_group_launch(Condition cancellation_condition, Handler handler, std::tuple&lt; Ops... &gt; &amp;ops, asio::detail::index_sequence&lt; I... &gt;)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:361</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_1_1detail_html_a9896ced11a4b3f59775e5c50e3eff5bd"><div class="ttname"><a href="namespaceasio_1_1experimental_1_1detail.html#a9896ced11a4b3f59775e5c50e3eff5bd">asio::experimental::detail::parallel_group_has_iterator_helper</a></div><div class="ttdeci">char(&amp; parallel_group_has_iterator_helper(...))[2]</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a22debae745bb0fa45a824d9b5e601498"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a22debae745bb0fa45a824d9b5e601498">asio::experimental::make_parallel_group</a></div><div class="ttdeci">ASIO_NODISCARD parallel_group&lt; Ops... &gt; make_parallel_group(Ops... ops)</div><div class="ttdoc">Create a group of operations that may be launched in parallel.</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:244</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a4607a9754bf2707c054f0ff16b958b82"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a4607a9754bf2707c054f0ff16b958b82">asio::experimental::c</a></div><div class="ttdeci">Executor c</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a9975daab69c7b93e79ce807410ffb9d9"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">asio::experimental::token</a></div><div class="ttdeci">Executor CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:67</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a1d03dfdd5dd0ffa4aaf6832eda695664"><div class="ttname"><a href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">asio::decay_t</a></div><div class="ttdeci">typename std::decay&lt; T &gt;::type decay_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:55</div></div>
+<div class="ttc" id="anamespaceasio_html_a7335867dac5c662e8386346c9669d710"><div class="ttname"><a href="namespaceasio.html#a7335867dac5c662e8386346c9669d710">asio::completion_signature_of_t</a></div><div class="ttdeci">typename completion_signature_of&lt; T, Args... &gt;::type completion_signature_of_t</div><div class="ttdef"><b>Definition:</b> async_result.hpp:834</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> error.hpp:307</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1index__sequence_html"><div class="ttname"><a href="structasio_1_1detail_1_1index__sequence.html">asio::detail::index_sequence</a></div><div class="ttdef"><b>Definition:</b> utility.hpp:34</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef_html"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef.html">asio::experimental::detail::parallel_group_has_iterator_typedef</a></div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:112</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef_html_a255d201c9d3dcfa3fd9e4db417f29be1a82bfd999a56a9724143804e26fa7c31a"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__has__iterator__typedef.html#a255d201c9d3dcfa3fd9e4db417f29be1a82bfd999a56a9724143804e26fa7c31a">asio::experimental::detail::parallel_group_has_iterator_typedef::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:113</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4_html_a00d89412d10fad24df952e5ac6dc90a7"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#a00d89412d10fad24df952e5ac6dc90a7">asio::experimental::detail::parallel_group_signature&lt; N, R0(Args0...), R1(Args1...)&gt;::order_type</a></div><div class="ttdeci">asio::detail::array&lt; std::size_t, N &gt; order_type</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:61</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4_html_a68c7936c83c4b2add4d9a6b22c407240"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#a68c7936c83c4b2add4d9a6b22c407240">asio::experimental::detail::parallel_group_signature&lt; N, R0(Args0...), R1(Args1...)&gt;::type</a></div><div class="ttdeci">R0 type(order_type, Args0..., Args1...)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:63</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4_html_ad190bc1a8c1a208f16b8a1464b365d4b"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_00_01R1_07Args1_8_8_8_08_4.html#ad190bc1a8c1a208f16b8a1464b365d4b">asio::experimental::detail::parallel_group_signature&lt; N, R0(Args0...), R1(Args1...)&gt;::raw_type</a></div><div class="ttdeci">R0 raw_type(Args0..., Args1...)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:62</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4_html_a21f857d790fe25b12b8e7d2d2dfc11a5"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a21f857d790fe25b12b8e7d2d2dfc11a5">asio::experimental::detail::parallel_group_signature&lt; N, R0(Args0...)&gt;::raw_type</a></div><div class="ttdeci">R0 raw_type(Args0...)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:52</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4_html_a405c31d04c8b95cd73246257a5f54397"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a405c31d04c8b95cd73246257a5f54397">asio::experimental::detail::parallel_group_signature&lt; N, R0(Args0...)&gt;::order_type</a></div><div class="ttdeci">asio::detail::array&lt; std::size_t, N &gt; order_type</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:51</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4_html_a57b1eb1212ebebb254ecfced105710c3"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01R0_07Args0_8_8_8_08_4.html#a57b1eb1212ebebb254ecfced105710c3">asio::experimental::detail::parallel_group_signature&lt; N, R0(Args0...)&gt;::type</a></div><div class="ttdeci">R0 type(order_type, Args0...)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:53</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4_html_a96f553801acf81e5fa8bdc89a517de00"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#a96f553801acf81e5fa8bdc89a517de00">asio::experimental::detail::parallel_group_signature&lt; N, Sig0, Sig1, SigN... &gt;::type</a></div><div class="ttdeci">parallel_group_signature&lt; N, typename parallel_group_signature&lt; N, Sig0, Sig1 &gt;::raw_type, SigN... &gt;::type type</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:76</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4_html_ac209c190bf027829684f95c11a858fb0"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#ac209c190bf027829684f95c11a858fb0">asio::experimental::detail::parallel_group_signature&lt; N, Sig0, Sig1, SigN... &gt;::raw_type</a></div><div class="ttdeci">parallel_group_signature&lt; N, typename parallel_group_signature&lt; N, Sig0, Sig1 &gt;::raw_type, SigN... &gt;::raw_type raw_type</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:73</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4_html_ad02cac6c665d7b95fabfbdc983a96ac2"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature_3_01N_00_01Sig0_00_01Sig1_00_01SigN_8_8_8_01_4.html#ad02cac6c665d7b95fabfbdc983a96ac2">asio::experimental::detail::parallel_group_signature&lt; N, Sig0, Sig1, SigN... &gt;::order_type</a></div><div class="ttdeci">asio::detail::array&lt; std::size_t, N &gt; order_type</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:70</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__group__signature_html"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__group__signature.html">asio::experimental::detail::parallel_group_signature</a></div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:46</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple_3_01R_07Args_8_8_8_08_4_html_a1077b426b5fd08a53f3a5ce63bd4e708"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple_3_01R_07Args_8_8_8_08_4.html#a1077b426b5fd08a53f3a5ce63bd4e708">asio::experimental::detail::parallel_op_signature_as_tuple&lt; R(Args...)&gt;::type</a></div><div class="ttdeci">std::tuple&lt; decay_t&lt; Args &gt;... &gt; type</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:40</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple_html"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1parallel__op__signature__as__tuple.html">asio::experimental::detail::parallel_op_signature_as_tuple</a></div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:35</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4_html_a603f7ce007993dd4f64888acfe6d9fcb"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#a603f7ce007993dd4f64888acfe6d9fcb">asio::experimental::detail::ranged_parallel_group_signature&lt; R(Args...), Allocator &gt;::order_type</a></div><div class="ttdeci">std::vector&lt; std::size_t, ASIO_REBIND_ALLOC(Allocator, std::size_t)&gt; order_type</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:93</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4_html_aa1945f9bbc090940129b0221d9932ee5"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#aa1945f9bbc090940129b0221d9932ee5">asio::experimental::detail::ranged_parallel_group_signature&lt; R(Args...), Allocator &gt;::raw_type</a></div><div class="ttdeci">R raw_type(std::vector&lt; Args, ASIO_REBIND_ALLOC(Allocator, Args)&gt;...)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:94</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4_html_aaf2fe958bdcf34e5609f9feccaadd4c4"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_3_01R_07Args_8_8_8_08_00_01Allocator_01_4.html#aaf2fe958bdcf34e5609f9feccaadd4c4">asio::experimental::detail::ranged_parallel_group_signature&lt; R(Args...), Allocator &gt;::type</a></div><div class="ttdeci">R type(order_type, std::vector&lt; Args, ASIO_REBIND_ALLOC(Allocator, Args)&gt;...)</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:96</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature_html"><div class="ttname"><a href="structasio_1_1experimental_1_1detail_1_1ranged__parallel__group__signature.html">asio::experimental::detail::ranged_parallel_group_signature</a></div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:87</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1is__async__operation__range_html"><div class="ttname"><a href="structasio_1_1experimental_1_1is__async__operation__range.html">asio::experimental::is_async_operation_range</a></div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:122</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1is__async__operation__range_html_a34629cb770e1974b51c5282121bef8c1a3d751dfa35a41b9df95224dfe037db60"><div class="ttname"><a href="structasio_1_1experimental_1_1is__async__operation__range.html#a34629cb770e1974b51c5282121bef8c1a3d751dfa35a41b9df95224dfe037db60">asio::experimental::is_async_operation_range::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> parallel_group.hpp:130</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+<div class="ttc" id="autility_8hpp_html"><div class="ttname"><a href="utility_8hpp.html">utility.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::ip::icmp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ip.html">ip</a></li><li class="navelem"><a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1ip_1_1icmp-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::ip::icmp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Encapsulates the flags needed for ICMP.  
+ <a href="classasio_1_1ip_1_1icmp.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="icmp_8hpp_source.html">icmp.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a3b92dc29eb90413d1dc80966c2d4b6ae"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1ip_1_1basic__endpoint.html">basic_endpoint</a>&lt; <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#a3b92dc29eb90413d1dc80966c2d4b6ae">endpoint</a></td></tr>
+<tr class="memdesc:a3b92dc29eb90413d1dc80966c2d4b6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of a ICMP endpoint.  <a href="classasio_1_1ip_1_1icmp.html#a3b92dc29eb90413d1dc80966c2d4b6ae">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3b92dc29eb90413d1dc80966c2d4b6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97be192e262054c0adee620d89b9feab"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1basic__raw__socket.html">basic_raw_socket</a>&lt; <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#a97be192e262054c0adee620d89b9feab">socket</a></td></tr>
+<tr class="memdesc:a97be192e262054c0adee620d89b9feab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ICMP socket type.  <a href="classasio_1_1ip_1_1icmp.html#a97be192e262054c0adee620d89b9feab">Подробнее...</a><br /></td></tr>
+<tr class="separator:a97be192e262054c0adee620d89b9feab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326f93699ba9f42654917e676fd967aa"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1ip_1_1basic__resolver.html">basic_resolver</a>&lt; <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#a326f93699ba9f42654917e676fd967aa">resolver</a></td></tr>
+<tr class="memdesc:a326f93699ba9f42654917e676fd967aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ICMP resolver type.  <a href="classasio_1_1ip_1_1icmp.html#a326f93699ba9f42654917e676fd967aa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a326f93699ba9f42654917e676fd967aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6d77285181696cbf3d8cd794fd7be99e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#a6d77285181696cbf3d8cd794fd7be99e">type</a> () const noexcept</td></tr>
+<tr class="memdesc:a6d77285181696cbf3d8cd794fd7be99e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the type of the protocol.  <a href="classasio_1_1ip_1_1icmp.html#a6d77285181696cbf3d8cd794fd7be99e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d77285181696cbf3d8cd794fd7be99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af43fd70f453c3267dfe64ea7a7954b42"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#af43fd70f453c3267dfe64ea7a7954b42">protocol</a> () const noexcept</td></tr>
+<tr class="memdesc:af43fd70f453c3267dfe64ea7a7954b42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the protocol.  <a href="classasio_1_1ip_1_1icmp.html#af43fd70f453c3267dfe64ea7a7954b42">Подробнее...</a><br /></td></tr>
+<tr class="separator:af43fd70f453c3267dfe64ea7a7954b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5787e35e177c879f30d50320c778b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#a2c5787e35e177c879f30d50320c778b9">family</a> () const noexcept</td></tr>
+<tr class="memdesc:a2c5787e35e177c879f30d50320c778b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the protocol family.  <a href="classasio_1_1ip_1_1icmp.html#a2c5787e35e177c879f30d50320c778b9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2c5787e35e177c879f30d50320c778b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aa702457330930fbcbfbe39f4d9af2824"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#aa702457330930fbcbfbe39f4d9af2824">v4</a> () noexcept</td></tr>
+<tr class="memdesc:aa702457330930fbcbfbe39f4d9af2824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct to represent the IPv4 ICMP protocol.  <a href="classasio_1_1ip_1_1icmp.html#aa702457330930fbcbfbe39f4d9af2824">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa702457330930fbcbfbe39f4d9af2824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac975d63704b0a3bbea4cbb8bb654103d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#ac975d63704b0a3bbea4cbb8bb654103d">v6</a> () noexcept</td></tr>
+<tr class="memdesc:ac975d63704b0a3bbea4cbb8bb654103d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct to represent the IPv6 ICMP protocol.  <a href="classasio_1_1ip_1_1icmp.html#ac975d63704b0a3bbea4cbb8bb654103d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac975d63704b0a3bbea4cbb8bb654103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:ab0a2b61230da49b7671f462c4d1c38b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#ab0a2b61230da49b7671f462c4d1c38b5">operator==</a> (const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;p1, const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;p2)</td></tr>
+<tr class="memdesc:ab0a2b61230da49b7671f462c4d1c38b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two protocols for equality.  <a href="classasio_1_1ip_1_1icmp.html#ab0a2b61230da49b7671f462c4d1c38b5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab0a2b61230da49b7671f462c4d1c38b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f669f18d50a316a1f84c57572063d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1icmp.html#a01f669f18d50a316a1f84c57572063d3">operator!=</a> (const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;p1, const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;p2)</td></tr>
+<tr class="memdesc:a01f669f18d50a316a1f84c57572063d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two protocols for inequality.  <a href="classasio_1_1ip_1_1icmp.html#a01f669f18d50a316a1f84c57572063d3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a01f669f18d50a316a1f84c57572063d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Encapsulates the flags needed for ICMP. </p>
+<p>The <a class="el" href="classasio_1_1ip_1_1icmp.html" title="Encapsulates the flags needed for ICMP.">asio::ip::icmp</a> class contains flags necessary for ICMP sockets.</p>
+<dl class="section user"><dt>Thread Safety</dt><dd><em>Distinct</em> <em>objects:</em> Safe.<br  />
+<em>Shared</em> <em>objects:</em> Safe.</dd></dl>
+<dl class="section user"><dt>Concepts:</dt><dd>Protocol, InternetProtocol. </dd></dl>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a3b92dc29eb90413d1dc80966c2d4b6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b92dc29eb90413d1dc80966c2d4b6ae">&#9670;&nbsp;</a></span>endpoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1ip_1_1basic__endpoint.html">basic_endpoint</a>&lt;<a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a>&gt; <a class="el" href="classasio_1_1ip_1_1icmp.html#a3b92dc29eb90413d1dc80966c2d4b6ae">asio::ip::icmp::endpoint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of a ICMP endpoint. </p>
+
+</div>
+</div>
+<a id="a326f93699ba9f42654917e676fd967aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326f93699ba9f42654917e676fd967aa">&#9670;&nbsp;</a></span>resolver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1ip_1_1basic__resolver.html">basic_resolver</a>&lt;<a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a>&gt; <a class="el" href="classasio_1_1ip_1_1icmp.html#a326f93699ba9f42654917e676fd967aa">asio::ip::icmp::resolver</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ICMP resolver type. </p>
+
+</div>
+</div>
+<a id="a97be192e262054c0adee620d89b9feab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97be192e262054c0adee620d89b9feab">&#9670;&nbsp;</a></span>socket</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1basic__raw__socket.html">basic_raw_socket</a>&lt;<a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a>&gt; <a class="el" href="classasio_1_1ip_1_1icmp.html#a97be192e262054c0adee620d89b9feab">asio::ip::icmp::socket</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ICMP socket type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2c5787e35e177c879f30d50320c778b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c5787e35e177c879f30d50320c778b9">&#9670;&nbsp;</a></span>family()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::ip::icmp::family </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the protocol family. </p>
+
+</div>
+</div>
+<a id="af43fd70f453c3267dfe64ea7a7954b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af43fd70f453c3267dfe64ea7a7954b42">&#9670;&nbsp;</a></span>protocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::ip::icmp::protocol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the protocol. </p>
+
+</div>
+</div>
+<a id="a6d77285181696cbf3d8cd794fd7be99e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d77285181696cbf3d8cd794fd7be99e">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::ip::icmp::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the type of the protocol. </p>
+
+</div>
+</div>
+<a id="aa702457330930fbcbfbe39f4d9af2824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa702457330930fbcbfbe39f4d9af2824">&#9670;&nbsp;</a></span>v4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> asio::ip::icmp::v4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct to represent the IPv4 ICMP protocol. </p>
+
+</div>
+</div>
+<a id="ac975d63704b0a3bbea4cbb8bb654103d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac975d63704b0a3bbea4cbb8bb654103d">&#9670;&nbsp;</a></span>v6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> asio::ip::icmp::v6 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct to represent the IPv6 ICMP protocol. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a01f669f18d50a316a1f84c57572063d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f669f18d50a316a1f84c57572063d3">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two protocols for inequality. </p>
+
+</div>
+</div>
+<a id="ab0a2b61230da49b7671f462c4d1c38b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a2b61230da49b7671f462c4d1c38b5">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1icmp.html">icmp</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two protocols for equality. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/ip/<a class="el" href="icmp_8hpp_source.html">icmp.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

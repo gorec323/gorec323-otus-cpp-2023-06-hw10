@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/io_context_strand.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл io_context_strand.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="io__context__strand_8hpp_source.html">asio/io_context_strand.hpp</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="io__context_8hpp_source.html">asio/io_context.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dispatch_8hpp_source.html">asio/dispatch.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="post_8hpp_source.html">asio/post.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="thread_8hpp_source.html">asio/thread.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8hpp_source.html">unit_test.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="steady__timer_8hpp_source.html">asio/steady_timer.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для io_context_strand.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="io__context__strand_8cpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2io__context__strand_8cpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2io__context__strand_8cpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2io__context__strand_8cpp">
+<area shape="rect" title=" " alt="" coords="3857,5,4039,61"/>
+<area shape="rect" href="io__context__strand_8hpp.html" title=" " alt="" coords="2619,109,2816,136"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="1945,273,2095,300"/>
+<area shape="rect" title=" " alt="" coords="4241,109,4327,136"/>
+<area shape="rect" title=" " alt="" coords="4352,109,4427,136"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="3704,273,3840,300"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="4056,273,4165,300"/>
+<area shape="rect" href="thread_8hpp.html" title=" " alt="" coords="615,445,737,471"/>
+<area shape="rect" href="unit__test_8hpp.html" title=" " alt="" coords="5196,355,5303,382"/>
+<area shape="rect" href="steady__timer_8hpp.html" title=" " alt="" coords="3865,273,4031,300"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3374,691,3535,717"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="3708,534,3871,561"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="2217,616,2425,643"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="3037,616,3238,643"/>
+<area shape="rect" href="handler__type__requirements_8hpp.html" title=" " alt="" coords="3386,437,3566,479"/>
+<area shape="rect" href="strand__service_8hpp.html" title=" " alt="" coords="783,184,918,225"/>
+<area shape="rect" href="wrapped__handler_8hpp.html" title=" " alt="" coords="2642,348,2793,389"/>
+<area shape="rect" title=" " alt="" coords="46,765,117,792"/>
+<area shape="rect" title=" " alt="" coords="3469,765,3598,792"/>
+<area shape="rect" title=" " alt="" coords="3305,765,3444,792"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="4472,616,4664,643"/>
+<area shape="rect" href="op__queue_8hpp.html" title=" " alt="" coords="1253,445,1438,471"/>
+<area shape="rect" href="mutex_8hpp.html" title=" " alt="" coords="145,616,309,643"/>
+<area shape="rect" href="operation_8hpp.html" title=" " alt="" coords="384,616,568,643"/>
+<area shape="rect" href="scoped__ptr_8hpp.html" title=" " alt="" coords="917,527,1057,568"/>
+<area shape="rect" href="impl_2strand__service_8hpp.html" title=" " alt="" coords="2359,527,2527,568"/>
+<area shape="rect" title=" " alt="" coords="1842,534,1929,561"/>
+<area shape="rect" title=" " alt="" coords="2106,534,2182,561"/>
+<area shape="rect" href="chrono_8hpp.html" title=" " alt="" coords="3399,355,3566,382"/>
+<area shape="rect" href="concurrency__hint_8hpp.html" title=" " alt="" coords="863,437,1036,479"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="593,616,759,643"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="1565,534,1715,561"/>
+<area shape="rect" href="execution_8hpp.html" title=" " alt="" coords="4433,355,4577,382"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="1920,445,2120,471"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="1661,355,1845,382"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="3141,355,3323,382"/>
+<area shape="rect" title=" " alt="" coords="2733,445,2800,471"/>
+<area shape="rect" href="noncopyable_8hpp.html" title=" " alt="" coords="1132,534,1337,561"/>
+<area shape="rect" href="bind__handler_8hpp.html" title=" " alt="" coords="2935,445,3140,471"/>
+<area shape="rect" href="handler__cont__helpers_8hpp.html" title=" " alt="" coords="2855,527,2998,568"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="4513,445,4716,471"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="4604,534,4807,561"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="4149,534,4275,561"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="4199,437,4337,479"/>
+<area shape="rect" href="detail_2thread_8hpp.html" title=" " alt="" coords="474,534,638,561"/>
+<area shape="rect" href="initiate__dispatch_8hpp.html" title=" " alt="" coords="3946,348,4086,389"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="3377,534,3532,561"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="4162,348,4302,389"/>
+<area shape="rect" title=" " alt="" coords="5247,445,5327,471"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="2966,348,3117,389"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a5ebdbdce56348e79bc296dba8e572a1f">BOOST_ALL_NO_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ebdbdce56348e79bc296dba8e572a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:af1abddd6ed87a43a672d1f851b84a694"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceasio.html#a627a7abd2bc87969838f17e46b8dc20d">steady_timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a></td></tr>
+<tr class="separator:af1abddd6ed87a43a672d1f851b84a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a116a1f3cc4c9a2072cb4cd9445682d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a116a1f3cc4c9a2072cb4cd9445682d53">increment</a> (int *count)</td></tr>
+<tr class="separator:a116a1f3cc4c9a2072cb4cd9445682d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8200c1bfad11988a91673741af1569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a0f8200c1bfad11988a91673741af1569">increment_without_lock</a> (<a class="el" href="classasio_1_1io__context_1_1strand.html">io_context::strand</a> *<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, int *count)</td></tr>
+<tr class="separator:a0f8200c1bfad11988a91673741af1569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fbe4ecc57ace75414aedb0ba440211"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a25fbe4ecc57ace75414aedb0ba440211">increment_with_lock</a> (<a class="el" href="classasio_1_1io__context_1_1strand.html">io_context::strand</a> *<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, int *count)</td></tr>
+<tr class="separator:a25fbe4ecc57ace75414aedb0ba440211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46eb8dc20debb9c04a31e72bf0d9bd38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a46eb8dc20debb9c04a31e72bf0d9bd38">sleep_increment</a> (<a class="el" href="classasio_1_1io__context.html">io_context</a> *ioc, int *count)</td></tr>
+<tr class="separator:a46eb8dc20debb9c04a31e72bf0d9bd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ae365e3da1da408683db90e51693b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a00ae365e3da1da408683db90e51693b2">increment_by_a</a> (int *count, int a)</td></tr>
+<tr class="separator:a00ae365e3da1da408683db90e51693b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3e0a23f6d9fc43e200339e012fdaab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#abc3e0a23f6d9fc43e200339e012fdaab">increment_by_a_b</a> (int *count, int a, int b)</td></tr>
+<tr class="separator:abc3e0a23f6d9fc43e200339e012fdaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed05e0a04c3906258a540c79be2afe0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#aaed05e0a04c3906258a540c79be2afe0">increment_by_a_b_c</a> (int *count, int a, int b, int c)</td></tr>
+<tr class="separator:aaed05e0a04c3906258a540c79be2afe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc374fd35050f25ab058ae8b0a55ef0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a1cc374fd35050f25ab058ae8b0a55ef0">increment_by_a_b_c_d</a> (int *count, int a, int b, int c, int d)</td></tr>
+<tr class="separator:a1cc374fd35050f25ab058ae8b0a55ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658cadc5c8317d7551894d4c6075c7c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a658cadc5c8317d7551894d4c6075c7c5">start_sleep_increments</a> (<a class="el" href="classasio_1_1io__context.html">io_context</a> *ioc, <a class="el" href="classasio_1_1io__context_1_1strand.html">io_context::strand</a> *<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, int *count)</td></tr>
+<tr class="separator:a658cadc5c8317d7551894d4c6075c7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0535a900c34f70da5113dfe080c1444d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a0535a900c34f70da5113dfe080c1444d">throw_exception</a> ()</td></tr>
+<tr class="separator:a0535a900c34f70da5113dfe080c1444d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad635f491adbe24e8712b511aea86ecc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#aad635f491adbe24e8712b511aea86ecc">io_context_run</a> (<a class="el" href="classasio_1_1io__context.html">io_context</a> *ioc)</td></tr>
+<tr class="separator:aad635f491adbe24e8712b511aea86ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a2816c97c0033e76cbc13f65af28ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#ac7a2816c97c0033e76cbc13f65af28ed">strand_test</a> ()</td></tr>
+<tr class="separator:ac7a2816c97c0033e76cbc13f65af28ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d92c1f5f4be4a738de9271030e9b299"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io__context__strand_8cpp.html#a8d92c1f5f4be4a738de9271030e9b299">strand_wrap_test</a> ()</td></tr>
+<tr class="separator:a8d92c1f5f4be4a738de9271030e9b299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a5ebdbdce56348e79bc296dba8e572a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebdbdce56348e79bc296dba8e572a1f">&#9670;&nbsp;</a></span>BOOST_ALL_NO_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_NO_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="af1abddd6ed87a43a672d1f851b84a694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1abddd6ed87a43a672d1f851b84a694">&#9670;&nbsp;</a></span>timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="namespaceasio.html#a627a7abd2bc87969838f17e46b8dc20d">steady_timer</a> <a class="el" href="bind__allocator_8cpp.html#af1abddd6ed87a43a672d1f851b84a694">timer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a116a1f3cc4c9a2072cb4cd9445682d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116a1f3cc4c9a2072cb4cd9445682d53">&#9670;&nbsp;</a></span>increment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00ae365e3da1da408683db90e51693b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ae365e3da1da408683db90e51693b2">&#9670;&nbsp;</a></span>increment_by_a()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment_by_a </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc3e0a23f6d9fc43e200339e012fdaab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3e0a23f6d9fc43e200339e012fdaab">&#9670;&nbsp;</a></span>increment_by_a_b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment_by_a_b </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaed05e0a04c3906258a540c79be2afe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed05e0a04c3906258a540c79be2afe0">&#9670;&nbsp;</a></span>increment_by_a_b_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment_by_a_b_c </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cc374fd35050f25ab058ae8b0a55ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc374fd35050f25ab058ae8b0a55ef0">&#9670;&nbsp;</a></span>increment_by_a_b_c_d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment_by_a_b_c_d </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25fbe4ecc57ace75414aedb0ba440211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fbe4ecc57ace75414aedb0ba440211">&#9670;&nbsp;</a></span>increment_with_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment_with_lock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context_1_1strand.html">io_context::strand</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f8200c1bfad11988a91673741af1569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8200c1bfad11988a91673741af1569">&#9670;&nbsp;</a></span>increment_without_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> increment_without_lock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context_1_1strand.html">io_context::strand</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad635f491adbe24e8712b511aea86ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad635f491adbe24e8712b511aea86ecc">&#9670;&nbsp;</a></span>io_context_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> io_context_run </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">io_context</a> *&#160;</td>
+          <td class="paramname"><em>ioc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46eb8dc20debb9c04a31e72bf0d9bd38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46eb8dc20debb9c04a31e72bf0d9bd38">&#9670;&nbsp;</a></span>sleep_increment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> sleep_increment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">io_context</a> *&#160;</td>
+          <td class="paramname"><em>ioc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a658cadc5c8317d7551894d4c6075c7c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658cadc5c8317d7551894d4c6075c7c5">&#9670;&nbsp;</a></span>start_sleep_increments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> start_sleep_increments </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context.html">io_context</a> *&#160;</td>
+          <td class="paramname"><em>ioc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classasio_1_1io__context_1_1strand.html">io_context::strand</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7a2816c97c0033e76cbc13f65af28ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7a2816c97c0033e76cbc13f65af28ed">&#9670;&nbsp;</a></span>strand_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> strand_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d92c1f5f4be4a738de9271030e9b299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d92c1f5f4be4a738de9271030e9b299">&#9670;&nbsp;</a></span>strand_wrap_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> strand_wrap_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0535a900c34f70da5113dfe080c1444d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0535a900c34f70da5113dfe080c1444d">&#9670;&nbsp;</a></span>throw_exception()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> throw_exception </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::generic::raw_protocol</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1generic.html">generic</a></li><li class="navelem"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1generic_1_1raw__protocol-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::generic::raw_protocol</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Encapsulates the flags needed for a generic raw socket.  
+ <a href="classasio_1_1generic_1_1raw__protocol.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="raw__protocol_8hpp_source.html">raw_protocol.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:acf929033057209f9611472f4f23fd843"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt; <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#acf929033057209f9611472f4f23fd843">endpoint</a></td></tr>
+<tr class="memdesc:acf929033057209f9611472f4f23fd843"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of an endpoint.  <a href="classasio_1_1generic_1_1raw__protocol.html#acf929033057209f9611472f4f23fd843">Подробнее...</a><br /></td></tr>
+<tr class="separator:acf929033057209f9611472f4f23fd843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6f99280e2965256061041b5bf465c6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1basic__raw__socket.html">basic_raw_socket</a>&lt; <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a9b6f99280e2965256061041b5bf465c6">socket</a></td></tr>
+<tr class="memdesc:a9b6f99280e2965256061041b5bf465c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generic socket type.  <a href="classasio_1_1generic_1_1raw__protocol.html#a9b6f99280e2965256061041b5bf465c6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b6f99280e2965256061041b5bf465c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac579d774e2ae8a6bb023182498d9b916"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#ac579d774e2ae8a6bb023182498d9b916">raw_protocol</a> (int address_family, int socket_protocol)</td></tr>
+<tr class="memdesc:ac579d774e2ae8a6bb023182498d9b916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a protocol object for a specific address family and protocol.  <a href="classasio_1_1generic_1_1raw__protocol.html#ac579d774e2ae8a6bb023182498d9b916">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac579d774e2ae8a6bb023182498d9b916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8feeb303fed2993b28c6f1227bedb3a4"><td class="memTemplParams" colspan="2">template&lt;typename Protocol &gt; </td></tr>
+<tr class="memitem:a8feeb303fed2993b28c6f1227bedb3a4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a8feeb303fed2993b28c6f1227bedb3a4">raw_protocol</a> (const Protocol &amp;source_protocol)</td></tr>
+<tr class="memdesc:a8feeb303fed2993b28c6f1227bedb3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a generic protocol object from a specific protocol.  <a href="classasio_1_1generic_1_1raw__protocol.html#a8feeb303fed2993b28c6f1227bedb3a4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8feeb303fed2993b28c6f1227bedb3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6950f94d0a43269351a33d48a8eb53f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a6950f94d0a43269351a33d48a8eb53f0">type</a> () const noexcept</td></tr>
+<tr class="memdesc:a6950f94d0a43269351a33d48a8eb53f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the type of the protocol.  <a href="classasio_1_1generic_1_1raw__protocol.html#a6950f94d0a43269351a33d48a8eb53f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6950f94d0a43269351a33d48a8eb53f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5eaaeebe3c31240f5b4b167f393a82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a2a5eaaeebe3c31240f5b4b167f393a82">protocol</a> () const noexcept</td></tr>
+<tr class="memdesc:a2a5eaaeebe3c31240f5b4b167f393a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the protocol.  <a href="classasio_1_1generic_1_1raw__protocol.html#a2a5eaaeebe3c31240f5b4b167f393a82">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a5eaaeebe3c31240f5b4b167f393a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c671d20bf97abec92797075549bdf32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a1c671d20bf97abec92797075549bdf32">family</a> () const noexcept</td></tr>
+<tr class="memdesc:a1c671d20bf97abec92797075549bdf32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an identifier for the protocol family.  <a href="classasio_1_1generic_1_1raw__protocol.html#a1c671d20bf97abec92797075549bdf32">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c671d20bf97abec92797075549bdf32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a31d370120e02e4ad3b88951b55673066"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a31d370120e02e4ad3b88951b55673066">operator==</a> (const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;p1, const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;p2)</td></tr>
+<tr class="memdesc:a31d370120e02e4ad3b88951b55673066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two protocols for equality.  <a href="classasio_1_1generic_1_1raw__protocol.html#a31d370120e02e4ad3b88951b55673066">Подробнее...</a><br /></td></tr>
+<tr class="separator:a31d370120e02e4ad3b88951b55673066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cad117af85c82d42e5731c19bf1a336"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a7cad117af85c82d42e5731c19bf1a336">operator!=</a> (const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;p1, const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;p2)</td></tr>
+<tr class="memdesc:a7cad117af85c82d42e5731c19bf1a336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two protocols for inequality.  <a href="classasio_1_1generic_1_1raw__protocol.html#a7cad117af85c82d42e5731c19bf1a336">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7cad117af85c82d42e5731c19bf1a336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Encapsulates the flags needed for a generic raw socket. </p>
+<p>The <a class="el" href="classasio_1_1generic_1_1raw__protocol.html" title="Encapsulates the flags needed for a generic raw socket.">asio::generic::raw_protocol</a> class contains flags necessary for raw sockets of any address family and protocol.</p>
+<dl class="section user"><dt>Examples</dt><dd>Constructing using a native address family and socket protocol: <div class="fragment"><div class="line"><a class="code" href="classasio_1_1generic_1_1raw__protocol.html#ac579d774e2ae8a6bb023182498d9b916">raw_protocol</a> p(AF_INET, IPPROTO_ICMP); </div>
+<div class="ttc" id="aclassasio_1_1generic_1_1raw__protocol_html_ac579d774e2ae8a6bb023182498d9b916"><div class="ttname"><a href="classasio_1_1generic_1_1raw__protocol.html#ac579d774e2ae8a6bb023182498d9b916">asio::generic::raw_protocol::raw_protocol</a></div><div class="ttdeci">raw_protocol(int address_family, int socket_protocol)</div><div class="ttdoc">Construct a protocol object for a specific address family and protocol.</div><div class="ttdef"><b>Definition:</b> raw_protocol.hpp:53</div></div>
+</div><!-- fragment --> Constructing from a specific protocol type: <div class="fragment"><div class="line"><a class="code" href="classasio_1_1generic_1_1raw__protocol.html#ac579d774e2ae8a6bb023182498d9b916">raw_protocol</a> p(<a class="code" href="classasio_1_1ip_1_1icmp.html#aa702457330930fbcbfbe39f4d9af2824">asio::ip::icmp::v4</a>()); </div>
+<div class="ttc" id="aclassasio_1_1ip_1_1icmp_html_aa702457330930fbcbfbe39f4d9af2824"><div class="ttname"><a href="classasio_1_1ip_1_1icmp.html#aa702457330930fbcbfbe39f4d9af2824">asio::ip::icmp::v4</a></div><div class="ttdeci">static icmp v4() noexcept</div><div class="ttdoc">Construct to represent the IPv4 ICMP protocol.</div><div class="ttdef"><b>Definition:</b> icmp.hpp:49</div></div>
+</div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Thread Safety</dt><dd><em>Distinct</em> <em>objects:</em> Safe.<br  />
+<em>Shared</em> <em>objects:</em> Safe.</dd></dl>
+<dl class="section user"><dt>Concepts:</dt><dd>Protocol. </dd></dl>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="acf929033057209f9611472f4f23fd843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf929033057209f9611472f4f23fd843">&#9670;&nbsp;</a></span>endpoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1generic_1_1basic__endpoint.html">basic_endpoint</a>&lt;<a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a>&gt; <a class="el" href="classasio_1_1generic_1_1raw__protocol.html#acf929033057209f9611472f4f23fd843">asio::generic::raw_protocol::endpoint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of an endpoint. </p>
+
+</div>
+</div>
+<a id="a9b6f99280e2965256061041b5bf465c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6f99280e2965256061041b5bf465c6">&#9670;&nbsp;</a></span>socket</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1basic__raw__socket.html">basic_raw_socket</a>&lt;<a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a>&gt; <a class="el" href="classasio_1_1generic_1_1raw__protocol.html#a9b6f99280e2965256061041b5bf465c6">asio::generic::raw_protocol::socket</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The generic socket type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac579d774e2ae8a6bb023182498d9b916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac579d774e2ae8a6bb023182498d9b916">&#9670;&nbsp;</a></span>raw_protocol() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::generic::raw_protocol::raw_protocol </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>address_family</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>socket_protocol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a protocol object for a specific address family and protocol. </p>
+
+</div>
+</div>
+<a id="a8feeb303fed2993b28c6f1227bedb3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8feeb303fed2993b28c6f1227bedb3a4">&#9670;&nbsp;</a></span>raw_protocol() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Protocol &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::generic::raw_protocol::raw_protocol </td>
+          <td>(</td>
+          <td class="paramtype">const Protocol &amp;&#160;</td>
+          <td class="paramname"><em>source_protocol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a generic protocol object from a specific protocol. </p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1c671d20bf97abec92797075549bdf32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c671d20bf97abec92797075549bdf32">&#9670;&nbsp;</a></span>family()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::generic::raw_protocol::family </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the protocol family. </p>
+
+</div>
+</div>
+<a id="a2a5eaaeebe3c31240f5b4b167f393a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5eaaeebe3c31240f5b4b167f393a82">&#9670;&nbsp;</a></span>protocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::generic::raw_protocol::protocol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the protocol. </p>
+
+</div>
+</div>
+<a id="a6950f94d0a43269351a33d48a8eb53f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6950f94d0a43269351a33d48a8eb53f0">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asio::generic::raw_protocol::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain an identifier for the type of the protocol. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a7cad117af85c82d42e5731c19bf1a336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cad117af85c82d42e5731c19bf1a336">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two protocols for inequality. </p>
+
+</div>
+</div>
+<a id="a31d370120e02e4ad3b88951b55673066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d370120e02e4ad3b88951b55673066">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1generic_1_1raw__protocol.html">raw_protocol</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two protocols for equality. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/generic/<a class="el" href="raw__protocol_8hpp_source.html">raw_protocol.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

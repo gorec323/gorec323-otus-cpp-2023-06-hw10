@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::ip::detail::endpoint</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ip.html">ip</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ip_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1ip_1_1detail_1_1endpoint-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::ip::detail::endpoint</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ip_2detail_2endpoint_8hpp_source.html">endpoint.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:acf826f1e969adb7c769e38d4de1212a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#acf826f1e969adb7c769e38d4de1212a0">endpoint</a> () noexcept</td></tr>
+<tr class="separator:acf826f1e969adb7c769e38d4de1212a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a817c16bf2488108d04590cf869876b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a4a817c16bf2488108d04590cf869876b">endpoint</a> (int family, unsigned short port_num) noexcept</td></tr>
+<tr class="separator:a4a817c16bf2488108d04590cf869876b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1d6030e229a85ad82c5466f581da66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a2b1d6030e229a85ad82c5466f581da66">endpoint</a> (const <a class="el" href="classasio_1_1ip_1_1address.html">asio::ip::address</a> &amp;addr, unsigned short port_num) noexcept</td></tr>
+<tr class="separator:a2b1d6030e229a85ad82c5466f581da66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1c1f37747b16e0eefe2880e02da3ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a7d1c1f37747b16e0eefe2880e02da3ec">endpoint</a> (const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;other) noexcept</td></tr>
+<tr class="separator:a7d1c1f37747b16e0eefe2880e02da3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67162e9e1c9c52cd24f99ccd70a94bc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a67162e9e1c9c52cd24f99ccd70a94bc7">operator=</a> (const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;other) noexcept</td></tr>
+<tr class="separator:a67162e9e1c9c52cd24f99ccd70a94bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81390152151c98b21d1b637761949c84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a81390152151c98b21d1b637761949c84">data</a> () noexcept</td></tr>
+<tr class="separator:a81390152151c98b21d1b637761949c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24b7f29dbc46dcfbb59cd89f2d316918"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a24b7f29dbc46dcfbb59cd89f2d316918">data</a> () const noexcept</td></tr>
+<tr class="separator:a24b7f29dbc46dcfbb59cd89f2d316918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fec9c2f69a90d0d357897f8aecd70e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a66fec9c2f69a90d0d357897f8aecd70e">size</a> () const noexcept</td></tr>
+<tr class="separator:a66fec9c2f69a90d0d357897f8aecd70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351151a62463d6f3c5bc3dbbdcb407e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a351151a62463d6f3c5bc3dbbdcb407e5">resize</a> (std::size_t new_size)</td></tr>
+<tr class="separator:a351151a62463d6f3c5bc3dbbdcb407e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35bf5cfd9033d120edeaa4342b251c94"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a35bf5cfd9033d120edeaa4342b251c94">capacity</a> () const noexcept</td></tr>
+<tr class="separator:a35bf5cfd9033d120edeaa4342b251c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6022bfaada105309b199c8fb06fe6bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6022bfaada105309b199c8fb06fe6bb0">port</a> () const noexcept</td></tr>
+<tr class="separator:a6022bfaada105309b199c8fb06fe6bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016dbb7c57b104c5eb33078a21d1dc52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a016dbb7c57b104c5eb33078a21d1dc52">port</a> (unsigned short port_num) noexcept</td></tr>
+<tr class="separator:a016dbb7c57b104c5eb33078a21d1dc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459777e74bbcbb84b34ac17c39e7b8ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="classasio_1_1ip_1_1address.html">asio::ip::address</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a459777e74bbcbb84b34ac17c39e7b8ef">address</a> () const noexcept</td></tr>
+<tr class="separator:a459777e74bbcbb84b34ac17c39e7b8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76679f4c1ec8c225438086aac87c060"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#ac76679f4c1ec8c225438086aac87c060">address</a> (const <a class="el" href="classasio_1_1ip_1_1address.html">asio::ip::address</a> &amp;addr) noexcept</td></tr>
+<tr class="separator:ac76679f4c1ec8c225438086aac87c060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6baaafc63573c01e94d4e31286d4eb56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a6baaafc63573c01e94d4e31286d4eb56">is_v4</a> () const noexcept</td></tr>
+<tr class="separator:a6baaafc63573c01e94d4e31286d4eb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f9208b3fd9749e11d29b35ec4d7ef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a80f9208b3fd9749e11d29b35ec4d7ef1">to_string</a> () const</td></tr>
+<tr class="separator:a80f9208b3fd9749e11d29b35ec4d7ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a3b107e0ed983527dd8a6fb54eb9a0f9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> friend bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a3b107e0ed983527dd8a6fb54eb9a0f9c">operator==</a> (const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;e1, const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;e2) noexcept</td></tr>
+<tr class="separator:a3b107e0ed983527dd8a6fb54eb9a0f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8111f934d8e296c39d03a84763d70aac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> friend bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html#a8111f934d8e296c39d03a84763d70aac">operator&lt;</a> (const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;e1, const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;e2) noexcept</td></tr>
+<tr class="separator:a8111f934d8e296c39d03a84763d70aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="acf826f1e969adb7c769e38d4de1212a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf826f1e969adb7c769e38d4de1212a0">&#9670;&nbsp;</a></span>endpoint() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::ip::detail::endpoint::endpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a817c16bf2488108d04590cf869876b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a817c16bf2488108d04590cf869876b">&#9670;&nbsp;</a></span>endpoint() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::ip::detail::endpoint::endpoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>family</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b1d6030e229a85ad82c5466f581da66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1d6030e229a85ad82c5466f581da66">&#9670;&nbsp;</a></span>endpoint() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::ip::detail::endpoint::endpoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1address.html">asio::ip::address</a> &amp;&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d1c1f37747b16e0eefe2880e02da3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1c1f37747b16e0eefe2880e02da3ec">&#9670;&nbsp;</a></span>endpoint() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::ip::detail::endpoint::endpoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a459777e74bbcbb84b34ac17c39e7b8ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459777e74bbcbb84b34ac17c39e7b8ef">&#9670;&nbsp;</a></span>address() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1address.html">asio::ip::address</a> asio::ip::detail::endpoint::address </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac76679f4c1ec8c225438086aac87c060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76679f4c1ec8c225438086aac87c060">&#9670;&nbsp;</a></span>address() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::ip::detail::endpoint::address </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1address.html">asio::ip::address</a> &amp;&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35bf5cfd9033d120edeaa4342b251c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35bf5cfd9033d120edeaa4342b251c94">&#9670;&nbsp;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t asio::ip::detail::endpoint::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24b7f29dbc46dcfbb59cd89f2d316918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b7f29dbc46dcfbb59cd89f2d316918">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a>* asio::ip::detail::endpoint::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81390152151c98b21d1b637761949c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81390152151c98b21d1b637761949c84">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceasio_1_1detail.html#a40a7b0385a38f87815ffbb8df5e34d05">asio::detail::socket_addr_type</a>* asio::ip::detail::endpoint::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6baaafc63573c01e94d4e31286d4eb56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6baaafc63573c01e94d4e31286d4eb56">&#9670;&nbsp;</a></span>is_v4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool asio::ip::detail::endpoint::is_v4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67162e9e1c9c52cd24f99ccd70a94bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67162e9e1c9c52cd24f99ccd70a94bc7">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a>&amp; asio::ip::detail::endpoint::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6022bfaada105309b199c8fb06fe6bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6022bfaada105309b199c8fb06fe6bb0">&#9670;&nbsp;</a></span>port() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short asio::ip::detail::endpoint::port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a016dbb7c57b104c5eb33078a21d1dc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016dbb7c57b104c5eb33078a21d1dc52">&#9670;&nbsp;</a></span>port() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::ip::detail::endpoint::port </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port_num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a351151a62463d6f3c5bc3dbbdcb407e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351151a62463d6f3c5bc3dbbdcb407e5">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::ip::detail::endpoint::resize </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>new_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66fec9c2f69a90d0d357897f8aecd70e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fec9c2f69a90d0d357897f8aecd70e">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t asio::ip::detail::endpoint::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80f9208b3fd9749e11d29b35ec4d7ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f9208b3fd9749e11d29b35ec4d7ef1">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string asio::ip::detail::endpoint::to_string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a8111f934d8e296c39d03a84763d70aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8111f934d8e296c39d03a84763d70aac">&#9670;&nbsp;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> friend bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b107e0ed983527dd8a6fb54eb9a0f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b107e0ed983527dd8a6fb54eb9a0f9c">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> friend bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1detail_1_1endpoint.html">endpoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>_deps/asio-src/asio/include/asio/ip/detail/<a class="el" href="ip_2detail_2endpoint_8hpp_source.html">endpoint.hpp</a></li>
+<li>_deps/asio-src/asio/include/asio/ip/detail/impl/<a class="el" href="ip_2detail_2impl_2endpoint_8ipp.html">endpoint.ipp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

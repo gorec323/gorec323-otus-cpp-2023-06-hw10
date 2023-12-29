@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон структуры asio::experimental::coro_traits&lt; Yield, Return, Executor &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1experimental.html">experimental</a></li><li class="navelem"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html">coro_traits</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="structasio_1_1experimental_1_1coro__traits-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон структуры asio::experimental::coro_traits&lt; Yield, Return, Executor &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="coro__traits_8hpp_source.html">coro_traits.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a13102d4aa3f1b442f8e8ce28ed6b4846"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a13102d4aa3f1b442f8e8ce28ed6b4846">input_type</a> = <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a></td></tr>
+<tr class="separator:a13102d4aa3f1b442f8e8ce28ed6b4846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a050804753166b77be3b31a1fca3138e9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a050804753166b77be3b31a1fca3138e9">yield_type</a> = Yield</td></tr>
+<tr class="separator:a050804753166b77be3b31a1fca3138e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1474ab1a190e6a21c3813f44bb30e88d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a1474ab1a190e6a21c3813f44bb30e88d">return_type</a> = Return</td></tr>
+<tr class="separator:a1474ab1a190e6a21c3813f44bb30e88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e4a53fe0317c3959123c13a45f44cf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#ac3e4a53fe0317c3959123c13a45f44cf">result_type</a> = <a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a41ec3190a2dcb1b12906e3b2717e2ed3">detail::coro_result_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a050804753166b77be3b31a1fca3138e9">yield_type</a>, <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a1474ab1a190e6a21c3813f44bb30e88d">return_type</a> &gt;</td></tr>
+<tr class="separator:ac3e4a53fe0317c3959123c13a45f44cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c33eedf7c1bc8dba9b38ae354ee3cab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a4c33eedf7c1bc8dba9b38ae354ee3cab">signature_type</a> = <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#ac3e4a53fe0317c3959123c13a45f44cf">result_type</a>()</td></tr>
+<tr class="separator:a4c33eedf7c1bc8dba9b38ae354ee3cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f910179b75ac8b75b5576c986395f6d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a1f910179b75ac8b75b5576c986395f6d">error_type</a> = std::conditional_t&lt; <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a2d03cb5f9a3e3337bf442e348fdfc2f4">is_noexcept</a>, <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>, std::exception_ptr &gt;</td></tr>
+<tr class="separator:a1f910179b75ac8b75b5576c986395f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c97d423f66f6ce6670917273dd8244"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#af7c97d423f66f6ce6670917273dd8244">completion_handler</a> = <a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a54b999e918c2085ebc511cf5bf890891">detail::coro_handler_t</a>&lt; <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#ac3e4a53fe0317c3959123c13a45f44cf">result_type</a>, <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a2d03cb5f9a3e3337bf442e348fdfc2f4">is_noexcept</a> &gt;</td></tr>
+<tr class="separator:af7c97d423f66f6ce6670917273dd8244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a2d03cb5f9a3e3337bf442e348fdfc2f4"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a2d03cb5f9a3e3337bf442e348fdfc2f4">is_noexcept</a> = false</td></tr>
+<tr class="separator:a2d03cb5f9a3e3337bf442e348fdfc2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="af7c97d423f66f6ce6670917273dd8244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c97d423f66f6ce6670917273dd8244">&#9670;&nbsp;</a></span>completion_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#af7c97d423f66f6ce6670917273dd8244">completion_handler</a> =  <a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a54b999e918c2085ebc511cf5bf890891">detail::coro_handler_t</a>&lt;<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#ac3e4a53fe0317c3959123c13a45f44cf">result_type</a>, <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a2d03cb5f9a3e3337bf442e348fdfc2f4">is_noexcept</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f910179b75ac8b75b5576c986395f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f910179b75ac8b75b5576c986395f6d">&#9670;&nbsp;</a></span>error_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a1f910179b75ac8b75b5576c986395f6d">error_type</a> =  std::conditional_t&lt;<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a2d03cb5f9a3e3337bf442e348fdfc2f4">is_noexcept</a>, <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a>, std::exception_ptr&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13102d4aa3f1b442f8e8ce28ed6b4846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13102d4aa3f1b442f8e8ce28ed6b4846">&#9670;&nbsp;</a></span>input_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a13102d4aa3f1b442f8e8ce28ed6b4846">input_type</a> =  <a class="el" href="namespaceasio_1_1experimental.html#ac04f505f291ec3b9eb3018fea6835fea">void</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3e4a53fe0317c3959123c13a45f44cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e4a53fe0317c3959123c13a45f44cf">&#9670;&nbsp;</a></span>result_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#ac3e4a53fe0317c3959123c13a45f44cf">result_type</a> =  <a class="el" href="namespaceasio_1_1experimental_1_1detail.html#a41ec3190a2dcb1b12906e3b2717e2ed3">detail::coro_result_t</a>&lt;<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a050804753166b77be3b31a1fca3138e9">yield_type</a>, <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a1474ab1a190e6a21c3813f44bb30e88d">return_type</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1474ab1a190e6a21c3813f44bb30e88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1474ab1a190e6a21c3813f44bb30e88d">&#9670;&nbsp;</a></span>return_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a1474ab1a190e6a21c3813f44bb30e88d">return_type</a> =  Return</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c33eedf7c1bc8dba9b38ae354ee3cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c33eedf7c1bc8dba9b38ae354ee3cab">&#9670;&nbsp;</a></span>signature_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a4c33eedf7c1bc8dba9b38ae354ee3cab">signature_type</a> =  <a class="el" href="structasio_1_1experimental_1_1coro__traits.html#ac3e4a53fe0317c3959123c13a45f44cf">result_type</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a050804753166b77be3b31a1fca3138e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050804753166b77be3b31a1fca3138e9">&#9670;&nbsp;</a></span>yield_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::<a class="el" href="structasio_1_1experimental_1_1coro__traits.html#a050804753166b77be3b31a1fca3138e9">yield_type</a> =  Yield</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a2d03cb5f9a3e3337bf442e348fdfc2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d03cb5f9a3e3337bf442e348fdfc2f4">&#9670;&nbsp;</a></span>is_noexcept</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Yield , typename Return , typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static bool <a class="el" href="structasio_1_1experimental_1_1coro__traits.html">asio::experimental::coro_traits</a>&lt; Yield, Return, Executor &gt;::is_noexcept = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/experimental/<a class="el" href="coro__traits_8hpp_source.html">coro_traits.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

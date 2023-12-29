@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/detail/handler_tracking.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл handler_tracking.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для handler_tracking.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="handler__tracking_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__tracking_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__tracking_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__tracking_8hpp">
+<area shape="rect" title=" " alt="" coords="293,5,455,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="84,109,245,136"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="270,109,478,136"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="503,109,704,136"/>
+<area shape="rect" title=" " alt="" coords="5,184,76,211"/>
+<area shape="rect" title=" " alt="" coords="100,184,229,211"/>
+<area shape="rect" title=" " alt="" coords="254,184,393,211"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="handler__tracking_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__tracking_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__tracking_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2handler__tracking_8hppdep">
+<area shape="rect" title=" " alt="" coords="2337,5,2499,61"/>
+<area shape="rect" href="scheduler__operation_8hpp.html" title=" " alt="" coords="870,109,1057,165"/>
+<area shape="rect" href="impl_2connect_8hpp.html" title=" " alt="" coords="2468,221,2688,262"/>
+<area shape="rect" href="impl_2read_8hpp.html" title=" " alt="" coords="5,117,204,158"/>
+<area shape="rect" href="impl_2read__at_8hpp.html" title=" " alt="" coords="2271,109,2442,165"/>
+<area shape="rect" href="impl_2read__until_8hpp.html" title=" " alt="" coords="2606,109,2777,165"/>
+<area shape="rect" href="impl_2write_8hpp.html" title=" " alt="" coords="2806,117,3009,158"/>
+<area shape="rect" href="io_8hpp.html" title=" " alt="" coords="3015,651,3181,707"/>
+<area shape="rect" href="impl_2write__at_8hpp.html" title=" " alt="" coords="523,109,697,165"/>
+<area shape="rect" href="blocking__executor__op_8hpp.html" title=" " alt="" coords="783,213,978,269"/>
+<area shape="rect" href="executor__op_8hpp.html" title=" " alt="" coords="570,213,717,269"/>
+<area shape="rect" href="strand__executor__service_8hpp.html" title=" " alt="" coords="168,317,380,373"/>
+<area shape="rect" href="operation_8hpp.html" title=" " alt="" coords="1595,213,1742,269"/>
+<area shape="rect" href="scheduler_8hpp.html" title=" " alt="" coords="974,317,1121,373"/>
+<area shape="rect" href="impl_2thread__pool_8hpp.html" title=" " alt="" coords="552,317,735,373"/>
+<area shape="rect" href="thread__pool_8hpp.html" title=" " alt="" coords="468,429,619,485"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="1614,659,1761,700"/>
+<area shape="rect" href="impl_2io__context_8hpp.html" title=" " alt="" coords="2328,429,2481,485"/>
+<area shape="rect" href="impl_2system__executor_8hpp.html" title=" " alt="" coords="1043,540,1233,596"/>
+<area shape="rect" href="strand__executor__service_8ipp.html" title=" " alt="" coords="179,421,342,492"/>
+<area shape="rect" href="strand_8hpp.html" title=" " alt="" coords="668,547,845,589"/>
+<area shape="rect" href="io__context_8hpp.html" title=" " alt="" coords="2185,547,2389,589"/>
+<area shape="rect" href="strand__service_8hpp.html" title=" " alt="" coords="2022,651,2171,707"/>
+<area shape="rect" href="io__context_8ipp.html" title=" " alt="" coords="1067,651,1220,707"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__tcp__client_8cpp.html" title=" " alt="" coords="2609,644,2779,715"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__token__tcp__client_8cpp.html" title=" " alt="" coords="2803,644,2990,715"/>
+<area shape="rect" href="cpp11_2timeouts_2blocking__tcp__client_8cpp.html" title=" " alt="" coords="2414,644,2585,715"/>
+<area shape="rect" href="completion__handler_8hpp.html" title=" " alt="" coords="2307,317,2489,373"/>
+<area shape="rect" href="reactor__op_8hpp.html" title=" " alt="" coords="1937,317,2083,373"/>
+<area shape="rect" href="resolve__op_8hpp.html" title=" " alt="" coords="1766,317,1913,373"/>
+<area shape="rect" href="signal__op_8hpp.html" title=" " alt="" coords="1595,317,1742,373"/>
+<area shape="rect" href="timer__queue__base_8hpp.html" title=" " alt="" coords="2108,317,2283,373"/>
+<area shape="rect" href="wait__op_8hpp.html" title=" " alt="" coords="1246,317,1393,373"/>
+<area shape="rect" href="winrt__async__op_8hpp.html" title=" " alt="" coords="1417,317,1571,373"/>
+<area shape="rect" href="resolve__endpoint__op_8hpp.html" title=" " alt="" coords="1647,429,1837,485"/>
+<area shape="rect" href="resolve__query__op_8hpp.html" title=" " alt="" coords="2135,429,2304,485"/>
+<area shape="rect" href="resolver__service__base_8hpp.html" title=" " alt="" coords="1861,429,2060,485"/>
+<area shape="rect" href="signal__set__service_8hpp.html" title=" " alt="" coords="1448,429,1623,485"/>
+<area shape="rect" href="scheduler_8ipp.html" title=" " alt="" coords="842,429,989,485"/>
+<area shape="rect" href="impl_2select__reactor_8hpp.html" title=" " alt="" coords="1013,429,1191,485"/>
+<area shape="rect" href="select__reactor_8ipp.html" title=" " alt="" coords="643,429,817,485"/>
+<area shape="rect" href="system__context_8hpp.html" title=" " alt="" coords="1216,429,1372,485"/>
+<area shape="rect" href="connect_8hpp.html" title=" " alt="" coords="2414,547,2601,589"/>
+<area shape="rect" href="socket_8hpp.html" title=" " alt="" coords="2195,659,2390,700"/>
+<area shape="rect" href="read_8hpp.html" title=" " alt="" coords="67,547,233,589"/>
+<area shape="rect" href="read__at_8hpp.html" title=" " alt="" coords="2259,221,2444,262"/>
+<area shape="rect" href="read__until_8hpp.html" title=" " alt="" coords="2625,547,2827,589"/>
+<area shape="rect" href="write_8hpp.html" title=" " alt="" coords="2851,547,3020,589"/>
+<area shape="rect" href="stream_8hpp.html" title=" " alt="" coords="2996,763,3200,804"/>
+<area shape="rect" href="write__at_8hpp.html" title=" " alt="" coords="90,213,237,269"/>
+</map>
+</div>
+</div>
+<p><a href="handler__tracking_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a9d5e273cbfba2b39f8ea6c347c1d045b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a9d5e273cbfba2b39f8ea6c347c1d045b">ASIO_INHERIT_TRACKED_HANDLER</a></td></tr>
+<tr class="separator:a9d5e273cbfba2b39f8ea6c347c1d045b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260b2488f20f2c0348e35fbe4eed7ec9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a260b2488f20f2c0348e35fbe4eed7ec9">ASIO_ALSO_INHERIT_TRACKED_HANDLER</a></td></tr>
+<tr class="separator:a260b2488f20f2c0348e35fbe4eed7ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ce43fb68c55b692e5de8c40540f1db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#ab3ce43fb68c55b692e5de8c40540f1db">ASIO_HANDLER_TRACKING_INIT</a>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:ab3ce43fb68c55b692e5de8c40540f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05844ad8d9e381a464600cbb5b210c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#ad05844ad8d9e381a464600cbb5b210c7">ASIO_HANDLER_LOCATION</a>(loc)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:ad05844ad8d9e381a464600cbb5b210c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09fd3fc9a4f02e07e80ce4333235d19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#aa09fd3fc9a4f02e07e80ce4333235d19">ASIO_HANDLER_CREATION</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:aa09fd3fc9a4f02e07e80ce4333235d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd006ace2145f1adc4b598bbd0e73b83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#acd006ace2145f1adc4b598bbd0e73b83">ASIO_HANDLER_COMPLETION</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:acd006ace2145f1adc4b598bbd0e73b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40898fadadf6eee5fe0b54f9fba8d022"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a40898fadadf6eee5fe0b54f9fba8d022">ASIO_HANDLER_INVOCATION_BEGIN</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:a40898fadadf6eee5fe0b54f9fba8d022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190b5ee3bba7d92c73f79359fd79d037"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a190b5ee3bba7d92c73f79359fd79d037">ASIO_HANDLER_INVOCATION_END</a>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:a190b5ee3bba7d92c73f79359fd79d037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab929103950140032c2b0e2a62d267346"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#ab929103950140032c2b0e2a62d267346">ASIO_HANDLER_OPERATION</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:ab929103950140032c2b0e2a62d267346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d5f59b7156323cf9fded32ba7d6745"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#ae0d5f59b7156323cf9fded32ba7d6745">ASIO_HANDLER_REACTOR_REGISTRATION</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:ae0d5f59b7156323cf9fded32ba7d6745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882a508006a1055291daeb35d434e686"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a882a508006a1055291daeb35d434e686">ASIO_HANDLER_REACTOR_DEREGISTRATION</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:a882a508006a1055291daeb35d434e686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e4a63d857832d9de47474ff57baada"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a67e4a63d857832d9de47474ff57baada">ASIO_HANDLER_REACTOR_READ_EVENT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a67e4a63d857832d9de47474ff57baada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1d6433eecef2ae6ffec886116e8525"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#acc1d6433eecef2ae6ffec886116e8525">ASIO_HANDLER_REACTOR_WRITE_EVENT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:acc1d6433eecef2ae6ffec886116e8525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7830e3ec962b5d806ca82a5fe3630d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#ae7830e3ec962b5d806ca82a5fe3630d0">ASIO_HANDLER_REACTOR_ERROR_EVENT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ae7830e3ec962b5d806ca82a5fe3630d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d6b0a11b6baa8583642b74e529d727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a47d6b0a11b6baa8583642b74e529d727">ASIO_HANDLER_REACTOR_EVENTS</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:a47d6b0a11b6baa8583642b74e529d727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef3a07af60226bdeb1edfbb4d5d6cb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler__tracking_8hpp.html#a5ef3a07af60226bdeb1edfbb4d5d6cb7">ASIO_HANDLER_REACTOR_OPERATION</a>(args)&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td></tr>
+<tr class="separator:a5ef3a07af60226bdeb1edfbb4d5d6cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a260b2488f20f2c0348e35fbe4eed7ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260b2488f20f2c0348e35fbe4eed7ec9">&#9670;&nbsp;</a></span>ASIO_ALSO_INHERIT_TRACKED_HANDLER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ALSO_INHERIT_TRACKED_HANDLER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd006ace2145f1adc4b598bbd0e73b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd006ace2145f1adc4b598bbd0e73b83">&#9670;&nbsp;</a></span>ASIO_HANDLER_COMPLETION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_COMPLETION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa09fd3fc9a4f02e07e80ce4333235d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09fd3fc9a4f02e07e80ce4333235d19">&#9670;&nbsp;</a></span>ASIO_HANDLER_CREATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_CREATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40898fadadf6eee5fe0b54f9fba8d022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40898fadadf6eee5fe0b54f9fba8d022">&#9670;&nbsp;</a></span>ASIO_HANDLER_INVOCATION_BEGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_INVOCATION_BEGIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a190b5ee3bba7d92c73f79359fd79d037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190b5ee3bba7d92c73f79359fd79d037">&#9670;&nbsp;</a></span>ASIO_HANDLER_INVOCATION_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_INVOCATION_END&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad05844ad8d9e381a464600cbb5b210c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05844ad8d9e381a464600cbb5b210c7">&#9670;&nbsp;</a></span>ASIO_HANDLER_LOCATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_LOCATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">loc</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab929103950140032c2b0e2a62d267346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab929103950140032c2b0e2a62d267346">&#9670;&nbsp;</a></span>ASIO_HANDLER_OPERATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_OPERATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a882a508006a1055291daeb35d434e686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882a508006a1055291daeb35d434e686">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_DEREGISTRATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_DEREGISTRATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7830e3ec962b5d806ca82a5fe3630d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7830e3ec962b5d806ca82a5fe3630d0">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_ERROR_EVENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_ERROR_EVENT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47d6b0a11b6baa8583642b74e529d727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47d6b0a11b6baa8583642b74e529d727">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_EVENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_EVENTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ef3a07af60226bdeb1edfbb4d5d6cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ef3a07af60226bdeb1edfbb4d5d6cb7">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_OPERATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_OPERATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67e4a63d857832d9de47474ff57baada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e4a63d857832d9de47474ff57baada">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_READ_EVENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_READ_EVENT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d5f59b7156323cf9fded32ba7d6745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d5f59b7156323cf9fded32ba7d6745">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_REGISTRATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_REGISTRATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc1d6433eecef2ae6ffec886116e8525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1d6433eecef2ae6ffec886116e8525">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_WRITE_EVENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_WRITE_EVENT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3ce43fb68c55b692e5de8c40540f1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ce43fb68c55b692e5de8c40540f1db">&#9670;&nbsp;</a></span>ASIO_HANDLER_TRACKING_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_TRACKING_INIT&#160;&#160;&#160;(<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>)0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d5e273cbfba2b39f8ea6c347c1d045b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5e273cbfba2b39f8ea6c347c1d045b">&#9670;&nbsp;</a></span>ASIO_INHERIT_TRACKED_HANDLER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INHERIT_TRACKED_HANDLER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

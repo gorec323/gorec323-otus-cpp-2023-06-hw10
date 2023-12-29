@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/tests/unit/unit_test.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_e88e4068f39a9b26acaa07f78a3a30b5.html">tests</a></li><li class="navelem"><a class="el" href="dir_a430ae2557b52742c31376394189b58f.html">unit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл unit_test.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="atomic__count_8hpp_source.html">asio/detail/atomic_count.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для unit_test.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="unit__test_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2tests_2unit_2unit__test_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2tests_2unit_2unit__test_8hpp" id="a__deps_2asio-src_2asio_2src_2tests_2unit_2unit__test_8hpp">
+<area shape="rect" title=" " alt="" coords="63,5,210,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="84,199,245,225"/>
+<area shape="rect" title=" " alt="" coords="97,117,177,143"/>
+<area shape="rect" href="atomic__count_8hpp.html" title=" " alt="" coords="201,109,339,151"/>
+<area shape="rect" title=" " alt="" coords="5,273,76,300"/>
+<area shape="rect" title=" " alt="" coords="100,273,229,300"/>
+<area shape="rect" title=" " alt="" coords="254,273,393,300"/>
+</map>
+</div>
+</div>
+<p><a href="unit__test_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ae095fd8ff9c6054880ec5028032c7c82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#ae095fd8ff9c6054880ec5028032c7c82">ASIO_TEST_IOSTREAM</a>&#160;&#160;&#160;std::cerr</td></tr>
+<tr class="separator:ae095fd8ff9c6054880ec5028032c7c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7dbf828f0df0e61d6261476ee341cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a9d7dbf828f0df0e61d6261476ee341cf">ASIO_CHECK</a>(expr)</td></tr>
+<tr class="separator:a9d7dbf828f0df0e61d6261476ee341cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3c4b75b9ecafcb10896a0a14c5dec4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a0a3c4b75b9ecafcb10896a0a14c5dec4">ASIO_CHECK_MESSAGE</a>(expr,  msg)</td></tr>
+<tr class="separator:a0a3c4b75b9ecafcb10896a0a14c5dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d6a0ee6613dbe15714958c46be4e09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a29d6a0ee6613dbe15714958c46be4e09">ASIO_WARN_MESSAGE</a>(expr,  msg)</td></tr>
+<tr class="separator:a29d6a0ee6613dbe15714958c46be4e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9424af7520700d6ad30f5c0e185b563c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a9424af7520700d6ad30f5c0e185b563c">ASIO_ERROR</a>(msg)</td></tr>
+<tr class="separator:a9424af7520700d6ad30f5c0e185b563c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316d3c06de7361d42e2630b223f2a421"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a316d3c06de7361d42e2630b223f2a421">ASIO_TEST_SUITE</a>(name,  tests)</td></tr>
+<tr class="separator:a316d3c06de7361d42e2630b223f2a421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d87a1bde1a4ded8bb07d527e7be3b52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a6d87a1bde1a4ded8bb07d527e7be3b52">ASIO_TEST_CASE</a>(test)&#160;&#160;&#160;  <a class="el" href="namespaceasio_1_1detail.html#a1b3229d7d3801e6587f52c10d8a8c6b9">asio::detail::run_test</a>&lt;&amp;test&gt;(#test);</td></tr>
+<tr class="separator:a6d87a1bde1a4ded8bb07d527e7be3b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b4152c8caa5738a122a81d103792f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#ad6b4152c8caa5738a122a81d103792f6">ASIO_TEST_CASE2</a>(test1,  test2)&#160;&#160;&#160;  <a class="el" href="namespaceasio_1_1detail.html#a1b3229d7d3801e6587f52c10d8a8c6b9">asio::detail::run_test</a>&lt;&amp;test1, test2&gt;(#test1 &quot;,&quot; #test2);</td></tr>
+<tr class="separator:ad6b4152c8caa5738a122a81d103792f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3b7f35ab1c0ed9c5e41176101ca6c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#aca3b7f35ab1c0ed9c5e41176101ca6c1">ASIO_TEST_CASE3</a>(test1,  test2,  test3)</td></tr>
+<tr class="separator:aca3b7f35ab1c0ed9c5e41176101ca6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a60cf6b8277789ddaa802a7165187f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a11a60cf6b8277789ddaa802a7165187f">ASIO_TEST_CASE4</a>(test1,  test2,  test3,  test4)</td></tr>
+<tr class="separator:a11a60cf6b8277789ddaa802a7165187f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87d73407a1df0148e7a7a6b360e17b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#ac87d73407a1df0148e7a7a6b360e17b1">ASIO_TEST_CASE5</a>(test1,  test2,  test3,  test4,  test5)</td></tr>
+<tr class="separator:ac87d73407a1df0148e7a7a6b360e17b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cb770a392fa6fb1d0143fdebcc7a4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a76cb770a392fa6fb1d0143fdebcc7a4f">ASIO_COMPILE_TEST_CASE</a>(test)&#160;&#160;&#160;  <a class="el" href="namespaceasio_1_1detail.html#a3673208dfa0db1f7f8669198460040a0">asio::detail::compile_test</a>&lt;&amp;test&gt;(#test);</td></tr>
+<tr class="separator:a76cb770a392fa6fb1d0143fdebcc7a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ac7a93e5418298539dcb97c1237ca91f3"><td class="memItemLeft" align="right" valign="top">const char *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#ac7a93e5418298539dcb97c1237ca91f3">asio::detail::test_name</a> ()</td></tr>
+<tr class="separator:ac7a93e5418298539dcb97c1237ca91f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67bdb2d830c3f24a43e3db833f255cf4"><td class="memItemLeft" align="right" valign="top">atomic_count &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a67bdb2d830c3f24a43e3db833f255cf4">asio::detail::test_errors</a> ()</td></tr>
+<tr class="separator:a67bdb2d830c3f24a43e3db833f255cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d83a4254b4f1098fdd57f4847e8f590"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a4d83a4254b4f1098fdd57f4847e8f590">asio::detail::begin_test_suite</a> (const char *name)</td></tr>
+<tr class="separator:a4d83a4254b4f1098fdd57f4847e8f590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a731b46a654770314fb08e59396e735"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a8a731b46a654770314fb08e59396e735">asio::detail::end_test_suite</a> (const char *name)</td></tr>
+<tr class="separator:a8a731b46a654770314fb08e59396e735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3229d7d3801e6587f52c10d8a8c6b9"><td class="memTemplParams" colspan="2">template&lt;void(*)() Test&gt; </td></tr>
+<tr class="memitem:a1b3229d7d3801e6587f52c10d8a8c6b9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a1b3229d7d3801e6587f52c10d8a8c6b9">asio::detail::run_test</a> (const char *name)</td></tr>
+<tr class="separator:a1b3229d7d3801e6587f52c10d8a8c6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3673208dfa0db1f7f8669198460040a0"><td class="memTemplParams" colspan="2">template&lt;void(*)() &gt; </td></tr>
+<tr class="memitem:a3673208dfa0db1f7f8669198460040a0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a3673208dfa0db1f7f8669198460040a0">asio::detail::compile_test</a> (const char *name)</td></tr>
+<tr class="separator:a3673208dfa0db1f7f8669198460040a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8637cef20087cacf33f6cab455b67625"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8hpp.html#a8637cef20087cacf33f6cab455b67625">null_test</a> ()</td></tr>
+<tr class="separator:a8637cef20087cacf33f6cab455b67625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a9d7dbf828f0df0e61d6261476ee341cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7dbf828f0df0e61d6261476ee341cf">&#9670;&nbsp;</a></span>ASIO_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> { <span class="keywordflow">if</span> (!(expr)) { \</div>
+<div class="line">    ASIO_TEST_IOSTREAM &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;): &quot;</span> \</div>
+<div class="line">      &lt;&lt; <a class="code" href="namespaceasio_1_1detail.html#ac7a93e5418298539dcb97c1237ca91f3">asio::detail::test_name</a>() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> \</div>
+<div class="line">      &lt;&lt; <span class="stringliteral">&quot;check &#39;&quot;</span> &lt;&lt; #expr &lt;&lt; <span class="stringliteral">&quot;&#39; failed&quot;</span> &lt;&lt; std::endl; \</div>
+<div class="line">    ++<a class="code" href="namespaceasio_1_1detail.html#a67bdb2d830c3f24a43e3db833f255cf4">asio::detail::test_errors</a>(); \</div>
+<div class="line">  } } <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a67bdb2d830c3f24a43e3db833f255cf4"><div class="ttname"><a href="namespaceasio_1_1detail.html#a67bdb2d830c3f24a43e3db833f255cf4">asio::detail::test_errors</a></div><div class="ttdeci">atomic_count &amp; test_errors()</div><div class="ttdef"><b>Definition:</b> unit_test.hpp:53</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_ac7a93e5418298539dcb97c1237ca91f3"><div class="ttname"><a href="namespaceasio_1_1detail.html#ac7a93e5418298539dcb97c1237ca91f3">asio::detail::test_name</a></div><div class="ttdeci">const char *&amp; test_name()</div><div class="ttdef"><b>Definition:</b> unit_test.hpp:47</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0a3c4b75b9ecafcb10896a0a14c5dec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3c4b75b9ecafcb10896a0a14c5dec4">&#9670;&nbsp;</a></span>ASIO_CHECK_MESSAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_CHECK_MESSAGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> { <span class="keywordflow">if</span> (!(expr)) { \</div>
+<div class="line">    ASIO_TEST_IOSTREAM &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;): &quot;</span> \</div>
+<div class="line">      &lt;&lt; <a class="code" href="namespaceasio_1_1detail.html#ac7a93e5418298539dcb97c1237ca91f3">asio::detail::test_name</a>() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> \</div>
+<div class="line">      &lt;&lt; msg &lt;&lt; std::endl; \</div>
+<div class="line">    ++<a class="code" href="namespaceasio_1_1detail.html#a67bdb2d830c3f24a43e3db833f255cf4">asio::detail::test_errors</a>(); \</div>
+<div class="line">  } } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a76cb770a392fa6fb1d0143fdebcc7a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76cb770a392fa6fb1d0143fdebcc7a4f">&#9670;&nbsp;</a></span>ASIO_COMPILE_TEST_CASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_COMPILE_TEST_CASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="namespaceasio_1_1detail.html#a3673208dfa0db1f7f8669198460040a0">asio::detail::compile_test</a>&lt;&amp;test&gt;(#test);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9424af7520700d6ad30f5c0e185b563c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9424af7520700d6ad30f5c0e185b563c">&#9670;&nbsp;</a></span>ASIO_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ERROR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> { \</div>
+<div class="line">    ASIO_TEST_IOSTREAM &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;): &quot;</span> \</div>
+<div class="line">      &lt;&lt; <a class="code" href="namespaceasio_1_1detail.html#ac7a93e5418298539dcb97c1237ca91f3">asio::detail::test_name</a>() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> \</div>
+<div class="line">      &lt;&lt; msg &lt;&lt; std::endl; \</div>
+<div class="line">    ++<a class="code" href="namespaceasio_1_1detail.html#a67bdb2d830c3f24a43e3db833f255cf4">asio::detail::test_errors</a>(); \</div>
+<div class="line">  } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d87a1bde1a4ded8bb07d527e7be3b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d87a1bde1a4ded8bb07d527e7be3b52">&#9670;&nbsp;</a></span>ASIO_TEST_CASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_TEST_CASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="namespaceasio_1_1detail.html#a1b3229d7d3801e6587f52c10d8a8c6b9">asio::detail::run_test</a>&lt;&amp;test&gt;(#test);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6b4152c8caa5738a122a81d103792f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b4152c8caa5738a122a81d103792f6">&#9670;&nbsp;</a></span>ASIO_TEST_CASE2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_TEST_CASE2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="namespaceasio_1_1detail.html#a1b3229d7d3801e6587f52c10d8a8c6b9">asio::detail::run_test</a>&lt;&amp;test1, test2&gt;(#test1 &quot;,&quot; #test2);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca3b7f35ab1c0ed9c5e41176101ca6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3b7f35ab1c0ed9c5e41176101ca6c1">&#9670;&nbsp;</a></span>ASIO_TEST_CASE3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_TEST_CASE3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test3&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  asio::detail::run_test&lt;&amp;test1, test2, test3&gt;( \</div>
+<div class="line">    #test1 <span class="stringliteral">&quot;,&quot;</span> #test2 <span class="stringliteral">&quot;,&quot;</span> #test3);</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a11a60cf6b8277789ddaa802a7165187f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a60cf6b8277789ddaa802a7165187f">&#9670;&nbsp;</a></span>ASIO_TEST_CASE4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_TEST_CASE4</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test4&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  asio::detail::run_test&lt;&amp;test1, test2, test3, test4&gt;( \</div>
+<div class="line">    #test1 <span class="stringliteral">&quot;,&quot;</span> #test2 <span class="stringliteral">&quot;,&quot;</span> #test3 <span class="stringliteral">&quot;,&quot;</span> #test4);</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac87d73407a1df0148e7a7a6b360e17b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87d73407a1df0148e7a7a6b360e17b1">&#9670;&nbsp;</a></span>ASIO_TEST_CASE5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_TEST_CASE5</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">test5&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  asio::detail::run_test&lt;&amp;test1, test2, test3, test4, test5&gt;( \</div>
+<div class="line">    #test1 <span class="stringliteral">&quot;,&quot;</span> #test2 <span class="stringliteral">&quot;,&quot;</span> #test3 <span class="stringliteral">&quot;,&quot;</span> #test4 <span class="stringliteral">&quot;,&quot;</span> #test5);</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae095fd8ff9c6054880ec5028032c7c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae095fd8ff9c6054880ec5028032c7c82">&#9670;&nbsp;</a></span>ASIO_TEST_IOSTREAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_TEST_IOSTREAM&#160;&#160;&#160;std::cerr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a316d3c06de7361d42e2630b223f2a421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a316d3c06de7361d42e2630b223f2a421">&#9670;&nbsp;</a></span>ASIO_TEST_SUITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_TEST_SUITE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tests&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keywordtype">int</span> <a class="code" href="examples_2cpp03_2allocation_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() \</div>
+<div class="line">  { <a class="code" href="namespaceasio_1_1detail.html#a4d83a4254b4f1098fdd57f4847e8f590">\</a></div>
+<div class="line"><a class="code" href="namespaceasio_1_1detail.html#a4d83a4254b4f1098fdd57f4847e8f590">    asio::detail::begin_test_suite</a>(name); \</div>
+<div class="line">    tests \</div>
+<div class="line">    return <a class="code" href="namespaceasio_1_1detail.html#a8a731b46a654770314fb08e59396e735">asio::detail::end_test_suite</a>(name); \</div>
+<div class="line">  }</div>
+<div class="ttc" id="aexamples_2cpp03_2allocation_2server_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="examples_2cpp03_2allocation_2server_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> server.cpp:219</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a4d83a4254b4f1098fdd57f4847e8f590"><div class="ttname"><a href="namespaceasio_1_1detail.html#a4d83a4254b4f1098fdd57f4847e8f590">asio::detail::begin_test_suite</a></div><div class="ttdeci">void begin_test_suite(const char *name)</div><div class="ttdef"><b>Definition:</b> unit_test.hpp:59</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_a8a731b46a654770314fb08e59396e735"><div class="ttname"><a href="namespaceasio_1_1detail.html#a8a731b46a654770314fb08e59396e735">asio::detail::end_test_suite</a></div><div class="ttdeci">int end_test_suite(const char *name)</div><div class="ttdef"><b>Definition:</b> unit_test.hpp:66</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a29d6a0ee6613dbe15714958c46be4e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d6a0ee6613dbe15714958c46be4e09">&#9670;&nbsp;</a></span>ASIO_WARN_MESSAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_WARN_MESSAGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> { <span class="keywordflow">if</span> (!(expr)) { \</div>
+<div class="line">    ASIO_TEST_IOSTREAM &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;): &quot;</span> \</div>
+<div class="line">      &lt;&lt; <a class="code" href="namespaceasio_1_1detail.html#ac7a93e5418298539dcb97c1237ca91f3">asio::detail::test_name</a>() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> \</div>
+<div class="line">      &lt;&lt; msg &lt;&lt; std::endl; \</div>
+<div class="line">  } } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a8637cef20087cacf33f6cab455b67625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8637cef20087cacf33f6cab455b67625">&#9670;&nbsp;</a></span>null_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> null_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

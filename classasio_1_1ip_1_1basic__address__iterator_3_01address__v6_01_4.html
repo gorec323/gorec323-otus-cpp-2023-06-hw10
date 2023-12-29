@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::ip::basic_address_iterator&lt; address_v6 &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="namespaceasio_1_1ip.html">ip</a></li><li class="navelem"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html">basic_address_iterator&lt; address_v6 &gt;</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::ip::basic_address_iterator&lt; address_v6 &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>An input iterator that can be used for traversing IPv6 addresses.  
+ <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="address__v6__iterator_8hpp_source.html">address_v6_iterator.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ac5f718cae189d3d194410b52d57ce560"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ac5f718cae189d3d194410b52d57ce560">value_type</a></td></tr>
+<tr class="memdesc:ac5f718cae189d3d194410b52d57ce560"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the elements pointed to by the iterator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ac5f718cae189d3d194410b52d57ce560">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac5f718cae189d3d194410b52d57ce560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978713f012098f73e1d2ee995ae90a91"><td class="memItemLeft" align="right" valign="top">typedef std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a978713f012098f73e1d2ee995ae90a91">difference_type</a></td></tr>
+<tr class="memdesc:a978713f012098f73e1d2ee995ae90a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance between two iterators.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a978713f012098f73e1d2ee995ae90a91">Подробнее...</a><br /></td></tr>
+<tr class="separator:a978713f012098f73e1d2ee995ae90a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c724c6271068fbc0715cf78a2732961"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a3c724c6271068fbc0715cf78a2732961">pointer</a></td></tr>
+<tr class="memdesc:a3c724c6271068fbc0715cf78a2732961"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of a pointer to an element pointed to by the iterator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a3c724c6271068fbc0715cf78a2732961">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3c724c6271068fbc0715cf78a2732961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e889bdc5e34a54138113a1921d952b6"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a4e889bdc5e34a54138113a1921d952b6">reference</a></td></tr>
+<tr class="memdesc:a4e889bdc5e34a54138113a1921d952b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of a reference to an element pointed to by the iterator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a4e889bdc5e34a54138113a1921d952b6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4e889bdc5e34a54138113a1921d952b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a928b23e99cf8713e3124b3730c558a27"><td class="memItemLeft" align="right" valign="top">typedef std::input_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a928b23e99cf8713e3124b3730c558a27">iterator_category</a></td></tr>
+<tr class="memdesc:a928b23e99cf8713e3124b3730c558a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Denotes that the iterator satisfies the input iterator requirements.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a928b23e99cf8713e3124b3730c558a27">Подробнее...</a><br /></td></tr>
+<tr class="separator:a928b23e99cf8713e3124b3730c558a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a4d3a967176f003691b2a969f2945b7e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a4d3a967176f003691b2a969f2945b7e2">basic_address_iterator</a> (const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &amp;addr) noexcept</td></tr>
+<tr class="memdesc:a4d3a967176f003691b2a969f2945b7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an iterator that points to the specified address.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a4d3a967176f003691b2a969f2945b7e2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4d3a967176f003691b2a969f2945b7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73efcc96ada1f7b69cf9653a0b87ad2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a73efcc96ada1f7b69cf9653a0b87ad2e">basic_address_iterator</a> (const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a73efcc96ada1f7b69cf9653a0b87ad2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a73efcc96ada1f7b69cf9653a0b87ad2e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73efcc96ada1f7b69cf9653a0b87ad2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd77cb146fb518e5761605b548ec5ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a3fd77cb146fb518e5761605b548ec5ca">basic_address_iterator</a> (<a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a3fd77cb146fb518e5761605b548ec5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a3fd77cb146fb518e5761605b548ec5ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3fd77cb146fb518e5761605b548ec5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f801713a536c9f5bafb3b461829142"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ae9f801713a536c9f5bafb3b461829142">operator=</a> (const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:ae9f801713a536c9f5bafb3b461829142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ae9f801713a536c9f5bafb3b461829142">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae9f801713a536c9f5bafb3b461829142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79a66c7b29224dd8d6d16ab7b0a7c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ac79a66c7b29224dd8d6d16ab7b0a7c1a">operator=</a> (<a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:ac79a66c7b29224dd8d6d16ab7b0a7c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ac79a66c7b29224dd8d6d16ab7b0a7c1a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac79a66c7b29224dd8d6d16ab7b0a7c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01181cb8a851a9458629fc0c346f66a5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a01181cb8a851a9458629fc0c346f66a5">operator*</a> () const noexcept</td></tr>
+<tr class="memdesc:a01181cb8a851a9458629fc0c346f66a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference the iterator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a01181cb8a851a9458629fc0c346f66a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a01181cb8a851a9458629fc0c346f66a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae59b277afff54acb18b7ba941d2c61d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#aae59b277afff54acb18b7ba941d2c61d">operator-&gt;</a> () const noexcept</td></tr>
+<tr class="memdesc:aae59b277afff54acb18b7ba941d2c61d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference the iterator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#aae59b277afff54acb18b7ba941d2c61d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aae59b277afff54acb18b7ba941d2c61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade629eddf3f16af9e7a23e71a1d4b7f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ade629eddf3f16af9e7a23e71a1d4b7f5">operator++</a> () noexcept</td></tr>
+<tr class="memdesc:ade629eddf3f16af9e7a23e71a1d4b7f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-increment operator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ade629eddf3f16af9e7a23e71a1d4b7f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ade629eddf3f16af9e7a23e71a1d4b7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7667ad9cd9eb2753512f6655e3a40eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ab7667ad9cd9eb2753512f6655e3a40eb">operator++</a> (int) noexcept</td></tr>
+<tr class="memdesc:ab7667ad9cd9eb2753512f6655e3a40eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-increment operator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ab7667ad9cd9eb2753512f6655e3a40eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab7667ad9cd9eb2753512f6655e3a40eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2844175014ec92496dd3534f588c0773"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a2844175014ec92496dd3534f588c0773">operator--</a> () noexcept</td></tr>
+<tr class="memdesc:a2844175014ec92496dd3534f588c0773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-decrement operator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a2844175014ec92496dd3534f588c0773">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2844175014ec92496dd3534f588c0773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0cac8e82281d3176239442fe04e1ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a2d0cac8e82281d3176239442fe04e1ea">operator--</a> (int)</td></tr>
+<tr class="memdesc:a2d0cac8e82281d3176239442fe04e1ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-decrement operator.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a2d0cac8e82281d3176239442fe04e1ea">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2d0cac8e82281d3176239442fe04e1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a2e00e3ed4eedb9dbf2fbb9c3608b01d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a2e00e3ed4eedb9dbf2fbb9c3608b01d9">operator==</a> (const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:a2e00e3ed4eedb9dbf2fbb9c3608b01d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two addresses for equality.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a2e00e3ed4eedb9dbf2fbb9c3608b01d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2e00e3ed4eedb9dbf2fbb9c3608b01d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7734e5e4ce6558f75062aad2dd7f4af9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a7734e5e4ce6558f75062aad2dd7f4af9">operator!=</a> (const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> &amp;b)</td></tr>
+<tr class="memdesc:a7734e5e4ce6558f75062aad2dd7f4af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two addresses for inequality.  <a href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a7734e5e4ce6558f75062aad2dd7f4af9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7734e5e4ce6558f75062aad2dd7f4af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>An input iterator that can be used for traversing IPv6 addresses. </p>
+<p>In addition to satisfying the input iterator requirements, this iterator also supports decrement.</p>
+<dl class="section user"><dt>Thread Safety</dt><dd><em>Distinct</em> <em>objects:</em> Safe.<br  />
+<em>Shared</em> <em>objects:</em> Unsafe. </dd></dl>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a978713f012098f73e1d2ee995ae90a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978713f012098f73e1d2ee995ae90a91">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::ptrdiff_t <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a978713f012098f73e1d2ee995ae90a91">difference_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Distance between two iterators. </p>
+
+</div>
+</div>
+<a id="a928b23e99cf8713e3124b3730c558a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a928b23e99cf8713e3124b3730c558a27">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::input_iterator_tag <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a928b23e99cf8713e3124b3730c558a27">iterator_category</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Denotes that the iterator satisfies the input iterator requirements. </p>
+
+</div>
+</div>
+<a id="a3c724c6271068fbc0715cf78a2732961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c724c6271068fbc0715cf78a2732961">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a>* <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a3c724c6271068fbc0715cf78a2732961">pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of a pointer to an element pointed to by the iterator. </p>
+
+</div>
+</div>
+<a id="a4e889bdc5e34a54138113a1921d952b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e889bdc5e34a54138113a1921d952b6">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a>&amp; <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#a4e889bdc5e34a54138113a1921d952b6">reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of a reference to an element pointed to by the iterator. </p>
+
+</div>
+</div>
+<a id="ac5f718cae189d3d194410b52d57ce560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f718cae189d3d194410b52d57ce560">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator_3_01address__v6_01_4.html#ac5f718cae189d3d194410b52d57ce560">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of the elements pointed to by the iterator. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a4d3a967176f003691b2a969f2945b7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3a967176f003691b2a969f2945b7e2">&#9670;&nbsp;</a></span>basic_address_iterator() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &amp;&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an iterator that points to the specified address. </p>
+
+</div>
+</div>
+<a id="a73efcc96ada1f7b69cf9653a0b87ad2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73efcc96ada1f7b69cf9653a0b87ad2e">&#9670;&nbsp;</a></span>basic_address_iterator() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+</div>
+</div>
+<a id="a3fd77cb146fb518e5761605b548ec5ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd77cb146fb518e5761605b548ec5ca">&#9670;&nbsp;</a></span>basic_address_iterator() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::<a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a01181cb8a851a9458629fc0c346f66a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01181cb8a851a9458629fc0c346f66a5">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a>&amp; <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dereference the iterator. </p>
+
+</div>
+</div>
+<a id="ade629eddf3f16af9e7a23e71a1d4b7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade629eddf3f16af9e7a23e71a1d4b7f5">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&amp; <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pre-increment operator. </p>
+
+</div>
+</div>
+<a id="ab7667ad9cd9eb2753512f6655e3a40eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7667ad9cd9eb2753512f6655e3a40eb">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Post-increment operator. </p>
+
+</div>
+</div>
+<a id="a2844175014ec92496dd3534f588c0773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2844175014ec92496dd3534f588c0773">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&amp; <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pre-decrement operator. </p>
+
+</div>
+</div>
+<a id="a2d0cac8e82281d3176239442fe04e1ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d0cac8e82281d3176239442fe04e1ea">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a> <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Post-decrement operator. </p>
+
+</div>
+</div>
+<a id="aae59b277afff54acb18b7ba941d2c61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae59b277afff54acb18b7ba941d2c61d">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a>* <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dereference the iterator. </p>
+
+</div>
+</div>
+<a id="ac79a66c7b29224dd8d6d16ab7b0a7c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac79a66c7b29224dd8d6d16ab7b0a7c1a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&amp; <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator. </p>
+
+</div>
+</div>
+<a id="ae9f801713a536c9f5bafb3b461829142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9f801713a536c9f5bafb3b461829142">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&amp; <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">asio::ip::basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assignment operator. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a7734e5e4ce6558f75062aad2dd7f4af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7734e5e4ce6558f75062aad2dd7f4af9">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two addresses for inequality. </p>
+
+</div>
+</div>
+<a id="a2e00e3ed4eedb9dbf2fbb9c3608b01d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e00e3ed4eedb9dbf2fbb9c3608b01d9">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1ip_1_1basic__address__iterator.html">basic_address_iterator</a>&lt; <a class="el" href="classasio_1_1ip_1_1address__v6.html">address_v6</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two addresses for equality. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/ip/<a class="el" href="address__v6__iterator_8hpp_source.html">address_v6_iterator.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

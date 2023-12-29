@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/impl/connect.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_8c6c10ebdd857c41e2ac833cd6d1f150.html">impl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл connect.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="associator_8hpp_source.html">asio/associator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="base__from__cancellation__state_8hpp_source.html">asio/detail/base_from_cancellation_state.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bind__handler_8hpp_source.html">asio/detail/bind_handler.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="handler__cont__helpers_8hpp_source.html">asio/detail/handler_cont_helpers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="handler__tracking_8hpp_source.html">asio/detail/handler_tracking.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="handler__type__requirements_8hpp_source.html">asio/detail/handler_type_requirements.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="non__const__lvalue_8hpp_source.html">asio/detail/non_const_lvalue.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="throw__error_8hpp_source.html">asio/detail/throw_error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">asio/detail/type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error_8hpp_source.html">asio/error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="post_8hpp_source.html">asio/post.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для connect.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2connect_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2impl_2connect_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2impl_2connect_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2impl_2connect_8hpp">
+<area shape="rect" title=" " alt="" coords="3250,5,3470,47"/>
+<area shape="rect" title=" " alt="" coords="10,95,95,121"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="2290,519,2436,546"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="3602,601,3810,628"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="2401,601,2602,628"/>
+<area shape="rect" href="base__from__cancellation__state_8hpp.html" title=" " alt="" coords="3588,333,3764,375"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="694,601,886,628"/>
+<area shape="rect" href="bind__handler_8hpp.html" title=" " alt="" coords="2244,341,2450,367"/>
+<area shape="rect" href="handler__cont__helpers_8hpp.html" title=" " alt="" coords="3730,423,3873,464"/>
+<area shape="rect" href="handler__tracking_8hpp.html" title=" " alt="" coords="3997,512,4140,553"/>
+<area shape="rect" href="handler__type__requirements_8hpp.html" title=" " alt="" coords="3468,423,3648,464"/>
+<area shape="rect" href="non__const__lvalue_8hpp.html" title=" " alt="" coords="2815,512,2975,553"/>
+<area shape="rect" href="throw__error_8hpp.html" title=" " alt="" coords="4425,430,4621,457"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="5249,430,5360,457"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="1788,95,1898,121"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="3176,676,3337,703"/>
+<area shape="rect" title=" " alt="" coords="4496,751,4566,777"/>
+<area shape="rect" title=" " alt="" coords="3270,751,3400,777"/>
+<area shape="rect" title=" " alt="" coords="3107,751,3246,777"/>
+<area shape="rect" href="associated__cancellation__slot_8hpp.html" title=" " alt="" coords="2980,423,3189,464"/>
+<area shape="rect" href="cancellation__state_8hpp.html" title=" " alt="" coords="4915,430,5115,457"/>
+<area shape="rect" href="cancellation__signal_8hpp.html" title=" " alt="" coords="4770,519,4977,546"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="1359,519,1546,546"/>
+<area shape="rect" title=" " alt="" coords="5038,601,5107,628"/>
+<area shape="rect" title=" " alt="" coords="4849,601,4898,628"/>
+<area shape="rect" title=" " alt="" coords="5161,601,5221,628"/>
+<area shape="rect" href="cstddef_8hpp.html" title=" " alt="" coords="5674,601,5844,628"/>
+<area shape="rect" title=" " alt="" coords="744,676,836,703"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="4469,519,4644,546"/>
+<area shape="rect" href="handler__continuation__hook_8hpp.html" title=" " alt="" coords="3000,512,3190,553"/>
+<area shape="rect" title=" " alt="" coords="4346,601,4412,628"/>
+<area shape="rect" title=" " alt="" coords="3951,601,4028,628"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="4053,601,4220,628"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="4436,601,4666,628"/>
+<area shape="rect" href="include_2asio_2async__result_8hpp.html" title=" " alt="" coords="1823,519,1986,546"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="5053,519,5204,546"/>
+<area shape="rect" title=" " alt="" coords="5249,601,5357,628"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="5330,519,5497,546"/>
+<area shape="rect" title=" " alt="" coords="5820,519,5882,546"/>
+<area shape="rect" title=" " alt="" coords="5725,519,5796,546"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="1177,169,1317,211"/>
+<area shape="rect" href="execution_2executor_8hpp.html" title=" " alt="" coords="778,519,980,546"/>
+<area shape="rect" href="is__executor_8hpp.html" title=" " alt="" coords="2010,519,2164,546"/>
+<area shape="rect" href="blocking_8hpp.html" title=" " alt="" coords="480,430,683,457"/>
+<area shape="rect" href="require_8hpp.html" title=" " alt="" coords="373,519,500,546"/>
+<area shape="rect" href="execution__context_8hpp.html" title=" " alt="" coords="3316,519,3516,546"/>
+<area shape="rect" href="associated__allocator_8hpp.html" title=" " alt="" coords="1453,430,1668,457"/>
+<area shape="rect" href="associated__executor_8hpp.html" title=" " alt="" coords="1215,430,1428,457"/>
+<area shape="rect" href="work__dispatcher_8hpp.html" title=" " alt="" coords="1057,259,1285,285"/>
+<area shape="rect" href="include_2asio_2execution_2allocator_8hpp.html" title=" " alt="" coords="866,430,1070,457"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="impl_2connect_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2impl_2connect_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2impl_2connect_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2impl_2connect_8hppdep">
+<area shape="rect" title=" " alt="" coords="3617,5,3837,47"/>
+<area shape="rect" href="connect_8hpp.html" title=" " alt="" coords="3634,95,3821,136"/>
+<area shape="rect" href="socket_8hpp.html" title=" " alt="" coords="218,199,413,240"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="3269,199,3415,240"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__tcp__client_8cpp.html" title=" " alt="" coords="3439,184,3610,255"/>
+<area shape="rect" href="cpp03_2timeouts_2blocking__token__tcp__client_8cpp.html" title=" " alt="" coords="3634,184,3821,255"/>
+<area shape="rect" href="cpp11_2timeouts_2blocking__tcp__client_8cpp.html" title=" " alt="" coords="3845,184,4015,255"/>
+<area shape="rect" href="cpp11_2timeouts_2blocking__token__tcp__client_8cpp.html" title=" " alt="" coords="4039,184,4226,255"/>
+<area shape="rect" href="connect_8cpp.html" title=" " alt="" coords="4250,199,4442,240"/>
+<area shape="rect" href="net_8hpp.html" title=" " alt="" coords="229,317,402,359"/>
+<area shape="rect" href="socket_8cpp.html" title=" " alt="" coords="5,317,204,359"/>
+<area shape="rect" href="examples_2cpp03_2allocation_2server_8cpp.html" title=" " alt="" coords="6251,310,6412,366"/>
+<area shape="rect" href="cpp03_2buffers_2reference__counted_8cpp.html" title=" " alt="" coords="6436,310,6659,366"/>
+<area shape="rect" href="cpp03_2chat_2chat__client_8cpp.html" title=" " alt="" coords="427,310,583,366"/>
+<area shape="rect" href="cpp03_2chat_2chat__server_8cpp.html" title=" " alt="" coords="607,310,767,366"/>
+<area shape="rect" href="posix__chat__client_8cpp.html" title=" " alt="" coords="792,310,991,366"/>
+<area shape="rect" href="cpp03_2echo_2async__tcp__echo__server_8cpp.html" title=" " alt="" coords="1015,303,1179,373"/>
+<area shape="rect" href="cpp03_2echo_2async__udp__echo__server_8cpp.html" title=" " alt="" coords="1203,303,1371,373"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__client_8cpp.html" title=" " alt="" coords="1395,303,1577,373"/>
+<area shape="rect" href="cpp03_2echo_2blocking__tcp__echo__server_8cpp.html" title=" " alt="" coords="1601,303,1782,373"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__client_8cpp.html" title=" " alt="" coords="1807,303,1992,373"/>
+<area shape="rect" href="cpp03_2echo_2blocking__udp__echo__server_8cpp.html" title=" " alt="" coords="2016,303,2201,373"/>
+<area shape="rect" href="async__client_8cpp.html" title=" " alt="" coords="2225,310,2429,366"/>
+<area shape="rect" href="cpp03_2http_2client_2sync__client_8cpp.html" title=" " alt="" coords="2453,310,2649,366"/>
+<area shape="rect" href="cpp03_2http_2server_2connection_8hpp.html" title=" " alt="" coords="2605,429,2805,485"/>
+<area shape="rect" href="cpp03_2http_2server_2server_8hpp.html" title=" " alt="" coords="2620,540,2789,596"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server_2main_8cpp.html" title=" " alt="" coords="2693,644,2855,700"/>
+<area shape="rect" href="cpp03_2http_2server_2reply_8hpp.html" title=" " alt="" coords="2725,310,2885,366"/>
+<area shape="rect" href="cpp03_2http_2server2_2connection_8hpp.html" title=" " alt="" coords="2879,429,3087,485"/>
+<area shape="rect" href="cpp03_2http_2server2_2server_8hpp.html" title=" " alt="" coords="3137,540,3315,596"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server2_2main_8cpp.html" title=" " alt="" coords="3229,644,3399,700"/>
+<area shape="rect" href="io__context__pool_8hpp.html" title=" " alt="" coords="3112,421,3289,492"/>
+<area shape="rect" href="cpp03_2http_2server2_2reply_8hpp.html" title=" " alt="" coords="3010,310,3178,366"/>
+<area shape="rect" href="cpp03_2http_2server3_2connection_8hpp.html" title=" " alt="" coords="3466,429,3674,485"/>
+<area shape="rect" href="cpp03_2http_2server3_2server_8hpp.html" title=" " alt="" coords="3481,540,3659,596"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server3_2main_8cpp.html" title=" " alt="" coords="3556,644,3725,700"/>
+<area shape="rect" href="cpp03_2http_2server3_2reply_8hpp.html" title=" " alt="" coords="3455,310,3623,366"/>
+<area shape="rect" href="build_2__deps_2asio-src_2asio_2src_2examples_2cpp03_2http_2server4_2main_8cpp.html" title=" " alt="" coords="3912,429,4081,485"/>
+<area shape="rect" href="cpp03_2http_2server4_2reply_8hpp.html" title=" " alt="" coords="3951,310,4119,366"/>
+<area shape="rect" href="cpp03_2http_2server4_2server_8hpp.html" title=" " alt="" coords="3749,310,3927,366"/>
+<area shape="rect" href="ping_8cpp.html" title=" " alt="" coords="4195,310,4351,366"/>
+<area shape="rect" href="cpp03_2invocation_2prioritised__handlers_8cpp.html" title=" " alt="" coords="4375,303,4539,373"/>
+<area shape="rect" href="cpp03_2iostreams_2daytime__client_8cpp.html" title=" " alt="" coords="4563,310,4782,366"/>
+<area shape="rect" href="daytime__server_8cpp.html" title=" " alt="" coords="4807,310,5029,366"/>
+<area shape="rect" href="examples_2cpp03_2local_2connect__pair_8cpp.html" title=" " alt="" coords="5054,310,5225,366"/>
+<area shape="rect" href="cpp03_2local_2iostream__client_8cpp.html" title=" " alt="" coords="5249,310,5438,366"/>
+<area shape="rect" href="cpp03_2local_2stream__client_8cpp.html" title=" " alt="" coords="5463,310,5640,366"/>
+<area shape="rect" href="cpp03_2local_2stream__server_8cpp.html" title=" " alt="" coords="5665,310,5846,366"/>
+<area shape="rect" href="cpp03_2multicast_2receiver_8cpp.html" title=" " alt="" coords="5870,310,6041,366"/>
+<area shape="rect" href="cpp03_2multicast_2sender_8cpp.html" title=" " alt="" coords="6065,310,6227,366"/>
+</map>
+</div>
+</div>
+<p><a href="impl_2connect_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1default__connect__condition.html">asio::detail::default_connect_condition</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1legacy__connect__condition__helper.html">asio::detail::legacy_connect_condition_helper&lt; T, Iterator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1legacy__connect__condition__helper_3_01R_07_5_08_07Arg1_00_01Arg2_08_00_01Iterator_01_4.html">asio::detail::legacy_connect_condition_helper&lt; R(*)(Arg1, Arg2), Iterator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1is__legacy__connect__condition.html">asio::detail::is_legacy_connect_condition&lt; T, Iterator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__connect__condition.html">asio::detail::base_from_connect_condition&lt; ConnectCondition &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1base__from__connect__condition_3_01default__connect__condition_01_4.html">asio::detail::base_from_connect_condition&lt; default_connect_condition &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1range__connect__op.html">asio::detail::range_connect_op&lt; Protocol, Executor, EndpointSequence, ConnectCondition, RangeConnectHandler &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1initiate__async__range__connect.html">asio::detail::initiate_async_range_connect&lt; Protocol, Executor &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1iterator__connect__op.html">asio::detail::iterator_connect_op&lt; Protocol, Executor, Iterator, ConnectCondition, IteratorConnectHandler &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1detail_1_1initiate__async__iterator__connect.html">asio::detail::initiate_async_iterator_connect&lt; Protocol, Executor &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1associator_3_01Associator_00_01detail_1_1range__connect__op_3_01Protocol_00_01Exec6610d253133b2f33c529aa6911687715.html">asio::associator&lt; Associator, detail::range_connect_op&lt; Protocol, Executor, EndpointSequence, ConnectCondition, RangeConnectHandler &gt;, DefaultCandidate &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1associator_3_01Associator_00_01detail_1_1iterator__connect__op_3_01Protocol_00_01Ed9e7e0bf65755c467a79770b2d60914f.html">asio::associator&lt; Associator, detail::iterator_connect_op&lt; Protocol, Executor, Iterator, ConnectCondition, IteratorConnectHandler &gt;, DefaultCandidate &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad1444e44ca90df1340a2e210b361d111"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Iterator &gt; </td></tr>
+<tr class="memitem:ad1444e44ca90df1340a2e210b361d111"><td class="memTemplItemLeft" align="right" valign="top">Protocol::endpoint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#ad1444e44ca90df1340a2e210b361d111">asio::detail::deref_connect_result</a> (Iterator iter, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ad1444e44ca90df1340a2e210b361d111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba0650d027d42423b35b37ffb06e649"><td class="memTemplParams" colspan="2">template&lt;typename ConnectCondition , typename Iterator &gt; </td></tr>
+<tr class="memitem:a2ba0650d027d42423b35b37ffb06e649"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a2ba0650d027d42423b35b37ffb06e649">asio::detail::call_connect_condition</a> (ConnectCondition &amp;connect_condition, const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, Iterator next, Iterator end, enable_if_t&lt; is_legacy_connect_condition&lt; ConnectCondition, Iterator &gt;::value &gt; *=0)</td></tr>
+<tr class="separator:a2ba0650d027d42423b35b37ffb06e649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6ebcde53c7fa6f44dc6b67686d4d95"><td class="memTemplParams" colspan="2">template&lt;typename ConnectCondition , typename Iterator &gt; </td></tr>
+<tr class="memitem:adf6ebcde53c7fa6f44dc6b67686d4d95"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#adf6ebcde53c7fa6f44dc6b67686d4d95">asio::detail::call_connect_condition</a> (ConnectCondition &amp;connect_condition, const <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, Iterator next, Iterator end, enable_if_t&lt;!is_legacy_connect_condition&lt; ConnectCondition, Iterator &gt;::value &gt; *=0)</td></tr>
+<tr class="separator:adf6ebcde53c7fa6f44dc6b67686d4d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9722498362a99a18c1daabb554ac3f7"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename EndpointSequence &gt; </td></tr>
+<tr class="memitem:ad9722498362a99a18c1daabb554ac3f7"><td class="memTemplItemLeft" align="right" valign="top">Protocol::endpoint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const EndpointSequence &amp;endpoints, constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0)</td></tr>
+<tr class="memdesc:ad9722498362a99a18c1daabb554ac3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#ad9722498362a99a18c1daabb554ac3f7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad9722498362a99a18c1daabb554ac3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5abd764e6b852835571e5cb4c930bd7e"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename EndpointSequence &gt; </td></tr>
+<tr class="memitem:a5abd764e6b852835571e5cb4c930bd7e"><td class="memTemplItemLeft" align="right" valign="top">Protocol::endpoint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a5abd764e6b852835571e5cb4c930bd7e">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const EndpointSequence &amp;endpoints, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0)</td></tr>
+<tr class="memdesc:a5abd764e6b852835571e5cb4c930bd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#a5abd764e6b852835571e5cb4c930bd7e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5abd764e6b852835571e5cb4c930bd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9236388f7582169e3db3ff52e8a38a11"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator &gt; </td></tr>
+<tr class="memitem:a9236388f7582169e3db3ff52e8a38a11"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a9236388f7582169e3db3ff52e8a38a11">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, constraint_t&lt;!is_endpoint_sequence&lt; Iterator &gt;::value &gt;=0)</td></tr>
+<tr class="separator:a9236388f7582169e3db3ff52e8a38a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca5902654f85cf76894c70a5b6dff8c"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator &gt; </td></tr>
+<tr class="memitem:a2ca5902654f85cf76894c70a5b6dff8c"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a2ca5902654f85cf76894c70a5b6dff8c">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, constraint_t&lt;!is_endpoint_sequence&lt; Iterator &gt;::value &gt;=0)</td></tr>
+<tr class="separator:a2ca5902654f85cf76894c70a5b6dff8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c58255744686dfcd930523d98bc0c2"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator &gt; </td></tr>
+<tr class="memitem:aa8c58255744686dfcd930523d98bc0c2"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aa8c58255744686dfcd930523d98bc0c2">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, Iterator end)</td></tr>
+<tr class="memdesc:aa8c58255744686dfcd930523d98bc0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#aa8c58255744686dfcd930523d98bc0c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa8c58255744686dfcd930523d98bc0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be799cfeb2dc75e371ffba20d2e62db"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator &gt; </td></tr>
+<tr class="memitem:a5be799cfeb2dc75e371ffba20d2e62db"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a5be799cfeb2dc75e371ffba20d2e62db">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, Iterator end, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="memdesc:a5be799cfeb2dc75e371ffba20d2e62db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#a5be799cfeb2dc75e371ffba20d2e62db">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5be799cfeb2dc75e371ffba20d2e62db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031d5e27ec81047da231bde839fb85bb"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename EndpointSequence , typename ConnectCondition &gt; </td></tr>
+<tr class="memitem:a031d5e27ec81047da231bde839fb85bb"><td class="memTemplItemLeft" align="right" valign="top">Protocol::endpoint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a031d5e27ec81047da231bde839fb85bb">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const EndpointSequence &amp;endpoints, ConnectCondition connect_condition, constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0)</td></tr>
+<tr class="memdesc:a031d5e27ec81047da231bde839fb85bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#a031d5e27ec81047da231bde839fb85bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a031d5e27ec81047da231bde839fb85bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade06be9648ccde981018a338c7632e45"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename EndpointSequence , typename ConnectCondition &gt; </td></tr>
+<tr class="memitem:ade06be9648ccde981018a338c7632e45"><td class="memTemplItemLeft" align="right" valign="top">Protocol::endpoint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#ade06be9648ccde981018a338c7632e45">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const EndpointSequence &amp;endpoints, ConnectCondition connect_condition, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0)</td></tr>
+<tr class="memdesc:ade06be9648ccde981018a338c7632e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#ade06be9648ccde981018a338c7632e45">Подробнее...</a><br /></td></tr>
+<tr class="separator:ade06be9648ccde981018a338c7632e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5d277d4becd28d1ce842b06dd49fc3"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , typename ConnectCondition &gt; </td></tr>
+<tr class="memitem:a9e5d277d4becd28d1ce842b06dd49fc3"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a9e5d277d4becd28d1ce842b06dd49fc3">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, ConnectCondition connect_condition, constraint_t&lt;!is_endpoint_sequence&lt; Iterator &gt;::value &gt;=0)</td></tr>
+<tr class="separator:a9e5d277d4becd28d1ce842b06dd49fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbda2bad32196cba1acb1c55e8de48c"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , typename ConnectCondition &gt; </td></tr>
+<tr class="memitem:acdbda2bad32196cba1acb1c55e8de48c"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#acdbda2bad32196cba1acb1c55e8de48c">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, ConnectCondition connect_condition, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, constraint_t&lt;!is_endpoint_sequence&lt; Iterator &gt;::value &gt;=0)</td></tr>
+<tr class="separator:acdbda2bad32196cba1acb1c55e8de48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2f94719f8fa630e293df94e5819e4ba"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , typename ConnectCondition &gt; </td></tr>
+<tr class="memitem:ad2f94719f8fa630e293df94e5819e4ba"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#ad2f94719f8fa630e293df94e5819e4ba">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, Iterator end, ConnectCondition connect_condition)</td></tr>
+<tr class="memdesc:ad2f94719f8fa630e293df94e5819e4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#ad2f94719f8fa630e293df94e5819e4ba">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad2f94719f8fa630e293df94e5819e4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7be5e72ae43d07fced121d88f7b1e2"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , typename ConnectCondition &gt; </td></tr>
+<tr class="memitem:aec7be5e72ae43d07fced121d88f7b1e2"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aec7be5e72ae43d07fced121d88f7b1e2">asio::connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, Iterator end, ConnectCondition connect_condition, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="memdesc:aec7be5e72ae43d07fced121d88f7b1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a socket connection by trying each endpoint in a sequence.  <a href="namespaceasio.html#aec7be5e72ae43d07fced121d88f7b1e2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec7be5e72ae43d07fced121d88f7b1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42252a12320fe929837a70051d72267c"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename EndpointSequence , typename ConnectCondition , typename RangeConnectHandler &gt; </td></tr>
+<tr class="memitem:a42252a12320fe929837a70051d72267c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a42252a12320fe929837a70051d72267c">asio::detail::asio_handler_is_continuation</a> (range_connect_op&lt; Protocol, Executor, EndpointSequence, ConnectCondition, RangeConnectHandler &gt; *this_handler)</td></tr>
+<tr class="separator:a42252a12320fe929837a70051d72267c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a73c71a4cc97db72632e7fea59c5ea"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , typename ConnectCondition , typename IteratorConnectHandler &gt; </td></tr>
+<tr class="memitem:a17a73c71a4cc97db72632e7fea59c5ea"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html#a17a73c71a4cc97db72632e7fea59c5ea">asio::detail::asio_handler_is_continuation</a> (iterator_connect_op&lt; Protocol, Executor, Iterator, ConnectCondition, IteratorConnectHandler &gt; *this_handler)</td></tr>
+<tr class="separator:a17a73c71a4cc97db72632e7fea59c5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebeb13d868fe4894497e23cff8a8f586"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename EndpointSequence , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, typename Protocol::endpoint)) RangeConnectToken = default_completion_token_t&lt;Executor&gt;&gt; </td></tr>
+<tr class="memitem:aebeb13d868fe4894497e23cff8a8f586"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aebeb13d868fe4894497e23cff8a8f586">asio::async_connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const EndpointSequence &amp;endpoints, RangeConnectToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>=default_completion_token_t&lt; Executor &gt;(), constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0) -&gt; decltype(async_initiate&lt; RangeConnectToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, typename Protocol::endpoint)&gt;(declval&lt; detail::initiate_async_range_connect&lt; Protocol, Executor &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, endpoints, declval&lt; detail::default_connect_condition &gt;()))</td></tr>
+<tr class="separator:aebeb13d868fe4894497e23cff8a8f586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81058f1cca8a51244c6e48f192156cce"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt; </td></tr>
+<tr class="memitem:a81058f1cca8a51244c6e48f192156cce"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a81058f1cca8a51244c6e48f192156cce">asio::async_connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, IteratorConnectToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>=default_completion_token_t&lt; Executor &gt;(), constraint_t&lt;!is_endpoint_sequence&lt; Iterator &gt;::value &gt;=0) -&gt; decltype(async_initiate&lt; IteratorConnectToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(declval&lt; detail::initiate_async_iterator_connect&lt; Protocol, Executor &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, begin, Iterator(), declval&lt; detail::default_connect_condition &gt;()))</td></tr>
+<tr class="separator:a81058f1cca8a51244c6e48f192156cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51be8c5a5131d75a429dd48571568fe"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt; </td></tr>
+<tr class="memitem:af51be8c5a5131d75a429dd48571568fe"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#af51be8c5a5131d75a429dd48571568fe">asio::async_connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, Iterator end, IteratorConnectToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>=default_completion_token_t&lt; Executor &gt;()) -&gt; decltype(async_initiate&lt; IteratorConnectToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(declval&lt; detail::initiate_async_iterator_connect&lt; Protocol, Executor &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, begin, end, declval&lt; detail::default_connect_condition &gt;()))</td></tr>
+<tr class="separator:af51be8c5a5131d75a429dd48571568fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779f9e4d80bfe1a45a60aff146f909b0"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename EndpointSequence , typename ConnectCondition , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, typename Protocol::endpoint)) RangeConnectToken = default_completion_token_t&lt;Executor&gt;&gt; </td></tr>
+<tr class="memitem:a779f9e4d80bfe1a45a60aff146f909b0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a779f9e4d80bfe1a45a60aff146f909b0">asio::async_connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const EndpointSequence &amp;endpoints, ConnectCondition connect_condition, RangeConnectToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>=default_completion_token_t&lt; Executor &gt;(), constraint_t&lt; is_endpoint_sequence&lt; EndpointSequence &gt;::value &gt;=0) -&gt; decltype(async_initiate&lt; RangeConnectToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, typename Protocol::endpoint)&gt;(declval&lt; detail::initiate_async_range_connect&lt; Protocol, Executor &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, endpoints, connect_condition))</td></tr>
+<tr class="separator:a779f9e4d80bfe1a45a60aff146f909b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731f44690527def78bf8a7f70c9c030e"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , typename ConnectCondition , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt; </td></tr>
+<tr class="memitem:a731f44690527def78bf8a7f70c9c030e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a731f44690527def78bf8a7f70c9c030e">asio::async_connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, ConnectCondition connect_condition, IteratorConnectToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>=default_completion_token_t&lt; Executor &gt;(), constraint_t&lt;!is_endpoint_sequence&lt; Iterator &gt;::value &gt;=0) -&gt; decltype(async_initiate&lt; IteratorConnectToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(declval&lt; detail::initiate_async_iterator_connect&lt; Protocol, Executor &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, begin, Iterator(), connect_condition))</td></tr>
+<tr class="separator:a731f44690527def78bf8a7f70c9c030e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab6552bd57c7d027bf01cd226401d206"><td class="memTemplParams" colspan="2">template&lt;typename Protocol , typename Executor , typename Iterator , typename ConnectCondition , ASIO_COMPLETION_TOKEN_FOR(void(asio::error_code, Iterator)) IteratorConnectToken = default_completion_token_t&lt;Executor&gt;&gt; </td></tr>
+<tr class="memitem:aab6552bd57c7d027bf01cd226401d206"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#aab6552bd57c7d027bf01cd226401d206">asio::async_connect</a> (basic_socket&lt; Protocol, Executor &gt; &amp;<a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, Iterator begin, Iterator end, ConnectCondition connect_condition, IteratorConnectToken &amp;&amp;<a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>=default_completion_token_t&lt; Executor &gt;()) -&gt; decltype(async_initiate&lt; IteratorConnectToken, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, Iterator)&gt;(declval&lt; detail::initiate_async_iterator_connect&lt; Protocol, Executor &gt;&gt;(), <a class="el" href="bind__immediate__executor_8cpp.html#a87da3d8264af1c9427605148f20dd9c4">token</a>, begin, end, connect_condition))</td></tr>
+<tr class="separator:aab6552bd57c7d027bf01cd226401d206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

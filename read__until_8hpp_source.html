@@ -1,0 +1,720 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/read_until.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">read_until.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="read__until_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// read_until.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_READ_UNTIL_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_READ_UNTIL_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_2asio_2async__result_8hpp.html">asio/async_result.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="buffer_8hpp.html">asio/buffer.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="regex__fwd_8hpp.html">asio/detail/regex_fwd.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string__view_8hpp.html">asio/detail/string_view.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">asio/error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="basic__streambuf__fwd_8hpp.html">asio/basic_streambuf_fwd.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespaceasio_1_1detail.html#ab7c825c67c9e62866d305af68bf0643c">   37</a></span>&#160;char (&amp;<a class="code" href="namespaceasio_1_1detail.html#ab7c825c67c9e62866d305af68bf0643c">has_result_type_helper</a>(...))[2];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespaceasio_1_1detail.html#a73ace2367ad6765599cc755cee7ca779">   40</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="namespaceasio_1_1detail.html#ab7c825c67c9e62866d305af68bf0643c">has_result_type_helper</a>(<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>*, <span class="keyword">typename</span> T::result_type* = 0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__result__type.html">   43</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1detail_1_1has__result__type.html">has_result_type</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structasio_1_1detail_1_1has__result__type.html#a4bbecde188abac3651884f879d77edd0ab080d849fcb6f2a567e83684083ed8f2">   45</a></span>&#160;  <span class="keyword">enum</span> { <a class="code" href="structasio_1_1detail_1_1has__result__type.html#a4bbecde188abac3651884f879d77edd0ab080d849fcb6f2a567e83684083ed8f2">value</a> = (<span class="keyword">sizeof</span>((<a class="code" href="namespaceasio_1_1detail.html#ab7c825c67c9e62866d305af68bf0643c">has_result_type_helper</a>)((<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>*)(0))) == 1) };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_DYNAMIC_BUFFER_V1)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_delim_v1;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_delim_string_v1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_expr_v1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_match_v1;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_DYNAMIC_BUFFER_V1)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_delim_v2;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_delim_string_v2;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_expr_v2;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">class </span>initiate_async_read_until_match_v2;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structasio_1_1is__match__condition.html">   68</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structasio_1_1is__match__condition.html">is_match_condition</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> value;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">enum</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    value = asio::is_function&lt;remove_pointer_t&lt;T&gt;&gt;::value</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      || <a class="code" href="structasio_1_1detail_1_1has__result__type.html">detail::has_result_type&lt;T&gt;::value</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  };</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_DYNAMIC_BUFFER_V1)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1&gt;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers, <span class="keywordtype">char</span> delim,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1&gt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">char</span> delim, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1&gt;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim,</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1&gt;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX) \</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1, <span class="keyword">typename</span> Traits&gt;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr,</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1, <span class="keyword">typename</span> Traits&gt;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;       <span class="comment">// || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream,</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keyword">typename</span> DynamicBuffer_v1, <span class="keyword">typename</span> MatchCondition&gt;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    MatchCondition match_condition,</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;      <a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160; </div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream,</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    <span class="keyword">typename</span> DynamicBuffer_v1, <span class="keyword">typename</span> MatchCondition&gt;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    MatchCondition match_condition, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;      <a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a></div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160; </div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160; </div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b, <span class="keywordtype">char</span> delim);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160; </div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b, <span class="keywordtype">char</span> delim,</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b,</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim);</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160; </div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b,</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX) \</span></div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160; </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> Traits&gt;</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b,</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr);</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160; </div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160; </div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> Traits&gt;</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b,</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr,</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160; </div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;       <span class="comment">// || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160; </div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160; </div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> MatchCondition&gt;</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b, MatchCondition match_condition,</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160; </div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160; </div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> MatchCondition&gt;</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b,</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;    MatchCondition match_condition, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a>&gt; = 0);</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160; </div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_DYNAMIC_BUFFER_V1)</span></div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160; </div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160; </div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2&gt;</div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers, <span class="keywordtype">char</span> delim,</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160; </div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160; </div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2&gt;</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;    <span class="keywordtype">char</span> delim, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160; </div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160; </div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2&gt;</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim,</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160; </div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160; </div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2&gt;</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160; </div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX) \</span></div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160; </div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160; </div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2, <span class="keyword">typename</span> Traits&gt;</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr,</div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160; </div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160; </div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2, <span class="keyword">typename</span> Traits&gt;</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;        <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160; </div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;       <span class="comment">// || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160; </div>
+<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160; </div>
+<div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream,</div>
+<div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;    <span class="keyword">typename</span> DynamicBuffer_v2, <span class="keyword">typename</span> MatchCondition&gt;</div>
+<div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;    MatchCondition match_condition,</div>
+<div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;      <a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a></div>
+<div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160; </div>
+<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160; </div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> SyncReadStream,</div>
+<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;    <span class="keyword">typename</span> DynamicBuffer_v2, <span class="keyword">typename</span> MatchCondition&gt;</div>
+<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;std::size_t <a class="code" href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">read_until</a>(SyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;    MatchCondition match_condition, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec,</div>
+<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;      <a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a></div>
+<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;    &gt; = 0);</div>
+<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160; </div>
+<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160; </div>
+<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160; </div>
+<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_DYNAMIC_BUFFER_V1)</span></div>
+<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160; </div>
+<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160; </div>
+<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1,</div>
+<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers, <span class="keywordtype">char</span> delim,</div>
+<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__delim__v1.html">detail::initiate_async_read_until_delim_v1&lt;AsyncReadStream&gt;</a>&gt;(),</div>
+<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v1&amp;&amp;<span class="keyword">&gt;</span>(buffers), delim));</div>
+<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160; </div>
+<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160; </div>
+<div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1,</div>
+<div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l01773"></a><span class="lineno"> 1773</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l01774"></a><span class="lineno"> 1774</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim,</div>
+<div class="line"><a name="l01778"></a><span class="lineno"> 1778</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l01780"></a><span class="lineno"> 1780</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01781"></a><span class="lineno"> 1781</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l01782"></a><span class="lineno"> 1782</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l01783"></a><span class="lineno"> 1783</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01784"></a><span class="lineno"> 1784</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l01785"></a><span class="lineno"> 1785</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l01786"></a><span class="lineno"> 1786</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l01787"></a><span class="lineno"> 1787</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l01788"></a><span class="lineno"> 1788</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__delim__string__v1.html">detail::initiate_async_read_until_delim_string_v1</a>&lt;</div>
+<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;          AsyncReadStream&gt;&gt;(),</div>
+<div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v1&amp;&amp;<span class="keyword">&gt;</span>(buffers),</div>
+<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;        <span class="keyword">static_cast&lt;</span>std::string<span class="keyword">&gt;</span>(delim)));</div>
+<div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160; </div>
+<div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX) \</span></div>
+<div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160; </div>
+<div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160; </div>
+<div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v1, <span class="keyword">typename</span> Traits,</div>
+<div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l01902"></a><span class="lineno"> 1902</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v1&amp;&amp; buffers,</div>
+<div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr,</div>
+<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l01910"></a><span class="lineno"> 1910</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l01913"></a><span class="lineno"> 1913</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l01914"></a><span class="lineno"> 1914</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l01915"></a><span class="lineno"> 1915</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l01916"></a><span class="lineno"> 1916</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l01917"></a><span class="lineno"> 1917</span>&#160;        declval&lt;detail::initiate_async_read_until_expr_v1&lt;AsyncReadStream&gt;&gt;(),</div>
+<div class="line"><a name="l01918"></a><span class="lineno"> 1918</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v1&amp;&amp;<span class="keyword">&gt;</span>(buffers), expr));</div>
+<div class="line"><a name="l01919"></a><span class="lineno"> 1919</span>&#160; </div>
+<div class="line"><a name="l01920"></a><span class="lineno"> 1920</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l01921"></a><span class="lineno"> 1921</span>&#160;       <span class="comment">// || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l01922"></a><span class="lineno"> 1922</span>&#160; </div>
+<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160; </div>
+<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream,</div>
+<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;    <span class="keyword">typename</span> DynamicBuffer_v1, <span class="keyword">typename</span> MatchCondition,</div>
+<div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;    DynamicBuffer_v1&amp;&amp; buffers, MatchCondition match_condition,</div>
+<div class="line"><a name="l02074"></a><span class="lineno"> 2074</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;      <a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a></div>
+<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v1.html">is_dynamic_buffer_v1</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l02082"></a><span class="lineno"> 2082</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;      !<a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2</a>&lt;<a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;DynamicBuffer_v1&gt;</a>&gt;::value</div>
+<div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l02085"></a><span class="lineno"> 2085</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02086"></a><span class="lineno"> 2086</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__match__v1.html">detail::initiate_async_read_until_match_v1&lt;AsyncReadStream&gt;</a>&gt;(),</div>
+<div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v1&amp;&amp;<span class="keyword">&gt;</span>(buffers),</div>
+<div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;        match_condition));</div>
+<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160; </div>
+<div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160; </div>
+<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160; </div>
+<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> Allocator,</div>
+<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b, <span class="keywordtype">char</span> delim,</div>
+<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;())</div>
+<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__delim__v1.html">detail::initiate_async_read_until_delim_v1&lt;AsyncReadStream&gt;</a>&gt;(),</div>
+<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <a class="code" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref&lt;Allocator&gt;</a>(b), delim));</div>
+<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160; </div>
+<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160; </div>
+<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> Allocator,</div>
+<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b,</div>
+<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim,</div>
+<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;())</div>
+<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__delim__string__v1.html">detail::initiate_async_read_until_delim_string_v1</a>&lt;</div>
+<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;          AsyncReadStream&gt;&gt;(),</div>
+<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <a class="code" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref&lt;Allocator&gt;</a>(b),</div>
+<div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;        <span class="keyword">static_cast&lt;</span>std::string<span class="keyword">&gt;</span>(delim)));</div>
+<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160; </div>
+<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX) \</span></div>
+<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160; </div>
+<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160; </div>
+<div class="line"><a name="l02416"></a><span class="lineno"> 2416</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> Traits,</div>
+<div class="line"><a name="l02417"></a><span class="lineno"> 2417</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02418"></a><span class="lineno"> 2418</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02419"></a><span class="lineno"> 2419</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02420"></a><span class="lineno"> 2420</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l02421"></a><span class="lineno"> 2421</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b,</div>
+<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr,</div>
+<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02424"></a><span class="lineno"> 2424</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;())</div>
+<div class="line"><a name="l02425"></a><span class="lineno"> 2425</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02427"></a><span class="lineno"> 2427</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;        declval&lt;detail::initiate_async_read_until_expr_v1&lt;AsyncReadStream&gt;&gt;(),</div>
+<div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <a class="code" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref&lt;Allocator&gt;</a>(b), expr));</div>
+<div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160; </div>
+<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;       <span class="comment">// || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160; </div>
+<div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160; </div>
+<div class="line"><a name="l02574"></a><span class="lineno"> 2574</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> Allocator, <span class="keyword">typename</span> MatchCondition,</div>
+<div class="line"><a name="l02575"></a><span class="lineno"> 2575</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02576"></a><span class="lineno"> 2576</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02577"></a><span class="lineno"> 2577</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02578"></a><span class="lineno"> 2578</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l02579"></a><span class="lineno"> 2579</span>&#160;    <a class="code" href="classasio_1_1basic__streambuf.html">asio::basic_streambuf&lt;Allocator&gt;</a>&amp; b, MatchCondition match_condition,</div>
+<div class="line"><a name="l02580"></a><span class="lineno"> 2580</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02581"></a><span class="lineno"> 2581</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l02582"></a><span class="lineno"> 2582</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;<a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a>&gt; = 0)</div>
+<div class="line"><a name="l02583"></a><span class="lineno"> 2583</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02584"></a><span class="lineno"> 2584</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02585"></a><span class="lineno"> 2585</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02586"></a><span class="lineno"> 2586</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__match__v1.html">detail::initiate_async_read_until_match_v1&lt;AsyncReadStream&gt;</a>&gt;(),</div>
+<div class="line"><a name="l02587"></a><span class="lineno"> 2587</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <a class="code" href="classasio_1_1basic__streambuf__ref.html">basic_streambuf_ref&lt;Allocator&gt;</a>(b), match_condition));</div>
+<div class="line"><a name="l02588"></a><span class="lineno"> 2588</span>&#160; </div>
+<div class="line"><a name="l02589"></a><span class="lineno"> 2589</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_IOSTREAM)</span></div>
+<div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l02591"></a><span class="lineno"> 2591</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_DYNAMIC_BUFFER_V1)</span></div>
+<div class="line"><a name="l02592"></a><span class="lineno"> 2592</span>&#160; </div>
+<div class="line"><a name="l02595"></a><span class="lineno"> 2595</span>&#160; </div>
+<div class="line"><a name="l02691"></a><span class="lineno"> 2691</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2,</div>
+<div class="line"><a name="l02692"></a><span class="lineno"> 2692</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02693"></a><span class="lineno"> 2693</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02694"></a><span class="lineno"> 2694</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02695"></a><span class="lineno"> 2695</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers, <span class="keywordtype">char</span> delim,</div>
+<div class="line"><a name="l02696"></a><span class="lineno"> 2696</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02697"></a><span class="lineno"> 2697</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l02698"></a><span class="lineno"> 2698</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l02699"></a><span class="lineno"> 2699</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l02700"></a><span class="lineno"> 2700</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l02701"></a><span class="lineno"> 2701</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02702"></a><span class="lineno"> 2702</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02703"></a><span class="lineno"> 2703</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02704"></a><span class="lineno"> 2704</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__delim__v2.html">detail::initiate_async_read_until_delim_v2&lt;AsyncReadStream&gt;</a>&gt;(),</div>
+<div class="line"><a name="l02705"></a><span class="lineno"> 2705</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v2&amp;&amp;<span class="keyword">&gt;</span>(buffers), delim));</div>
+<div class="line"><a name="l02706"></a><span class="lineno"> 2706</span>&#160; </div>
+<div class="line"><a name="l02709"></a><span class="lineno"> 2709</span>&#160; </div>
+<div class="line"><a name="l02804"></a><span class="lineno"> 2804</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2,</div>
+<div class="line"><a name="l02805"></a><span class="lineno"> 2805</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02806"></a><span class="lineno"> 2806</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02807"></a><span class="lineno"> 2807</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02808"></a><span class="lineno"> 2808</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l02809"></a><span class="lineno"> 2809</span>&#160;    <a class="code" href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a> delim,</div>
+<div class="line"><a name="l02810"></a><span class="lineno"> 2810</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02811"></a><span class="lineno"> 2811</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l02812"></a><span class="lineno"> 2812</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l02813"></a><span class="lineno"> 2813</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l02814"></a><span class="lineno"> 2814</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l02815"></a><span class="lineno"> 2815</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02816"></a><span class="lineno"> 2816</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02817"></a><span class="lineno"> 2817</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02818"></a><span class="lineno"> 2818</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__delim__string__v2.html">detail::initiate_async_read_until_delim_string_v2</a>&lt;</div>
+<div class="line"><a name="l02819"></a><span class="lineno"> 2819</span>&#160;          AsyncReadStream&gt;&gt;(),</div>
+<div class="line"><a name="l02820"></a><span class="lineno"> 2820</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v2&amp;&amp;<span class="keyword">&gt;</span>(buffers),</div>
+<div class="line"><a name="l02821"></a><span class="lineno"> 2821</span>&#160;        <span class="keyword">static_cast&lt;</span>std::string<span class="keyword">&gt;</span>(delim)));</div>
+<div class="line"><a name="l02822"></a><span class="lineno"> 2822</span>&#160; </div>
+<div class="line"><a name="l02823"></a><span class="lineno"> 2823</span>&#160;<span class="preprocessor">#if !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l02824"></a><span class="lineno"> 2824</span>&#160;<span class="preprocessor">#if defined(ASIO_HAS_BOOST_REGEX) \</span></div>
+<div class="line"><a name="l02825"></a><span class="lineno"> 2825</span>&#160;<span class="preprocessor">  || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l02826"></a><span class="lineno"> 2826</span>&#160; </div>
+<div class="line"><a name="l02829"></a><span class="lineno"> 2829</span>&#160; </div>
+<div class="line"><a name="l02929"></a><span class="lineno"> 2929</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream, <span class="keyword">typename</span> DynamicBuffer_v2, <span class="keyword">typename</span> Traits,</div>
+<div class="line"><a name="l02930"></a><span class="lineno"> 2930</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l02931"></a><span class="lineno"> 2931</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02932"></a><span class="lineno"> 2932</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l02933"></a><span class="lineno"> 2933</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>, DynamicBuffer_v2 buffers,</div>
+<div class="line"><a name="l02934"></a><span class="lineno"> 2934</span>&#160;    <span class="keyword">const</span> boost::basic_regex&lt;char, Traits&gt;&amp; expr,</div>
+<div class="line"><a name="l02935"></a><span class="lineno"> 2935</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l02936"></a><span class="lineno"> 2936</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l02937"></a><span class="lineno"> 2937</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l02938"></a><span class="lineno"> 2938</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l02939"></a><span class="lineno"> 2939</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l02940"></a><span class="lineno"> 2940</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l02941"></a><span class="lineno"> 2941</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l02942"></a><span class="lineno"> 2942</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l02943"></a><span class="lineno"> 2943</span>&#160;        declval&lt;detail::initiate_async_read_until_expr_v2&lt;AsyncReadStream&gt;&gt;(),</div>
+<div class="line"><a name="l02944"></a><span class="lineno"> 2944</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v2&amp;&amp;<span class="keyword">&gt;</span>(buffers), expr));</div>
+<div class="line"><a name="l02945"></a><span class="lineno"> 2945</span>&#160; </div>
+<div class="line"><a name="l02946"></a><span class="lineno"> 2946</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HAS_BOOST_REGEX)</span></div>
+<div class="line"><a name="l02947"></a><span class="lineno"> 2947</span>&#160;       <span class="comment">// || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l02948"></a><span class="lineno"> 2948</span>&#160; </div>
+<div class="line"><a name="l02951"></a><span class="lineno"> 2951</span>&#160; </div>
+<div class="line"><a name="l03093"></a><span class="lineno"> 3093</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AsyncReadStream,</div>
+<div class="line"><a name="l03094"></a><span class="lineno"> 3094</span>&#160;    <span class="keyword">typename</span> DynamicBuffer_v2, <span class="keyword">typename</span> MatchCondition,</div>
+<div class="line"><a name="l03095"></a><span class="lineno"> 3095</span>&#160;    <a class="code" href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a>(<span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>,</div>
+<div class="line"><a name="l03096"></a><span class="lineno"> 3096</span>&#160;      std::size_t)) ReadToken = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l03097"></a><span class="lineno"> 3097</span>&#160;        <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;&gt;</div>
+<div class="line"><a name="l03098"></a><span class="lineno"> 3098</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">async_read_until</a>(AsyncReadStream&amp; <a class="code" href="structasio_1_1execution_1_1detail_1_1blocking__t.html">s</a>,</div>
+<div class="line"><a name="l03099"></a><span class="lineno"> 3099</span>&#160;    DynamicBuffer_v2 buffers, MatchCondition match_condition,</div>
+<div class="line"><a name="l03100"></a><span class="lineno"> 3100</span>&#160;    ReadToken&amp;&amp; <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a> = <a class="code" href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">default_completion_token_t</a>&lt;</div>
+<div class="line"><a name="l03101"></a><span class="lineno"> 3101</span>&#160;      <span class="keyword">typename</span> AsyncReadStream::executor_type&gt;(),</div>
+<div class="line"><a name="l03102"></a><span class="lineno"> 3102</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l03103"></a><span class="lineno"> 3103</span>&#160;      <a class="code" href="structasio_1_1is__match__condition.html">is_match_condition&lt;MatchCondition&gt;::value</a></div>
+<div class="line"><a name="l03104"></a><span class="lineno"> 3104</span>&#160;    &gt; = 0,</div>
+<div class="line"><a name="l03105"></a><span class="lineno"> 3105</span>&#160;    <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l03106"></a><span class="lineno"> 3106</span>&#160;      <a class="code" href="structasio_1_1is__dynamic__buffer__v2.html">is_dynamic_buffer_v2&lt;DynamicBuffer_v2&gt;::value</a></div>
+<div class="line"><a name="l03107"></a><span class="lineno"> 3107</span>&#160;    &gt; = 0)</div>
+<div class="line"><a name="l03108"></a><span class="lineno"> 3108</span>&#160;  -&gt; decltype(</div>
+<div class="line"><a name="l03109"></a><span class="lineno"> 3109</span>&#160;    <a class="code" href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">async_initiate</a>&lt;ReadToken,</div>
+<div class="line"><a name="l03110"></a><span class="lineno"> 3110</span>&#160;      <span class="keywordtype">void</span> (<a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>, std::size_t)&gt;(</div>
+<div class="line"><a name="l03111"></a><span class="lineno"> 3111</span>&#160;        declval&lt;<a class="code" href="classasio_1_1detail_1_1initiate__async__read__until__match__v2.html">detail::initiate_async_read_until_match_v2&lt;AsyncReadStream&gt;</a>&gt;(),</div>
+<div class="line"><a name="l03112"></a><span class="lineno"> 3112</span>&#160;        <a class="code" href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">token</a>, <span class="keyword">static_cast&lt;</span>DynamicBuffer_v2&amp;&amp;<span class="keyword">&gt;</span>(buffers), match_condition));</div>
+<div class="line"><a name="l03113"></a><span class="lineno"> 3113</span>&#160; </div>
+<div class="line"><a name="l03114"></a><span class="lineno"> 3114</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(ASIO_NO_EXTENSIONS)</span></div>
+<div class="line"><a name="l03115"></a><span class="lineno"> 3115</span>&#160; </div>
+<div class="line"><a name="l03118"></a><span class="lineno"> 3118</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l03119"></a><span class="lineno"> 3119</span>&#160; </div>
+<div class="line"><a name="l03120"></a><span class="lineno"> 3120</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l03121"></a><span class="lineno"> 3121</span>&#160; </div>
+<div class="line"><a name="l03122"></a><span class="lineno"> 3122</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="impl_2read__until_8hpp.html">asio/impl/read_until.hpp</a>&quot;</span></div>
+<div class="line"><a name="l03123"></a><span class="lineno"> 3123</span>&#160; </div>
+<div class="line"><a name="l03124"></a><span class="lineno"> 3124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_READ_UNTIL_HPP</span></div>
+<div class="ttc" id="abasic__streambuf__fwd_8hpp_html"><div class="ttname"><a href="basic__streambuf__fwd_8hpp.html">basic_streambuf_fwd.hpp</a></div></div>
+<div class="ttc" id="abuffer_8hpp_html"><div class="ttname"><a href="buffer_8hpp.html">buffer.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf__ref_html"><div class="ttname"><a href="classasio_1_1basic__streambuf__ref.html">asio::basic_streambuf_ref</a></div><div class="ttdoc">Adapts basic_streambuf to the dynamic buffer sequence type requirements.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:369</div></div>
+<div class="ttc" id="aclassasio_1_1basic__streambuf_html"><div class="ttname"><a href="classasio_1_1basic__streambuf.html">asio::basic_streambuf</a></div><div class="ttdoc">Automatically resizable buffer class based on std::streambuf.</div><div class="ttdef"><b>Definition:</b> basic_streambuf.hpp:113</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__async__read__until__delim__string__v1_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__async__read__until__delim__string__v1.html">asio::detail::initiate_async_read_until_delim_string_v1</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:1216</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__async__read__until__delim__string__v2_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__async__read__until__delim__string__v2.html">asio::detail::initiate_async_read_until_delim_string_v2</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:2321</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__async__read__until__delim__v1_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__async__read__until__delim__v1.html">asio::detail::initiate_async_read_until_delim_v1</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:965</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__async__read__until__delim__v2_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__async__read__until__delim__v2.html">asio::detail::initiate_async_read_until_delim_v2</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:2066</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__async__read__until__match__v1_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__async__read__until__match__v1.html">asio::detail::initiate_async_read_until_match_v1</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:1726</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1initiate__async__read__until__match__v2_html"><div class="ttname"><a href="classasio_1_1detail_1_1initiate__async__read__until__match__v2.html">asio::detail::initiate_async_read_until_match_v2</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:2843</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="aimpl_2read__until_8hpp_html"><div class="ttname"><a href="impl_2read__until_8hpp.html">read_until.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html">async_result.hpp</a></div></div>
+<div class="ttc" id="ainclude_2asio_2async__result_8hpp_html_a23e288a45eb3f7eaf2b331aee6814fb8"><div class="ttname"><a href="include_2asio_2async__result_8hpp.html#a23e288a45eb3f7eaf2b331aee6814fb8">ASIO_COMPLETION_TOKEN_FOR</a></div><div class="ttdeci">#define ASIO_COMPLETION_TOKEN_FOR(sig)</div><div class="ttdef"><b>Definition:</b> async_result.hpp:633</div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_html_ab7c825c67c9e62866d305af68bf0643c"><div class="ttname"><a href="namespaceasio_1_1detail.html#ab7c825c67c9e62866d305af68bf0643c">asio::detail::has_result_type_helper</a></div><div class="ttdeci">char(&amp; has_result_type_helper(...))[2]</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a1d03dfdd5dd0ffa4aaf6832eda695664"><div class="ttname"><a href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">asio::decay_t</a></div><div class="ttdeci">typename std::decay&lt; T &gt;::type decay_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:55</div></div>
+<div class="ttc" id="anamespaceasio_html_a3ad1e914adbdf6f6114f6b339929e567"><div class="ttname"><a href="namespaceasio.html#a3ad1e914adbdf6f6114f6b339929e567">asio::async_read_until</a></div><div class="ttdeci">auto async_read_until(AsyncReadStream &amp;s, DynamicBuffer_v1 &amp;&amp;buffers, char delim, ReadToken &amp;&amp;token, constraint_t&lt; is_dynamic_buffer_v1&lt; decay_t&lt; DynamicBuffer_v1 &gt;&gt;::value &gt;, constraint_t&lt; !is_dynamic_buffer_v2&lt; decay_t&lt; DynamicBuffer_v1 &gt;&gt;::value &gt;) -&gt; decltype(async_initiate&lt; ReadToken, void(asio::error_code, std::size_t)&gt;(declval&lt; detail::initiate_async_read_until_delim_v1&lt; AsyncReadStream &gt;&gt;(), token, static_cast&lt; DynamicBuffer_v1 &amp;&amp; &gt;(buffers), delim))</div><div class="ttdef"><b>Definition:</b> read_until.hpp:1034</div></div>
+<div class="ttc" id="anamespaceasio_html_a84bbc083cf9153b28ce2d86c3ea16458"><div class="ttname"><a href="namespaceasio.html#a84bbc083cf9153b28ce2d86c3ea16458">asio::default_completion_token_t</a></div><div class="ttdeci">typename default_completion_token&lt; T &gt;::type default_completion_token_t</div><div class="ttdef"><b>Definition:</b> async_result.hpp:882</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="anamespaceasio_html_acbf600e256af39d8a0c65fb6e3eb988d"><div class="ttname"><a href="namespaceasio.html#acbf600e256af39d8a0c65fb6e3eb988d">asio::async_initiate</a></div><div class="ttdeci">auto async_initiate(Initiation &amp;&amp;initiation, type_identity_t&lt; CompletionToken &gt; &amp;token, Args &amp;&amp;... args) -&gt; constraint_t&lt; detail::async_result_has_initiate_memfn&lt; CompletionToken, Signatures... &gt;::value, decltype(async_result&lt; decay_t&lt; CompletionToken &gt;, Signatures... &gt;::initiate(static_cast&lt; Initiation &amp;&amp; &gt;(initiation), static_cast&lt; CompletionToken &amp;&amp; &gt;(token), static_cast&lt; Args &amp;&amp; &gt;(args)...))&gt;</div><div class="ttdef"><b>Definition:</b> async_result.hpp:558</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="anamespaceasio_html_adf2910ba892099b5f30c18e346a5cc6c"><div class="ttname"><a href="namespaceasio.html#adf2910ba892099b5f30c18e346a5cc6c">asio::read_until</a></div><div class="ttdeci">std::size_t read_until(SyncReadStream &amp;s, DynamicBuffer_v1 &amp;&amp;buffers, char delim, constraint_t&lt; is_dynamic_buffer_v1&lt; decay_t&lt; DynamicBuffer_v1 &gt;&gt;::value &gt;, constraint_t&lt; !is_dynamic_buffer_v2&lt; decay_t&lt; DynamicBuffer_v1 &gt;&gt;::value &gt;)</div><div class="ttdef"><b>Definition:</b> read_until.hpp:76</div></div>
+<div class="ttc" id="anamespaceasio_html_adff1e9f7bb336026f18afa2221c9df07"><div class="ttname"><a href="namespaceasio.html#adff1e9f7bb336026f18afa2221c9df07">asio::token</a></div><div class="ttdeci">awaitable&lt; T, AwaitableExecutor &gt; CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:342</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="aregex__fwd_8hpp_html"><div class="ttname"><a href="regex__fwd_8hpp.html">regex_fwd.hpp</a></div></div>
+<div class="ttc" id="astring__view_8hpp_html"><div class="ttname"><a href="string__view_8hpp.html">string_view.hpp</a></div></div>
+<div class="ttc" id="astring__view_8hpp_html_a9b8190487ac30d27075fc7812145e2a6"><div class="ttname"><a href="string__view_8hpp.html#a9b8190487ac30d27075fc7812145e2a6">ASIO_STRING_VIEW_PARAM</a></div><div class="ttdeci">#define ASIO_STRING_VIEW_PARAM</div><div class="ttdef"><b>Definition:</b> string_view.hpp:44</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1has__result__type_html"><div class="ttname"><a href="structasio_1_1detail_1_1has__result__type.html">asio::detail::has_result_type</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:44</div></div>
+<div class="ttc" id="astructasio_1_1detail_1_1has__result__type_html_a4bbecde188abac3651884f879d77edd0ab080d849fcb6f2a567e83684083ed8f2"><div class="ttname"><a href="structasio_1_1detail_1_1has__result__type.html#a4bbecde188abac3651884f879d77edd0ab080d849fcb6f2a567e83684083ed8f2">asio::detail::has_result_type::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> read_until.hpp:45</div></div>
+<div class="ttc" id="astructasio_1_1execution_1_1detail_1_1blocking__t_html"><div class="ttname"><a href="structasio_1_1execution_1_1detail_1_1blocking__t.html">asio::execution::detail::blocking_t</a></div><div class="ttdef"><b>Definition:</b> blocking.hpp:200</div></div>
+<div class="ttc" id="astructasio_1_1is__dynamic__buffer__v1_html"><div class="ttname"><a href="structasio_1_1is__dynamic__buffer__v1.html">asio::is_dynamic_buffer_v1</a></div><div class="ttdef"><b>Definition:</b> buffer.hpp:2555</div></div>
+<div class="ttc" id="astructasio_1_1is__dynamic__buffer__v2_html"><div class="ttname"><a href="structasio_1_1is__dynamic__buffer__v2.html">asio::is_dynamic_buffer_v2</a></div><div class="ttdef"><b>Definition:</b> buffer.hpp:2568</div></div>
+<div class="ttc" id="astructasio_1_1is__match__condition_html"><div class="ttname"><a href="structasio_1_1is__match__condition.html">asio::is_match_condition</a></div><div class="ttdef"><b>Definition:</b> read_until.hpp:69</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

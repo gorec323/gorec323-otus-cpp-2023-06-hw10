@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/ssl/context.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_e872c7a9c28230c9190c76f5690636af.html">ssl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">context.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ssl_2context_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ssl/context.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_SSL_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_SSL_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="buffer_8hpp.html">asio/buffer.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="io__context_8hpp.html">asio/io_context.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="context__base_8hpp.html">asio/ssl/context_base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="openssl__types_8hpp.html">asio/ssl/detail/openssl_types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="openssl__init_8hpp.html">asio/ssl/detail/openssl_init.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="password__callback_8hpp.html">asio/ssl/detail/password_callback.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="verify__callback_8hpp.html">asio/ssl/detail/verify_callback.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="verify__mode_8hpp.html">asio/ssl/verify_mode.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespaceasio_1_1ssl.html">   33</a></span>&#160;<span class="keyword">namespace </span>ssl {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classasio_1_1ssl_1_1context.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1ssl_1_1context.html">context</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classasio_1_1ssl_1_1context__base.html">context_base</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span> <a class="code" href="classasio_1_1detail_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classasio_1_1ssl_1_1context.html#a9f209f7e8420cbc694612e47eff53cc1">   41</a></span>&#160;  <span class="keyword">typedef</span> SSL_CTX* <a class="code" href="classasio_1_1ssl_1_1context.html#a9f209f7e8420cbc694612e47eff53cc1">native_handle_type</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keyword">explicit</span> <a class="code" href="classasio_1_1ssl_1_1context.html#ab6c186034550fa1b4991832cc7e5dc2b">context</a>(<a class="code" href="classasio_1_1ssl_1_1context__base.html#ac37d498266e3b13607f011ace6417525">method</a> m);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keyword">explicit</span> <a class="code" href="classasio_1_1ssl_1_1context.html#ab6c186034550fa1b4991832cc7e5dc2b">context</a>(<a class="code" href="classasio_1_1ssl_1_1context.html#a9f209f7e8420cbc694612e47eff53cc1">native_handle_type</a> <a class="code" href="classasio_1_1ssl_1_1context.html#aa2f7e5cec6bbd269dc9fa19ca3c11cf3">native_handle</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="classasio_1_1ssl_1_1context.html#ab6c186034550fa1b4991832cc7e5dc2b">context</a>(<a class="code" href="classasio_1_1ssl_1_1context.html">context</a>&amp;&amp; other);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="classasio_1_1ssl_1_1context.html">context</a>&amp; <a class="code" href="classasio_1_1ssl_1_1context.html#a7429fbf1ab7fa8db44734fe4556cb976">operator=</a>(<a class="code" href="classasio_1_1ssl_1_1context.html">context</a>&amp;&amp; other);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="classasio_1_1ssl_1_1context.html#aa28787ca1050d36fdd98295c8453d554">~context</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a9f209f7e8420cbc694612e47eff53cc1">native_handle_type</a> <a class="code" href="classasio_1_1ssl_1_1context.html#aa2f7e5cec6bbd269dc9fa19ca3c11cf3">native_handle</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a62e708e23b6751fbf628ae536246fa51">clear_options</a>(<a class="code" href="classasio_1_1ssl_1_1context__base.html#a4ec6f7c7699ad458a6563add1674bb7b">options</a> o);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a62e708e23b6751fbf628ae536246fa51">clear_options</a>(<a class="code" href="classasio_1_1ssl_1_1context__base.html#a4ec6f7c7699ad458a6563add1674bb7b">options</a> o,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a6f13217c890da8142f578aaedf4cf23e">set_options</a>(<a class="code" href="classasio_1_1ssl_1_1context__base.html#a4ec6f7c7699ad458a6563add1674bb7b">options</a> o);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a6f13217c890da8142f578aaedf4cf23e">set_options</a>(<a class="code" href="classasio_1_1ssl_1_1context__base.html#a4ec6f7c7699ad458a6563add1674bb7b">options</a> o,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a20d511ef9cfeb079b8845fdacc7d908e">set_verify_mode</a>(<a class="code" href="classasio_1_1ssl_1_1context__base.html#aa9ef38ba747dd4e8ecb1f9a279a67d6b">verify_mode</a> v);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a20d511ef9cfeb079b8845fdacc7d908e">set_verify_mode</a>(</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <a class="code" href="classasio_1_1ssl_1_1context__base.html#aa9ef38ba747dd4e8ecb1f9a279a67d6b">verify_mode</a> v, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a39cc816d2a2971112f37ce4cf724ee24">set_verify_depth</a>(<span class="keywordtype">int</span> depth);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a39cc816d2a2971112f37ce4cf724ee24">set_verify_depth</a>(</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordtype">int</span> depth, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VerifyCallback&gt;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a391d6ba4e6b018059e6f7f4af96bb268">set_verify_callback</a>(VerifyCallback callback);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VerifyCallback&gt;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a391d6ba4e6b018059e6f7f4af96bb268">set_verify_callback</a>(VerifyCallback callback,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#ac2b54541187b52ce4c1d71c421dea2ff">load_verify_file</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#ac2b54541187b52ce4c1d71c421dea2ff">load_verify_file</a>(</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#aa66f18d9dfd397c143ef4795e74b8772">add_certificate_authority</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; ca);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#aa66f18d9dfd397c143ef4795e74b8772">add_certificate_authority</a>(</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; ca, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a95fac53218d445fd65de310f73cd9af4">set_default_verify_paths</a>();</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a95fac53218d445fd65de310f73cd9af4">set_default_verify_paths</a>(</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a2b33f89c218043f1432f1cde28141173">add_verify_path</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a2b33f89c218043f1432f1cde28141173">add_verify_path</a>(</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <span class="keyword">const</span> std::string&amp; path, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a01f00c6595db0123c63030162fdd5ad3">use_certificate</a>(</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; certificate, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a01f00c6595db0123c63030162fdd5ad3">use_certificate</a>(</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; certificate, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format,</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#ab4dad7ce2cf567896b1b7d4b88277dc7">use_certificate_file</a>(</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#ab4dad7ce2cf567896b1b7d4b88277dc7">use_certificate_file</a>(</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format,</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#aef628e551cf26a4062ec282a55c0203c">use_certificate_chain</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; chain);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#aef628e551cf26a4062ec282a55c0203c">use_certificate_chain</a>(</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; chain, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a4df8302f01f1e6ccf6b2938d2f4c00d4">use_certificate_chain_file</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a4df8302f01f1e6ccf6b2938d2f4c00d4">use_certificate_chain_file</a>(</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160; </div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a160449396498ca3ee75c88a28892b725">use_private_key</a>(</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a160449396498ca3ee75c88a28892b725">use_private_key</a>(</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format,</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160; </div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a615d6f42f1cd32213cea92ff030291e8">use_private_key_file</a>(</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160; </div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160; </div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a615d6f42f1cd32213cea92ff030291e8">use_private_key_file</a>(</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format,</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160; </div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a2f5b985a1f94472ecc1e9f3092fe64ee">use_rsa_private_key</a>(</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160; </div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160; </div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a2f5b985a1f94472ecc1e9f3092fe64ee">use_rsa_private_key</a>(</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format,</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160; </div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160; </div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#abf4477dd0845cd440e08e45a4ff583cf">use_rsa_private_key_file</a>(</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160; </div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#abf4477dd0845cd440e08e45a4ff583cf">use_rsa_private_key_file</a>(</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">file_format</a> format,</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160; </div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a37845fbafedc93750e97363a4566978f">use_tmp_dh</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; dh);</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160; </div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160; </div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a37845fbafedc93750e97363a4566978f">use_tmp_dh</a>(</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;      <span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; dh, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160; </div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160; </div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#a1acfb3b856a76f5232efe7ba0d9de97d">use_tmp_dh_file</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160; </div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160; </div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#a1acfb3b856a76f5232efe7ba0d9de97d">use_tmp_dh_file</a>(</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160; </div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160; </div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PasswordCallback&gt;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classasio_1_1ssl_1_1context.html#ac2fe5dbe49847c439573f9e7c9a9e8c1">set_password_callback</a>(PasswordCallback callback);</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160; </div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160; </div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PasswordCallback&gt;</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;  <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> <a class="code" href="classasio_1_1ssl_1_1context.html#ac2fe5dbe49847c439573f9e7c9a9e8c1">set_password_callback</a>(PasswordCallback callback,</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;      <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1ssl_1_1context_1_1bio__cleanup.html">bio_cleanup</a>;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1ssl_1_1context_1_1x509__cleanup.html">x509_cleanup</a>;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1ssl_1_1context_1_1evp__pkey__cleanup.html">evp_pkey_cleanup</a>;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1ssl_1_1context_1_1rsa__cleanup.html">rsa_cleanup</a>;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1ssl_1_1context_1_1dh__cleanup.html">dh_cleanup</a>;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  <span class="comment">// Helper function used to set a peer certificate verification callback.</span></div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> do_set_verify_callback(</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;      <a class="code" href="classasio_1_1ssl_1_1detail_1_1verify__callback__base.html">detail::verify_callback_base</a>* callback, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;  <span class="comment">// Callback used when the SSL implementation wants to verify a certificate.</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keyword">static</span> <span class="keywordtype">int</span> verify_callback_function(</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;      <span class="keywordtype">int</span> preverified, X509_STORE_CTX* ctx);</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160; </div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;  <span class="comment">// Helper function used to set a password callback.</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> do_set_password_callback(</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;      <a class="code" href="classasio_1_1ssl_1_1detail_1_1password__callback__base.html">detail::password_callback_base</a>* callback, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160; </div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  <span class="comment">// Callback used when the SSL implementation wants a password.</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keyword">static</span> <span class="keywordtype">int</span> password_callback_function(</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;      <span class="keywordtype">char</span>* <a class="code" href="namespaceasio_1_1detail_1_1descriptor__ops.html#ad10e658a754ff775cdcc3b3decd3c8c9">buf</a>, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span> purpose, <span class="keywordtype">void</span>* data);</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160; </div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;  <span class="comment">// Helper function to set the temporary Diffie-Hellman parameters from a BIO.</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <a class="code" href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a> do_use_tmp_dh(</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;      BIO* bio, <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;  <span class="comment">// Helper function to make a BIO from a memory buffer.</span></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> BIO* make_buffer_bio(<span class="keyword">const</span> <a class="code" href="classasio_1_1const__buffer.html">const_buffer</a>&amp; b);</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160; </div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;  <span class="comment">// Translate an SSL error into an error code.</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;  <a class="code" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> <span class="keyword">static</span> <a class="code" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> translate_error(<span class="keywordtype">long</span> error);</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;  <span class="comment">// The underlying native implementation.</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;  <a class="code" href="classasio_1_1ssl_1_1context.html#a9f209f7e8420cbc694612e47eff53cc1">native_handle_type</a> handle_;</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160; </div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;  <span class="comment">// Ensure openssl is initialised.</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;  <a class="code" href="classasio_1_1ssl_1_1detail_1_1openssl__init.html">asio::ssl::detail::openssl_init&lt;&gt;</a> init_;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;};</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;} <span class="comment">// namespace ssl</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160; </div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160; </div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ssl_2impl_2context_8hpp.html">asio/ssl/impl/context.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#if defined(ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="context_8ipp.html">asio/ssl/impl/context.ipp</a>&quot;</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_SSL_CONTEXT_HPP</span></div>
+<div class="ttc" id="abuffer_8hpp_html"><div class="ttname"><a href="buffer_8hpp.html">buffer.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1const__buffer_html"><div class="ttname"><a href="classasio_1_1const__buffer.html">asio::const_buffer</a></div><div class="ttdoc">Holds a buffer that cannot be modified.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:213</div></div>
+<div class="ttc" id="aclassasio_1_1detail_1_1noncopyable_html"><div class="ttname"><a href="classasio_1_1detail_1_1noncopyable.html">asio::detail::noncopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.hpp:26</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context__base_html"><div class="ttname"><a href="classasio_1_1ssl_1_1context__base.html">asio::ssl::context_base</a></div><div class="ttdef"><b>Definition:</b> context_base.hpp:29</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context__base_html_a4ec6f7c7699ad458a6563add1674bb7b"><div class="ttname"><a href="classasio_1_1ssl_1_1context__base.html#a4ec6f7c7699ad458a6563add1674bb7b">asio::ssl::context_base::options</a></div><div class="ttdeci">uint64_t options</div><div class="ttdoc">Bitmask type for SSL options.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:108</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context__base_html_aa9ef38ba747dd4e8ecb1f9a279a67d6b"><div class="ttname"><a href="classasio_1_1ssl_1_1context__base.html#aa9ef38ba747dd4e8ecb1f9a279a67d6b">asio::ssl::context_base::verify_mode</a></div><div class="ttdeci">int verify_mode</div><div class="ttdef"><b>Definition:</b> context_base.hpp:179</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context__base_html_ac37d498266e3b13607f011ace6417525"><div class="ttname"><a href="classasio_1_1ssl_1_1context__base.html#ac37d498266e3b13607f011ace6417525">asio::ssl::context_base::method</a></div><div class="ttdeci">method</div><div class="ttdoc">Different methods supported by a context.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:33</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context__base_html_acc846aa73fffcab1fecad36dcf2be1fb"><div class="ttname"><a href="classasio_1_1ssl_1_1context__base.html#acc846aa73fffcab1fecad36dcf2be1fb">asio::ssl::context_base::file_format</a></div><div class="ttdeci">file_format</div><div class="ttdoc">File format types.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:167</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html">asio::ssl::context</a></div><div class="ttdef"><b>Definition:</b> context.hpp:38</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a01f00c6595db0123c63030162fdd5ad3"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a01f00c6595db0123c63030162fdd5ad3">asio::ssl::context::use_certificate</a></div><div class="ttdeci">ASIO_DECL void use_certificate(const const_buffer &amp;certificate, file_format format)</div><div class="ttdoc">Use a certificate from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:642</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a160449396498ca3ee75c88a28892b725"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a160449396498ca3ee75c88a28892b725">asio::ssl::context::use_private_key</a></div><div class="ttdeci">ASIO_DECL void use_private_key(const const_buffer &amp;private_key, file_format format)</div><div class="ttdoc">Use a private key from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:834</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a1acfb3b856a76f5232efe7ba0d9de97d"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a1acfb3b856a76f5232efe7ba0d9de97d">asio::ssl::context::use_tmp_dh_file</a></div><div class="ttdeci">ASIO_DECL void use_tmp_dh_file(const std::string &amp;filename)</div><div class="ttdoc">Use the specified file to obtain the temporary Diffie-Hellman parameters.</div><div class="ttdef"><b>Definition:</b> context.ipp:1141</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a20d511ef9cfeb079b8845fdacc7d908e"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a20d511ef9cfeb079b8845fdacc7d908e">asio::ssl::context::set_verify_mode</a></div><div class="ttdeci">ASIO_DECL void set_verify_mode(verify_mode v)</div><div class="ttdoc">Set the peer verification mode.</div><div class="ttdef"><b>Definition:</b> context.ipp:500</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a2b33f89c218043f1432f1cde28141173"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a2b33f89c218043f1432f1cde28141173">asio::ssl::context::add_verify_path</a></div><div class="ttdeci">ASIO_DECL void add_verify_path(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> context.ipp:620</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a2f5b985a1f94472ecc1e9f3092fe64ee"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a2f5b985a1f94472ecc1e9f3092fe64ee">asio::ssl::context::use_rsa_private_key</a></div><div class="ttdeci">ASIO_DECL void use_rsa_private_key(const const_buffer &amp;private_key, file_format format)</div><div class="ttdoc">Use an RSA private key from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:902</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a37845fbafedc93750e97363a4566978f"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a37845fbafedc93750e97363a4566978f">asio::ssl::context::use_tmp_dh</a></div><div class="ttdeci">ASIO_DECL void use_tmp_dh(const const_buffer &amp;dh)</div><div class="ttdef"><b>Definition:</b> context.ipp:1119</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a391d6ba4e6b018059e6f7f4af96bb268"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a391d6ba4e6b018059e6f7f4af96bb268">asio::ssl::context::set_verify_callback</a></div><div class="ttdeci">void set_verify_callback(VerifyCallback callback)</div><div class="ttdoc">Set the callback used to verify peer certificates.</div><div class="ttdef"><b>Definition:</b> context.hpp:29</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a39cc816d2a2971112f37ce4cf724ee24"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a39cc816d2a2971112f37ce4cf724ee24">asio::ssl::context::set_verify_depth</a></div><div class="ttdeci">ASIO_DECL void set_verify_depth(int depth)</div><div class="ttdoc">Set the peer verification depth.</div><div class="ttdef"><b>Definition:</b> context.ipp:516</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a4df8302f01f1e6ccf6b2938d2f4c00d4"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a4df8302f01f1e6ccf6b2938d2f4c00d4">asio::ssl::context::use_certificate_chain_file</a></div><div class="ttdeci">ASIO_DECL void use_certificate_chain_file(const std::string &amp;filename)</div><div class="ttdoc">Use a certificate chain from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:812</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a615d6f42f1cd32213cea92ff030291e8"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a615d6f42f1cd32213cea92ff030291e8">asio::ssl::context::use_private_key_file</a></div><div class="ttdeci">ASIO_DECL void use_private_key_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use a private key from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:894</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a62e708e23b6751fbf628ae536246fa51"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a62e708e23b6751fbf628ae536246fa51">asio::ssl::context::clear_options</a></div><div class="ttdeci">ASIO_DECL void clear_options(options o)</div><div class="ttdoc">Clear options on the context.</div><div class="ttdef"><b>Definition:</b> context.ipp:439</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a6f13217c890da8142f578aaedf4cf23e"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a6f13217c890da8142f578aaedf4cf23e">asio::ssl::context::set_options</a></div><div class="ttdeci">ASIO_DECL void set_options(options o)</div><div class="ttdoc">Set options on the context.</div><div class="ttdef"><b>Definition:</b> context.ipp:473</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a7429fbf1ab7fa8db44734fe4556cb976"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a7429fbf1ab7fa8db44734fe4556cb976">asio::ssl::context::operator=</a></div><div class="ttdeci">ASIO_DECL context &amp; operator=(context &amp;&amp;other)</div><div class="ttdoc">Move-assign a context from another.</div><div class="ttdef"><b>Definition:</b> context.ipp:385</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a95fac53218d445fd65de310f73cd9af4"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a95fac53218d445fd65de310f73cd9af4">asio::ssl::context::set_default_verify_paths</a></div><div class="ttdeci">ASIO_DECL void set_default_verify_paths()</div><div class="ttdef"><b>Definition:</b> context.ipp:598</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_a9f209f7e8420cbc694612e47eff53cc1"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#a9f209f7e8420cbc694612e47eff53cc1">asio::ssl::context::native_handle_type</a></div><div class="ttdeci">SSL_CTX * native_handle_type</div><div class="ttdoc">The native handle type of the SSL context.</div><div class="ttdef"><b>Definition:</b> context.hpp:41</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_aa28787ca1050d36fdd98295c8453d554"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#aa28787ca1050d36fdd98295c8453d554">asio::ssl::context::~context</a></div><div class="ttdeci">ASIO_DECL ~context()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> context.ipp:393</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_aa2f7e5cec6bbd269dc9fa19ca3c11cf3"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#aa2f7e5cec6bbd269dc9fa19ca3c11cf3">asio::ssl::context::native_handle</a></div><div class="ttdeci">ASIO_DECL native_handle_type native_handle()</div><div class="ttdoc">Get the underlying implementation in the native type.</div><div class="ttdef"><b>Definition:</b> context.ipp:434</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_aa66f18d9dfd397c143ef4795e74b8772"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#aa66f18d9dfd397c143ef4795e74b8772">asio::ssl::context::add_certificate_authority</a></div><div class="ttdeci">ASIO_DECL void add_certificate_authority(const const_buffer &amp;ca)</div><div class="ttdoc">Add certification authority for performing verification.</div><div class="ttdef"><b>Definition:</b> context.ipp:554</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_ab4dad7ce2cf567896b1b7d4b88277dc7"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#ab4dad7ce2cf567896b1b7d4b88277dc7">asio::ssl::context::use_certificate_file</a></div><div class="ttdeci">ASIO_DECL void use_certificate_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use a certificate from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:692</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_ab6c186034550fa1b4991832cc7e5dc2b"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#ab6c186034550fa1b4991832cc7e5dc2b">asio::ssl::context::context</a></div><div class="ttdeci">ASIO_DECL context(method m)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> context.ipp:64</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_abf4477dd0845cd440e08e45a4ff583cf"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#abf4477dd0845cd440e08e45a4ff583cf">asio::ssl::context::use_rsa_private_key_file</a></div><div class="ttdeci">ASIO_DECL void use_rsa_private_key_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use an RSA private key from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:1030</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_ac2b54541187b52ce4c1d71c421dea2ff"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#ac2b54541187b52ce4c1d71c421dea2ff">asio::ssl::context::load_verify_file</a></div><div class="ttdeci">ASIO_DECL void load_verify_file(const std::string &amp;filename)</div><div class="ttdoc">Load a certification authority file for performing verification.</div><div class="ttdef"><b>Definition:</b> context.ipp:532</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_ac2fe5dbe49847c439573f9e7c9a9e8c1"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#ac2fe5dbe49847c439573f9e7c9a9e8c1">asio::ssl::context::set_password_callback</a></div><div class="ttdeci">void set_password_callback(PasswordCallback callback)</div><div class="ttdoc">Set the password callback.</div><div class="ttdef"><b>Definition:</b> context.hpp:46</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1context_html_aef628e551cf26a4062ec282a55c0203c"><div class="ttname"><a href="classasio_1_1ssl_1_1context.html#aef628e551cf26a4062ec282a55c0203c">asio::ssl::context::use_certificate_chain</a></div><div class="ttdeci">ASIO_DECL void use_certificate_chain(const const_buffer &amp;chain)</div><div class="ttdoc">Use a certificate chain from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:732</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1openssl__init_html"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1openssl__init.html">asio::ssl::detail::openssl_init</a></div><div class="ttdef"><b>Definition:</b> openssl_init.hpp:55</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1password__callback__base_html"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1password__callback__base.html">asio::ssl::detail::password_callback_base</a></div><div class="ttdef"><b>Definition:</b> password_callback.hpp:31</div></div>
+<div class="ttc" id="aclassasio_1_1ssl_1_1detail_1_1verify__callback__base_html"><div class="ttname"><a href="classasio_1_1ssl_1_1detail_1_1verify__callback__base.html">asio::ssl::detail::verify_callback_base</a></div><div class="ttdef"><b>Definition:</b> verify_callback.hpp:29</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_a83e66f7c66c4e73c01aa6b3d523e12a4"><div class="ttname"><a href="config_8hpp.html#a83e66f7c66c4e73c01aa6b3d523e12a4">ASIO_SYNC_OP_VOID</a></div><div class="ttdeci">#define ASIO_SYNC_OP_VOID</div><div class="ttdef"><b>Definition:</b> config.hpp:1250</div></div>
+<div class="ttc" id="aconfig_8hpp_html_ab54d01ea04afeb9a8b39cfac467656b7"><div class="ttname"><a href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a></div><div class="ttdeci">#define ASIO_DECL</div><div class="ttdef"><b>Definition:</b> config.hpp:70</div></div>
+<div class="ttc" id="acontext_8ipp_html"><div class="ttname"><a href="context_8ipp.html">context.ipp</a></div></div>
+<div class="ttc" id="acontext__base_8hpp_html"><div class="ttname"><a href="context__base_8hpp.html">context_base.hpp</a></div></div>
+<div class="ttc" id="aio__context_8hpp_html"><div class="ttname"><a href="io__context_8hpp.html">io_context.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1detail_1_1descriptor__ops_html_ad10e658a754ff775cdcc3b3decd3c8c9"><div class="ttname"><a href="namespaceasio_1_1detail_1_1descriptor__ops.html#ad10e658a754ff775cdcc3b3decd3c8c9">asio::detail::descriptor_ops::buf</a></div><div class="ttdeci">iovec buf</div><div class="ttdef"><b>Definition:</b> descriptor_ops.hpp:83</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_ac8914468bc40252ae5e5c666adb951cf"><div class="ttname"><a href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a></div><div class="ttdeci">std::error_code error_code</div><div class="ttdef"><b>Definition:</b> error_code.hpp:26</div></div>
+<div class="ttc" id="aopenssl__init_8hpp_html"><div class="ttname"><a href="openssl__init_8hpp.html">openssl_init.hpp</a></div></div>
+<div class="ttc" id="aopenssl__types_8hpp_html"><div class="ttname"><a href="openssl__types_8hpp.html">openssl_types.hpp</a></div></div>
+<div class="ttc" id="apassword__callback_8hpp_html"><div class="ttname"><a href="password__callback_8hpp.html">password_callback.hpp</a></div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="assl_2impl_2context_8hpp_html"><div class="ttname"><a href="ssl_2impl_2context_8hpp.html">context.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1ssl_1_1context_1_1bio__cleanup_html"><div class="ttname"><a href="structasio_1_1ssl_1_1context_1_1bio__cleanup.html">asio::ssl::context::bio_cleanup</a></div><div class="ttdef"><b>Definition:</b> context.ipp:33</div></div>
+<div class="ttc" id="astructasio_1_1ssl_1_1context_1_1dh__cleanup_html"><div class="ttname"><a href="structasio_1_1ssl_1_1context_1_1dh__cleanup.html">asio::ssl::context::dh_cleanup</a></div><div class="ttdef"><b>Definition:</b> context.ipp:58</div></div>
+<div class="ttc" id="astructasio_1_1ssl_1_1context_1_1evp__pkey__cleanup_html"><div class="ttname"><a href="structasio_1_1ssl_1_1context_1_1evp__pkey__cleanup.html">asio::ssl::context::evp_pkey_cleanup</a></div><div class="ttdef"><b>Definition:</b> context.ipp:45</div></div>
+<div class="ttc" id="astructasio_1_1ssl_1_1context_1_1rsa__cleanup_html"><div class="ttname"><a href="structasio_1_1ssl_1_1context_1_1rsa__cleanup.html">asio::ssl::context::rsa_cleanup</a></div><div class="ttdef"><b>Definition:</b> context.ipp:52</div></div>
+<div class="ttc" id="astructasio_1_1ssl_1_1context_1_1x509__cleanup_html"><div class="ttname"><a href="structasio_1_1ssl_1_1context_1_1x509__cleanup.html">asio::ssl::context::x509_cleanup</a></div><div class="ttdef"><b>Definition:</b> context.ipp:39</div></div>
+<div class="ttc" id="averify__callback_8hpp_html"><div class="ttname"><a href="verify__callback_8hpp.html">verify_callback.hpp</a></div></div>
+<div class="ttc" id="averify__mode_8hpp_html"><div class="ttname"><a href="verify__mode_8hpp.html">verify_mode.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

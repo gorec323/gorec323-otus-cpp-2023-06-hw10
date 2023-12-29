@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/associated_allocator.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл associated_allocator.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="associator_8hpp_source.html">asio/associator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="functional_8hpp_source.html">asio/detail/functional.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="type__traits_8hpp_source.html">asio/detail/type_traits.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для associated_allocator.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="associated__allocator_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2associated__allocator_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2associated__allocator_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2associated__allocator_8hpp">
+<area shape="rect" title=" " alt="" coords="407,5,585,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="141,184,302,211"/>
+<area shape="rect" title=" " alt="" coords="755,109,832,136"/>
+<area shape="rect" href="associator_8hpp.html" title=" " alt="" coords="533,109,680,136"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="443,184,651,211"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="675,184,877,211"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="5,109,192,136"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="267,109,459,136"/>
+<area shape="rect" title=" " alt="" coords="62,259,133,285"/>
+<area shape="rect" title=" " alt="" coords="157,259,286,285"/>
+<area shape="rect" title=" " alt="" coords="311,259,449,285"/>
+<area shape="rect" title=" " alt="" coords="30,184,117,211"/>
+<area shape="rect" title=" " alt="" coords="326,184,418,211"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="associated__allocator_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2associated__allocator_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2associated__allocator_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2associated__allocator_8hppdep">
+<area shape="rect" title=" " alt="" coords="1496,5,1674,61"/>
+<area shape="rect" href="any__completion__handler_8hpp.html" title=" " alt="" coords="1822,109,2034,165"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="240,436,386,477"/>
+<area shape="rect" href="bind__allocator_8hpp.html" title=" " alt="" coords="1240,117,1466,158"/>
+<area shape="rect" href="handler__alloc__helpers_8hpp.html" title=" " alt="" coords="2787,317,2983,373"/>
+<area shape="rect" href="handler__work_8hpp.html" title=" " alt="" coords="2053,317,2200,373"/>
+<area shape="rect" href="initiate__defer_8hpp.html" title=" " alt="" coords="432,213,578,269"/>
+<area shape="rect" href="ts_2executor_8hpp.html" title=" " alt="" coords="8,436,215,477"/>
+<area shape="rect" href="initiate__dispatch_8hpp.html" title=" " alt="" coords="874,213,1037,269"/>
+<area shape="rect" href="channel__operation_8hpp.html" title=" " alt="" coords="3007,317,3222,373"/>
+<area shape="rect" href="initiate__post_8hpp.html" title=" " alt="" coords="602,213,749,269"/>
+<area shape="rect" href="work__dispatcher_8hpp.html" title=" " alt="" coords="713,109,873,165"/>
+<area shape="rect" href="impl_2spawn_8hpp.html" title=" " alt="" coords="2973,117,3184,158"/>
+<area shape="rect" href="async__ops_8hpp.html" title=" " alt="" coords="3208,109,3394,165"/>
+<area shape="rect" href="associated__allocator_8cpp.html" title=" " alt="" coords="3418,109,3602,165"/>
+<area shape="rect" href="cpp11_2type__erasure_2line__reader_8hpp.html" title=" " alt="" coords="1710,213,1924,269"/>
+<area shape="rect" href="cpp11_2type__erasure_2sleep_8hpp.html" title=" " alt="" coords="1949,213,2128,269"/>
+<area shape="rect" href="cpp20_2type__erasure_2line__reader_8hpp.html" title=" " alt="" coords="2152,213,2367,269"/>
+<area shape="rect" href="cpp20_2type__erasure_2sleep_8hpp.html" title=" " alt="" coords="2392,213,2570,269"/>
+<area shape="rect" href="any__completion__handler_8cpp.html" title=" " alt="" coords="1450,213,1634,269"/>
+<area shape="rect" href="channel_8cpp.html" title=" " alt="" coords="2595,213,2796,269"/>
+<area shape="rect" href="impl_2coro_8hpp.html" title=" " alt="" coords="1061,213,1256,269"/>
+<area shape="rect" href="bind__allocator_8cpp.html" title=" " alt="" coords="1280,213,1426,269"/>
+<area shape="rect" href="completion__handler_8hpp.html" title=" " alt="" coords="1632,429,1815,485"/>
+<area shape="rect" href="impl_2strand__service_8hpp.html" title=" " alt="" coords="2766,540,2948,596"/>
+<area shape="rect" href="executor__function_8hpp.html" title=" " alt="" coords="4230,429,4401,485"/>
+<area shape="rect" href="executor__op_8hpp.html" title=" " alt="" coords="4009,429,4156,485"/>
+<area shape="rect" href="io__uring__null__buffers__op_8hpp.html" title=" " alt="" coords="2224,421,2386,492"/>
+<area shape="rect" href="io__uring__wait__op_8hpp.html" title=" " alt="" coords="3356,429,3520,485"/>
+<area shape="rect" href="reactive__null__buffers__op_8hpp.html" title=" " alt="" coords="2410,421,2573,492"/>
+<area shape="rect" href="reactive__socket__accept__op_8hpp.html" title=" " alt="" coords="3545,421,3724,492"/>
+<area shape="rect" href="reactive__socket__connect__op_8hpp.html" title=" " alt="" coords="3748,421,3934,492"/>
+<area shape="rect" href="reactive__socket__recv__op_8hpp.html" title=" " alt="" coords="821,421,984,492"/>
+<area shape="rect" href="reactive__socket__recvfrom__op_8hpp.html" title=" " alt="" coords="1008,421,1202,492"/>
+<area shape="rect" href="reactive__socket__recvmsg__op_8hpp.html" title=" " alt="" coords="1227,421,1418,492"/>
+<area shape="rect" href="reactive__socket__send__op_8hpp.html" title=" " alt="" coords="1442,421,1608,492"/>
+<area shape="rect" href="reactive__socket__sendto__op_8hpp.html" title=" " alt="" coords="2597,421,2776,492"/>
+<area shape="rect" href="reactive__wait__op_8hpp.html" title=" " alt="" coords="3166,429,3332,485"/>
+<area shape="rect" href="resolve__endpoint__op_8hpp.html" title=" " alt="" coords="1840,429,2029,485"/>
+<area shape="rect" href="resolve__query__op_8hpp.html" title=" " alt="" coords="2800,429,2970,485"/>
+<area shape="rect" href="signal__handler_8hpp.html" title=" " alt="" coords="2994,429,3142,485"/>
+<area shape="rect" href="signal__set__service_8hpp.html" title=" " alt="" coords="3543,540,3718,596"/>
+<area shape="rect" href="wait__handler_8hpp.html" title=" " alt="" coords="2053,429,2200,485"/>
+<area shape="rect" href="channel__receive__op_8hpp.html" title=" " alt="" coords="4657,429,4881,485"/>
+<area shape="rect" href="channel__send__op_8hpp.html" title=" " alt="" coords="4426,429,4632,485"/>
+<area shape="rect" href="descriptor__read__op_8hpp.html" title=" " alt="" coords="410,429,589,485"/>
+<area shape="rect" href="descriptor__write__op_8hpp.html" title=" " alt="" coords="614,429,796,485"/>
+<area shape="rect" href="defer_8hpp.html" title=" " alt="" coords="27,325,196,366"/>
+<area shape="rect" href="dispatch_8hpp.html" title=" " alt="" coords="860,325,1051,366"/>
+<area shape="rect" href="post_8hpp.html" title=" " alt="" coords="220,325,384,366"/>
+</map>
+</div>
+</div>
+<p><a href="associated__allocator_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1has__allocator__type.html">asio::detail::has_allocator_type&lt; T, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1has__allocator__type_3_01T_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html">asio::detail::has_allocator_type&lt; T, void_t&lt; typename T::allocator_type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1associated__allocator__impl.html">asio::detail::associated_allocator_impl&lt; T, A, typename, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01void__t_3_01typename_01T_1_1allocator__type_01_4_01_4.html">asio::detail::associated_allocator_impl&lt; T, A, void_t&lt; typename T::allocator_type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1associated__allocator__impl_3_01T_00_01A_00_01enable__if__t_3_01_9has__aaaf4d230c0d1a522cc09404995166c15.html">asio::detail::associated_allocator_impl&lt; T, A, enable_if_t&lt; !has_allocator_type&lt; T &gt;::value &gt;, void_t&lt; typename associator&lt; associated_allocator, T, A &gt;::type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1associated__allocator.html">asio::associated_allocator&lt; T, Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traits type used to obtain the allocator associated with an object.  <a href="structasio_1_1associated__allocator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1associated__allocator__forwarding__base.html">asio::detail::associated_allocator_forwarding_base&lt; T, A, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1associated__allocator__forwarding__base_3_01T_00_01A_00_01enable__if__t_f21ad55aaa38640368239e26cdde3f40.html">asio::detail::associated_allocator_forwarding_base&lt; T, A, enable_if_t&lt; is_same&lt; typename associated_allocator&lt; T, A &gt;::asio_associated_allocator_is_unspecialised, void &gt;::value &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html">asio::associated_allocator&lt; reference_wrapper&lt; T &gt;, Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialisation of <a class="el" href="structasio_1_1associated__allocator.html" title="Traits type used to obtain the allocator associated with an object.">associated_allocator</a> for <code>std::reference_wrapper</code>.  <a href="structasio_1_1associated__allocator_3_01reference__wrapper_3_01T_01_4_00_01Allocator_01_4.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a36a2efaadb823ea5daa2722235f03b79"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Allocator  = std::allocator&lt;void&gt;&gt; </td></tr>
+<tr class="memitem:a36a2efaadb823ea5daa2722235f03b79"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a36a2efaadb823ea5daa2722235f03b79">asio::associated_allocator_t</a> = typename associated_allocator&lt; T, Allocator &gt;::type</td></tr>
+<tr class="separator:a36a2efaadb823ea5daa2722235f03b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a713d72690f79a12548b3d3199b6d2a16"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a713d72690f79a12548b3d3199b6d2a16"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> associated_allocator&lt; T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">asio::get_associated_allocator</a> (const T &amp;t) noexcept</td></tr>
+<tr class="memdesc:a713d72690f79a12548b3d3199b6d2a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to obtain an object's associated allocator.  <a href="namespaceasio.html#a713d72690f79a12548b3d3199b6d2a16">Подробнее...</a><br /></td></tr>
+<tr class="separator:a713d72690f79a12548b3d3199b6d2a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82c18a9b1d0d55eb89746a4c0e679345"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Allocator &gt; </td></tr>
+<tr class="memitem:a82c18a9b1d0d55eb89746a4c0e679345"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceasio.html#a82c18a9b1d0d55eb89746a4c0e679345">asio::get_associated_allocator</a> (const T &amp;t, const Allocator &amp;a) noexcept -&gt; decltype(associated_allocator&lt; T, Allocator &gt;::get(t, a))</td></tr>
+<tr class="memdesc:a82c18a9b1d0d55eb89746a4c0e679345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to obtain an object's associated allocator.  <a href="namespaceasio.html#a82c18a9b1d0d55eb89746a4c0e679345">Подробнее...</a><br /></td></tr>
+<tr class="separator:a82c18a9b1d0d55eb89746a4c0e679345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

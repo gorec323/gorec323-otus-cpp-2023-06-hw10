@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/experimental/as_single.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_4b7ec68c1dc10d9fd423a12bdfeaade0.html">experimental</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">as_single.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="as__single_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// experimental/as_single.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_EXPERIMENTAL_AS_SINGLE_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_EXPERIMENTAL_AS_SINGLE_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="type__traits_8hpp.html">asio/detail/type_traits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>experimental {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1as__single__t.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1experimental_1_1as__single__t.html">as_single_t</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1as__single__t_1_1default__constructor__tag.html">   41</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1default__constructor__tag.html">default_constructor_tag</a> {};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1as__single__t.html#ac8fd45190c5e0cfea75c950ce3606a67">   50</a></span>&#160;  constexpr <a class="code" href="classasio_1_1experimental_1_1as__single__t.html#ac8fd45190c5e0cfea75c950ce3606a67">as_single_t</a>(</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1default__constructor__tag.html">default_constructor_tag</a> = <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1default__constructor__tag.html">default_constructor_tag</a>(),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      CompletionToken <a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a> = CompletionToken())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    : <a class="code" href="classasio_1_1experimental_1_1as__single__t.html#a9dbed258d5e21ff37d6bced322dc8dd4">token_</a>(static_cast&lt;CompletionToken&amp;&amp;&gt;(<a class="code" href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">token</a>))</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1as__single__t.html#ae8c053561c70fe766f41d114646413b2">   59</a></span>&#160;  constexpr <span class="keyword">explicit</span> <a class="code" href="classasio_1_1experimental_1_1as__single__t.html#ae8c053561c70fe766f41d114646413b2">as_single_t</a>(</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;&amp; completion_token)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    : <a class="code" href="classasio_1_1experimental_1_1as__single__t.html#a9dbed258d5e21ff37d6bced322dc8dd4">token_</a>(static_cast&lt;<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;&amp;&gt;(completion_token))</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> InnerExecutor&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html">   68</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html">executor_with_default</a> : InnerExecutor</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#a87f903baad53432c60d0d8ae15771ffc">   71</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classasio_1_1experimental_1_1as__single__t.html">as_single_t</a> <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#a87f903baad53432c60d0d8ae15771ffc">default_completion_token_type</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#aac58020a4a3b3d9301f18aa7d8a984fd">   74</a></span>&#160;    <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#aac58020a4a3b3d9301f18aa7d8a984fd">executor_with_default</a>(<span class="keyword">const</span> InnerExecutor&amp; ex) noexcept</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      : InnerExecutor(ex)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> OtherExecutor&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#a511d0c6ccf0c2c647be0d5c635baf212">   82</a></span>&#160;    <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#a511d0c6ccf0c2c647be0d5c635baf212">executor_with_default</a>(<span class="keyword">const</span> OtherExecutor&amp; ex,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">constraint_t</a>&lt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          is_convertible&lt;OtherExecutor, InnerExecutor&gt;::value</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        &gt; = 0) noexcept</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      : InnerExecutor(ex)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1as__single__t.html#afc1d4c1dec07d7648f7da6b0c2414be8">   94</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classasio_1_1experimental_1_1as__single__t.html#afc1d4c1dec07d7648f7da6b0c2414be8">as_default_on_t</a> = <span class="keyword">typename</span> T::template rebind_executor&lt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html">executor_with_default&lt;typename T::executor_type&gt;</a>&gt;::other;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">static</span> <span class="keyword">typename</span> <a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;T&gt;::template</a> rebind_executor&lt;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html">executor_with_default&lt;typename decay_t&lt;T&gt;::executor_type</a>&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    &gt;::other</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1as__single__t.html#ac02a342d2d3685b0ecac9a3276354ec9">  103</a></span>&#160;  <a class="code" href="classasio_1_1experimental_1_1as__single__t.html#ac02a342d2d3685b0ecac9a3276354ec9">as_default_on</a>(<a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;&amp; <span class="keywordtype">object</span>)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">typename</span> <a class="code" href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">decay_t&lt;T&gt;::template</a> rebind_executor&lt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html">executor_with_default&lt;typename decay_t&lt;T&gt;::executor_type</a>&gt;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      &gt;::other(<span class="keyword">static_cast&lt;</span><a class="code" href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">T</a>&amp;&amp;<span class="keyword">&gt;</span>(<span class="keywordtype">object</span>));</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//private:</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classasio_1_1experimental_1_1as__single__t.html#a9dbed258d5e21ff37d6bced322dc8dd4">  111</a></span>&#160;  CompletionToken <a class="code" href="classasio_1_1experimental_1_1as__single__t.html#a9dbed258d5e21ff37d6bced322dc8dd4">token_</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> CompletionToken&gt;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<a class="code" href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a> <span class="keyword">inline</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;constexpr <a class="code" href="classasio_1_1experimental_1_1as__single__t.html">as_single_t&lt;decay_t&lt;CompletionToken&gt;</a>&gt;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="namespaceasio_1_1experimental.html#ac40085d70004257598fdc2a80b9a6e93">  119</a></span>&#160;<a class="code" href="namespaceasio_1_1experimental.html#ac40085d70004257598fdc2a80b9a6e93">as_single</a>(CompletionToken&amp;&amp; completion_token)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classasio_1_1experimental_1_1as__single__t.html">as_single_t&lt;decay_t&lt;CompletionToken&gt;</a>&gt;(</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keyword">static_cast&lt;</span>CompletionToken&amp;&amp;<span class="keyword">&gt;</span>(completion_token));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// namespace experimental</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="impl_2as__single_8hpp.html">asio/experimental/impl/as_single.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_EXPERIMENTAL_AS_SINGLE_HPP</span></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1as__single__t_html"><div class="ttname"><a href="classasio_1_1experimental_1_1as__single__t.html">asio::experimental::as_single_t</a></div><div class="ttdef"><b>Definition:</b> as_single.hpp:37</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1as__single__t_html_a9dbed258d5e21ff37d6bced322dc8dd4"><div class="ttname"><a href="classasio_1_1experimental_1_1as__single__t.html#a9dbed258d5e21ff37d6bced322dc8dd4">asio::experimental::as_single_t::token_</a></div><div class="ttdeci">CompletionToken token_</div><div class="ttdef"><b>Definition:</b> as_single.hpp:111</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1as__single__t_html_ac02a342d2d3685b0ecac9a3276354ec9"><div class="ttname"><a href="classasio_1_1experimental_1_1as__single__t.html#ac02a342d2d3685b0ecac9a3276354ec9">asio::experimental::as_single_t::as_default_on</a></div><div class="ttdeci">static decay_t&lt; T &gt;::template rebind_executor&lt; executor_with_default&lt; typename decay_t&lt; T &gt;::executor_type &gt; &gt;::other as_default_on(T &amp;&amp;object)</div><div class="ttdef"><b>Definition:</b> as_single.hpp:103</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1as__single__t_html_ac8fd45190c5e0cfea75c950ce3606a67"><div class="ttname"><a href="classasio_1_1experimental_1_1as__single__t.html#ac8fd45190c5e0cfea75c950ce3606a67">asio::experimental::as_single_t::as_single_t</a></div><div class="ttdeci">constexpr as_single_t(default_constructor_tag=default_constructor_tag(), CompletionToken token=CompletionToken())</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> as_single.hpp:50</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1as__single__t_html_ae8c053561c70fe766f41d114646413b2"><div class="ttname"><a href="classasio_1_1experimental_1_1as__single__t.html#ae8c053561c70fe766f41d114646413b2">asio::experimental::as_single_t::as_single_t</a></div><div class="ttdeci">constexpr as_single_t(T &amp;&amp;completion_token)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> as_single.hpp:59</div></div>
+<div class="ttc" id="aclassasio_1_1experimental_1_1as__single__t_html_afc1d4c1dec07d7648f7da6b0c2414be8"><div class="ttname"><a href="classasio_1_1experimental_1_1as__single__t.html#afc1d4c1dec07d7648f7da6b0c2414be8">asio::experimental::as_single_t::as_default_on_t</a></div><div class="ttdeci">typename T::template rebind_executor&lt; executor_with_default&lt; typename T::executor_type &gt; &gt;::other as_default_on_t</div><div class="ttdef"><b>Definition:</b> as_single.hpp:95</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aconfig_8hpp_html_ae9be9d972e87a686de9e5bd8bd93b39d"><div class="ttname"><a href="config_8hpp.html#ae9be9d972e87a686de9e5bd8bd93b39d">ASIO_NODISCARD</a></div><div class="ttdeci">#define ASIO_NODISCARD</div><div class="ttdef"><b>Definition:</b> config.hpp:1375</div></div>
+<div class="ttc" id="aimpl_2as__single_8hpp_html"><div class="ttname"><a href="impl_2as__single_8hpp.html">as_single.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a229bf7c85d1678e8808e8bc543af3d44"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a229bf7c85d1678e8808e8bc543af3d44">asio::experimental::T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:66</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_a9975daab69c7b93e79ce807410ffb9d9"><div class="ttname"><a href="namespaceasio_1_1experimental.html#a9975daab69c7b93e79ce807410ffb9d9">asio::experimental::token</a></div><div class="ttdeci">Executor CompletionToken &amp;&amp; token</div><div class="ttdef"><b>Definition:</b> co_spawn.hpp:67</div></div>
+<div class="ttc" id="anamespaceasio_1_1experimental_html_ac40085d70004257598fdc2a80b9a6e93"><div class="ttname"><a href="namespaceasio_1_1experimental.html#ac40085d70004257598fdc2a80b9a6e93">asio::experimental::as_single</a></div><div class="ttdeci">constexpr ASIO_NODISCARD as_single_t&lt; decay_t&lt; CompletionToken &gt; &gt; as_single(CompletionToken &amp;&amp;completion_token)</div><div class="ttdef"><b>Definition:</b> as_single.hpp:119</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a1d03dfdd5dd0ffa4aaf6832eda695664"><div class="ttname"><a href="namespaceasio.html#a1d03dfdd5dd0ffa4aaf6832eda695664">asio::decay_t</a></div><div class="ttdeci">typename std::decay&lt; T &gt;::type decay_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:55</div></div>
+<div class="ttc" id="anamespaceasio_html_ad8f73389553384e0af82754b8491f177"><div class="ttname"><a href="namespaceasio.html#ad8f73389553384e0af82754b8491f177">asio::constraint_t</a></div><div class="ttdeci">typename constraint&lt; Condition, Type &gt;::type constraint_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:168</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1as__single__t_1_1default__constructor__tag_html"><div class="ttname"><a href="structasio_1_1experimental_1_1as__single__t_1_1default__constructor__tag.html">asio::experimental::as_single_t::default_constructor_tag</a></div><div class="ttdef"><b>Definition:</b> as_single.hpp:41</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1as__single__t_1_1executor__with__default_html"><div class="ttname"><a href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html">asio::experimental::as_single_t::executor_with_default</a></div><div class="ttdef"><b>Definition:</b> as_single.hpp:69</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1as__single__t_1_1executor__with__default_html_a511d0c6ccf0c2c647be0d5c635baf212"><div class="ttname"><a href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#a511d0c6ccf0c2c647be0d5c635baf212">asio::experimental::as_single_t::executor_with_default::executor_with_default</a></div><div class="ttdeci">executor_with_default(const OtherExecutor &amp;ex, constraint_t&lt; is_convertible&lt; OtherExecutor, InnerExecutor &gt;::value &gt;=0) noexcept</div><div class="ttdef"><b>Definition:</b> as_single.hpp:82</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1as__single__t_1_1executor__with__default_html_a87f903baad53432c60d0d8ae15771ffc"><div class="ttname"><a href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#a87f903baad53432c60d0d8ae15771ffc">asio::experimental::as_single_t::executor_with_default::default_completion_token_type</a></div><div class="ttdeci">as_single_t default_completion_token_type</div><div class="ttdoc">Specify as_single_t as the default completion token type.</div><div class="ttdef"><b>Definition:</b> as_single.hpp:71</div></div>
+<div class="ttc" id="astructasio_1_1experimental_1_1as__single__t_1_1executor__with__default_html_aac58020a4a3b3d9301f18aa7d8a984fd"><div class="ttname"><a href="structasio_1_1experimental_1_1as__single__t_1_1executor__with__default.html#aac58020a4a3b3d9301f18aa7d8a984fd">asio::experimental::as_single_t::executor_with_default::executor_with_default</a></div><div class="ttdeci">executor_with_default(const InnerExecutor &amp;ex) noexcept</div><div class="ttdoc">Construct the adapted executor from the inner executor type.</div><div class="ttdef"><b>Definition:</b> as_single.hpp:74</div></div>
+<div class="ttc" id="atype__traits_8hpp_html"><div class="ttname"><a href="type__traits_8hpp.html">type_traits.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

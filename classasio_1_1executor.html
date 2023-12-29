@@ -1,0 +1,935 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::executor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1executor.html">executor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classasio_1_1executor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::executor</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Polymorphic wrapper for executors.  
+ <a href="classasio_1_1executor.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="executor_8hpp_source.html">executor.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor_1_1impl_3_01system__executor_00_01Allocator_01_4.html">impl&lt; system_executor, Allocator &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1executor_1_1unspecified__bool__type__t.html">unspecified_bool_type_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a1bdf25ccec8190b46022954036f1c369"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a1bdf25ccec8190b46022954036f1c369">unspecified_bool_type</a>) (<a class="el" href="structasio_1_1executor_1_1unspecified__bool__type__t.html">unspecified_bool_type_t</a>)</td></tr>
+<tr class="separator:a1bdf25ccec8190b46022954036f1c369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a722d8982ccc82fc3e3eb0cf6318b39dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a722d8982ccc82fc3e3eb0cf6318b39dc">executor</a> () noexcept</td></tr>
+<tr class="memdesc:a722d8982ccc82fc3e3eb0cf6318b39dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classasio_1_1executor.html#a722d8982ccc82fc3e3eb0cf6318b39dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a722d8982ccc82fc3e3eb0cf6318b39dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbaf516bd4e1c1d7cd0cb5db72f04b1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#afbaf516bd4e1c1d7cd0cb5db72f04b1e">executor</a> (nullptr_t) noexcept</td></tr>
+<tr class="memdesc:afbaf516bd4e1c1d7cd0cb5db72f04b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from nullptr.  <a href="classasio_1_1executor.html#afbaf516bd4e1c1d7cd0cb5db72f04b1e">Подробнее...</a><br /></td></tr>
+<tr class="separator:afbaf516bd4e1c1d7cd0cb5db72f04b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09960aa3cb08c120eec9037da0810d87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a09960aa3cb08c120eec9037da0810d87">executor</a> (const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a09960aa3cb08c120eec9037da0810d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="classasio_1_1executor.html#a09960aa3cb08c120eec9037da0810d87">Подробнее...</a><br /></td></tr>
+<tr class="separator:a09960aa3cb08c120eec9037da0810d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5dce40330a92fcb237246aec05f47f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#ab5dce40330a92fcb237246aec05f47f3">executor</a> (<a class="el" href="classasio_1_1executor.html">executor</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:ab5dce40330a92fcb237246aec05f47f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <a href="classasio_1_1executor.html#ab5dce40330a92fcb237246aec05f47f3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab5dce40330a92fcb237246aec05f47f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0577af32d65fabb8ff06d41ab80521"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:aaf0577af32d65fabb8ff06d41ab80521"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#aaf0577af32d65fabb8ff06d41ab80521">executor</a> (Executor e)</td></tr>
+<tr class="memdesc:aaf0577af32d65fabb8ff06d41ab80521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a polymorphic wrapper for the specified executor.  <a href="classasio_1_1executor.html#aaf0577af32d65fabb8ff06d41ab80521">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaf0577af32d65fabb8ff06d41ab80521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac733db8a740dc216c47a961847737e10"><td class="memTemplParams" colspan="2">template&lt;typename Executor , typename Allocator &gt; </td></tr>
+<tr class="memitem:ac733db8a740dc216c47a961847737e10"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#ac733db8a740dc216c47a961847737e10">executor</a> (allocator_arg_t, const Allocator &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, Executor e)</td></tr>
+<tr class="separator:ac733db8a740dc216c47a961847737e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad906b3e0e1358b36ba1e93166f0e884"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#aad906b3e0e1358b36ba1e93166f0e884">~executor</a> ()</td></tr>
+<tr class="memdesc:aad906b3e0e1358b36ba1e93166f0e884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classasio_1_1executor.html#aad906b3e0e1358b36ba1e93166f0e884">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad906b3e0e1358b36ba1e93166f0e884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1f779d6c36f2b7eccc25ee940745c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a6f1f779d6c36f2b7eccc25ee940745c2">operator=</a> (const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a6f1f779d6c36f2b7eccc25ee940745c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="classasio_1_1executor.html#a6f1f779d6c36f2b7eccc25ee940745c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6f1f779d6c36f2b7eccc25ee940745c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7dbad4a98e10370b220e8964dc386ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#ac7dbad4a98e10370b220e8964dc386ce">operator=</a> (<a class="el" href="classasio_1_1executor.html">executor</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:ac7dbad4a98e10370b220e8964dc386ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa209b8fc526ee319a8bf6df15e01168"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#aaa209b8fc526ee319a8bf6df15e01168">operator=</a> (nullptr_t) noexcept</td></tr>
+<tr class="memdesc:aaa209b8fc526ee319a8bf6df15e01168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator for nullptr_t.  <a href="classasio_1_1executor.html#aaa209b8fc526ee319a8bf6df15e01168">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaa209b8fc526ee319a8bf6df15e01168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7007dd2c6b347bacedfe80e3c22eb917"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:a7007dd2c6b347bacedfe80e3c22eb917"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a7007dd2c6b347bacedfe80e3c22eb917">operator=</a> (Executor &amp;&amp;e) noexcept</td></tr>
+<tr class="separator:a7007dd2c6b347bacedfe80e3c22eb917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb7cae4b5aeaec10f33daf521c34b6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1execution__context.html">execution_context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a6bb7cae4b5aeaec10f33daf521c34b6a">context</a> () const noexcept</td></tr>
+<tr class="memdesc:a6bb7cae4b5aeaec10f33daf521c34b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying execution context.  <a href="classasio_1_1executor.html#a6bb7cae4b5aeaec10f33daf521c34b6a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6bb7cae4b5aeaec10f33daf521c34b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae432d5667a83070f6c44943adeda10c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#aae432d5667a83070f6c44943adeda10c">on_work_started</a> () const noexcept</td></tr>
+<tr class="memdesc:aae432d5667a83070f6c44943adeda10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the executor that it has some outstanding work to do.  <a href="classasio_1_1executor.html#aae432d5667a83070f6c44943adeda10c">Подробнее...</a><br /></td></tr>
+<tr class="separator:aae432d5667a83070f6c44943adeda10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad0c4b8c5df8cd3401e766651568c57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#aaad0c4b8c5df8cd3401e766651568c57">on_work_finished</a> () const noexcept</td></tr>
+<tr class="memdesc:aaad0c4b8c5df8cd3401e766651568c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the executor that some work is no longer outstanding.  <a href="classasio_1_1executor.html#aaad0c4b8c5df8cd3401e766651568c57">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaad0c4b8c5df8cd3401e766651568c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44147d4825139146869de05ae549cacf"><td class="memTemplParams" colspan="2">template&lt;typename Function , typename Allocator &gt; </td></tr>
+<tr class="memitem:a44147d4825139146869de05ae549cacf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a44147d4825139146869de05ae549cacf">dispatch</a> (Function &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const Allocator &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="memdesc:a44147d4825139146869de05ae549cacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the executor to invoke the given function object.  <a href="classasio_1_1executor.html#a44147d4825139146869de05ae549cacf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44147d4825139146869de05ae549cacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62334b7c9b5c9fb2a62ead984271c15d"><td class="memTemplParams" colspan="2">template&lt;typename Function , typename Allocator &gt; </td></tr>
+<tr class="memitem:a62334b7c9b5c9fb2a62ead984271c15d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a62334b7c9b5c9fb2a62ead984271c15d">post</a> (Function &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const Allocator &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="memdesc:a62334b7c9b5c9fb2a62ead984271c15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the executor to invoke the given function object.  <a href="classasio_1_1executor.html#a62334b7c9b5c9fb2a62ead984271c15d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a62334b7c9b5c9fb2a62ead984271c15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474e34f28c103edf37bc958a4d2891a8"><td class="memTemplParams" colspan="2">template&lt;typename Function , typename Allocator &gt; </td></tr>
+<tr class="memitem:a474e34f28c103edf37bc958a4d2891a8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a474e34f28c103edf37bc958a4d2891a8">defer</a> (Function &amp;&amp;<a class="el" href="namespaceasio.html#ac172b717c13db01d7f99af7e42edcb68">f</a>, const Allocator &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>) const</td></tr>
+<tr class="memdesc:a474e34f28c103edf37bc958a4d2891a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request the executor to invoke the given function object.  <a href="classasio_1_1executor.html#a474e34f28c103edf37bc958a4d2891a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a474e34f28c103edf37bc958a4d2891a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735e6ee920b813c12bd18a3134057cb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a735e6ee920b813c12bd18a3134057cb6">operator unspecified_bool_type</a> () const noexcept</td></tr>
+<tr class="memdesc:a735e6ee920b813c12bd18a3134057cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator to test if the executor contains a valid target.  <a href="classasio_1_1executor.html#a735e6ee920b813c12bd18a3134057cb6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a735e6ee920b813c12bd18a3134057cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb33f8378aed27b354d1bd66b1ec25d2"><td class="memItemLeft" align="right" valign="top">const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#abb33f8378aed27b354d1bd66b1ec25d2">target_type</a> () const noexcept</td></tr>
+<tr class="memdesc:abb33f8378aed27b354d1bd66b1ec25d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain type information for the target executor object.  <a href="classasio_1_1executor.html#abb33f8378aed27b354d1bd66b1ec25d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb33f8378aed27b354d1bd66b1ec25d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e3a779cbb08714f728ec3d400e6660"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:a58e3a779cbb08714f728ec3d400e6660"><td class="memTemplItemLeft" align="right" valign="top">Executor *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">target</a> () noexcept</td></tr>
+<tr class="memdesc:a58e3a779cbb08714f728ec3d400e6660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a pointer to the target executor object.  <a href="classasio_1_1executor.html#a58e3a779cbb08714f728ec3d400e6660">Подробнее...</a><br /></td></tr>
+<tr class="separator:a58e3a779cbb08714f728ec3d400e6660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb854a0785d0698fdc04e92b6db29ae"><td class="memTemplParams" colspan="2">template&lt;typename Executor &gt; </td></tr>
+<tr class="memitem:a3eb854a0785d0698fdc04e92b6db29ae"><td class="memTemplItemLeft" align="right" valign="top">const Executor *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a3eb854a0785d0698fdc04e92b6db29ae">target</a> () const noexcept</td></tr>
+<tr class="memdesc:a3eb854a0785d0698fdc04e92b6db29ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a pointer to the target executor object.  <a href="classasio_1_1executor.html#a3eb854a0785d0698fdc04e92b6db29ae">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3eb854a0785d0698fdc04e92b6db29ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ae606be53c8d3594e64fd1e6cb1e575ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#ae606be53c8d3594e64fd1e6cb1e575ba">unspecified_bool_true</a> (<a class="el" href="structasio_1_1executor_1_1unspecified__bool__type__t.html">unspecified_bool_type_t</a>)</td></tr>
+<tr class="separator:ae606be53c8d3594e64fd1e6cb1e575ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:ac670f7bf9a3e72a8a16d0ff5c859b2d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#ac670f7bf9a3e72a8a16d0ff5c859b2d9">operator==</a> (const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:ac670f7bf9a3e72a8a16d0ff5c859b2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two executors for equality.  <a href="classasio_1_1executor.html#ac670f7bf9a3e72a8a16d0ff5c859b2d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac670f7bf9a3e72a8a16d0ff5c859b2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477f91b44b9539f277e7aee0b9041e05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1executor.html#a477f91b44b9539f277e7aee0b9041e05">operator!=</a> (const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;<a class="el" href="namespaceasio.html#aa80c4033469ae5aaa092c0d49852403c">a</a>, const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;b) noexcept</td></tr>
+<tr class="memdesc:a477f91b44b9539f277e7aee0b9041e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two executors for inequality.  <a href="classasio_1_1executor.html#a477f91b44b9539f277e7aee0b9041e05">Подробнее...</a><br /></td></tr>
+<tr class="separator:a477f91b44b9539f277e7aee0b9041e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Polymorphic wrapper for executors. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a1bdf25ccec8190b46022954036f1c369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdf25ccec8190b46022954036f1c369">&#9670;&nbsp;</a></span>unspecified_bool_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>(* asio::executor::unspecified_bool_type) (<a class="el" href="structasio_1_1executor_1_1unspecified__bool__type__t.html">unspecified_bool_type_t</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a722d8982ccc82fc3e3eb0cf6318b39dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a722d8982ccc82fc3e3eb0cf6318b39dc">&#9670;&nbsp;</a></span>executor() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::executor::executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<a id="afbaf516bd4e1c1d7cd0cb5db72f04b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbaf516bd4e1c1d7cd0cb5db72f04b1e">&#9670;&nbsp;</a></span>executor() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::executor::executor </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct from nullptr. </p>
+
+</div>
+</div>
+<a id="a09960aa3cb08c120eec9037da0810d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09960aa3cb08c120eec9037da0810d87">&#9670;&nbsp;</a></span>executor() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::executor::executor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+</div>
+</div>
+<a id="ab5dce40330a92fcb237246aec05f47f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5dce40330a92fcb237246aec05f47f3">&#9670;&nbsp;</a></span>executor() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::executor::executor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1executor.html">executor</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. </p>
+
+</div>
+</div>
+<a id="aaf0577af32d65fabb8ff06d41ab80521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0577af32d65fabb8ff06d41ab80521">&#9670;&nbsp;</a></span>executor() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">executor::executor </td>
+          <td>(</td>
+          <td class="paramtype">Executor&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a polymorphic wrapper for the specified executor. </p>
+
+</div>
+</div>
+<a id="ac733db8a740dc216c47a961847737e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac733db8a740dc216c47a961847737e10">&#9670;&nbsp;</a></span>executor() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">executor::executor </td>
+          <td>(</td>
+          <td class="paramtype">allocator_arg_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Executor&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocator-aware constructor to create a polymorphic wrapper for the specified executor. </p>
+
+</div>
+</div>
+<a id="aad906b3e0e1358b36ba1e93166f0e884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad906b3e0e1358b36ba1e93166f0e884">&#9670;&nbsp;</a></span>~executor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::executor::~executor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a6bb7cae4b5aeaec10f33daf521c34b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb7cae4b5aeaec10f33daf521c34b6a">&#9670;&nbsp;</a></span>context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1execution__context.html">execution_context</a>&amp; asio::executor::context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain the underlying execution context. </p>
+
+</div>
+</div>
+<a id="a474e34f28c103edf37bc958a4d2891a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a474e34f28c103edf37bc958a4d2891a8">&#9670;&nbsp;</a></span>defer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> executor::defer </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request the executor to invoke the given function object. </p>
+<p>This function is used to ask the executor to execute the given function object. The function object is executed according to the rules of the target executor object.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The function object to be called. The executor will make a copy of the handler object as required. The function signature of the function object must be:<div class="fragment"><div class="line"><span class="keywordtype">void</span> <span class="keyword">function</span>(); </div>
+</div><!-- fragment --></td></tr>
+    <tr><td class="paramname">a</td><td>An allocator that may be used by the executor to allocate the internal storage needed for function invocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a44147d4825139146869de05ae549cacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44147d4825139146869de05ae549cacf">&#9670;&nbsp;</a></span>dispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> executor::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request the executor to invoke the given function object. </p>
+<p>This function is used to ask the executor to execute the given function object. The function object is executed according to the rules of the target executor object.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The function object to be called. The executor will make a copy of the handler object as required. The function signature of the function object must be:<div class="fragment"><div class="line"><span class="keywordtype">void</span> <span class="keyword">function</span>(); </div>
+</div><!-- fragment --></td></tr>
+    <tr><td class="paramname">a</td><td>An allocator that may be used by the executor to allocate the internal storage needed for function invocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaad0c4b8c5df8cd3401e766651568c57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad0c4b8c5df8cd3401e766651568c57">&#9670;&nbsp;</a></span>on_work_finished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::executor::on_work_finished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the executor that some work is no longer outstanding. </p>
+
+</div>
+</div>
+<a id="aae432d5667a83070f6c44943adeda10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae432d5667a83070f6c44943adeda10c">&#9670;&nbsp;</a></span>on_work_started()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::executor::on_work_started </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the executor that it has some outstanding work to do. </p>
+
+</div>
+</div>
+<a id="a735e6ee920b813c12bd18a3134057cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735e6ee920b813c12bd18a3134057cb6">&#9670;&nbsp;</a></span>operator unspecified_bool_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::executor::operator <a class="el" href="classasio_1_1executor.html#a1bdf25ccec8190b46022954036f1c369">unspecified_bool_type</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operator to test if the executor contains a valid target. </p>
+
+</div>
+</div>
+<a id="a6f1f779d6c36f2b7eccc25ee940745c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1f779d6c36f2b7eccc25ee940745c2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1executor.html">executor</a>&amp; asio::executor::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assignment operator. </p>
+
+</div>
+</div>
+<a id="a7007dd2c6b347bacedfe80e3c22eb917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7007dd2c6b347bacedfe80e3c22eb917">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1executor.html">executor</a>&amp; asio::executor::operator= </td>
+          <td>(</td>
+          <td class="paramtype">Executor &amp;&amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Assignment operator to create a polymorphic wrapper for the specified executor. </p>
+
+</div>
+</div>
+<a id="ac7dbad4a98e10370b220e8964dc386ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7dbad4a98e10370b220e8964dc386ce">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1executor.html">executor</a>&amp; asio::executor::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classasio_1_1executor.html">executor</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa209b8fc526ee319a8bf6df15e01168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa209b8fc526ee319a8bf6df15e01168">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1executor.html">executor</a>&amp; asio::executor::operator= </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assignment operator for nullptr_t. </p>
+
+</div>
+</div>
+<a id="a62334b7c9b5c9fb2a62ead984271c15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62334b7c9b5c9fb2a62ead984271c15d">&#9670;&nbsp;</a></span>post()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Function , typename Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> executor::post </td>
+          <td>(</td>
+          <td class="paramtype">Function &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request the executor to invoke the given function object. </p>
+<p>This function is used to ask the executor to execute the given function object. The function object is executed according to the rules of the target executor object.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The function object to be called. The executor will make a copy of the handler object as required. The function signature of the function object must be:<div class="fragment"><div class="line"><span class="keywordtype">void</span> <span class="keyword">function</span>(); </div>
+</div><!-- fragment --></td></tr>
+    <tr><td class="paramname">a</td><td>An allocator that may be used by the executor to allocate the internal storage needed for function invocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3eb854a0785d0698fdc04e92b6db29ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb854a0785d0698fdc04e92b6db29ae">&#9670;&nbsp;</a></span>target() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Executor * executor::target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain a pointer to the target executor object. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>If <code><a class="el" href="classasio_1_1executor.html#abb33f8378aed27b354d1bd66b1ec25d2" title="Obtain type information for the target executor object.">target_type()</a> == typeid(T)</code>, a pointer to the stored executor target; otherwise, a null pointer. </dd></dl>
+
+</div>
+</div>
+<a id="a58e3a779cbb08714f728ec3d400e6660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e3a779cbb08714f728ec3d400e6660">&#9670;&nbsp;</a></span>target() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Executor &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Executor * executor::target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain a pointer to the target executor object. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>If <code><a class="el" href="classasio_1_1executor.html#abb33f8378aed27b354d1bd66b1ec25d2" title="Obtain type information for the target executor object.">target_type()</a> == typeid(T)</code>, a pointer to the stored executor target; otherwise, a null pointer. </dd></dl>
+
+</div>
+</div>
+<a id="abb33f8378aed27b354d1bd66b1ec25d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb33f8378aed27b354d1bd66b1ec25d2">&#9670;&nbsp;</a></span>target_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::type_info&amp; asio::executor::target_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain type information for the target executor object. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>If <code>*this</code> has a target type of type <code>T</code>, <code>typeid(T)</code>; otherwise, <code>typeid(void)</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ae606be53c8d3594e64fd1e6cb1e575ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae606be53c8d3594e64fd1e6cb1e575ba">&#9670;&nbsp;</a></span>unspecified_bool_true()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> asio::executor::unspecified_bool_true </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structasio_1_1executor_1_1unspecified__bool__type__t.html">unspecified_bool_type_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a477f91b44b9539f277e7aee0b9041e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a477f91b44b9539f277e7aee0b9041e05">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two executors for inequality. </p>
+
+</div>
+</div>
+<a id="ac670f7bf9a3e72a8a16d0ff5c859b2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac670f7bf9a3e72a8a16d0ff5c859b2d9">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classasio_1_1executor.html">executor</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare two executors for equality. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="executor_8hpp_source.html">executor.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

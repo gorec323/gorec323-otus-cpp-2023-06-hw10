@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/detail/socket_ops.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл socket_ops.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error__code_8hpp_source.html">asio/error_code.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory_8hpp_source.html">asio/detail/memory.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="socket__types_8hpp_source.html">asio/detail/socket_types.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для socket_ops.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="socket__ops_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2socket__ops_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2socket__ops_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2socket__ops_8hpp">
+<area shape="rect" title=" " alt="" coords="1027,5,1174,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="628,273,789,300"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="969,117,1120,143"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="1054,199,1262,225"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="1287,199,1488,225"/>
+<area shape="rect" href="memory_8hpp.html" title=" " alt="" coords="357,117,532,143"/>
+<area shape="rect" href="socket__types_8hpp.html" title=" " alt="" coords="2154,109,2290,151"/>
+<area shape="rect" title=" " alt="" coords="797,348,868,375"/>
+<area shape="rect" title=" " alt="" coords="644,348,773,375"/>
+<area shape="rect" title=" " alt="" coords="481,348,619,375"/>
+<area shape="rect" title=" " alt="" coords="921,199,1029,225"/>
+<area shape="rect" title=" " alt="" coords="196,199,261,225"/>
+<area shape="rect" title=" " alt="" coords="286,199,363,225"/>
+<area shape="rect" title=" " alt="" coords="388,199,437,225"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="5,199,172,225"/>
+<area shape="rect" href="throw__exception_8hpp.html" title=" " alt="" coords="513,199,744,225"/>
+<area shape="rect" title=" " alt="" coords="55,273,122,300"/>
+<area shape="rect" title=" " alt="" coords="3190,199,3278,225"/>
+<area shape="rect" title=" " alt="" coords="1564,199,1648,225"/>
+<area shape="rect" title=" " alt="" coords="1673,199,1769,225"/>
+<area shape="rect" title=" " alt="" coords="1793,199,1878,225"/>
+<area shape="rect" title=" " alt="" coords="1903,199,1965,225"/>
+<area shape="rect" title=" " alt="" coords="1990,199,2089,225"/>
+<area shape="rect" title=" " alt="" coords="2113,199,2216,225"/>
+<area shape="rect" title=" " alt="" coords="2241,199,2321,225"/>
+<area shape="rect" title=" " alt="" coords="2345,199,2421,225"/>
+<area shape="rect" title=" " alt="" coords="2446,199,2542,225"/>
+<area shape="rect" title=" " alt="" coords="2566,199,2670,225"/>
+<area shape="rect" title=" " alt="" coords="2695,199,2787,225"/>
+<area shape="rect" title=" " alt="" coords="2811,199,2881,225"/>
+<area shape="rect" title=" " alt="" coords="2906,199,2973,225"/>
+<area shape="rect" title=" " alt="" coords="2997,199,3068,225"/>
+<area shape="rect" title=" " alt="" coords="3092,199,3165,225"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="socket__ops_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2socket__ops_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2socket__ops_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2socket__ops_8hppdep">
+<area shape="rect" title=" " alt="" coords="1274,5,1420,61"/>
+<area shape="rect" href="deadline__timer__service_8hpp.html" title=" " alt="" coords="96,465,302,521"/>
+<area shape="rect" href="select__reactor_8ipp.html" title=" " alt="" coords="360,235,534,291"/>
+<area shape="rect" href="socket__ops_8ipp.html" title=" " alt="" coords="58,354,212,410"/>
+<area shape="rect" href="reactive__socket__accept__op_8hpp.html" title=" " alt="" coords="1566,228,1744,299"/>
+<area shape="rect" href="reactive__socket__service_8hpp.html" title=" " alt="" coords="1523,354,1734,410"/>
+<area shape="rect" href="reactive__socket__connect__op_8hpp.html" title=" " alt="" coords="1384,109,1571,180"/>
+<area shape="rect" href="reactive__socket__recv__op_8hpp.html" title=" " alt="" coords="1147,109,1310,180"/>
+<area shape="rect" href="reactive__socket__service__base_8hpp.html" title=" " alt="" coords="948,228,1130,299"/>
+<area shape="rect" href="reactive__socket__recvfrom__op_8hpp.html" title=" " alt="" coords="1816,109,2011,180"/>
+<area shape="rect" href="reactive__socket__recvmsg__op_8hpp.html" title=" " alt="" coords="741,109,932,180"/>
+<area shape="rect" href="reactive__socket__send__op_8hpp.html" title=" " alt="" coords="956,109,1122,180"/>
+<area shape="rect" href="reactive__socket__sendto__op_8hpp.html" title=" " alt="" coords="2035,109,2214,180"/>
+<area shape="rect" href="resolve__endpoint__op_8hpp.html" title=" " alt="" coords="2100,354,2290,410"/>
+<area shape="rect" href="resolve__query__op_8hpp.html" title=" " alt="" coords="2416,354,2585,410"/>
+<area shape="rect" href="resolver__service__base_8hpp.html" title=" " alt="" coords="1869,235,2068,291"/>
+<area shape="rect" href="socket__holder_8hpp.html" title=" " alt="" coords="1595,117,1742,173"/>
+<area shape="rect" href="generic_2detail_2impl_2endpoint_8ipp.html" title=" " alt="" coords="103,235,284,291"/>
+<area shape="rect" href="basic__resolver__iterator_8hpp.html" title=" " alt="" coords="2948,117,3112,173"/>
+<area shape="rect" href="basic__resolver__results_8hpp.html" title=" " alt="" coords="2294,235,2456,291"/>
+<area shape="rect" href="basic__resolver__query_8hpp.html" title=" " alt="" coords="2732,235,2890,291"/>
+<area shape="rect" href="ip_2detail_2impl_2endpoint_8ipp.html" title=" " alt="" coords="340,354,501,410"/>
+<area shape="rect" href="ip_2detail_2socket__option_8hpp.html" title=" " alt="" coords="3306,569,3468,625"/>
+<area shape="rect" href="address__v4_8ipp.html" title=" " alt="" coords="558,235,712,291"/>
+<area shape="rect" href="address__v6_8ipp.html" title=" " alt="" coords="641,354,794,410"/>
+<area shape="rect" href="host__name_8ipp.html" title=" " alt="" coords="512,117,665,173"/>
+<area shape="rect" href="basic__waitable__timer_8hpp.html" title=" " alt="" coords="890,569,1044,625"/>
+<area shape="rect" href="high__resolution__timer_8hpp.html" title=" " alt="" coords="1336,673,1544,729"/>
+<area shape="rect" href="timer_8hpp.html" title=" " alt="" coords="874,777,1060,819"/>
+<area shape="rect" href="asio_8hpp.html" title=" " alt="" coords="1990,777,2136,819"/>
+<area shape="rect" href="steady__timer_8hpp.html" title=" " alt="" coords="802,673,954,729"/>
+<area shape="rect" href="system__timer_8hpp.html" title=" " alt="" coords="978,673,1134,729"/>
+<area shape="rect" href="basic__waitable__timer_8cpp.html" title=" " alt="" coords="1158,673,1312,729"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="566,473,754,514"/>
+<area shape="rect" href="asio_8cpp.html" title=" " alt="" coords="1068,577,1215,618"/>
+<area shape="rect" href="basic__socket_8hpp.html" title=" " alt="" coords="1620,465,1767,521"/>
+<area shape="rect" href="basic__socket__acceptor_8hpp.html" title=" " alt="" coords="1864,569,2025,625"/>
+<area shape="rect" href="basic__datagram__socket_8hpp.html" title=" " alt="" coords="1670,569,1840,625"/>
+<area shape="rect" href="udp_8hpp.html" title=" " alt="" coords="2832,681,3008,722"/>
+<area shape="rect" href="internet_8hpp.html" title=" " alt="" coords="3038,777,3240,819"/>
+<area shape="rect" href="tcp_8hpp.html" title=" " alt="" coords="2636,681,2808,722"/>
+<area shape="rect" href="reactive__socket__service__base_8ipp.html" title=" " alt="" coords="914,347,1076,417"/>
+<area shape="rect" href="resolver__service_8hpp.html" title=" " alt="" coords="2178,465,2340,521"/>
+<area shape="rect" href="basic__resolver_8hpp.html" title=" " alt="" coords="2677,569,2836,625"/>
+<area shape="rect" href="icmp_8hpp.html" title=" " alt="" coords="2326,681,2510,722"/>
+<area shape="rect" href="resolver__service__base_8ipp.html" title=" " alt="" coords="1757,347,1924,417"/>
+<area shape="rect" href="basic__resolver__iterator_8cpp.html" title=" " alt="" coords="2948,235,3112,291"/>
+<area shape="rect" href="basic__resolver__query_8cpp.html" title=" " alt="" coords="2712,354,2876,410"/>
+<area shape="rect" href="multicast_8hpp.html" title=" " alt="" coords="3032,681,3246,722"/>
+<area shape="rect" href="unicast_8hpp.html" title=" " alt="" coords="3270,681,3469,722"/>
+</map>
+</div>
+</div>
+<p><a href="socket__ops_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasio_1_1detail_1_1socket__ops_1_1noop__deleter.html">asio::detail::socket_ops::noop_deleter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail_1_1socket__ops"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html">asio::detail::socket_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a5ce32ee297edef8833113ea35a933054"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a5ce32ee297edef8833113ea35a933054">asio::detail::socket_ops::state_type</a></td></tr>
+<tr class="separator:a5ce32ee297edef8833113ea35a933054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7dec33c65c050a3ee96d6b17dafc9c"><td class="memItemLeft" align="right" valign="top">typedef shared_ptr&lt; <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a6f7dec33c65c050a3ee96d6b17dafc9c">asio::detail::socket_ops::shared_cancel_token_type</a></td></tr>
+<tr class="separator:a6f7dec33c65c050a3ee96d6b17dafc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbe5bfa22a69dc9a583a8060228860f"><td class="memItemLeft" align="right" valign="top">typedef weak_ptr&lt; <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a9dbe5bfa22a69dc9a583a8060228860f">asio::detail::socket_ops::weak_cancel_token_type</a></td></tr>
+<tr class="separator:a9dbe5bfa22a69dc9a583a8060228860f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a22f1e548ca4cca481cc689affe5536e3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3a4f960990a3814108246f236f45ef1131">asio::detail::socket_ops::user_set_non_blocking</a> = 1
+, <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3a06ad3be67489f4a19d26607578c69c49">asio::detail::socket_ops::internal_non_blocking</a> = 2
+, <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3a1c576520ac33d0409afef9d5269a83f1">asio::detail::socket_ops::non_blocking</a> = user_set_non_blocking | internal_non_blocking
+, <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3a9528197839697a69b523933325d250f7">asio::detail::socket_ops::enable_connection_aborted</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3a1ee8676ef17dc218d9e2a0f3476448e7">asio::detail::socket_ops::user_set_linger</a> = 8
+, <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3af484931108626a77e56e307a63865d3d">asio::detail::socket_ops::stream_oriented</a> = 16
+, <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3a3a888fa7892f325ee0b01b8c98aca55e">asio::detail::socket_ops::datagram_oriented</a> = 32
+, <a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a22f1e548ca4cca481cc689affe5536e3a07f9fa89f5d015e7bec396bf41389c21">asio::detail::socket_ops::possible_dup</a> = 64
+<br />
+ }</td></tr>
+<tr class="separator:a22f1e548ca4cca481cc689affe5536e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a85123cdd46183f488cc2545e8f69595e"><td class="memItemLeft" align="right" valign="top">socket_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a85123cdd46183f488cc2545e8f69595e">asio::detail::socket_ops::accept</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a85123cdd46183f488cc2545e8f69595e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f84cd88eaa164173a6cb44b47b42d7e"><td class="memItemLeft" align="right" valign="top">socket_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a7f84cd88eaa164173a6cb44b47b42d7e">asio::detail::socket_ops::sync_accept</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a7f84cd88eaa164173a6cb44b47b42d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dcacb42a36b9b987e90ed592faad883"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a2dcacb42a36b9b987e90ed592faad883">asio::detail::socket_ops::non_blocking_accept</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, socket_type &amp;new_socket)</td></tr>
+<tr class="separator:a2dcacb42a36b9b987e90ed592faad883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28429160143fefb5326d65d320e08cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ab28429160143fefb5326d65d320e08cd">asio::detail::socket_ops::bind</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ab28429160143fefb5326d65d320e08cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4760d49c99fce56c04fb8802987d0c44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a4760d49c99fce56c04fb8802987d0c44">asio::detail::socket_ops::close</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type &amp;state, bool destruction, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a4760d49c99fce56c04fb8802987d0c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72e73a316330cf59e40d4b0a1816fae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ac72e73a316330cf59e40d4b0a1816fae">asio::detail::socket_ops::set_user_non_blocking</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type &amp;state, bool value, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ac72e73a316330cf59e40d4b0a1816fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ae624d853beaee58adc2c46d86054e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a38ae624d853beaee58adc2c46d86054e">asio::detail::socket_ops::set_internal_non_blocking</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type &amp;state, bool value, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a38ae624d853beaee58adc2c46d86054e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f4bb543e335864660c9ea062c793c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a52f4bb543e335864660c9ea062c793c5">asio::detail::socket_ops::shutdown</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, int what, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a52f4bb543e335864660c9ea062c793c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49686e630ed9e7b6a9c2e797fc22271d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a49686e630ed9e7b6a9c2e797fc22271d">asio::detail::socket_ops::connect</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a49686e630ed9e7b6a9c2e797fc22271d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2aa0418b8b566ca4eed187841362109"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ae2aa0418b8b566ca4eed187841362109">asio::detail::socket_ops::sync_connect</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ae2aa0418b8b566ca4eed187841362109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06be8dd632b2e6d43727496bcbc614c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#aa06be8dd632b2e6d43727496bcbc614c">asio::detail::socket_ops::non_blocking_connect</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:aa06be8dd632b2e6d43727496bcbc614c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada55da61beef75c5958f33c784f6a3c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ada55da61beef75c5958f33c784f6a3c6">asio::detail::socket_ops::socketpair</a> (int af, int type, int protocol, socket_type sv[2], <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ada55da61beef75c5958f33c784f6a3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09513dd30439b9d31c2a2e1bbbb7f0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#aa09513dd30439b9d31c2a2e1bbbb7f0c">asio::detail::socket_ops::sockatmark</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:aa09513dd30439b9d31c2a2e1bbbb7f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6310acbfccf5ade0364c10c9f2d2b1ce"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a6310acbfccf5ade0364c10c9f2d2b1ce">asio::detail::socket_ops::available</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a6310acbfccf5ade0364c10c9f2d2b1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2554586ea010408b02fdd2c98e074b13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a2554586ea010408b02fdd2c98e074b13">asio::detail::socket_ops::listen</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, int backlog, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a2554586ea010408b02fdd2c98e074b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc10860fe625b4f72fffa1872d82f570"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#abc10860fe625b4f72fffa1872d82f570">asio::detail::socket_ops::init_buf</a> (buf &amp;b, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size)</td></tr>
+<tr class="separator:abc10860fe625b4f72fffa1872d82f570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614b59d5731876b6af07f8d3ea5e052b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a614b59d5731876b6af07f8d3ea5e052b">asio::detail::socket_ops::init_buf</a> (buf &amp;b, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size)</td></tr>
+<tr class="separator:a614b59d5731876b6af07f8d3ea5e052b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6d856ecb3a3c20a7a92142a0ba9390"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a6a6d856ecb3a3c20a7a92142a0ba9390">asio::detail::socket_ops::recv</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, buf *bufs, size_t count, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a6a6d856ecb3a3c20a7a92142a0ba9390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7da39d403e9717ef207e8faf16ad663"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ab7da39d403e9717ef207e8faf16ad663">asio::detail::socket_ops::recv1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ab7da39d403e9717ef207e8faf16ad663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af2a4601b674348ed084aeb22bc21b1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a0af2a4601b674348ed084aeb22bc21b1">asio::detail::socket_ops::sync_recv</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, buf *bufs, size_t count, int flags, bool all_empty, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a0af2a4601b674348ed084aeb22bc21b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f7f90cb5174b73d6c925e2030c669a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ae6f7f90cb5174b73d6c925e2030c669a">asio::detail::socket_ops::sync_recv1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ae6f7f90cb5174b73d6c925e2030c669a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185dd0a82b9c2a0dad4b7885b3ceda5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a185dd0a82b9c2a0dad4b7885b3ceda5f">asio::detail::socket_ops::non_blocking_recv</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, buf *bufs, size_t count, int flags, bool is_stream, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:a185dd0a82b9c2a0dad4b7885b3ceda5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9af2643e9b326de81e4daf09dbeafb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a0b9af2643e9b326de81e4daf09dbeafb">asio::detail::socket_ops::non_blocking_recv1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, bool is_stream, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:a0b9af2643e9b326de81e4daf09dbeafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab3cf669e9cd815f7b6a07900d529bb"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a9ab3cf669e9cd815f7b6a07900d529bb">asio::detail::socket_ops::recvfrom</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, buf *bufs, size_t count, int flags, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a9ab3cf669e9cd815f7b6a07900d529bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0b4974634c29133c6a3f273d7a89a9"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a8a0b4974634c29133c6a3f273d7a89a9">asio::detail::socket_ops::recvfrom1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a8a0b4974634c29133c6a3f273d7a89a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5104c58c86887b0ff5662552893a7f1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ab5104c58c86887b0ff5662552893a7f1">asio::detail::socket_ops::sync_recvfrom</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, buf *bufs, size_t count, int flags, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ab5104c58c86887b0ff5662552893a7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d76c20a5c55c40d826458c92345b5b6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a4d76c20a5c55c40d826458c92345b5b6">asio::detail::socket_ops::sync_recvfrom1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a4d76c20a5c55c40d826458c92345b5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab893f4b002cb0f31687acd18fdacf48e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ab893f4b002cb0f31687acd18fdacf48e">asio::detail::socket_ops::non_blocking_recvfrom</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, buf *bufs, size_t count, int flags, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:ab893f4b002cb0f31687acd18fdacf48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1d257fb7aa9a67cab1216b32adea18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#aeb1d257fb7aa9a67cab1216b32adea18">asio::detail::socket_ops::non_blocking_recvfrom1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:aeb1d257fb7aa9a67cab1216b32adea18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7c25a0d2a9d4458b6def014aa4d8bd"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#aaf7c25a0d2a9d4458b6def014aa4d8bd">asio::detail::socket_ops::recvmsg</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, buf *bufs, size_t count, int in_flags, int &amp;out_flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:aaf7c25a0d2a9d4458b6def014aa4d8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94415889edf9890a4994d5698aca960"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ac94415889edf9890a4994d5698aca960">asio::detail::socket_ops::sync_recvmsg</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, buf *bufs, size_t count, int in_flags, int &amp;out_flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ac94415889edf9890a4994d5698aca960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3df762d0cba53842ff99cba700945ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ab3df762d0cba53842ff99cba700945ba">asio::detail::socket_ops::non_blocking_recvmsg</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, buf *bufs, size_t count, int in_flags, int &amp;out_flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:ab3df762d0cba53842ff99cba700945ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c061624f044ba2494011649036dbc5"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a67c061624f044ba2494011649036dbc5">asio::detail::socket_ops::send</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const buf *bufs, size_t count, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a67c061624f044ba2494011649036dbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3619638ac2c4d1af907508aff9f82a1"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ad3619638ac2c4d1af907508aff9f82a1">asio::detail::socket_ops::send1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ad3619638ac2c4d1af907508aff9f82a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8b0870431e522f4c48c23107e19a9f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a1a8b0870431e522f4c48c23107e19a9f">asio::detail::socket_ops::sync_send</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, const buf *bufs, size_t count, int flags, bool all_empty, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a1a8b0870431e522f4c48c23107e19a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e2461d8b6641b6be5f8750a262b7db"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#aa8e2461d8b6641b6be5f8750a262b7db">asio::detail::socket_ops::sync_send1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:aa8e2461d8b6641b6be5f8750a262b7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac139f143014960de6e6132d4f76bfa10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ac139f143014960de6e6132d4f76bfa10">asio::detail::socket_ops::non_blocking_send</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const buf *bufs, size_t count, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:ac139f143014960de6e6132d4f76bfa10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc927d0e94d8c73778056e45d3c1fcdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#abc927d0e94d8c73778056e45d3c1fcdb">asio::detail::socket_ops::non_blocking_send1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:abc927d0e94d8c73778056e45d3c1fcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609c88a3fa56d86b7496681a6e341f73"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a609c88a3fa56d86b7496681a6e341f73">asio::detail::socket_ops::sendto</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const buf *bufs, size_t count, int flags, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a609c88a3fa56d86b7496681a6e341f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1072ad4e3433c6d87db2601ce7103f53"><td class="memItemLeft" align="right" valign="top">signed_size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a1072ad4e3433c6d87db2601ce7103f53">asio::detail::socket_ops::sendto1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a1072ad4e3433c6d87db2601ce7103f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3ed30d370768b2c5af6f5d9792e45b1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#aa3ed30d370768b2c5af6f5d9792e45b1">asio::detail::socket_ops::sync_sendto</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, const buf *bufs, size_t count, int flags, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:aa3ed30d370768b2c5af6f5d9792e45b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0f1c5070b19de17bfd47e480f9868b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a0a0f1c5070b19de17bfd47e480f9868b">asio::detail::socket_ops::sync_sendto1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a0a0f1c5070b19de17bfd47e480f9868b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a009e7aec874f0887ba0976d60c25d0ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a009e7aec874f0887ba0976d60c25d0ef">asio::detail::socket_ops::non_blocking_sendto</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const buf *bufs, size_t count, int flags, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:a009e7aec874f0887ba0976d60c25d0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156330cc07722506ebc94738af37f9b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a156330cc07722506ebc94738af37f9b3">asio::detail::socket_ops::non_blocking_sendto1</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, size_t size, int flags, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:a156330cc07722506ebc94738af37f9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90aa9a854148c26da8232e25988623d8"><td class="memItemLeft" align="right" valign="top">socket_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a90aa9a854148c26da8232e25988623d8">asio::detail::socket_ops::socket</a> (int af, int type, int protocol, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a90aa9a854148c26da8232e25988623d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b40bf739bd762eda69c07d002702919"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a5b40bf739bd762eda69c07d002702919">asio::detail::socket_ops::setsockopt</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type &amp;state, int level, int optname, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *optval, std::size_t optlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a5b40bf739bd762eda69c07d002702919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f98481d00de572ace5ef4a983f892e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a2f98481d00de572ace5ef4a983f892e1">asio::detail::socket_ops::getsockopt</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, int level, int optname, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *optval, size_t *optlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a2f98481d00de572ace5ef4a983f892e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e42a02fa31dc9d87be5f593eaec0116"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a9e42a02fa31dc9d87be5f593eaec0116">asio::detail::socket_ops::getpeername</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, bool cached, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a9e42a02fa31dc9d87be5f593eaec0116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0b0554634cfb1ce8bea28f31af5da4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ace0b0554634cfb1ce8bea28f31af5da4">asio::detail::socket_ops::getsockname</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t *addrlen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ace0b0554634cfb1ce8bea28f31af5da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3303fb771ae777eb12155ba979f05a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ac3303fb771ae777eb12155ba979f05a4">asio::detail::socket_ops::ioctl</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type &amp;state, int cmd, ioctl_arg_type *arg, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ac3303fb771ae777eb12155ba979f05a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a47a79366b24b2cf8cc7781f2ec82bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a0a47a79366b24b2cf8cc7781f2ec82bc">asio::detail::socket_ops::select</a> (int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, timeval *timeout, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a0a47a79366b24b2cf8cc7781f2ec82bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e76bf56aa203894427ceb288c7b573"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a03e76bf56aa203894427ceb288c7b573">asio::detail::socket_ops::poll_read</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, int msec, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a03e76bf56aa203894427ceb288c7b573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36290eb0ed8e6f66fa47cb0869b8db38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a36290eb0ed8e6f66fa47cb0869b8db38">asio::detail::socket_ops::poll_write</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, int msec, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a36290eb0ed8e6f66fa47cb0869b8db38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a836f5338837bf1c533ee83c5f22ecf61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a836f5338837bf1c533ee83c5f22ecf61">asio::detail::socket_ops::poll_error</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, state_type state, int msec, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a836f5338837bf1c533ee83c5f22ecf61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949676d5a07d1fe20f6f8bbfe83f6901"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a949676d5a07d1fe20f6f8bbfe83f6901">asio::detail::socket_ops::poll_connect</a> (socket_type <a class="el" href="blocking_8cpp.html#a0337bda4434eac48c7c441ec80725e39">s</a>, int msec, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a949676d5a07d1fe20f6f8bbfe83f6901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7779e2805d8f2799421f59319746a6a1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a7779e2805d8f2799421f59319746a6a1">asio::detail::socket_ops::inet_ntop</a> (int af, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *src, char *dest, size_t length, unsigned long scope_id, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a7779e2805d8f2799421f59319746a6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605dc164e1020d739f5efb9bc1715baf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a605dc164e1020d739f5efb9bc1715baf">asio::detail::socket_ops::inet_pton</a> (int af, const char *src, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *dest, unsigned long *scope_id, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a605dc164e1020d739f5efb9bc1715baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2579b536222ee88f3aa50993568ab52c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a2579b536222ee88f3aa50993568ab52c">asio::detail::socket_ops::gethostname</a> (char *name, int namelen, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a2579b536222ee88f3aa50993568ab52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e7b340e0da1fafb23b035bf199a11d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#aa4e7b340e0da1fafb23b035bf199a11d">asio::detail::socket_ops::getaddrinfo</a> (const char *host, const char *service, const addrinfo_type &amp;hints, addrinfo_type **result, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:aa4e7b340e0da1fafb23b035bf199a11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f143eaae7546fb51cfd7856ac27786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a95f143eaae7546fb51cfd7856ac27786">asio::detail::socket_ops::background_getaddrinfo</a> (const weak_cancel_token_type &amp;cancel_token, const char *host, const char *service, const addrinfo_type &amp;hints, addrinfo_type **result, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a95f143eaae7546fb51cfd7856ac27786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6faeb581fcd7c756181a7604043f71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a2b6faeb581fcd7c756181a7604043f71">asio::detail::socket_ops::freeaddrinfo</a> (addrinfo_type *ai)</td></tr>
+<tr class="separator:a2b6faeb581fcd7c756181a7604043f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b5e6549ef3d580c66b5ec932b5e023"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a52b5e6549ef3d580c66b5ec932b5e023">asio::detail::socket_ops::getnameinfo</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, char *host, std::size_t hostlen, char *serv, std::size_t servlen, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a52b5e6549ef3d580c66b5ec932b5e023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7cbb7ff6358b90c397f5286c3ab029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a5c7cbb7ff6358b90c397f5286c3ab029">asio::detail::socket_ops::sync_getnameinfo</a> (const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, char *host, std::size_t hostlen, char *serv, std::size_t servlen, int sock_type, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a5c7cbb7ff6358b90c397f5286c3ab029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2242e63a902775dd671d785a2a3f2289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a2242e63a902775dd671d785a2a3f2289">asio::detail::socket_ops::background_getnameinfo</a> (const weak_cancel_token_type &amp;cancel_token, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *addr, std::size_t addrlen, char *host, std::size_t hostlen, char *serv, std::size_t servlen, int sock_type, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a2242e63a902775dd671d785a2a3f2289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ce9a922270cabdbcae2a66e324c374"><td class="memItemLeft" align="right" valign="top">u_long_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a56ce9a922270cabdbcae2a66e324c374">asio::detail::socket_ops::network_to_host_long</a> (u_long_type value)</td></tr>
+<tr class="separator:a56ce9a922270cabdbcae2a66e324c374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac38cd695123eb46b6457cf87432bc50f"><td class="memItemLeft" align="right" valign="top">u_long_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#ac38cd695123eb46b6457cf87432bc50f">asio::detail::socket_ops::host_to_network_long</a> (u_long_type value)</td></tr>
+<tr class="separator:ac38cd695123eb46b6457cf87432bc50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e7c1e3c5c0cdfc3867f3f296751bf5"><td class="memItemLeft" align="right" valign="top">u_short_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#af7e7c1e3c5c0cdfc3867f3f296751bf5">asio::detail::socket_ops::network_to_host_short</a> (u_short_type value)</td></tr>
+<tr class="separator:af7e7c1e3c5c0cdfc3867f3f296751bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3a6db5333a4e654b25b7f3799e55d5"><td class="memItemLeft" align="right" valign="top">u_short_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1socket__ops.html#a6a3a6db5333a4e654b25b7f3799e55d5">asio::detail::socket_ops::host_to_network_short</a> (u_short_type value)</td></tr>
+<tr class="separator:a6a3a6db5333a4e654b25b7f3799e55d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

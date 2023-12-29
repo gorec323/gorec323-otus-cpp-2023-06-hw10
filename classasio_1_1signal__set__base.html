@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс asio::signal_set_base</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceasio.html">asio</a></li><li class="navelem"><a class="el" href="classasio_1_1signal__set__base.html">signal_set_base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="classasio_1_1signal__set__base-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс asio::signal_set_base</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="signal__set__base_8hpp_source.html">signal_set_base.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:asio::signal_set_base:</div>
+<div class="dyncontent">
+<div class="center"><img src="classasio_1_1signal__set__base__inherit__graph.png" border="0" usemap="#aasio_1_1signal__set__base_inherit__map" alt="Inheritance graph"/></div>
+<map name="aasio_1_1signal__set__base_inherit__map" id="aasio_1_1signal__set__base_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect" href="classasio_1_1basic__signal__set.html" title="Provides signal functionality." alt="" coords="17,80,155,121"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a2698415f9bdc705474a292f15b11625e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625e">flags</a> : int { <br />
+&#160;&#160;<a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625ea334c4a4c42fdb79d7ebc3e73b517e6f8">none</a> = 0
+, <a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625ea8a7ef1c3e82395341b7000b79c239eb4">restart</a> = ASIO_OS_DEF(SA_RESTART)
+, <a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625ea49bc75aa0be8b40fc4d180879841c62a">no_child_stop</a> = ASIO_OS_DEF(SA_NOCLDSTOP)
+, <a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625ea1fb9f348a3f2fb03b0f43a9ba7f32ce9">no_child_wait</a> = ASIO_OS_DEF(SA_NOCLDWAIT)
+, <br />
+&#160;&#160;<a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625eabe7bbe0cf3947e795861f1fa966bab58">dont_care</a> = -1
+<br />
+ }</td></tr>
+<tr class="separator:a2698415f9bdc705474a292f15b11625e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347c33f4432c9372b843acec75253062"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625e">flags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1signal__set__base.html#a347c33f4432c9372b843acec75253062">flags_t</a></td></tr>
+<tr class="separator:a347c33f4432c9372b843acec75253062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:abb372efee4f7b00c2cdd3db3be90fbd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasio_1_1signal__set__base.html#abb372efee4f7b00c2cdd3db3be90fbd9">~signal_set_base</a> ()</td></tr>
+<tr class="memdesc:abb372efee4f7b00c2cdd3db3be90fbd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected destructor to prevent deletion through this type.  <a href="classasio_1_1signal__set__base.html#abb372efee4f7b00c2cdd3db3be90fbd9">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb372efee4f7b00c2cdd3db3be90fbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>The <a class="el" href="classasio_1_1signal__set__base.html">signal_set_base</a> class is used as a base for the <a class="el" href="classasio_1_1basic__signal__set.html" title="Provides signal functionality.">basic_signal_set</a> class templates so that we have a common place to define the flags enum. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a347c33f4432c9372b843acec75253062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347c33f4432c9372b843acec75253062">&#9670;&nbsp;</a></span>flags_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625e">flags</a> <a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625e">asio::signal_set_base::flags_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a2698415f9bdc705474a292f15b11625e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2698415f9bdc705474a292f15b11625e">&#9670;&nbsp;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classasio_1_1signal__set__base.html#a2698415f9bdc705474a292f15b11625e">asio::signal_set_base::flags</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a2698415f9bdc705474a292f15b11625ea334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2698415f9bdc705474a292f15b11625ea8a7ef1c3e82395341b7000b79c239eb4"></a>restart&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2698415f9bdc705474a292f15b11625ea49bc75aa0be8b40fc4d180879841c62a"></a>no_child_stop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2698415f9bdc705474a292f15b11625ea1fb9f348a3f2fb03b0f43a9ba7f32ce9"></a>no_child_wait&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2698415f9bdc705474a292f15b11625eabe7bbe0cf3947e795861f1fa966bab58"></a>dont_care&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="abb372efee4f7b00c2cdd3db3be90fbd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb372efee4f7b00c2cdd3db3be90fbd9">&#9670;&nbsp;</a></span>~signal_set_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asio::signal_set_base::~signal_set_base </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Protected destructor to prevent deletion through this type. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>_deps/asio-src/asio/include/asio/<a class="el" href="signal__set__base_8hpp_source.html">signal_set_base.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

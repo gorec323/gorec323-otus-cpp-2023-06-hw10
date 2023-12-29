@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/include/asio/ip/udp.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_e4188af73cfb387d5873b6aad4743301.html">ip</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">udp.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="udp_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ip/udp.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ASIO_IP_UDP_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ASIO_IP_UDP_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8hpp.html">asio/detail/config.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__datagram__socket_8hpp.html">asio/basic_datagram_socket.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="socket__types_8hpp.html">asio/detail/socket_types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ip_2basic__endpoint_8hpp.html">asio/ip/basic_endpoint.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__resolver_8hpp.html">asio/ip/basic_resolver.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__resolver__iterator_8hpp.html">asio/ip/basic_resolver_iterator.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__resolver__query_8hpp.html">asio/ip/basic_resolver_query.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="push__options_8hpp.html">asio/detail/push_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceasio.html">asio</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>ip {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classasio_1_1ip_1_1udp.html">udp</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#a6356426903164272827153752845368c">   46</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classasio_1_1ip_1_1basic__endpoint.html">basic_endpoint&lt;udp&gt;</a> <a class="code" href="classasio_1_1ip_1_1udp.html#a6356426903164272827153752845368c">endpoint</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#adaa851b16777e387ef86dc45abbda71d">   49</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a> <a class="code" href="classasio_1_1ip_1_1udp.html#adaa851b16777e387ef86dc45abbda71d">v4</a>() noexcept</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a>(<a class="code" href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a>(AF_INET));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#a0c941465d03643de810356abdfeaaf1d">   55</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a> <a class="code" href="classasio_1_1ip_1_1udp.html#a0c941465d03643de810356abdfeaaf1d">v6</a>() noexcept</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a>(<a class="code" href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a>(AF_INET6));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#a6832041c2b316b22a461e84a19b3f50b">   61</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classasio_1_1ip_1_1udp.html#a6832041c2b316b22a461e84a19b3f50b">type</a>() const noexcept</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a>(SOCK_DGRAM);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#aa00d39b4787f6274ea2b4dc0fd77fa7b">   67</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classasio_1_1ip_1_1udp.html#aa00d39b4787f6274ea2b4dc0fd77fa7b">protocol</a>() const noexcept</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a>(IPPROTO_UDP);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#a4a56838c36f723411ae86a2c9a19c981">   73</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classasio_1_1ip_1_1udp.html#a4a56838c36f723411ae86a2c9a19c981">family</a>() const noexcept</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> family_;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#ab8f8cc1a666bdbbd6c3963f2396f253e">   79</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classasio_1_1basic__datagram__socket.html">basic_datagram_socket&lt;udp&gt;</a> <a class="code" href="classasio_1_1ip_1_1udp.html#ab8f8cc1a666bdbbd6c3963f2396f253e">socket</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#abb4d8eff41b11c6c2053bf799d43dba2">   82</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classasio_1_1ip_1_1basic__resolver.html">basic_resolver&lt;udp&gt;</a> <a class="code" href="classasio_1_1ip_1_1udp.html#abb4d8eff41b11c6c2053bf799d43dba2">resolver</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#a2cc08fe9f5c9186018e71eebcecb2310">   85</a></span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1ip_1_1udp.html#a2cc08fe9f5c9186018e71eebcecb2310">operator==</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a>&amp; p1, <span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a>&amp; p2)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> p1.family_ == p2.family_;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classasio_1_1ip_1_1udp.html#a86bb54ad4ac96d2e219bc2c357476c7c">   91</a></span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classasio_1_1ip_1_1udp.html#a86bb54ad4ac96d2e219bc2c357476c7c">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a>&amp; p1, <span class="keyword">const</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a>&amp; p2)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> p1.family_ != p2.family_;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// Construct with a specific family.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classasio_1_1ip_1_1udp.html">udp</a>(<span class="keywordtype">int</span> protocol_family) noexcept</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    : family_(protocol_family)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">int</span> family_;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">// namespace ip</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pop__options_8hpp.html">asio/detail/pop_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASIO_IP_UDP_HPP</span></div>
+<div class="ttc" id="abasic__datagram__socket_8hpp_html"><div class="ttname"><a href="basic__datagram__socket_8hpp.html">basic_datagram_socket.hpp</a></div></div>
+<div class="ttc" id="abasic__resolver_8hpp_html"><div class="ttname"><a href="basic__resolver_8hpp.html">basic_resolver.hpp</a></div></div>
+<div class="ttc" id="abasic__resolver__iterator_8hpp_html"><div class="ttname"><a href="basic__resolver__iterator_8hpp.html">basic_resolver_iterator.hpp</a></div></div>
+<div class="ttc" id="abasic__resolver__query_8hpp_html"><div class="ttname"><a href="basic__resolver__query_8hpp.html">basic_resolver_query.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1basic__datagram__socket_html"><div class="ttname"><a href="classasio_1_1basic__datagram__socket.html">asio::basic_datagram_socket</a></div><div class="ttdoc">Provides datagram-oriented socket functionality.</div><div class="ttdef"><b>Definition:</b> basic_datagram_socket.hpp:59</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__endpoint_html"><div class="ttname"><a href="classasio_1_1ip_1_1basic__endpoint.html">asio::ip::basic_endpoint</a></div><div class="ttdoc">Describes an endpoint for a version-independent IP socket.</div><div class="ttdef"><b>Definition:</b> basic_endpoint.hpp:50</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1basic__resolver_html"><div class="ttname"><a href="classasio_1_1ip_1_1basic__resolver.html">asio::ip::basic_resolver</a></div><div class="ttdoc">Provides endpoint resolution functionality.</div><div class="ttdef"><b>Definition:</b> basic_resolver.hpp:66</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html">asio::ip::udp</a></div><div class="ttdoc">Encapsulates the flags needed for UDP.</div><div class="ttdef"><b>Definition:</b> udp.hpp:43</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_a0c941465d03643de810356abdfeaaf1d"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#a0c941465d03643de810356abdfeaaf1d">asio::ip::udp::v6</a></div><div class="ttdeci">static udp v6() noexcept</div><div class="ttdoc">Construct to represent the IPv6 UDP protocol.</div><div class="ttdef"><b>Definition:</b> udp.hpp:55</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_a2cc08fe9f5c9186018e71eebcecb2310"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#a2cc08fe9f5c9186018e71eebcecb2310">asio::ip::udp::operator==</a></div><div class="ttdeci">friend bool operator==(const udp &amp;p1, const udp &amp;p2)</div><div class="ttdoc">Compare two protocols for equality.</div><div class="ttdef"><b>Definition:</b> udp.hpp:85</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_a4a56838c36f723411ae86a2c9a19c981"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#a4a56838c36f723411ae86a2c9a19c981">asio::ip::udp::family</a></div><div class="ttdeci">int family() const noexcept</div><div class="ttdoc">Obtain an identifier for the protocol family.</div><div class="ttdef"><b>Definition:</b> udp.hpp:73</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_a6356426903164272827153752845368c"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#a6356426903164272827153752845368c">asio::ip::udp::endpoint</a></div><div class="ttdeci">basic_endpoint&lt; udp &gt; endpoint</div><div class="ttdoc">The type of a UDP endpoint.</div><div class="ttdef"><b>Definition:</b> udp.hpp:46</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_a6832041c2b316b22a461e84a19b3f50b"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#a6832041c2b316b22a461e84a19b3f50b">asio::ip::udp::type</a></div><div class="ttdeci">int type() const noexcept</div><div class="ttdoc">Obtain an identifier for the type of the protocol.</div><div class="ttdef"><b>Definition:</b> udp.hpp:61</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_a86bb54ad4ac96d2e219bc2c357476c7c"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#a86bb54ad4ac96d2e219bc2c357476c7c">asio::ip::udp::operator!=</a></div><div class="ttdeci">friend bool operator!=(const udp &amp;p1, const udp &amp;p2)</div><div class="ttdoc">Compare two protocols for inequality.</div><div class="ttdef"><b>Definition:</b> udp.hpp:91</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_aa00d39b4787f6274ea2b4dc0fd77fa7b"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#aa00d39b4787f6274ea2b4dc0fd77fa7b">asio::ip::udp::protocol</a></div><div class="ttdeci">int protocol() const noexcept</div><div class="ttdoc">Obtain an identifier for the protocol.</div><div class="ttdef"><b>Definition:</b> udp.hpp:67</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_ab8f8cc1a666bdbbd6c3963f2396f253e"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#ab8f8cc1a666bdbbd6c3963f2396f253e">asio::ip::udp::socket</a></div><div class="ttdeci">basic_datagram_socket&lt; udp &gt; socket</div><div class="ttdoc">The UDP socket type.</div><div class="ttdef"><b>Definition:</b> udp.hpp:79</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_abb4d8eff41b11c6c2053bf799d43dba2"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#abb4d8eff41b11c6c2053bf799d43dba2">asio::ip::udp::resolver</a></div><div class="ttdeci">basic_resolver&lt; udp &gt; resolver</div><div class="ttdoc">The UDP resolver type.</div><div class="ttdef"><b>Definition:</b> udp.hpp:82</div></div>
+<div class="ttc" id="aclassasio_1_1ip_1_1udp_html_adaa851b16777e387ef86dc45abbda71d"><div class="ttname"><a href="classasio_1_1ip_1_1udp.html#adaa851b16777e387ef86dc45abbda71d">asio::ip::udp::v4</a></div><div class="ttdeci">static udp v4() noexcept</div><div class="ttdoc">Construct to represent the IPv4 UDP protocol.</div><div class="ttdef"><b>Definition:</b> udp.hpp:49</div></div>
+<div class="ttc" id="aconfig_8hpp_html"><div class="ttname"><a href="config_8hpp.html">config.hpp</a></div></div>
+<div class="ttc" id="aip_2basic__endpoint_8hpp_html"><div class="ttname"><a href="ip_2basic__endpoint_8hpp.html">basic_endpoint.hpp</a></div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="apop__options_8hpp_html"><div class="ttname"><a href="pop__options_8hpp.html">pop_options.hpp</a></div></div>
+<div class="ttc" id="apush__options_8hpp_html"><div class="ttname"><a href="push__options_8hpp.html">push_options.hpp</a></div></div>
+<div class="ttc" id="asocket__types_8hpp_html"><div class="ttname"><a href="socket__types_8hpp.html">socket_types.hpp</a></div></div>
+<div class="ttc" id="asocket__types_8hpp_html_a26e0208fa086ac48cf5af1b2a521c74a"><div class="ttname"><a href="socket__types_8hpp.html#a26e0208fa086ac48cf5af1b2a521c74a">ASIO_OS_DEF</a></div><div class="ttdeci">#define ASIO_OS_DEF(c)</div><div class="ttdef"><b>Definition:</b> socket_types.hpp:333</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

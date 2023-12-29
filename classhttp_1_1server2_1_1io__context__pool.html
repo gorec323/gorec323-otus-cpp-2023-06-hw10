@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс http::server2::io_context_pool</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacehttp.html">http</a></li><li class="navelem"><a class="el" href="namespacehttp_1_1server2.html">server2</a></li><li class="navelem"><a class="el" href="classhttp_1_1server2_1_1io__context__pool.html">io_context_pool</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classhttp_1_1server2_1_1io__context__pool-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс http::server2::io_context_pool</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A pool of io_context objects.  
+ <a href="classhttp_1_1server2_1_1io__context__pool.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="io__context__pool_8hpp_source.html">io_context_pool.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:http::server2::io_context_pool:</div>
+<div class="dyncontent">
+<div class="center"><img src="classhttp_1_1server2_1_1io__context__pool__inherit__graph.png" border="0" usemap="#ahttp_1_1server2_1_1io__context__pool_inherit__map" alt="Inheritance graph"/></div>
+<map name="ahttp_1_1server2_1_1io__context__pool_inherit__map" id="ahttp_1_1server2_1_1io__context__pool_inherit__map">
+<area shape="rect" title="A pool of io_context objects." alt="" coords="5,80,221,107"/>
+<area shape="rect" title=" " alt="" coords="39,5,188,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса http::server2::io_context_pool:</div>
+<div class="dyncontent">
+<div class="center"><img src="classhttp_1_1server2_1_1io__context__pool__coll__graph.png" border="0" usemap="#ahttp_1_1server2_1_1io__context__pool_coll__map" alt="Collaboration graph"/></div>
+<map name="ahttp_1_1server2_1_1io__context__pool_coll__map" id="ahttp_1_1server2_1_1io__context__pool_coll__map">
+<area shape="rect" title="A pool of io_context objects." alt="" coords="5,80,221,107"/>
+<area shape="rect" title=" " alt="" coords="39,5,188,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a57094448175b980929db9bbef0f856dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhttp_1_1server2_1_1io__context__pool.html#a57094448175b980929db9bbef0f856dc">io_context_pool</a> (std::size_t pool_size)</td></tr>
+<tr class="memdesc:a57094448175b980929db9bbef0f856dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the io_context pool.  <a href="classhttp_1_1server2_1_1io__context__pool.html#a57094448175b980929db9bbef0f856dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a57094448175b980929db9bbef0f856dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab31d283bdf5c3f91faedc655cb55e1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhttp_1_1server2_1_1io__context__pool.html#aab31d283bdf5c3f91faedc655cb55e1d">run</a> ()</td></tr>
+<tr class="memdesc:aab31d283bdf5c3f91faedc655cb55e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run all io_context objects in the pool.  <a href="classhttp_1_1server2_1_1io__context__pool.html#aab31d283bdf5c3f91faedc655cb55e1d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aab31d283bdf5c3f91faedc655cb55e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b1df575cd18c2a0f02b8a58847d474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhttp_1_1server2_1_1io__context__pool.html#a16b1df575cd18c2a0f02b8a58847d474">stop</a> ()</td></tr>
+<tr class="memdesc:a16b1df575cd18c2a0f02b8a58847d474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all io_context objects in the pool.  <a href="classhttp_1_1server2_1_1io__context__pool.html#a16b1df575cd18c2a0f02b8a58847d474">Подробнее...</a><br /></td></tr>
+<tr class="separator:a16b1df575cd18c2a0f02b8a58847d474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3c2a95c0db9e3adbf21a599828b17f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhttp_1_1server2_1_1io__context__pool.html#acf3c2a95c0db9e3adbf21a599828b17f">get_io_context</a> ()</td></tr>
+<tr class="memdesc:acf3c2a95c0db9e3adbf21a599828b17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an io_context to use.  <a href="classhttp_1_1server2_1_1io__context__pool.html#acf3c2a95c0db9e3adbf21a599828b17f">Подробнее...</a><br /></td></tr>
+<tr class="separator:acf3c2a95c0db9e3adbf21a599828b17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A pool of io_context objects. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a57094448175b980929db9bbef0f856dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57094448175b980929db9bbef0f856dc">&#9670;&nbsp;</a></span>io_context_pool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">http::server2::io_context_pool::io_context_pool </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>pool_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct the io_context pool. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="acf3c2a95c0db9e3adbf21a599828b17f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3c2a95c0db9e3adbf21a599828b17f">&#9670;&nbsp;</a></span>get_io_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classasio_1_1io__context.html">asio::io_context</a> &amp; http::server2::io_context_pool::get_io_context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get an io_context to use. </p>
+
+</div>
+</div>
+<a id="aab31d283bdf5c3f91faedc655cb55e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab31d283bdf5c3f91faedc655cb55e1d">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> http::server2::io_context_pool::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run all io_context objects in the pool. </p>
+
+</div>
+</div>
+<a id="a16b1df575cd18c2a0f02b8a58847d474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b1df575cd18c2a0f02b8a58847d474">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> http::server2::io_context_pool::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop all io_context objects in the pool. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>_deps/asio-src/asio/src/examples/cpp03/http/server2/<a class="el" href="io__context__pool_8hpp_source.html">io_context_pool.hpp</a></li>
+<li>_deps/asio-src/asio/src/examples/cpp03/http/server2/<a class="el" href="io__context__pool_8cpp.html">io_context_pool.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

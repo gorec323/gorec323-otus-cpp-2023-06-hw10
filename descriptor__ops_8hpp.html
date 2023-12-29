@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/include/asio/detail/descriptor_ops.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_65d5f750c6e35997f9ba61f90ba62375.html">include</a></li><li class="navelem"><a class="el" href="dir_2f9ee7b6776747991380e286477a435f.html">asio</a></li><li class="navelem"><a class="el" href="dir_c6be62982a8d18552ed087e787cfc775.html">detail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл descriptor_ops.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8hpp_source.html">asio/detail/config.hpp</a>&quot;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &quot;<a class="el" href="error_8hpp_source.html">asio/error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error__code_8hpp_source.html">asio/error_code.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cstdint_8hpp_source.html">asio/detail/cstdint.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="socket__types_8hpp_source.html">asio/detail/socket_types.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="push__options_8hpp_source.html">asio/detail/push_options.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pop__options_8hpp_source.html">asio/detail/pop_options.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для descriptor_ops.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="descriptor__ops_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2descriptor__ops_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2descriptor__ops_8hpp" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2descriptor__ops_8hpp">
+<area shape="rect" title=" " alt="" coords="473,5,622,61"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="140,273,301,300"/>
+<area shape="rect" title=" " alt="" coords="5,348,76,375"/>
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="575,109,685,136"/>
+<area shape="rect" href="error__code_8hpp.html" title=" " alt="" coords="303,191,453,218"/>
+<area shape="rect" href="push__options_8hpp.html" title=" " alt="" coords="683,273,891,300"/>
+<area shape="rect" href="pop__options_8hpp.html" title=" " alt="" coords="457,273,659,300"/>
+<area shape="rect" href="cstdint_8hpp.html" title=" " alt="" coords="131,109,297,136"/>
+<area shape="rect" href="socket__types_8hpp.html" title=" " alt="" coords="1482,184,1618,225"/>
+<area shape="rect" title=" " alt="" coords="297,348,427,375"/>
+<area shape="rect" title=" " alt="" coords="134,348,273,375"/>
+<area shape="rect" href="system__error_8hpp.html" title=" " alt="" coords="477,191,644,218"/>
+<area shape="rect" title=" " alt="" coords="668,191,731,218"/>
+<area shape="rect" title=" " alt="" coords="916,273,987,300"/>
+<area shape="rect" title=" " alt="" coords="325,273,433,300"/>
+<area shape="rect" title=" " alt="" coords="110,191,177,218"/>
+<area shape="rect" title=" " alt="" coords="2314,273,2402,300"/>
+<area shape="rect" title=" " alt="" coords="2427,273,2511,300"/>
+<area shape="rect" title=" " alt="" coords="2535,273,2631,300"/>
+<area shape="rect" title=" " alt="" coords="1011,273,1097,300"/>
+<area shape="rect" title=" " alt="" coords="1121,273,1184,300"/>
+<area shape="rect" title=" " alt="" coords="1209,273,1307,300"/>
+<area shape="rect" title=" " alt="" coords="1332,273,1435,300"/>
+<area shape="rect" title=" " alt="" coords="1459,273,1539,300"/>
+<area shape="rect" title=" " alt="" coords="1564,273,1640,300"/>
+<area shape="rect" title=" " alt="" coords="1665,273,1761,300"/>
+<area shape="rect" title=" " alt="" coords="1785,273,1889,300"/>
+<area shape="rect" title=" " alt="" coords="1913,273,2005,300"/>
+<area shape="rect" title=" " alt="" coords="2030,273,2097,300"/>
+<area shape="rect" title=" " alt="" coords="2121,273,2192,300"/>
+<area shape="rect" title=" " alt="" coords="2216,273,2289,300"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="descriptor__ops_8hpp__dep__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2include_2asio_2detail_2descriptor__ops_8hppdep" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2include_2asio_2detail_2descriptor__ops_8hppdep" id="a__deps_2asio-src_2asio_2include_2asio_2detail_2descriptor__ops_8hppdep">
+<area shape="rect" title=" " alt="" coords="211,5,360,61"/>
+<area shape="rect" href="descriptor__read__op_8hpp.html" title=" " alt="" coords="5,109,184,165"/>
+<area shape="rect" href="reactive__descriptor__service_8hpp.html" title=" " alt="" coords="181,213,331,284"/>
+<area shape="rect" href="descriptor__write__op_8hpp.html" title=" " alt="" coords="259,109,442,165"/>
+<area shape="rect" href="descriptor__ops_8ipp.html" title=" " alt="" coords="373,221,552,277"/>
+<area shape="rect" href="reactive__descriptor__service_8ipp.html" title=" " alt="" coords="193,332,377,403"/>
+<area shape="rect" href="impl_2src_8hpp.html" title=" " alt="" coords="255,451,443,492"/>
+<area shape="rect" href="asio_8cpp.html" title=" " alt="" coords="276,540,423,581"/>
+</map>
+</div>
+</div>
+<p><a href="descriptor__ops_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceasio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio.html">asio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail.html">asio::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceasio_1_1detail_1_1descriptor__ops"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html">asio::detail::descriptor_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a773b997617ef697b51ff3f91f6e48764"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a773b997617ef697b51ff3f91f6e48764">asio::detail::descriptor_ops::state_type</a></td></tr>
+<tr class="separator:a773b997617ef697b51ff3f91f6e48764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10e658a754ff775cdcc3b3decd3c8c9"><td class="memItemLeft" align="right" valign="top">typedef iovec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#ad10e658a754ff775cdcc3b3decd3c8c9">asio::detail::descriptor_ops::buf</a></td></tr>
+<tr class="separator:ad10e658a754ff775cdcc3b3decd3c8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a709aebbf629e64b07a1cc97bbeb3363b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a709aebbf629e64b07a1cc97bbeb3363babc2ae064c1ea10a1c92b27ad21098a6d">asio::detail::descriptor_ops::user_set_non_blocking</a> = 1
+, <a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a709aebbf629e64b07a1cc97bbeb3363bae851554ee970db7e3e2aa8d5e257d78b">asio::detail::descriptor_ops::internal_non_blocking</a> = 2
+, <a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a709aebbf629e64b07a1cc97bbeb3363ba9694dc69c579805472d9c180aa66cd15">asio::detail::descriptor_ops::non_blocking</a> = user_set_non_blocking | internal_non_blocking
+, <a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a709aebbf629e64b07a1cc97bbeb3363baf5a58248660cca977665f283da5ed7a1">asio::detail::descriptor_ops::possible_dup</a> = 4
+ }</td></tr>
+<tr class="separator:a709aebbf629e64b07a1cc97bbeb3363b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3461727aa65f819b1841b875bf78e310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a3461727aa65f819b1841b875bf78e310">asio::detail::descriptor_ops::get_last_error</a> (<a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, bool is_error_condition)</td></tr>
+<tr class="separator:a3461727aa65f819b1841b875bf78e310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8801efb10c431989bba3ded2e01adc52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a8801efb10c431989bba3ded2e01adc52">asio::detail::descriptor_ops::open</a> (const char *path, int flags, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a8801efb10c431989bba3ded2e01adc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340261782e36b88d4242fa831af8f786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a340261782e36b88d4242fa831af8f786">asio::detail::descriptor_ops::open</a> (const char *path, int flags, unsigned mode, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a340261782e36b88d4242fa831af8f786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb08bf6a6ad29284d586da2720ba7053"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#adb08bf6a6ad29284d586da2720ba7053">asio::detail::descriptor_ops::close</a> (int d, state_type &amp;state, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:adb08bf6a6ad29284d586da2720ba7053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d5bc45c4575bb02d8aea7a2785e698"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a45d5bc45c4575bb02d8aea7a2785e698">asio::detail::descriptor_ops::set_user_non_blocking</a> (int d, state_type &amp;state, bool value, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a45d5bc45c4575bb02d8aea7a2785e698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9162476dcac561f880711939b461ccf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a9162476dcac561f880711939b461ccf7">asio::detail::descriptor_ops::set_internal_non_blocking</a> (int d, state_type &amp;state, bool value, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a9162476dcac561f880711939b461ccf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ccb11d1dc712151611a4fbe25aa5ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#ac2ccb11d1dc712151611a4fbe25aa5ac">asio::detail::descriptor_ops::sync_read</a> (int d, state_type state, buf *bufs, std::size_t count, bool all_empty, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ac2ccb11d1dc712151611a4fbe25aa5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe28425fb303c6e56270a2e25d654bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#acfe28425fb303c6e56270a2e25d654bb">asio::detail::descriptor_ops::sync_read1</a> (int d, state_type state, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, std::size_t size, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:acfe28425fb303c6e56270a2e25d654bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b54b218ce98d1842878e7562b49537f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a3b54b218ce98d1842878e7562b49537f">asio::detail::descriptor_ops::non_blocking_read</a> (int d, buf *bufs, std::size_t count, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, std::size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:a3b54b218ce98d1842878e7562b49537f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7826f7bac9b9fb4d3380cc40bfbfcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a2e7826f7bac9b9fb4d3380cc40bfbfcf">asio::detail::descriptor_ops::non_blocking_read1</a> (int d, <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, std::size_t size, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, std::size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:a2e7826f7bac9b9fb4d3380cc40bfbfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa229766b01ecb438e199e3f69f386a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#adfa229766b01ecb438e199e3f69f386a">asio::detail::descriptor_ops::sync_write</a> (int d, state_type state, const buf *bufs, std::size_t count, bool all_empty, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:adfa229766b01ecb438e199e3f69f386a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a4c84bc616da1204064545d6e619fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a53a4c84bc616da1204064545d6e619fa">asio::detail::descriptor_ops::sync_write1</a> (int d, state_type state, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, std::size_t size, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a53a4c84bc616da1204064545d6e619fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad77004eb99a79b6cd448ce6d1482ad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#aad77004eb99a79b6cd448ce6d1482ad9">asio::detail::descriptor_ops::non_blocking_write</a> (int d, const buf *bufs, std::size_t count, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, std::size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:aad77004eb99a79b6cd448ce6d1482ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9510820d4ff39a54ed98414a6df89b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a8e9510820d4ff39a54ed98414a6df89b">asio::detail::descriptor_ops::non_blocking_write1</a> (int d, const <a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *data, std::size_t size, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec, std::size_t &amp;bytes_transferred)</td></tr>
+<tr class="separator:a8e9510820d4ff39a54ed98414a6df89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed8890fa05f9b932b50dcff81d5b659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#afed8890fa05f9b932b50dcff81d5b659">asio::detail::descriptor_ops::ioctl</a> (int d, state_type &amp;state, long cmd, ioctl_arg_type *arg, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:afed8890fa05f9b932b50dcff81d5b659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ecc1bb18d53d214abfeca6ceb9bc4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a50ecc1bb18d53d214abfeca6ceb9bc4f">asio::detail::descriptor_ops::fcntl</a> (int d, int cmd, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a50ecc1bb18d53d214abfeca6ceb9bc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2db735e0f86e600494183bcabbc3d5b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a2db735e0f86e600494183bcabbc3d5b1">asio::detail::descriptor_ops::fcntl</a> (int d, int cmd, long arg, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a2db735e0f86e600494183bcabbc3d5b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df8d319a2df8be7039a62bfb59686db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#a3df8d319a2df8be7039a62bfb59686db">asio::detail::descriptor_ops::poll_read</a> (int d, state_type state, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:a3df8d319a2df8be7039a62bfb59686db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ae5ba1bb1f565b3c62137fe56a3dbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#ab3ae5ba1bb1f565b3c62137fe56a3dbd">asio::detail::descriptor_ops::poll_write</a> (int d, state_type state, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:ab3ae5ba1bb1f565b3c62137fe56a3dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55d5967b76ec5cb134344e11e182acf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8hpp.html#ab54d01ea04afeb9a8b39cfac467656b7">ASIO_DECL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasio_1_1detail_1_1descriptor__ops.html#af55d5967b76ec5cb134344e11e182acf">asio::detail::descriptor_ops::poll_error</a> (int d, state_type state, <a class="el" href="namespaceasio.html#ac8914468bc40252ae5e5c666adb951cf">asio::error_code</a> &amp;ec)</td></tr>
+<tr class="separator:af55d5967b76ec5cb134344e11e182acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

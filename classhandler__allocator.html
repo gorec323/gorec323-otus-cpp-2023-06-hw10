@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Шаблон класса handler_allocator&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classhandler__allocator-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса handler_allocator&lt; T &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="handler__allocator_8hpp_source.html">handler_allocator.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:handler_allocator&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classhandler__allocator__inherit__graph.png" border="0" usemap="#ahandler__allocator_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="ahandler__allocator_3_01T_01_4_inherit__map" id="ahandler__allocator_3_01T_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,179,107"/>
+<area shape="rect" title=" " alt="" coords="17,5,167,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса handler_allocator&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classhandler__allocator__coll__graph.png" border="0" usemap="#ahandler__allocator_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="ahandler__allocator_3_01T_01_4_coll__map" id="ahandler__allocator_3_01T_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,171,179,197"/>
+<area shape="rect" title=" " alt="" coords="12,5,161,32"/>
+<area shape="rect" href="classhandler__memory.html" title=" " alt="" coords="108,81,241,108"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhandler__allocator_1_1rebind.html">rebind</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:aed71198f3f04d7362e5bd47d7672b2fe"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#aed71198f3f04d7362e5bd47d7672b2fe">value_type</a></td></tr>
+<tr class="separator:aed71198f3f04d7362e5bd47d7672b2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55240c6e3874c5f0e7077c79d2db7ae4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a55240c6e3874c5f0e7077c79d2db7ae4">value_type</a> = T</td></tr>
+<tr class="separator:a55240c6e3874c5f0e7077c79d2db7ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55240c6e3874c5f0e7077c79d2db7ae4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a55240c6e3874c5f0e7077c79d2db7ae4">value_type</a> = T</td></tr>
+<tr class="separator:a55240c6e3874c5f0e7077c79d2db7ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:abdc7a5444be1f8a07efacfdfe3219ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#abdc7a5444be1f8a07efacfdfe3219ee8">handler_allocator</a> (<a class="el" href="classhandler__memory.html">handler_memory</a> &amp;mem)</td></tr>
+<tr class="separator:abdc7a5444be1f8a07efacfdfe3219ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a403b276c1dc260b2c388d06fe02576"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a3a403b276c1dc260b2c388d06fe02576"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a3a403b276c1dc260b2c388d06fe02576">handler_allocator</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="separator:a3a403b276c1dc260b2c388d06fe02576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57cb16b2403ef16592d6bbba95c6610"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#ab57cb16b2403ef16592d6bbba95c6610">operator==</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a> &amp;other) const</td></tr>
+<tr class="separator:ab57cb16b2403ef16592d6bbba95c6610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bae7dca49f7c02a81ca396ec635fa20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a9bae7dca49f7c02a81ca396ec635fa20">operator!=</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a> &amp;other) const</td></tr>
+<tr class="separator:a9bae7dca49f7c02a81ca396ec635fa20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80693a91b18f2e0c549d751f7572872f"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a80693a91b18f2e0c549d751f7572872f">allocate</a> (std::size_t n) const</td></tr>
+<tr class="separator:a80693a91b18f2e0c549d751f7572872f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2013b9135595f7e58689eb1c574413bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a2013b9135595f7e58689eb1c574413bd">deallocate</a> (T *p, std::size_t) const</td></tr>
+<tr class="separator:a2013b9135595f7e58689eb1c574413bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc7a5444be1f8a07efacfdfe3219ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#abdc7a5444be1f8a07efacfdfe3219ee8">handler_allocator</a> (<a class="el" href="classhandler__memory.html">handler_memory</a> &amp;mem)</td></tr>
+<tr class="separator:abdc7a5444be1f8a07efacfdfe3219ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5906a80156a7d1a9f6a8af2f14887be1"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a5906a80156a7d1a9f6a8af2f14887be1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a5906a80156a7d1a9f6a8af2f14887be1">handler_allocator</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; U &gt; &amp;other) noexcept</td></tr>
+<tr class="separator:a5906a80156a7d1a9f6a8af2f14887be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585ce4731c07c1949943966eeee8a957"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a585ce4731c07c1949943966eeee8a957">operator==</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a585ce4731c07c1949943966eeee8a957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b849ea8be1371966afdd9eafb60166"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a83b849ea8be1371966afdd9eafb60166">operator!=</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a83b849ea8be1371966afdd9eafb60166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80693a91b18f2e0c549d751f7572872f"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a80693a91b18f2e0c549d751f7572872f">allocate</a> (std::size_t n) const</td></tr>
+<tr class="separator:a80693a91b18f2e0c549d751f7572872f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2013b9135595f7e58689eb1c574413bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a2013b9135595f7e58689eb1c574413bd">deallocate</a> (T *p, std::size_t) const</td></tr>
+<tr class="separator:a2013b9135595f7e58689eb1c574413bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f37cc02ff974c2afc763f7abb18924e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a0f37cc02ff974c2afc763f7abb18924e">handler_allocator</a> ()</td></tr>
+<tr class="separator:a0f37cc02ff974c2afc763f7abb18924e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2cf6ed4b29c2dc3645e2644e09a9c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a1d2cf6ed4b29c2dc3645e2644e09a9c9">allocate</a> (std::size_t size)</td></tr>
+<tr class="separator:a1d2cf6ed4b29c2dc3645e2644e09a9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac08800c51c2effc25839ab58749013f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#aac08800c51c2effc25839ab58749013f">deallocate</a> (<a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *pointer)</td></tr>
+<tr class="separator:aac08800c51c2effc25839ab58749013f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d48fadce3f3d8fbb9c6d8cb4867a5db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a0d48fadce3f3d8fbb9c6d8cb4867a5db">handler_allocator</a> (int *count)</td></tr>
+<tr class="separator:a0d48fadce3f3d8fbb9c6d8cb4867a5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5906a80156a7d1a9f6a8af2f14887be1"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a5906a80156a7d1a9f6a8af2f14887be1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a5906a80156a7d1a9f6a8af2f14887be1">handler_allocator</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; U &gt; &amp;other) noexcept</td></tr>
+<tr class="separator:a5906a80156a7d1a9f6a8af2f14887be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585ce4731c07c1949943966eeee8a957"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a585ce4731c07c1949943966eeee8a957">operator==</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a585ce4731c07c1949943966eeee8a957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b849ea8be1371966afdd9eafb60166"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a83b849ea8be1371966afdd9eafb60166">operator!=</a> (const <a class="el" href="classhandler__allocator.html">handler_allocator</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a83b849ea8be1371966afdd9eafb60166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80693a91b18f2e0c549d751f7572872f"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a80693a91b18f2e0c549d751f7572872f">allocate</a> (std::size_t n) const</td></tr>
+<tr class="separator:a80693a91b18f2e0c549d751f7572872f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2013b9135595f7e58689eb1c574413bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a2013b9135595f7e58689eb1c574413bd">deallocate</a> (T *p, std::size_t) const</td></tr>
+<tr class="separator:a2013b9135595f7e58689eb1c574413bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a7df1247f44be8cee5a57ac9d5d054912"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhandler__memory.html">handler_memory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#a7df1247f44be8cee5a57ac9d5d054912">memory_</a></td></tr>
+<tr class="separator:a7df1247f44be8cee5a57ac9d5d054912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:af3c92f3f3c3f7a9ce669aa6c110b5564"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
+<tr class="memitem:af3c92f3f3c3f7a9ce669aa6c110b5564"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhandler__allocator.html#af3c92f3f3c3f7a9ce669aa6c110b5564">handler_allocator</a></td></tr>
+<tr class="separator:af3c92f3f3c3f7a9ce669aa6c110b5564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="aed71198f3f04d7362e5bd47d7672b2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed71198f3f04d7362e5bd47d7672b2fe">&#9670;&nbsp;</a></span>value_type <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html#aed71198f3f04d7362e5bd47d7672b2fe">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55240c6e3874c5f0e7077c79d2db7ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55240c6e3874c5f0e7077c79d2db7ae4">&#9670;&nbsp;</a></span>value_type <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html#aed71198f3f04d7362e5bd47d7672b2fe">value_type</a> =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55240c6e3874c5f0e7077c79d2db7ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55240c6e3874c5f0e7077c79d2db7ae4">&#9670;&nbsp;</a></span>value_type <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html#aed71198f3f04d7362e5bd47d7672b2fe">value_type</a> =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="abdc7a5444be1f8a07efacfdfe3219ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc7a5444be1f8a07efacfdfe3219ee8">&#9670;&nbsp;</a></span>handler_allocator() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html">handler_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandler__memory.html">handler_memory</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a403b276c1dc260b2c388d06fe02576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a403b276c1dc260b2c388d06fe02576">&#9670;&nbsp;</a></span>handler_allocator() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html">handler_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdc7a5444be1f8a07efacfdfe3219ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc7a5444be1f8a07efacfdfe3219ee8">&#9670;&nbsp;</a></span>handler_allocator() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html">handler_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhandler__memory.html">handler_memory</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5906a80156a7d1a9f6a8af2f14887be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5906a80156a7d1a9f6a8af2f14887be1">&#9670;&nbsp;</a></span>handler_allocator() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html">handler_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f37cc02ff974c2afc763f7abb18924e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f37cc02ff974c2afc763f7abb18924e">&#9670;&nbsp;</a></span>handler_allocator() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__allocator.html">handler_allocator</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d48fadce3f3d8fbb9c6d8cb4867a5db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d48fadce3f3d8fbb9c6d8cb4867a5db">&#9670;&nbsp;</a></span>handler_allocator() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html">handler_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5906a80156a7d1a9f6a8af2f14887be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5906a80156a7d1a9f6a8af2f14887be1">&#9670;&nbsp;</a></span>handler_allocator() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::<a class="el" href="classhandler__allocator.html">handler_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a80693a91b18f2e0c549d751f7572872f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80693a91b18f2e0c549d751f7572872f">&#9670;&nbsp;</a></span>allocate() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80693a91b18f2e0c549d751f7572872f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80693a91b18f2e0c549d751f7572872f">&#9670;&nbsp;</a></span>allocate() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80693a91b18f2e0c549d751f7572872f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80693a91b18f2e0c549d751f7572872f">&#9670;&nbsp;</a></span>allocate() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d2cf6ed4b29c2dc3645e2644e09a9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2cf6ed4b29c2dc3645e2644e09a9c9">&#9670;&nbsp;</a></span>allocate() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a>* <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2013b9135595f7e58689eb1c574413bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2013b9135595f7e58689eb1c574413bd">&#9670;&nbsp;</a></span>deallocate() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2013b9135595f7e58689eb1c574413bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2013b9135595f7e58689eb1c574413bd">&#9670;&nbsp;</a></span>deallocate() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2013b9135595f7e58689eb1c574413bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2013b9135595f7e58689eb1c574413bd">&#9670;&nbsp;</a></span>deallocate() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac08800c51c2effc25839ab58749013f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac08800c51c2effc25839ab58749013f">&#9670;&nbsp;</a></span>deallocate() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bind__immediate__executor_8cpp.html#a59a5a6248bbe8018ef97e7c0490d1508">void</a> *&#160;</td>
+          <td class="paramname"><em>pointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bae7dca49f7c02a81ca396ec635fa20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bae7dca49f7c02a81ca396ec635fa20">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83b849ea8be1371966afdd9eafb60166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b849ea8be1371966afdd9eafb60166">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83b849ea8be1371966afdd9eafb60166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b849ea8be1371966afdd9eafb60166">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab57cb16b2403ef16592d6bbba95c6610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57cb16b2403ef16592d6bbba95c6610">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a585ce4731c07c1949943966eeee8a957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a585ce4731c07c1949943966eeee8a957">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a585ce4731c07c1949943966eeee8a957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a585ce4731c07c1949943966eeee8a957">&#9670;&nbsp;</a></span>operator==() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="af3c92f3f3c3f7a9ce669aa6c110b5564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c92f3f3c3f7a9ce669aa6c110b5564">&#9670;&nbsp;</a></span>handler_allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classhandler__allocator.html">handler_allocator</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a7df1247f44be8cee5a57ac9d5d054912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df1247f44be8cee5a57ac9d5d054912">&#9670;&nbsp;</a></span>memory_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhandler__memory.html">handler_memory</a> &amp; <a class="el" href="classhandler__allocator.html">handler_allocator</a>&lt; T &gt;::memory_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>_deps/asio-src/asio/src/examples/cpp03/allocation/<a class="el" href="examples_2cpp03_2allocation_2server_8cpp.html">server.cpp</a></li>
+<li>_deps/asio-src/asio/src/tests/unit/<a class="el" href="any__completion__handler_8cpp.html">any_completion_handler.cpp</a></li>
+<li>_deps/asio-src/asio/src/tests/performance/<a class="el" href="handler__allocator_8hpp_source.html">handler_allocator.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

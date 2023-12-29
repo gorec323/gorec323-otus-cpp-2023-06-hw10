@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл _deps/asio-src/asio/src/examples/cpp11/handler_tracking/custom_tracking.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_d46c25caae7ef9e73c73947bfdf12925.html">cpp11</a></li><li class="navelem"><a class="el" href="dir_3dfd0637793893cfc1da11052198ae87.html">handler_tracking</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл custom_tracking.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cinttypes&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для custom_tracking.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="custom__tracking_8hpp__incl.png" border="0" usemap="#a__deps_2asio-src_2asio_2src_2examples_2cpp11_2handler__tracking_2custom__tracking_8hpp" alt=""/></div>
+<map name="a__deps_2asio-src_2asio_2src_2examples_2cpp11_2handler__tracking_2custom__tracking_8hpp" id="a__deps_2asio-src_2asio_2src_2examples_2cpp11_2handler__tracking_2custom__tracking_8hpp">
+<area shape="rect" title=" " alt="" coords="52,5,239,76"/>
+<area shape="rect" title=" " alt="" coords="5,124,88,151"/>
+<area shape="rect" title=" " alt="" coords="112,124,179,151"/>
+<area shape="rect" title=" " alt="" coords="203,124,264,151"/>
+</map>
+</div>
+</div>
+<p><a href="custom__tracking_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcustom__tracking.html">custom_tracking</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcustom__tracking_1_1tracked__handler.html">custom_tracking::tracked_handler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcustom__tracking_1_1completion.html">custom_tracking::completion</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a9d5e273cbfba2b39f8ea6c347c1d045b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a9d5e273cbfba2b39f8ea6c347c1d045b">ASIO_INHERIT_TRACKED_HANDLER</a>&#160;&#160;&#160;  : public ::<a class="el" href="structcustom__tracking_1_1tracked__handler.html">custom_tracking::tracked_handler</a></td></tr>
+<tr class="separator:a9d5e273cbfba2b39f8ea6c347c1d045b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260b2488f20f2c0348e35fbe4eed7ec9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a260b2488f20f2c0348e35fbe4eed7ec9">ASIO_ALSO_INHERIT_TRACKED_HANDLER</a>&#160;&#160;&#160;  , public ::<a class="el" href="structcustom__tracking_1_1tracked__handler.html">custom_tracking::tracked_handler</a></td></tr>
+<tr class="separator:a260b2488f20f2c0348e35fbe4eed7ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ce43fb68c55b692e5de8c40540f1db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#ab3ce43fb68c55b692e5de8c40540f1db">ASIO_HANDLER_TRACKING_INIT</a>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a05605e2d5470e833a745c7772ea2a40f">custom_tracking::init</a>()</td></tr>
+<tr class="separator:ab3ce43fb68c55b692e5de8c40540f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a9d2d63e2bb596fd7d3dc65795b852"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#ae1a9d2d63e2bb596fd7d3dc65795b852">ASIO_HANDLER_LOCATION</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#aa9e4a8e0a1542f4ccfd60ff3e8bdc77b">custom_tracking::location</a> args</td></tr>
+<tr class="separator:ae1a9d2d63e2bb596fd7d3dc65795b852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09fd3fc9a4f02e07e80ce4333235d19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#aa09fd3fc9a4f02e07e80ce4333235d19">ASIO_HANDLER_CREATION</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#afffff81a61d73aa2ea8fcea4ffe668a3">custom_tracking::creation</a> args</td></tr>
+<tr class="separator:aa09fd3fc9a4f02e07e80ce4333235d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd006ace2145f1adc4b598bbd0e73b83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#acd006ace2145f1adc4b598bbd0e73b83">ASIO_HANDLER_COMPLETION</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking_1_1completion.html">custom_tracking::completion</a> tracked_completion args</td></tr>
+<tr class="separator:acd006ace2145f1adc4b598bbd0e73b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40898fadadf6eee5fe0b54f9fba8d022"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a40898fadadf6eee5fe0b54f9fba8d022">ASIO_HANDLER_INVOCATION_BEGIN</a>(args)&#160;&#160;&#160;  tracked_completion.invocation_begin args</td></tr>
+<tr class="separator:a40898fadadf6eee5fe0b54f9fba8d022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190b5ee3bba7d92c73f79359fd79d037"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a190b5ee3bba7d92c73f79359fd79d037">ASIO_HANDLER_INVOCATION_END</a>&#160;&#160;&#160;  tracked_completion.invocation_end()</td></tr>
+<tr class="separator:a190b5ee3bba7d92c73f79359fd79d037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab929103950140032c2b0e2a62d267346"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#ab929103950140032c2b0e2a62d267346">ASIO_HANDLER_OPERATION</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#ae8aaf9c24614af709390b8c2290c86b0">custom_tracking::operation</a> args</td></tr>
+<tr class="separator:ab929103950140032c2b0e2a62d267346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d5f59b7156323cf9fded32ba7d6745"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#ae0d5f59b7156323cf9fded32ba7d6745">ASIO_HANDLER_REACTOR_REGISTRATION</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a12ea4241bfcbcd01682bde2ff74a7263">custom_tracking::reactor_registration</a> args</td></tr>
+<tr class="separator:ae0d5f59b7156323cf9fded32ba7d6745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882a508006a1055291daeb35d434e686"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a882a508006a1055291daeb35d434e686">ASIO_HANDLER_REACTOR_DEREGISTRATION</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a77054e77d08e87f9cf5368b1977e1498">custom_tracking::reactor_deregistration</a> args</td></tr>
+<tr class="separator:a882a508006a1055291daeb35d434e686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e4a63d857832d9de47474ff57baada"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a67e4a63d857832d9de47474ff57baada">ASIO_HANDLER_REACTOR_READ_EVENT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a67e4a63d857832d9de47474ff57baada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1d6433eecef2ae6ffec886116e8525"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#acc1d6433eecef2ae6ffec886116e8525">ASIO_HANDLER_REACTOR_WRITE_EVENT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:acc1d6433eecef2ae6ffec886116e8525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7830e3ec962b5d806ca82a5fe3630d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#ae7830e3ec962b5d806ca82a5fe3630d0">ASIO_HANDLER_REACTOR_ERROR_EVENT</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ae7830e3ec962b5d806ca82a5fe3630d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d6b0a11b6baa8583642b74e529d727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a47d6b0a11b6baa8583642b74e529d727">ASIO_HANDLER_REACTOR_EVENTS</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a39c960cf09e50e9fd7b64cfd4e1fa06f">custom_tracking::reactor_events</a> args</td></tr>
+<tr class="separator:a47d6b0a11b6baa8583642b74e529d727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef3a07af60226bdeb1edfbb4d5d6cb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="custom__tracking_8hpp.html#a5ef3a07af60226bdeb1edfbb4d5d6cb7">ASIO_HANDLER_REACTOR_OPERATION</a>(args)&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a7e38f34a455eea23382103bf73f649db">custom_tracking::reactor_operation</a> args</td></tr>
+<tr class="separator:a5ef3a07af60226bdeb1edfbb4d5d6cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a260b2488f20f2c0348e35fbe4eed7ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260b2488f20f2c0348e35fbe4eed7ec9">&#9670;&nbsp;</a></span>ASIO_ALSO_INHERIT_TRACKED_HANDLER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_ALSO_INHERIT_TRACKED_HANDLER&#160;&#160;&#160;  , public ::<a class="el" href="structcustom__tracking_1_1tracked__handler.html">custom_tracking::tracked_handler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd006ace2145f1adc4b598bbd0e73b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd006ace2145f1adc4b598bbd0e73b83">&#9670;&nbsp;</a></span>ASIO_HANDLER_COMPLETION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_COMPLETION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking_1_1completion.html">custom_tracking::completion</a> tracked_completion args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa09fd3fc9a4f02e07e80ce4333235d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09fd3fc9a4f02e07e80ce4333235d19">&#9670;&nbsp;</a></span>ASIO_HANDLER_CREATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_CREATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#afffff81a61d73aa2ea8fcea4ffe668a3">custom_tracking::creation</a> args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40898fadadf6eee5fe0b54f9fba8d022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40898fadadf6eee5fe0b54f9fba8d022">&#9670;&nbsp;</a></span>ASIO_HANDLER_INVOCATION_BEGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_INVOCATION_BEGIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  tracked_completion.invocation_begin args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a190b5ee3bba7d92c73f79359fd79d037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190b5ee3bba7d92c73f79359fd79d037">&#9670;&nbsp;</a></span>ASIO_HANDLER_INVOCATION_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_INVOCATION_END&#160;&#160;&#160;  tracked_completion.invocation_end()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1a9d2d63e2bb596fd7d3dc65795b852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a9d2d63e2bb596fd7d3dc65795b852">&#9670;&nbsp;</a></span>ASIO_HANDLER_LOCATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_LOCATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#aa9e4a8e0a1542f4ccfd60ff3e8bdc77b">custom_tracking::location</a> args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab929103950140032c2b0e2a62d267346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab929103950140032c2b0e2a62d267346">&#9670;&nbsp;</a></span>ASIO_HANDLER_OPERATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_OPERATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#ae8aaf9c24614af709390b8c2290c86b0">custom_tracking::operation</a> args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a882a508006a1055291daeb35d434e686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882a508006a1055291daeb35d434e686">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_DEREGISTRATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_DEREGISTRATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a77054e77d08e87f9cf5368b1977e1498">custom_tracking::reactor_deregistration</a> args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7830e3ec962b5d806ca82a5fe3630d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7830e3ec962b5d806ca82a5fe3630d0">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_ERROR_EVENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_ERROR_EVENT&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47d6b0a11b6baa8583642b74e529d727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47d6b0a11b6baa8583642b74e529d727">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_EVENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_EVENTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a39c960cf09e50e9fd7b64cfd4e1fa06f">custom_tracking::reactor_events</a> args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ef3a07af60226bdeb1edfbb4d5d6cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ef3a07af60226bdeb1edfbb4d5d6cb7">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_OPERATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_OPERATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a7e38f34a455eea23382103bf73f649db">custom_tracking::reactor_operation</a> args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67e4a63d857832d9de47474ff57baada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e4a63d857832d9de47474ff57baada">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_READ_EVENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_READ_EVENT&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d5f59b7156323cf9fded32ba7d6745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d5f59b7156323cf9fded32ba7d6745">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_REGISTRATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_REGISTRATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args</td><td>)</td>
+          <td>&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a12ea4241bfcbcd01682bde2ff74a7263">custom_tracking::reactor_registration</a> args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc1d6433eecef2ae6ffec886116e8525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1d6433eecef2ae6ffec886116e8525">&#9670;&nbsp;</a></span>ASIO_HANDLER_REACTOR_WRITE_EVENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_REACTOR_WRITE_EVENT&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3ce43fb68c55b692e5de8c40540f1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ce43fb68c55b692e5de8c40540f1db">&#9670;&nbsp;</a></span>ASIO_HANDLER_TRACKING_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_HANDLER_TRACKING_INIT&#160;&#160;&#160;  ::<a class="el" href="structcustom__tracking.html#a05605e2d5470e833a745c7772ea2a40f">custom_tracking::init</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d5e273cbfba2b39f8ea6c347c1d045b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5e273cbfba2b39f8ea6c347c1d045b">&#9670;&nbsp;</a></span>ASIO_INHERIT_TRACKED_HANDLER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASIO_INHERIT_TRACKED_HANDLER&#160;&#160;&#160;  : public ::<a class="el" href="structcustom__tracking_1_1tracked__handler.html">custom_tracking::tracked_handler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

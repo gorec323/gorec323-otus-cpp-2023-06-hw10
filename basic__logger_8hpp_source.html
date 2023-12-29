@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл _deps/asio-src/asio/src/examples/cpp03/services/basic_logger.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   &#160;<span id="projectnumber">0.0.4</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a57a94e38c03835eed49274b75b0176d.html">_deps</a></li><li class="navelem"><a class="el" href="dir_942ec5cfbfdc7ec774a52359cfd61971.html">asio-src</a></li><li class="navelem"><a class="el" href="dir_9a59ba79b8f27da920126de514b72ad3.html">asio</a></li><li class="navelem"><a class="el" href="dir_96c401017f9a00c11801566e87ab05df.html">src</a></li><li class="navelem"><a class="el" href="dir_97855f40d77fff5ab67fd7f99a196053.html">examples</a></li><li class="navelem"><a class="el" href="dir_30d6212ef5192edb7ef1a3ed99535f5c.html">cpp03</a></li><li class="navelem"><a class="el" href="dir_8bf5268b63bb984114c277f384adc2ed.html">services</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">basic_logger.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="basic__logger_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// basic_logger.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2023 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef SERVICES_BASIC_LOGGER_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define SERVICES_BASIC_LOGGER_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="asio_8hpp.html">asio.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;boost/noncopyable.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespaceservices.html">   18</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceservices.html">services</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classservices_1_1basic__logger.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classservices_1_1basic__logger.html">basic_logger</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  : <span class="keyword">private</span> boost::noncopyable</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classservices_1_1basic__logger.html#aae16e05aa9f14e2b877ed9f0bede049d">   28</a></span>&#160;  <span class="keyword">typedef</span> Service <a class="code" href="classservices_1_1basic__logger.html#aae16e05aa9f14e2b877ed9f0bede049d">service_type</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classservices_1_1basic__logger.html#a8538cfb3de45b48c60ab566895a3c561">   31</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> service_type::impl_type <a class="code" href="classservices_1_1basic__logger.html#a8538cfb3de45b48c60ab566895a3c561">impl_type</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classservices_1_1basic__logger.html#a5810b9d15cc0f669ea54143eaa27ee9a">   41</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classservices_1_1basic__logger.html#a5810b9d15cc0f669ea54143eaa27ee9a">basic_logger</a>(<a class="code" href="classasio_1_1execution__context.html">asio::execution_context</a>&amp; <a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">const</span> std::string&amp; identifier)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    : service_(<a class="code" href="namespaceasio.html">asio</a>::<a class="code" href="namespaceasio.html#a1810b2cc34a2ed373b761420a3d3a729">use_service</a>&lt;Service&gt;(<a class="code" href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">context</a>)),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      impl_(service_.null())</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    service_.create(impl_, identifier);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classservices_1_1basic__logger.html#a03051425f89a68ea2b8a7e829b5ebd52">   50</a></span>&#160;  <a class="code" href="classservices_1_1basic__logger.html#a03051425f89a68ea2b8a7e829b5ebd52">~basic_logger</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    service_.destroy(impl_);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classservices_1_1basic__logger.html#aaefed42167cd4d85777ac0bd623f0819">   56</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classservices_1_1basic__logger.html#aaefed42167cd4d85777ac0bd623f0819">use_file</a>(<span class="keyword">const</span> std::string&amp; file)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    service_.use_file(impl_, file);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classservices_1_1basic__logger.html#a95901048136af7b119eac45311a1ef62">   62</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classservices_1_1basic__logger.html#a95901048136af7b119eac45311a1ef62">log</a>(<span class="keyword">const</span> std::string&amp; message)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    service_.log(impl_, message);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classservices_1_1basic__logger.html#aae16e05aa9f14e2b877ed9f0bede049d">service_type</a>&amp; service_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classservices_1_1basic__logger.html#a8538cfb3de45b48c60ab566895a3c561">impl_type</a> impl_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <span class="comment">// namespace services</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SERVICES_BASIC_LOGGER_HPP</span></div>
+<div class="ttc" id="aasio_8hpp_html"><div class="ttname"><a href="asio_8hpp.html">asio.hpp</a></div></div>
+<div class="ttc" id="aclassasio_1_1execution__context_html"><div class="ttname"><a href="classasio_1_1execution__context.html">asio::execution_context</a></div><div class="ttdoc">A context for function object execution.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:106</div></div>
+<div class="ttc" id="aclassservices_1_1basic__logger_html"><div class="ttname"><a href="classservices_1_1basic__logger.html">services::basic_logger</a></div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:25</div></div>
+<div class="ttc" id="aclassservices_1_1basic__logger_html_a03051425f89a68ea2b8a7e829b5ebd52"><div class="ttname"><a href="classservices_1_1basic__logger.html#a03051425f89a68ea2b8a7e829b5ebd52">services::basic_logger::~basic_logger</a></div><div class="ttdeci">~basic_logger()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:50</div></div>
+<div class="ttc" id="aclassservices_1_1basic__logger_html_a5810b9d15cc0f669ea54143eaa27ee9a"><div class="ttname"><a href="classservices_1_1basic__logger.html#a5810b9d15cc0f669ea54143eaa27ee9a">services::basic_logger::basic_logger</a></div><div class="ttdeci">basic_logger(asio::execution_context &amp;context, const std::string &amp;identifier)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:41</div></div>
+<div class="ttc" id="aclassservices_1_1basic__logger_html_a8538cfb3de45b48c60ab566895a3c561"><div class="ttname"><a href="classservices_1_1basic__logger.html#a8538cfb3de45b48c60ab566895a3c561">services::basic_logger::impl_type</a></div><div class="ttdeci">service_type::impl_type impl_type</div><div class="ttdoc">The native implementation type of the timer.</div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:31</div></div>
+<div class="ttc" id="aclassservices_1_1basic__logger_html_a95901048136af7b119eac45311a1ef62"><div class="ttname"><a href="classservices_1_1basic__logger.html#a95901048136af7b119eac45311a1ef62">services::basic_logger::log</a></div><div class="ttdeci">void log(const std::string &amp;message)</div><div class="ttdoc">Log a message.</div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:62</div></div>
+<div class="ttc" id="aclassservices_1_1basic__logger_html_aae16e05aa9f14e2b877ed9f0bede049d"><div class="ttname"><a href="classservices_1_1basic__logger.html#aae16e05aa9f14e2b877ed9f0bede049d">services::basic_logger::service_type</a></div><div class="ttdeci">Service service_type</div><div class="ttdoc">The type of the service that will be used to provide timer operations.</div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:28</div></div>
+<div class="ttc" id="aclassservices_1_1basic__logger_html_aaefed42167cd4d85777ac0bd623f0819"><div class="ttname"><a href="classservices_1_1basic__logger.html#aaefed42167cd4d85777ac0bd623f0819">services::basic_logger::use_file</a></div><div class="ttdeci">void use_file(const std::string &amp;file)</div><div class="ttdoc">Set the output file for all logger instances.</div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:56</div></div>
+<div class="ttc" id="anamespaceasio_1_1execution_html_adebdf38d8a61e5145c9d6b51730e6a74"><div class="ttname"><a href="namespaceasio_1_1execution.html#adebdf38d8a61e5145c9d6b51730e6a74">asio::execution::context</a></div><div class="ttdeci">constexpr context_t context</div><div class="ttdef"><b>Definition:</b> context.hpp:141</div></div>
+<div class="ttc" id="anamespaceasio_html"><div class="ttname"><a href="namespaceasio.html">asio</a></div><div class="ttdef"><b>Definition:</b> any_completion_executor.hpp:27</div></div>
+<div class="ttc" id="anamespaceasio_html_a1810b2cc34a2ed373b761420a3d3a729"><div class="ttname"><a href="namespaceasio.html#a1810b2cc34a2ed373b761420a3d3a729">asio::use_service</a></div><div class="ttdeci">Service &amp; use_service(execution_context &amp;)</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:29</div></div>
+<div class="ttc" id="anamespaceservices_html"><div class="ttname"><a href="namespaceservices.html">services</a></div><div class="ttdef"><b>Definition:</b> basic_logger.hpp:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
