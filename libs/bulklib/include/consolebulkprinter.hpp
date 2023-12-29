@@ -20,7 +20,6 @@ public:
         print(BulkPrinter::bulkToString(*bulk));
     }
 
-protected:
     using hw_io::ConsolePrinter::print;
 };
 

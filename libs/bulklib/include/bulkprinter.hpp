@@ -20,9 +20,6 @@ public:
     /// @param bulk Константная ссылка на блок команд
     /// @return выдаёт строку в форма bulk: <cmd1>, ..., <cmdN>
     static std::string bulkToString(const Bulk &bulk);
-
-protected:
-    using hw_io::IPrinter::print;
 };
 
 
