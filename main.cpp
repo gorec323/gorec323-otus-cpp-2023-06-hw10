@@ -1,6 +1,4 @@
 #include <iostream>
-#include <sstream>
-#include <thread>
 #include <utility>
 #include <async.h>
 #include <streamredirect.hpp>

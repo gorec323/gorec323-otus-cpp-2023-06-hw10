@@ -7,6 +7,7 @@ namespace async {
     /// @brief Тип контекста обработки команд
     using print_handler_t = void *;
 
+extern "C" {
     /// @brief Создаётся контекст с передачей размера блока команд
     /// @param bulkLimit Размер блока команд
     /// @return Контекст выполнения функции
@@ -21,4 +22,6 @@ namespace async {
     /// @brief Завершение обработки команд
     /// @param handler Контекст обработки команд
     void disconnect(print_handler_t handler);
+}
+
 }
