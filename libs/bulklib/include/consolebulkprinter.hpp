@@ -7,7 +7,7 @@
 namespace bulk_defs {
 
 /// @brief Класс для печати блока команд в консоль
-class ConsoleBulkPrinter: public BulkPrinter, hw_io::ConsolePrinter
+class ConsoleBulkPrinter: public hw_io::ConsolePrinter, public BulkPrinter
 {
 public:
     using BulkPrinter::BulkPrinter;
@@ -19,8 +19,6 @@ public:
     {
         print(BulkPrinter::bulkToString(*bulk));
     }
-
-    using hw_io::ConsolePrinter::print;
 };
 
 }
